@@ -1,0 +1,134 @@
+name: ihcl-web
+trigger: none
+  
+pool:
+  vmImage: ubuntu-latest
+resources:
+  repositories:
+    - repository: ihcl-devops
+      endpoint: ihcl-devops-repo-endpoint
+      type: git
+      name: ihcl-devops
+      ref: main
+variables:
+- name: ihclwebsites
+  value: 'ihclwebsites.azurecr.io'
+- name: ihclsit
+  value: 'ihclsit.azurecr.io'
+- name: ihcl-web
+  value: 'ihcl-web'
+- name: imageName
+  value: '$(env)/ihcl-web'
+stages:
+- stage: 'build'
+  displayName: "Build and Push"
+  jobs:
+  - job: 'BuildPush'
+    steps:
+    #- task: SonarQubePrepare@4
+     # inputs:
+      #  SonarQube: 'IHCL-Sonar'
+       # scannerMode: 'CLI'
+        #configMode: 'manual'
+       # cliProjectKey: 'IHCLWebsites_IHCLWebsites_AYge4IekeYSB0c9wwQNR'
+        #cliProjectName: 'IHCLWebsites'
+        #cliSources: '.'
+        #extraProperties: |
+          # Additional properties that will be passed to the scanner,
+          # Put one key=value per line, example:
+          # sonar.exclusions=**/charts/** \
+         # sonar.projectKey=IHCLWebsites_IHCLWebsites_AYge4IekeYSB0c9wwQNR
+          #sonar.projectName=IHCLWebsites 
+          # sonar.sources=src/main/kotlin
+
+
+    #- task: SonarQubeAnalyze@4
+    #- task: SonarQubePublish@4
+     # inputs:
+      # pollingTimeoutSec: '300'
+    - task: Bash@3
+      inputs:
+        targetType: 'inline'
+        script: |
+          short_hash=$(git rev-parse --short=7 HEAD)
+          mkdir -p $(Pipeline.Workspace)/variables
+          echo "$short_hash" > $(Pipeline.Workspace)/variables/short_hash
+          echo "##vso[task.setvariable variable=short_hash]$short_hash"
+
+    - task: CopyFiles@2
+      displayName: 'copying values to $(Build.ArtifactStagingDirectory)'
+      inputs:
+       SourceFolder: '$(System.DefaultWorkingDirectory)'
+       flattenFolders: true
+       Contents: |
+        charts/web/values/**
+       TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact:Helm values files'
+      inputs:
+        ArtifactName: 'IHCL-HELM-VALUES'  
+
+    - task: Docker@2
+      displayName: 'docker build and push'
+      inputs:
+        command: buildAndPush
+        repository: "$(imageName)"
+        dockerfile: "$(System.DefaultWorkingDirectory)/Dockerfile-$(env)"
+        buildContext: "$(System.DefaultWorkingDirectory)"
+        containerRegistry: "$(azureContainerRegServiceConn)"
+        tags: $(short_hash)
+        
+    - publish: $(Pipeline.Workspace)/variables
+      artifact: variables
+      displayName: Publish Docker Image Tag
+      
+- stage: deploy
+  dependsOn:
+  - Build
+  displayName: Deploy 
+  jobs:
+  - deployment: 'Deploy'
+    environment: $(environment_type)
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - checkout: ihcl-devops
+          - download: current
+            artifact: variables
+
+          - task: DownloadBuildArtifacts@0
+            displayName: 'Download Build Artifact'
+            inputs:
+             artifactName: 'IHCL-HELM-VALUES'
+          - task: CopyFiles@2
+            displayName: 'Copy Files to :$(System.DefaultWorkingDirectory)'
+            condition: ne(variables['env'], 'prod')
+            inputs:
+             SourceFolder: '$(Build.ArtifactStagingDirectory)/IHCL-HELM-VALUES'
+             Contents: |
+              values-$(env).yaml
+             TargetFolder: '$(System.DefaultWorkingDirectory)/charts/web/values/'
+          - task: Bash@3
+            displayName: Get Docker ImageTag
+            inputs:
+              targetType: 'inline'
+              script: |
+                  short_hash=$(cat $(Pipeline.Workspace)/variables/short_hash)
+                  echo "##vso[task.setvariable variable=short_hash]$short_hash"                         
+    
+          - task: HelmDeploy@0
+            displayName: deploy chart to aks
+            inputs:
+              connectionType: 'Azure Resource Manager'
+              azureSubscription: "$(azure-aks-cluster-svcConn)"
+              azureResourceGroup: "$(resource_group)"
+              kubernetesCluster: $(aks_name)
+              namespace: '$(env)'
+              command: 'upgrade'
+              waitForExecution: true
+              chartType: 'FilePath'
+              chartPath: "$(System.DefaultWorkingDirectory)/charts/web/"
+              releaseName: 'ihcl-web'
+              arguments: '--create-namespace  --set image.tag=$(short_hash)'
+              valueFile: $(System.DefaultWorkingDirectory)/charts/web/values/values-$(env).yaml

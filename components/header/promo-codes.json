@@ -1,0 +1,40 @@
+{
+  "promoCodes": [
+    {
+      "title": "None",
+      "promoCode": null,
+      "couponCode": null,
+      "agentId": null
+    },
+    {
+      "title": "Corporate Access Code",
+      "promoCode": "undefined",
+      "couponCode": null,
+      "agentId": null
+    },
+    {
+      "title": "Travel Agency Code",
+      "promoCode": null,
+      "couponCode": null,
+      "agentId": "undefined"
+    },
+    {
+      "title": "Business Connect Code",
+      "promoCode": "undefined",
+      "couponCode": null,
+      "agentId": null
+    },
+    {
+      "title": "Group Code",
+      "promoCode": "undefined",
+      "couponCode": null,
+      "agentId": null
+    },
+    {
+      "title": "Special Offer Code",
+      "promoCode": "undefined",
+      "couponCode": null,
+      "agentId": null
+    }
+  ]
+}

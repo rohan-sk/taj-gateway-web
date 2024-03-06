@@ -1,0 +1,107 @@
+{
+    "innerItems": [
+        {
+            "title": "ROOM",
+            "roomNumber": 1,
+            "loadMoreButton": "Load more",
+            "roomDescription": [
+                {
+                    "title": "Late check-out up to 5pm",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "7,000"
+                },
+                {
+                    "title": "Room Upgrade",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "7,500"
+                },
+                {
+                    "title": "20% Off Dining Voucher",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "5,000"
+                },
+                {
+                    "title": "20% Off Dining Voucher",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "5,000"
+                },{
+                    "title": "20% Off Dining Voucher",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "5,000"
+                }
+            ]
+        },
+        {
+            "title": "ROOM",
+            "roomNumber": 2,
+            "loadMoreButton": "Load more",
+            "roomDescription": [
+                {
+                    "title": "Late check-out up to 5pm",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "7,000"
+                },
+                {
+                    "title": "Room Upgrade",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "7,500"
+                },
+                {
+                    "title": "20% Off Dining Voucher",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "5,000"
+                },  {
+                    "title": "Late check-out up to 5pm",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "7,000"
+                },
+                {
+                    "title": "Room Upgrade",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "7,500"
+                },
+                {
+                    "title": "20% Off Dining Voucher",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "5,000"
+                }
+            ]
+        },
+        {
+            "title": "ROOM",
+            "roomNumber": 3,
+            "loadMoreButton": "Load more",
+            "roomDescription": [
+                {
+                    "title": "Late check-out up to 5pm",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "7,000"
+                },
+                {
+                    "title": "Room Upgrade",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "7,500"
+                },
+                {
+                    "title": "20% Off Dining Voucher",
+                    "description": "There are no rooms available matching your search criteria. Please try selecting alternate dates, modifying your search options, or choosing an alternate property.",
+                    "viewDetailsButton": "View Details",
+                    "roomAmount": "5,000"
+                }
+            ]
+        }
+    ]
+}

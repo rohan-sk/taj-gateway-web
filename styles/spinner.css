@@ -1,0 +1,32 @@
+.spinner-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 9999;
+  position: fixed;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  background: rgba(242, 241, 241, 0.9);
+}
+
+.inline-spinner-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  z-index: 9999;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  background: rgba(242, 241, 241, 0.9);
+}
+
+@media (max-width: 640px) { 
+  .room-listing-page .inline-spinner-container {
+    height: 50vh;
+  }
+}

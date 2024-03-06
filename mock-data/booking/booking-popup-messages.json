@@ -1,0 +1,19 @@
+{
+  "cartClearance": {
+    "primaryAction": {
+      "urlType": "internal",
+      "title": "NO",
+      "url": "",
+      "variant": "light-contained"
+    },
+    "secondaryAction": {
+      "urlType": "internal",
+      "title": "YES",
+      "url": "",
+      "variant": "light-outlined"
+    },
+    "title": "YOU ARE MOVING OUT OF THIS PAGE, IF YOU PROCEED YOUR CART WILL BE CLEARED",
+    "backClickTitle": "YOU HAVE PRESSED THE BACK BUTTON, YOUR CART WILL BE CLEARED",
+    "subtitle": "Would you like to proceed?"
+  }
+}

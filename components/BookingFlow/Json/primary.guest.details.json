@@ -1,0 +1,28 @@
+{
+  "title": "Primary Guest Details",
+  "info": "Since special member only rates are applied, the membership holder needs to be physically present at the property.",
+  "firstName": "First Name*",
+  "lastName": "Last Name*",
+  "salutation": "Title*",
+  "Email": "Email*",
+  "phone": "Mobile Number*",
+  "gstNumber": "GST Number",
+  "employeeNumber": "Employee Number",
+  "MembershipType": "Membership Type",
+  "memberShipNumber": "Membership Number",
+  "request": "Special Requests",
+  "list": [
+    {
+      "value": "Neupass"
+    },
+    {
+      "value": "Chambers"
+    },
+    {
+      "value": "Epicure"
+    },
+    {
+      "value": "Traveluxe"
+    }
+  ]
+}

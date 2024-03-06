@@ -1,0 +1,15 @@
+{
+  "title": "Memberships",
+  "memberships": [
+    {
+      "title": "Neupass",
+      "largeImg": "https://i.ibb.co/NtsKqGG/Gold.png",
+      "img": "https://i.ibb.co/dJ9F79K/Gold-3.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "startDate": "1 Apr 2023",
+      "tier": "Gold",
+      "coinBalance": "500",
+      "actionLinks": ["VIEW TRANSACTIONS"]
+    }
+  ]
+}

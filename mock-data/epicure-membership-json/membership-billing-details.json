@@ -1,0 +1,25 @@
+{
+  "title": "CANCELLATION POLICY",
+  "subTitle": "Non-refundable with penalty applicable​.",
+  "price": "Price",
+  "tax": "Tax",
+  "showPriceDetail": "Taxes and Fees",
+  "neuCoinsRedemption": "Price Breakup",
+  "accordianData": "---",
+  "total": "Total",
+  "print": "PRINT",
+  "share": "SHARE",
+  "totalbill": "₹ 29,500",
+  "taxAmount": "₹ 4,500",
+  "priceAmount": "₹ 25,000",
+  "neucoinsRedemption": "NeuCoins Redemption",
+  "neucoinRedemption": "NeuCoin Redemption",
+  "totalPaid": "Amount Paid",
+  "giftCard": {
+    "Total_Paid": "Amount Paid",
+    "Total_Amount_Paid": "Total Paid",
+    "TotalAmount": "Total Amount",
+    "singleCardPrice": "Price x Quantity",
+    "NeuCoins_Redemption": "NeuCoins Redeemed"
+  }
+}

@@ -1,0 +1,7 @@
+export const COMPLIMENTARY_ADD_ON_CARD = "COMPLIMENTARY ADD-ON CARD"
+export const START_DATE = "START DATE"
+export const TIER = "TIER"
+export const EXPIRE_BY = "EXPIRE BY"
+export const RENEWAL_DATE = "RENEWAL DATE"
+export const MEMBERSHIP_PREMIUM = "MEMBERSHIP PREMIUM"
+export const COINS_BALANCE = "Coins Balance"

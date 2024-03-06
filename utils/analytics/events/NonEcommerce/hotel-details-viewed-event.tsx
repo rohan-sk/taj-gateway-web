@@ -1,0 +1,101 @@
+import { triggerEvent } from "../.."
+import { getCookie } from "../../../cookie"
+import { PAGE_LANG, TAJ_HOTELS } from "../../constants"
+
+export const handleWellness = (
+  ctaLabel: string,
+  url: any,
+  dataLayer: any,
+  urlType: any,
+  title: string,
+  description: string,
+  brandName: string,
+  synxisHotelId: any,
+  hotelType: any,
+  hotelAddress: any,
+  _type: any,
+) => {
+  let pathname = global?.window?.location?.pathname
+  let isWellness = pathname?.includes("asya")
+  let isHoliday = pathname?.includes("taj-holidays")
+  if (isWellness) {
+    triggerEvent({
+      action: "wellnessProduct_Selected",
+      params: {
+        ...dataLayer,
+        buttonLinkName: ctaLabel || "",
+        link_text: ctaLabel || "",
+        link_url: url || "",
+        eventType: "",
+        clientId: getCookie("_ga")?.slice(6),
+        outbound: urlType == "internal" ? false : true,
+        item_name: title,
+        item_type: _type,
+        no_of_items: "",
+        name: title,
+        currentLocation: "",
+        widget_description: description,
+        eventDate: "",
+        eventName: "",
+        eventPlace: "",
+        eventTicketsQty: "",
+        location: "",
+        pageTitle: url.replaceAll("/", "-"),
+        pageURL: `${global?.window?.location.origin}` + `${url}`,
+        pageHierarchy: JSON.parse(`["${TAJ_HOTELS}",` + `"${PAGE_LANG}",` + `"${brandName || ""}",` + `"${title}"]`),
+      },
+    })
+  } else if (isHoliday) {
+    triggerEvent({
+      action: "hotelDetailsViewed",
+      params: {
+        ...dataLayer,
+        buttonLinkName: ctaLabel || "",
+        destinationSelected: title || "",
+        link_text: ctaLabel || "",
+        link_url: url || "",
+        eventType: "",
+        clientId: getCookie("_ga")?.slice(6),
+        outbound: urlType == "internal" ? false : true,
+        item_name: title,
+        item_type: _type,
+        no_of_items: "",
+        currentLocation: "",
+        widget_description: description,
+        eventDate: "",
+        eventName: "",
+        eventPlace: "",
+        eventTicketsQty: "",
+        location: "",
+        offerName: "",
+        offerCode: "",
+        offerID: "",
+        offerCategory: "",
+        offerValidity: "",
+        datesToBook: "",
+        arrivalDate: "",
+        departureDate: "",
+        noOfAdults: "",
+        noOfChild: "",
+        noOfRooms: "",
+        specialCode: "",
+        visitSource: "",
+        brandName: brandName,
+        hotelName: title,
+        hotelCode: synxisHotelId,
+        hotelType: hotelType,
+        hotelCountry: hotelAddress?.country,
+        hotelCity: hotelAddress?.city,
+        hotelState: hotelAddress?.state,
+        hotelPinCode: hotelAddress?.pincode,
+        hotelBrand: brandName,
+        bunglowCode: "",
+        error_message: "",
+        error_type: "",
+        pageTitle: url?.replaceAll("/", "-"),
+        pageURL: `${global?.window?.location.origin}` + `${url}`,
+        pageHierarchy: JSON.parse(`["${TAJ_HOTELS}",` + `"${PAGE_LANG}",` + `"${brandName || ""}",` + `"${title}"]`),
+      },
+    })
+  }
+}

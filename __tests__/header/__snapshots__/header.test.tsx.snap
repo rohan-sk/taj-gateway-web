@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shows header 1`] = `
+<DocumentFragment>
+  <nav
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-nwbw3v-MuiPaper-root-MuiAppBar-root"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-15zdsri"
+      >
+        <div
+          class="MuiBox-root css-1w54twj"
+        />
+        <div
+          class="MuiBox-root css-j4hctk"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-dqscbn-MuiSvgIcon-root"
+            data-testid="MenuSharpIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </nav>
+</DocumentFragment>
+`;

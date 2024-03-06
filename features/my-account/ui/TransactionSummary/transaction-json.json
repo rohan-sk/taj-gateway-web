@@ -1,0 +1,276 @@
+{
+    "filterByMonthYear": "Select Memberships",
+    "transactionData": [
+        {
+            "date": "20 Mar 2023",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Epicure Membership Privileged Purchase",
+                    "amountSpent": "25,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "1 Feb 2023",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Room Booking - Rambagh Room, Jaipur",
+                    "amountSpent": "66,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "2,000"
+                },
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Neucoins Redemption - 20000 coins",
+                    "amountSpent": "0",
+                    "discount": "20,000",
+                    "neuCoinsEarned": "0"
+                },
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Voucher Redemption - 10% off on all room bookings",
+                    "amountSpent": "0",
+                    "discount": "10,000",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "5 Jan 2023",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Room Booking - Taj Lands Ends, Mumbai",
+                    "amountSpent": "33,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "1,000"
+                },
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Voucher Redemption - Room Upgrade",
+                    "amountSpent": "0",
+                    "discount": "5,000",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "19 Dec 2022",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Voucher Redemption - Epicure Dining 20% off",
+                    "amountSpent": "3,000",
+                    "discount": "600",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "2 Nov 2022",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Gift Card Purchase - Wedding Theme",
+                    "amountSpent": "5,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "100"
+                }
+            ]
+        },
+        {
+            "date": "20 Mar 2023",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Epicure Membership Privileged Purchase",
+                    "amountSpent": "25,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "1 Feb 2023",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Room Booking - Rambagh Room, Jaipur",
+                    "amountSpent": "66,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "2,000"
+                },
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Neucoins Redemption - 20000 coins",
+                    "amountSpent": "0",
+                    "discount": "20,000",
+                    "neuCoinsEarned": "0"
+                },
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Voucher Redemption - 10% off on all room bookings",
+                    "amountSpent": "0",
+                    "discount": "10,000",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "5 Jan 2023",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Room Booking - Taj Lands Ends, Mumbai",
+                    "amountSpent": "33,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "1,000"
+                },
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Voucher Redemption - Room Upgrade",
+                    "amountSpent": "0",
+                    "discount": "5,000",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "19 Dec 2022",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Voucher Redemption - Epicure Dining 20% off",
+                    "amountSpent": "3,000",
+                    "discount": "600",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "2 Nov 2022",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Gift Card Purchase - Wedding Theme",
+                    "amountSpent": "5,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "100"
+                }
+            ]
+        },
+        {
+            "date": "20 Mar 2023",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Epicure Membership Privileged Purchase",
+                    "amountSpent": "25,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "1 Feb 2023",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Room Booking - Rambagh Room, Jaipur",
+                    "amountSpent": "66,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "2,000"
+                },
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Neucoins Redemption - 20000 coins",
+                    "amountSpent": "0",
+                    "discount": "20,000",
+                    "neuCoinsEarned": "0"
+                },
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Voucher Redemption - 10% off on all room bookings",
+                    "amountSpent": "0",
+                    "discount": "10,000",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "5 Jan 2023",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Room Booking - Taj Lands Ends, Mumbai",
+                    "amountSpent": "33,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "1,000"
+                },
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Voucher Redemption - Room Upgrade",
+                    "amountSpent": "0",
+                    "discount": "5,000",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "19 Dec 2022",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Voucher Redemption - Epicure Dining 20% off",
+                    "amountSpent": "3,000",
+                    "discount": "600",
+                    "neuCoinsEarned": "0"
+                }
+            ]
+        },
+        {
+            "date": "2 Nov 2022",
+            "transaction": [
+                {
+                    "transactionId": "Transaction ID",
+                    "transactionDetail": "Gift Card Purchase - Wedding Theme",
+                    "amountSpent": "5,000",
+                    "discount": "0",
+                    "neuCoinsEarned": "100"
+                }
+            ]
+        }
+    ],
+    "table": [
+        {
+            "tableHeading": "DATE"
+        },
+        {
+            "tableHeading": "TRANSACTION DETAIL"
+        },
+        {
+            "tableHeading": "AMOUNT SPENT"
+        },
+        {
+            "tableHeading": "DISCOUNTS"
+        },
+        {
+            "tableHeading": "NEUCOINS EARNED"
+        }
+    ],
+    "filter": [
+        {
+            "filterTitle": "NEUPASS"
+        },
+        {
+            "filterTitle": "Epicure Preferred"
+        },
+        {
+            "filterTitle": "The Chambers"
+        }
+    ]
+}

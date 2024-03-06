@@ -1,0 +1,21 @@
+{
+  "component": "modify-booking",
+  "checkIn": "CHECK IN",
+  "checkOut": "CHECK OUT",
+  "priceAmount": "PRICE AMOUNT",
+  "bookedOn": "BOOKED ON",
+  "paymentStatus": "PAYMENT STATUS",
+  "paymentMethod": "PAYMENT METHOD",
+  "PayAtHotel": "PAY AT HOTEL",
+  "roomDetails": "Booking Number:",
+  "bookingConfirmation": "Confirmed",
+  "accountButton": "BACK TO MY ACCOUNT",
+  "prices": "Price",
+  "newPrice": "New Price",
+  "tax": "Taxes and Fees",
+  "roomTax": "Goods and service tax",
+  "GST_LABEL": "(GST)",
+  "total": "Total",
+  "print": "PRINT",
+  "share": "SHARE"
+}

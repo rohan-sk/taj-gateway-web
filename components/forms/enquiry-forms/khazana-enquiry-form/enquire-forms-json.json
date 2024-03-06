@@ -1,0 +1,87 @@
+{
+  "productList": [
+    { "productName": "Diamond Jewellery" },
+    { "productName": "Gold Jewellery" },
+    { "productName": "Silver  Jewellery" },
+    { "productName": "Accessories for Her" },
+    { "productName": "Garments for Her" },
+    { "productName": "Garments for Him" },
+    { "productName": "Book" },
+    { "productName": "Silver" },
+    { "productName": "Furniture" },
+    { "productName": "Handicraft" },
+    { "productName": "Home" }
+  ],
+  "signatureHampersList": [
+    {
+      "signatureHamper": "Regalia Hampers"
+    },
+    {
+      "signatureHamper": "Gourmet Hampers"
+    },
+    {
+      "signatureHamper": "Indulgence Hampers"
+    }
+  ],
+  "hamperNamesList": [
+    {
+      "signatureHamper": "Regalia Hampers",
+      "hamperName": [
+        {
+          "hamper": "Hampers for every occassion"
+        }
+      ]
+    },
+    {
+      "signatureHamper": "Gourmet Hampers",
+      "hamperName": [
+        {
+          "hamper": "Gift Hampers"
+        }
+      ]
+    },
+    {
+      "signatureHamper": "Indulgence Hampers",
+      "hamperName": [
+        {
+          "hamper": "Mothers day celebration"
+        },
+        {
+          "hamper": "Gourmet hampers"
+        },
+        {
+          "hamper": "All Season Hampers"
+        },
+        {
+          "hamper": "Gifting N More"
+        },
+        {
+          "hamper": "Festive Hampers"
+        },
+        {
+          "hamper": "Immunity Booster Chocolates"
+        },
+        {
+          "hamper": "Festive Gourmet hampers"
+        },
+        {
+          "hamper": "Bespoke gift hampers"
+        }
+      ]
+    }
+  ],
+  "expectedNightStays": [
+    {
+      "stay": "10"
+    },
+    {
+      "stay": "20"
+    },
+    {
+      "stay": "50"
+    },
+    {
+      "stay": "100"
+    }
+  ]
+}

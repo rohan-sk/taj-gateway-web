@@ -1,0 +1,124 @@
+{
+    "response": {
+      "customer": {
+        "firstname": "bc542db2017bac6f23c248c05b5eee4b",
+        "lastname": "bc542db2017bac6f23c248c05b5eee4b",
+        "user_id": "497258774",
+        "external_id": "bc542db2017bac6f23c248c05b5eee4b"
+      },
+      "transactions": [
+        {
+          "type": "1",
+          "billing_time": "2023-04-11 17:32:55",
+          "redeemable_from": "2023-04-11 17:32:55",
+          "store": "IHCL SIT Admin store",
+          "store_code": "ihcl.sit.admin",
+          "points": "1090.00",
+          "points_type": "customer_promotion",
+          "txn_source": "",
+          "program_id": "1422",
+          "points_label": "+",
+          "label": "Goodwill Promotion-1",
+          "expiry_date": "2024-04-30 23:59:59"
+        },
+        {
+          "type": "2",
+          "billing_time": "2023-05-11 17:32:55",
+          "redeemable_from": "2023-04-11 17:32:55",
+          "store": "IHCL SIT Admin store",
+          "store_code": "ihcl.sit.admin",
+          "points": "1600.00",
+          "points_type": "customer_promotion-2",
+          "txn_source": "",
+          "program_id": "1422",
+          "points_label": "+",
+          "label": "Goodwill Promotion",
+          "expiry_date": "2024-04-30 23:59:59"
+        },
+        {
+          "type": "3",
+          "billing_time": "2023-06-11 17:32:55",
+          "redeemable_from": "2023-04-11 17:32:55",
+          "store": "IHCL SIT Admin store",
+          "store_code": "ihcl.sit.admin",
+          "points": "1200.00",
+          "points_type": "customer_promotion",
+          "txn_source": "",
+          "program_id": "1422",
+          "points_label": "+",
+          "label": "Goodwill Promotion-3",
+          "expiry_date": "2024-04-30 23:59:59"
+        },
+        {
+          "type": "4",
+          "billing_time": "2023-07-11 17:32:55",
+          "redeemable_from": "2023-04-11 17:32:55",
+          "store": "IHCL SIT Admin store",
+          "store_code": "ihcl.sit.admin",
+          "points": "1050.00",
+          "points_type": "customer_promotion",
+          "txn_source": "",
+          "program_id": "1422",
+          "points_label": "+",
+          "label": "Goodwill Promotion-4",
+          "expiry_date": "2024-04-30 23:59:59"
+        },
+        {
+          "type": "5",
+          "billing_time": "2023-08-11 17:32:55",
+          "redeemable_from": "2023-04-11 17:32:55",
+          "store": "IHCL SIT Admin store",
+          "store_code": "ihcl.sit.admin",
+          "points": "1040.00",
+          "points_type": "customer_promotion",
+          "txn_source": "",
+          "program_id": "1422",
+          "points_label": "+",
+          "label": "Goodwill Promotion-5",
+          "expiry_date": "2024-04-30 23:59:59"
+        },
+        {
+          "type": "6",
+          "billing_time": "2023-09-11 17:32:55",
+          "redeemable_from": "2023-04-11 17:32:55",
+          "store": "IHCL SIT Admin store",
+          "store_code": "ihcl.sit.admin",
+          "points": "10230.00",
+          "points_type": "customer_promotion",
+          "txn_source": "",
+          "program_id": "1422",
+          "points_label": "+",
+          "label": "Goodwill Promotion-6",
+          "expiry_date": "2024-04-30 23:59:59"
+        },
+        {
+          "type": "7",
+          "billing_time": "2023-10-11 17:32:55",
+          "redeemable_from": "2023-04-11 17:32:55",
+          "store": "IHCL SIT Admin store",
+          "store_code": "ihcl.sit.admin",
+          "points": "10110.00",
+          "points_type": "customer_promotion",
+          "txn_source": "",
+          "program_id": "1422",
+          "points_label": "+",
+          "label": "Goodwill Promotion-7",
+          "expiry_date": "2024-04-30 23:59:59"
+        },
+        {
+          "type": "8",
+          "billing_time": "2023-11-11 17:32:55",
+          "redeemable_from": "2023-04-11 17:32:55",
+          "store": "IHCL SIT Admin store",
+          "store_code": "ihcl.sit.admin",
+          "points": "1100.00",
+          "points_type": "customer_promotion",
+          "txn_source": "",
+          "program_id": "1422",
+          "points_label": "+",
+          "label": "Goodwill Promotion",
+          "expiry_date": "2024-04-30 23:59:59"
+        }
+      ]
+    }
+  }

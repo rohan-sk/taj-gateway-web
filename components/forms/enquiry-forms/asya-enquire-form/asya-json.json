@@ -1,0 +1,151 @@
+{
+  "massage": [
+    {
+      "name": "Skincare"
+    },
+    {
+      "name": "Hair care"
+    },
+    {
+      "name": "Massage"
+    }
+  ],
+  "products": [
+    {
+      "name": "Skincare",
+      "productsList": [
+        {
+          "productName": "Avocado Body Lotion for Dry Skin",
+          "productImg": "/avacado-skin-care.png"
+        },
+        {
+          "productName": "Avocado night face cream",
+          "productImg": "/avacado-night-care.png"
+        },
+        {
+          "productName": "Avocado Moisturizing Face Gel",
+          "productImg": "/skin-care-jel.png"
+        },
+        {
+          "productName": "Avocado Day Cream with SPF",
+          "productImg": "/avacado-night-care.png"
+        }
+      ]
+    },
+    {
+      "name": "Hair care",
+      "productsList": [
+        {
+          "productName": "Grapeseed Glossing Serum",
+          "productImg": "/hair-conditioner.jpg"
+        },
+        {
+          "productName": "Moringa Shine & Protection Hair Mist",
+          "productImg": "/hair-mist.jpg"
+        },
+        {
+          "productName": "Moringa Shine & Protection Conditioner",
+          "productImg": "/hair-cream.jpg"
+        },
+        {
+          "productName": "Shea Intense Repair Hair Mask",
+          "productImg": "/hair-conditioner.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Massage",
+      "productsList": [
+        {
+          "productName": "Detoxifying Blend",
+          "productImg": "/asya=product-1.png"
+        },
+        {
+          "productName": "Energising Blend",
+          "productImg": "/asya=product-2.png"
+        },
+        {
+          "productName": "Indian Head Massage Blend",
+          "productImg": "/asya=product-3.png"
+        },
+        {
+          "productName": "Powerful Massage Blend",
+          "productImg": "/asya=product-1.png"
+        },
+        {
+          "productName": "Relaxation Blend",
+          "productImg": "/asya=product-3.png"
+        }
+      ]
+    }
+  ],
+  "productSize": [
+    {
+      "productName": "Avocado Body Lotion for Dry Skin",
+      "sizes": [{ "size": "100ml" }, { "size": "500ml" }, { "size": "900ml" }]
+    },
+    {
+      "productName": "Avocado night face cream",
+      "sizes": [{ "size": "500gm" }, { "size": "750gm" }]
+    },
+    {
+      "productName": "Avocado Moisturizing Face Gel",
+      "sizes": [
+        { "size": "50ml" },
+        { "size": "120ml" },
+        { "size": "180ml" },
+        { "size": "500ml" }
+      ]
+    },
+    {
+      "productName": "Avocado Day Cream with SPF",
+      "sizes": [{ "size": "100gm" }, { "size": "250gm" }, { "size": "500gm" }]
+    },
+    {
+      "productName": "Grapeseed Glossing Serum",
+      "sizes": [
+        { "size": "60ml" },
+        { "size": "100ml" },
+        { "size": "250ml" },
+        { "size": "750ml" }
+      ]
+    },
+    {
+      "productName": "Moringa Shine & Protection Hair Mist",
+      "sizes": [{ "size": "250ml" }, { "size": "500ml" }]
+    },
+    {
+      "productName": "Moringa Shine & Protection Conditioner",
+      "sizes": [{ "size": "100ml" }, { "size": "120ml" }, { "size": "400ml" }]
+    },
+    {
+      "productName": "Shea Intense Repair Hair Mask",
+      "sizes": [{ "size": "100gm" }, { "size": "500gm" }, { "size": "750gm" }]
+    },
+    {
+      "productName": "Detoxifying Blend",
+      "sizes": [{ "size": "100gm" }, { "size": "400gm" }, { "size": "750gm" }]
+    },
+    {
+      "productName": "Energising Blend",
+      "sizes": [{ "size": "50gm" }, { "size": "100gm" }]
+    },
+    {
+      "productName": "Indian Head Massage Blend",
+      "sizes": [{ "size": "100ml" }, { "size": "350ml" }, { "size": "750ml" }]
+    },
+    {
+      "productName": "Relaxation Blend",
+      "sizes": [{ "size": "80gm" }, { "size": "150gm" }, { "size": "300gm" }]
+    },
+    {
+      "productName": "Powerful Massage Blend",
+      "sizes": [
+        { "size": "50ml" },
+        { "size": "120ml" },
+        { "size": "500ml" },
+        { "size": "750ml" }
+      ]
+    }
+  ]
+}

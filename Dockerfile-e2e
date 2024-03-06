@@ -1,0 +1,23 @@
+FROM node:18 as builder
+WORKDIR /app
+COPY . .
+RUN npm install -g npm@9.5.1
+RUN npm install --force
+FROM node:18 AS runner
+WORKDIR /app
+ENV NODE_ENV production
+ENV TARGET_ENV e2e
+RUN true
+COPY --from=builder /app .
+RUN true
+COPY package.json /app/
+RUN true
+COPY dotenv/.env.e2e /app/.env
+RUN true
+
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
+RUN npm run build:e2e
+EXPOSE 3000
+ENTRYPOINT [ "/docker-entrypoint.sh" ]

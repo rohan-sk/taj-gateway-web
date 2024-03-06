@@ -1,0 +1,109 @@
+[
+  {
+    "heading": "Epicure Enrollment Successful",
+    "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    "variant": "component1-title-card"
+  },
+  { 
+    "variant":"group-fields-1",
+    "group-fields-1": [
+      {
+        "field": "Purchase order number",
+        "value": "312009375228",
+        "variant": "component2-value-field",
+        "themevariant":"heading-m",
+        "grid":6
+      },
+      {
+        "field": "YOUR MEMBERSHIP ID",
+        "value": "202020000263",
+        "variant": "component2-value-field",
+        "themevariant":"heading-m",
+        "grid":6
+      },
+      {
+        "field": "Buyer Name",
+        "value": "Michael Johnson",
+        "variant": "component2-value-field",
+        "themevariant":"heading-xs",
+        "grid":3
+      },
+      {
+        "field": "Email",
+        "value": "MJjohnson@gmail.com",
+        "variant": "component2-value-field",
+        "themevariant":"heading-xs",
+        "grid":3
+      },
+      {
+        "field": "Mobile Number",
+        "value": "+91 141-2385700",
+        "variant": "component2-value-field",
+        "themevariant":"heading-xs",
+        "grid":3
+      },
+      {
+        "field": "Date of birth",
+        "value": "14 SEP 1975",
+        "variant": "component2-value-field",
+        "themevariant":"heading-xs",
+        "grid":3
+      },
+      {
+        "field": "GST Number",
+        "value": "22aaaa000a1z5",
+        "variant": "component2-value-field",
+        "themevariant":"heading-xs",
+        "grid":3
+      },
+      {
+        "field": "Payment Method",
+        "value": "Credit Card / Debit Card",
+        "variant": "component2-value-field",
+        "themevariant":"heading-xs",
+        "grid":3
+      },
+      {
+        "field": "Card Number",
+        "value": "44xx-xxxx-xxxx-9645",
+        "variant": "component2-value-field",
+        "themevariant":"heading-xs",
+        "grid":3
+      },
+      {
+        "field": "Address",
+        "value": "Mumbai, Maharashtra 400 021, India",
+        "variant": "component2-value-field",
+        "themevariant":"heading-xs",
+        "grid":6
+      }
+    ]
+  },
+
+  {
+    "variant":"group-fields-2",
+    "group-fields-2": [
+
+            {
+              "card": {
+                "cardImage": "https://i.ibb.co/5hC9FWC/image-81-1.png",
+                "cardName": "Epicure Privileged"
+              },
+              "price":"₹ 25,000",
+              "quantity": "1",
+              "total": "₹ 25,000"
+            }
+          ]
+        },
+  {
+    "variant":"group-fields-3",
+    "group-fields-3":[
+      {
+        "price":"₹ 25,000",
+        "tax": "₹ 4,500",
+        "total": "₹ 29,500",
+        "showmore": "--------"
+      }
+    ]
+  }
+]

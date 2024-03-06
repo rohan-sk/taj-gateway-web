@@ -1,0 +1,13 @@
+{
+  "originalPrice": "Original price",
+  "newPrice": "New price",
+  "paidLabel": "Paid",
+  "taxesAndFees": "Taxes and Fees",
+  "priceChange": "Price change",
+  "newTotalPrice": "New total price",
+  "refundableAmount": "Refundable Amount",
+  "additionalAmount": "Additional Amount",
+  "balancePayable": "Balance Payable at Hotel",
+  "payAtHotel": "PAY AT HOTEL",
+  "taxes": "Taxes"
+}

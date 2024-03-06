@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "type": "HOTEL TYPES",
+            "filterText": "hotel type",
+            "filters": [
+                "Hyderabad",
+                "Telangana",
+                "Solapur",
+                "Pune",
+                "Agra",
+                "Mumbai",
+                "Lingampally",
+                "Ameerpeth"
+            ]
+        },
+        {
+            "type": "DESTINATIONS",
+            "filterText": "DESTINATIONS",
+            "filters": [
+                "Hyderabad",
+                "Telangana",
+                "Solapur",
+                "Pune",
+                "Agra",
+                "Mumbai",
+                "Lingampally",
+                "Ameerpeth"
+            ]
+        },
+        {
+            "type": "OFFERS",
+            "filterText": "Offers",
+            "filters": [
+                "Hyderabad",
+                "Telangana",
+                "Solapur",
+                "Pune",
+                "Agra",
+                "Mumbai",
+                "Lingampally",
+                "Ameerpeth"
+            ]
+        }
+    ]
+}

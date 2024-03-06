@@ -1,0 +1,36 @@
+{
+  "salutation": [
+    {
+      "title": "Mr"
+    },
+    {
+      "title": "Ms"
+    },
+    {
+      "title": "Mrs"
+    },
+    {
+      "title": "Miss"
+    },
+    {
+      "title": "Dr"
+    },
+    {
+      "title": "Prof"
+    },
+    {
+      "title": "Adv"
+    },
+    {
+      "title": "CA"
+    },
+    {
+      "title": "Col"
+    }
+  ],
+  "gender": [
+    { "title": "Male" },
+    { "title": "Female" },
+    { "title": "I'd rather not say" }
+  ]
+}

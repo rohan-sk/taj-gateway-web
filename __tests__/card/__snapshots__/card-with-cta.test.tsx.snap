@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shows card with cta component 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-1ogyrjv"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-cospxd-MuiPaper-root-MuiCard-root"
+    />
+    <div
+      class="MuiBox-root css-h0xyzq"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-1xoedcw-MuiTypography-root"
+      />
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-11eraoz-MuiTypography-root"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,125 @@
+import { triggerEvent } from "../.."
+import { getCookie } from "../../../cookie"
+import { AFFILIATION } from "../../constants"
+
+export const dropdownSelect = (
+  event: any,
+  keyName: any,
+  key: any,
+  data: any,
+  newValue: any,
+  dataLayer: any,
+  isMobile: boolean,
+  mobileTitle: string,
+  sectionMobileTitle: string,
+  desktopTitle: string,
+  sectionDesktopTitle: string,
+) => {
+  switch (keyName?.toLowerCase()) {
+    case "capacity":
+      triggerEvent({
+        action: "capacitySelected",
+        params: {
+          ...dataLayer,
+          eventType: "",
+          eventName: "",
+          eventPlace: "",
+          eventTicketsQty: "",
+          eventDate: "",
+          clientId: getCookie("_ga")?.slice(6),
+          visitSource: "",
+          brandName: AFFILIATION,
+          link_url: "",
+          link_text: event.target.value || newValue?.label,
+          widget_title: isMobile ? mobileTitle || sectionMobileTitle : desktopTitle || sectionDesktopTitle,
+          widget_description: "",
+          widget_type: key,
+          widget_position: "",
+          outbound: false,
+          item_name: keyName,
+          item_type: key,
+          no_of_items: data?.length,
+          capacity: event.target.value || newValue?.label,
+          location: "",
+          offerName: "",
+          offerCode: "",
+          offerID: "",
+          offerCategory: "",
+          offerValidity: "",
+          specialCode: "",
+          pageSection: isMobile ? mobileTitle || sectionMobileTitle : desktopTitle || sectionDesktopTitle,
+        },
+      })
+      break
+    case "theme":
+      triggerEvent({
+        action: "themeSelected",
+        params: {
+          ...dataLayer,
+          eventType: "",
+          eventName: "",
+          eventPlace: "",
+          eventTicketsQty: "",
+          eventDate: "",
+          clientId: getCookie("_ga")?.slice(6),
+          visitSource: "",
+          brandName: AFFILIATION,
+          link_url: "",
+          link_text: event.target.value || newValue?.label,
+          widget_title: isMobile ? mobileTitle || sectionMobileTitle : desktopTitle || sectionDesktopTitle,
+          widget_description: "",
+          widget_type: key,
+          widget_position: "",
+          outbound: false,
+          item_name: keyName,
+          item_type: key,
+          no_of_items: data?.length,
+          location: "",
+          theme: event.target.value,
+          themeType: event.target.value,
+          offerName: "",
+          offerCode: "",
+          offerID: "",
+          offerCategory: "",
+          offerValidity: "",
+          pageSection: isMobile ? mobileTitle || sectionMobileTitle : desktopTitle || sectionDesktopTitle,
+        },
+      })
+      break
+    case "seating style":
+      triggerEvent({
+        action: "seatingStyleSelected",
+        params: {
+          ...dataLayer,
+          eventType: "",
+          eventName: "",
+          eventPlace: "",
+          eventTicketsQty: "",
+          eventDate: "",
+          clientId: getCookie("_ga")?.slice(6),
+          visitSource: "",
+          brandName: AFFILIATION,
+          link_url: "",
+          link_text: event.target.value || newValue,
+          widget_title: isMobile ? mobileTitle || sectionMobileTitle : desktopTitle || sectionDesktopTitle,
+          widget_description: "",
+          widget_type: key,
+          widget_position: "",
+          outbound: false,
+          item_name: keyName,
+          item_type: key,
+          no_of_items: data?.length,
+          location: "",
+          offerName: "",
+          offerCode: "",
+          offerID: "",
+          offerCategory: "",
+          offerValidity: "",
+          seatingStyle: event.target.value || newValue,
+          specialCode: "",
+          pageSection: isMobile ? mobileTitle || sectionMobileTitle : desktopTitle || sectionDesktopTitle,
+        },
+      })
+      break
+  }
+}

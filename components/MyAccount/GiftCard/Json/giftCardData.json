@@ -1,0 +1,52 @@
+{
+    "items": [
+        {
+            "name": "birthday gift card",
+            "img": "https://i.ibb.co/0cfY2hC/Rectangle-381.png",
+            "bookedOn": "15 May 2022",
+            "expiredOn": "15 May 2022",
+            "recievedFrom": "First Name - Last Name",
+            "balance": 100000
+        },
+        {
+            "name": "Taj Experimced gift card",
+            "img": "https://i.ibb.co/0cfY2hC/Rectangle-381.png",
+            "bookedOn": "15 December 2022",
+            "expiredOn": "15 September 2022",
+            "recievedFrom": "SELF",
+            "balance": 70000
+        },
+        {
+            "name": "Taj Experimced gift card",
+            "img": "https://i.ibb.co/0cfY2hC/Rectangle-381.png",
+            "bookedOn": "15 May 2022",
+            "expiredOn": "15 May 2022",
+            "recievedFrom": "SELF",
+            "balance": 70000
+        },
+        {
+            "name": "Taj Experimced gift card",
+            "img": "https://i.ibb.co/0cfY2hC/Rectangle-381.png",
+            "bookedOn": "15 May 2022",
+            "expiredOn": "15 May 2022",
+            "recievedFrom": "SELF",
+            "balance": 70000
+        },
+        {
+            "name": "Taj Experimced gift card",
+            "img": "https://i.ibb.co/0cfY2hC/Rectangle-381.png",
+            "bookedOn": "15 May 2022",
+            "expiredOn": "15 May 2022",
+            "recievedFrom": "SELF",
+            "balance": 70000
+        },
+        {
+            "name": "Taj Wedding gift card",
+            "img": "https://i.ibb.co/0cfY2hC/Rectangle-382.png",
+            "bookedOn": "15 May 2022",
+            "expiredOn": "15 May 2022",
+            "recievedFrom": "First Name - Last Name",
+            "balance": 180000
+        }
+    ]
+}

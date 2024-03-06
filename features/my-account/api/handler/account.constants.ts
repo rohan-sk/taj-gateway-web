@@ -1,0 +1,14 @@
+export const getCustomerData = `${process.env.NEXT_PUBLIC_SSO_BASE_API_URL}get-customer`
+export const GET_USER_ACCOUNT_DATA_BY_TYPE = `${process.env.NEXT_PUBLIC_API_GATEWAY_BASE_URL}orderService/v1/orders/fetch-bookings`
+export const GET_USER_VOUCHERS = `${process.env.NEXT_PUBLIC_GRAVITY_BASE_URL}members/privileges`
+export const GET_USER_ADDRESSES = `${process.env.NEXT_PUBLIC_SSO_BASE_API_URL}get-customer-addresses`
+export const ADD_USER_ADDRESSES = `${process.env.NEXT_PUBLIC_SSO_BASE_API_URL}add-update-customer-address`
+export const UPDATE_USER_ADDRESS = `${process.env.NEXT_PUBLIC_SSO_BASE_API_URL}update-customer-address`
+export const DELETE_USER_ADDRESS = `${process.env.NEXT_PUBLIC_SSO_BASE_API_URL}delete-customer-address`
+export const REQUEST_EMAIL_CHANGE = `${process.env.NEXT_PUBLIC_SSO_BASE_API_URL}generate-email-change-otp`
+export const GET_USER_ORDERS_COUNT_OVERVIEW = `${process.env.NEXT_PUBLIC_API_GATEWAY_BASE_URL}orderService/v1/my-accounts/overview`
+export const CLAIM_MISSING_NEU_COINS = `${process.env.NEXT_PUBLIC_API_GATEWAY_BASE_URL}notifications/v1/neucoins/claim-request`
+export const FIND_YOUR_BOOKING = `${process.env.NEXT_PUBLIC_ORDERS_BASE_URL}orders/fetch-order-details`
+export const GET_OVERVIEW_VOUCHERS = `${process.env.NEXT_PUBLIC_GRAVITY_BASE_URL}fetch-vouchers`
+export const GET_EPICURE_MEMBERSHIP_DETAILS = `${process.env.NEXT_PUBLIC_GRAVITY_BASE_URL}members/members_cards`
+export const GET_COUNTRY_STATE_CITY = `${process.env.NEXT_PUBLIC_API_GATEWAY_BASE_URL}orderService/v1/countries`

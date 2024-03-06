@@ -1,0 +1,11 @@
+{
+  "title": "MY MEMBERSHIP",
+  "items": [
+    {
+      "membership": "NEUPASS",
+      "desktopImage": "https://i.ibb.co/3yTQhPn/Gold-4.png",
+      "mobileImage": "https://i.ibb.co/kJdZndV/Gold-5.png",
+      "type": "Gold MEMBER"
+    }
+  ]
+}

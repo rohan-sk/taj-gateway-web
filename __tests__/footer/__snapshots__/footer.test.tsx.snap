@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shows footer component 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-13f878x"
+  >
+    <div
+      class="MuiBox-root css-1v64tjb"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11.8 MuiGrid-grid-sm-11.8 MuiGrid-grid-md-5 MuiGrid-grid-lg-5 MuiGrid-grid-xl-5 css-1i05hwg-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-6q7m68"
+          >
+            <div
+              class="MuiBox-root css-1wfitvv"
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root css-1h45305-MuiFormControl-root-MuiTextField-root"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+                  data-shrink="false"
+                  for=":r0:"
+                  id=":r0:-label"
+                >
+                  ENTER YOUR EMAIL ADDRESS
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-1ptx2yq-MuiInputBase-root-MuiInput-root"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                    id=":r0:"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiBox-root css-1ihnis4"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-s9rk3l-MuiTypography-root"
+              />
+              <div
+                class="MuiBox-root css-rzltp1"
+              >
+                <div
+                  class="MuiBox-root css-1tykiii"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-19lsiyc-MuiTypography-root"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-fz2ww0-MuiTypography-root"
+                  />
+                </div>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-19lsiyc-MuiTypography-root"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11.8 MuiGrid-grid-sm-11.8 MuiGrid-grid-md-3.8 MuiGrid-grid-lg-3.8 MuiGrid-grid-xl-3.8 css-1tjeych-MuiGrid-root"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-d703h2-MuiTypography-root"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          />
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11.8 MuiGrid-grid-sm-11.8 MuiGrid-grid-md-3 MuiGrid-grid-lg-3 MuiGrid-grid-xl-3 css-11cvmbx-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-o1xwpy-MuiGrid-root"
+          />
+        </div>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth css-1yk2s4v-MuiDivider-root"
+        />
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth css-5x1nwi-MuiDivider-root"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

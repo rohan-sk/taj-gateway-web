@@ -1,0 +1,12 @@
+{
+  "whatsappSend": " Send by WhatsApp",
+  "mobileWhatsappSend": "By WhatsApp",
+  "smsSend": "Send by SMS",
+  "mobileSmsSend": "By SMS",
+  "sendSMSAndWhatsApp": "Sent by SMS",
+  "mobileSendSMSAndWhatsApp": "By SMS",
+  "sendEmail": "Sent by Email",
+  "mobileSendEmail": "By Email",
+  "formSMSAndWhatsApp": "Send by SMS",
+  "formEmail": "Send by Email"
+}

@@ -1,0 +1,16 @@
+{
+  "title": "YOUR STAY",
+  "priceLabel": "Price",
+  "oldPriceLabel": "Old Price",
+  "newPriceLabel": "New Price",
+  "totalChange": "Total Change",
+  "totalPrice": "Total Price",
+  "newTotalPriceLabel": "New Total",
+  "additionalAmount": "Additional Amount",
+  "refundableAmount": "Refundable Amount",
+  "payAtHotel": "PAY AT HOTEL",
+  "taxLabel": "Taxes and Fees",
+  "roomTaxLabel": "Goods and service tax",
+  "ctaLabel": "Change Room",
+  "rateDetails": "Rate Details"
+}

@@ -1,0 +1,1197 @@
+{
+  "countryList": [
+    {
+      "country": "India"
+    }
+  ],
+  "cityList": [
+    {
+      "city": "Mumbai"
+    },
+    {
+      "city": "Pune"
+    },
+    {
+      "city": "Nagpur"
+    },
+    {
+      "city": "Thane"
+    },
+    {
+      "city": "Nashik"
+    },
+    {
+      "city": "Kalyan-Dombivali"
+    },
+    {
+      "city": "Vasai-Virar"
+    },
+    {
+      "city": "Solapur"
+    },
+    {
+      "city": "Mira-Bhayandar"
+    },
+    {
+      "city": "Bhiwandi"
+    },
+    {
+      "city": "Amravati"
+    },
+    {
+      "city": "Nanded-Waghala"
+    },
+    {
+      "city": "Sangli"
+    },
+    {
+      "city": "Malegaon"
+    },
+    {
+      "city": "Akola"
+    },
+    {
+      "city": "Latur"
+    },
+    {
+      "city": "Dhule"
+    },
+    {
+      "city": "Ahmednagar"
+    },
+    {
+      "city": "Ichalkaranji"
+    },
+    {
+      "city": "Parbhani"
+    },
+    {
+      "city": "Panvel"
+    },
+    {
+      "city": "Yavatmal"
+    },
+    {
+      "city": "Achalpur"
+    },
+    {
+      "city": "Osmanabad"
+    },
+    {
+      "city": "Nandurbar"
+    },
+    {
+      "city": "Satara"
+    },
+    {
+      "city": "Wardha"
+    },
+    {
+      "city": "Udgir"
+    },
+    {
+      "city": "Aurangabad"
+    },
+    {
+      "city": "Amalner"
+    },
+    {
+      "city": "Akot"
+    },
+    {
+      "city": "Pandharpur"
+    },
+    {
+      "city": "Shrirampur"
+    },
+    {
+      "city": "Parli"
+    },
+    {
+      "city": "Washim"
+    },
+    {
+      "city": "Ambejogai"
+    },
+    {
+      "city": "Manmad"
+    },
+    {
+      "city": "Ratnagiri"
+    },
+    {
+      "city": "Uran Islampur"
+    },
+    {
+      "city": "Pusad"
+    },
+    {
+      "city": "Sangamner"
+    },
+    {
+      "city": "Shirpur-Warwade"
+    },
+    {
+      "city": "Malkapur"
+    },
+    {
+      "city": "Wani"
+    },
+    {
+      "city": "Lonavla"
+    },
+    {
+      "city": "Talegaon Dabhade"
+    },
+    {
+      "city": "Anjangaon"
+    },
+    {
+      "city": "Umred"
+    },
+    {
+      "city": "Palghar"
+    },
+    {
+      "city": "Shegaon"
+    },
+    {
+      "city": "Ozar"
+    },
+    {
+      "city": "Phaltan"
+    },
+    {
+      "city": "Yevla"
+    },
+    {
+      "city": "Shahade"
+    },
+    {
+      "city": "Vita"
+    },
+    {
+      "city": "Umarkhed"
+    },
+    {
+      "city": "Warora"
+    },
+    {
+      "city": "Pachora"
+    },
+    {
+      "city": "Tumsar"
+    },
+    {
+      "city": "Manjlegaon"
+    },
+    {
+      "city": "Sillod"
+    },
+    {
+      "city": "Arvi"
+    },
+    {
+      "city": "Nandura"
+    },
+    {
+      "city": "Vaijapur"
+    },
+    {
+      "city": "Wadgaon Road"
+    },
+    {
+      "city": "Sailu"
+    },
+    {
+      "city": "Murtijapur"
+    },
+    {
+      "city": "Tasgaon"
+    },
+    {
+      "city": "Mehkar"
+    },
+    {
+      "city": "Yawal"
+    },
+    {
+      "city": "Pulgaon"
+    },
+    {
+      "city": "Nilanga"
+    },
+    {
+      "city": "Wai"
+    },
+    {
+      "city": "Umarga"
+    },
+    {
+      "city": "Paithan"
+    },
+    {
+      "city": "Rahuri"
+    },
+    {
+      "city": "Nawapur"
+    },
+    {
+      "city": "Tuljapur"
+    },
+    {
+      "city": "Morshi"
+    },
+    {
+      "city": "Purna"
+    },
+    {
+      "city": "Satana"
+    },
+    {
+      "city": "Pathri"
+    },
+    {
+      "city": "Sinnar"
+    },
+    {
+      "city": "Uchgaon"
+    },
+    {
+      "city": "Uran"
+    },
+    {
+      "city": "Pen"
+    },
+    {
+      "city": "Karjat"
+    },
+    {
+      "city": "Manwath"
+    },
+    {
+      "city": "Partur"
+    },
+    {
+      "city": "Sangole"
+    },
+    {
+      "city": "Mangrulpir"
+    },
+    {
+      "city": "Risod"
+    },
+    {
+      "city": "Shirur"
+    },
+    {
+      "city": "Savner"
+    },
+    {
+      "city": "Sasvad"
+    },
+    {
+      "city": "Pandharkaoda"
+    },
+    {
+      "city": "Talode"
+    },
+    {
+      "city": "Shrigonda"
+    },
+    {
+      "city": "Shirdi"
+    },
+    {
+      "city": "Raver"
+    },
+    {
+      "city": "Mukhed"
+    },
+    {
+      "city": "Rajura"
+    },
+    {
+      "city": "Vadgaon Kasba"
+    },
+    {
+      "city": "Tirora"
+    },
+    {
+      "city": "Mahad"
+    },
+    {
+      "city": "Lonar"
+    },
+    {
+      "city": "Sawantwadi"
+    },
+    {
+      "city": "Pathardi"
+    },
+    {
+      "city": "Pauni"
+    },
+    {
+      "city": "Ramtek"
+    },
+    {
+      "city": "Mul"
+    },
+    {
+      "city": "Soyagaon"
+    },
+    {
+      "city": "Mangalvedhe"
+    },
+    {
+      "city": "Narkhed"
+    },
+    {
+      "city": "Shendurjana"
+    },
+    {
+      "city": "Patur"
+    },
+    {
+      "city": "Mhaswad"
+    },
+    {
+      "city": "Loha"
+    },
+    {
+      "city": "Nandgaon"
+    },
+    {
+      "city": "Warud"
+    },
+    {
+      "city": "Delhi"
+    },
+    {
+      "city": "New Delhi"
+    },
+    {
+      "city": "Bengaluru"
+    },
+    {
+      "city": "Hubli-Dharwad"
+    },
+    {
+      "city": "Belagavi"
+    },
+    {
+      "city": "Mangaluru"
+    },
+    {
+      "city": "Davanagere"
+    },
+    {
+      "city": "Ballari"
+    },
+    {
+      "city": "Tumkur"
+    },
+    {
+      "city": "Shivamogga"
+    },
+    {
+      "city": "Raayachuru"
+    },
+    {
+      "city": "Robertson Pet"
+    },
+    {
+      "city": "Kolar"
+    },
+    {
+      "city": "Mandya"
+    },
+    {
+      "city": "Udupi"
+    },
+    {
+      "city": "Chikkamagaluru"
+    },
+    {
+      "city": "Karwar"
+    },
+    {
+      "city": "Ranebennuru"
+    },
+    {
+      "city": "Ranibennur"
+    },
+    {
+      "city": "Ramanagaram"
+    },
+    {
+      "city": "Gokak"
+    },
+    {
+      "city": "Yadgir"
+    },
+    {
+      "city": "Rabkavi Banhatti"
+    },
+    {
+      "city": "Shahabad"
+    },
+    {
+      "city": "Sirsi"
+    },
+    {
+      "city": "Sindhnur"
+    },
+    {
+      "city": "Tiptur"
+    },
+    {
+      "city": "Arsikere"
+    },
+    {
+      "city": "Nanjangud"
+    },
+    {
+      "city": "Sagara"
+    },
+    {
+      "city": "Sira"
+    },
+    {
+      "city": "Puttur"
+    },
+    {
+      "city": "Athni"
+    },
+    {
+      "city": "Mulbagal"
+    },
+    {
+      "city": "Surapura"
+    },
+    {
+      "city": "Siruguppa"
+    },
+    {
+      "city": "Mudhol"
+    },
+    {
+      "city": "Sidlaghatta"
+    },
+    {
+      "city": "Shahpur"
+    },
+    {
+      "city": "Saundatti-Yellamma"
+    },
+    {
+      "city": "Wadi"
+    },
+    {
+      "city": "Manvi"
+    },
+    {
+      "city": "Nelamangala"
+    },
+    {
+      "city": "Lakshmeshwar"
+    },
+    {
+      "city": "Ramdurg"
+    },
+    {
+      "city": "Nargund"
+    },
+    {
+      "city": "Tarikere"
+    },
+    {
+      "city": "Malavalli"
+    },
+    {
+      "city": "Savanur"
+    },
+    {
+      "city": "Lingsugur"
+    },
+    {
+      "city": "Vijayapura"
+    },
+    {
+      "city": "Sankeshwara"
+    },
+    {
+      "city": "Madikeri"
+    },
+    {
+      "city": "Talikota"
+    },
+    {
+      "city": "Sedam"
+    },
+    {
+      "city": "Shikaripur"
+    },
+    {
+      "city": "Mahalingapura"
+    },
+    {
+      "city": "Mudalagi"
+    },
+    {
+      "city": "Muddebihal"
+    },
+    {
+      "city": "Pavagada"
+    },
+    {
+      "city": "Malur"
+    },
+    {
+      "city": "Sindhagi"
+    },
+    {
+      "city": "Sanduru"
+    },
+    {
+      "city": "Afzalpur"
+    },
+    {
+      "city": "Maddur"
+    },
+    {
+      "city": "Madhugiri"
+    },
+    {
+      "city": "Tekkalakote"
+    },
+    {
+      "city": "Terdal"
+    },
+    {
+      "city": "Mudabidri"
+    },
+    {
+      "city": "Magadi"
+    },
+    {
+      "city": "Navalgund"
+    },
+    {
+      "city": "Shiggaon"
+    },
+    {
+      "city": "Shrirangapattana"
+    },
+    {
+      "city": "Sindagi"
+    },
+    {
+      "city": "Sakaleshapura"
+    },
+    {
+      "city": "Srinivaspur"
+    },
+    {
+      "city": "Ron"
+    },
+    {
+      "city": "Mundargi"
+    },
+    {
+      "city": "Sadalagi"
+    },
+    {
+      "city": "Piriyapatna"
+    },
+    {
+      "city": "Adyar"
+    },
+    {
+      "city": "Ahmedabad"
+    },
+    {
+      "city": "Surat"
+    },
+    {
+      "city": "Vadodara"
+    },
+    {
+      "city": "Rajkot"
+    },
+    {
+      "city": "Bhavnagar"
+    },
+    {
+      "city": "Jamnagar"
+    },
+    {
+      "city": "Nadiad"
+    },
+    {
+      "city": "Porbandar"
+    },
+    {
+      "city": "Anand"
+    },
+    {
+      "city": "Morvi"
+    },
+    {
+      "city": "Mahesana"
+    },
+    {
+      "city": "Bharuch"
+    },
+    {
+      "city": "Vapi"
+    },
+    {
+      "city": "Navsari"
+    },
+    {
+      "city": "Veraval"
+    },
+    {
+      "city": "Bhuj"
+    },
+    {
+      "city": "Godhra"
+    },
+    {
+      "city": "Palanpur"
+    },
+    {
+      "city": "Valsad"
+    },
+    {
+      "city": "Patan"
+    },
+    {
+      "city": "Deesa"
+    },
+    {
+      "city": "Amreli"
+    },
+    {
+      "city": "Anjar"
+    },
+    {
+      "city": "Dhoraji"
+    },
+    {
+      "city": "Khambhat"
+    },
+    {
+      "city": "Mahuva"
+    },
+    {
+      "city": "Keshod"
+    },
+    {
+      "city": "Wadhwan"
+    },
+    {
+      "city": "Ankleshwar"
+    },
+    {
+      "city": "Savarkundla"
+    },
+    {
+      "city": "Kadi"
+    },
+    {
+      "city": "Visnagar"
+    },
+    {
+      "city": "Upleta"
+    },
+    {
+      "city": "Una"
+    },
+    {
+      "city": "Sidhpur"
+    },
+    {
+      "city": "Unjha"
+    },
+    {
+      "city": "Mangrol"
+    },
+    {
+      "city": "Viramgam"
+    },
+    {
+      "city": "Modasa"
+    },
+    {
+      "city": "Palitana"
+    },
+    {
+      "city": "Petlad"
+    },
+    {
+      "city": "Kapadvanj"
+    },
+    {
+      "city": "Sihor"
+    },
+    {
+      "city": "Wankaner"
+    },
+    {
+      "city": "Limbdi"
+    },
+    {
+      "city": "Mandvi"
+    },
+    {
+      "city": "Thangadh"
+    },
+    {
+      "city": "Vyara"
+    },
+    {
+      "city": "Padra"
+    },
+    {
+      "city": "Lunawada"
+    },
+    {
+      "city": "Rajpipla"
+    },
+    {
+      "city": "Vapi"
+    },
+    {
+      "city": "Umreth"
+    },
+    {
+      "city": "Sanand"
+    },
+    {
+      "city": "Rajula"
+    },
+    {
+      "city": "Radhanpur"
+    },
+    {
+      "city": "Mahemdabad"
+    },
+    {
+      "city": "Ranavav"
+    },
+    {
+      "city": "Tharad"
+    },
+    {
+      "city": "Mansa"
+    },
+    {
+      "city": "Umbergaon"
+    },
+    {
+      "city": "Talaja"
+    },
+    {
+      "city": "Vadnagar"
+    },
+    {
+      "city": "Manavadar"
+    },
+    {
+      "city": "Salaya"
+    },
+    {
+      "city": "Vijapur"
+    },
+    {
+      "city": "Pardi"
+    },
+    {
+      "city": "Rapar"
+    },
+    {
+      "city": "Songadh"
+    },
+    {
+      "city": "Lathi"
+    },
+    {
+      "city": "Adalaj"
+    },
+    {
+      "city": "Chhapra"
+    },
+    {
+      "city": "Hyderabad"
+    },
+    {
+      "city": "Warangal"
+    },
+    {
+      "city": "Nizamabad"
+    },
+    {
+      "city": "Karimnagar"
+    },
+    {
+      "city": "Ramagundam"
+    },
+    {
+      "city": "Khammam"
+    },
+    {
+      "city": "Mahbubnagar"
+    },
+    {
+      "city": "Mancherial"
+    },
+    {
+      "city": "Adilabad"
+    },
+    {
+      "city": "Suryapet"
+    },
+    {
+      "city": "Jagtial"
+    },
+    {
+      "city": "Miryalaguda"
+    },
+    {
+      "city": "Nirmal"
+    },
+    {
+      "city": "Kamareddy"
+    },
+    {
+      "city": "Kothagudem"
+    },
+    {
+      "city": "Bodhan"
+    },
+    {
+      "city": "Palwancha"
+    },
+    {
+      "city": "Mandamarri"
+    },
+    {
+      "city": "Koratla"
+    },
+    {
+      "city": "Sircilla"
+    },
+    {
+      "city": "Tandur"
+    },
+    {
+      "city": "Siddipet"
+    },
+    {
+      "city": "Wanaparthy"
+    },
+    {
+      "city": "Kagaznagar"
+    },
+    {
+      "city": "Gadwal"
+    },
+    {
+      "city": "Sangareddy"
+    },
+    {
+      "city": "Bellampalle"
+    },
+    {
+      "city": "Bhongir"
+    },
+    {
+      "city": "Vikarabad"
+    },
+    {
+      "city": "Jangaon"
+    },
+    {
+      "city": "Bhadrachalam"
+    },
+    {
+      "city": "Bhainsa"
+    },
+    {
+      "city": "Farooqnagar"
+    },
+    {
+      "city": "Medak"
+    },
+    {
+      "city": "Narayanpet"
+    },
+    {
+      "city": "Sadasivpet"
+    },
+    {
+      "city": "Yellandu"
+    },
+    {
+      "city": "Manuguru"
+    },
+    {
+      "city": "Kyathampalle"
+    },
+    {
+      "city": "Nagarkurnool"
+    },
+    {
+      "city": "Visakhapatnam"
+    },
+    {
+      "city": "Vijayawada"
+    },
+    {
+      "city": "Guntur"
+    },
+    {
+      "city": "Nellore"
+    },
+    {
+      "city": "Kurnool"
+    },
+    {
+      "city": "Rajahmundry"
+    },
+    {
+      "city": "Kakinada"
+    },
+    {
+      "city": "Tirupati"
+    },
+    {
+      "city": "Anantapur"
+    },
+    {
+      "city": "Kadapa"
+    },
+    {
+      "city": "Vizianagaram"
+    },
+    {
+      "city": "Eluru"
+    },
+    {
+      "city": "Ongole"
+    },
+    {
+      "city": "Nandyal"
+    },
+    {
+      "city": "Machilipatnam"
+    },
+    {
+      "city": "Adoni"
+    },
+    {
+      "city": "Tenali"
+    },
+    {
+      "city": "Chittoor"
+    },
+    {
+      "city": "Hindupur"
+    },
+    {
+      "city": "Proddatur"
+    },
+    {
+      "city": "Bhimavaram"
+    },
+    {
+      "city": "Madanapalle"
+    },
+    {
+      "city": "Guntakal"
+    },
+    {
+      "city": "Dharmavaram"
+    },
+    {
+      "city": "Gudivada"
+    },
+    {
+      "city": "Srikakulam"
+    },
+    {
+      "city": "Narasaraopet"
+    },
+    {
+      "city": "Rajampet"
+    },
+    {
+      "city": "Tadpatri"
+    },
+    {
+      "city": "Tadepalligudem"
+    },
+    {
+      "city": "Chilakaluripet"
+    },
+    {
+      "city": "Yemmiganur"
+    },
+    {
+      "city": "Kadiri"
+    },
+    {
+      "city": "Chirala"
+    },
+    {
+      "city": "Anakapalle"
+    },
+    {
+      "city": "Kavali"
+    },
+    {
+      "city": "Palacole"
+    },
+    {
+      "city": "Sullurpeta"
+    },
+    {
+      "city": "Tanuku"
+    },
+    {
+      "city": "Rayachoti"
+    },
+    {
+      "city": "Srikalahasti"
+    },
+    {
+      "city": "Bapatla"
+    },
+    {
+      "city": "Naidupet"
+    },
+    {
+      "city": "Nagari"
+    },
+    {
+      "city": "Gudur"
+    },
+    {
+      "city": "Vinukonda"
+    },
+    {
+      "city": "Narasapuram"
+    },
+    {
+      "city": "Nuzvid"
+    },
+    {
+      "city": "Markapur"
+    },
+    {
+      "city": "Ponnur"
+    },
+    {
+      "city": "Kandukur"
+    },
+    {
+      "city": "Bobbili"
+    },
+    {
+      "city": "Rayadurg"
+    },
+    {
+      "city": "Samalkot"
+    },
+    {
+      "city": "Jaggaiahpet"
+    },
+    {
+      "city": "Tuni"
+    },
+    {
+      "city": "Amalapuram"
+    },
+    {
+      "city": "Bheemunipatnam"
+    },
+    {
+      "city": "Venkatagiri"
+    },
+    {
+      "city": "Sattenapalle"
+    },
+    {
+      "city": "Pithapuram"
+    },
+    {
+      "city": "Palasa Kasibugga"
+    },
+    {
+      "city": "Parvathipuram"
+    },
+    {
+      "city": "Macherla"
+    },
+    {
+      "city": "Gooty"
+    },
+    {
+      "city": "Salur"
+    },
+    {
+      "city": "Mandapeta"
+    },
+    {
+      "city": "Jammalamadugu"
+    },
+    {
+      "city": "Peddapuram"
+    },
+    {
+      "city": "Punganur"
+    },
+    {
+      "city": "Nidadavole"
+    },
+    {
+      "city": "Repalle"
+    },
+    {
+      "city": "Ramachandrapuram"
+    },
+    {
+      "city": "Kovvur"
+    },
+    {
+      "city": "Tiruvuru"
+    },
+    {
+      "city": "Uravakonda"
+    },
+    {
+      "city": "Narsipatnam"
+    },
+    {
+      "city": "Yerraguntla"
+    },
+    {
+      "city": "Pedana"
+    },
+    {
+      "city": "Puttur"
+    },
+    {
+      "city": "Renigunta"
+    },
+    {
+      "city": "Rajam"
+    },
+    {
+      "city": "Srisailam Project (Right Flank Colony) Township"
+    }
+  ]
+}

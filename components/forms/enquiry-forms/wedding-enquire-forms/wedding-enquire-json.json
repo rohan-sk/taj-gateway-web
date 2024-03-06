@@ -1,0 +1,61 @@
+{
+  "weddingThemes": [
+    {
+      "themes": "Vows on the Beach"
+    },
+    {
+      "themes": "City wedding"
+    },
+    {
+      "themes": "Royal palace wedding"
+    }
+  ],
+  "flexibleDates": [
+    {
+      "flexible": "YES"
+    },
+    {
+      "flexible": "NO"
+    }
+  ],
+  "guestRooms": [
+    {
+      "required": "YES"
+    },
+    {
+      "required": "NO"
+    }
+  ],
+  "noOfGuests": [
+    {
+      "guest": "Up to 10"
+    },
+    {
+      "guest": "11-25"
+    },
+    {
+      "guest": "26-50"
+    },
+    {
+      "guest": "51-100"
+    },
+    {
+      "guest": "101-200"
+    },
+    {
+      "guest": "200-250"
+    },
+    {
+      "guest": "250-500"
+    },
+    {
+      "guest": "500-800"
+    },
+    {
+      "guest": "800-1000"
+    },
+    {
+      "guest": "1000 and above"
+    }
+  ]
+}

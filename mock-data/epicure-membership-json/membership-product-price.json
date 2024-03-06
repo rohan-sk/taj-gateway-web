@@ -1,0 +1,11 @@
+{
+  "product": "PRODUCTS",
+  "price": "PRICE",
+  "quantity": "QUANTITY",
+  "total": "TOTAL",
+  "cardImage": "https://i.ibb.co/5hC9FWC/image-81-1.png",
+  "cardName": "Epicure Privileged",
+  "priceValue": "₹ 25,000",
+  "quantityValue": 1,
+  "totalPrice": "₹ 25,000"
+}

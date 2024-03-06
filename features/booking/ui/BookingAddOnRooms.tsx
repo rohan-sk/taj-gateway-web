@@ -5,10 +5,7 @@ import { CONSTANTS } from "../../../components/constants"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 const BookingAddOnInnerRooms = dynamic(() => import("./BookingAddOnInnerRooms"))
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material"
-import {
-  AddonsTitleText,
-  AddOnsContentWrapper,
-} from "../../../components/BookingFlow/styles/BookingAddOnStyles"
+import { AddonsTitleText, AddOnsContentWrapper } from "../../../components/BookingFlow/styles/BookingAddOnStyles"
 
 const BookingAddOnRooms = () => {
   const [expanded, setExpanded] = React.useState<string | boolean>(false)
@@ -24,10 +21,10 @@ const BookingAddOnRooms = () => {
         onChange={handleChange("panel1")}
         sx={{
           boxShadow: "none",
-          backgroundColor: theme?.palette?.neuPalette?.hexOne,
+          backgroundColor: theme?.palette?.ihclPalette?.hexOne,
         }}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{ color: theme?.palette?.neuPalette?.hexSeventeen,fontSize:'20px' }} />}
+          expandIcon={<ExpandMoreIcon sx={{ color: theme?.palette?.ihclPalette?.hexSeventeen, fontSize: "20px" }} />}
           id="panel1bh-header"
           aria-controls="panel1bh-content">
           <AddonsTitleText>{CONSTANTS?.ACCORDION_TITLE_TEXT}</AddonsTitleText>

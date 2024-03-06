@@ -4,7 +4,7 @@ import { theme } from "../../lib/theme"
 
 export const CarouselProgressiveBarStyles = styled(
   Box,
-  transientProps
+  transientProps,
 )<{
   $backGroundColor?: any
   $login?: boolean
@@ -26,16 +26,14 @@ export const CarouselProgressiveBarStyles = styled(
     margin: 0,
     width: $inactiveDotWidth ? $inactiveDotWidth : "auto",
     height: "auto",
-    background: `${theme?.palette?.neuPalette?.hexSeventeen}20`,
+    background: `${theme?.palette?.ihclPalette?.hexSeventeen}20`,
   },
 
   "& .slick-dots li button": {
     opacity: 0.2,
     padding: "0vw",
     height: "0.3125vw",
-    background: $backGroundColor
-      ? theme?.palette?.neuPalette?.hexOne
-      : theme?.palette?.neuPalette?.hexSeventeen,
+    background: $backGroundColor ? theme?.palette?.ihclPalette?.hexOne : theme?.palette?.ihclPalette?.hexSeventeen,
   },
 
   "& .slick-dots li button::before": {
@@ -47,7 +45,7 @@ export const CarouselProgressiveBarStyles = styled(
     width: "15.625vw",
     height: "0.3125vw",
     background: $backGroundColor
-      ? `${theme?.palette?.neuPalette?.hexOne} !important`
-      : `${theme?.palette?.neuPalette?.hexThree} !important`,
+      ? `${theme?.palette?.ihclPalette?.hexOne} !important`
+      : `${theme?.palette?.ihclPalette?.hexThree} !important`,
   },
 }))

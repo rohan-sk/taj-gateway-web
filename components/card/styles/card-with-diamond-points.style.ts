@@ -5,10 +5,10 @@ import DesktopPxToVw from "../../../utils/DesktopFontCalc"
 
 export const ContentBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $padding: string; $isMobile: boolean }>(({ $padding, $isMobile }) => ({
   width: $isMobile ? "85%" : "97%",
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
   marginTop: DesktopPxToVw(-20),
   float: "right",
   display: "flex",
@@ -29,7 +29,7 @@ export const ActionBox = styled(Box)(() => ({
 
 export const DescriptionBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $minHeight: boolean; $isMobile: boolean }>(({ $minHeight, $isMobile }) => ({
   top: "-24%",
   gap: "1.2vw",
@@ -42,7 +42,7 @@ export const DescriptionBox = styled(
   transform: "translateY(50%)",
   padding: "1.3vw 1.6vw 1.97vw 1.6vw",
   width: $isMobile ? "85%" : "90%",
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
   boxShadow: "-6px 10px 24px rgba(0, 0, 0, 0.1)",
 }))
 
@@ -80,7 +80,7 @@ export const ChipTextTextWrapBox = styled(Box)(() => ({
 
 export const ChipTextButtonBox = styled(Box)(() => ({
   padding: "0.313vw 0.833vw",
-  border: `${DesktopPxToVw(1)} solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `${DesktopPxToVw(1)} solid ${theme?.palette?.ihclPalette?.hexTwo}`,
 }))
 
 export const TitleChipTextWrapBox = styled(Box)(() => ({
@@ -98,17 +98,16 @@ export const TitleWithComma = styled(Box)(() => ({
 
 export const SubTitleBox = styled(Box)(() => ({
   display: "flex",
-  alignItems: "flex-start"
+  alignItems: "flex-start",
 }))
 
 export const ContentTextBox = styled(Box)(() => ({
   display: "flex",
-  flexDirection:"column",
+  flexDirection: "column",
   justifyContent: "space-between",
   fontSize: "0.94vw",
   gap: "0.3vw",
-  "@media(max-width:640px)":{
-  gap:"1.563vw"
-  }
-                  
+  "@media(max-width:640px)": {
+    gap: "1.563vw",
+  },
 }))

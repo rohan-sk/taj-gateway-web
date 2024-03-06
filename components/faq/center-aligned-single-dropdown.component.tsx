@@ -11,15 +11,12 @@ import {
   StyledAccordionDetails,
 } from "./styles/center-aligned-single-dropdown."
 import { theme } from "../../lib/theme"
-const PortableText = dynamic(() =>
-import("../../lib/portable-text-serializers").then((module) => module.PortableText)
-)
+const PortableText = dynamic(() => import("../../lib/portable-text-serializers").then((module) => module.PortableText))
 
 const CenterAlignedSingleDropDownItem = ({ props }: any) => {
   const isMobile = useMobileCheck()
   const defaultExpandState = props?.defaultExpandState || false
-  const [showDescription, setShowDescription] =
-    useState<boolean>(defaultExpandState)
+  const [showDescription, setShowDescription] = useState<boolean>(defaultExpandState)
   const [selectedIndex, setSelectedIndex] = useState<number>(-1)
   const enableBorder = props?.items?.find((item: any) => item?.question)
   const handleSelect = (updatingIndex: number) => {
@@ -55,12 +52,10 @@ const CenterAlignedSingleDropDownItem = ({ props }: any) => {
               margin: isMobile ? "6.250vw 8.594vw 0vw" : "2.083vw 0vw 0vw",
               borderTop: isMobile
                 ? enableBorder
-                  ? `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}20`
+                  ? `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}20`
                   : "unset"
                 : "",
-              borderBottom: enableBorder
-                ? `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}20`
-                : "unset",
+              borderBottom: enableBorder ? `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}20` : "unset",
             }}>
             {/*If question is there then accordion will render or otherwise normal portable text will render */}
             {props?.items?.length > 0 &&
@@ -103,9 +98,7 @@ const CenterAlignedSingleDropDownItem = ({ props }: any) => {
                             lineHeight: "140%",
                             fontSize: isMobile ? "3.438vw" : "1.146vw",
                             span: {
-                              fontSize: isMobile
-                                ? "3.438vw !important"
-                                : "1.146vw !important",
+                              fontSize: isMobile ? "3.438vw !important" : "1.146vw !important",
                             },
                           },
                           span: {
@@ -129,20 +122,18 @@ const CenterAlignedSingleDropDownItem = ({ props }: any) => {
                         lineHeight: "140%",
                         fontSize: isMobile ? "3.438vw" : "1.146vw",
                         span: {
-                          fontSize: isMobile
-                            ? "3.438vw !important"
-                            : "1.146vw !important",
+                          fontSize: isMobile ? "3.438vw !important" : "1.146vw !important",
                         },
                       },
                       span: {
                         fontSize: isMobile ? "3.438vw" : "1.146vw",
                       },
                       fontWeight: 300,
-                      color: theme?.palette?.neuPalette?.hexSeventeen,
+                      color: theme?.palette?.ihclPalette?.hexSeventeen,
                     }}>
                     <PortableText blocks={item?.answer} />
                   </Typography>
-                )
+                ),
               )}
           </Box>
         </Box>

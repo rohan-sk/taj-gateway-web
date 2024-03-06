@@ -3,12 +3,7 @@ import { useRouter } from "next/router"
 import { PathType } from "../../types"
 import { theme } from "../../lib/theme"
 import { useAppNavigation } from "../../utils/NavigationUtility"
-import {
-  MainBox,
-  StyledDivider,
-  StyledTab,
-  StyledTabs,
-} from "./styles/basic-tab"
+import { MainBox, StyledDivider, StyledTab, StyledTabs } from "./styles/basic-tab"
 import { hotelRoute } from "../../features/property/ui/constants"
 
 interface BasicTabsProps {
@@ -28,21 +23,13 @@ const BasicTabs = ({ props }: BasicTabsProps) => {
   const [numberOfTabs, setNumberOfTabs] = useState<number>()
   const [value, setValue] = useState<number>(
     props?.findIndex((item: BasicTabItems) =>
-      item?.url?.includes(
-        router?.query?.pid !== undefined
-          ? router?.query?.pid[router?.query?.pid?.length - 1]
-          : ""
-      )
-    )
+      item?.url?.includes(router?.query?.pid !== undefined ? router?.query?.pid[router?.query?.pid?.length - 1] : ""),
+    ),
   )
 
   useEffect(() => {
     let indexValue = props?.findIndex((item: BasicTabItems) =>
-      item?.url?.includes(
-        router?.query?.pid !== undefined
-          ? router?.query?.pid[router?.query?.pid?.length - 1]
-          : ""
-      )
+      item?.url?.includes(router?.query?.pid !== undefined ? router?.query?.pid[router?.query?.pid?.length - 1] : ""),
     )
     setValue(indexValue)
     setNumberOfTabs(props?.length)
@@ -77,12 +64,11 @@ const BasicTabs = ({ props }: BasicTabsProps) => {
 
   const handleNavigation = (url: any, type: PathType | undefined) => {
     const routerArr = router?.asPath?.split("/")
-    const hotelRouteIndex = routerArr?.findIndex(
-      (route: any) => route === hotelRoute
-    )
-    let navigationUrl = routerArr?.[hotelRouteIndex + 1] && hotelRouteIndex > - 1
-      ? `/${hotelRoute}/${routerArr?.[hotelRouteIndex + 1]}${url}`
-      : url
+    const hotelRouteIndex = routerArr?.findIndex((route: any) => route === hotelRoute)
+    let navigationUrl =
+      routerArr?.[hotelRouteIndex + 1] && hotelRouteIndex > -1
+        ? `/${hotelRoute}/${routerArr?.[hotelRouteIndex + 1]}${url}`
+        : url
     navigate(navigationUrl, type)
   }
 
@@ -99,7 +85,7 @@ const BasicTabs = ({ props }: BasicTabsProps) => {
         variant={"standard"}
         onChange={handleChange}
         TabIndicatorProps={{
-          style: { background: theme?.palette?.neuPalette?.hexTwo },
+          style: { background: theme?.palette?.ihclPalette?.hexTwo },
         }}>
         {props?.map((item: BasicTabItems, index: number) => (
           <StyledTab

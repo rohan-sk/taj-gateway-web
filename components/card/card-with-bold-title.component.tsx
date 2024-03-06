@@ -41,7 +41,7 @@ const CardWithBoldTitle = (props: CardWithBoldTitle) => {
                   <>
                     <span
                       style={{
-                        color: theme?.palette?.neuPalette?.hexTwo,
+                        color: theme?.palette?.ihclPalette?.hexTwo,
                       }}
                       onClick={() => {
                         setContentLength(description.length), setHideMore(!HideMore)

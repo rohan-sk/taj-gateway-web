@@ -1,19 +1,11 @@
-import {
-  Box,
-  Grid,
-  styled,
-  Select,
-  TextField,
-  FormControl,
-  MenuItem,
-} from "@mui/material"
+import { Box, Grid, styled, Select, TextField, FormControl, MenuItem } from "@mui/material"
 import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 import { fonts, theme } from "../../../../lib/theme"
 import { transientProps } from "../../../../utils/transientProps"
 
 export const MobileNumberWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile?: boolean }>(({ $isMobile }) => ({
   display: "flex",
   width: $isMobile ? "19.188vw" : "unset",
@@ -23,8 +15,7 @@ export const MobileNumberWrapper = styled(
     alignItems: "self-end",
   },
   "@media (max-width:640px)": {
-    "& .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary":
-    {
+    "& .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary": {
       minWidth: "22vw",
     },
   },
@@ -82,8 +73,8 @@ export const StyledMenuItem = styled(MenuItem)(() => ({
   fontFamily: "Inter",
   fontSize: "0.938vw",
   padding: "0.487vw 0vw 0.487vw 2.083vw",
-  backgroundColor: theme?.palette?.neuPalette?.default,
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  backgroundColor: theme?.palette?.ihclPalette?.default,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontWeight: 300,
   lineHeight: "140%",
   "@media (max-width:640px)": {
@@ -119,7 +110,7 @@ export const NameTextFieldWrapper = styled(Box)(() => ({
 }))
 export const FunctionDateContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isOpen?: boolean; $isDouble?: any }>(({ $isOpen, $isDouble }) => ({
   "& .styledText": {
     width: "100%",
@@ -168,7 +159,7 @@ export const CountryCityGrid = styled(Box)(() => ({
 }))
 export const CommonContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $webWidths: string }>(({ $webWidths }) => ({
   display: "grid",
   gridTemplateColumns: $webWidths,
@@ -188,9 +179,6 @@ export const DatesWrapper = styled(Box)(() => ({
   alignItems: "self-end",
   "& .MuiSvgIcon-root": { display: "none" },
 }))
-
-
-
 
 export const DateTextField = styled(TextField)(() => ({
   fontSize: DesktopPxToVw(24),
@@ -216,7 +204,7 @@ export const DateTextField = styled(TextField)(() => ({
     },
   },
   "&  .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexTwentyOne} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexTwentyOne} !important`,
     fontSize: DesktopPxToVw(18),
   },
   input: {
@@ -230,7 +218,7 @@ export const DateTextField = styled(TextField)(() => ({
       fontWeight: 500,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         fontSize: "3.75vw!important",
         lineHeight: "4.8vw",
@@ -238,7 +226,6 @@ export const DateTextField = styled(TextField)(() => ({
     },
   },
 }))
-
 
 export const InputText = styled(TextField)(() => ({
   width: "100%",
@@ -258,7 +245,7 @@ export const InputText = styled(TextField)(() => ({
       fontWeight: 500,
       fontSize: DesktopPxToVw(24),
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
 
@@ -342,7 +329,7 @@ export const MultipleFieldsWrapperBox = styled(Box)(() => ({
 
 export const CustomCheckBoxWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -426,15 +413,14 @@ export const StyledWeddingFormControl: any = styled(FormControl)(() => ({
   },
   "&>label": {
     transform: "unset",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontSize: "1.25vw",
     fontFamily: fonts?.body,
     "@media(max-width:640px)": {
       fontSize: "3.75vw",
     },
   },
-  "&>.MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl":
-  {
+  "&>.MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl": {
     height: "2.083vw",
     marginTop: "0vw",
     "@media (max-width:640px)": {

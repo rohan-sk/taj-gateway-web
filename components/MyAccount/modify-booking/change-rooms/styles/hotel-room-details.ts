@@ -1,8 +1,6 @@
 import { theme } from "../../../../../lib/theme"
 import { Box, Stack, Typography, styled, Divider } from "@mui/material"
-import DesktopPxToVw, {
-  MobilePxToVw,
-} from "../../../../../utils/DesktopFontCalc"
+import DesktopPxToVw, { MobilePxToVw } from "../../../../../utils/DesktopFontCalc"
 
 export const MainBox = styled(Box)(() => ({
   display: "flex",
@@ -31,7 +29,7 @@ export const DropDownStack = styled(Stack)(() => ({
   alignItems: "center",
   width: DesktopPxToVw(305),
   justifyContent: "space-between",
-  borderBottom: `1px solid ${theme.palette.neuPalette.hexTwelve}`,
+  borderBottom: `1px solid ${theme.palette.ihclPalette.hexTwelve}`,
   "@media (max-width: 640px)": {
     width: "100%",
   },
@@ -102,5 +100,5 @@ export const BoldLabelTypography = styled(Typography)(() => ({
 export const PriceDivider = styled(Divider)(() => ({
   width: "100%",
   height: "0.06vw",
-  background: theme.palette.neuPalette.hexTwelve,
+  background: theme.palette.ihclPalette.hexTwelve,
 }))

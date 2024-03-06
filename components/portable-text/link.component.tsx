@@ -63,12 +63,12 @@ function Link({ value, variant, children, color }: LinkProps) {
         color: color
           ? color
           : isHyperlink
-          ? theme?.palette?.neuPalette?.hexSeventeen
+          ? theme?.palette?.ihclPalette?.hexSeventeen
           : isMobileLinkType
           ? isMobile
-            ? theme?.palette?.neuPalette?.hexTwo
-            : theme?.palette?.neuPalette?.hexSeventeen
-          : theme?.palette?.neuPalette?.hexTwo, // inline color override  the variant so, when we pass the variant inline css set as empty the color getting correctly
+            ? theme?.palette?.ihclPalette?.hexTwo
+            : theme?.palette?.ihclPalette?.hexSeventeen
+          : theme?.palette?.ihclPalette?.hexTwo, // inline color override  the variant so, when we pass the variant inline css set as empty the color getting correctly
         textDecoration: "none",
         fontWeight: variant ? "" : "300", // inline fontWeight override  the variant so, when we pass the variant inline css set as empty the fontWeight getting correctly
         letterSpacing: "0",

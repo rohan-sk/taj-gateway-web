@@ -9,7 +9,7 @@ interface OTP {
 }
 export const TextFieldColor = styled(
   TextField,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   height: DesktopPxToVw(80),
   width: DesktopPxToVw(60),
@@ -32,7 +32,7 @@ export const TextFieldColor = styled(
   },
   "& .MuiOutlinedInput-root": {
     "&.Mui-focused fieldset": {
-      borderColor: theme?.palette?.neuPalette?.hexEleven,
+      borderColor: theme?.palette?.ihclPalette?.hexEleven,
     },
   },
   "& .MuiInputBase-root.MuiOutlinedInput-root": {
@@ -118,7 +118,7 @@ export const ResendOtpText = styled(Typography)(() => ({
   fontFamily: "Inter",
   textDecoration: "underline",
   cursor: "pointer",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   marginTop: "3vw",
   lineHeight: "2vw",
   "@media (max-width: 640px)": {
@@ -138,7 +138,7 @@ export const StyledClearIcon = styled(ClearIcon)(() => ({
 }))
 
 export const ErrorMessages = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTen,
+  color: theme?.palette?.ihclPalette?.hexTen,
   marginBottom: "-2vw",
   marginTop: "2vw",
   "@media (max-width: 640px)": {

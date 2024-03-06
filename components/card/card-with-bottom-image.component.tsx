@@ -6,13 +6,7 @@ import { Box, Stack, Typography } from "@mui/material"
 import { useAesthetics } from "../../utils/fetchAsthetics"
 import { KeyboardArrowRightSharp } from "@mui/icons-material"
 import { ActionProps, ImageProps, PathType, aestheticItems } from "../types"
-import {
-  MainBox,
-  ActionBox,
-  TitleTypography,
-  PrimaryActionBox,
-  ActionImageBox,
-} from "./styles/card-with-bottom-image"
+import { MainBox, ActionBox, TitleTypography, PrimaryActionBox, ActionImageBox } from "./styles/card-with-bottom-image"
 import { useAppNavigation } from "../../utils/NavigationUtility"
 import { MobilePxToVw } from "../../utils/DesktopFontCalc"
 import { useMobileCheck } from "../../utils/isMobilView"
@@ -20,7 +14,6 @@ import { CONSTANTS } from "../constants"
 import { useImageUtility } from "../../utils/hooks/useImageUtility"
 const RenderActionItem = dynamic(() => import("../hoc/actions/action-items-ui"))
 const CustomReadMore = dynamic(() => import("../hoc/CustomReadMore"))
-
 
 type CardWithBottomImageProps = {
   title: string
@@ -47,27 +40,21 @@ const CardWithBottomImage = ({
   urlType,
   charactersLimit,
 }: CardWithBottomImageProps) => {
-  const { cardPadding, cardBackgroundColor } = useAesthetics(
-    aesthetic?._ref || aesthetic?._id
-  )
+  const { cardPadding, cardBackgroundColor } = useAesthetics(aesthetic?._ref || aesthetic?._id)
   const navigate = useAppNavigation()
   const isMobile = useMobileCheck()
   const { getOptimizeImageUrl } = useImageUtility()
-  const [more, setMore] = useState(
-    charactersLimit ?? CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT
-  )
+  const [more, setMore] = useState(charactersLimit ?? CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT)
   return (
     <MainBox $padding={cardPadding?.mobile} $bgColor={cardBackgroundColor}>
-      {title && (
-        <TitleTypography variant="m-heading-m">{title}</TitleTypography>
-      )}
+      {title && <TitleTypography variant="m-heading-m">{title}</TitleTypography>}
       {description && (
         <Typography
           variant={"m-body-sl"}
           className="hide-box"
           sx={{
             mt: "2.656vw",
-            color: theme?.palette?.neuPalette?.hexSeventeen,
+            color: theme?.palette?.ihclPalette?.hexSeventeen,
           }}>
           {description.length > more ? (
             <CustomReadMore length={more} variant={"m-body-sl"}>
@@ -87,9 +74,7 @@ const CardWithBottomImage = ({
             {ctaLabel}
           </Typography>
           {!(urlType === PathType.dialog) && (
-            <KeyboardArrowRightSharp
-              sx={{ color: theme?.palette?.neuPalette?.hexTwo }}
-            />
+            <KeyboardArrowRightSharp sx={{ color: theme?.palette?.ihclPalette?.hexTwo }} />
           )}
         </ActionBox>
       )}
@@ -108,9 +93,7 @@ const CardWithBottomImage = ({
         )}
         {secondaryAction?.image?.asset?._ref && (
           <Box
-            onClick={() =>
-              navigate(secondaryAction?.url, secondaryAction?.urlType)
-            }
+            onClick={() => navigate(secondaryAction?.url, secondaryAction?.urlType)}
             width={"45%"}
             height={"100%"}
             component="img"

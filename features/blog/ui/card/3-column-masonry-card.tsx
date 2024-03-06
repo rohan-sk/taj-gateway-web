@@ -132,7 +132,7 @@ const BlogMasonryThemesCard = (props: BlogTypesDeclarations) => {
                         <ChatBubbleIcon
                           style={{
                             ...thumbIconStyles,
-                            fill: theme?.palette?.neuPalette?.hexTwo,
+                            fill: theme?.palette?.ihclPalette?.hexTwo,
                           }}
                         />
                       ) : (
@@ -153,7 +153,7 @@ const BlogMasonryThemesCard = (props: BlogTypesDeclarations) => {
                         <ThumbUpIcon
                           style={{
                             ...thumbIconStyles,
-                            fill: theme?.palette?.neuPalette?.hexTwo,
+                            fill: theme?.palette?.ihclPalette?.hexTwo,
                           }}
                         />
                       ) : (
@@ -238,7 +238,7 @@ const BlogMasonryThemesCard = (props: BlogTypesDeclarations) => {
               },
             }}
           />
-          <ExpandMoreIcon sx={{ color: theme?.palette?.neuPalette?.hexTwo }} />
+          <ExpandMoreIcon sx={{ color: theme?.palette?.ihclPalette?.hexTwo }} />
         </MasonryCardActionBox>
       )}
     </>

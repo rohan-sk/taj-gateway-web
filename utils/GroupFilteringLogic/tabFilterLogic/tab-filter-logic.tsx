@@ -15,15 +15,9 @@ import nextImage from "../../../public/taj-grey-right-arrow.png"
 import { useMobileCheck } from "../../isMobilView"
 import { useAppNavigation } from "../../NavigationUtility"
 import { useAesthetics } from "../../fetchAsthetics"
-import {
-  CustomNextArrow,
-  CustomPrevArrow,
-} from "../../../components/hoc/custom-arrows"
+import { CustomNextArrow, CustomPrevArrow } from "../../../components/hoc/custom-arrows"
 import { CommonCarouselStyles } from "../../../components/hoc/carousal-component-styles"
-import {
-  DescriptionTypo,
-  StyledTitle,
-} from "../../../components/carousal/styles/tabs-in-carousal"
+import { DescriptionTypo, StyledTitle } from "../../../components/carousal/styles/tabs-in-carousal"
 import { PropItemsMsiteModal } from "../../../components/hoc/CommonMsiteModalAlignment/PropItemsMsiteModal"
 import { triggerEvent } from "../../analytics"
 import { GAStore, UserStore } from "../../../store"
@@ -35,30 +29,24 @@ import { IHCLContext } from "../../../PresentationalComponents/lib/prepare-ihcl-
 
 const TabFilterLogic = ({ props, setFilteredProps, originalData }: any) => {
   const headingElementForTab: any = props?.tabsConfig?.headingElementForTab
-  const isWeddingCarousel =
-    props?.tabsConfig?.largeVariant === "events.group.carousel-tabs"
+  const isWeddingCarousel = props?.tabsConfig?.largeVariant === "events.group.carousel-tabs"
   const isMobile = useMobileCheck()
   const theme = useTheme()
   const navigate = useAppNavigation()
   const context = useContext(IHCLContext)
   const aestheticData = useAesthetics(props?.aesthetic?._ref)
   const { cardPadding } = useAesthetics(props?.tabsConfig?.aesthetic?._ref)
-  const BackgroundColor =
-    aestheticData?.cardBackgroundColor ||
-    originalData?.tabsConfig?.backgroundColor
+  const BackgroundColor = aestheticData?.cardBackgroundColor || originalData?.tabsConfig?.backgroundColor
 
   const [selectedTab, setSelectedTab] = useState("all")
   const gaStoreData = context?.getGlobalStore(GLOBAL_STORES.gaStore) as GAStore
-  const userStore = context?.getGlobalStore(
-    GLOBAL_STORES.userStore
-  ) as UserStore
+  const userStore = context?.getGlobalStore(GLOBAL_STORES.userStore) as UserStore
   const dataLayer = MemberDataLayer(userStore, gaStoreData)
   const preparedTabs = useMemo(() => {
     let formattedData: any[] = []
     originalData?.items?.map((item: any) => {
       const isItemExists = formattedData.some(
-        (cItem: any) =>
-          cItem.title?.toLowerCase() === item.tabTerm?.toLowerCase()
+        (cItem: any) => cItem.title?.toLowerCase() === item.tabTerm?.toLowerCase(),
       )
       if (!isItemExists) {
         formattedData.push({
@@ -66,14 +54,8 @@ const TabFilterLogic = ({ props, setFilteredProps, originalData }: any) => {
         })
       }
     })
-    let filteredFormattedData = formattedData?.filter(
-      (item: any) => item?.title
-    )
-    filteredFormattedData.splice(
-      Math.floor(filteredFormattedData.length / 2),
-      0,
-      { title: "ALL" }
-    )
+    let filteredFormattedData = formattedData?.filter((item: any) => item?.title)
+    filteredFormattedData.splice(Math.floor(filteredFormattedData.length / 2), 0, { title: "ALL" })
     return filteredFormattedData
   }, [originalData?.items])
 
@@ -113,8 +95,7 @@ const TabFilterLogic = ({ props, setFilteredProps, originalData }: any) => {
         }}
       />
     ),
-    beforeChange: (_: any, newIndex: any) =>
-      setSelectedTab(preparedTabs?.[newIndex]?.title),
+    beforeChange: (_: any, newIndex: any) => setSelectedTab(preparedTabs?.[newIndex]?.title),
     afterChange: (index: any) => setSelectedTab(preparedTabs?.[index]?.title),
   }
 
@@ -167,12 +148,9 @@ const TabFilterLogic = ({ props, setFilteredProps, originalData }: any) => {
           clientId: getCookie("_ga")?.slice(6),
           brandName: AFFILIATION,
           no_of_items: originalData?.items?.length,
-          outbound:
-            originalData?.items[0]?.urlType == "internal" ? false : true,
+          outbound: originalData?.items[0]?.urlType == "internal" ? false : true,
           widget_type: props?._type,
-          widget_title: isMobile
-            ? props?.title?.mobileTitle[1]
-            : props?.title?.desktopTitle[0],
+          widget_title: isMobile ? props?.title?.mobileTitle[1] : props?.title?.desktopTitle[0],
           item_name: item?.title || "",
           item_type: originalData?.items[0]?._type,
           departureDate: "",
@@ -188,9 +166,7 @@ const TabFilterLogic = ({ props, setFilteredProps, originalData }: any) => {
           offerValidity: "",
           specialCode: "",
           location: "",
-          pageSection: isMobile
-            ? props?.title?.mobileTitle[1]
-            : props?.title?.desktopTitle[0],
+          pageSection: isMobile ? props?.title?.mobileTitle[1] : props?.title?.desktopTitle[0],
         },
       })
   }
@@ -222,14 +198,14 @@ const TabFilterLogic = ({ props, setFilteredProps, originalData }: any) => {
               ".slick-center .centerText": {
                 textAlign: "center",
                 color: isWeddingCarousel
-                  ? theme?.palette?.neuPalette?.hexSeventeen
-                  : theme?.palette?.neuPalette?.hexTwo,
+                  ? theme?.palette?.ihclPalette?.hexSeventeen
+                  : theme?.palette?.ihclPalette?.hexTwo,
                 fontSize: isMobile ? "3.75vw" : "1.25vw",
               },
               ".slick-center .centerImg": {
                 color: isWeddingCarousel
-                  ? theme?.palette?.neuPalette?.hexSeventeen
-                  : theme?.palette?.neuPalette?.hexTwo,
+                  ? theme?.palette?.ihclPalette?.hexSeventeen
+                  : theme?.palette?.ihclPalette?.hexTwo,
                 filter: `opacity(1) drop-shadow(0 0 0 #eda805)`,
               },
               ".slick-center .centeredBoxtrue": {
@@ -238,8 +214,7 @@ const TabFilterLogic = ({ props, setFilteredProps, originalData }: any) => {
                 borderRight: "none",
                 borderWidth: "1px",
                 borderStyle: "solid !important",
-                borderImage:
-                  "linear-gradient(to right,rgba(69, 68, 63, 0), #AD8B3A, rgba(69, 68, 63, 0)) 1 0 1 0",
+                borderImage: "linear-gradient(to right,rgba(69, 68, 63, 0), #AD8B3A, rgba(69, 68, 63, 0)) 1 0 1 0",
                 background:
                   "linear-gradient(270deg, rgba(255, 212, 202, 0.00) 0.33%, #FFD4CA 51.67%, rgba(255, 212, 202, 0.00) 100%)",
                 minHeight: "6.46vw",
@@ -248,22 +223,16 @@ const TabFilterLogic = ({ props, setFilteredProps, originalData }: any) => {
                 width: "100%",
                 padding: isMobile ? "3.125vw 0vw" : "1.875vw 1.302vw",
                 borderRight: "none",
-                backgroundColor: theme?.palette?.neuPalette?.hexOne,
+                backgroundColor: theme?.palette?.ihclPalette?.hexOne,
                 boxShadow: "-6px 10px 24px 0px rgba(0, 0, 0, 0.10)",
                 minHeight: "6.46vw",
                 marginBottom: "30px",
               },
               ".custom-left": {
-                borderLeft:
-                  props?.length >= 5
-                    ? `1px solid ${theme?.palette?.neuPalette?.hexNine}`
-                    : "none",
+                borderLeft: props?.length >= 5 ? `1px solid ${theme?.palette?.ihclPalette?.hexNine}` : "none",
               },
               ".custom-right": {
-                borderRight:
-                  props?.length >= 5
-                    ? `1px solid ${theme?.palette?.neuPalette?.hexNine}`
-                    : "none",
+                borderRight: props?.length >= 5 ? `1px solid ${theme?.palette?.ihclPalette?.hexNine}` : "none",
               },
             }}>
             <Slider {...settings}>
@@ -286,13 +255,7 @@ const TabFilterLogic = ({ props, setFilteredProps, originalData }: any) => {
                         height={item?.description ? "100%" : "40px"}
                         component={"img"}
                         className="centerImg"
-                        mb={
-                          isMobile
-                            ? "0vw"
-                            : item?.title || item?.description
-                            ? "1.667vw"
-                            : "0"
-                        }
+                        mb={isMobile ? "0vw" : item?.title || item?.description ? "1.667vw" : "0"}
                         sx={{ cursor: "pointer" }}
                         src={item?.img}
                         onClick={() => navigate(item?.url)}
@@ -307,22 +270,17 @@ const TabFilterLogic = ({ props, setFilteredProps, originalData }: any) => {
                           alignItems: "center",
                           textAlign: "center",
                           maxWidth: isMobile ? "20.313vw" : "100%",
-                          color: theme?.palette?.neuPalette?.hexSeventeen
+                          color: theme?.palette?.ihclPalette?.hexSeventeen,
                         }}
                         variant={isMobile ? "m-heading-xs" : "heading-xs"}
                         component={headingElementForTab || "h3"}
                         onClick={() => {
-                          setSelectedTab(item?.title),
-                            handleWedding(item, index, item?.url)
+                          setSelectedTab(item?.title), handleWedding(item, index, item?.url)
                         }}>
                         {item?.title}
                       </Typography>
                     )}
-                    {item?.description && (
-                      <DescriptionTypo variant="body-xs">
-                        {item?.description}
-                      </DescriptionTypo>
-                    )}
+                    {item?.description && <DescriptionTypo variant="body-xs">{item?.description}</DescriptionTypo>}
                   </Box>
                 </Box>
               ))}
@@ -332,15 +290,10 @@ const TabFilterLogic = ({ props, setFilteredProps, originalData }: any) => {
       ) : (
         <Box
           sx={{
-            padding: cardPadding?.mobile
-              ? cardPadding?.mobile
-              : "8.594vw 12.5vw",
+            padding: cardPadding?.mobile ? cardPadding?.mobile : "8.594vw 12.5vw",
             background: BackgroundColor || "#f6f5f5",
           }}>
-          <PropItemsMsiteModal
-            props={preparedTabs && preparedTabs}
-            setSelectedTab={setSelectedTab}
-          />
+          <PropItemsMsiteModal props={preparedTabs && preparedTabs} setSelectedTab={setSelectedTab} />
         </Box>
       )}
     </>

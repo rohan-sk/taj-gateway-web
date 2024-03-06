@@ -45,9 +45,7 @@ const LoyaltyTabsChambersCardCarousal = ({ props, selectTabIndex }: any) => {
   const theme = useTheme()
   const isMobile = useMobileCheck()
   const navigate = useAppNavigation()
-  const [more, setMore] = useState<number>(
-    props?.charactersLimit ?? CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT
-  )
+  const [more, setMore] = useState<number>(props?.charactersLimit ?? CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT)
 
   const settings = {
     arrows: true,
@@ -131,99 +129,71 @@ const LoyaltyTabsChambersCardCarousal = ({ props, selectTabIndex }: any) => {
                 {itemsList?.largeImage?.asset?._ref && (
                   <Box position={"relative"}>
                     <ImageCard>
-                      <CardMedia
-                        alt="media"
-                        component="img"
-                        src={urlFor(itemsList?.largeImage?.asset?._ref)?.url()}
-                      />
+                      <CardMedia alt="media" component="img" src={urlFor(itemsList?.largeImage?.asset?._ref)?.url()} />
                     </ImageCard>
-                    <ContentBox
-                      $isMobile={isMobile}
-                      $padding={itemsList?.highLights}>
-                      {(itemsList?.title ||
-                        itemsList?.chipText ||
-                        itemsList?.specificationTags) && (
+                    <ContentBox $isMobile={isMobile} $padding={itemsList?.highLights}>
+                      {(itemsList?.title || itemsList?.chipText || itemsList?.specificationTags) && (
                         <TitleChipTextWrapBox>
                           {itemsList?.title && (
-                            <Typography
-                              variant={"heading-xs"}
-                              sx={{ color: theme?.palette?.primary?.main }}>
+                            <Typography variant={"heading-xs"} sx={{ color: theme?.palette?.primary?.main }}>
                               {itemsList?.title}
                             </Typography>
                           )}
                           {itemsList?.chipText?.length > 0 && (
                             <ChipTextTextWrapBox>
-                              {itemsList?.chipText?.map(
-                                (item: ChipTextItems, index: number) => (
-                                  <ChipTextButtonBox key={index}>
-                                    <Typography
-                                      variant="body-s"
-                                      sx={{
-                                        color:
-                                          theme?.palette?.neuPalette?.hexTwo,
-                                      }}>
-                                      {item?.chipTextValue}
-                                    </Typography>
-                                  </ChipTextButtonBox>
-                                )
-                              )}
+                              {itemsList?.chipText?.map((item: ChipTextItems, index: number) => (
+                                <ChipTextButtonBox key={index}>
+                                  <Typography
+                                    variant="body-s"
+                                    sx={{
+                                      color: theme?.palette?.ihclPalette?.hexTwo,
+                                    }}>
+                                    {item?.chipTextValue}
+                                  </Typography>
+                                </ChipTextButtonBox>
+                              ))}
                             </ChipTextTextWrapBox>
                           )}
                           {itemsList?.specificationTags?.length > 0 && (
                             <ChipTextTextWrapBox>
-                              {itemsList?.specificationTags?.map(
-                                (item: any, index: number) => (
-                                  <ChipTextButtonBox key={index}>
-                                    <Typography
-                                      variant="body-s"
-                                      sx={{
-                                        color:
-                                          theme?.palette?.neuPalette?.hexTwo,
-                                      }}>
-                                      {item?.tag}
-                                    </Typography>
-                                  </ChipTextButtonBox>
-                                )
-                              )}
+                              {itemsList?.specificationTags?.map((item: any, index: number) => (
+                                <ChipTextButtonBox key={index}>
+                                  <Typography
+                                    variant="body-s"
+                                    sx={{
+                                      color: theme?.palette?.ihclPalette?.hexTwo,
+                                    }}>
+                                    {item?.tag}
+                                  </Typography>
+                                </ChipTextButtonBox>
+                              ))}
                             </ChipTextTextWrapBox>
                           )}
                         </TitleChipTextWrapBox>
                       )}
                       {itemsList?.subTitle && (
                         <SubTitleBox>
-                          <Typography variant="body-ml">
-                            {itemsList?.subTitle}
-                          </Typography>
+                          <Typography variant="body-ml">{itemsList?.subTitle}</Typography>
                         </SubTitleBox>
                       )}
                       {itemsList?.highLights && (
                         <SubTitleBox sx={{ marginTop: "0.83vw" }}>
                           <StyledBulletIcon />
-                          <Typography variant="body-s">
-                            {itemsList?.highLights}
-                          </Typography>
+                          <Typography variant="body-s">{itemsList?.highLights}</Typography>
                         </SubTitleBox>
                       )}
                       {itemsList?.highlights &&
-                        itemsList?.highlights?.map(
-                          (item: any, index: number) => (
-                            <HighLightsBox
-                              className="hide-box highlights"
-                              key={index}>
-                              <StyledBulletIcon />
-                              <Typography variant={"body-s"}>
-                                {typeof item === typeof "" ? item : item?.term}
-                              </Typography>
-                            </HighLightsBox>
-                          )
-                        )}
+                        itemsList?.highlights?.map((item: any, index: number) => (
+                          <HighLightsBox className="hide-box highlights" key={index}>
+                            <StyledBulletIcon />
+                            <Typography variant={"body-s"}>{typeof item === typeof "" ? item : item?.term}</Typography>
+                          </HighLightsBox>
+                        ))}
                       {itemsList?.singleContent && (
                         <Box mt={DesktopPxToVw(10)}>
-                          {itemsList?.singleContent?.map(
-                            (content: string | {}, idx: number) => (
-                              <PortableText blocks={content} key={idx} />
-                            )
-                          )}
+                          {itemsList?.singleContent?.map((content: string | {}, idx: number) => (
+                            <PortableText blocks={content} key={idx} />
+                          ))}
                         </Box>
                       )}
                       {itemsList?.description && (
@@ -251,62 +221,48 @@ const LoyaltyTabsChambersCardCarousal = ({ props, selectTabIndex }: any) => {
                         <Grid
                           container
                           sx={{
-                            marginTop: itemsList?.parameterMap?.[0]?.key
-                              ? "0.521vw"
-                              : "0vw",
+                            marginTop: itemsList?.parameterMap?.[0]?.key ? "0.521vw" : "0vw",
                           }}
                           className="hide-box">
                           {itemsList?.parameterMap &&
-                            itemsList?.parameterMap?.map(
-                              (item: any, index: number) => (
-                                <Grid
-                                  item
-                                  {...gridBreakPointsGenerator(isMobile, 6, 12)}
-                                  key={index}
-                                  sx={{
-                                    marginBottom:
-                                      index <
-                                      itemsList?.parameterMap?.length / 2
-                                        ? "0.521vw"
-                                        : "0",
-                                  }}>
-                                  {item?.keyType === "image" ? (
-                                    <Typography variant={"body-s"}>
-                                      {item?.imageAsset?.largeImage?.[0]?.asset
-                                        ?._ref && (
-                                        <Box
-                                          component="img"
-                                          alt={`-image`}
-                                          width={"17px"}
-                                          height={"13px"}
-                                          sx={{
-                                            objectFit: "fill",
-                                            display: "inline-block !important",
-                                            marginRight: "10px",
-                                          }}
-                                          src={urlFor(
-                                            item?.imageAsset?.largeImage?.[0]
-                                              ?.asset?._ref
-                                          ).url()}
-                                        />
-                                      )}
-                                      <b
-                                        style={{
-                                          color: item?.value?.includes("@")
-                                            ? "#AD8B3A"
-                                            : "inherit",
-                                        }}>
-                                        {item?.value}
-                                      </b>
-                                    </Typography>
-                                  ) : (
-                                    <Typography variant={"body-s"}>
-                                      {item?.key} :<b> {item?.value}</b>
-                                    </Typography>
-                                  )}
-                                </Grid>
-                              )
-                            )}
+                            itemsList?.parameterMap?.map((item: any, index: number) => (
+                              <Grid
+                                item
+                                {...gridBreakPointsGenerator(isMobile, 6, 12)}
+                                key={index}
+                                sx={{
+                                  marginBottom: index < itemsList?.parameterMap?.length / 2 ? "0.521vw" : "0",
+                                }}>
+                                {item?.keyType === "image" ? (
+                                  <Typography variant={"body-s"}>
+                                    {item?.imageAsset?.largeImage?.[0]?.asset?._ref && (
+                                      <Box
+                                        component="img"
+                                        alt={`-image`}
+                                        width={"17px"}
+                                        height={"13px"}
+                                        sx={{
+                                          objectFit: "fill",
+                                          display: "inline-block !important",
+                                          marginRight: "10px",
+                                        }}
+                                        src={urlFor(item?.imageAsset?.largeImage?.[0]?.asset?._ref).url()}
+                                      />
+                                    )}
+                                    <b
+                                      style={{
+                                        color: item?.value?.includes("@") ? "#AD8B3A" : "inherit",
+                                      }}>
+                                      {item?.value}
+                                    </b>
+                                  </Typography>
+                                ) : (
+                                  <Typography variant={"body-s"}>
+                                    {item?.key} :<b> {item?.value}</b>
+                                  </Typography>
+                                )}
+                              </Grid>
+                            ))}
                         </Grid>
                       ) : (
                         <>
@@ -316,19 +272,15 @@ const LoyaltyTabsChambersCardCarousal = ({ props, selectTabIndex }: any) => {
                               direction={"row"}
                               justifyContent={"space-evenly"}
                               sx={{
-                                marginTop: itemsList?.parameterMap?.[0]?.key
-                                  ? "0.521vw"
-                                  : "0vw",
+                                marginTop: itemsList?.parameterMap?.[0]?.key ? "0.521vw" : "0vw",
                               }}>
-                              {itemsList?.parameterMap?.map(
-                                (item: parameterMapItems, index: number) => (
-                                  <Box key={index} sx={{ width: "100%" }}>
-                                    <Typography variant={"body-s"}>
-                                      {item?.key} :<b> {item?.value}</b>
-                                    </Typography>
-                                  </Box>
-                                )
-                              )}
+                              {itemsList?.parameterMap?.map((item: parameterMapItems, index: number) => (
+                                <Box key={index} sx={{ width: "100%" }}>
+                                  <Typography variant={"body-s"}>
+                                    {item?.key} :<b> {item?.value}</b>
+                                  </Typography>
+                                </Box>
+                              ))}
                             </Stack>
                           )}
                         </>
@@ -344,15 +296,13 @@ const LoyaltyTabsChambersCardCarousal = ({ props, selectTabIndex }: any) => {
                             },
                             fontSize: "0.94vw",
                           }}>
-                          {itemsList?.content?.map(
-                            (item: RichTextItems, index: number) => (
-                              <>
-                                {Context?.renderComponent(item._type, {
-                                  ...item,
-                                })}
-                              </>
-                            )
-                          )}
+                          {itemsList?.content?.map((item: RichTextItems, index: number) => (
+                            <>
+                              {Context?.renderComponent(item._type, {
+                                ...item,
+                              })}
+                            </>
+                          ))}
                         </Box>
                       )}
                       {(itemsList?.primaryAction?.title ||
@@ -360,33 +310,22 @@ const LoyaltyTabsChambersCardCarousal = ({ props, selectTabIndex }: any) => {
                         itemsList?.secondaryAction?.title) && (
                         <ActionBox
                           sx={{
-                            marginTop:
-                              itemsList?.content?.length > 0
-                                ? "1.09vw"
-                                : DesktopPxToVw(20),
+                            marginTop: itemsList?.content?.length > 0 ? "1.09vw" : DesktopPxToVw(20),
                             justifyContent:
-                              itemsList?.primaryAction?.title ||
-                              itemsList?.secondaryAction?.title
+                              itemsList?.primaryAction?.title || itemsList?.secondaryAction?.title
                                 ? "space-between"
                                 : "flex-start",
                           }}
                           className="hide-box">
-                          {(itemsList?.primaryAction?.title ||
-                            itemsList?.secondaryAction?.title) && (
+                          {(itemsList?.primaryAction?.title || itemsList?.secondaryAction?.title) && (
                             <PrimaryAndSecondaryActionBox>
                               {itemsList?.primaryAction?.title && (
                                 <RenderActionItem
                                   url={itemsList?.primaryAction?.url}
                                   title={itemsList?.primaryAction?.title}
-                                  navigationType={
-                                    itemsList?.primaryAction?.urlType
-                                  }
+                                  navigationType={itemsList?.primaryAction?.urlType}
                                   variant={itemsList?.primaryAction?.variant}
-                                  isActionButtonType={
-                                    itemsList?.primaryAction?.variant === "link"
-                                      ? false
-                                      : true
-                                  }
+                                  isActionButtonType={itemsList?.primaryAction?.variant === "link" ? false : true}
                                   buttonStyles={{
                                     letterSpacing: "0.1em",
                                     fontSize: "0.94vw",
@@ -398,21 +337,14 @@ const LoyaltyTabsChambersCardCarousal = ({ props, selectTabIndex }: any) => {
                                   <RenderActionItem
                                     url={itemsList?.secondaryAction?.url}
                                     title={itemsList?.secondaryAction?.title}
-                                    navigationType={
-                                      itemsList?.secondaryAction?.urlType
-                                    }
-                                    variant={
-                                      itemsList?.secondaryAction?.variant
-                                    }
+                                    navigationType={itemsList?.secondaryAction?.urlType}
+                                    variant={itemsList?.secondaryAction?.variant}
                                     isActionButtonType={true}
                                     buttonStyles={{
                                       letterSpacing: "0.1em",
                                       fontSize: "0.94vw",
                                     }}
-                                    image={
-                                      itemsList?.secondaryAction?.image?.asset
-                                        ?._ref
-                                    }
+                                    image={itemsList?.secondaryAction?.image?.asset?._ref}
                                     buttonImgStyles={{ width: "1.93vw" }}
                                   />
                                 </>
@@ -424,12 +356,8 @@ const LoyaltyTabsChambersCardCarousal = ({ props, selectTabIndex }: any) => {
                               onClick={() => {
                                 navigate(itemsList?.url, itemsList?.urlType)
                               }}>
-                              <Typography variant="link-m">
-                                {itemsList?.ctaLabel}
-                              </Typography>
-                              {itemsList?.urlType !== CONSTANTS?.DIALOG && (
-                                <StyledChevronRight />
-                              )}
+                              <Typography variant="link-m">{itemsList?.ctaLabel}</Typography>
+                              {itemsList?.urlType !== CONSTANTS?.DIALOG && <StyledChevronRight />}
                             </CtaLabelBox>
                           )}
                         </ActionBox>

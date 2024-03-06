@@ -293,7 +293,7 @@ const GroupWithTwoColumnGrid = ({
               fontFamily: "Inter",
               fontStyle: "normal",
               fontWeight: 300,
-              color: theme?.palette?.neuPalette?.hexSeventeen,
+              color: theme?.palette?.ihclPalette?.hexSeventeen,
             }}
             maxWidth={isMobile ? "100%" : ""}
           />

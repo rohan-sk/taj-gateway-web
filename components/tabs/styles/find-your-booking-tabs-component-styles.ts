@@ -5,7 +5,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 
 export const MainContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   alignItems: "center",
@@ -15,7 +15,7 @@ export const MainContentWrapper = styled(
 
 export const MainContentTitleWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   alignItems: "center",
@@ -26,7 +26,7 @@ export const MainContentTitleWrapper = styled(
 
 export const MainContentTabsWrapper = styled(
   Tabs,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: $isMobile ? MobilePxToVw(460) : DesktopPxToVw(460),
   marginBottom: $isMobile ? MobilePxToVw(60) : DesktopPxToVw(45),
@@ -45,7 +45,7 @@ export const TabsHorizontalBar = styled(Divider)(() => ({
   ".MuiDivider-root": {
     width: "100%",
   },
-  backgroundColor: theme?.palette?.neuPalette?.rgbaOne,
+  backgroundColor: theme?.palette?.ihclPalette?.rgbaOne,
   height: DesktopPxToVw(2.8),
   "@media (max-width: 640px)": {
     height: MobilePxToVw(2.8),
@@ -54,21 +54,19 @@ export const TabsHorizontalBar = styled(Divider)(() => ({
 
 export const MainContentTabContainer = styled(
   Tab,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   opacity: 1,
   fontWeight: 500,
   lineHeight: "150%",
   fontFamily: "Inter",
   fontSize: $isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),
-  padding: $isMobile
-    ? `0vw ${MobilePxToVw(20)} ${MobilePxToVw(25)}`
-    : `0vw ${DesktopPxToVw(20)} ${DesktopPxToVw(25)}`,
+  padding: $isMobile ? `0vw ${MobilePxToVw(20)} ${MobilePxToVw(25)}` : `0vw ${DesktopPxToVw(20)} ${DesktopPxToVw(25)}`,
 }))
 
 export const SubtitleContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   alignItems: "center",

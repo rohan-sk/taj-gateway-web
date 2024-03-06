@@ -27,7 +27,7 @@ export default function ReservationCenter({ props }: any) {
         <SubtitleBox>
           <Typography variant={isMobile ? "m-body-sl" : "body-ml"}>{props?.subTitle}</Typography>
         </SubtitleBox>
-        <Divider sx={{ bgcolor: theme?.palette?.neuPalette?.hexTwelve }} />
+        <Divider sx={{ bgcolor: theme?.palette?.ihclPalette?.hexTwelve }} />
         {props?.richText?.map((data: any, index: number) => (
           <>
             <FlexBox p={"1.042vw 0"}>
@@ -38,7 +38,7 @@ export default function ReservationCenter({ props }: any) {
           </>
         ))}
         {props?.description && (
-        <Box marginTop="1.72vw">
+          <Box marginTop="1.72vw">
             <Typography variant={isMobile ? "m-body-sl" : "body-ml"}>{props?.description}</Typography>
           </Box>
         )}
@@ -48,12 +48,8 @@ export default function ReservationCenter({ props }: any) {
               {props?.parameterMap?.map((item: parameterMapItems, index: number) => (
                 <BorderBox key={index}>
                   <MainBox>
-                    <TitleTypography variant={isMobile ? "m-body-sl" : "body-ml"}>
-                      {item?.key}
-                    </TitleTypography>
-                    <ValueTypography variant={isMobile ? "m-body-sl" : "body-ml"} >
-                      {item?.value}
-                    </ValueTypography>
+                    <TitleTypography variant={isMobile ? "m-body-sl" : "body-ml"}>{item?.key}</TitleTypography>
+                    <ValueTypography variant={isMobile ? "m-body-sl" : "body-ml"}>{item?.value}</ValueTypography>
                   </MainBox>
                 </BorderBox>
               ))}

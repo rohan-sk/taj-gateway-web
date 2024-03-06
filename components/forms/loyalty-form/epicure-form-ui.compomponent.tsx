@@ -486,7 +486,7 @@ const EpicureCardEnrollFormUI = ({
                       width: isMobile ? "100% !important" : "14.8vw",
                       marginleft: isMobile ? "0vw" : "3vw",
                       "&  .MuiFormHelperText-root": {
-                        color: `${theme?.palette?.neuPalette?.hexTen} !important`,
+                        color: `${theme?.palette?.ihclPalette?.hexTen} !important`,
                       },
                     }}
                     variant="standard"

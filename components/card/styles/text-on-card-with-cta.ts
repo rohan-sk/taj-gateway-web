@@ -12,7 +12,7 @@ export const BoxContainer: any = styled(Box)(() => ({
   position: "relative",
 }))
 export const ContentBox: any = styled(Box)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   opacity: "0.9",
   position: "absolute",
   top: "7.813vw",
@@ -34,12 +34,10 @@ export const ContentBox: any = styled(Box)(() => ({
   },
 }))
 
-export const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)(
-  () => ({
-    lineHeight: "1.3125vw",
-    position: "absolute",
-    fontWeight: 400,
-    color: theme?.palette?.neuPalette?.hexTwo,
-    paddingTop: "2vw",
-  })
-)
+export const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)(() => ({
+  lineHeight: "1.3125vw",
+  position: "absolute",
+  fontWeight: 400,
+  color: theme?.palette?.ihclPalette?.hexTwo,
+  paddingTop: "2vw",
+}))

@@ -547,7 +547,7 @@ const HotelRoomsComponent = ({
                   fontWeight: 300,
                   display: "flex",
                   fontSize: `${MobilePxToVw(22)} !important`,
-                  color: theme.palette.neuPalette.hexSeventeen,
+                  color: theme.palette.ihclPalette.hexSeventeen,
                   textDecoration: "underline",
                   margin: `${MobilePxToVw(20)} auto 0`,
                 }}
@@ -564,7 +564,7 @@ const HotelRoomsComponent = ({
           open={bookingError}
           handleClose={handleErrorModalClose}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           ModalCloseButtonStyles={{ right: "25.5%" }}
           Component={
             <BookingModalContent

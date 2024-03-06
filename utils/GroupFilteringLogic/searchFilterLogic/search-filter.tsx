@@ -32,11 +32,7 @@ const SearchFilter = ({
     let filteredArr = []
     if (debouncedStaySearchTerm) {
       filteredArr = props?.items?.filter((card: any) => {
-        if (
-          card?.[filterTerm]
-            ?.toLowerCase()
-            ?.includes(debouncedStaySearchTerm?.toLowerCase()?.trim())
-        ) {
+        if (card?.[filterTerm]?.toLowerCase()?.includes(debouncedStaySearchTerm?.toLowerCase()?.trim())) {
           return card
         }
       })
@@ -121,9 +117,7 @@ const SearchFilter = ({
   return (
     <CustomSearch
       fontSizeProp={isMobile ? MobilePxToVw(22) : DesktopPxToVw(24)}
-      maxWidth={
-        isMobile ? "100% !important" : numberOfFilter > 3 ? "17.188vw" : null
-      }
+      maxWidth={isMobile ? "100% !important" : numberOfFilter > 3 ? "17.188vw" : null}
       value={searchTerm}
       textColor={textColor}
       setValue={setSearchTerm}
@@ -134,7 +128,7 @@ const SearchFilter = ({
         fontWeight: 300,
         fontStyle: "normal",
         fontFamily: "Inter",
-        color: theme?.palette?.neuPalette?.hexSeventeen,
+        color: theme?.palette?.ihclPalette?.hexSeventeen,
       }}
       iconColor={iconColor}
     />

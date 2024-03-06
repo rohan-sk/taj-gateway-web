@@ -322,7 +322,7 @@ function BookAStayCouponCardComponent({
               <ColumnBox>
                 <Box
                   sx={{
-                    borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+                    borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
                     width: isMobile ? "100%" : "24.063vw",
                   }}>
                   <LocalizationProviderBox

@@ -182,11 +182,10 @@ const RoomModifyNavigationComponent = () => {
                               },
                             }}>
                             <Stack rowGap={DesktopPxToVw(8)}>
-                              <BoldTypo
-                                whiteSpace={"nowrap"}
-                                variant={"m-body-l"}>
-                                {`Room ${item?.id}: ${Pluralize(CONSTANTS?.ADULT, item?.adults, false)}${item?.child >= 1
-                                  ? `, ${Pluralize(CONSTANTS?.CHILD, item?.child, false)}` : ""}`}
+                              <BoldTypo whiteSpace={"nowrap"} variant={"m-body-l"}>
+                                {`Room ${item?.id}: ${Pluralize(CONSTANTS?.ADULT, item?.adults, false)}${
+                                  item?.child >= 1 ? `, ${Pluralize(CONSTANTS?.CHILD, item?.child, false)}` : ""
+                                }`}
                               </BoldTypo>
                               {/* new selected room */}
                               {!isExpanded?.[index] && (
@@ -194,7 +193,7 @@ const RoomModifyNavigationComponent = () => {
                                   <BoldTypo
                                     variant="m-body-m"
                                     mt={MobilePxToVw(16)}
-                                    color={theme.palette.neuPalette.hexTwelve}>
+                                    color={theme.palette.ihclPalette.hexTwelve}>
                                     {CONSTANTS?.NEW_SELECTED_ROOM}
                                   </BoldTypo>
                                   <SelectedRoomTypography variant="m-body-m">
@@ -287,8 +286,8 @@ const RoomModifyNavigationComponent = () => {
                                           whiteSpace={"nowrap"}
                                           color={
                                             Number(modifiedRoomDetails(item?.id)?.changePrice || 0) >= 0
-                                              ? theme.palette.neuPalette.hexTwentyFour
-                                              : theme.palette.neuPalette.hexTwo
+                                              ? theme.palette.ihclPalette.hexTwentyFour
+                                              : theme.palette.ihclPalette.hexTwo
                                           }
                                           variant={"m-body-xs"}>
                                           {CONSTANTS?.PRICE_CHANGE}
@@ -297,8 +296,8 @@ const RoomModifyNavigationComponent = () => {
                                           variant={"m-body-s"}
                                           color={
                                             Number(modifiedRoomDetails(item?.id)?.changePrice || 0) >= 0
-                                              ? theme.palette.neuPalette.hexTwentyFour
-                                              : theme.palette.neuPalette.hexTwo
+                                              ? theme.palette.ihclPalette.hexTwentyFour
+                                              : theme.palette.ihclPalette.hexTwo
                                           }>
                                           {Number(modifiedRoomDetails(item?.id)?.changePrice || 0) >= 0
                                             ? Number(modifiedRoomDetails(item?.id)?.changePrice || 0) > 0
@@ -431,8 +430,8 @@ const RoomModifyNavigationComponent = () => {
                             variant="m-body-m"
                             color={
                               totalPriceChange >= 0
-                                ? theme.palette.neuPalette.hexTwentyFour
-                                : theme.palette.neuPalette.hexTwo
+                                ? theme.palette.ihclPalette.hexTwentyFour
+                                : theme.palette.ihclPalette.hexTwo
                             }>
                             {Cart?.totalChange}
                           </Typography>
@@ -441,8 +440,8 @@ const RoomModifyNavigationComponent = () => {
                           variant="m-body-m"
                           color={
                             totalPriceChange >= 0
-                              ? theme.palette.neuPalette.hexTwentyFour
-                              : theme.palette.neuPalette.hexTwo
+                              ? theme.palette.ihclPalette.hexTwentyFour
+                              : theme.palette.ihclPalette.hexTwo
                           }>
                           {totalPriceChange >= 0
                             ? totalPriceChange > 0

@@ -26,7 +26,7 @@ export const PropItemsMsiteModalData = ({
   const isMobile = useMobileCheck()
   const navigate = useAppNavigation()
   const modalSubTitle = ""
-  const titleBorderColor = theme?.palette?.neuPalette?.rgbaOne
+  const titleBorderColor = theme?.palette?.ihclPalette?.rgbaOne
   function fontWeightFunc(index: number) {
     if (index === selectedIndex) {
       return 700
@@ -38,23 +38,14 @@ export const PropItemsMsiteModalData = ({
     <>
       <ReferenceDataContext.Consumer>
         {(modalDropdownContextData) => {
-          const tajLogo =
-            modalDropdownContextData?.modalDropdownContextData?.logo
-          const modalTitle =
-            modalDropdownContextData?.modalDropdownContextData?.title
+          const tajLogo = modalDropdownContextData?.modalDropdownContextData?.logo
+          const modalTitle = modalDropdownContextData?.modalDropdownContextData?.title
           return (
             <Box sx={{ padding: "9.38vw" }}>
               {tajLogo && (
-                <Box
-                  width="16.72vw"
-                  height="14.76vw"
-                  component="img"
-                  alt="Taj Logo"
-                  src={urlFor(tajLogo).url()}
-                />
+                <Box width="16.72vw" height="14.76vw" component="img" alt="Taj Logo" src={urlFor(tajLogo).url()} />
               )}
-              <ModalTitleText
-                sx={{ marginBottom: modalSubTitle ? "0vw" : "5.12vw" }}>
+              <ModalTitleText sx={{ marginBottom: modalSubTitle ? "0vw" : "5.12vw" }}>
                 {modalTitle !== undefined && typeof modalTitle === "string" ? (
                   <>
                     {modalTitle?.split(",")[0] && modalTitle?.split(",")[0]}
@@ -65,27 +56,21 @@ export const PropItemsMsiteModalData = ({
                   <>
                     {isMobile ? (
                       <>
-                        {modalTitle?.mobileTitle?.[0] &&
-                          modalTitle?.mobileTitle?.[0]}
+                        {modalTitle?.mobileTitle?.[0] && modalTitle?.mobileTitle?.[0]}
                         <br />
-                        {modalTitle?.mobileTitle?.[1] &&
-                          modalTitle?.mobileTitle?.[1]}
+                        {modalTitle?.mobileTitle?.[1] && modalTitle?.mobileTitle?.[1]}
                       </>
                     ) : (
                       <>
-                        {modalTitle?.desktopTitle?.[0] &&
-                          modalTitle?.desktopTitle?.[0]}
+                        {modalTitle?.desktopTitle?.[0] && modalTitle?.desktopTitle?.[0]}
                         <br />
-                        {modalTitle?.desktopTitle?.[1] &&
-                          modalTitle?.desktopTitle?.[1]}
+                        {modalTitle?.desktopTitle?.[1] && modalTitle?.desktopTitle?.[1]}
                       </>
                     )}
                   </>
                 )}
               </ModalTitleText>
-              {modalSubTitle && (
-                <ModalSubTitleText>{modalSubTitle}</ModalSubTitleText>
-              )}
+              {modalSubTitle && <ModalSubTitleText>{modalSubTitle}</ModalSubTitleText>}
               <Box
                 className="msite-modal"
                 sx={{
@@ -105,23 +90,18 @@ export const PropItemsMsiteModalData = ({
                         propItemTitles?.url && navigate(propItemTitles?.url, propItemTitles?.urlType)
                         setOpenModal()
                         numberOfCards && setCountToShowCards(numberOfCards)
-                        propItemTitles?.handleProperty &&
-                          propItemTitles?.handleProperty(index)
+                        propItemTitles?.handleProperty && propItemTitles?.handleProperty(index)
                       }}
                       key={index}
                       sx={{
-                        borderTop:
-                          index === 0
-                            ? `2px solid ${titleBorderColor}`
-                            : "none",
+                        borderTop: index === 0 ? `2px solid ${titleBorderColor}` : "none",
                       }}>
                       <PropItemTitles
                         variant="m-body-m"
                         sx={{
                           fontWeight: fontWeightFunc(index),
                         }}>
-                        {propItemTitles?.title !== undefined &&
-                        typeof propItemTitles?.title === "string"
+                        {propItemTitles?.title !== undefined && typeof propItemTitles?.title === "string"
                           ? propItemTitles?.title?.toUpperCase()
                           : isMobile
                           ? propItemTitles?.title?.mobileTitle?.toUpperCase() ||
@@ -129,9 +109,7 @@ export const PropItemsMsiteModalData = ({
                           : propItemTitles?.title?.desktopTitle?.toUpperCase()}
                       </PropItemTitles>
                       {propItemTitles?.items?.length && (
-                        <PropItemsCount
-                          variant="m-body-m"
-                          sx={{ fontWeight: fontWeightFunc(index) }}>
+                        <PropItemsCount variant="m-body-m" sx={{ fontWeight: fontWeightFunc(index) }}>
                           {propItemTitles?.items?.length}
                         </PropItemsCount>
                       )}

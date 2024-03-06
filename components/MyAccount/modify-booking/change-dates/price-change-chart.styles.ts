@@ -4,7 +4,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 import { transientProps } from "../../../../utils/transientProps"
 
 export const MainBox = styled(Box)(() => ({
-  border: ` 1px solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+  border: ` 1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
   padding: "2.083vw",
   "@media (max-width: 640px)": {
     padding: MobilePxToVw(40),
@@ -13,7 +13,7 @@ export const MainBox = styled(Box)(() => ({
 
 export const ChangesDates = styled(Box)(() => ({
   display: "flex",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
   paddingBottom: "1vw",
   paddingTop: "0.8vw",
   justifyContent: "space-between",
@@ -32,9 +32,12 @@ export const StyledDivider = styled(Divider)(() => ({
   },
 }))
 
-export const PriceTypography = styled(Typography, transientProps)<{$isGreen?: boolean}>(({$isGreen}) => ({
+export const PriceTypography = styled(
+  Typography,
+  transientProps,
+)<{ $isGreen?: boolean }>(({ $isGreen }) => ({
   lineHeight: "140%",
-  color: $isGreen ? theme?.palette?.neuPalette?.hexTwentyEight : theme?.palette?.neuPalette?.hexTwo,
+  color: $isGreen ? theme?.palette?.ihclPalette?.hexTwentyEight : theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const ButtonWrapper = styled(Button)(() => ({

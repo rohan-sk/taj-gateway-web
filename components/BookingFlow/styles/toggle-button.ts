@@ -21,7 +21,7 @@ export const MainBox = styled(Box)(() => ({
 
 export const StyledButton = styled(
   Button,
-  transientProps
+  transientProps,
 )<{ $numberOfTabs: number }>(({ $numberOfTabs }) => ({
   fontWeight: 400,
   height: "3.125vw",
@@ -33,11 +33,11 @@ export const StyledButton = styled(
   letterSpacing: "-0.05em",
   padding: "0.83vw 2.083vw",
   boxShadow: "0px 10px 24px rgba(0, 0, 0, 0.1)",
-  color: theme?.palette?.neuPalette?.hexTwo,
-  background: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexTwo,
+  background: theme?.palette?.ihclPalette?.hexOne,
   "&:hover": {
-    color: theme?.palette?.neuPalette?.hexTwo,
-    background: theme?.palette?.neuPalette?.hexOne,
+    color: theme?.palette?.ihclPalette?.hexTwo,
+    background: theme?.palette?.ihclPalette?.hexOne,
   },
 
   "@media (max-width: 640px)": {
@@ -51,7 +51,7 @@ export const StyledButton = styled(
 }))
 export const ButtonTypo = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $numberOfTabs: number }>(({ $numberOfTabs }) => ({
   cursor: "pointer",
   width: "16.667vw",
@@ -65,11 +65,9 @@ export const ButtonTypo = styled(
 
 export const ToggleWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   position: "relative",
   maxWidth: $isMobile ? MobilePxToVw(540) : "unset",
-  margin: $isMobile
-    ? `${MobilePxToVw(30)} ${MobilePxToVw(50)} ${MobilePxToVw(40)}`
-    : "unset",
+  margin: $isMobile ? `${MobilePxToVw(30)} ${MobilePxToVw(50)} ${MobilePxToVw(40)}` : "unset",
 }))

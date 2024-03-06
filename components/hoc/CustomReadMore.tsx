@@ -17,7 +17,7 @@ const CustomReadMore = ({
   length,
   variant,
   textStyles,
-  customReadMoreColor = theme?.palette?.neuPalette?.hexTwo,
+  customReadMoreColor = theme?.palette?.ihclPalette?.hexTwo,
 }: ReadMoreInterface) => {
   const commentBoxStyle = {
     color: customReadMoreColor,
@@ -40,9 +40,7 @@ const CustomReadMore = ({
             style={commentBoxStyle}
             contentEditable="false"
             suppressContentEditableWarning={true}>
-            {isReadMore && (
-              <GoldMoreIcon sx={{ display: "inherit !important" }} />
-            )}
+            {isReadMore && <GoldMoreIcon sx={{ display: "inherit !important" }} />}
           </span>
         </>
       )}

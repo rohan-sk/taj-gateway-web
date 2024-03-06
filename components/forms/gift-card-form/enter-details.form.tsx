@@ -721,8 +721,8 @@ const EnterDetailsForm = (props: any) => {
   ))({
     [`& .${tooltipClasses.tooltip}`]: {
       maxWidth: isMobile ? "64.688vw" : "21.563vw",
-      backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       padding: isMobile ? "1.563vw 3.750vw 1.875vw" : "0.521vw 1.250vw 0.625vw",
     },
   })
@@ -1069,7 +1069,7 @@ const EnterDetailsForm = (props: any) => {
                   fontWeight: 300,
                 },
                 "& .MuiSvgIcon-root": {
-                  color: theme?.palette?.neuPalette?.hexSeventeen,
+                  color: theme?.palette?.ihclPalette?.hexSeventeen,
                   opacity: shouldDisable.senderCountry ? 0.5 : 1,
                   width: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                   height: "auto",
@@ -1130,7 +1130,7 @@ const EnterDetailsForm = (props: any) => {
               sx={{
                 ...inputFieldSenderStateInputStyles,
                 "& .MuiSvgIcon-root": {
-                  color: theme?.palette?.neuPalette?.hexSeventeen,
+                  color: theme?.palette?.ihclPalette?.hexSeventeen,
                   opacity: shouldDisable.senderState ? 0.5 : 1,
                   width: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                   height: "auto",
@@ -1180,7 +1180,7 @@ const EnterDetailsForm = (props: any) => {
               sx={{
                 ...inputFieldSenderStateInputStyles,
                 "& .MuiSvgIcon-root": {
-                  color: theme?.palette?.neuPalette?.hexSeventeen,
+                  color: theme?.palette?.ihclPalette?.hexSeventeen,
                   opacity: shouldDisable.senderCity ? 0.5 : 1,
                   width: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                   height: "auto",
@@ -1256,7 +1256,7 @@ const EnterDetailsForm = (props: any) => {
                   <Typography
                     variant={isMobile ? "m-body-l" : "body-s"}
                     sx={{
-                      color: theme?.palette?.neuPalette?.hexSeventeen,
+                      color: theme?.palette?.ihclPalette?.hexSeventeen,
                     }}>
                     {CONSTANTS?.PURCHASE_TEXT}
                   </Typography>
@@ -1568,7 +1568,7 @@ const EnterDetailsForm = (props: any) => {
                                 disablePortal: true,
                                 sx: {
                                   "& .MuiTooltip-arrow": {
-                                    color: theme?.palette?.neuPalette?.hexSixteen,
+                                    color: theme?.palette?.ihclPalette?.hexSixteen,
                                   },
                                 },
                               }}
@@ -1607,7 +1607,7 @@ const EnterDetailsForm = (props: any) => {
                               PopperProps={{
                                 sx: {
                                   "& .MuiTooltip-arrow": {
-                                    color: theme?.palette?.neuPalette?.hexSixteen,
+                                    color: theme?.palette?.ihclPalette?.hexSixteen,
                                   },
                                 },
                               }}
@@ -1670,7 +1670,7 @@ const EnterDetailsForm = (props: any) => {
               sx={{
                 ...inputFieldSenderStateInputStyles,
                 "& .MuiSvgIcon-root": {
-                  color: theme?.palette?.neuPalette?.hexSeventeen,
+                  color: theme?.palette?.ihclPalette?.hexSeventeen,
                   opacity: selfPurchase ? 0.5 : 1,
                   width: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                   height: "auto",
@@ -1724,7 +1724,7 @@ const EnterDetailsForm = (props: any) => {
               sx={{
                 ...inputFieldSenderStateInputStyles,
                 "& .MuiSvgIcon-root": {
-                  color: theme?.palette?.neuPalette?.hexSeventeen,
+                  color: theme?.palette?.ihclPalette?.hexSeventeen,
                   opacity: selfPurchase ? 0.5 : 1,
                   width: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                   height: "auto",

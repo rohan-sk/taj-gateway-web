@@ -19,28 +19,21 @@ import { CONSTANTS } from "../../../constants"
 const PreferenceCardComponent = ({ filterText, type, filters }: any) => {
   const [addFilters, setAddFilters] = useState(false)
   const [selectedFilters, setSelectedFilters] = useState<Array<string>>([])
-  const [availableFilters, setAvailableFilters] =
-    useState<Array<string>>(filters)
+  const [availableFilters, setAvailableFilters] = useState<Array<string>>(filters)
   const [textSearch, setTextSearch] = useState("")
   const addFilterToList = (filter: string) => {
     setSelectedFilters([...selectedFilters, filter])
-    setAvailableFilters([
-      ...availableFilters.filter((text: string) => text !== filter),
-    ])
+    setAvailableFilters([...availableFilters.filter((text: string) => text !== filter)])
   }
   const removeFromFilters = (filter: string) => {
     setAvailableFilters([...availableFilters, filter])
-    setSelectedFilters([
-      ...selectedFilters.filter((text: string) => text !== filter),
-    ])
+    setSelectedFilters([...selectedFilters.filter((text: string) => text !== filter)])
   }
   const searchFilter = (e: any) => {
     setTextSearch(e.target.value)
 
     setAvailableFilters([
-      ...availableFilters.filter((text: string) =>
-        text.toLowerCase()?.startsWith(e.target.value?.toLowerCase())
-      ),
+      ...availableFilters.filter((text: string) => text.toLowerCase()?.startsWith(e.target.value?.toLowerCase())),
     ])
   }
   useEffect(() => {
@@ -65,7 +58,7 @@ const PreferenceCardComponent = ({ filterText, type, filters }: any) => {
               endIcon={
                 <CloseIcon
                   onClick={() => removeFromFilters(filter)}
-                  sx={{ color: theme?.palette?.neuPalette?.hexOne }}
+                  sx={{ color: theme?.palette?.ihclPalette?.hexOne }}
                 />
               }>
               {filter}
@@ -75,9 +68,7 @@ const PreferenceCardComponent = ({ filterText, type, filters }: any) => {
       </PreferenceBox>
       {!addFilters && (
         <AddFiltersBox>
-          <Typography
-            variant="body-m"
-            sx={{ color: theme?.palette?.neuPalette?.hexTwo }}>
+          <Typography variant="body-m" sx={{ color: theme?.palette?.ihclPalette?.hexTwo }}>
             +
           </Typography>
           <AddFiltersText onClick={() => setAddFilters(true)} variant="body-m">
@@ -107,11 +98,7 @@ const PreferenceCardComponent = ({ filterText, type, filters }: any) => {
                   key={index}
                   onClick={() => addFilterToList(text)}
                   variant="light-outlined"
-                  endIcon={
-                    <AddIcon
-                      sx={{ color: theme?.palette?.neuPalette?.hexSeventeen }}
-                    />
-                  }>
+                  endIcon={<AddIcon sx={{ color: theme?.palette?.ihclPalette?.hexSeventeen }} />}>
                   {text}
                 </PreferenceButton>
               ))}

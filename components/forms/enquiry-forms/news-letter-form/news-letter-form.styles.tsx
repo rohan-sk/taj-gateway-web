@@ -154,7 +154,7 @@ export const NewsLetterStyledLabel = styled(InputLabel)(() => ({
   fontStyle: "normal",
   fontWeight: 300,
   lineHeight: "150%",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width:640px)": {
     fontSize: "3.75vw",
   },
@@ -164,13 +164,13 @@ export const NewsLetterMenuItem = styled(MenuItem)(() => ({
   fontWeight: 300,
   fontSize: "0.938vw",
   fontFamily: "Inter",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   padding: "0.417vw 2.083vw 0.417vw 2.083vw",
   "@media (max-width:640px)": {
     fontWeight: 300,
     fontSize: "2.813vw",
     padding: "1.563vw 3.125vw 1.563vw 3.125vw",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
 }))
 
@@ -203,7 +203,7 @@ export const InputTextField = styled(TextField)(() => ({
       transform: "scale(1) translate(0, 0.4vw)",
     },
     "& .Mui-error": {
-      color: theme?.palette?.neuPalette?.hexThirtyTwo,
+      color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     },
   },
   "&, & input": {
@@ -216,7 +216,7 @@ export const InputTextField = styled(TextField)(() => ({
     fontFamily: "Inter",
     fontWeight: 300,
     fontSize: "1.25vw",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     opacity: 1,
     "@media (max-width:640px)": {
       fontFamily: "Inter",
@@ -227,7 +227,7 @@ export const InputTextField = styled(TextField)(() => ({
   "& .MuiFormHelperText-root": {
     fontFamily: "Inter !important",
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexThirtyTwo,
+    color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     fontSize: `${DesktopPxToVw(18)}!important`,
     "@media (max-width:640px)": {
       fontSize: "2.8vw!important",
@@ -250,7 +250,7 @@ export const ErrorMessageTypography = styled(Typography)(() => ({
   fontSize: `${DesktopPxToVw(18)}!important`,
   fontFamily: fonts?.body,
   fontWeight: 300,
-  color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
+  color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
   "@media (max-width: 640px)": {
     fontSize: "2.8vw!important",
   },
@@ -311,7 +311,7 @@ export const DescriptionBox = styled(Box)(() => ({
     position: "fixed",
     bottom: "0vw",
     width: "100%",
-    background: theme?.palette?.neuPalette?.hexTwentyNine,
+    background: theme?.palette?.ihclPalette?.hexTwentyNine,
     padding: "7.95vw 7.813vw 5.313vw",
   },
 }))

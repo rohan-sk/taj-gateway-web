@@ -12,26 +12,22 @@ import {
 } from "../../../components/carousal/styles/six-cards-carousal"
 import { CommonCarouselStyles } from "../../../components/hoc/carousal-component-styles"
 
-const CustomPrevArrow = dynamic(() => import("../../../components/hoc/custom-arrows").then((module) => module.CustomPrevArrow))
-const CustomNextArrow = dynamic(() => import("../../../components/hoc/custom-arrows").then((module) => module.CustomNextArrow))
+const CustomPrevArrow = dynamic(() =>
+  import("../../../components/hoc/custom-arrows").then((module) => module.CustomPrevArrow),
+)
+const CustomNextArrow = dynamic(() =>
+  import("../../../components/hoc/custom-arrows").then((module) => module.CustomNextArrow),
+)
 import { theme } from "../../../lib/theme"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 import { useMobileCheck } from "../../../utils/isMobilView"
-import {
-  CardBox,
-  CityImageBox,
-  ImageBox,
-} from "../../../components/card/styles/card-with-title"
+import { CardBox, CityImageBox, ImageBox } from "../../../components/card/styles/card-with-title"
 import { urlFor } from "../../../lib-sanity"
 import { useImageUtility } from "../../../utils/hooks/useImageUtility"
 import { CONSTANTS } from "../../../components/constants"
 import { StyledExpandMoreButton } from "../../../components/group/styles/common-styled-components"
 import { ExpandMoreIconStyled } from "../../../components/group/styles/group-with-filter-cards"
-import {
-  CardsBox,
-  ActionGrid,
-  ActionBox,
-} from "../../../components/hoc/CommonMsiteModalAlignment/ModalPropItemStyles"
+import { CardsBox, ActionGrid, ActionBox } from "../../../components/hoc/CommonMsiteModalAlignment/ModalPropItemStyles"
 import { StyledExpandMoreIcon } from "./styles/hotel-details-gallery-group-styles"
 import dynamic from "next/dynamic"
 
@@ -104,9 +100,8 @@ const DestinationOffersCityCardCarousel = (props: any) => {
     <SixCardCommonCarouselContentBox>
       {!isMobile && (
         <MobileCarousalStylesWrapper
-          $backGroundColor={theme?.palette?.neuPalette?.hexSeventeen}
-          $inactiveDotWidth={`${MobilePxToVw(400 / props?.items?.length - 1)}`}
-        >
+          $backGroundColor={theme?.palette?.ihclPalette?.hexSeventeen}
+          $inactiveDotWidth={`${MobilePxToVw(400 / props?.items?.length - 1)}`}>
           <CommonCarouselStyles
             sx={{
               ".slick-list": {
@@ -118,8 +113,7 @@ const DestinationOffersCityCardCarousel = (props: any) => {
               },
               ".slick-slide": {
                 padding: "0 1.046vw",
-                width:
-                  props?.items?.length <= 6 ? "fit-content !important" : "",
+                width: props?.items?.length <= 6 ? "fit-content !important" : "",
               },
               "@media (max-width: 640px)": {
                 "& .slick-slide .content": {
@@ -133,7 +127,7 @@ const DestinationOffersCityCardCarousel = (props: any) => {
                   opacity: "1",
                   width: MobilePxToVw(80),
                   height: MobilePxToVw(2),
-                  background: theme?.palette?.neuPalette?.hexSeventeen,
+                  background: theme?.palette?.ihclPalette?.hexSeventeen,
                 },
                 "& .slick-dots button": {
                   width: "15.625vw",
@@ -143,8 +137,7 @@ const DestinationOffersCityCardCarousel = (props: any) => {
                   marginBottom: "3.75vw",
                 },
               },
-            }}
-          >
+            }}>
             <Slider {...settings}>
               {props?.items?.map((item: any, index: number) => (
                 <Box key={index}>
@@ -152,13 +145,9 @@ const DestinationOffersCityCardCarousel = (props: any) => {
                     <CardBox
                       sx={{
                         textAlign: "center",
-                        backgroundColor:
-                          index === props?.activeSlide
-                            ? theme?.palette?.neuPalette?.hexTwo
-                            : "",
+                        backgroundColor: index === props?.activeSlide ? theme?.palette?.ihclPalette?.hexTwo : "",
                       }}
-                      onClick={() => props?.setActiveSlide(index)}
-                    >
+                      onClick={() => props?.setActiveSlide(index)}>
                       <CityImageBox>
                         <Box
                           alt={`-img`}
@@ -169,12 +158,10 @@ const DestinationOffersCityCardCarousel = (props: any) => {
                           src={getOptimizeImageUrl(
                             urlFor(
                               isMobile
-                                ? item?.thumbnail?.[0]?.imageAsset?.image?.[0]
-                                    ?.asset?._ref
-                                : item?.thumbnail?.[0]?.imageAsset
-                                    ?.largeImage?.[0]?.asset?._ref
+                                ? item?.thumbnail?.[0]?.imageAsset?.image?.[0]?.asset?._ref
+                                : item?.thumbnail?.[0]?.imageAsset?.largeImage?.[0]?.asset?._ref,
                             ).url(),
-                            4
+                            4,
                           )}
                         />
                       </CityImageBox>
@@ -184,10 +171,9 @@ const DestinationOffersCityCardCarousel = (props: any) => {
                           marginBottom: DesktopPxToVw(12),
                           color:
                             index === props?.activeSlide
-                              ? theme?.palette?.neuPalette?.hexOne
-                              : theme?.palette?.neuPalette?.hexSeventeen,
-                        }}
-                      >
+                              ? theme?.palette?.ihclPalette?.hexOne
+                              : theme?.palette?.ihclPalette?.hexSeventeen,
+                        }}>
                         {item?.name?.toUpperCase()}
                       </Typography>
                     </CardBox>
@@ -205,59 +191,47 @@ const DestinationOffersCityCardCarousel = (props: any) => {
             rowGap={isMobile ? "4.844vw" : "2.083vw"}
             justifyContent={"center"}
             columnGap={isMobile ? "9.688vw" : "2.083vw"}
-            sx={{ marginTop: "3.125vw" }}
-          >
-            {props?.items
-              ?.slice(0, countToShowCards)
-              ?.map((item: any, index: number) => (
-                <Grid key={index} item md={5} sm={5} xs={4}>
-                  <CardsBox
-                    sx={{
-                      cursor: "pointer",
-                      position: isMobile ? "unset" : "relative",
-                    }}
-                    onClick={() => props?.setActiveSlide(index)}
-                  >
-                    <>
-                      {item?.thumbnail?.[0]?.imageAsset?.largeImage?.[0]?.asset
-                        ?._ref && (
-                        <Box
-                          width={"100%"}
-                          height={"auto"}
-                          loading="lazy"
-                          component="img"
-                          alt="award-image"
-                          sx={{ objectFit: "contain" }}
-                          src={getOptimizeImageUrl(
-                            urlFor(
-                              item?.thumbnail?.[0]?.imageAsset?.largeImage?.[0]
-                                ?.asset?._ref
-                            )?.url(),
-                            3
-                          )}
-                        />
-                      )}
-                    </>
-                  </CardsBox>
-                  <Typography
-                    textAlign="center"
-                    sx={{
-                      paddingBottom: MobilePxToVw(12),
-                      paddingTop: MobilePxToVw(12),
-                      color:
-                        index === props?.activeSlide
-                          ? theme?.palette?.neuPalette?.hexOne
-                          : theme?.palette?.neuPalette?.hexSeventeen,
-                      backgroundColor:
-                        index === props?.activeSlide
-                          ? theme?.palette?.neuPalette?.hexTwo
-                          : "",
-                    }}
-                  >
-                    {item?.name?.toUpperCase()}
-                  </Typography>
-                </Grid>
-              ))}
+            sx={{ marginTop: "3.125vw" }}>
+            {props?.items?.slice(0, countToShowCards)?.map((item: any, index: number) => (
+              <Grid key={index} item md={5} sm={5} xs={4}>
+                <CardsBox
+                  sx={{
+                    cursor: "pointer",
+                    position: isMobile ? "unset" : "relative",
+                  }}
+                  onClick={() => props?.setActiveSlide(index)}>
+                  <>
+                    {item?.thumbnail?.[0]?.imageAsset?.largeImage?.[0]?.asset?._ref && (
+                      <Box
+                        width={"100%"}
+                        height={"auto"}
+                        loading="lazy"
+                        component="img"
+                        alt="award-image"
+                        sx={{ objectFit: "contain" }}
+                        src={getOptimizeImageUrl(
+                          urlFor(item?.thumbnail?.[0]?.imageAsset?.largeImage?.[0]?.asset?._ref)?.url(),
+                          3,
+                        )}
+                      />
+                    )}
+                  </>
+                </CardsBox>
+                <Typography
+                  textAlign="center"
+                  sx={{
+                    paddingBottom: MobilePxToVw(12),
+                    paddingTop: MobilePxToVw(12),
+                    color:
+                      index === props?.activeSlide
+                        ? theme?.palette?.ihclPalette?.hexOne
+                        : theme?.palette?.ihclPalette?.hexSeventeen,
+                    backgroundColor: index === props?.activeSlide ? theme?.palette?.ihclPalette?.hexTwo : "",
+                  }}>
+                  {item?.name?.toUpperCase()}
+                </Typography>
+              </Grid>
+            ))}
           </Grid>
 
           {props?.items?.length > countToShowCards && (
@@ -273,8 +247,7 @@ const DestinationOffersCityCardCarousel = (props: any) => {
                 }
                 onClick={() => {
                   setCountToShowCards(countToShowCards + 1)
-                }}
-              >
+                }}>
                 {CONSTANTS?.LOAD_MORE}
               </StyledExpandMoreButton>
             </ActionGrid>

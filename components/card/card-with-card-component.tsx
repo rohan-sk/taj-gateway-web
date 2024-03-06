@@ -195,8 +195,8 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                     ? index == 0
                       ? " 0vw "
                       : epicureCardType?.renewal || epicureCardType?.shareholder || epicureCardType?.tata
-                        ? "11.5vw 0vw 0vw"
-                        : "6.25vw 0vw 0vw"
+                      ? "11.5vw 0vw 0vw"
+                      : "6.25vw 0vw 0vw"
                     : "",
                 justifyContent: isMobile ? "center" : "initial",
               }}
@@ -238,11 +238,11 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                       ? epicureCardType?.renewal || epicureCardType?.shareholder || epicureCardType?.tata
                         ? MobilePxToVw(286)
                         : item?.primaryAction?.title
-                          ? MobilePxToVw(476)
-                          : MobilePxToVw(186)
+                        ? MobilePxToVw(476)
+                        : MobilePxToVw(186)
                       : item?.primaryAction?.title
-                        ? DesktopPxToVw(330)
-                        : DesktopPxToVw(150)
+                      ? DesktopPxToVw(330)
+                      : DesktopPxToVw(150)
                   }
                   src={
                     isMobile
@@ -260,8 +260,8 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                         (epicureCardType?.renewal || epicureCardType?.shareholder || epicureCardType?.tata)
                         ? "0vw"
                         : epicureCardType?.renewal || epicureCardType?.shareholder || epicureCardType?.tata
-                          ? "0vw"
-                          : "4.68vw"
+                        ? "0vw"
+                        : "4.68vw"
                       : "auto",
                     gap: item?.primaryAction?.title ? "1vw" : "3.12vw",
                     flexDirection:
@@ -283,7 +283,7 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                         sx={{
                           fontWeight: "700 !important",
                           width: (isMobile && item?.primaryAction?.title) || epicureCardType?.bank ? "100%" : "auto",
-                          color: theme?.palette?.neuPalette?.hexSeventeen,
+                          color: theme?.palette?.ihclPalette?.hexSeventeen,
                           whiteSpace: epicureCardType?.bank ? "pre-line" : "",
                           marginBottom: isSingle ? "0.677vw" : isMobile ? MobilePxToVw(10) : "0.417vw",
                           "@media (max-width: 640px)": {
@@ -309,7 +309,7 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                                       : "none",
                                   color:
                                     epicureCardType?.renewal || epicureCardType?.shareholder || epicureCardType?.tata
-                                      ? theme?.palette?.neuPalette?.hexTwelve
+                                      ? theme?.palette?.ihclPalette?.hexTwelve
                                       : "initial",
                                 }}
                                 variant={
@@ -325,7 +325,7 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                             {(epicureCardType?.renewal || epicureCardType?.shareholder || epicureCardType?.tata) && (
                               <CardText
                                 sx={{
-                                  color: theme?.palette?.neuPalette?.hexTwo,
+                                  color: theme?.palette?.ihclPalette?.hexTwo,
                                 }}
                                 variant={isMobile ? "m-heading-s" : "heading-s"}>
                                 {item?.renewal?.discountPrice}
@@ -342,8 +342,8 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                                     (epicureCardType?.tata && isMobile)
                                       ? "m-body-ml"
                                       : isMobile
-                                        ? "m-body-s"
-                                        : "body-m"
+                                      ? "m-body-s"
+                                      : "body-m"
                                   }>
                                   {item?.normalText}
                                 </TaxText>
@@ -368,8 +368,8 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                                         : "none",
                                     color:
                                       epicureCardType?.renewal || epicureCardType?.shareholder || epicureCardType?.tata
-                                        ? theme?.palette?.neuPalette?.hexTwelve
-                                        : theme?.palette?.neuPalette?.hexSeventeen,
+                                        ? theme?.palette?.ihclPalette?.hexTwelve
+                                        : theme?.palette?.ihclPalette?.hexSeventeen,
                                     fontSize: isMobile ? MobilePxToVw(32) : DesktopPxToVw(22),
                                   }}
                                   variant={
@@ -378,8 +378,8 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                                         ? "m-heading-xs"
                                         : "heading-xs"
                                       : isMobile
-                                        ? "m-heading-xs"
-                                        : "heading-xs"
+                                      ? "m-heading-xs"
+                                      : "heading-xs"
                                   }>
                                   {item?.children}
                                 </CardText>
@@ -388,7 +388,7 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                                   epicureCardType?.tata) && (
                                   <CardText
                                     sx={{
-                                      color: theme?.palette?.neuPalette?.hexTwo,
+                                      color: theme?.palette?.ihclPalette?.hexTwo,
                                     }}
                                     variant={isMobile ? "m-heading-s" : "heading-s"}>
                                     {item?.renewal?.discountPrice}
@@ -403,8 +403,8 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                                         epicureCardType?.renewal && isMobile
                                           ? "m-body-ml"
                                           : isMobile
-                                            ? "m-body-s"
-                                            : "body-m"
+                                          ? "m-body-s"
+                                          : "body-m"
                                       }>
                                       {item?.normalText}
                                     </TaxText>
@@ -433,8 +433,8 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
                             tooltip: {
                               sx: {
                                 borderRadius: "0px",
-                                backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
-                                color: theme?.palette?.neuPalette?.hexSeventeen,
+                                backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
+                                color: theme?.palette?.ihclPalette?.hexSeventeen,
                                 padding: DesktopPxToVw(16),
                                 textAlign: "center",
                               },
@@ -504,7 +504,7 @@ const CardWithCard = ({ props, parentProps }: cardsWithCardInterface) => {
             }}>
             <DynamicStack $isMobile={isMobile}>
               <ButtonTypography
-                color={theme.palette.neuPalette.hexTwo}
+                color={theme.palette.ihclPalette.hexTwo}
                 variant={isMobile ? "m-body-s" : "body-s"}
                 onClick={() => {
                   navigate(parentProps?.url, parentProps?.urlType)

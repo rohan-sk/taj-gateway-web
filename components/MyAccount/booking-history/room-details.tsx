@@ -3,11 +3,7 @@ import data from "./booking-json.json"
 import Pluralize from "../../../utils/pluralize"
 import { formatDateWithMON } from "../../../utils/getDate"
 import { useMobileCheck } from "../../../utils/isMobilView"
-import {
-  currency2DecimalSymbol,
-  formatCurrencyWithMinus,
-  formatCurrencyWithPlus,
-} from "../../../utils/currency"
+import { currency2DecimalSymbol, formatCurrencyWithMinus, formatCurrencyWithPlus } from "../../../utils/currency"
 import { Box, Divider, Stack, Typography } from "@mui/material"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 import {
@@ -50,28 +46,14 @@ const RoomsDetails = ({
 
   return (
     <Box aria-label="RoomsDetails">
-      <Stack
-        flexDirection={isMobile ? "column" : "row"}
-        columnGap={DesktopPxToVw(30)}>
+      <Stack flexDirection={isMobile ? "column" : "row"} columnGap={DesktopPxToVw(30)}>
         {roomImage && (
           <Box
             component={"img"}
             alt="room-img"
             ml={!isLarge && !isMobile ? DesktopPxToVw(30) : 0}
-            width={
-              isMobile
-                ? MobilePxToVw(476)
-                : isLarge
-                ? DesktopPxToVw(350)
-                : DesktopPxToVw(250)
-            }
-            height={
-              isMobile
-                ? MobilePxToVw(280)
-                : isLarge
-                ? DesktopPxToVw(280)
-                : DesktopPxToVw(171)
-            }
+            width={isMobile ? MobilePxToVw(476) : isLarge ? DesktopPxToVw(350) : DesktopPxToVw(250)}
+            height={isMobile ? MobilePxToVw(280) : isLarge ? DesktopPxToVw(280) : DesktopPxToVw(171)}
             key={room?.roomImgUrl}
             src={getOptimizeImageUrl(urlFor(roomImage)?.url(), 6)}
           />
@@ -80,14 +62,9 @@ const RoomsDetails = ({
           <RoomDetailsText variant={isMobile ? "m-body-ml" : "body-ml"}>
             {room?.modifyBooking?.roomName || room?.roomName}
           </RoomDetailsText>
-          {isLarge && (
-            <HotelText variant={isMobile ? "m-body-ml" : "body-ml"}>
-              {hotelDetails?.name}
-            </HotelText>
-          )}
+          {isLarge && <HotelText variant={isMobile ? "m-body-ml" : "body-ml"}>{hotelDetails?.name}</HotelText>}
           <Stack sx={{ flexDirection: "row", justifyContent: "space-between" }}>
-            <RoomDetailsContainer
-              sx={{ flexDirection: item ? "column" : "initial" }}>
+            <RoomDetailsContainer sx={{ flexDirection: item ? "column" : "initial" }}>
               <RoomBookingNumber variant={isMobile ? "m-body-s" : "body-xs"}>
                 {item ? (
                   `${CONSTANTS?.ROOM_LABEL} ${room?.roomNumber} ${data?.roomBookingNumber}`
@@ -97,7 +74,7 @@ const RoomsDetails = ({
                       `${Pluralize(
                         CONSTANTS?.NIGHT_LABEL,
                         room?.modifyBooking?.noOfNights || room?.noOfNights,
-                        false
+                        false,
                       )},`}
                     {`
                 ${formatDateWithMON(roomsData?.checkIn)} to
@@ -113,35 +90,25 @@ const RoomsDetails = ({
                   </>
                 )}
               </RoomBookingNumber>
-              <BookingNumber variant={isMobile ? "m-body-xs" : "body-m"}>
-                {item?.confirmationId}
-              </BookingNumber>
+              <BookingNumber variant={isMobile ? "m-body-xs" : "body-m"}>{item?.confirmationId}</BookingNumber>
             </RoomDetailsContainer>
             {item ? (
-              <Typography variant={isMobile ? "m-body-xs" : "body-xs"}>
-                {room?.status?.toUpperCase()}
-              </Typography>
+              <Typography variant={isMobile ? "m-body-xs" : "body-xs"}>{room?.status?.toUpperCase()}</Typography>
             ) : (
               <></>
             )}
           </Stack>
           {isMobile && <Divider sx={{ width: "100%", margin: "3.125vw 0" }} />}
           <Stack gap={isMobile ? MobilePxToVw(8) : DesktopPxToVw(8)}>
-            <Package variant={isMobile ? "m-body-xs" : "body-m"}>
-              {data?.package}
-            </Package>
+            <Package variant={isMobile ? "m-body-xs" : "body-m"}>{data?.package}</Package>
             <Stack flexDirection={"row"} justifyContent={"space-between"}>
               <Typography variant={isMobile ? "m-body-m" : "body-s"}>
                 {room?.modifyBooking?.packageName || room?.packageName}
               </Typography>
-              <Typography
-                variant={isMobile ? "m-body-l" : "body-s"}
-                whiteSpace={"nowrap"}>
+              <Typography variant={isMobile ? "m-body-l" : "body-s"} whiteSpace={"nowrap"}>
                 {currency2DecimalSymbol(
-                  isComplementary
-                    ? complementaryBasePrice
-                    : room?.modifyBooking?.price || room?.price,
-                  room?.currency
+                  isComplementary ? complementaryBasePrice : room?.modifyBooking?.price || room?.price,
+                  room?.currency,
                 )}
               </Typography>
             </Stack>
@@ -152,20 +119,11 @@ const RoomsDetails = ({
             onClick={() => {
               modalStore?.setPropertyData({
                 title: room?.modifyBooking?.packageName || room?.packageName,
-                cancellationPolicy:
-                  room?.modifyBooking?.cancelPolicyDescription ||
-                  room?.cancelPolicyDescription,
-                guaranteePolicy:
-                  room?.modifyBooking?.bookingPolicyDescription ||
-                  room?.bookingPolicyDescription,
-                price: isComplementary
-                  ? complementaryBasePrice
-                  : room?.modifyBooking?.price || room?.price,
-                shortDescription:
-                  room?.modifyBooking?.description || room?.description,
-                longDescription:
-                  room?.modifyBooking?.detailedDescription ||
-                  room?.detailedDescription,
+                cancellationPolicy: room?.modifyBooking?.cancelPolicyDescription || room?.cancelPolicyDescription,
+                guaranteePolicy: room?.modifyBooking?.bookingPolicyDescription || room?.bookingPolicyDescription,
+                price: isComplementary ? complementaryBasePrice : room?.modifyBooking?.price || room?.price,
+                shortDescription: room?.modifyBooking?.description || room?.description,
+                longDescription: room?.modifyBooking?.detailedDescription || room?.detailedDescription,
                 currencyCode: room?.modifyBooking?.currency || room?.currency,
               })
               navigate("/hotel-rooms/rate-detail", PathType?.dialog)
@@ -195,8 +153,8 @@ const RoomsDetails = ({
                   lineHeight={"150%"}
                   color={
                     changePrice < 0
-                      ? theme.palette.neuPalette.hexTwo
-                      : theme.palette.neuPalette.hexTwentyFour
+                      ? theme.palette.ihclPalette.hexTwo
+                      : theme.palette.ihclPalette.hexTwentyFour
                   }
                   variant={isMobile ? "m-body-m" : "body-ml"}>
                   {changePrice >= 0

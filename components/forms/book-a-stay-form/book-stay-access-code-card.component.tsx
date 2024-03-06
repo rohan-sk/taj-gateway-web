@@ -718,7 +718,7 @@ function BookAStayAccessCardComponent({
                       onClick={() => setSelectedType("check_in")}
                       letterSpacing={"-0.05rem"}
                       whiteSpace={"nowrap"}
-                      color={theme.palette.neuPalette.Seventeen}
+                      color={theme.palette.ihclPalette.Seventeen}
                       //added color for default date as well, till now we had only to check-in
                       variant={isMobile ? "m-body-l" : "body-l"}>
                       {date?.[0] ? formatDateWithMON(date?.[0]) : "Check in"}
@@ -728,7 +728,7 @@ function BookAStayAccessCardComponent({
                       letterSpacing={"-0.05rem"}
                       whiteSpace={"nowrap"}
                       onClick={() => setSelectedType("check_out")}
-                      color={theme.palette.neuPalette.hexSeventeen}
+                      color={theme.palette.ihclPalette.hexSeventeen}
                       variant={isMobile ? "m-body-l" : "body-l"}>
                       {date?.[1] ? formatDateWithMON(date?.[1]) : "Check out"}
                     </Typography>

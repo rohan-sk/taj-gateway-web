@@ -5,7 +5,7 @@ import DesktopPxToVw from "../../../utils/DesktopFontCalc"
 import { transientProps } from "../../../utils/transientProps"
 export const ContainerBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   position: "relative",
   // marginBottom: $isMobile ? "10vw" : "",
@@ -16,7 +16,7 @@ export const StyledTestimonialPaper = styled(Paper)(() => ({
   padding: "2.083vw",
   wordWrap: "break-word",
   boxShadow: "-6px 10px 24px 0px rgba(0, 0, 0, 0.1)",
-  marginBottom:"40px",
+  marginBottom: "40px",
   borderRadius: "0vw!important",
   backgroundColor: theme?.palette?.background?.default,
   "@media (max-width: 640px)": {
@@ -34,7 +34,7 @@ export const AvatarContainer = styled(Box)(() => ({
 
 export const DescriptionBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   right: 0,
   bottom: 0,
@@ -58,7 +58,7 @@ export const SmallTitle = styled(Typography)(() => ({
 
 export const PriceTitle = styled(Typography)(() => ({
   fontSize: DesktopPxToVw(22),
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 export const FlexBox = styled(Box)(() => ({
   display: "flex",
@@ -74,7 +74,7 @@ export const ComponentBox = styled(Box)(() => ({
 
 export const HighlightsContentBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   right: 0,
   bottom: 0,
@@ -87,7 +87,7 @@ export const HighlightsContentBox = styled(
 
 export const ParameterMapDescriptionWrapperBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   gap: $isMobile ? "1.094vw" : "0.365vw",
   display: "flex",

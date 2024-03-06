@@ -16,7 +16,7 @@ export const MainBox = styled(Box)(() => ({
 
 export const ChangesDates = styled(Box)(() => ({
   display: "flex",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
   paddingBottom: "1vw",
   paddingTop: "0.8vw",
   justifyContent: "space-between",
@@ -67,4 +67,3 @@ export const DescriptionBox = styled(Box)(() => ({
     paddingTop: MobilePxToVw(20),
   },
 }))
-

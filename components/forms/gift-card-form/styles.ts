@@ -85,7 +85,7 @@ export const InputText = styled(TextField)(() => ({
     lineHeight: "140%",
   },
   "& .Mui-error": {
-    color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
   },
   "& .MuiInputBase-root.MuiInput-root": {
     "&::before": {
@@ -94,20 +94,20 @@ export const InputText = styled(TextField)(() => ({
   },
 
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexThirtyTwo,
+    color: theme?.palette?.ihclPalette?.hexThirtyTwo,
   },
 
   input: {
     fontFamily: "Inter",
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     background: "none !important",
     "&::placeholder": {
       fontFamily: "Inter",
       opacity: 1,
       fontWeight: "300 !important",
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
 
@@ -131,17 +131,17 @@ export const TypographyCheckBox = styled(Box)(() => ({
   gap: "0.4vw",
   letterSpacing: "0",
   minWidth: "14.06vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     padding: `${MobilePxToVw(15)} 0vw `,
   },
 }))
 
 export const SectionTitle = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 export const GCSectionTitle = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     margin: `${MobilePxToVw(25)} 0vw`,
   },
@@ -201,7 +201,7 @@ export const ORBox = styled(Box)(() => ({
   display: "flex",
   padding: "0vw 1vw",
   alignItems: "center",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   height: DesktopPxToVw(70),
   "@media (max-width: 640px)": {
     gap: "1.563vw",
@@ -239,7 +239,7 @@ export const AdditionalSubText = styled(
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   fontWeight: "300",
   // paddingTop: DesktopPxToVw(10),               // Due to the ADDITIONAL DELIVERY METHODS Title is removed, so top padding commented
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     paddingTop: MobilePxToVw(10),
   },
@@ -253,31 +253,31 @@ export const AutoCompleteInput = styled(TextField)(() => ({
     opacity: 1,
     fontWeight: "300 !important",
     fontSize: DesktopPxToVw(24),
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     "@media (max-width: 640px)": {
       fontSize: MobilePxToVw(24),
     },
   },
   "& .Mui-error": {
-    color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
     ":after": {
-      color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
-      borderBottom: `2px solid ${theme?.palette?.neuPalette?.hexThirtyTwo}!important`,
+      color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
+      borderBottom: `2px solid ${theme?.palette?.ihclPalette?.hexThirtyTwo}!important`,
     },
     ":before": {
-      color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
-      borderBottomColor: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
+      color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
+      borderBottomColor: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
     },
   },
   "& .MuiInput-input": {
     fontWeight: "300 !important",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontSize: DesktopPxToVw(24),
   },
   paddingTop: "0.2vw",
   "&  .MuiFormHelperText-root": {
     fontFamily: "Inter",
-    color: theme?.palette?.neuPalette?.hexTen,
+    color: theme?.palette?.ihclPalette?.hexTen,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: MobilePxToVw(18),
@@ -292,7 +292,7 @@ export const AutoCompleteInput = styled(TextField)(() => ({
       fontWeight: 300,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
   "@media (max-width: 640px)": {
@@ -307,9 +307,9 @@ export const AutoCompleteInput = styled(TextField)(() => ({
     },
   },
   ".MuiFormLabel-root": {
-    color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
     ".MuiFormLabel-asterisk": {
-      color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+      color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
     },
   },
 }))
@@ -330,7 +330,7 @@ export const MobileNumberInput = styled(TextField)(() => ({
       fontWeight: 500,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
   "@media (max-width: 640px)": {
@@ -361,12 +361,12 @@ export const StyledButton = styled(
   Button,
   transientProps,
 )<{ $active: boolean }>(({ $active }) => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
-  backgroundColor: $active ? theme?.palette?.neuPalette?.hexTwo : theme?.palette?.neuPalette?.hexOne,
-  color: $active ? theme?.palette?.neuPalette?.hexOne : theme?.palette?.neuPalette?.hexTwo,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
+  backgroundColor: $active ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.ihclPalette?.hexOne,
+  color: $active ? theme?.palette?.ihclPalette?.hexOne : theme?.palette?.ihclPalette?.hexTwo,
   "&:hover": {
-    backgroundColor: $active ? theme?.palette?.neuPalette?.hexTwo : theme?.palette?.neuPalette?.hexOne,
-    color: $active ? theme?.palette?.neuPalette?.hexOne : theme?.palette?.neuPalette?.hexTwo,
+    backgroundColor: $active ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.ihclPalette?.hexOne,
+    color: $active ? theme?.palette?.ihclPalette?.hexOne : theme?.palette?.ihclPalette?.hexTwo,
   },
   whiteSpace: "nowrap",
   "@media (max-width: 640px)": {
@@ -396,7 +396,7 @@ export const DateTextField = styled(
 )<{ $value: string }>(({ $value }) => ({
   width: "22.96vw",
   "& .Mui-error": {
-    color: theme?.palette?.neuPalette?.hexTen,
+    color: theme?.palette?.ihclPalette?.hexTen,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: MobilePxToVw(18),
@@ -407,8 +407,10 @@ export const DateTextField = styled(
   },
   "& .Mui-error:before": {
     borderBottomColor:
-      $value?.length === 0 ? `${theme?.palette?.neuPalette?.hexTwenty} !important` : theme?.palette?.neuPalette?.hexTen,
-    color: theme?.palette?.neuPalette?.hexTen,
+      $value?.length === 0
+        ? `${theme?.palette?.ihclPalette?.hexTwenty} !important`
+        : theme?.palette?.ihclPalette?.hexTen,
+    color: theme?.palette?.ihclPalette?.hexTen,
   },
   "& .MuiInput-input": {
     fontSize: DesktopPxToVw(24),
@@ -419,7 +421,7 @@ export const DateTextField = styled(
       fontWeight: 300,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
   "@media (max-width: 640px)": {
@@ -567,7 +569,7 @@ export const ErrorMessageTypography = styled(Typography)(() => ({
   fontSize: `${DesktopPxToVw(18)}!important`,
   fontFamily: fonts?.body,
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexThirtyTwo,
+  color: theme?.palette?.ihclPalette?.hexThirtyTwo,
   alignSelf: "self-start",
   lineHeight: "140%",
   "@media (max-width: 640px)": {
@@ -691,7 +693,7 @@ export const VenueEnquiryMobileNumberInput = styled(TextField)(() => ({
       fontFamily: "Inter",
       fontSize: DesktopPxToVw(24),
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
   "@media (max-width: 640px)": {
@@ -715,32 +717,32 @@ export const GiftCardQuantityInputFieldWrapper = styled(
   marginTop: $isMobile ? "-0.03vw" : "0.1vw",
   "& label": {
     color: $quantityErrorMessage
-      ? `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`
-      : theme?.palette?.neuPalette?.hexSeventeen,
+      ? `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`
+      : theme?.palette?.ihclPalette?.hexSeventeen,
   },
   "& .MuiFormControl-root": {
     margin: $isMobile ? `13px 0vw 0vw` : "9px 0vw 0vw",
   },
   "& .MuiInputBase-root:before": {
     borderBottom: $quantityErrorMessage
-      ? `1px solid ${theme?.palette?.neuPalette?.hexThirtyTwo}`
-      : `1px solid ${theme?.palette?.neuPalette?.rgbaFive}`,
+      ? `1px solid ${theme?.palette?.ihclPalette?.hexThirtyTwo}`
+      : `1px solid ${theme?.palette?.ihclPalette?.rgbaFive}`,
   },
   "& .MuiInputBase-root:after": {
     borderBottom: $quantityErrorMessage
-      ? `2px solid ${theme?.palette?.neuPalette?.hexThirtyTwo}`
-      : `2px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+      ? `2px solid ${theme?.palette?.ihclPalette?.hexThirtyTwo}`
+      : `2px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
   },
   ".MuiFormLabel-root": {
-    color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
     ".MuiFormLabel-asterisk": {
-      color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+      color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
     },
   },
 }))
 
 export const ErrorMessageTitle = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexThirtyTwo,
+  color: theme?.palette?.ihclPalette?.hexThirtyTwo,
   fontSize: DesktopPxToVw(18),
   "@media (max-width: 640px)": {
     fontSize: "3vw",
@@ -764,7 +766,7 @@ export const CustomCheckBoxContent = styled(Box)(() => ({
   alignItems: "center",
   letterSpacing: "0",
   minWidth: "14.06vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   padding: `0vw !important`,
   "@media (max-width: 640px)": {
     padding: `${MobilePxToVw(15)} 0vw `,
@@ -781,7 +783,7 @@ export const GiftCardsQuantityWrapper = styled(
   rowGap: $isMobile ? MobilePxToVw(10) : "",
   alignItems: $isMobile ? "center" : "normal",
   flexDirection: $isMobile ? "column" : "row",
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   padding: $isMobile ? MobilePxToVw(20) : DesktopPxToVw(20),
 }))
 // Gc Review Description container styles
@@ -882,7 +884,7 @@ export const AmountTypography = styled(
   $isDownloadPDFPageFromShareIcon: boolean
 }>(({ $isMobile, $confirmationAlignment, $isIos, $isDownloadPagePDF, $isDownloadPDFPageFromShareIcon }) => ({
   position: "absolute",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   left: $isMobile
     ? $confirmationAlignment
       ? $isDownloadPDFPageFromShareIcon
@@ -890,16 +892,16 @@ export const AmountTypography = styled(
           ? "105vw"
           : "85vw"
         : $isDownloadPagePDF
-          ? $isIos
-            ? "100vw"
-            : "80vw"
-          : $isIos
-            ? "31vw"
-            : MobilePxToVw(109.5)
+        ? $isIos
+          ? "100vw"
+          : "80vw"
+        : $isIos
+        ? "31vw"
+        : MobilePxToVw(109.5)
       : MobilePxToVw(82)
     : $confirmationAlignment
-      ? DesktopPxToVw(300)
-      : DesktopPxToVw(152),
+    ? DesktopPxToVw(300)
+    : DesktopPxToVw(152),
   bottom: $isMobile
     ? $confirmationAlignment
       ? $isDownloadPDFPageFromShareIcon
@@ -907,35 +909,35 @@ export const AmountTypography = styled(
           ? "90vw"
           : "65vw"
         : $isDownloadPagePDF
-          ? $isIos
-            ? "117vw"
-            : "80vw"
-          : $isIos
-            ? "50vw"
-            : MobilePxToVw(150)
+        ? $isIos
+          ? "117vw"
+          : "80vw"
+        : $isIos
+        ? "50vw"
+        : MobilePxToVw(150)
       : MobilePxToVw(127)
     : $confirmationAlignment
-      ? $isDownloadPagePDF
-        ? DesktopPxToVw(500)
-        : DesktopPxToVw(470)
-      : DesktopPxToVw(250),
+    ? $isDownloadPagePDF
+      ? DesktopPxToVw(500)
+      : DesktopPxToVw(470)
+    : DesktopPxToVw(250),
   fontSize: $isMobile
     ? $confirmationAlignment && $isDownloadPDFPageFromShareIcon
       ? $isIos
         ? "40px"
         : "40px"
       : $confirmationAlignment && $isDownloadPagePDF
-        ? $isIos
-          ? "40px"
-          : "40px"
-        : $confirmationAlignment && $isIos
-          ? "32px"
-          : MobilePxToVw(32)
-    : $confirmationAlignment
-      ? $isDownloadPagePDF
+      ? $isIos
         ? "40px"
-        : "32px"
-      : DesktopPxToVw(32),
+        : "40px"
+      : $confirmationAlignment && $isIos
+      ? "32px"
+      : MobilePxToVw(32)
+    : $confirmationAlignment
+    ? $isDownloadPagePDF
+      ? "40px"
+      : "32px"
+    : DesktopPxToVw(32),
   lineHeight: $confirmationAlignment ? "140%" : "",
 }))
 

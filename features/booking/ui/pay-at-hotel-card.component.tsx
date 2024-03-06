@@ -33,7 +33,7 @@ const PayAtHotelCard = (props: any) => {
       <Divider
         sx={{
           mt: isMobile ? MobilePxToVw(40) : DesktopPxToVw(30),
-          background: theme?.palette?.neuPalette?.hexSixteen,
+          background: theme?.palette?.ihclPalette?.hexSixteen,
         }}
       />
     </Box>

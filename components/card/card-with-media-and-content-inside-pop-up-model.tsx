@@ -83,7 +83,11 @@ const CardWithMediaAndContentInsidePopUpModel = ({
             component={"div"}
             variant={isMobile ? "m-heading-s" : "heading-s"}
             sx={{
-              color: textColor ? textColor : titleTextColor ? titleTextColor : theme?.palette?.neuPalette?.hexSeventeen,
+              color: textColor
+                ? textColor
+                : titleTextColor
+                ? titleTextColor
+                : theme?.palette?.ihclPalette?.hexSeventeen,
             }}>
             {title}
           </Typography>
@@ -93,7 +97,11 @@ const CardWithMediaAndContentInsidePopUpModel = ({
             variant={isMobile ? "m-body-sl" : "body-s"}
             length={charactersLimit}
             textStyles={{
-              color: textColor ? textColor : titleTextColor ? titleTextColor : theme?.palette?.neuPalette?.hexSeventeen,
+              color: textColor
+                ? textColor
+                : titleTextColor
+                ? titleTextColor
+                : theme?.palette?.ihclPalette?.hexSeventeen,
             }}>
             {description}
           </CustomReadMore>

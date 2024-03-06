@@ -11,19 +11,12 @@ import { theme } from "../../../lib/theme"
 import CustomReadMore from "../../hoc/CustomReadMore"
 import { useImageUtility } from "../../../utils/hooks/useImageUtility"
 
-const OverViewMyAccountCard = ({
-  item,
-  indexIdentifier,
-  primaryAction,
-}: any) => {
+const OverViewMyAccountCard = ({ item, indexIdentifier, primaryAction }: any) => {
   const isMobile = useMobileCheck()
   const { getOptimizeImageUrl } = useImageUtility()
-  const OfferImage = item?.thumbnail?.[0]?.imageAsset?.largeImage?.[0]?.asset
-    ?._ref
+  const OfferImage = item?.thumbnail?.[0]?.imageAsset?.largeImage?.[0]?.asset?._ref
     ? isMobile
-      ? urlFor(
-          item?.thumbnail?.[0]?.imageAsset?.largeImage?.[0]?.asset?._ref
-        )?.url()
+      ? urlFor(item?.thumbnail?.[0]?.imageAsset?.largeImage?.[0]?.asset?._ref)?.url()
       : urlFor(item?.thumbnail?.[0]?.imageAsset?.image?.[0]?.asset?._ref)?.url()
     : ROOM_IMG
 
@@ -32,7 +25,7 @@ const OverViewMyAccountCard = ({
       {isMobile ? (
         <Grid
           sx={{
-            border: `1px solid ${theme?.palette?.neuPalette?.hexTwentyFive}`,
+            border: `1px solid ${theme?.palette?.ihclPalette?.hexTwentyFive}`,
           }}>
           <Box
             sx={{
@@ -50,9 +43,7 @@ const OverViewMyAccountCard = ({
               {item?.title?.toUpperCase()}
             </Typography>
 
-            <CustomReadMore
-              variant={isMobile ? "m-body-s" : "body-s"}
-              length={110}>
+            <CustomReadMore variant={isMobile ? "m-body-s" : "body-s"} length={110}>
               {item?.description}
             </CustomReadMore>
             <Grid
@@ -62,21 +53,10 @@ const OverViewMyAccountCard = ({
                 paddingTop: "3.125vw",
               }}>
               <Box>
-                <Stack
-                  width={"100%"}
-                  rowGap={DesktopPxToVw(10)}
-                  sx={{ marginBottom: "1.813vw" }}>
-                  <Stack
-                    width={"100%"}
-                    flexDirection="row"
-                    columnGap={DesktopPxToVw(20)}>
-                    <Stack
-                      width={"100%"}
-                      flexDirection="row"
-                      gap={DesktopPxToVw(5)}>
-                      <Typography variant={"m-body-xs"}>
-                        {CONSTANTS?.Balance_Expiry_Date}
-                      </Typography>
+                <Stack width={"100%"} rowGap={DesktopPxToVw(10)} sx={{ marginBottom: "1.813vw" }}>
+                  <Stack width={"100%"} flexDirection="row" columnGap={DesktopPxToVw(20)}>
+                    <Stack width={"100%"} flexDirection="row" gap={DesktopPxToVw(5)}>
+                      <Typography variant={"m-body-xs"}>{CONSTANTS?.Balance_Expiry_Date}</Typography>
                     </Stack>
                   </Stack>
                 </Stack>
@@ -90,8 +70,8 @@ const OverViewMyAccountCard = ({
               </Box>
               <RenderActionItem
                 buttonStyles={{
-                  backgroundColor: theme?.palette?.neuPalette?.hexTwo,
-                  color: theme?.palette?.neuPalette?.hexOne,
+                  backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
+                  color: theme?.palette?.ihclPalette?.hexOne,
                 }}
                 url={`${primaryAction?.url}/${item?.identifier}`}
                 title={primaryAction?.title}
@@ -107,7 +87,7 @@ const OverViewMyAccountCard = ({
           container
           sx={{
             display: "flex",
-            border: `1px solid ${theme?.palette?.neuPalette?.hexTwentyFive}`,
+            border: `1px solid ${theme?.palette?.ihclPalette?.hexTwentyFive}`,
           }}>
           <Grid item sx={{ flexBasis: "75%", display: "flex" }}>
             <Box
@@ -119,41 +99,25 @@ const OverViewMyAccountCard = ({
               component={"img"}
               src={getOptimizeImageUrl(OfferImage, 5)}
             />
-            <Box
-              display={"flex"}
-              flexDirection={"column"}
-              justifyContent={"space-between"}
-              sx={{ padding: "1.563vw" }}>
+            <Box display={"flex"} flexDirection={"column"} justifyContent={"space-between"} sx={{ padding: "1.563vw" }}>
               <Typography
                 sx={{ lineHeight: "140%" }}
                 variant={isMobile ? "m-heading-xs" : "heading-xs"}
                 mt={isMobile ? "3.125vw" : "1.042vw"}>
                 {item?.title?.toUpperCase()}
               </Typography>
-              <CustomReadMore
-                variant={isMobile ? "m-body-s" : "body-s"}
-                length={140}>
+              <CustomReadMore variant={isMobile ? "m-body-s" : "body-s"} length={140}>
                 {item?.description}
               </CustomReadMore>
               <Stack width={"100%"} rowGap={DesktopPxToVw(10)}>
-                <Stack
-                  width={"100%"}
-                  flexDirection="row"
-                  columnGap={DesktopPxToVw(20)}>
-                  <Stack
-                    width={"100%"}
-                    flexDirection="row"
-                    gap={DesktopPxToVw(5)}>
-                    <Typography variant={"body-xs"}>
-                      {CONSTANTS?.Balance_Expiry_Date}:
-                    </Typography>
+                <Stack width={"100%"} flexDirection="row" columnGap={DesktopPxToVw(20)}>
+                  <Stack width={"100%"} flexDirection="row" gap={DesktopPxToVw(5)}>
+                    <Typography variant={"body-xs"}>{CONSTANTS?.Balance_Expiry_Date}:</Typography>
                     <Typography variant={"body-s"} style={{ fontWeight: 700 }}>
                       {item?.validThroughYear
                         ? "Round the Year"
                         : item?.validityDates?.[0]?.toDate
-                        ? `${formatDateWithMON(
-                            item?.validityDates?.[0]?.toDate
-                          )}`
+                        ? `${formatDateWithMON(item?.validityDates?.[0]?.toDate)}`
                         : "No Restrictions"}
                     </Typography>
                   </Stack>
@@ -164,8 +128,8 @@ const OverViewMyAccountCard = ({
           <Grid flexBasis={"25%"} display={"flex"} alignItems={"center"}>
             <RenderActionItem
               buttonStyles={{
-                backgroundColor: theme?.palette?.neuPalette?.hexTwo,
-                color: theme?.palette?.neuPalette?.hexOne,
+                backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
+                color: theme?.palette?.ihclPalette?.hexOne,
               }}
               url={`${primaryAction?.url}/${item?.identifier}`}
               title={primaryAction?.title}

@@ -4,14 +4,7 @@ import SearchFilter from "./search-filter"
 import DropDownFilter from "./drop-down-filter"
 import { useMobileCheck } from "../../isMobilView"
 
-const GroupFilterLogic = ({
-  props,
-  backgroundColor,
-  parameterMap,
-  setFilteredProps,
-  dynamicTabs,
-  textColor,
-}: any) => {
+const GroupFilterLogic = ({ props, backgroundColor, parameterMap, setFilteredProps, dynamicTabs, textColor }: any) => {
   const filterConfig = props?.filterConfig
   const isMobile = useMobileCheck()
   const numberOfFilter = filterConfig.length
@@ -29,30 +22,20 @@ const GroupFilterLogic = ({
           width: "100%",
         }}>
         {filterConfig?.map((filterTypeData: any, id: number) => {
-          if (
-            filterTypeData?.filterType?.toLowerCase() ===
-            CONSTANTS?.SEARCH_FIELD?.toLowerCase()
-          ) {
+          if (filterTypeData?.filterType?.toLowerCase() === CONSTANTS?.SEARCH_FIELD?.toLowerCase()) {
             return (
               <SearchFilter
                 textColor={textColor}
                 filterTypeData={filterTypeData}
                 backgroundColor={backgroundColor}
                 key={id}
-                iconColor={
-                  filterConfig[0]?.iconColor?.hex
-                    ? filterConfig[0]?.iconColor?.hex
-                    : ""
-                }
+                iconColor={filterConfig[0]?.iconColor?.hex ? filterConfig[0]?.iconColor?.hex : ""}
                 props={props}
                 setFilteredProps={setFilteredProps}
                 numberOfFilter={numberOfFilter}
               />
             )
-          } else if (
-            filterTypeData?.filterType?.toLowerCase() ===
-            CONSTANTS?.DROP_DOWN?.toLowerCase()
-          ) {
+          } else if (filterTypeData?.filterType?.toLowerCase() === CONSTANTS?.DROP_DOWN?.toLowerCase()) {
             return (
               <DropDownFilter
                 filterTypeData={filterTypeData}
@@ -84,7 +67,7 @@ const GroupFilterLogic = ({
                   fontWeight: 300,
                   lineHeight: "150%",
                   margin: `${MobilePxToVw(55)} 0vw`,
-                  color: theme?.palette?.neuPalette?.hexSeventeen,
+                  color: theme?.palette?.ihclPalette?.hexSeventeen,
                 }}
               />
             )}
@@ -130,7 +113,7 @@ const GroupFilterLogic = ({
                   fontWeight: 300,
                   fontStyle: "normal",
                   fontFamily: "Inter",
-                  color: theme?.palette?.neuPalette?.hexSeventeen,
+                  color: theme?.palette?.ihclPalette?.hexSeventeen,
                 }}
               />
             )}

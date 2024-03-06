@@ -80,7 +80,7 @@ const CancelRoomRefundDetails = ({
       <Box
         sx={{
           padding: "40px 32px",
-          border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+          border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
           margin: "35px 0vw",
           ".MuiSelect-select": {
             textAlign: "left !important",
@@ -112,8 +112,8 @@ const CancelRoomRefundDetails = ({
               <AmountWrapper
                 $color={
                   cancellationDetails?.cancelPayableAmount > 0
-                    ? theme.palette.neuPalette.hexTwo
-                    : theme.palette.neuPalette.hexTwentyEight
+                    ? theme.palette.ihclPalette.hexTwo
+                    : theme.palette.ihclPalette.hexTwentyEight
                 }
                 sx={{ fontSize: isMobile ? "5vw !important" : "inherit", fontWeight: 700 }}>
                 {currency2DecimalSymbol(totalAmount || 0, cancellationDetails?.rooms?.[0]?.currency)}
@@ -142,7 +142,7 @@ const CancelRoomRefundDetails = ({
                 backgroundColor: "white",
                 "& .MuiSelect-select": {
                   "&:focus": {
-                    background: theme?.palette?.neuPalette?.hexOne,
+                    background: theme?.palette?.ihclPalette?.hexOne,
                   },
                 },
               }}
@@ -153,7 +153,7 @@ const CancelRoomRefundDetails = ({
                 PaperProps: {
                   elevation: 0,
                   sx: {
-                    backgroundColor: theme?.palette?.neuPalette?.hexOne,
+                    backgroundColor: theme?.palette?.ihclPalette?.hexOne,
                     boxShadow: `-6px 10px 24px 0px rgba(0, 0, 0, 0.10)`,
                   },
                 },
@@ -247,8 +247,8 @@ const CancelRoomRefundDetails = ({
               <AmountWrapper
                 $color={
                   cancellationDetails?.cancelPayableAmount > 0
-                    ? theme.palette.neuPalette.hexTwo
-                    : theme.palette.neuPalette.hexTwentyEight
+                    ? theme.palette.ihclPalette.hexTwo
+                    : theme.palette.ihclPalette.hexTwentyEight
                 }>
                 {currency2DecimalSymbol(totalAmount || 0, cancellationDetails?.rooms?.[0]?.currency)}
               </AmountWrapper>
@@ -272,7 +272,7 @@ const CancelRoomRefundDetails = ({
                 },
                 "& .MuiSelect-select": {
                   "&:focus": {
-                    background: theme?.palette?.neuPalette?.hexOne,
+                    background: theme?.palette?.ihclPalette?.hexOne,
                   },
                 },
               }}
@@ -283,7 +283,7 @@ const CancelRoomRefundDetails = ({
                 PaperProps: {
                   elevation: 0,
                   sx: {
-                    backgroundColor: theme?.palette?.neuPalette?.hexOne,
+                    backgroundColor: theme?.palette?.ihclPalette?.hexOne,
                     boxShadow: `-6px 10px 24px 0px rgba(0, 0, 0, 0.10)`,
                   },
                 },

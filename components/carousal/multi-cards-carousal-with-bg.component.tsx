@@ -307,7 +307,7 @@ const MultiCardsCarousalWithBgImage = ({ props, padding }: any) => {
                           <Typography
                             variant={isMobile ? "m-body-sl" : "body-ml"}
                             sx={{
-                              color: textColor ? textColor : theme?.palette?.neuPalette?.hexSeventeen,
+                              color: textColor ? textColor : theme?.palette?.ihclPalette?.hexSeventeen,
                             }}>
                             {item?.description.length >
                             (item?.charactersLimit ?? CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT) ? (

@@ -16,7 +16,7 @@ export const ManageGiftCardsWrapper = styled(Box)(() => ({
 
 export const VerticalTabsDivider = styled(Divider)(() => ({
   margin: `${DesktopPxToVw(20)} ${DesktopPxToVw(20)}`,
-  backgroundColor: theme?.palette?.neuPalette?.hexTwelve,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwelve,
   height: DesktopPxToVw(30),
   "@media (max-width: 640px)": {
     margin: `${MobilePxToVw(30)} ${MobilePxToVw(16)}`,
@@ -48,7 +48,7 @@ export const GiftCardsTabContent = styled(Tab)(() => ({
 
 export const VerticalDivider = styled(Divider)(() => ({
   margin: `${DesktopPxToVw(20)} ${DesktopPxToVw(20)}`,
-  backgroundColor: theme?.palette?.neuPalette?.hexTwelve,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwelve,
   height: DesktopPxToVw(30),
   "@media (max-width: 640px)": {
     margin: `${MobilePxToVw(30)} ${MobilePxToVw(20)}`,

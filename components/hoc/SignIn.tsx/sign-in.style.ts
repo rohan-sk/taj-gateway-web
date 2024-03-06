@@ -20,7 +20,7 @@ export const BoxWrapper = styled(Box)(() => ({
 
 export const TermsAndContritionWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   justifyContent: "center",
@@ -38,10 +38,10 @@ export const StyledInputField: any = styled(TextField)(() => ({
       lineHeight: "150%",
       paddingLeft: "0vw !important",
       opacity: 1,
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
     "&:-webkit-autofill": {
-      WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.neuPalette?.hexOne} inset !important`,
+      WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.ihclPalette?.hexOne} inset !important`,
     },
   },
   "& .MuiInputBase-input": {
@@ -69,7 +69,7 @@ export const StyledInputField: any = styled(TextField)(() => ({
 
 export const ErrorMessageTypography = styled(Typography)(() => ({
   margin: "0.6vw 0vw 0vw 0vw",
-  color: `${theme?.palette?.neuPalette?.hexTwentyOne}!important`,
+  color: `${theme?.palette?.ihclPalette?.hexTwentyOne}!important`,
 }))
 
 export const ErrorMessageTypographyWrapper = styled(Box)(() => ({

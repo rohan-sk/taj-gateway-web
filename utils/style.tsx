@@ -14,7 +14,7 @@ export const CountryTitle = styled(Typography)(() => ({
 }))
 export const CustomSelect = styled(
   Select,
-  transientProps
+  transientProps,
 )<{ $backgroundColorProp?: string }>(({ $backgroundColorProp }) => ({
   "@media (max-width: 640px)": {
     minWidth: "22vw",
@@ -28,13 +28,9 @@ export const CustomSelect = styled(
   },
   "& .MuiSelect-select": {
     padding: "0px !important",
-    backgroundColor: $backgroundColorProp
-      ? $backgroundColorProp
-      : theme?.palette?.neuPalette?.hexOne,
+    backgroundColor: $backgroundColorProp ? $backgroundColorProp : theme?.palette?.ihclPalette?.hexOne,
     "&:focus": {
-      backgroundColor: $backgroundColorProp
-        ? $backgroundColorProp
-        : theme?.palette?.background?.default,
+      backgroundColor: $backgroundColorProp ? $backgroundColorProp : theme?.palette?.background?.default,
     },
     "@media (max-width: 640px)": {
       display: "flex",

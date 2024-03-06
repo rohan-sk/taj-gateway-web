@@ -32,7 +32,7 @@ export const NudgeBlogCommentDialogWrapper = styled(BoxWrapper)(() => ({
   padding: "0vw 10vw",
   gap: "2.08vw",
   justifyContent: "center",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   "@media (max-width: 640px)": {
     width: "100%",
     height: "5vw",

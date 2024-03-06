@@ -168,7 +168,7 @@ const KhazanaEnquiryForm = (props: any) => {
   //variables
   const { userPhoneNumber, userCustomerHash, userSalutation, userCountryCode, userEmail, userFullName } =
     LoggedInUserDetails
-  let getBgColor = isMobile ? theme?.palette?.neuPalette?.hexTwentyNine : theme?.palette?.neuPalette?.hexOne
+  let getBgColor = isMobile ? theme?.palette?.ihclPalette?.hexTwentyNine : theme?.palette?.ihclPalette?.hexOne
   const inputStyle = {
     WebkitBoxShadow: `0 0 0 1000px ${getBgColor} inset`,
   }
@@ -582,7 +582,7 @@ const KhazanaEnquiryForm = (props: any) => {
                   }}
                   iconStyle={{
                     position: "static !important",
-                    color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+                    color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
                     fontSize: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                   }}
                   countryCode={countryCode}
@@ -736,7 +736,7 @@ const KhazanaEnquiryForm = (props: any) => {
                   <>
                     <AddIcon
                       sx={{
-                        color: theme?.palette?.neuPalette?.hexTwo,
+                        color: theme?.palette?.ihclPalette?.hexTwo,
                         fontSize: "large",
                       }}
                     />
@@ -751,7 +751,7 @@ const KhazanaEnquiryForm = (props: any) => {
           <Typography
             sx={{
               paddingBottom: isMobile ? "1.563vw" : "0.833vw",
-              color: theme?.palette?.neuPalette.hexSeventeen,
+              color: theme?.palette?.ihclPalette.hexSeventeen,
               fontSize: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
             }}>
             {props?.items?.[5]?.labelText}

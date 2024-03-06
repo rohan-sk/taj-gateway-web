@@ -52,7 +52,7 @@ export const GiftCardMainTitleContent = styled(Stack)(() => ({
 export const GiftCardMainTitleContentDivider = styled(Divider)(() => ({
   width: MobilePxToVw(40),
   height: MobilePxToVw(1),
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const GiftCardNavigationOpenPriceContentWrapper = styled(Box)(() => ({
@@ -70,7 +70,7 @@ export const GiftCardCartTotalPriceDataWrapper = styled(Box)(() => ({
   maxHeight: "50vh",
   overflowY: "scroll",
   position: "absolute",
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
   boxShadow: "-6px 10px 32px rgba(0, 0, 0, 0.15)",
   padding: `${MobilePxToVw(35)} ${MobilePxToVw(15)} ${MobilePxToVw(15)}`,
 }))

@@ -122,19 +122,19 @@ const FormDatePicker = ({
             width: "100%",
             "& .MuiInputBase-root.MuiInput-root": {
               "&::before, &::after": {
-                borderColor: `${color ? color : theme?.palette?.neuPalette?.hexOne} !important`,
+                borderColor: `${color ? color : theme?.palette?.ihclPalette?.hexOne} !important`,
               },
             },
             "& input, & textarea": {
               padding: "0vw",
-              background: `${background ? background : theme?.palette?.neuPalette?.hexThree} !important`,
+              background: `${background ? background : theme?.palette?.ihclPalette?.hexThree} !important`,
               WebkitBoxShadow: `0 0 0 50px ${
-                background ? background : theme?.palette?.neuPalette?.hexThree
+                background ? background : theme?.palette?.ihclPalette?.hexThree
               } inset !important`,
-              WebkitTextFillColor: `${color ? color : theme?.palette?.neuPalette?.hexOne} !important`,
+              WebkitTextFillColor: `${color ? color : theme?.palette?.ihclPalette?.hexOne} !important`,
               "& input, & label, & input::placeholder, & textarea, & textarea::placeholder, & .MuiInputLabel-shrink.MuiInputLabel-standard, & .MuiInputLabel-shrink":
                 {
-                  color: `${color ? color : theme?.palette?.neuPalette?.hexTwentyNine} !important`,
+                  color: `${color ? color : theme?.palette?.ihclPalette?.hexTwentyNine} !important`,
                 },
             },
           }}

@@ -155,13 +155,13 @@ const Header = (headerData: any) => {
 
   useEffect(() => {
     global?.window?.addEventListener("storage", function (e) {
-      if (!!global?.window?.localStorage?.getItem("customerHash")){
+      if (!!global?.window?.localStorage?.getItem("customerHash")) {
         setCustomerHashPresent(true)
-      }else{
-        setCustomerHashPresent(false) 
+      } else {
+        setCustomerHashPresent(false)
       }
     })
-    return global?.window?.removeEventListener("storage",()=>{})
+    return global?.window?.removeEventListener("storage", () => {})
   }, [isUserLoggedIn, isCustomerHashPresent, showSecondaryHeaderStyles, isNavBarNotTransparent, scrollDowned])
 
   const handleRoute = async (url: string, type: PathType | undefined, linkText: string) => {
@@ -237,8 +237,8 @@ const Header = (headerData: any) => {
                           cursor: "pointer",
                           height: "1.25vw",
                           color: showSecondaryHeaderStyles
-                            ? theme?.palette?.neuPalette?.hexTwo
-                            : theme?.palette?.neuPalette?.hexOne,
+                            ? theme?.palette?.ihclPalette?.hexTwo
+                            : theme?.palette?.ihclPalette?.hexOne,
                         }}
                       />
                     )}
@@ -252,8 +252,8 @@ const Header = (headerData: any) => {
                           cursor: "pointer",
                           height: "1.25vw",
                           color: showSecondaryHeaderStyles
-                            ? theme?.palette?.neuPalette?.hexTwo
-                            : theme?.palette?.neuPalette?.hexOne,
+                            ? theme?.palette?.ihclPalette?.hexTwo
+                            : theme?.palette?.ihclPalette?.hexOne,
                         }}
                       />
                     )}
@@ -310,8 +310,8 @@ const Header = (headerData: any) => {
                             marginLeft: DesktopPxToVw(7),
                             height: "16px",
                             backgroundColor: showSecondaryHeaderStyles
-                              ? theme?.palette?.neuPalette?.hexTwo
-                              : theme?.palette?.neuPalette?.hexOne,
+                              ? theme?.palette?.ihclPalette?.hexTwo
+                              : theme?.palette?.ihclPalette?.hexOne,
                           }}
                         />
                       )}
@@ -323,8 +323,8 @@ const Header = (headerData: any) => {
                             letterSpacing: "0.03em",
                             cursor: "pointer",
                             color: showSecondaryHeaderStyles
-                              ? theme?.palette?.neuPalette?.hexTwo
-                              : theme?.palette?.neuPalette?.hexOne,
+                              ? theme?.palette?.ihclPalette?.hexTwo
+                              : theme?.palette?.ihclPalette?.hexOne,
                           }}
                           onClick={() => {
                             !router?.query?.sebbalance && handleRoute(item?.url, item?.urlType, item?.title)
@@ -345,8 +345,8 @@ const Header = (headerData: any) => {
                               cursor: "pointer",
                               height: "1.25vw",
                               color: showSecondaryHeaderStyles
-                                ? theme?.palette?.neuPalette?.hexTwo
-                                : theme?.palette?.neuPalette?.hexOne,
+                                ? theme?.palette?.ihclPalette?.hexTwo
+                                : theme?.palette?.ihclPalette?.hexOne,
                             }}
                           />
                         )} */

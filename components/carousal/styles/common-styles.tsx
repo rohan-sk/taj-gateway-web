@@ -4,45 +4,42 @@ import { transientProps } from "../../../utils/transientProps"
 
 export const MobileCarousalStylesWrapper = styled(
   Box,
-  transientProps
-)<{ $inactiveDotWidth: string; $backGroundColor?: any }>(
-  ({ $inactiveDotWidth, $backGroundColor }) => ({
-    "@media (max-width:640px)": {
-      "& .slick-dots": {
-        position: "static",
-        bottom: "0",
-        display: "flex",
-        alignItems: "center",
+  transientProps,
+)<{ $inactiveDotWidth: string; $backGroundColor?: any }>(({ $inactiveDotWidth, $backGroundColor }) => ({
+  "@media (max-width:640px)": {
+    "& .slick-dots": {
+      position: "static",
+      bottom: "0",
+      display: "flex",
+      alignItems: "center",
+      "& button": {
+        width: "100%",
+        height: "0.3125vw",
+        background: `${theme?.palette?.ihclPalette?.hexSeventeen}20`,
+      },
+      "& li": {
+        margin: "0vw",
+        width: `${$inactiveDotWidth} !important`,
+        background: `${theme?.palette?.ihclPalette?.hexSeventeen}20`,
+      },
+      "& .slick-active": {
+        width: "12.5vw !important",
+        borderRadius: "10px",
         "& button": {
-          width: "100%",
-          height: "0.3125vw",
-          background: `${theme?.palette?.neuPalette?.hexSeventeen}20`,
-        },
-        "& li": {
-          margin: "0vw",
-          width: `${$inactiveDotWidth} !important`,
-          background: `${theme?.palette?.neuPalette?.hexSeventeen}20`,
-        },
-        "& .slick-active": {
-          width: "12.5vw !important",
-          borderRadius: "10px",
-          "& button": {
-            background: `${
-              $backGroundColor
-                ? $backGroundColor === theme?.palette?.neuPalette?.hexEleven ||
-                  $backGroundColor === theme?.palette?.neuPalette?.hexFour ||
-                  $backGroundColor ===
-                    theme?.palette?.neuPalette?.hexThree?.toLowerCase()
-                  ? theme?.palette?.neuPalette?.hexOne
-                  : theme?.palette?.neuPalette?.hexSeventeen
-                : theme?.palette?.neuPalette?.hexFive
-            } !important`,
-          },
+          background: `${
+            $backGroundColor
+              ? $backGroundColor === theme?.palette?.ihclPalette?.hexEleven ||
+                $backGroundColor === theme?.palette?.ihclPalette?.hexFour ||
+                $backGroundColor === theme?.palette?.ihclPalette?.hexThree?.toLowerCase()
+                ? theme?.palette?.ihclPalette?.hexOne
+                : theme?.palette?.ihclPalette?.hexSeventeen
+              : theme?.palette?.ihclPalette?.hexFive
+          } !important`,
         },
       },
     },
-  })
-)
+  },
+}))
 export const LoginWrapper = styled(Box)(() => ({
   display: "flex",
   flexDirection: "column",
@@ -51,6 +48,6 @@ export const LoginWrapper = styled(Box)(() => ({
   "@media (max-width: 640px)": {
     margin: "8.594vw 12.813vw",
     padding: "7.81vw 4.68vw",
-    border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+    border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   },
 }))

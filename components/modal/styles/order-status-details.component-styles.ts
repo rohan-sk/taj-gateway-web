@@ -3,19 +3,11 @@ import AlbumIcon from "@mui/icons-material/Album"
 import { transientProps } from "../../../utils/transientProps"
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
-import {
-  Box,
-  Grid,
-  styled,
-  Stepper,
-  Divider,
-  StepConnector,
-  stepConnectorClasses,
-} from "@mui/material"
+import { Box, Grid, styled, Stepper, Divider, StepConnector, stepConnectorClasses } from "@mui/material"
 
 export const OrderStatusWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   padding: $isMobile ? MobilePxToVw(40) : DesktopPxToVw(40),
   backgroundColor: theme?.palette?.background?.paper,
@@ -27,25 +19,23 @@ export const OrderStatusWrapper = styled(
 
 export const HorizontalDivider = styled(
   Divider,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   marginTop: $isMobile ? MobilePxToVw(30) : "unset",
-  backgroundColor: `${theme?.palette?.neuPalette?.hexSixteen} !important`,
+  backgroundColor: `${theme?.palette?.ihclPalette?.hexSixteen} !important`,
 }))
 
 export const OrderNumberContainer = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   gap: $isMobile ? MobilePxToVw(10) : "unset",
-  padding: $isMobile
-    ? `${MobilePxToVw(20)} 0vw ${MobilePxToVw(30)}`
-    : `${DesktopPxToVw(20)} 0vw`,
+  padding: $isMobile ? `${MobilePxToVw(20)} 0vw ${MobilePxToVw(30)}` : `${DesktopPxToVw(20)} 0vw`,
 }))
 
 export const OrderNumberWrapper = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -55,7 +45,7 @@ export const OrderNumberWrapper = styled(
 
 export const TrackingNumberWrapper = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -65,7 +55,7 @@ export const TrackingNumberWrapper = styled(
 
 export const DueDateWrapper = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -76,7 +66,7 @@ export const DueDateWrapper = styled(
 
 export const StepperSeparatorContentContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: $isMobile ? "row" : "column",
@@ -84,28 +74,26 @@ export const StepperSeparatorContentContainer = styled(
 
 export const StepperSeparatorContentWrapper = styled(
   Stepper,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   justifyContent: "center",
   flexDirection: $isMobile ? "column" : "unset",
-  padding: $isMobile
-    ? `0vw ${MobilePxToVw(40)} 0vw 0vw`
-    : `${DesktopPxToVw(40)} 0vw ${DesktopPxToVw(20)}`,
+  padding: $isMobile ? `0vw ${MobilePxToVw(40)} 0vw 0vw` : `${DesktopPxToVw(40)} 0vw ${DesktopPxToVw(20)}`,
   rowGap: $isMobile ? MobilePxToVw(74) : "unset",
 }))
 
 export const CheckCircleOutlineIconWrapper = styled(
   CheckCircleOutlineIcon,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   width: $isMobile ? MobilePxToVw(32) : DesktopPxToVw(32),
   height: $isMobile ? MobilePxToVw(32) : DesktopPxToVw(32),
 }))
 
 export const AlbumIconWrapper = styled(
   AlbumIcon,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: $isMobile ? MobilePxToVw(32) : DesktopPxToVw(32),
   height: $isMobile ? MobilePxToVw(32) : DesktopPxToVw(32),
@@ -113,7 +101,7 @@ export const AlbumIconWrapper = styled(
 
 export const StepperContentWrapper = styled(
   Stepper,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   flexDirection: $isMobile ? "column" : "unset",
   justifyContent: $isMobile ? "space-between" : "center",
@@ -121,29 +109,25 @@ export const StepperContentWrapper = styled(
 
 export const OrderStatusContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  border: $isMobile
-    ? "unset"
-    : `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: $isMobile ? "unset" : `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   padding: $isMobile ? `0vw ${MobilePxToVw(32)}` : `${DesktopPxToVw(80)} 0vw`,
 }))
 
 export const OrderStatusDescriptionWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   justifyContent: "center",
   textAlign: "center",
-  padding: $isMobile
-    ? `0vw 0vw ${MobilePxToVw(35)}`
-    : `0vw ${DesktopPxToVw(267)} ${DesktopPxToVw(18)}`,
+  padding: $isMobile ? `0vw 0vw ${MobilePxToVw(35)}` : `0vw ${DesktopPxToVw(267)} ${DesktopPxToVw(18)}`,
 }))
 
 export const OrderStatusActionPropsWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -161,16 +145,16 @@ export const StatusStepConnectorWrapper = styled(StepConnector)(() => ({
   },
   [`&.${stepConnectorClasses.active}`]: {
     [`& .${stepConnectorClasses.line}`]: {
-      borderColor: theme?.palette?.neuPalette?.hexTwo,
+      borderColor: theme?.palette?.ihclPalette?.hexTwo,
     },
   },
   [`&.${stepConnectorClasses.completed}`]: {
     [`& .${stepConnectorClasses.line}`]: {
-      borderColor: theme?.palette?.neuPalette?.hexTwo,
+      borderColor: theme?.palette?.ihclPalette?.hexTwo,
     },
   },
   [`& .${stepConnectorClasses.line}`]: {
-    borderColor: theme?.palette?.neuPalette?.hexSixteen,
+    borderColor: theme?.palette?.ihclPalette?.hexSixteen,
     borderTopWidth: DesktopPxToVw(1),
     borderRadius: DesktopPxToVw(1),
   },
@@ -182,17 +166,17 @@ export const StatusStepConnectorWrapper = styled(StepConnector)(() => ({
     },
     [`&.${stepConnectorClasses.active}`]: {
       [`& .${stepConnectorClasses.line}`]: {
-        borderColor: theme?.palette?.neuPalette?.hexTwo,
+        borderColor: theme?.palette?.ihclPalette?.hexTwo,
       },
     },
     [`&.${stepConnectorClasses.completed}`]: {
       [`& .${stepConnectorClasses.line}`]: {
-        borderColor: theme?.palette?.neuPalette?.hexTwo,
+        borderColor: theme?.palette?.ihclPalette?.hexTwo,
       },
     },
     [`& .${stepConnectorClasses.line}`]: {
       minHeight: `${MobilePxToVw(80)}`,
-      borderColor: theme?.palette?.neuPalette?.hexSixteen,
+      borderColor: theme?.palette?.ihclPalette?.hexSixteen,
     },
   },
   "@media (max-width: 540px)and (min-width: 421px)": {

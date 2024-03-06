@@ -200,34 +200,34 @@ const Bookings = ({ bookingData, primaryAction, secondaryAction, isPastBooking =
               {/* customer details */}
               <DetailsContainer>
                 {/* Hotel email and hotel Mobile Number are static  */}
-               {hotelData?.hotelContact?.email?.[0]?.email &&
-                <BoxContainer>
-                  <EmailIcon
-                    sx={{
-                      width: isMobile ? "2.656vw" : "1.2vw",
-                      height: "auto",
-                      color: theme?.palette?.neuPalette?.hexSeventeen,
-                    }}
-                  />
-                  <CustomTooltip tooltipTitle={hotelData?.hotelContact?.email?.[0]?.email} tooltipPlacement={"top-end"}>
-                    <InlineText variant={isMobile ? "m-body-s" : "body-s"}>
-                      {hotelData?.hotelContact?.email?.[0]?.email}
-                    </InlineText>
-                  </CustomTooltip>
-                </BoxContainer>
-                }
+                {hotelData?.hotelContact?.email?.[0]?.email && (
+                  <BoxContainer>
+                    <EmailIcon
+                      sx={{
+                        width: isMobile ? "2.656vw" : "1.2vw",
+                        height: "auto",
+                        color: theme?.palette?.ihclPalette?.hexSeventeen,
+                      }}
+                    />
+                    <CustomTooltip
+                      tooltipTitle={hotelData?.hotelContact?.email?.[0]?.email}
+                      tooltipPlacement={"top-end"}>
+                      <InlineText variant={isMobile ? "m-body-s" : "body-s"}>
+                        {hotelData?.hotelContact?.email?.[0]?.email}
+                      </InlineText>
+                    </CustomTooltip>
+                  </BoxContainer>
+                )}
                 {hotelPhoneNumber?.[0]?.mobile && (
                   <BoxContainer sx={{ paddingLeft: "0.5vw" }}>
                     <CallIcon
                       sx={{
                         width: isMobile ? "2.656vw" : "1.2vw",
                         height: "auto",
-                        color: theme?.palette?.neuPalette?.hexSeventeen,
+                        color: theme?.palette?.ihclPalette?.hexSeventeen,
                       }}
                     />
-                    <InlineText variant={isMobile ? "m-body-s" : "body-s"}>
-                      {hotelPhoneNumber?.[0]?.mobile}
-                    </InlineText>
+                    <InlineText variant={isMobile ? "m-body-s" : "body-s"}>{hotelPhoneNumber?.[0]?.mobile}</InlineText>
                   </BoxContainer>
                 )}
               </DetailsContainer>
@@ -274,7 +274,7 @@ const Bookings = ({ bookingData, primaryAction, secondaryAction, isPastBooking =
                       sx={{
                         width: isMobile ? "2.656vw" : "1.2vw",
                         height: "auto",
-                        color: theme?.palette?.neuPalette?.hexSeventeen,
+                        color: theme?.palette?.ihclPalette?.hexSeventeen,
                       }}
                     />
                     <CustomTooltip tooltipTitle={travelerData?.email}>
@@ -283,16 +283,18 @@ const Bookings = ({ bookingData, primaryAction, secondaryAction, isPastBooking =
                   </StackContainer>
                 )}
               </DetailsStack>
-             {travelerData?.mobile && <UserDataContainer sx={{ justifySelf: "end", gridArea: "mobile" }}>
-                <CallIcon
-                  sx={{
-                    width: isMobile ? "2.656vw" : "1.2vw",
-                    height: "auto",
-                    color: theme?.palette?.neuPalette?.hexSeventeen,
-                  }}
-                />
-                <InlineText variant={isMobile ? "m-body-s" : "body-s"}>{travelerData?.mobile}</InlineText>
-              </UserDataContainer>}
+              {travelerData?.mobile && (
+                <UserDataContainer sx={{ justifySelf: "end", gridArea: "mobile" }}>
+                  <CallIcon
+                    sx={{
+                      width: isMobile ? "2.656vw" : "1.2vw",
+                      height: "auto",
+                      color: theme?.palette?.ihclPalette?.hexSeventeen,
+                    }}
+                  />
+                  <InlineText variant={isMobile ? "m-body-s" : "body-s"}>{travelerData?.mobile}</InlineText>
+                </UserDataContainer>
+              )}
             </GuestDetails>
           </GuestDetailsGrid>
           <Divider sx={{ border: "1px solid #D7D5CF" }} />
@@ -323,7 +325,7 @@ const Bookings = ({ bookingData, primaryAction, secondaryAction, isPastBooking =
                       <UserOptionText variant={isMobile ? "m-text-link" : "link-m"}>{data?.hideDetails}</UserOptionText>
                       <KeyboardArrowUpIcon
                         sx={{
-                          color: theme?.palette?.neuPalette?.hexTwo,
+                          color: theme?.palette?.ihclPalette?.hexTwo,
                           fontSize: "1vw",
                         }}
                       />
@@ -333,7 +335,7 @@ const Bookings = ({ bookingData, primaryAction, secondaryAction, isPastBooking =
                       <UserOptionText variant={isMobile ? "m-text-link" : "link-m"}>{data?.viewDetails}</UserOptionText>
                       <KeyboardArrowDownOutlinedIcon
                         sx={{
-                          color: theme?.palette?.neuPalette?.hexTwo,
+                          color: theme?.palette?.ihclPalette?.hexTwo,
                           fontSize: "1vw",
                         }}
                       />
@@ -351,7 +353,7 @@ const Bookings = ({ bookingData, primaryAction, secondaryAction, isPastBooking =
                     orientation="vertical"
                     flexItem
                     sx={{
-                      border: `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+                      border: `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
                     }}
                   />
                 )}
@@ -373,20 +375,24 @@ const Bookings = ({ bookingData, primaryAction, secondaryAction, isPastBooking =
                       <ModifyBooking
                         variant="link-m"
                         color={
-                          disableModify ? theme?.palette?.neuPalette?.hexSixteen : theme?.palette?.neuPalette?.hexTwo
+                          disableModify ? theme?.palette?.ihclPalette?.hexSixteen : theme?.palette?.ihclPalette?.hexTwo
                         }>
                         {primaryAction?.title}
                       </ModifyBooking>
                       {(disableModify || isComplementary) && (
                         <Tooltip
-                          title={<React.Fragment>{isComplementary ? CONSTANTS?.COMPLEMENTARY_TOOL_TIP : CONSTANTS?.TOOL_TIP_TEXT}</React.Fragment>}
+                          title={
+                            <React.Fragment>
+                              {isComplementary ? CONSTANTS?.COMPLEMENTARY_TOOL_TIP : CONSTANTS?.TOOL_TIP_TEXT}
+                            </React.Fragment>
+                          }
                           placement="top"
                           componentsProps={{
                             tooltip: {
                               sx: {
                                 borderRadius: "0px",
-                                backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
-                                color: theme?.palette?.neuPalette?.hexSeventeen,
+                                backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
+                                color: theme?.palette?.ihclPalette?.hexSeventeen,
                                 padding: DesktopPxToVw(16),
                                 textAlign: "center",
                               },
@@ -433,7 +439,7 @@ const Bookings = ({ bookingData, primaryAction, secondaryAction, isPastBooking =
                         </UserOptionText>
                         <KeyboardArrowUpIcon
                           sx={{
-                            color: theme?.palette?.neuPalette?.hexTwo,
+                            color: theme?.palette?.ihclPalette?.hexTwo,
                           }}
                         />
                       </IconsBoxContainer>
@@ -444,7 +450,7 @@ const Bookings = ({ bookingData, primaryAction, secondaryAction, isPastBooking =
                         </UserOptionText>
                         <KeyboardArrowDownOutlinedIcon
                           sx={{
-                            color: theme?.palette?.neuPalette?.hexTwo,
+                            color: theme?.palette?.ihclPalette?.hexTwo,
                           }}
                         />
                       </IconsBoxContainer>

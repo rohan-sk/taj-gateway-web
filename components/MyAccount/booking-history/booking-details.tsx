@@ -138,7 +138,7 @@ const BookingDetails = (props: bookingInterface) => {
                     orientation="vertical"
                     flexItem
                     sx={{
-                      backgroundColor: theme?.palette?.neuPalette?.hexTwelve,
+                      backgroundColor: theme?.palette?.ihclPalette?.hexTwelve,
                     }}
                   />
                 )}
@@ -155,17 +155,15 @@ const BookingDetails = (props: bookingInterface) => {
         </BookingTabsWrapper>
         {filteredBookingData?.length > 0 ? (
           <>
-            {filteredBookingData
-              ?.slice(0, loadMoreBookings)
-              ?.map((item: any, index: number) => (
-                <Bookings
-                  key={index}
-                  bookingData={item}
-                  isPastBooking={!isUpcomingBooking}
-                  primaryAction={primaryAction}
-                  secondaryAction={secondaryAction}
-                />
-              ))}
+            {filteredBookingData?.slice(0, loadMoreBookings)?.map((item: any, index: number) => (
+              <Bookings
+                key={index}
+                bookingData={item}
+                isPastBooking={!isUpcomingBooking}
+                primaryAction={primaryAction}
+                secondaryAction={secondaryAction}
+              />
+            ))}
           </>
         ) : (
           <>

@@ -208,7 +208,7 @@ const SSOLoginMembershipMobileNumberForm = ({ props }: any) => {
           MenuProps={{
             PaperProps: {
               sx: {
-                background: theme.palette.neuPalette.hexOne,
+                background: theme.palette.ihclPalette.hexOne,
                 boxShadow: "-6px 10px 24px rgba(0, 0, 0, 0.1)",
               },
             },

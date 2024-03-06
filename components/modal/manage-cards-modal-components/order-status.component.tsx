@@ -266,7 +266,7 @@ const OrderStatusComponent = ({ description, items, PrimaryAction, secondaryActi
         </form>
         {!!wrongMsg && (
           <BalanceContainer>
-            <Typography variant={isMobile ? "m-body-l" : "body-l"} color={theme?.palette?.neuPalette?.hexTwentyOne}>
+            <Typography variant={isMobile ? "m-body-l" : "body-l"} color={theme?.palette?.ihclPalette?.hexTwentyOne}>
               {wrongMsg}
             </Typography>
           </BalanceContainer>

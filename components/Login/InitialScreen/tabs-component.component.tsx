@@ -12,36 +12,17 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 import { IHCLContext } from "../../../PresentationalComponents/lib/prepare-ihcl-context"
 import AuthenticLoginStore from "../../../features/login/store/authentication.login.store"
 import AuthenticRegistrationStore from "../../../features/registration/store/authentic.registration.store"
-import {
-  TabsMapComponent,
-  TabsDataInterface,
-  TabsComponentInterface,
-} from "../login-form.types"
-import {
-  PageContext,
-  ModalContext,
-} from "../../../PresentationalComponents/lib/prepare-page-context"
-import {
-  StyledTab,
-  StyledTabs,
-  StyledTypography,
-  HeaderImagesWrapper,
-} from "../Styles/tabs.styles"
+import { TabsMapComponent, TabsDataInterface, TabsComponentInterface } from "../login-form.types"
+import { PageContext, ModalContext } from "../../../PresentationalComponents/lib/prepare-page-context"
+import { StyledTab, StyledTabs, StyledTypography, HeaderImagesWrapper } from "../Styles/tabs.styles"
 import { UserStore } from "../../../store"
 
-const TabsComponent = ({
-  tabs,
-  title,
-  image,
-  variant,
-}: TabsComponentInterface) => {
+const TabsComponent = ({ tabs, title, image, variant }: TabsComponentInterface) => {
   const isMobile = useMobileCheck()
   const Context = useContext(IHCLContext)
 
   //global user store
-  const userStore = Context?.getGlobalStore(
-    GLOBAL_STORES.userStore
-  ) as UserStore
+  const userStore = Context?.getGlobalStore(GLOBAL_STORES.userStore) as UserStore
 
   const getActiveTab = () => {
     let activeTab = userStore?.loginTabIndex || 0
@@ -63,12 +44,10 @@ const TabsComponent = ({
     : tabs
 
   const modalContext = useContext(ModalContext)
-  const authenticLoginStore = modalContext?.getPageStore(
-    PAGE_STORES?.loginStore
-  ) as AuthenticLoginStore
+  const authenticLoginStore = modalContext?.getPageStore(PAGE_STORES?.loginStore) as AuthenticLoginStore
 
   const authenticRegistrationStore = modalContext?.getPageStore(
-    PAGE_STORES.registrationStore
+    PAGE_STORES.registrationStore,
   ) as AuthenticRegistrationStore
 
   useEffect(() => {
@@ -82,8 +61,7 @@ const TabsComponent = ({
 
   const updateIdentifier = (identifier: string | undefined, index: number) => {
     authenticLoginStore && authenticLoginStore?.updateActiveIndex(index)
-    authenticRegistrationStore &&
-      authenticRegistrationStore?.updateActiveIndex(index)
+    authenticRegistrationStore && authenticRegistrationStore?.updateActiveIndex(index)
     if (identifier !== router?.query?.identifier) {
       router?.replace(urlResolver(path + "?identifier=" + identifier))
     }
@@ -113,12 +91,7 @@ const TabsComponent = ({
                             alt={`logo-img`}
                             sx={{
                               "@media (max-width: 640px)": {
-                                width:
-                                  index === 0
-                                    ? "17.969vw"
-                                    : index === 1
-                                    ? "22.344vw"
-                                    : "15.156vw",
+                                width: index === 0 ? "17.969vw" : index === 1 ? "22.344vw" : "15.156vw",
                                 marginRight: index === 2 ? "0vw" : "6.4vw",
                                 marginBottom: "6.2vw",
                               },
@@ -184,17 +157,13 @@ const TabsComponent = ({
                     src={urlFor(image?.[0]?.asset?._ref)?.url()}
                   />
                 )}
-                <StyledTypography
-                  variant="heading-s"
-                  sx={{ margin: "2vw 0vw 6.4vw 0vw !important" }}>
+                <StyledTypography variant="heading-s" sx={{ margin: "2vw 0vw 6.4vw 0vw !important" }}>
                   {title}
                 </StyledTypography>
               </>
             ) : (
               <>
-                <StyledTypography
-                  variant="heading-s"
-                  sx={{ margin: "4vw 0vw 2.4vw 0vw" }}>
+                <StyledTypography variant="heading-s" sx={{ margin: "4vw 0vw 2.4vw 0vw" }}>
                   {title}
                 </StyledTypography>
                 {image?.[0]?.asset?._ref && (
@@ -223,7 +192,7 @@ const TabsComponent = ({
           value={value}
           onChange={handleChange}
           TabIndicatorProps={{
-            style: { background: theme?.palette?.neuPalette?.hexTwo },
+            style: { background: theme?.palette?.ihclPalette?.hexTwo },
           }}>
           {tabs?.map((item: TabsMapComponent, index: number) => (
             <StyledTab
@@ -240,43 +209,39 @@ const TabsComponent = ({
         <Box>
           {isMobile && authenticLoginStore ? (
             <Box sx={{ margin: "0vw 8vw" }}>
-              {mobileRegisterTabsData?.map(
-                (item: TabsMapComponent, index: number) => (
-                  <TabView value={value} index={index} key={index}>
-                    {item?.tabItems?.map((tabData: any, index: number) => {
-                      return (
-                        <Fragment key={index}>
-                          <>
-                            {IHCLContexts?.renderComponent(tabData?._type, {
-                              ...tabData,
-                            })}
-                          </>
-                        </Fragment>
-                      )
-                    })}
-                  </TabView>
-                )
-              )}
+              {mobileRegisterTabsData?.map((item: TabsMapComponent, index: number) => (
+                <TabView value={value} index={index} key={index}>
+                  {item?.tabItems?.map((tabData: any, index: number) => {
+                    return (
+                      <Fragment key={index}>
+                        <>
+                          {IHCLContexts?.renderComponent(tabData?._type, {
+                            ...tabData,
+                          })}
+                        </>
+                      </Fragment>
+                    )
+                  })}
+                </TabView>
+              ))}
             </Box>
           ) : (
             <>
               {tabs?.map((item: any, index: number) => (
                 <TabView value={value} index={index} key={index}>
-                  {item?.tabItems?.map(
-                    (tabData: TabsDataInterface, index: number) => {
-                      return (
-                        <Fragment key={index}>
-                          <>
-                            {index === 0
-                              ? IHCLContexts?.renderComponent(tabData?._type, {
-                                  ...tabData,
-                                })
-                              : null}
-                          </>
-                        </Fragment>
-                      )
-                    }
-                  )}
+                  {item?.tabItems?.map((tabData: TabsDataInterface, index: number) => {
+                    return (
+                      <Fragment key={index}>
+                        <>
+                          {index === 0
+                            ? IHCLContexts?.renderComponent(tabData?._type, {
+                                ...tabData,
+                              })
+                            : null}
+                        </>
+                      </Fragment>
+                    )
+                  })}
                 </TabView>
               ))}
             </>

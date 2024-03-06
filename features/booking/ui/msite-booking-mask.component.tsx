@@ -636,7 +636,7 @@ const BookingMaskForMsite = ({
             width: "100%",
             fontSize: "3.750vw",
             "&.MuiInputBase-root:before": {
-              borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+              borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
             },
           }}
           value={searchValue}
@@ -739,7 +739,7 @@ const BookingMaskForMsite = ({
           <Box
             mt={MobilePxToVw(60)}
             pb={MobilePxToVw(6)}
-            borderBottom={`1px solid ${theme.palette.neuPalette.hexTwelve}`}>
+            borderBottom={`1px solid ${theme.palette.ihclPalette.hexTwelve}`}>
             <ClickAwayListener
               in={open}
               onClickAway={() => {
@@ -822,7 +822,9 @@ const BookingMaskForMsite = ({
                         <Typography
                           letterSpacing={"-0.05rem"}
                           whiteSpace={"nowrap"}
-                          color={date?.[0] ? theme.palette.neuPalette.hexSeventeen : theme.palette.neuPalette.hexTwelve}
+                          color={
+                            date?.[0] ? theme.palette.ihclPalette.hexSeventeen : theme.palette.ihclPalette.hexTwelve
+                          }
                           onClick={() => setSelectedDateType("check_in")}
                           variant={"m-body-l"}>
                           {date?.[0] ? formatDateWithMON(date?.[0]) : "Check in"}
@@ -831,7 +833,9 @@ const BookingMaskForMsite = ({
                         <Typography
                           letterSpacing={"-0.05rem"}
                           whiteSpace={"nowrap"}
-                          color={date?.[0] ? theme.palette.neuPalette.hexSeventeen : theme.palette.neuPalette.hexTwelve}
+                          color={
+                            date?.[0] ? theme.palette.ihclPalette.hexSeventeen : theme.palette.ihclPalette.hexTwelve
+                          }
                           onClick={() => setSelectedDateType("check_out")}
                           variant={"m-body-l"}>
                           {date?.[1] ? formatDateWithMON(date?.[1]) : "Check out"}
@@ -862,13 +866,13 @@ const BookingMaskForMsite = ({
               {expandGuestRoomCount ? (
                 <ExpandLess
                   sx={{
-                    color: theme?.palette?.neuPalette?.hexSeventeen,
+                    color: theme?.palette?.ihclPalette?.hexSeventeen,
                   }}
                 />
               ) : (
                 <ExpandMore
                   sx={{
-                    color: theme?.palette?.neuPalette?.hexSeventeen,
+                    color: theme?.palette?.ihclPalette?.hexSeventeen,
                   }}
                 />
               )}
@@ -949,14 +953,14 @@ const BookingMaskForMsite = ({
                             <SelectedCodeBox>
                               <Typography
                                 variant="m-body-l"
-                                color={theme?.palette?.neuPalette?.hexTwo}
+                                color={theme?.palette?.ihclPalette?.hexTwo}
                                 sx={{ overflow: "hidden" }}>
                                 {isSpecialCodeExist}
                               </Typography>
                               <CloseSharp
                                 fontSize="medium"
                                 sx={{
-                                  color: theme?.palette?.neuPalette?.hexTwo,
+                                  color: theme?.palette?.ihclPalette?.hexTwo,
                                 }}
                                 onClick={() => handleRemoveSpecialCode()}
                               />

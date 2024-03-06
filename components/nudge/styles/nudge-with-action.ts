@@ -19,13 +19,11 @@ export const ParentBox = styled(Box)(() => ({
 
 export const TwoLinksContainerBox = styled(
   Box,
-  transientProps
-)<{ $cardPadding: any; $cardBackgroundColor: any }>(
-  ({ $cardPadding, $cardBackgroundColor }) => ({
-    padding: $cardPadding,
-    backgroundColor: $cardBackgroundColor,
-  })
-)
+  transientProps,
+)<{ $cardPadding: any; $cardBackgroundColor: any }>(({ $cardPadding, $cardBackgroundColor }) => ({
+  padding: $cardPadding,
+  backgroundColor: $cardBackgroundColor,
+}))
 
 export const TwoLinksContentBox = styled(Box)(() => ({
   display: "flex",
@@ -33,7 +31,7 @@ export const TwoLinksContentBox = styled(Box)(() => ({
   gap: DesktopPxToVw(32),
   flexDirection: "column",
   padding: "4.90vw",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   "@media (max-width: 640px)": {
     gap: "4.531vw",
     padding: "8.90vw 7.50vw",
@@ -47,13 +45,11 @@ export const ActionButtonsBox = styled(Box)(() => ({
 
 export const BackGroundColorParentBox = styled(
   Box,
-  transientProps
-)<{ $cardPadding: any; $cardBackgroundColor: string }>(
-  ({ $cardPadding, $cardBackgroundColor }) => ({
-    padding: $cardPadding ? $cardPadding : "0vw",
-    background: $cardBackgroundColor ?? theme?.palette?.primary?.main,
-  })
-)
+  transientProps,
+)<{ $cardPadding: any; $cardBackgroundColor: string }>(({ $cardPadding, $cardBackgroundColor }) => ({
+  padding: $cardPadding ? $cardPadding : "0vw",
+  background: $cardBackgroundColor ?? theme?.palette?.primary?.main,
+}))
 
 export const BackGroundColorContentBox = styled(Box)(() => ({
   gap: "1.823vw",

@@ -7,9 +7,9 @@ export const SnackBarGrid = styled(Snackbar)<{
   $position: any
   $width: any
 }>(({ topWeb, topMob, $position }) => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexTwentyTwo,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwentyTwo,
   position: $position,
-  color: theme?.palette?.neuPalette?.hexEighteen,
+  color: theme?.palette?.ihclPalette?.hexEighteen,
   width: "30vw",
   margin: "auto",
   top: `${topWeb} !important`,
@@ -30,7 +30,7 @@ export const AlertBox = styled(Box)(() => ({
   boxShadow: "0pvw 0pvw 0.2vw",
   justifyContent: "space-between",
   alignItems: "center",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
   "@media (max-width: 640px)": {
     padding: "2vw",
   },

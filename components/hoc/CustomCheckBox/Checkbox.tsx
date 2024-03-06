@@ -8,7 +8,7 @@ import { transientProps } from "../../../utils/transientProps"
 
 export const UnCheckedIcon = styled(
   "span",
-  transientProps
+  transientProps,
 )<{
   $unCheckedBorder: boolean
   $isDisableChecked: boolean
@@ -20,8 +20,8 @@ export const UnCheckedIcon = styled(
     ? $isDisableChecked
       ? $checked
         ? ""
-        : `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`
-      : `1px solid ${theme?.palette?.neuPalette?.hexTwo}`
+        : `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`
+      : `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`
     : "",
   backgroundImage:
     theme.palette.mode === "dark"
@@ -36,9 +36,9 @@ export const UnCheckedIcon = styled(
 
 const CheckedIcon = styled(
   UnCheckedIcon,
-  transientProps
+  transientProps,
 )<{ $isDisableChecked: boolean }>(({ $isDisableChecked }) => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
   backgroundImage: $isDisableChecked
     ? "linear-gradient(#D7D5CF, #D7D5CF);"
     : "linear-gradient(180deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,0))",
@@ -88,19 +88,9 @@ export const CustomCheckBox = ({
       name={name}
       color="default"
       checked={checked}
-      checkedIcon={
-        <CheckedIcon
-          $unCheckedBorder={true}
-          $isDisableChecked={isCheckBoxDisabled}
-          $checked={checked}
-        />
-      }
+      checkedIcon={<CheckedIcon $unCheckedBorder={true} $isDisableChecked={isCheckBoxDisabled} $checked={checked} />}
       icon={
-        <UnCheckedIcon
-          $unCheckedBorder={unCheckedBorder}
-          $isDisableChecked={isCheckBoxDisabled}
-          $checked={checked}
-        />
+        <UnCheckedIcon $unCheckedBorder={unCheckedBorder} $isDisableChecked={isCheckBoxDisabled} $checked={checked} />
       }
       onChange={(e) => onChange(e)}
       inputProps={{ "aria-label": "Checkbox demo" }}

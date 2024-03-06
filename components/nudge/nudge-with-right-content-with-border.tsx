@@ -74,16 +74,14 @@ const NudgeCardWithImage = ({
             <TitleContentTypographyBox>
               <Typography
                 variant={isMobile ? "m-heading-s" : "heading-s"}
-                sx={{ color: theme?.palette?.neuPalette?.hexSeventeen }}>
+                sx={{ color: theme?.palette?.ihclPalette?.hexSeventeen }}>
                 {title}
               </Typography>
             </TitleContentTypographyBox>
           )}
           {description && (
             <DescriptionContentTypographyBox>
-              <Typography variant={isMobile ? "m-body-l" : "body-ml"}>
-                {description}
-              </Typography>
+              <Typography variant={isMobile ? "m-body-l" : "body-ml"}>{description}</Typography>
             </DescriptionContentTypographyBox>
           )}
           {(PrimaryAction?.title || secondaryAction?.title) && (

@@ -23,13 +23,13 @@ export const CardWithContentDataCard = styled(Box)(() => ({
   justifyContent: "center",
   width: DesktopPxToVw(823),
   minHeight: DesktopPxToVw(534),
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   boxShadow: "-0.313vw 0.521vw 1.25vw rgba(0, 0, 0, 0.1)",
 }))
 
 export const TitleDividerStyle = styled(
   Divider,
-  transientProps
+  transientProps,
 )<{ $mobile: boolean }>(({ $mobile }) => ({
   bottom: 16,
   marginRight: "5%",
@@ -37,5 +37,5 @@ export const TitleDividerStyle = styled(
   display: "inline-block",
   width: $mobile ? MobilePxToVw(40) : DesktopPxToVw(40),
   height: DesktopPxToVw(1),
-  backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
 }))

@@ -38,7 +38,7 @@ const MobileNumberField = ({
   disable = false,
   dropDownStyle = {},
   countryCode = "+91",
-  color = theme?.palette?.neuPalette?.hexSeventeen,
+  color = theme?.palette?.ihclPalette?.hexSeventeen,
 }: MobileNumberFieldType) => {
   const isMobile = useMobileCheck()
 
@@ -110,7 +110,7 @@ const MobileNumberField = ({
           }}
           iconStyle={{
             position: "static !important",
-            color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+            color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
             fontSize: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
           }}
           countryCode={countryCode}

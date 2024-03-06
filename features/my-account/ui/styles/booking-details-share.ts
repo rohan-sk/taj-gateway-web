@@ -9,7 +9,7 @@ export const BackDropBox = styled(Box)(() => ({
   height: "100vh",
   top: 0,
   left: 0,
-  backgroundColor: `${theme.palette.neuPalette.hexFourteen}a1`,
+  backgroundColor: `${theme.palette.ihclPalette.hexFourteen}a1`,
   zIndex: 9,
 }))
 export const ParentBox = styled(Box)(() => ({
@@ -71,7 +71,7 @@ export const ItineraryNumTypography = styled(Typography)(() => ({
 export const LinkTypography = styled(Typography)(() => ({
   cursor: "pointer",
   lineHeight: "140%",
-  color: theme.palette.neuPalette.hexTwo,
+  color: theme.palette.ihclPalette.hexTwo,
 }))
 
 export const ContactDetailStack = styled(Stack)(() => ({
@@ -114,7 +114,7 @@ export const ShareDetailsStack = styled(Stack)(() => ({
 
 export const ImageContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   alignItems: "center",
@@ -134,7 +134,7 @@ export const PurchaseImageWrapper: any = styled(Box)(() => ({
 
 export const PurchaseContentWrapper: any = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "column",

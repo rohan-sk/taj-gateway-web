@@ -868,7 +868,7 @@ const BookingFlowHeader = (props: any) => {
                             <>
                               <Typography
                                 variant="body-s"
-                                color={theme.palette.neuPalette.hexTwelve}
+                                color={theme.palette.ihclPalette.hexTwelve}
                                 pb={DesktopPxToVw(20)}>
                                 {CONSTANTS?.HOTELS}
                               </Typography>
@@ -963,7 +963,7 @@ const BookingFlowHeader = (props: any) => {
                               columnGap={DesktopPxToVw(10)}>
                               <Typography
                                 whiteSpace={"nowrap"}
-                                color={date?.[0] ? "unset" : theme.palette.neuPalette.hexTwelve}
+                                color={date?.[0] ? "unset" : theme.palette.ihclPalette.hexTwelve}
                                 onClick={() => setSelectedType("check_in")}
                                 variant={"body-ml"}>
                                 {date?.[0] ? formatDateWithMON(date?.[0]) : "Check in"}
@@ -976,7 +976,7 @@ const BookingFlowHeader = (props: any) => {
                               />
                               <Typography
                                 whiteSpace={"nowrap"}
-                                color={date?.[0] ? "unset" : theme.palette.neuPalette.hexTwelve}
+                                color={date?.[0] ? "unset" : theme.palette.ihclPalette.hexTwelve}
                                 onClick={() => setSelectedType("check_out")}
                                 variant={"body-ml"}>
                                 {date?.[1] ? formatDateWithMON(dayjs(date?.[1])) : "Check out"}
@@ -1134,7 +1134,7 @@ const BookingFlowHeader = (props: any) => {
             webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
             bgcolor={theme?.palette?.background?.paper}
             ModalCloseButtonStyles={{ right: "0vw", top: "-2vw" }}
-            ModalCloseButtonColor={theme.palette.neuPalette.hexOne}
+            ModalCloseButtonColor={theme.palette.ihclPalette.hexOne}
             Component={
               <CartClearanceDialog
                 {...popupData}
@@ -1157,7 +1157,7 @@ const BookingFlowHeader = (props: any) => {
           right: "25vw",
           marginBottom: "1.563vw",
         }}
-        ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+        ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
         webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
         handleClose={handleModelClose}
         open={limitExceedModal}

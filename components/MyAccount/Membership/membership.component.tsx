@@ -14,25 +14,15 @@ import { theme } from "../../../lib/theme"
 import { CONSTANTS } from "../../constants"
 import { IHCLContext } from "../../../PresentationalComponents/lib/prepare-ihcl-context"
 import { UserAccountStore } from "../../../store"
-import {
-  EPICURE_TAB,
-  NEU_PASS_TAB,
-  CHAMBERS_TAB,
-} from "../../forms/gift-card-form/constants"
-const MembershipComponent = ({
-  title,
-  primaryAction,
-  secondaryAction,
-}: any) => {
+import { EPICURE_TAB, NEU_PASS_TAB, CHAMBERS_TAB } from "../../forms/gift-card-form/constants"
+const MembershipComponent = ({ title, primaryAction, secondaryAction }: any) => {
   const globalContext = useContext(IHCLContext)
-  const globalAccountStore: any = globalContext?.getGlobalStore(
-    GLOBAL_STORES.userAccountStore
-  ) as UserAccountStore
+  const globalAccountStore: any = globalContext?.getGlobalStore(GLOBAL_STORES.userAccountStore) as UserAccountStore
 
   const pageContextUse = useContext(PageContext)
   //store
   const { accountStore, activeTierLabel }: any = pageContextUse?.getPageStore(
-    PAGE_STORES.ACCOUNT_STORES.myAccountStore
+    PAGE_STORES.ACCOUNT_STORES.myAccountStore,
   ) as AccountStore
 
   const [item, setItem] = useState({
@@ -84,11 +74,7 @@ const MembershipComponent = ({
       }
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [
-    globalAccountStore?.chambersCard,
-    globalAccountStore?.epicureCards,
-    globalAccountStore?.neuPassCard,
-  ])
+  }, [globalAccountStore?.chambersCard, globalAccountStore?.epicureCards, globalAccountStore?.neuPassCard])
 
   const isMobile = useMobileCheck()
 
@@ -110,51 +96,41 @@ const MembershipComponent = ({
             </Typography>
           </Stack>
 
-          {global?.window?.localStorage?.getItem("chambersMemberTier") && (
-            <MembershipCard membership={chambersItem} />
-          )}
+          {global?.window?.localStorage?.getItem("chambersMemberTier") && <MembershipCard membership={chambersItem} />}
         </>
       ) : (
         ""
       )}
-      {activeTierLabel == NEU_PASS_TAB || activeTierLabel == "" ? (
-        <MembershipCard membership={item} />
-      ) : (
-        ""
-      )}
+      {activeTierLabel == NEU_PASS_TAB || activeTierLabel == "" ? <MembershipCard membership={item} /> : ""}
       {activeTierLabel == EPICURE_TAB || activeTierLabel == "" ? (
         <>
-          {global?.window?.localStorage?.getItem("epicureMemberTier") &&
-            epicureCards?.length > 0 && (
-              <Box
+          {global?.window?.localStorage?.getItem("epicureMemberTier") && epicureCards?.length > 0 && (
+            <Box
+              sx={{
+                marginTop: isMobile ? "5.469vw" : "",
+                border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
+                "&>div": {},
+                marginBottom: "2vw",
+              }}>
+              <TitleBox
                 sx={{
-                  marginTop: isMobile ? "5.469vw" : "",
-                  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
-                  "&>div": {},
-                  marginBottom: "2vw",
+                  marginTop: isMobile ? "5.465vw !important" : "1.042vw",
+                  "&~div": {
+                    borderWidth: "0vw!important",
+                  },
                 }}>
-                <TitleBox
-                  sx={{
-                    marginTop: isMobile ? "5.465vw !important" : "1.042vw",
-                    "&~div": {
-                      borderWidth: "0vw!important",
-                    },
-                  }}>
-                  <TitleTypography
-                    variant={isMobile ? "m-heading-s" : "heading-s"}>
-                    {CONSTANTS?.EPICURE}
-                  </TitleTypography>
-                </TitleBox>
-                {epicureCards?.map((cards: any, index: number) => (
-                  <MembershipCard
-                    membership={cards}
-                    key={index}
-                    primaryAction={primaryAction}
-                    secondaryAction={secondaryAction}
-                  />
-                ))}
-              </Box>
-            )}
+                <TitleTypography variant={isMobile ? "m-heading-s" : "heading-s"}>{CONSTANTS?.EPICURE}</TitleTypography>
+              </TitleBox>
+              {epicureCards?.map((cards: any, index: number) => (
+                <MembershipCard
+                  membership={cards}
+                  key={index}
+                  primaryAction={primaryAction}
+                  secondaryAction={secondaryAction}
+                />
+              ))}
+            </Box>
+          )}
         </>
       ) : (
         ""

@@ -7,12 +7,7 @@ import DesktopPxToVw from "../../utils/DesktopFontCalc"
 import { useMobileCheck } from "../../utils/isMobilView"
 import { useAesthetics } from "../../utils/fetchAsthetics"
 import { IHCLContext } from "../../PresentationalComponents/lib/prepare-ihcl-context"
-import {
-  ImageProps,
-  ActionProps,
-  aestheticItems,
-  parameterMapItems,
-} from "../types"
+import { ImageProps, ActionProps, aestheticItems, parameterMapItems } from "../types"
 import {
   PortableItem,
   StyledDivider,
@@ -48,7 +43,7 @@ const CardWithHotelDetailsComponent = ({
   largeImage,
   parameterMap,
   primaryAction,
-  headingElementForCard
+  headingElementForCard,
 }: CardWithHotelDetailsProps) => {
   const isMobile = useMobileCheck()
   const Context = useContext(IHCLContext)
@@ -59,12 +54,17 @@ const CardWithHotelDetailsComponent = ({
   return (
     <ComponentContainer
       $isComponentFullWidth={
-        isMobile ? cardPadding?.mobile || aesthetic?.padding?.mobile : cardPadding?.desktop || aesthetic?.padding?.desktop
+        isMobile
+          ? cardPadding?.mobile || aesthetic?.padding?.mobile
+          : cardPadding?.desktop || aesthetic?.padding?.desktop
       }
       $cardBackgroundColor={cardBackgroundColor || aesthetic?.backgroundColor?.hex}>
       <DescriptionContainer>
         {subTitle && (
-          <StyledTypography variant={isMobile ? "m-body-l" : "body-ml"} $mobilePaddingBottom={"3.125vw"} $paddingBottom={18}>
+          <StyledTypography
+            variant={isMobile ? "m-body-l" : "body-ml"}
+            $mobilePaddingBottom={"3.125vw"}
+            $paddingBottom={18}>
             {subTitle}
           </StyledTypography>
         )}
@@ -73,17 +73,18 @@ const CardWithHotelDetailsComponent = ({
             sx={{
               paddingBottom: DesktopPxToVw(11),
               fontWeight: 300,
-              color: theme?.palette?.neuPalette?.hexSeventeen,
+              color: theme?.palette?.ihclPalette?.hexSeventeen,
               "@media (max-width:640px)": {
                 paddingBottom: "2.2vw",
-              }
+              },
             }}
-            component={headingElementForCard || "h3"} variant={isMobile ? "m-heading-s" : "heading-s"}>
+            component={headingElementForCard || "h3"}
+            variant={isMobile ? "m-heading-s" : "heading-s"}>
             {title}
           </Typography>
         )}
         {parameterMap && (
-          <Box sx={{ marginBottom: parameterMap ? isMobile ? "2.213vw" : DesktopPxToVw(20) : "" }}>
+          <Box sx={{ marginBottom: parameterMap ? (isMobile ? "2.213vw" : DesktopPxToVw(20)) : "" }}>
             {parameterMap?.map((item: parameterMapItems, index: number) => (
               <Box key={index}>
                 <Typography variant={isMobile ? "m-body-s" : "body-s"}>

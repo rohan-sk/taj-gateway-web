@@ -74,7 +74,7 @@ export const CommonCarouselStyles = styled(Box)`
 // Common Modal Styles Start //
 export const TypographyModalClose = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{
   $iconRight: string
   $iconTop: string
@@ -102,9 +102,9 @@ export const MainBox = styled(Box)(() => ({
   },
 
   "::-webkit-scrollbar-thumb": {
-    border: `1.25vw solid ${theme?.palette?.neuPalette?.hexOne}`,
+    border: `1.25vw solid ${theme?.palette?.ihclPalette?.hexOne}`,
     borderRadius: "2.5vw",
-    backgroundColor: `${theme?.palette?.neuPalette?.hexFifteen}`,
+    backgroundColor: `${theme?.palette?.ihclPalette?.hexFifteen}`,
   },
 }))
 // Common Modal Styles End //

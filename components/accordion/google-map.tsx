@@ -16,7 +16,7 @@ const MarkerPoint = ({ icon, store, expandImg, setSelectedStore }: any) => {
       (timings: any) =>
         timings?.openingTime?.formattedHour &&
         timings?.weekDay == "Mon" &&
-        `Opens: ${timings?.openingTime?.formattedHour} to ${timings?.closingTime?.formattedHour}`
+        `Opens: ${timings?.openingTime?.formattedHour} to ${timings?.closingTime?.formattedHour}`,
     )
     return <>{storeValues && <Typography>{weekdaysTiming}</Typography>}</>
   }
@@ -27,12 +27,12 @@ const MarkerPoint = ({ icon, store, expandImg, setSelectedStore }: any) => {
           PopperProps={{
             sx: {
               "& .MuiTooltip-tooltip": {
-                backgroundColor: theme?.palette?.neuPalette?.hexOne,
+                backgroundColor: theme?.palette?.ihclPalette?.hexOne,
                 borderRadius: "0%",
-                color: theme?.palette?.neuPalette?.hexFourteen,
+                color: theme?.palette?.ihclPalette?.hexFourteen,
               },
               "& .MuiTooltip-arrow": {
-                color: theme?.palette?.neuPalette?.hexOne,
+                color: theme?.palette?.ihclPalette?.hexOne,
               },
             },
           }}
@@ -41,28 +41,16 @@ const MarkerPoint = ({ icon, store, expandImg, setSelectedStore }: any) => {
               <Box>
                 <Typography>{store?.displayName}</Typography>
                 <IconButton>
-                  <Box
-                    component="img"
-                    src={expandImg}
-                    alt="Expand Image"
-                    onClick={() => setSelectedStore(store)}
-                  />
+                  <Box component="img" src={expandImg} alt="Expand Image" onClick={() => setSelectedStore(store)} />
                 </IconButton>
               </Box>
-              <StoreTiming
-                storeValues={store?.openingHours?.weekDayOpeningList}
-              />
+              <StoreTiming storeValues={store?.openingHours?.weekDayOpeningList} />
             </Box>
           }
           placement="top"
           open={opened}
           arrow>
-          <Box
-            component="img"
-            onClick={() => setOpened(!opened)}
-            src={icon}
-            alt="Map Pin-Point"
-          />
+          <Box component="img" onClick={() => setOpened(!opened)} src={icon} alt="Map Pin-Point" />
         </Tooltip>
       </Box>
     </>

@@ -575,7 +575,7 @@ const PersonalDetails = ({ url, title, urlType, content, parameterMap }: Persona
                             <Typography
                               variant={isMobile ? "m-body-sl" : "body-s"}
                               sx={{
-                                color: theme?.palette?.neuPalette?.hexTwentySeven,
+                                color: theme?.palette?.ihclPalette?.hexTwentySeven,
                               }}>
                               {addressError}
                             </Typography>

@@ -5,7 +5,7 @@ import { Box, TextField, styled } from "@mui/material"
 
 export const MainBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   textAlign: "center",
   bottom: $isMobile ? "0vw" : "unset",
@@ -18,7 +18,7 @@ export const MainBox = styled(
 
 export const SpecialOccasionMainBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   textAlign: "center",
   bottom: $isMobile ? "0vw" : "unset",
@@ -29,17 +29,15 @@ export const SpecialOccasionMainBox = styled(
 }))
 export const OccasionContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  backgroundColor: $isMobile
-    ? theme?.palette?.background?.paper
-    : theme?.palette?.background?.default,
+  backgroundColor: $isMobile ? theme?.palette?.background?.paper : theme?.palette?.background?.default,
   padding: $isMobile ? "0vw 12.813vw 8.594vw" : "2.865vw 6.406vw 2.083vw",
 }))
 
 export const BoxWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "column",
@@ -49,11 +47,9 @@ export const BoxWrapper = styled(
 
 export const DescriptionWrapperBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  backgroundColor: $isMobile
-    ? theme?.palette?.background?.default
-    : theme?.palette?.background?.paper,
+  backgroundColor: $isMobile ? theme?.palette?.background?.default : theme?.palette?.background?.paper,
   padding: $isMobile ? "8.594vw 12.813vw" : "1.25vw 4.531vw",
 }))
 
@@ -67,7 +63,7 @@ export const StyledTextField = styled(TextField)(() => ({
     fontFamily: "Inter",
     fontSize: DesktopPxToVw(24),
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     "@media (max-width: 640px)": {
       fontWeight: 300,
       height: "4.2vw",
@@ -81,7 +77,7 @@ export const StyledTextField = styled(TextField)(() => ({
     },
   },
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "2.75vw",
@@ -99,7 +95,7 @@ export const StyledTextField = styled(TextField)(() => ({
       fontStyle: "normal",
       fontFamily: "Inter",
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         fontSize: "3.75vw",
         fontWeight: 300,
@@ -110,7 +106,7 @@ export const StyledTextField = styled(TextField)(() => ({
 
 export const MobileNumberContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "column",
@@ -119,7 +115,7 @@ export const MobileNumberContainer = styled(
 
 export const CheckBoxContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -130,7 +126,7 @@ export const CheckBoxContainer = styled(
 
 export const SpecialOccasionGrid = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $webWidths: string }>(({ $webWidths }) => ({
   display: "grid",
   gridTemplateColumns: $webWidths,
@@ -147,7 +143,7 @@ export const SpecialOccasionGrid = styled(
 
 export const PhoneNumberContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: "100%",
   display: "flex",
@@ -161,7 +157,7 @@ export const SpecialOccasionMultilineField = styled(TextField)(() => ({
     lineHeight: "140%",
     minHeight: "2.856vw!important",
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     "@media (max-width: 640px)": {
       minHeight: "8.594vw!important",
       fontSize: "3.75vw",
@@ -169,7 +165,7 @@ export const SpecialOccasionMultilineField = styled(TextField)(() => ({
     },
   },
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "2.75vw",
@@ -184,7 +180,7 @@ export const SpecialOccasionMultilineField = styled(TextField)(() => ({
       fontStyle: "normal",
       fontFamily: "Inter",
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         fontSize: "3.75vw",
         fontWeight: 300,

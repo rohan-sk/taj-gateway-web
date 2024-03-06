@@ -17,19 +17,17 @@ export const SearchResultContainer = styled(Box)(() => ({}))
 
 export const ActionBtnContainer = styled(
   Box,
-  transientProps
-)<{ $isMobile: boolean; $restaurants: boolean }>(
-  ({ $isMobile, $restaurants }) => ({
-    display: "flex",
-    width: "100%",
-    marginBottom: DesktopPxToVw(24),
-    padding: $isMobile ? "2.656vw 4.688vw" : "",
-    justifyContent: $restaurants ? "flex-end" : "space-between",
-  })
-)
+  transientProps,
+)<{ $isMobile: boolean; $restaurants: boolean }>(({ $isMobile, $restaurants }) => ({
+  display: "flex",
+  width: "100%",
+  marginBottom: DesktopPxToVw(24),
+  padding: $isMobile ? "2.656vw 4.688vw" : "",
+  justifyContent: $restaurants ? "flex-end" : "space-between",
+}))
 
 export const StyledTitle = styled(Typography)(() => ({
-  color: `${theme?.palette?.neuPalette?.hexSeventeen}`,
+  color: `${theme?.palette?.ihclPalette?.hexSeventeen}`,
 }))
 
 export const NameAddressContainer = styled(Box)(() => ({
@@ -76,7 +74,7 @@ export const IconWrapper = styled(Box)(() => ({
 
 export const IconTitleBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   gap: $isMobile ? MobilePxToVw(15) : DesktopPxToVw(15),
@@ -85,29 +83,29 @@ export const IconTitleBox = styled(
 
 export const MailTitle = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   fontWeight: 300,
   lineHeight: "140%",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   cursor: "pointer",
   paddingLeft: $isMobile ? MobilePxToVw(8) : "",
 }))
 
 export const TypographyMobile = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isMobile?: boolean }>(({ $isMobile }) => ({
   fontWeight: 300,
   lineHeight: "140%",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   cursor: "pointer",
   paddingLeft: $isMobile ? MobilePxToVw(8) : "",
 }))
 
 export const FilterContainer: any = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   // justifyContent: "space-between",
@@ -125,35 +123,33 @@ export const FilterGridContainer = styled(Grid)(() => ({
 
 export const MainGrid = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(($isMobile) => ({
   marginBottom: "2.083vw",
   border: $isMobile
-    ? `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`
-    : `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}40`,
+    ? `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`
+    : `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}40`,
   "@media (max-width:640px)": { marginBottom: "12.5vw" },
 }))
 
 export const CommonSpaceGrid = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   marginBottom: `${$isMobile ? "2.185vw" : "0.729vw"}`,
 }))
 
 export const HotelDetailsGrid = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   marginBottom: `${$isMobile ? "2.185vw" : "0.313vw"}`,
 }))
 export const SearchDetailsGrid = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }: any) => ({
-  padding: $isMobile
-    ? "6.25vw 4.688vw 2.656vw"
-    : "2.083vw 2.083vw 1.0415vw 1.927vw ",
+  padding: $isMobile ? "6.25vw 4.688vw 2.656vw" : "2.083vw 2.083vw 1.0415vw 1.927vw ",
   "@media (max-width:640px)": {
     position: "relative",
     bottom: "5px", //this media query will needs to be remove if we get images properly from backend
@@ -161,15 +157,15 @@ export const SearchDetailsGrid = styled(
 }))
 
 export const DetailsTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const FullDivider = styled(
   Divider,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: "100%",
-  background: `${theme?.palette?.neuPalette?.hexSeventeen}40`,
+  background: `${theme?.palette?.ihclPalette?.hexSeventeen}40`,
   marginBottom: `${$isMobile ? "2.188vw" : "0.79vw"}`,
 }))
 
@@ -198,7 +194,7 @@ export const Aminity = styled(Box)(() => ({
   },
 }))
 export const Diamond = styled(SquareSharp)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   width: DesktopPxToVw(10),
   height: DesktopPxToVw(10),
   transform: "rotate(45deg)",
@@ -219,7 +215,7 @@ export const IconResponsiveWrapper = styled(Box)(() => ({
 export const Dot = styled(Box)(() => ({
   borderRadius: "100%",
   marginLeft: "0.5vw",
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
   width: "0.417vw",
   height: "0.417vw",
   "@media (max-width:640px)": {
@@ -246,10 +242,10 @@ export const NoResultContainer = styled(Box)(() => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  color: theme.palette.neuPalette.hexTwelve,
+  color: theme.palette.ihclPalette.hexTwelve,
   textAlign: "center",
   width: "100%",
-  border: `1px solid var(--grey-40, ${theme.palette.neuPalette.hexTwelve})`,
+  border: `1px solid var(--grey-40, ${theme.palette.ihclPalette.hexTwelve})`,
   "@media max-width:640px": {
     margin: "9.375vw 0vw 14.063vw",
   },

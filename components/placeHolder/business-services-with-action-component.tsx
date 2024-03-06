@@ -54,7 +54,7 @@ const TitleWithSingleAction = ({ title, parameterMap, primaryAction, variant }: 
           <TitleContainerTypographyBox>
             <Typography
               variant={isMobile ? "m-heading-s" : "heading-s"}
-              sx={{ color: theme?.palette?.neuPalette?.hexOne }}>
+              sx={{ color: theme?.palette?.ihclPalette?.hexOne }}>
               {title}
             </Typography>
           </TitleContainerTypographyBox>
@@ -88,11 +88,11 @@ const TitleWithSingleAction = ({ title, parameterMap, primaryAction, variant }: 
                     },
                     "& .MuiTextField-root": {
                       borderBottom: error
-                        ? `1px solid ${theme.palette.neuPalette.hexTen} !important`
-                        : `1px solid ${theme.palette.neuPalette.hexTwelve} !important`,
+                        ? `1px solid ${theme.palette.ihclPalette.hexTen} !important`
+                        : `1px solid ${theme.palette.ihclPalette.hexTwelve} !important`,
                     },
                     "& .MuiInputBase-input::placeholder": {
-                      color: theme?.palette?.neuPalette?.hexOne,
+                      color: theme?.palette?.ihclPalette?.hexOne,
                     },
                   }}
                   noOptionsText={"No results found for your search"}

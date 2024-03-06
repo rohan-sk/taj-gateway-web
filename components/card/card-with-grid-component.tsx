@@ -39,13 +39,7 @@ import {
   MainMediaWrapperContainer,
 } from "./styles/card-with-grid"
 import { triggerEvent } from "../../utils/analytics"
-import {
-  AFFILIATION,
-  EPICURE,
-  MEMBERSHIP,
-  PAGE_LANG,
-  TAJ_HOTELS,
-} from "../../utils/analytics/constants"
+import { AFFILIATION, EPICURE, MEMBERSHIP, PAGE_LANG, TAJ_HOTELS } from "../../utils/analytics/constants"
 import { getCookie } from "../../utils/cookie"
 import { UseAddress } from "../../utils/hooks/useAddress"
 import { MemberDataLayer } from "../../utils/analytics/member-data-layer"
@@ -62,9 +56,7 @@ const CardWithGrid = ({ props }: any) => {
   const navigate = useAppNavigation()
 
   //global user store
-  const userStore = context?.getGlobalStore(
-    GLOBAL_STORES.userStore
-  ) as UserStore
+  const userStore = context?.getGlobalStore(GLOBAL_STORES.userStore) as UserStore
 
   const gaStoreData = context?.getGlobalStore(GLOBAL_STORES.gaStore) as GAStore
   const dataLayer = MemberDataLayer(userStore, gaStoreData)
@@ -78,26 +70,15 @@ const CardWithGrid = ({ props }: any) => {
   ))({
     [`& .${tooltipClasses.tooltip}`]: {
       maxWidth: isMobile ? "64.688vw" : "21.563vw",
-      backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       padding: isMobile ? "1.563vw 3.750vw 1.875vw" : "0.521vw 1.250vw 0.625vw",
     },
   })
 
-  const handleSelectEvent = (
-    url: any,
-    index: number,
-    title: string,
-    urlType: any,
-    cardSelection: any,
-    item: any
-  ) => {
-    const cardTitle = cardSelection?.toLowerCase()?.includes("preferred")
-      ? "Epicure Preferred"
-      : "Epicure Privileged"
-    const CardCost = cardSelection?.toLowerCase()?.includes("preferred")
-      ? 25000
-      : 50000
+  const handleSelectEvent = (url: any, index: number, title: string, urlType: any, cardSelection: any, item: any) => {
+    const cardTitle = cardSelection?.toLowerCase()?.includes("preferred") ? "Epicure Preferred" : "Epicure Privileged"
+    const CardCost = cardSelection?.toLowerCase()?.includes("preferred") ? 25000 : 50000
     triggerEvent({
       action: "add_to_cart",
       params: {
@@ -142,10 +123,7 @@ const CardWithGrid = ({ props }: any) => {
         userState: address?.state ? address?.state : "",
         userCity: address?.cityTown ? address?.cityTown : "",
         pageHierarchy: JSON.parse(
-          `["${TAJ_HOTELS}",` +
-            `"${PAGE_LANG}",` +
-            `"${AFFILIATION}",` +
-            `"${url.replace("/", "").toUpperCase()}"]`
+          `["${TAJ_HOTELS}",` + `"${PAGE_LANG}",` + `"${AFFILIATION}",` + `"${url.replace("/", "").toUpperCase()}"]`,
         ),
         pageURL: `${global?.window?.location.origin}` + `${url}`,
         ecommerce: {
@@ -189,18 +167,12 @@ const CardWithGrid = ({ props }: any) => {
                         }}
                         alt={(isMobile ? item?.image?.altText : item?.largeImage?.altText) || "media"}
                         component="img"
-                        src={urlFor(
-                          isMobile
-                            ? item?.image?.asset?._ref
-                            : item?.largeImage?.asset?._ref
-                        ).url()}
+                        src={urlFor(isMobile ? item?.image?.asset?._ref : item?.largeImage?.asset?._ref).url()}
                       />
                       <Typography
                         variant={isMobile ? "m-body-m" : "body-m"}
                         sx={{
-                          fontSize: isMobile
-                            ? MobilePxToVw(22)
-                            : DesktopPxToVw(22),
+                          fontSize: isMobile ? MobilePxToVw(22) : DesktopPxToVw(22),
                         }}>
                         {item?.title}
                       </Typography>
@@ -236,7 +208,7 @@ const CardWithGrid = ({ props }: any) => {
                           PopperProps={{
                             sx: {
                               "& .MuiTooltip-arrow": {
-                                color: theme?.palette?.neuPalette?.hexSixteen,
+                                color: theme?.palette?.ihclPalette?.hexSixteen,
                               },
                             },
                           }}
@@ -288,10 +260,10 @@ const CardWithGrid = ({ props }: any) => {
                           width={"37.188vw"}
                           m={"8.594vw auto"}
                           p={"2.5vw 7.344vw"}
-                          border={`2px solid ${theme.palette.neuPalette.hexTwo}`}>
+                          border={`2px solid ${theme.palette.ihclPalette.hexTwo}`}>
                           <Typography
                             variant="m-body-s"
-                            color={theme.palette.neuPalette.hexTwo}
+                            color={theme.palette.ihclPalette.hexTwo}
                             sx={{
                               letterSpacing: isMobile ? "0.281vw" : "unset",
                               fontWeight: 700,
@@ -306,7 +278,7 @@ const CardWithGrid = ({ props }: any) => {
                               lineHeight: "1.3125vw",
                               position: "absolute",
                               fontWeight: 400,
-                              color: theme?.palette?.neuPalette?.hexTwo,
+                              color: theme?.palette?.ihclPalette?.hexTwo,
                             }}
                           />
                         </Box>
@@ -326,7 +298,7 @@ const CardWithGrid = ({ props }: any) => {
                               fontWeight: 400,
                               marginLeft: "0.521vw",
                               fontSize: "1.2vw",
-                              color: theme?.palette?.neuPalette?.hexTwo,
+                              color: theme?.palette?.ihclPalette?.hexTwo,
                             }}
                           />
                         </Box>
@@ -339,19 +311,17 @@ const CardWithGrid = ({ props }: any) => {
                           width={"37.188vw"}
                           m={"8.594vw auto"}
                           p={"2.5vw 7.344vw"}
-                          border={`2px solid ${theme.palette.neuPalette.hexTwo}`}>
+                          border={`2px solid ${theme.palette.ihclPalette.hexTwo}`}>
                           <Typography
                             variant="m-body-s"
-                            color={theme.palette.neuPalette.hexTwo}
+                            color={theme.palette.ihclPalette.hexTwo}
                             sx={{
                               letterSpacing: isMobile ? "0.281vw" : "unset",
                               fontWeight: 700,
                             }}
                             onClick={() => {
                               setCardsLength(loadLength)
-                              global?.window?.document
-                                ?.getElementById("epicureSpecs")
-                                ?.scrollIntoView()
+                              global?.window?.document?.getElementById("epicureSpecs")?.scrollIntoView()
                             }}>
                             {CONSTANTS?.LOAD_LESS}
                           </Typography>
@@ -360,7 +330,7 @@ const CardWithGrid = ({ props }: any) => {
                               lineHeight: "1.3125vw",
                               position: "absolute",
                               fontWeight: 400,
-                              color: theme?.palette?.neuPalette?.hexTwo,
+                              color: theme?.palette?.ihclPalette?.hexTwo,
                               transform: "rotate(180deg)",
                             }}
                           />
@@ -371,9 +341,7 @@ const CardWithGrid = ({ props }: any) => {
                             variant="link-m"
                             onClick={() => {
                               setCardsLength(loadLength)
-                              global?.window?.document
-                                ?.getElementById("epicureSpecs")
-                                ?.scrollIntoView()
+                              global?.window?.document?.getElementById("epicureSpecs")?.scrollIntoView()
                             }}>
                             {CONSTANTS?.LOAD_LESS}
                           </Typography>
@@ -383,7 +351,7 @@ const CardWithGrid = ({ props }: any) => {
                               position: "absolute",
                               fontWeight: 400,
                               fontSize: "1.2vw",
-                              color: theme?.palette?.neuPalette?.hexTwo,
+                              color: theme?.palette?.ihclPalette?.hexTwo,
                               transform: "rotate(180deg)",
                             }}
                           />
@@ -392,22 +360,13 @@ const CardWithGrid = ({ props }: any) => {
                     </>
                   )}
                 </Grid>
-                <GridChildContainer
-                  item
-                  xs={isMobile ? 12 : 4}
-                  sx={{ marginTop: "0vw" }}>
-                  <Stack
-                    direction={"row"}
-                    columnGap={isMobile ? "2.5vw" : "2.604vw"}>
+                <GridChildContainer item xs={isMobile ? 12 : 4} sx={{ marginTop: "0vw" }}>
+                  <Stack direction={"row"} columnGap={isMobile ? "2.5vw" : "2.604vw"}>
                     {comparatives?.map((item: any, index: number) => (
                       <Box key={index}>
                         <Stack direction={"column"} alignItems={"center"}>
                           {!isMobile && !item?.image && !item?.largeImage && (
-                            <Typography
-                              variant="body-m"
-                              mb={
-                                isMobile ? MobilePxToVw(10) : DesktopPxToVw(21)
-                              }>
+                            <Typography variant="body-m" mb={isMobile ? MobilePxToVw(10) : DesktopPxToVw(21)}>
                               {item?.title}
                             </Typography>
                           )}
@@ -434,18 +393,13 @@ const CardWithGrid = ({ props }: any) => {
                                   item?.secondaryAction?.title,
                                   "internal",
                                   item?.title,
-                                  item
+                                  item,
                                 )
                                 localStorage.setItem(
                                   "membershipType",
-                                  item?.title?.toLowerCase() === "privileged"
-                                    ? "PRIVILEGED"
-                                    : "PREFERRED"
+                                  item?.title?.toLowerCase() === "privileged" ? "PRIVILEGED" : "PREFERRED",
                                 )
-                                navigate(
-                                  `${item?.secondaryAction?.url}#loyaltyForm`,
-                                  item?.secondaryAction?.urlType
-                                )
+                                navigate(`${item?.secondaryAction?.url}#loyaltyForm`, item?.secondaryAction?.urlType)
                               }}
                             />
                           ) : (
@@ -467,28 +421,17 @@ const CardWithGrid = ({ props }: any) => {
                                   item?.primaryAction?.title,
                                   "internal",
                                   item?.title,
-                                  item
+                                  item,
                                 )
                                 const cardType =
-                                  item?.title?.toLowerCase() === "privileged"
-                                    ? "privileged"
-                                    : "preferred"
+                                  item?.title?.toLowerCase() === "privileged" ? "privileged" : "preferred"
                                 const programType =
-                                  item?.primaryAction?.url
-                                    ?.split("?")?.[1]
-                                    ?.toLowerCase()
-                                    ?.includes("shareholder") ||
-                                  item?.primaryAction?.url
-                                    ?.split("?")?.[1]
-                                    ?.toLowerCase()
-                                    ?.includes("tata")
+                                  item?.primaryAction?.url?.split("?")?.[1]?.toLowerCase()?.includes("shareholder") ||
+                                  item?.primaryAction?.url?.split("?")?.[1]?.toLowerCase()?.includes("tata")
                                 const appendedUrl = programType
                                   ? `${item?.primaryAction?.url}&cardType=${cardType}#loyaltyForm`
                                   : `${item?.primaryAction?.url}?cardType=${cardType}#loyaltyForm`
-                                navigate(
-                                  appendedUrl,
-                                  item?.primaryAction?.urlType
-                                )
+                                navigate(appendedUrl, item?.primaryAction?.urlType)
                               }}
                             />
                           )}
@@ -504,14 +447,12 @@ const CardWithGrid = ({ props }: any) => {
       ) : (
         <Box width={"100%"} textAlign={"center"} sx={{ cursor: "pointer" }}>
           <DynamicStack $isMobile={isMobile} onClick={handleClick}>
-            <ButtonTypography
-              color={theme.palette.neuPalette.hexTwo}
-              variant={isMobile ? "m-body-s" : "body-ml"}>
+            <ButtonTypography color={theme.palette.ihclPalette.hexTwo} variant={isMobile ? "m-body-s" : "body-ml"}>
               {CONSTANTS?.VIEW_COMPARSION}
             </ButtonTypography>
             <ExpandMoreIcon
               fontSize={isMobile ? "medium" : "large"}
-              htmlColor={theme.palette.neuPalette.hexTwo}></ExpandMoreIcon>
+              htmlColor={theme.palette.ihclPalette.hexTwo}></ExpandMoreIcon>
           </DynamicStack>
         </Box>
       )}

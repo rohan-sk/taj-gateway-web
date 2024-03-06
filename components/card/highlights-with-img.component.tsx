@@ -104,7 +104,7 @@ const HighlightsWithImgComponent = ({
                 <Typography
                   variant={isMobile ? "m-heading-s" : "heading-s"}
                   sx={{
-                    color: theme?.palette?.neuPalette?.hexTwo,
+                    color: theme?.palette?.ihclPalette?.hexTwo,
                   }}>
                   {item?.value}
                 </Typography>

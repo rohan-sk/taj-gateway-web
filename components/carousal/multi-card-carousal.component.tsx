@@ -26,13 +26,9 @@ interface multiCardsCarousalProps {
 }
 const MultiCardsCarousal = ({ props, aesthetic, alternateAllLinks }: multiCardsCarousalProps) => {
   const context = useContext(IHCLContext)
-  const { cardBackgroundColor, extraData } =
-    useAesthetics(aesthetic?._ref) || {}
-  const sliderButtonColor =
-    aesthetic?.sliderColor?.hex || theme?.palette?.neuPalette?.hexSeventeen
-  const sliderBackgroundColor =
-    aesthetic?.sliderBackgroundColor?.hex ||
-    theme?.palette?.neuPalette?.hexSeventeen
+  const { cardBackgroundColor, extraData } = useAesthetics(aesthetic?._ref) || {}
+  const sliderButtonColor = aesthetic?.sliderColor?.hex || theme?.palette?.ihclPalette?.hexSeventeen
+  const sliderBackgroundColor = aesthetic?.sliderBackgroundColor?.hex || theme?.palette?.ihclPalette?.hexSeventeen
   const sliderBackgroundColorWithOpacity = `${sliderBackgroundColor}${
     aesthetic?.sliderBackgroundColor?.rgb?.a == 1 ||
     aesthetic?.sliderBackgroundColor?.rgb?.a == null ||
@@ -42,15 +38,11 @@ const MultiCardsCarousal = ({ props, aesthetic, alternateAllLinks }: multiCardsC
       : aesthetic?.[0]?.sliderBackgroundColor?.rgb?.a * 100
   }`
   const backgroundColor =
-    cardBackgroundColor ===
-      theme?.palette?.neuPalette?.hexEleven?.toLowerCase() ||
-    cardBackgroundColor ===
-      theme?.palette?.neuPalette?.hexTwentySix?.toLowerCase() ||
-    cardBackgroundColor ===
-      theme?.palette?.neuPalette?.hexThree?.toLowerCase() ||
-    cardBackgroundColor ===
-      theme?.palette?.neuPalette?.hexSeventeen?.toLowerCase() ||
-    cardBackgroundColor === theme?.palette?.neuPalette?.hexFour
+    cardBackgroundColor === theme?.palette?.ihclPalette?.hexEleven?.toLowerCase() ||
+    cardBackgroundColor === theme?.palette?.ihclPalette?.hexTwentySix?.toLowerCase() ||
+    cardBackgroundColor === theme?.palette?.ihclPalette?.hexThree?.toLowerCase() ||
+    cardBackgroundColor === theme?.palette?.ihclPalette?.hexSeventeen?.toLowerCase() ||
+    cardBackgroundColor === theme?.palette?.ihclPalette?.hexFour
   const settings = {
     dots: true,
     arrows: false,
@@ -66,9 +58,7 @@ const MultiCardsCarousal = ({ props, aesthetic, alternateAllLinks }: multiCardsC
   }
 
   const IHCLContexts = useContext(IHCLContext)
-  const userStore = IHCLContexts?.getGlobalStore(
-    GLOBAL_STORES.userStore
-  ) as UserStore
+  const userStore = IHCLContexts?.getGlobalStore(GLOBAL_STORES.userStore) as UserStore
   const [isUserLoggedIn, setIsUserLoggedIn] = useState<boolean>(false)
   const CustomerHash = global?.localStorage?.getItem("customerHash")
   const isMobile = useMobileCheck()
@@ -93,7 +83,6 @@ const MultiCardsCarousal = ({ props, aesthetic, alternateAllLinks }: multiCardsC
     setMaxheight(() => 0)
     setSubTitleMaxHeight(() => 0)
     setContentMaxHeight(() => 0)
-
   }, [isMobile])
 
   const setTitleHeight = useCallback(
@@ -135,11 +124,7 @@ const MultiCardsCarousal = ({ props, aesthetic, alternateAllLinks }: multiCardsC
                     title={item?.title}
                     navigationType={item?.urlType}
                     variant={item?.variant}
-                    isActionButtonType={
-                      item?.variant === CONSTANTS?.VARIANT_LINK_TYPE
-                        ? false
-                        : true
-                    }
+                    isActionButtonType={item?.variant === CONSTANTS?.VARIANT_LINK_TYPE ? false : true}
                     buttonStyles={{ marginBottom: "8.594vw" }}
                   />
                 </Box>
@@ -263,7 +248,7 @@ const MultiCardsCarousal = ({ props, aesthetic, alternateAllLinks }: multiCardsC
                     contentMaxHeight,
                     setContentHeight,
                   },
-                  index
+                  index,
                 )}
               </Box>
             ))}

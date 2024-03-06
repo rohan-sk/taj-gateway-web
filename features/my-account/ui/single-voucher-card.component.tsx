@@ -86,14 +86,14 @@ const SingleVoucherCardComponent = ({
           <ChipBoxesContainer>
             {cardChild?.label && (
               <ChipLabelsBox>
-                <Typography variant={isMobileView ? "m-body-s" : "body-s"} color={theme.palette.neuPalette.hexTwo}>
+                <Typography variant={isMobileView ? "m-body-s" : "body-s"} color={theme.palette.ihclPalette.hexTwo}>
                   {cardChild?.label}
                 </Typography>
               </ChipLabelsBox>
             )}
             {cardChild?.labelType && (
               <ChipLabelsBox>
-                <Typography variant={isMobileView ? "m-body-s" : "body-s"} color={theme.palette.neuPalette.hexTwo}>
+                <Typography variant={isMobileView ? "m-body-s" : "body-s"} color={theme.palette.ihclPalette.hexTwo}>
                   {cardChild?.labelType}
                 </Typography>
               </ChipLabelsBox>

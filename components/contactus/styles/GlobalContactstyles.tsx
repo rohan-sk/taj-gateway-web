@@ -2,21 +2,13 @@ import styled from "@emotion/styled"
 import { theme } from "../../../lib/theme"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 import LocationOnIcon from "@mui/icons-material/LocationOn"
-import {
-  Box,
-  Radio,
-  Button,
-  TextField,
-  Typography,
-  FormControlLabel,
-  Stack,
-} from "@mui/material"
+import { Box, Radio, Button, TextField, Typography, FormControlLabel, Stack } from "@mui/material"
 
 export const RadioButton = styled(Radio)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwelve,
+  color: theme?.palette?.ihclPalette?.hexTwelve,
   padding: "0vw",
   "&.Mui-checked": {
-    color: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexTwo,
   },
   "& .MuiSvgIcon-root": {
     fontSize: "1.458vw",
@@ -133,7 +125,7 @@ export const InputTextField = styled(TextField)(() => ({
     fontFamily: "Inter",
     fontWeight: 300,
     fontSize: "1.25vw",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     opacity: 1,
     "@media (max-width:640px)": {
       fontFamily: "Inter",
@@ -181,7 +173,7 @@ export const ContactDetailBox = styled(Box)(() => ({
   },
 }))
 export const BorderBox = styled(Box)(() => ({
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
 }))
 export const MainBox = styled(Box)(() => ({
   padding: "1.615vw 0vw",

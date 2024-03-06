@@ -102,7 +102,7 @@ const MembershipProductPriceDetailComponent = (props: MembershipProductPriceProp
             {(ResponseData || purchasedProductDetails) && (
               <Stack
                 sx={{
-                  borderBottom: `2px solid ${theme?.palette?.neuPalette?.hexTwelve}}`,
+                  borderBottom: `2px solid ${theme?.palette?.ihclPalette?.hexTwelve}}`,
                 }}
                 padding={`${MobilePxToVw(35)} 0vw`}
                 flexDirection="row"
@@ -164,7 +164,7 @@ const MembershipProductPriceDetailComponent = (props: MembershipProductPriceProp
                 flexDirection={"row"}
                 justifyContent="space-between"
                 alignItems="flex-start"
-                borderBottom={`1px solid ${theme?.palette?.neuPalette?.hexTwelve}`}
+                borderBottom={`1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`}
                 padding={`${MobilePxToVw(35)} 0vw`}>
                 {GCFormDetailsStore?.GCThemeData?.base?.largeImage?.asset
                   ?._ref && (

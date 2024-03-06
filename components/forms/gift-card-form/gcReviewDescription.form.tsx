@@ -121,7 +121,7 @@ const GcReviewDescriptionForm = ({ primaryAction, secondaryAction, singleContent
             <Typography
               component={"span"}
               variant={isMobile ? "m-heading-s" : "heading-s"}
-              sx={{ color: theme?.palette?.neuPalette?.hexTwo }}>
+              sx={{ color: theme?.palette?.ihclPalette?.hexTwo }}>
               {currencyPrettier(GCStore?.cartDetails?.priceSummary?.totalPrice ?? 0)}
             </Typography>
           </GcReviewTotalAmountBox>
@@ -174,10 +174,10 @@ const GcReviewDescriptionForm = ({ primaryAction, secondaryAction, singleContent
                 whiteSpace: "nowrap !important",
                 padding: isMobile ? "" : `${DesktopPxToVw(17.8)} ${DesktopPxToVw(57)}`,
                 letterSpacing: "0.1em",
-                backgroundColor: isDisable ? theme?.palette?.neuPalette?.hexSixteen : "",
-                color: isDisable ? theme?.palette?.neuPalette?.hexTwelve : "",
+                backgroundColor: isDisable ? theme?.palette?.ihclPalette?.hexSixteen : "",
+                color: isDisable ? theme?.palette?.ihclPalette?.hexTwelve : "",
                 " &:hover": {
-                  backgroundColor: isDisable ? theme?.palette?.neuPalette?.hexSixteen : "",
+                  backgroundColor: isDisable ? theme?.palette?.ihclPalette?.hexSixteen : "",
                   cursor: isDisable ? "not-allowed" : "pointer",
                 },
               }}
@@ -213,13 +213,13 @@ const GcReviewDescriptionForm = ({ primaryAction, secondaryAction, singleContent
               sx={{
                 height: isMobile ? `${MobilePxToVw(61)} !important` : `${DesktopPxToVw(61)} !important`,
                 letterSpacing: "0.1em",
-                backgroundColor: !GCStore?.isChecked ? theme?.palette?.neuPalette?.hexTwentyNine : "",
-                color: !GCStore?.isChecked ? theme?.palette?.neuPalette?.hexTwelve : "",
+                backgroundColor: !GCStore?.isChecked ? theme?.palette?.ihclPalette?.hexTwentyNine : "",
+                color: !GCStore?.isChecked ? theme?.palette?.ihclPalette?.hexTwelve : "",
                 " &:hover": {
-                  backgroundColor: !GCStore?.isChecked ? theme?.palette?.neuPalette?.hexTwentyNine : "",
+                  backgroundColor: !GCStore?.isChecked ? theme?.palette?.ihclPalette?.hexTwentyNine : "",
                   cursor: !GCStore?.isChecked ? "not-allowed" : "pointer",
                 },
-                borderColor: !GCStore?.isChecked ? `${theme?.palette?.neuPalette?.hexTwentyNine} !important` : "",
+                borderColor: !GCStore?.isChecked ? `${theme?.palette?.ihclPalette?.hexTwentyNine} !important` : "",
                 padding: isMobile
                   ? GCStore?.isButtonDisabled ?? isDisable
                     ? `${MobilePxToVw(18)}  ${MobilePxToVw(26)} !important`

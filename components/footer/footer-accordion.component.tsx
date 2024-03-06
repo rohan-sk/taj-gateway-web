@@ -19,7 +19,7 @@ const FooterAccordion = ({ props, dataLayer, gaStoreData, data }: any) => {
   return (
     <MUIAccordion
       sx={{
-        backgroundColor: `${theme?.palette?.neuPalette?.hexFive} !important`,
+        backgroundColor: `${theme?.palette?.ihclPalette?.hexFive} !important`,
       }}
       onClick={() => setOpenAccordion(!openAccordion)}
       disableGutters={true}
@@ -31,9 +31,9 @@ const FooterAccordion = ({ props, dataLayer, gaStoreData, data }: any) => {
       <AccordionSummary
         expandIcon={
           openAccordion ? (
-            <RemoveIconStyle sx={{ color: `${theme?.palette?.neuPalette?.hexOne} !important` }} />
+            <RemoveIconStyle sx={{ color: `${theme?.palette?.ihclPalette?.hexOne} !important` }} />
           ) : (
-            <AddIconStyle sx={{ color: `${theme?.palette?.neuPalette?.hexOne} !important` }} />
+            <AddIconStyle sx={{ color: `${theme?.palette?.ihclPalette?.hexOne} !important` }} />
           )
         }
         aria-controls="panel1a-content"
@@ -44,7 +44,7 @@ const FooterAccordion = ({ props, dataLayer, gaStoreData, data }: any) => {
         <FooterTagLine
           variant={isMobile ? "m-body-s" : "heading-xxs"}
           sx={{
-            color: `${theme?.palette?.neuPalette?.hexOne} !important`,
+            color: `${theme?.palette?.ihclPalette?.hexOne} !important`,
           }}>
           {title || "Accordion title"}
         </FooterTagLine>
@@ -84,7 +84,7 @@ const FooterAccordion = ({ props, dataLayer, gaStoreData, data }: any) => {
                       )
                   }}
                   sx={{
-                    color: `${theme?.palette?.neuPalette?.hexOne} !important`,
+                    color: `${theme?.palette?.ihclPalette?.hexOne} !important`,
                     cursor: "pointer",
                   }}>
                   {item?.title}

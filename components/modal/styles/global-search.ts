@@ -52,7 +52,7 @@ export const ShadeBox = styled(Box)(() => ({
   bottom: 0,
   width: "100%",
   pointerEvents: "none",
-  background: `linear-gradient(180deg, rgba(255, 255, 255, 0.00) 25.88%, ${theme.palette.neuPalette.hexOne} 96.53%)`,
+  background: `linear-gradient(180deg, rgba(255, 255, 255, 0.00) 25.88%, ${theme.palette.ihclPalette.hexOne} 96.53%)`,
   // "@media (max-width: 640px)": {
   //   display: "none",
   // },
@@ -66,7 +66,7 @@ export const TabPanelParentBox = styled(Box)(() => ({
   },
   "::-webkit-scrollbar-thumb": {
     borderRadius: "0.313vw",
-    background: theme?.palette?.neuPalette?.hexSeventeen,
+    background: theme?.palette?.ihclPalette?.hexSeventeen,
   },
   "@media (max-width: 640px)": {
     height: "84vh",
@@ -85,7 +85,7 @@ export const StyledDivider = styled(Divider)(() => ({
   height: "0.052vw",
   opacity: "0.4",
   margin: "1.6vw 0",
-  backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const FlexBox = styled(Box)(() => ({
@@ -96,7 +96,7 @@ export const FlexBox = styled(Box)(() => ({
 export const StyledTypography = styled(Typography)(() => ({
   cursor: "pointer",
   padding: "0.52vw 2.5vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "&:hover": {
     background: "rgba(69, 68, 63, 0.1)",
   },
@@ -146,7 +146,7 @@ export const GlobalSearchIconSecondImageBox: any = styled(Box)(() => ({
 
 export const SearchResultsDestinationTypography = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isMarginTopRequired: boolean }>(({ $isMarginTopRequired }) => ({
   opacity: "0.6",
   fontWeight: "400",
@@ -174,14 +174,12 @@ export const ResultNotFoundTypography = styled(Typography)(() => ({
 
 export const HotelDataBorderDivider = styled(
   Divider,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   margin: $isMobile
     ? `${MobilePxToVw(30)} 0vw 0vw`
-    : `${DesktopPxToVw(30)} ${DesktopPxToVw(40)} ${DesktopPxToVw(
-      30
-    )} ${DesktopPxToVw(46)} !important`,
+    : `${DesktopPxToVw(30)} ${DesktopPxToVw(40)} ${DesktopPxToVw(30)} ${DesktopPxToVw(46)} !important`,
   height: "0.052vw",
   opacity: "0.4",
-  backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
 }))

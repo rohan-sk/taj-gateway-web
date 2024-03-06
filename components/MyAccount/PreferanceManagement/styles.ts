@@ -4,7 +4,7 @@ import DesktopPxToVw from "../../../utils/DesktopFontCalc"
 
 export const BorderBox = styled(Box)(() => ({
   padding: `${DesktopPxToVw(50)} ${DesktopPxToVw(30)}`,
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
   marginTop: DesktopPxToVw(35),
 }))
 
@@ -22,10 +22,10 @@ export const PreferredButton = styled(Button)(() => ({
   fontWeight: 300,
 }))
 export const PreferenceButton = styled(Button)(() => ({
-  border: `1.5px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+  border: `1.5px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
   padding: DesktopPxToVw(20),
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const AddFiltersBox = styled(Box)(() => ({
@@ -37,7 +37,7 @@ export const AddFiltersBox = styled(Box)(() => ({
 }))
 export const AddFiltersText = styled(Typography)(() => ({
   letterSpacing: "0.1em",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   textDecoration: "underline  1px",
   cursor: "pointer",
 }))
@@ -63,7 +63,7 @@ export const SearchInput = styled(Input)(() => ({
       fontWeight: 300,
       opacity: 0.8,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
 }))

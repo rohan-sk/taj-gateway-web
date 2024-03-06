@@ -206,7 +206,7 @@ const HeroBannerEpicure = (props: any) => {
                     <Stack flexDirection={"column"} alignItems={"center"}>
                       {(sliderTitle || props?.alignmentVariant) && (
                         <Typography
-                          color={theme?.palette?.neuPalette?.hexOne}
+                          color={theme?.palette?.ihclPalette?.hexOne}
                           lineHeight={"120%"}
                           whiteSpace={"nowrap"}
                           variant={isMobile ? "m-heading-l" : "heading-l"}>

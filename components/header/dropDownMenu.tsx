@@ -75,7 +75,7 @@ const DropDownMenu = (props: AccordionSchema) => {
           }, 500)
         }
         sx={{
-          borderTop: `1px solid ${theme?.palette?.neuPalette?.hexThirteen}`,
+          borderTop: `1px solid ${theme?.palette?.ihclPalette?.hexThirteen}`,
         }}>
         <Grid item sm={4} md={4} lg={4} xl={4}>
           <MegaMenuContentBox>
@@ -90,9 +90,9 @@ const DropDownMenu = (props: AccordionSchema) => {
                 title={dropDownListItems?.cta?.title}
                 variant={dropDownListItems?.cta?.variant}
                 navigationType={dropDownListItems?.cta?.urlType}
-                linkStyles={{ color: theme?.palette?.neuPalette?.hexOne }}
+                linkStyles={{ color: theme?.palette?.ihclPalette?.hexOne }}
                 iconStyles={{
-                  color: `${theme?.palette?.neuPalette?.hexOne} !important`,
+                  color: `${theme?.palette?.ihclPalette?.hexOne} !important`,
                 }}
               />
             </MegaMenuMoreContentBox>

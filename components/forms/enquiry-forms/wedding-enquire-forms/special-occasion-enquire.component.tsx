@@ -9,12 +9,10 @@ import { useMobileCheck } from "../../../../utils/isMobilView"
 import React, { useContext, useEffect, useState } from "react"
 const LoadingSpinner = dynamic(() => import("../../../../utils/SpinnerComponent"))
 import { Box, InputAdornment, Typography } from "@mui/material"
-const CustomSearch = dynamic(() =>
-import("../../../hoc/Search/CustomSearch").then((module) => module.CustomSearch)
-)
+const CustomSearch = dynamic(() => import("../../../hoc/Search/CustomSearch").then((module) => module.CustomSearch))
 const RenderActionItem = dynamic(() => import("../../../hoc/actions/action-items-ui"))
 const CustomCheckBox = dynamic(() =>
-import("../../../hoc/CustomCheckBox/Checkbox").then((module) => module.CustomCheckBox)
+  import("../../../hoc/CustomCheckBox/Checkbox").then((module) => module.CustomCheckBox),
 )
 import { useAppNavigation } from "../../../../utils/NavigationUtility"
 const CountryCodeDropdown = dynamic(() => import("../../../../utils/CountryCodeDropdown"))
@@ -30,13 +28,7 @@ import {
   SpecialEnquireDisableFields,
   SpecialOccasionEnquireFormProps,
 } from "./special-occasion-enquire-form-types"
-import {
-  Name,
-  Email,
-  Mobile,
-  Error_icon,
-  ERROR_MESSAGES,
-} from "../../gift-card-form/constants"
+import { Name, Email, Mobile, Error_icon, ERROR_MESSAGES } from "../../gift-card-form/constants"
 import {
   FullBox,
   StyledTextField,
@@ -93,13 +85,10 @@ const SpecialOccasionEnquireForm = ({
   const PortableText = Context!.PortableText
   const navigate = useAppNavigation()
   const [userData, setUserData] = useState<any>({})
-  const [disable, setDisable] =
-    useState<SpecialEnquireDisableFields>(initialDisableFields)
+  const [disable, setDisable] = useState<SpecialEnquireDisableFields>(initialDisableFields)
   const [loader, setLoader] = useState<boolean>(false)
   const [values, setValues] = useState<valuesInterface>(initialValues)
-  const [preferredLocation, setPreferredLocation] = useState<string>(
-    modalStore?.propertyData?.destination || ""
-  )
+  const [preferredLocation, setPreferredLocation] = useState<string>(modalStore?.propertyData?.destination || "")
   const [currentLocation, setCurrentLocation] = useState<string>("")
   const [errors, setErrors] = useState<ErrorsInterface>(initialErrors)
   const [openErrorMessage, setOpenErrorMessage] = useState<boolean>(false)
@@ -108,16 +97,13 @@ const SpecialOccasionEnquireForm = ({
   const isMobile = useMobileCheck()
   const [countryCode, setCountryCode] = useState<string>("+91")
   const [checkBoxError, setCheckBoxError] = useState<boolean>(false)
-  const [errorMessages, setErrorMessages] =
-    useState<errorMessagesInterface>(initialErrorMessages)
+  const [errorMessages, setErrorMessages] = useState<errorMessagesInterface>(initialErrorMessages)
 
   const formValidation = (isFormValid: boolean, id: number) => {
     setErrors({ ...errors, [id]: !isFormValid })
   }
   const [more, setMore] = useState<number>(
-    charactersLimit
-      ? charactersLimit
-      : CONSTANTS?.FORM_DESCRIPTION_CHARACTER_LIMIT
+    charactersLimit ? charactersLimit : CONSTANTS?.FORM_DESCRIPTION_CHARACTER_LIMIT,
   )
   const handleChange = (event: any) => {
     const { name, value } = event?.target
@@ -140,18 +126,9 @@ const SpecialOccasionEnquireForm = ({
   const checkEmptyValidation = () => {
     setErrors((prevErrors: any) => ({
       ...prevErrors,
-      [Name]:
-        values?.Name?.length === 0
-          ? true
-          : !TextfieldValidator(Name, values?.Name)?.status,
-      [Email]:
-        values?.Name?.length === 0
-          ? true
-          : !TextfieldValidator(Email, values?.Email)?.status,
-      [Mobile]:
-        values?.Name?.length === 0
-          ? true
-          : !TextfieldValidator(Mobile, values?.Mobile)?.status,
+      [Name]: values?.Name?.length === 0 ? true : !TextfieldValidator(Name, values?.Name)?.status,
+      [Email]: values?.Name?.length === 0 ? true : !TextfieldValidator(Email, values?.Email)?.status,
+      [Mobile]: values?.Name?.length === 0 ? true : !TextfieldValidator(Mobile, values?.Mobile)?.status,
     }))
     setErrorMessages((prevErrorMessages: any) => ({
       ...prevErrorMessages,
@@ -173,7 +150,7 @@ const SpecialOccasionEnquireForm = ({
         eventBrief: values?.describeYourEvent,
         preferredLocation: preferredLocation,
         acceptedTNC: check,
-      })
+      }),
     )
     if (response?.error === false) {
       setLoader(() => false)
@@ -199,9 +176,7 @@ const SpecialOccasionEnquireForm = ({
     }
   }
 
-  const userStore = Context?.getGlobalStore(
-    GLOBAL_STORES.userStore
-  ) as UserStore
+  const userStore = Context?.getGlobalStore(GLOBAL_STORES.userStore) as UserStore
 
   const customerHash = global?.localStorage?.getItem("customerHash")
 
@@ -226,30 +201,19 @@ const SpecialOccasionEnquireForm = ({
       setValues((prev: any) => {
         return {
           ...prev,
-          Name:
-            userData?.nameDetails?.firstName?.length > 0
-              ? userData?.nameDetails?.firstName
-              : "",
-          Email:
-            userData?.primaryEmailId?.length > 0
-              ? userData?.primaryEmailId
-              : "",
+          Name: userData?.nameDetails?.firstName?.length > 0 ? userData?.nameDetails?.firstName : "",
+          Email: userData?.primaryEmailId?.length > 0 ? userData?.primaryEmailId : "",
           Mobile: userData?.primaryMobile?.phoneNumber,
         }
       })
-      setCountryCode(
-        userData?.primaryMobile?.isdCode?.length > 0
-          ? userData?.primaryMobile?.isdCode
-          : "+91"
-      )
+      setCountryCode(userData?.primaryMobile?.isdCode?.length > 0 ? userData?.primaryMobile?.isdCode : "+91")
 
       //setting disable fields
       setDisable((prev: any) => {
         return {
           ...prev,
           Name: !(
-            String(userData?.nameDetails?.firstName)?.toLowerCase() ===
-              "undefined" ||
+            String(userData?.nameDetails?.firstName)?.toLowerCase() === "undefined" ||
             userData?.nameDetails?.firstName?.length <= 0 ||
             userData?.nameDetails?.firstName === undefined ||
             userData?.nameDetails?.firstName === null
@@ -262,8 +226,7 @@ const SpecialOccasionEnquireForm = ({
           ),
 
           Mobile: !(
-            String(userData?.primaryMobile?.phoneNumber)?.toLowerCase() ===
-              "undefined" ||
+            String(userData?.primaryMobile?.phoneNumber)?.toLowerCase() === "undefined" ||
             userData?.primaryMobile?.phoneNumber?.length <= 0 ||
             userData?.primaryMobile?.phoneNumber === undefined ||
             userData?.primaryMobile?.phoneNumber === null
@@ -282,17 +245,11 @@ const SpecialOccasionEnquireForm = ({
     <>
       {loader && <LoadingSpinner />}
       <SpecialOccasionMainBox $isMobile={isMobile}>
-        <SnackbarToast
-          open={openErrorMessage}
-          onClose={() => setOpenErrorMessage(false)}
-          Message={snackMessage}
-        />
+        <SnackbarToast open={openErrorMessage} onClose={() => setOpenErrorMessage(false)} Message={snackMessage} />
         <OccasionContainer $isMobile={isMobile}>
           {title && (
             <Box>
-              <Typography
-                variant={isMobile ? "m-heading-s" : "heading-s"}
-                sx={{ fontWeight: 300 }}>
+              <Typography variant={isMobile ? "m-heading-s" : "heading-s"} sx={{ fontWeight: 300 }}>
                 {title}
               </Typography>
             </Box>
@@ -320,16 +277,9 @@ const SpecialOccasionEnquireForm = ({
                     endAdornment: (
                       <>
                         {errors?.Name &&
-                          (values?.Name?.length === 0 ||
-                            values?.Name === null ||
-                            values?.Name == undefined) && (
+                          (values?.Name?.length === 0 || values?.Name === null || values?.Name == undefined) && (
                             <InputAdornment position="end">
-                              <Box
-                              loading="lazy"
-                                component="img"
-                                src={Error_icon}
-                                alt="Expand Image"
-                              />
+                              <Box loading="lazy" component="img" src={Error_icon} alt="Expand Image" />
                             </InputAdornment>
                           )}
                       </>
@@ -350,16 +300,9 @@ const SpecialOccasionEnquireForm = ({
                     endAdornment: (
                       <>
                         {errors?.Email &&
-                          (values?.Email?.length === 0 ||
-                            values?.Email === null ||
-                            values?.Email == undefined) && (
+                          (values?.Email?.length === 0 || values?.Email === null || values?.Email == undefined) && (
                             <InputAdornment position="end">
-                              <Box
-                                loading="lazy"
-                                component="img"
-                                src={Error_icon}
-                                alt="Expand Image"
-                              />
+                              <Box loading="lazy" component="img" src={Error_icon} alt="Expand Image" />
                             </InputAdornment>
                           )}
                       </>
@@ -368,9 +311,7 @@ const SpecialOccasionEnquireForm = ({
                   helperText={errors?.Email && errorMessages?.Email}
                 />
                 <PhoneNumberContainer $isMobile={isMobile}>
-                  <MobileNumberWrapper
-                    $isMobile={isMobile}
-                    sx={{ width: "100%!important" }}>
+                  <MobileNumberWrapper $isMobile={isMobile} sx={{ width: "100%!important" }}>
                     <CountryCodeDropdown
                       isDisable={disable?.CountryCodeValue}
                       countryCode={countryCode}
@@ -380,9 +321,7 @@ const SpecialOccasionEnquireForm = ({
                         margin: isMobile ? "0 0 0 10vw" : "0 0 0 5.85vw",
                       }}
                       backgroundColor={
-                        isMobile
-                          ? theme?.palette?.background?.paper
-                          : theme?.palette?.background?.default
+                        isMobile ? theme?.palette?.background?.paper : theme?.palette?.background?.default
                       }
                     />
                     <InputTextField
@@ -392,9 +331,7 @@ const SpecialOccasionEnquireForm = ({
                       placeholder={items?.[2]?.labelText}
                       type="tel"
                       onInput={(e: any) => {
-                        e.target.value = Math.max(0, parseInt(e.target.value))
-                          .toString()
-                          .slice(0, 10)
+                        e.target.value = Math.max(0, parseInt(e.target.value)).toString().slice(0, 10)
                       }}
                       value={values?.Mobile}
                       name={Mobile}
@@ -410,12 +347,7 @@ const SpecialOccasionEnquireForm = ({
                                 values?.Mobile === null ||
                                 values?.Mobile == undefined) && (
                                 <InputAdornment position="end">
-                                  <Box
-                                    loading="lazy"
-                                    component="img"
-                                    src={Error_icon}
-                                    alt="Expand Image"
-                                  />
+                                  <Box loading="lazy" component="img" src={Error_icon} alt="Expand Image" />
                                 </InputAdornment>
                               )}
                           </>
@@ -476,10 +408,7 @@ const SpecialOccasionEnquireForm = ({
                   multiline
                   variant="standard"
                   onChange={(e: any) => {
-                    if (
-                      String(e?.target?.value)?.match(/^[A-Za-z0-9,. ]{0,400}$/)
-                    )
-                      handleChange(e)
+                    if (String(e?.target?.value)?.match(/^[A-Za-z0-9,. ]{0,400}$/)) handleChange(e)
                   }}
                   value={values?.describeYourEvent}
                   name={"describeYourEvent"}
@@ -487,9 +416,7 @@ const SpecialOccasionEnquireForm = ({
                     width: "100%",
                   }}
                   helperText={
-                    errors?.describeYourEvent &&
-                    values?.describeYourEvent.length > 0 &&
-                    items?.[6]?.errorText
+                    errors?.describeYourEvent && values?.describeYourEvent.length > 0 && items?.[6]?.errorText
                   }
                 />
               </Box>
@@ -515,7 +442,7 @@ const SpecialOccasionEnquireForm = ({
             <Box>
               <Typography
                 sx={{
-                  color: theme?.palette?.neuPalette?.hexTwentyOne,
+                  color: theme?.palette?.ihclPalette?.hexTwentyOne,
                 }}
                 variant={isMobile ? "m-body-s" : "body-s"}>
                 {ERROR_MESSAGES?.checkboxError}
@@ -560,9 +487,7 @@ const SpecialOccasionEnquireForm = ({
           <DescriptionWrapperBox $isMobile={isMobile}>
             <Typography variant={isMobile ? "m-body-l" : "body-ml"}>
               {description.length > more ? (
-                <CustomReadMore
-                  length={more}
-                  variant={isMobile ? "m-body-l" : "body-ml"}>
+                <CustomReadMore length={more} variant={isMobile ? "m-body-l" : "body-ml"}>
                   {description}
                 </CustomReadMore>
               ) : (

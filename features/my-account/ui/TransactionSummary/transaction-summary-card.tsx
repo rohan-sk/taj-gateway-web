@@ -25,9 +25,7 @@ function TransactionSummaryCard({ filteredData }: any) {
   const getDetails = (type: any) => {
     switch (type?.paymentType?.toLowerCase()) {
       case "tata_neu":
-        return `Neucoins Redemption - ${currencyPrettier(
-          type?.txnNetAmount
-        )?.slice(2)} coins`
+        return `Neucoins Redemption - ${currencyPrettier(type?.txnNetAmount)?.slice(2)} coins`
       case "gift_card":
         return `Gift Card Redemption`
       case "jus_pay":
@@ -46,20 +44,16 @@ function TransactionSummaryCard({ filteredData }: any) {
           <Grid
             container
             sx={{
-              borderBottom: `0.026vw solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+              borderBottom: `0.026vw solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
             }}>
             <Grid item md={2}>
               <Typography variant="body-s">{CONSTANTS?.DATE}</Typography>
             </Grid>
             <Grid item md={4.5}>
-              <Typography variant="body-s">
-                {CONSTANTS?.TRANSACTION_DETAIL}
-              </Typography>
+              <Typography variant="body-s">{CONSTANTS?.TRANSACTION_DETAIL}</Typography>
             </Grid>
             <Grid item md={2.5}>
-              <Typography
-                variant="body-s"
-                sx={{ justifyContent: "center", display: "flex" }}>
+              <Typography variant="body-s" sx={{ justifyContent: "center", display: "flex" }}>
                 {CONSTANTS?.AMOUNT_SPENT}
               </Typography>
             </Grid>
@@ -67,9 +61,7 @@ function TransactionSummaryCard({ filteredData }: any) {
               <Typography variant="body-s">{CONSTANTS?.DISCOUNTS}</Typography>
             </Grid>
             <Grid item md={1.5}>
-              <Typography variant="body-s">
-                {CONSTANTS?.NEUCOINS_EARNED}
-              </Typography>
+              <Typography variant="body-s">{CONSTANTS?.NEUCOINS_EARNED}</Typography>
             </Grid>
           </Grid>
           {filteredData?.map((data: any, index: number) => {
@@ -85,15 +77,13 @@ function TransactionSummaryCard({ filteredData }: any) {
                   sx={{
                     backgroundColor:
                       data?.orderType?.toLowerCase() === "hotel_booking"
-                        ? theme?.palette?.neuPalette?.hexTwentyNine
+                        ? theme?.palette?.ihclPalette?.hexTwentyNine
                         : "unset",
                     padding: "10px 0px",
                   }}>
                   <Grid item md={2}>
                     <Typography variant="body-s">
-                      <Typography variant="body-s">
-                        {data?.transactionId || "Transaction ID"}
-                      </Typography>
+                      <Typography variant="body-s">{data?.transactionId || "Transaction ID"}</Typography>
                     </Typography>
                   </Grid>
                   <Grid item md={4.5}>
@@ -105,21 +95,14 @@ function TransactionSummaryCard({ filteredData }: any) {
                       )}
                     </Typography>
                   </Grid>
-                  <Grid
-                    item
-                    md={2.5}
-                    sx={{ justifyContent: "center", display: "flex" }}>
-                    <Typography variant="body-s">
-                      {currencyPrettier(data?.gradTotal)?.slice(1)}
-                    </Typography>
+                  <Grid item md={2.5} sx={{ justifyContent: "center", display: "flex" }}>
+                    <Typography variant="body-s">{currencyPrettier(data?.gradTotal)?.slice(1)}</Typography>
                   </Grid>
                   <Grid item md={2}>
                     <Typography variant="body-s">{data?.points}</Typography>
                   </Grid>
                   <Grid item md={1.5}>
-                    <Typography variant="body-s">
-                      {/* {CONSTANTS?.NEUCOINS_EARNED} */}
-                    </Typography>
+                    <Typography variant="body-s">{/* {CONSTANTS?.NEUCOINS_EARNED} */}</Typography>
                   </Grid>
                 </Grid>
                 <Grid container>
@@ -127,15 +110,13 @@ function TransactionSummaryCard({ filteredData }: any) {
                   <Grid item md={4.5}>
                     <ul>
                       {data?.transactionDetails?.map((txn: any) => {
-                        return txn?.paymentDetails?.map(
-                          (detail: any, index: number) => {
-                            return (
-                              <li key={index}>
-                                <Typography>{getDetails(detail)}</Typography>
-                              </li>
-                            )
-                          }
-                        )
+                        return txn?.paymentDetails?.map((detail: any, index: number) => {
+                          return (
+                            <li key={index}>
+                              <Typography>{getDetails(detail)}</Typography>
+                            </li>
+                          )
+                        })
                       })}
                     </ul>
                   </Grid>
@@ -149,24 +130,19 @@ function TransactionSummaryCard({ filteredData }: any) {
                     }}>
                     <Typography variant="body-s">
                       {data?.transactionDetails?.map((txn: any) => {
-                        return txn?.paymentDetails?.map(
-                          (detail: any, index: number) => {
-                            return (
-                              <>
-                                {detail?.paymentType?.toLowerCase() ===
-                                "jus_pay" ? (
-                                  <Typography key={index}>
-                                    {`${currencyPrettier(
-                                      detail?.txnNetAmount
-                                    )?.slice(2)}`}
-                                  </Typography>
-                                ) : (
-                                  <br />
-                                )}
-                              </>
-                            )
-                          }
-                        )
+                        return txn?.paymentDetails?.map((detail: any, index: number) => {
+                          return (
+                            <>
+                              {detail?.paymentType?.toLowerCase() === "jus_pay" ? (
+                                <Typography key={index}>
+                                  {`${currencyPrettier(detail?.txnNetAmount)?.slice(2)}`}
+                                </Typography>
+                              ) : (
+                                <br />
+                              )}
+                            </>
+                          )
+                        })
                       })}
                     </Typography>
                   </Grid>
@@ -180,24 +156,19 @@ function TransactionSummaryCard({ filteredData }: any) {
                     }}>
                     <Typography variant="body-s">
                       {data?.transactionDetails?.map((txn: any) => {
-                        return txn?.paymentDetails?.map(
-                          (detail: any, index: number) => {
-                            return (
-                              <>
-                                {detail?.paymentType?.toLowerCase() !==
-                                "jus_pay" ? (
-                                  <Typography key={index}>
-                                    {`${currencyPrettier(
-                                      detail?.txnNetAmount
-                                    )?.slice(2)}`}
-                                  </Typography>
-                                ) : (
-                                  <br />
-                                )}
-                              </>
-                            )
-                          }
-                        )
+                        return txn?.paymentDetails?.map((detail: any, index: number) => {
+                          return (
+                            <>
+                              {detail?.paymentType?.toLowerCase() !== "jus_pay" ? (
+                                <Typography key={index}>
+                                  {`${currencyPrettier(detail?.txnNetAmount)?.slice(2)}`}
+                                </Typography>
+                              ) : (
+                                <br />
+                              )}
+                            </>
+                          )
+                        })
                       })}
                     </Typography>
                   </Grid>

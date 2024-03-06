@@ -1,11 +1,4 @@
-import {
-  AccordionDetails,
-  Box,
-  Grid,
-  Stack,
-  Typography,
-  styled,
-} from "@mui/material"
+import { AccordionDetails, Box, Grid, Stack, Typography, styled } from "@mui/material"
 import DesktopPxToVw from "../../../utils/DesktopFontCalc"
 import { theme } from "../../../lib/theme"
 
@@ -17,7 +10,7 @@ export const PriceWrapper = styled(Box)(() => ({
 }))
 
 export const MainGridEpicure = styled(Grid)(() => ({
-  border: `0.052vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   zIndex: 1,
   top: "5.521vw",
   display: "flex",

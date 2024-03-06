@@ -5,7 +5,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 import { transientProps } from "../../../../utils/transientProps"
 
 export const BorderedCardWrapper = styled(Box)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   padding: "2.123vw 1.563vw 0vw",
   minHeight: "13.177vw",
   "@media (max-width:640px)": {
@@ -61,7 +61,7 @@ export const ColumnFlexBox = styled(Box)(() => ({
   flexDirection: "column",
 }))
 export const BoldTitle = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontFamily: "Inter",
   fontSize: DesktopPxToVw(14),
   fontStyle: "normal",
@@ -75,7 +75,7 @@ export const BoldTitle = styled(Typography)(() => ({
 }))
 export const BoldSubfieldTitleTypography = styled(Typography)(() => ({
   fontFamily: "Inter",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontSize: "0.729vw",
   fontWeight: "700",
   lineHeight: "1.042vw",
@@ -85,7 +85,7 @@ export const CoinBalance = styled(Typography)(() => ({
   fontSize: DesktopPxToVw(18),
   fontWeight: 300,
   fontFamily: "Inter",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontStyle: "normal",
   lineHeight: "140%",
   "@media (max-width :640px)": {
@@ -96,7 +96,7 @@ export const CoinBalance = styled(Typography)(() => ({
 
 export const InnerBoxCard = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile?: boolean }>(({ $isMobile }) => ({
   width: $isMobile ? MobilePxToVw(476) : DesktopPxToVw(270),
   height: $isMobile ? MobilePxToVw(317) : DesktopPxToVw(180),
@@ -104,11 +104,11 @@ export const InnerBoxCard = styled(
 
 export const TypographyRenewalPrice = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isMobile?: boolean }>(({ $isMobile }) => ({
   textDecoration: "line-through",
   fontSize: $isMobile ? MobilePxToVw(22) : DesktopPxToVw(22),
-  color: theme?.palette?.neuPalette?.hexTwelve,
+  color: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const DiscountBox = styled(Box)(() => ({
@@ -121,6 +121,6 @@ export const ColumnFlexBoxChild = styled(Box)(() => ({
   flexDirection: "column",
   width: DesktopPxToVw(160),
   "@media (max-width: 640px)": {
-  width:"100%"
+    width: "100%",
   },
 }))

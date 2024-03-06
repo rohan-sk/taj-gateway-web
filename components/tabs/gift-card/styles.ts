@@ -30,23 +30,23 @@ export const MainBoxWrapper = styled(Box)(() => ({
 
 export const CustomTabDivider = styled(
   Divider,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   bottom: 0,
   width: "100%",
   position: "absolute",
-  backgroundColor: theme?.palette?.neuPalette?.rgbaOne,
+  backgroundColor: theme?.palette?.ihclPalette?.rgbaOne,
   height: $isMobile ? MobilePxToVw(2.8) : DesktopPxToVw(2.8),
 }))
 
 export const CustomTabsContentWrapper = styled(
   Tabs,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: $isMobile ? "100%" : "unset",
   justifyContent: `space-between !important`,
   "& .MuiTab-root.Mui-selected": {
-    color: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexTwo,
   },
   ".MuiTabs-indicator": {
     height: $isMobile ? MobilePxToVw(2.8) : DesktopPxToVw(2.8),
@@ -55,7 +55,7 @@ export const CustomTabsContentWrapper = styled(
 
 export const ManageGiftCardTabContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   overflowY: "auto",
   maxHeight: $isMobile ? "60vh" : "55vh",

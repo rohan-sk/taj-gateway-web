@@ -68,17 +68,15 @@ export const StyledImage: any = styled(Box)(() => ({
 
 export const TabWrapper = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $index: boolean }>(({ $index }) => ({
-  color: $index
-    ? theme?.palette?.neuPalette?.hexTwo
-    : theme?.palette?.neuPalette?.hexSeventeen,
+  color: $index ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.ihclPalette?.hexSeventeen,
   cursor: "pointer",
 }))
 
 export const ContentBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $select: boolean }>(({ $select }) => ({
   display: $select ? "block" : "none",
 

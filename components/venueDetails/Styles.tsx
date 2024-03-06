@@ -4,7 +4,7 @@ import { transientProps } from "../../utils/transientProps"
 import { Button, styled, Typography, Box, Grid, Stack } from "@mui/material"
 
 export const BoxWrapper = styled(Box)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   margin: "auto",
   padding: DesktopPxToVw(40),
 }))
@@ -18,7 +18,7 @@ export const StyledText = styled(Typography)(() => ({
 export const Title = styled(Typography)(() => ({
   letterSpacing: "-0.05em",
   textTransform: "uppercase",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   marginBottom: "2%",
 }))
 
@@ -27,11 +27,11 @@ export const SubTitle = styled(Typography)(() => ({
   fontWeight: 300,
   fontSize: "18px",
   lineHeight: "25px",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const StyledTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   marginBottom: "2%",
 }))
 
@@ -47,7 +47,7 @@ export const BulletItemContainer = styled(Box)(() => ({
 }))
 export const CustomBullet = styled(Typography)(() => ({
   fontSize: "1.4vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   marginTop: "-0.28vw",
 }))
 
@@ -76,23 +76,23 @@ export const VenuItemGrid = styled(Grid)(() => ({
 }))
 export const PopUpGrid = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: $isMobile ? "100%" : DesktopPxToVw(1194),
   height: $isMobile ? "100%" : DesktopPxToVw(760),
   transform: $isMobile ? "unset" : "translateX(30%)",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const RoomDetailsModalContainer = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   maxHeight: $isMobile ? "100%" : "90vh",
   overflowY: $isMobile ? "auto" : "initial",
   width: $isMobile ? "100%" : DesktopPxToVw(1194),
   margin: "0 auto",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
 }))
 export const RequestButton = styled(Button)(() => ({
   fontWeight: 700,
@@ -103,8 +103,8 @@ export const RequestButton = styled(Button)(() => ({
   letterSpacing: "0.1em",
   textTransform: "uppercase",
   "&:hover": {
-    color: theme?.palette?.neuPalette?.hexOne,
-    background: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexOne,
+    background: theme?.palette?.ihclPalette?.hexTwo,
   },
 }))
 
@@ -116,7 +116,7 @@ export const GalleryButton = styled(Button)(() => ({
   textAlign: "center",
   letterSpacing: "0.1em",
   textTransform: "uppercase",
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   justifyContent: "space-between",
   padding: "0% 1%",
 }))

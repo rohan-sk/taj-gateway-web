@@ -85,7 +85,7 @@ const DateTimingFacilities = ({ props, primaryAction }: DateTimingFacilitiesProp
                         $showDividerForBorder={item?.showDividerForBorder}>
                         {item?.logo?.asset?._ref && (
                           <Box
-                          loading="lazy"
+                            loading="lazy"
                             component="img"
                             src={urlFor(item?.logo?.asset?._ref).url()}
                             height="1.2371vw"
@@ -99,10 +99,10 @@ const DateTimingFacilities = ({ props, primaryAction }: DateTimingFacilitiesProp
                           <Typography
                             sx={{
                               fontWeight: 400,
-                              color: theme?.palette?.neuPalette?.hexTwelve,
+                              color: theme?.palette?.ihclPalette?.hexTwelve,
                               "@media (max-width: 640px)": {
                                 fontWeight: 700,
-                                color: theme?.palette?.neuPalette?.hexSeventeen,
+                                color: theme?.palette?.ihclPalette?.hexSeventeen,
                               },
                             }}
                             component={item?.headingElementForCard || "h3"}
@@ -151,7 +151,7 @@ const DateTimingFacilities = ({ props, primaryAction }: DateTimingFacilitiesProp
                     <Divider
                       orientation="vertical"
                       sx={{
-                        backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
+                        backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
                       }}
                     />
                   </Box>

@@ -3,7 +3,7 @@ import { Box, Stack, styled, Typography } from "@mui/material"
 import DesktopPxToVw, { MobilePxToVw } from "../../utils/DesktopFontCalc"
 
 export const ParentCarouselImageBox = styled(Box)(() => ({
-    maxWidth: DesktopPxToVw(1440),
+  maxWidth: DesktopPxToVw(1440),
   maxHeight: DesktopPxToVw(710),
   margin: "0 auto",
   "@media (max-width: 640px)": {
@@ -29,7 +29,7 @@ export const TitleBox = styled(Box)(() => ({
 export const TitleTypo = styled(Typography)(() => ({
   lineHeight: "140%",
   letterSpacing: "-0.05em",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const ChildCarouselMainBox = styled(Box)(() => ({
@@ -41,7 +41,6 @@ export const ChildCarouselBox = styled(Box)(() => ({
   display: "flex",
   justifyContent: "center",
   marginTop: DesktopPxToVw(10),
-  
 }))
 
 export const ChildCarouselImageBox = styled(Box)(() => ({
@@ -75,9 +74,9 @@ export const ContentBox = styled(Stack)(() => ({
   background: "linear-gradient(180deg, rgba(81, 81, 81, 0.00) 0%, rgba(0, 0, 0, 0.70) 70.64%)",
 }))
 export const TitleTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
   marginBlockEnd: "1.146vw",
   marginTop: "4.688vw",
   textAlign: "center",
-  padding: "0vw 3vw"
+  padding: "0vw 3vw",
 }))

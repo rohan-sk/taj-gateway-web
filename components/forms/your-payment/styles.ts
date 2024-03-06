@@ -1,14 +1,7 @@
 import styled from "@emotion/styled"
 import { theme } from "../../../lib/theme"
 import { transientProps } from "../../../utils/transientProps"
-import {
-  Grid,
-  TextField,
-  Typography,
-  Box,
-  Select,
-  MenuItem,
-} from "@mui/material"
+import { Grid, TextField, Typography, Box, Select, MenuItem } from "@mui/material"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 export const SubTitleTypography = styled(Typography)(() => ({
   width: "50%",
@@ -18,11 +11,9 @@ export const SubTitleTypography = styled(Typography)(() => ({
 
 export const PaymentContainer = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $memberShipTypes: string | undefined }>(({ $memberShipTypes }) => ({
-  backgroundColor: $memberShipTypes
-    ? theme?.palette?.background?.paper
-    : theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: $memberShipTypes ? theme?.palette?.background?.paper : theme?.palette?.ihclPalette?.hexOne,
   padding: "0vw 12.5vw 0vw 12.5vw",
   "@media (max-width: 640px)": {
     padding: "0",
@@ -38,11 +29,11 @@ export const PromoCodeInput = styled(TextField)(() => ({
       fontWeight: 300,
       fontSize: DesktopPxToVw(24),
       opacity: 1,
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
   width: "23.59vw",
-  color: theme?.palette?.neuPalette?.hexEleven,
+  color: theme?.palette?.ihclPalette?.hexEleven,
   paddingRight: "2vw",
   marginLeft: "5vw",
   "@media (max-width: 640px)": {
@@ -65,14 +56,12 @@ export const GiftCardBox = styled(Grid)(() => ({
 
 export const PriceText = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $memberShipTypes: string | undefined }>(({ $memberShipTypes }) => ({
   display: "flex",
   alignItems: "center",
   marginTop: DesktopPxToVw(30),
-  backgroundColor: $memberShipTypes
-    ? theme?.palette?.neuPalette?.hexOne
-    : theme?.palette?.background?.paper,
+  backgroundColor: $memberShipTypes ? theme?.palette?.ihclPalette?.hexOne : theme?.palette?.background?.paper,
   justifyContent: "center",
   padding: DesktopPxToVw(17),
   "@media (max-width: 640px)": {
@@ -133,7 +122,7 @@ export const NeuCoinFlexBox = styled(Grid)(() => ({
 }))
 
 export const NueCoinContainer = styled(Box)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwenty}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwenty}`,
   padding: DesktopPxToVw(40),
   width: "100%",
   "@media (max-width: 640px)": {

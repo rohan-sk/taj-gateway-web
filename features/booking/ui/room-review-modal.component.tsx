@@ -108,7 +108,7 @@ const RoomReviewModalAfterLogin = ({ props, openModal, handleClose, userTier }: 
             onClick={handleClose}
             sx={{
               cursor: "pointer",
-              color: theme?.palette?.neuPalette?.hexOne,
+              color: theme?.palette?.ihclPalette?.hexOne,
             }}>
             {CONSTANTS?.CLOSE}
           </Typography>
@@ -174,7 +174,7 @@ const RoomReviewModalAfterLogin = ({ props, openModal, handleClose, userTier }: 
           backdrop: {
             sx: {
               opacity: 0.98,
-              backgroundColor: theme?.palette?.neuPalette?.rgbaSeven,
+              backgroundColor: theme?.palette?.ihclPalette?.rgbaSeven,
             },
           },
         }}>

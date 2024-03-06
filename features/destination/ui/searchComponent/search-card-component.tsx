@@ -151,7 +151,7 @@ const SearchCardComponent = (props: any) => {
               component="img"
               src={getOptimizeImageUrl(
                 props?.image?.[0]?.imageAsset?.image?.[0]?.asset?._ref &&
-                urlFor(props?.image?.[0]?.imageAsset?.image?.[0]?.asset?._ref).url(),
+                  urlFor(props?.image?.[0]?.imageAsset?.image?.[0]?.asset?._ref).url(),
                 3,
               )}
               sx={{
@@ -197,7 +197,7 @@ const SearchCardComponent = (props: any) => {
                   <CommonSpaceGrid container $isMobile={isMobile}>
                     <Typography
                       sx={{
-                        color: `${theme?.palette?.neuPalette?.hexSeventeen}`,
+                        color: `${theme?.palette?.ihclPalette?.hexSeventeen}`,
                       }}
                       component={headingElement}
                       variant={isMobile ? "m-heading-s" : "heading-s"}>
@@ -253,14 +253,15 @@ const SearchCardComponent = (props: any) => {
                   </CommonSpaceGrid>
                 </Grid>
               </Grid>
-              {!isMobile && brandsToShowPrices?.includes(props?.brandName?.toLowerCase()) &&
+              {!isMobile &&
+                brandsToShowPrices?.includes(props?.brandName?.toLowerCase()) &&
                 props?.dynamicHotelData?.amountWithInclusiveTax && (
                   <Grid item {...gridBreakPointsGenerator(isMobile, 2.2)}>
                     <RatePriceBox>
                       <Typography
                         variant={isMobile ? "m-body-s" : "body-s"}
                         sx={{
-                          color: `${theme?.palette?.neuPalette?.hexTwelve}`,
+                          color: `${theme?.palette?.ihclPalette?.hexTwelve}`,
                         }}>
                         {"Starting Rate/Night"}
                       </Typography>
@@ -298,7 +299,7 @@ const SearchCardComponent = (props: any) => {
                         />
                       </IconWrapper>
                       <Typography
-                        sx={{ color: theme?.palette?.neuPalette?.hexTwo }}
+                        sx={{ color: theme?.palette?.ihclPalette?.hexTwo }}
                         variant={isMobile ? "m-body-s" : "body-s"}>
                         <a href={`tel:${props?.hotelContact?.phone?.[0]?.mobile}`}>
                           {props?.hotelContact?.phone?.[0]?.mobile}
@@ -324,10 +325,11 @@ const SearchCardComponent = (props: any) => {
                         </IconWrapper>
                         <MailTitle $isMobile={isMobile} variant={isMobile ? "m-body-s" : "body-s"}>
                           <a
-                            href={`mailto:${props?.hotelContact?.email?.filter((type: any) => {
-                              return type?.type?.toLowerCase() === "business"
-                            })?.[0]?.email
-                              }`}>
+                            href={`mailto:${
+                              props?.hotelContact?.email?.filter((type: any) => {
+                                return type?.type?.toLowerCase() === "business"
+                              })?.[0]?.email
+                            }`}>
                             {
                               props?.hotelContact?.email?.filter((type: any) => {
                                 return type?.type?.toLowerCase() === "business"
@@ -357,7 +359,8 @@ const SearchCardComponent = (props: any) => {
                 {!isMobile && <FullDivider $isMobile={isMobile} />}
               </Box>
             )}
-            {isMobile && brandsToShowPrices?.includes(props?.brandName?.toLowerCase()) &&
+            {isMobile &&
+              brandsToShowPrices?.includes(props?.brandName?.toLowerCase()) &&
               props?.dynamicHotelData?.amountWithInclusiveTax && (
                 <CommonSpaceGrid sx={{ marginBottom: "unset" }} container alignItems={"center"} $isMobile={isMobile}>
                   <Grid {...gridBreakPointsGenerator(isMobile, 6, 6)}>
@@ -410,20 +413,20 @@ const SearchCardComponent = (props: any) => {
                           : 1,
                       }}
                       startIcon={
-                        (!props?.dynamicHotelData?.amountWithInclusiveTax && loading)
-                          ? <CircularProgress sx={{ width: "1.5vw !important", height: "1.5vw !important" }} />
-                          : null
+                        !props?.dynamicHotelData?.amountWithInclusiveTax && loading ? (
+                          <CircularProgress sx={{ width: "1.5vw !important", height: "1.5vw !important" }} />
+                        ) : null
                       }
                       onClick={() => {
                         props?.setGlobalSearchedData(props)
                         handleActionClick(true)
                       }}>
                       {brandsToShowPrices?.includes(props?.brandName?.toLowerCase())
-                        ? (!props?.dynamicHotelData?.amountWithInclusiveTax && loading)
+                        ? !props?.dynamicHotelData?.amountWithInclusiveTax && loading
                           ? "LOADING"
                           : !props?.dynamicHotelData?.amountWithInclusiveTax
-                            ? SEARCH_CARD_CONSTANTS?.SOLD_OUT
-                            : secondaryAction?.title
+                          ? SEARCH_CARD_CONSTANTS?.SOLD_OUT
+                          : secondaryAction?.title
                         : secondaryAction?.title}
                     </Button>
                   )}
@@ -474,11 +477,11 @@ const SearchCardComponent = (props: any) => {
                     handleActionClick(true)
                   }}>
                   {brandsToShowPrices?.includes(props?.brandName?.toLowerCase())
-                    ? (!props?.dynamicHotelData?.amountWithInclusiveTax && loading)
+                    ? !props?.dynamicHotelData?.amountWithInclusiveTax && loading
                       ? "LOADING"
                       : !props?.dynamicHotelData?.amountWithInclusiveTax
-                        ? SEARCH_CARD_CONSTANTS?.SOLD_OUT
-                        : secondaryAction?.title
+                      ? SEARCH_CARD_CONSTANTS?.SOLD_OUT
+                      : secondaryAction?.title
                     : secondaryAction?.title}
                 </Button>
               )}

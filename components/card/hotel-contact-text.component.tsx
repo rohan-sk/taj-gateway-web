@@ -45,7 +45,7 @@ const HotelContactData = ({
         "& *": {
           fontFamily: "Inter",
           fontSize: `${DesktopPxToVw(22)} !important`,
-          color: theme?.palette?.neuPalette?.hexSeventeen,
+          color: theme?.palette?.ihclPalette?.hexSeventeen,
           "@media (max-width:640px)": {
             fontSize: `${MobilePxToVw(22)} !important`,
           },
@@ -53,22 +53,22 @@ const HotelContactData = ({
         "& .enquire-form-text": {
           textAlign: "center",
           fontWeight: 300,
-          color: theme?.palette?.neuPalette?.hexSeventeen,
+          color: theme?.palette?.ihclPalette?.hexSeventeen,
           lineHeight: "140%",
         },
         "& a": {
-          color: `${theme?.palette?.neuPalette?.hexTwo} !important`,
+          color: `${theme?.palette?.ihclPalette?.hexTwo} !important`,
         },
         "& .enquiry-form-phone, & .enquiry-form-wellness-phone, & .enquiry-form-venue-phone, & .enquiry-form-hamper-phone":
           {
             cursor: "default !important",
             pointerEvents: "none",
-            color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+            color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
             "@media(max-width:640px)": {
               display: "inline-flex",
               pointerEvents: "initial",
 
-              color: `${theme?.palette?.neuPalette?.hexTwo} !important`,
+              color: `${theme?.palette?.ihclPalette?.hexTwo} !important`,
               cursor: "pointer !important",
             },
           },

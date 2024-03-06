@@ -7,7 +7,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 export const MainBox = styled(Box)(() => ({
   padding: "2.083vw",
   margin: "3.125vw 0vw",
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   "@media (max-width: 640px)": {
     margin: "5.469vw 0vw",
     padding: "5.469vw 5vw ",
@@ -46,7 +46,7 @@ export const BottomDivider = styled(Divider)(() => ({
   opacity: "0.5",
   height: "0.052vw",
   marginTop: "2.083vw",
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const ButtonsStack = styled(Stack)(() => ({
@@ -70,7 +70,7 @@ export const RefundPriceDetailsStack = styled(Stack)(() => ({
 
 export const AmountWrapper = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $color?: string }>(({ $color }) => ({
   fontSize: "2.083vw",
   color: $color ? $color : theme?.palette?.text?.primary,
@@ -81,7 +81,7 @@ export const AmountWrapper = styled(
 
 export const TotalAmount = styled(Typography)(() => ({
   fontSize: "2.083vw",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 
   "@media (max-width: 640px)": {
     fontSize: "3.438vw",
@@ -137,23 +137,17 @@ export const AmountStack = styled(Stack)(() => ({
 
 export const WrapperCustomCheckBox = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean; $isChecked: boolean }>(({ $isMobile, $isChecked }) => ({
   flexDirection: "row",
   alignItems: "center",
   m: $isMobile ? `${MobilePxToVw(35)} ${MobilePxToVw(30)}` : "0vw",
   "& span": {
-    fontSize: $isMobile
-      ? `${MobilePxToVw(18)} !important`
-      : `${DesktopPxToVw(22)} !important`,
+    fontSize: $isMobile ? `${MobilePxToVw(18)} !important` : `${DesktopPxToVw(22)} !important`,
   },
   "& .custom-check-box": {
     padding: $isMobile ? "auto" : $isChecked ? "auto" : 0,
     justifyContent: $isMobile ? "auto" : $isChecked ? "center" : "flex-start",
-    marginRight: $isMobile
-      ? MobilePxToVw(20)
-      : $isChecked
-      ? "none"
-      : DesktopPxToVw(11),
+    marginRight: $isMobile ? MobilePxToVw(20) : $isChecked ? "none" : DesktopPxToVw(11),
   },
 }))

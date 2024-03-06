@@ -229,7 +229,7 @@ const OtpScreenVerifyEmail = (props: OTPScreenInterface) => {
             sx={{
               fontSize: isMobile ? "2.813vw" : "1.146vw",
               fontWeight: 300,
-              color: theme?.palette?.neuPalette?.hexSeventeen,
+              color: theme?.palette?.ihclPalette?.hexSeventeen,
             }}>
             {items?.subtitle} &nbsp;
             {userStore?.userEmailID !== "" && <> {EmailMask(userStore?.userEmailID)} </>}

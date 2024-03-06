@@ -215,7 +215,7 @@ const CardWithDiamondPoints = ({
                   <ChipTextTextWrapBox>
                     {chipText?.map((item: ChipTextItems, index: number) => (
                       <ChipTextButtonBox key={index}>
-                        <Typography variant="body-s" sx={{ color: theme?.palette?.neuPalette?.hexTwo }}>
+                        <Typography variant="body-s" sx={{ color: theme?.palette?.ihclPalette?.hexTwo }}>
                           {item?.chipTextValue}
                         </Typography>
                       </ChipTextButtonBox>
@@ -226,7 +226,7 @@ const CardWithDiamondPoints = ({
                   <ChipTextTextWrapBox>
                     {specificationTags?.map((item: any, index: number) => (
                       <ChipTextButtonBox key={index}>
-                        <Typography variant="body-s" sx={{ color: theme?.palette?.neuPalette?.hexTwo }}>
+                        <Typography variant="body-s" sx={{ color: theme?.palette?.ihclPalette?.hexTwo }}>
                           {item?.tag}
                         </Typography>
                       </ChipTextButtonBox>

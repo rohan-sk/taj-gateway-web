@@ -5,16 +5,16 @@ import { transientProps } from "../../../utils/transientProps"
 
 export const HeroTitleTypography = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $width?: any }>(({ $width }) => ({
   maxWidth: $width ?? "26vw",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
   "&:before": {
     content: '""',
     width: "4.166vw",
     display: "inline-block",
     verticalAlign: "middle",
-    borderBottom: `0.0520vw solid${theme?.palette?.neuPalette?.hexOne}`,
+    borderBottom: `0.0520vw solid${theme?.palette?.ihclPalette?.hexOne}`,
   },
   ":not(:empty)::before ": {
     marginRight: "2vw",

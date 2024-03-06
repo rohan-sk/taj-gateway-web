@@ -3,14 +3,7 @@ import { theme } from "../../../lib/theme"
 import AddIcon from "@mui/icons-material/Add"
 import CloseIcon from "@mui/icons-material/Close"
 import RemoveIcon from "@mui/icons-material/Remove"
-import {
-  Divider,
-  Paper,
-  Typography,
-  Box,
-  Stack,
-  TextField,
-} from "@mui/material"
+import { Divider, Paper, Typography, Box, Stack, TextField } from "@mui/material"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 import { transientProps } from "../../../utils/transientProps"
 
@@ -43,7 +36,7 @@ export const SearchOptionContainer = styled(Stack)(() => ({
 export const PriceMaskDivider = styled(Divider)(() => ({
   opacity: "0.4",
   width: "0.05vw",
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     margin: "0vw 3.594vw 0vw 4.219vw",
   },
@@ -84,10 +77,10 @@ export const SearchOptionTypography = styled(Typography)(() => ({
 }))
 export const DateTypography = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $Date: any }>(({ $Date }) => ({
   letterSpacing: "-0.05rem",
-  color: $Date ? "unset" : theme.palette.neuPalette.hexTwelve,
+  color: $Date ? "unset" : theme.palette.ihclPalette.hexTwelve,
 
   whiteSpace: "nowrap",
 }))
@@ -99,7 +92,7 @@ export const VerticalDivider = styled(Divider)(() => ({
   opacity: "0.4",
   width: "0.05vw",
   margin: "0.6vw 1.145vw 0.6vw 1.35vw",
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
 
   "@media (max-width: 640px)": {
     margin: "0vw 3.594vw 0vw 4.219vw",
@@ -193,14 +186,14 @@ export const GuestDetailsListBox = styled(Box)(() => ({
 
 export const CloseIconStyle = styled(CloseIcon)(() => ({
   cursor: "pointer",
-  color: theme?.palette?.neuPalette?.hexEleven,
+  color: theme?.palette?.ihclPalette?.hexEleven,
 }))
 
 export const RemoveIconStyle = styled(RemoveIcon)(() => ({
-  color: theme?.palette?.neuPalette?.hexEleven,
+  color: theme?.palette?.ihclPalette?.hexEleven,
 }))
 export const AddIconStyle = styled(AddIcon)(() => ({
-  color: theme?.palette?.neuPalette?.hexEleven,
+  color: theme?.palette?.ihclPalette?.hexEleven,
 }))
 
 export const NeedMoreRoomBox = styled(Box)(() => ({
@@ -219,5 +212,5 @@ export const CloseTypography = styled(Typography)(() => ({
   cursor: "pointer",
   position: "absolute",
   textDecoration: "underline",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))

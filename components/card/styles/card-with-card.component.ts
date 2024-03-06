@@ -7,7 +7,7 @@ export const CardText = styled(Typography)(() => ({
   fontFamily: theme?.palette?.font?.primaryFontFamily,
   letterSpacing: "-0.05em",
   margin: "0.31vw 0vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media(max-width:640px)": {
     whiteSpace: "nowrap",
   },
@@ -40,7 +40,7 @@ export const ComparisonBox = styled(Box)(() => ({
 
 export const BoxRenewal = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $renewal: boolean }>(({ $renewal }) => ({
   display: "flex",
   gap: "1vw",

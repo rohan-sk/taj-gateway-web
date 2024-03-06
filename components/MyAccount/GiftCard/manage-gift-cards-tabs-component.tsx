@@ -24,12 +24,7 @@ interface ManageGiftCardsTabsComponent {
   aesthetic: aestheticItems
 }
 
-const ManageGiftCardsTabsComponent = ({
-  tabs,
-  title,
-  variant,
-  aesthetic,
-}: ManageGiftCardsTabsComponent) => {
+const ManageGiftCardsTabsComponent = ({ tabs, title, variant, aesthetic }: ManageGiftCardsTabsComponent) => {
   const IHCLContexts = useContext(IHCLContext)
   const { cardPadding } = useAesthetics(aesthetic?._ref)
   const [value, setValue] = useState<number>(0)
@@ -39,9 +34,7 @@ const ManageGiftCardsTabsComponent = ({
   }
   const isMobile = useMobileCheck()
   return (
-    <Box
-      aria-label={variant}
-      p={isMobile ? cardPadding?.mobile : cardPadding?.desktop}>
+    <Box aria-label={variant} p={isMobile ? cardPadding?.mobile : cardPadding?.desktop}>
       <ManageGiftCardsWrapper>
         <Box>
           <Typography
@@ -57,7 +50,7 @@ const ManageGiftCardsTabsComponent = ({
             value={value}
             TabIndicatorProps={{
               style: {
-                background: theme?.palette?.neuPalette?.hexTwo,
+                background: theme?.palette?.ihclPalette?.hexTwo,
               },
             }}>
             {tabs?.map((item: any, index: number) => {
@@ -71,14 +64,12 @@ const ManageGiftCardsTabsComponent = ({
                     sx={{
                       color:
                         value === index
-                          ? theme?.palette?.neuPalette?.hexTwo
-                          : theme?.palette?.neuPalette?.hexSeventeen,
+                          ? theme?.palette?.ihclPalette?.hexTwo
+                          : theme?.palette?.ihclPalette?.hexSeventeen,
                       opacity: 1,
                     }}
                   />
-                  {index !== tabs?.length - 1 && (
-                    <VerticalTabsDivider orientation="vertical" flexItem />
-                  )}
+                  {index !== tabs?.length - 1 && <VerticalTabsDivider orientation="vertical" flexItem />}
                 </>
               )
             })}
@@ -88,11 +79,7 @@ const ManageGiftCardsTabsComponent = ({
       {tabs && (
         <Box>
           {tabs?.map((item: any, index: number) => (
-            <TabView
-              value={value}
-              index={index}
-              key={index}
-              isMobile={isMobile}>
+            <TabView value={value} index={index} key={index} isMobile={isMobile}>
               {item?.tabItems?.map((tabData: any, index: number) => {
                 return (
                   <Fragment key={index}>
@@ -132,21 +119,17 @@ function TabView(props: TabPanelProps) {
           sx={{
             width: "100%",
             "& .my-account-e-gift-card-main-container": {
-              padding: isMobile
-                ? `${MobilePxToVw(35)} ${MobilePxToVw(32)} 0vw`
-                : `${DesktopPxToVw(35)} 0vw 0vw`,
+              padding: isMobile ? `${MobilePxToVw(35)} ${MobilePxToVw(32)} 0vw` : `${DesktopPxToVw(35)} 0vw 0vw`,
             },
             "& .my-account-e-gift-card-content": {
-              backgroundColor: theme?.palette?.neuPalette?.hexTwentyNine,
+              backgroundColor: theme?.palette?.ihclPalette?.hexTwentyNine,
             },
             "& .tab-order-status": {
               maxHeight: "none",
               overflow: "none",
             },
             "& .order-status-data": {
-              p: isMobile
-                ? `${MobilePxToVw(35)} ${MobilePxToVw(32)} 0vw`
-                : `${DesktopPxToVw(35)}  0vw 0vw`,
+              p: isMobile ? `${MobilePxToVw(35)} ${MobilePxToVw(32)} 0vw` : `${DesktopPxToVw(35)}  0vw 0vw`,
             },
           }}>
           {children}

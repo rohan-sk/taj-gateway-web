@@ -42,7 +42,7 @@ const LoyaltyChambersTabs = (props: any) => {
               letterSpacing: "1.8px",
               paddingRight: `${MobilePxToVw(18)} !important`,
               ":hover": {
-                backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+                backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
               },
             }}>
             {props?.tabs?.[selectTabIndex]?.title}
@@ -90,17 +90,15 @@ const LoyaltyChambersTabs = (props: any) => {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: `${DesktopPxToVw(34)} ${DesktopPxToVw(46)}`,
-                backgroundColor:
-                  selectTabIndex == index ? theme?.palette?.neuPalette?.hexOne : "none",
-                boxShadow:
-                  selectTabIndex == index ? "-6px 10px 24px 0px rgba(0, 0, 0, 0.10)" : "none",
+                backgroundColor: selectTabIndex == index ? theme?.palette?.ihclPalette?.hexOne : "none",
+                boxShadow: selectTabIndex == index ? "-6px 10px 24px 0px rgba(0, 0, 0, 0.10)" : "none",
               }}>
               {tabsData?.title && (
                 <Typography
                   variant={isMobile ? "m-heading-xs" : "heading-xs"}
                   sx={{
                     cursor: "pointer",
-                    color: selectTabIndex == index ? theme?.palette?.neuPalette?.hexTwo : "inherit",
+                    color: selectTabIndex == index ? theme?.palette?.ihclPalette?.hexTwo : "inherit",
                   }}>
                   {tabsData?.title}
                 </Typography>

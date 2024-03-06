@@ -24,32 +24,18 @@ import {
   DetailsCurrencyContainer,
   InnerCardGrid,
 } from "./styles"
-import {
-  COINS_BALANCE,
-  COMPLIMENTARY_ADD_ON_CARD,
-  MEMBERSHIP_PREMIUM,
-  START_DATE,
-  TIER,
-} from "./constants"
+import { COINS_BALANCE, COMPLIMENTARY_ADD_ON_CARD, MEMBERSHIP_PREMIUM, START_DATE, TIER } from "./constants"
 
-const MembershipCard = ({
-  membership,
-  primaryAction,
-  secondaryAction,
-}: any) => {
+const MembershipCard = ({ membership, primaryAction, secondaryAction }: any) => {
   const memberShipAddOn = membership?.addOn
   const memberShipPrimaryCard = membership?.primary
   const isMobile = useMobileCheck()
   const navigate = useAppNavigation()
   const [renewal, setRenewal] = useState<boolean>(false)
 
-  const preferredCard =
-    memberShipPrimaryCard?.membership?.toLowerCase() === "preferred" &&
-    primaryAction
+  const preferredCard = memberShipPrimaryCard?.membership?.toLowerCase() === "preferred" && primaryAction
 
-  const privilegedCard =
-    memberShipPrimaryCard?.membership?.toLowerCase() === "privileged" &&
-    secondaryAction
+  const privilegedCard = memberShipPrimaryCard?.membership?.toLowerCase() === "privileged" && secondaryAction
 
   useEffect(() => {
     if (memberShipPrimaryCard?.expiryDate) {
@@ -59,9 +45,7 @@ const MembershipCard = ({
       const currentDate: any = new Date()
 
       // Calculate the difference in days
-      const differenceInDays = Math.ceil(
-        (expiryDate - currentDate) / (1000 * 60 * 60 * 24)
-      )
+      const differenceInDays = Math.ceil((expiryDate - currentDate) / (1000 * 60 * 60 * 24))
       if (differenceInDays <= 45 && currentDate <= expiryDate) {
         setRenewal(true)
       } else {
@@ -90,10 +74,8 @@ const MembershipCard = ({
               component={"img"}
               src={urlFor(
                 isMobile
-                  ? membership?.image?.smallImage?.asset?._ref ||
-                      memberShipPrimaryCard?.image?.smallImage?.asset?._ref
-                  : membership?.image?.largeImage?.asset?._ref ||
-                      memberShipPrimaryCard?.image?.largeImage?.asset?._ref
+                  ? membership?.image?.smallImage?.asset?._ref || memberShipPrimaryCard?.image?.smallImage?.asset?._ref
+                  : membership?.image?.largeImage?.asset?._ref || memberShipPrimaryCard?.image?.largeImage?.asset?._ref,
               )?.url()}
               alt="membership-image"
             />
@@ -104,25 +86,19 @@ const MembershipCard = ({
             <DetailsCurrencyContainer>
               {/*Title and details*/}
               <Box>
-                <Grid
-                  container
-                  sx={{ marginBottom: isMobile ? "3.125vw" : "0.521vw" }}>
-                  <Typography
-                    variant={isMobile ? "m-heading-xs" : "heading-xs"}>
+                <Grid container sx={{ marginBottom: isMobile ? "3.125vw" : "0.521vw" }}>
+                  <Typography variant={isMobile ? "m-heading-xs" : "heading-xs"}>
                     {memberShipPrimaryCard?.type !== "undefined" &&
                     memberShipPrimaryCard?.type?.toLowerCase() === "bank"
                       ? memberShipPrimaryCard?.bankName
-                      : membership?.membership ||
-                        memberShipPrimaryCard?.membership}
+                      : membership?.membership || memberShipPrimaryCard?.membership}
                   </Typography>
                 </Grid>
                 <DatesContainer>
-                  <ColumnFlexBox
-                    sx={{ width: isMobile ? "100%" : DesktopPxToVw(160) }}>
+                  <ColumnFlexBox sx={{ width: isMobile ? "100%" : DesktopPxToVw(160) }}>
                     <BoldTitle>{START_DATE}</BoldTitle>
                     <Typography variant={isMobile ? "m-body-sl" : "body-s"}>
-                      {membership?.startDate ||
-                        memberShipPrimaryCard?.startDate}
+                      {membership?.startDate || memberShipPrimaryCard?.startDate}
                     </Typography>
                   </ColumnFlexBox>
                   <ColumnFlexBox
@@ -132,18 +108,15 @@ const MembershipCard = ({
                     <BoldTitle>
                       {membership?.tier
                         ? TIER
-                        : membership?.expiryDate ||
-                          memberShipPrimaryCard?.expiryDate
+                        : membership?.expiryDate || memberShipPrimaryCard?.expiryDate
                         ? RENEWAL_DATE
                         : ""}
                     </BoldTitle>
                     <Typography variant={isMobile ? "m-body-sl" : "body-s"}>
                       {membership?.tier
                         ? membership?.tier
-                        : membership?.expiryDate ||
-                          memberShipPrimaryCard?.expiryDate
-                        ? membership?.expiryDate ||
-                          memberShipPrimaryCard?.expiryDate
+                        : membership?.expiryDate || memberShipPrimaryCard?.expiryDate
+                        ? membership?.expiryDate || memberShipPrimaryCard?.expiryDate
                         : ""}
                     </Typography>
                   </ColumnFlexBox>
@@ -153,7 +126,7 @@ const MembershipCard = ({
                 <BoldSubfieldTitleTypography
                   sx={{
                     fontSize: "2.188vw !important",
-                    color: theme?.palette?.neuPalette?.hexSeventeen,
+                    color: theme?.palette?.ihclPalette?.hexSeventeen,
                   }}>
                   {COMPLIMENTARY_ADD_ON_CARD}
                 </BoldSubfieldTitleTypography>
@@ -181,9 +154,7 @@ const MembershipCard = ({
                               height: "auto",
                             }}
                           />
-                          <Typography variant="m-body-s">
-                            {memberShipAddOn?.phoneNumber}
-                          </Typography>
+                          <Typography variant="m-body-s">{memberShipAddOn?.phoneNumber}</Typography>
                         </>
                       </Box>
                     )}
@@ -203,9 +174,7 @@ const MembershipCard = ({
                             height: "auto",
                           }}
                         />
-                        <Typography variant="m-body-s">
-                          {memberShipAddOn?.email}
-                        </Typography>
+                        <Typography variant="m-body-s">{memberShipAddOn?.email}</Typography>
                       </>
                     </Box>
                   )}
@@ -237,12 +206,9 @@ const MembershipCard = ({
                           }}
                         />
                       </Box>
-                      <Typography
-                        variant={isMobile ? "m-heading-s" : "heading-s"}>
+                      <Typography variant={isMobile ? "m-heading-s" : "heading-s"}>
                         {membership?.coinBalance
-                          ? `${currencyPrettier(
-                              Number(membership?.coinBalance)
-                            )?.slice(2)}`
+                          ? `${currencyPrettier(Number(membership?.coinBalance))?.slice(2)}`
                           : ""}
                       </Typography>
                     </Box>
@@ -251,16 +217,13 @@ const MembershipCard = ({
               </Box>
             </DetailsCurrencyContainer>
           </Box>
-          {(membership?.complementaryDetails || memberShipAddOn?.name) &&
-            !isMobile && (
-              <Grid container m={"0.391vw 0"}>
-                <Grid>
-                  <BoldSubfieldTitleTypography>
-                    {COMPLIMENTARY_ADD_ON_CARD}
-                  </BoldSubfieldTitleTypography>
-                </Grid>
+          {(membership?.complementaryDetails || memberShipAddOn?.name) && !isMobile && (
+            <Grid container m={"0.391vw 0"}>
+              <Grid>
+                <BoldSubfieldTitleTypography>{COMPLIMENTARY_ADD_ON_CARD}</BoldSubfieldTitleTypography>
               </Grid>
-            )}
+            </Grid>
+          )}
           {!isMobile && (
             <ComplementaryAddOnFlex>
               {memberShipAddOn?.name && (
@@ -270,25 +233,19 @@ const MembershipCard = ({
               )}
               {memberShipAddOn?.email && (
                 <Box sx={{ gridArea: "email" }}>
-                  <Typography variant="body-s">
-                    {memberShipAddOn?.email}
-                  </Typography>
+                  <Typography variant="body-s">{memberShipAddOn?.email}</Typography>
                 </Box>
               )}
               {memberShipAddOn?.phoneNumber && (
                 <Box sx={{ gridArea: "mobile" }}>
-                  <Typography variant="body-s">
-                    {memberShipAddOn?.phoneNumber}
-                  </Typography>
+                  <Typography variant="body-s">{memberShipAddOn?.phoneNumber}</Typography>
                 </Box>
               )}
-              {membership?.complementaryDetails?.map(
-                (detail: string, index: number) => (
-                  <Typography key={index} variant="body-s">
-                    {detail}
-                  </Typography>
-                )
-              )}
+              {membership?.complementaryDetails?.map((detail: string, index: number) => (
+                <Typography key={index} variant="body-s">
+                  {detail}
+                </Typography>
+              ))}
             </ComplementaryAddOnFlex>
           )}
           <Divider sx={{ marginTop: isMobile ? "3.125vw" : "" }} />
@@ -316,12 +273,8 @@ const MembershipCard = ({
               <Box sx={{ paddingRight: "0.521vw" }}>
                 <Typography
                   onClick={() => {
-                    const cardType =
-                      memberShipPrimaryCard?.membership?.toLowerCase() || ""
-                    const url =
-                      cardType?.toLowerCase() == "preferred"
-                        ? preferredCard?.url
-                        : privilegedCard?.url
+                    const cardType = memberShipPrimaryCard?.membership?.toLowerCase() || ""
+                    const url = cardType?.toLowerCase() == "preferred" ? preferredCard?.url : privilegedCard?.url
                     const type = "renewal"
                     const appendedURL = `${url}?cardType=${cardType}&type=${type}`
                     navigate(appendedURL, PathType?.internal)

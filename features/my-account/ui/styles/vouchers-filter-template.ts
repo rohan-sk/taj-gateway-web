@@ -1,14 +1,5 @@
 import { theme } from "../../../../lib/theme"
-import {
-  styled,
-  Stack,
-  Divider,
-  InputLabel,
-  Box,
-  FormControl,
-  Typography,
-  MenuItem,
-} from "@mui/material"
+import { styled, Stack, Divider, InputLabel, Box, FormControl, Typography, MenuItem } from "@mui/material"
 import { transientProps } from "../../../../utils/transientProps"
 
 export const VoucherSectionContainer = styled(Box)(() => ({
@@ -19,7 +10,7 @@ export const VoucherSectionContainer = styled(Box)(() => ({
 }))
 export const VoucherSectionMainContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: $isMobile ? "unset" : "flex",
   alignItems: $isMobile ? "unset" : "center",
@@ -55,7 +46,7 @@ export const VerticalDivider = styled(Divider)(() => ({
   width: "0.055vw",
   height: "1.563vw",
 
-  backgroundColor: theme?.palette?.neuPalette?.hexTwelve,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwelve,
   "@media (max-width:640px)": {
     height: "5vw",
   },
@@ -77,7 +68,7 @@ export const DropDownsStack = styled(Stack)(() => ({
 export const StyledInputLabel = styled(InputLabel)(() => ({
   fontWeight: 300,
   fontSize: "0.938vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width:640px)": {
     fontSize: "3.75vw",
   },
@@ -156,7 +147,7 @@ export const VoucherFilterMenuItem = styled(MenuItem)(() => ({
   fontFamily: "Inter",
   fontWeight: "300",
   fontSize: "0.938vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width:640px)": {
     fontSize: "3.438vw",
   },

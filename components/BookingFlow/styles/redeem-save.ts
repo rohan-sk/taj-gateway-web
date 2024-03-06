@@ -16,7 +16,7 @@ import {
 export const MainBox = styled(Box)(() => ({
   padding: "3.12vw",
   marginTop: "1.042vw",
-  border: `0.05vw solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `0.05vw solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
 
   "@media (max-width: 640px)": {
     margin: "0vw 7.8125vw 6.250vw 7.8125vw",
@@ -30,13 +30,13 @@ export const InputTextField = styled(TextField)(() => ({
   "& .MuiFormHelperText-root.Mui-error ": {
     "@media (max-width: 640px)": {
       fontSize: "1.5vw",
-      color: theme?.palette?.neuPalette?.hexTwentySeven,
+      color: theme?.palette?.ihclPalette?.hexTwentySeven,
     },
   },
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexEleven,
+      color: theme?.palette?.ihclPalette?.hexEleven,
       fontWeight: 500,
       opacity: 1,
     },
@@ -63,7 +63,7 @@ export const InputRedeem = styled(TextField)(() => ({
       opacity: 1,
       fontWeight: 500,
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexEleven,
+      color: theme?.palette?.ihclPalette?.hexEleven,
     },
   },
 }))
@@ -84,7 +84,7 @@ export const NueCoinsRedeemInput: any = styled(TextField)(() => ({
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexEleven,
+      color: theme?.palette?.ihclPalette?.hexEleven,
       fontWeight: 500,
       opacity: 1,
     },
@@ -115,7 +115,7 @@ export const GiftCardRedeemInput = styled(TextField)(() => ({
       opacity: 1,
       fontWeight: 500,
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexEleven,
+      color: theme?.palette?.ihclPalette?.hexEleven,
     },
   },
 
@@ -126,7 +126,7 @@ export const GiftCardRedeemInput = styled(TextField)(() => ({
 
 export const InputsFieldBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $textFieldErrors: boolean }>(({ $textFieldErrors }) => ({
   gap: "2.08vw",
   display: "flex",
@@ -164,7 +164,7 @@ export const InputsFieldVerify = styled(Box)(() => ({
 
 export const InnerRoomAccordionDetail = styled(AccordionDetails)(() => ({
   padding: `${DesktopPxToVw(20)} 0 0 0`,
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
 
   "@media (max-width: 640px)": {
     padding: "0vw",
@@ -174,10 +174,10 @@ export const InnerRoomAccordionDetail = styled(AccordionDetails)(() => ({
 
 export const AnotherGiftCardWrapperContainer = styled(
   AccordionDetails,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   padding: "unset",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const GetOtpButton = styled(Button)(() => ({
@@ -191,13 +191,13 @@ export const GetOtpButton = styled(Button)(() => ({
 
 export const RemoveLink = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $continueButtonClicked?: boolean }>(({ $continueButtonClicked }) => ({
   fontWeight: 400,
   fontSize: "0.93vw",
   fontFamily: "Inter",
   textDecoration: "underline",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   cursor: $continueButtonClicked ? "default" : "pointer",
 }))
 
@@ -213,7 +213,7 @@ export const RedeemedBalanceBox = styled(Box)(() => ({
   alignItems: "center",
   padding: "1.04vw 1.30vw",
   justifyContent: "space-between",
-  background: theme?.palette?.neuPalette?.hexEighteen,
+  background: theme?.palette?.ihclPalette?.hexEighteen,
 
   "@media (max-width: 640px)": {
     marginTop: "3.125vw",
@@ -222,7 +222,7 @@ export const RedeemedBalanceBox = styled(Box)(() => ({
 }))
 
 export const RedeemAllTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
 
   "@media (max-width: 640px)": {
     marginLeft: "0vw",
@@ -241,18 +241,18 @@ export const NueCoinsRedeemBox = styled(Box)(() => ({
 }))
 
 export const RedeemCheckbox = styled(Checkbox)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   width: DesktopPxToVw(30),
   height: DesktopPxToVw(30),
   "&.Mui-checked": {
-    color: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexTwo,
   },
   "&&:hover": {
     backgroundColor: "transparent",
   },
 }))
 export const ColorTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 export const AccordionText = styled(AccordionSummary)(() => ({
   padding: "0vw",
@@ -335,12 +335,10 @@ export const CheckBalanceButton = styled(Button)(() => ({
 
 export const GiftCardAmountWrapperContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  padding: $isMobile
-    ? `${MobilePxToVw(20)} ${MobilePxToVw(25)} ${MobilePxToVw(18)}`
-    : "1.04vw 1.30vw",
-  background: theme?.palette?.neuPalette?.hexEighteen,
+  padding: $isMobile ? `${MobilePxToVw(20)} ${MobilePxToVw(25)} ${MobilePxToVw(18)}` : "1.04vw 1.30vw",
+  background: theme?.palette?.ihclPalette?.hexEighteen,
   display: "flex",
   marginTop: $isMobile ? MobilePxToVw(20) : "1.04vw",
   justifyContent: "space-between",
@@ -349,7 +347,7 @@ export const GiftCardAmountWrapperContainer = styled(
 
 export const FormErrorsWrapperContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   justifyContent: "space-between",

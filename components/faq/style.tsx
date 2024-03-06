@@ -1,10 +1,5 @@
 import styled from "@emotion/styled"
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Box,
-} from "@mui/material"
+import { Accordion, AccordionDetails, AccordionSummary, Box } from "@mui/material"
 import { theme } from "../../lib/theme"
 import DesktopPxToVw, { MobilePxToVw } from "../../utils/DesktopFontCalc"
 
@@ -13,7 +8,7 @@ interface TitleSchema {
 }
 
 export const FAQContentBox = styled(Box)(({ isTitle }: TitleSchema) => ({
-  // borderTop: `2px solid ${theme?.palette?.neuPalette?.hexNine}`,
+  // borderTop: `2px solid ${theme?.palette?.ihclPalette?.hexNine}`,
   marginTop: isTitle ? "2vw" : "1.2vw",
 }))
 
@@ -53,7 +48,7 @@ export const AccordionStyle = styled(Accordion)(() => ({
   width: "100%",
   background: "none",
   margin: "0px !important",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.rgbaOne}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.rgbaOne}`,
   "&:before": {
     display: "none",
   },

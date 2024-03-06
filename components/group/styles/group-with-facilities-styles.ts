@@ -5,7 +5,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 import { Box, Button, Divider, Grid, Stack, styled, Typography } from "@mui/material"
 
 export const DividerForBorder = styled(Divider)(() => ({
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
   opacity: 0.2,
 }))
 
@@ -17,27 +17,27 @@ export const ItemLogoBox = styled(Box)(() => ({
 
 export const DividerForCenterGrid = styled(Divider)(() => ({
   width: DesktopPxToVw(0),
-  background: theme?.palette?.neuPalette?.hexSixteen,
+  background: theme?.palette?.ihclPalette?.hexSixteen,
   opacity: 0.2,
   margin: "0 !important",
 }))
 
 export const SeparateVerticalDivider = styled(Divider)(() => ({
   width: DesktopPxToVw(0),
-  background: theme?.palette?.neuPalette?.hexSixteen,
+  background: theme?.palette?.ihclPalette?.hexSixteen,
   opacity: 0.2,
   height: "80%",
   marginTop: "0.938vw",
 }))
 
 export const VisibleDataTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   paddingLeft: DesktopPxToVw(30),
   cursor: "pointer",
 }))
 
 export const VisibleDataForFacilitiesTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   paddingLeft: DesktopPxToVw(45),
   cursor: "pointer",
 }))
@@ -56,7 +56,7 @@ export const PrimaryActionTitleTypography = styled(Typography)(() => ({
 
 export const TitleTypography = styled(Typography)(() => ({
   paddingBottom: "0.52vw",
-  color: theme?.palette?.neuPalette?.hexTwelve,
+  color: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const PrimaryActionImageBox = styled(Box)(() => ({
@@ -66,7 +66,7 @@ export const PrimaryActionImageBox = styled(Box)(() => ({
 }))
 
 export const SideDividerForItem = styled(Divider)(() => ({
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
   opacity: 0.2,
 }))
 
@@ -77,21 +77,21 @@ export const TotalItemTitleBox = styled(Box)(() => ({
 }))
 
 export const MenuItemTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   paddingLeft: DesktopPxToVw(30),
   cursor: "pointer",
 }))
 
 export const SideVerticalDividerForItem = styled(Divider)(() => ({
   width: DesktopPxToVw(0),
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
   opacity: 0.2,
   margin: "0 !important",
 }))
 
 export const BlocksPortableTextBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $Padding: boolean }>(({ $Padding }) => ({
   margin: "0",
 }))
@@ -104,7 +104,7 @@ export const PrimaryActionContentBox = styled(Box)(() => ({
 
 export const ItemLogoImageComponentBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $showDividerForBorder: boolean }>(({ $showDividerForBorder }) => ({
   display: "flex",
   alignItems: "center",
@@ -114,7 +114,7 @@ export const ItemLogoImageComponentBox = styled(
 }))
 
 export const DividerForBelowBorder = styled(Divider)(() => ({
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
   opacity: 0.2,
   marginTop: "2.083vw",
 }))
@@ -123,16 +123,16 @@ export const BottomDivider = styled(Divider)(() => ({
   opacity: 0.2,
   width: "100%",
   marginTop: "1.05vw",
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const ItemTitleTypography = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isHotelInfo: boolean }>(({ $isHotelInfo }) => ({
   fontSize: $isHotelInfo ? "0.729vw" : "1.25vw",
   paddingBottom: "0.52vw",
-  color: theme?.palette?.neuPalette?.hexTwelve,
+  color: theme?.palette?.ihclPalette?.hexTwelve,
   "@media (max-width: 640px)": {
     fontSize: $isHotelInfo ? "2.188vw" : "3.75vw",
     paddingBottom: MobilePxToVw(14),
@@ -142,13 +142,12 @@ export const ItemTitleTypography = styled(
 export const HotelInfoTitleTypography = styled(Typography)(() => ({
   lineHeight: "150%",
   fontWeight: 400,
-  color: theme?.palette?.neuPalette?.hexTwelve,
+  color: theme?.palette?.ihclPalette?.hexTwelve,
   "@media (max-width: 640px)": {
     fontWeight: 400,
     marginBottom: "1.563vw",
   },
 }))
-
 
 export const CellContainer = styled(Box)(() => ({
   display: "unset",
@@ -162,30 +161,28 @@ export const CellContainer = styled(Box)(() => ({
 
 export const ItemLogoWrapperContainer = styled(
   Box,
-  transientProps
-)<{ $isItemCount: boolean; $showDividerForBorder: boolean }>(
-  ({ $isItemCount, $showDividerForBorder }) => ({
-    gap: "1.2%",
-    display: "flex",
-    alignItems: "center",
-    paddingBottom: $isItemCount ? DesktopPxToVw(10) : 0,
-    paddingTop: $isItemCount ? 0 : $showDividerForBorder ? "1.081vw" : "0.89vw",
-  })
-)
+  transientProps,
+)<{ $isItemCount: boolean; $showDividerForBorder: boolean }>(({ $isItemCount, $showDividerForBorder }) => ({
+  gap: "1.2%",
+  display: "flex",
+  alignItems: "center",
+  paddingBottom: $isItemCount ? DesktopPxToVw(10) : 0,
+  paddingTop: $isItemCount ? 0 : $showDividerForBorder ? "1.081vw" : "0.89vw",
+}))
 
 export const ItemTitleWrapperTypography = styled(Typography)(() => ({
   fontWeight: 400,
-  color: theme?.palette?.neuPalette?.hexTwelve,
+  color: theme?.palette?.ihclPalette?.hexTwelve,
   "@media (max-width: 640px)": {
     fontWeight: 700,
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
 }))
 
 export const LargeHorizontalDivider = styled(Divider)(() => ({
   opacity: 0.2,
   marginTop: `${DesktopPxToVw(20)}`,
-  backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
 }))
 
 export const ItemTitleWrapperContainer = styled(Box)(() => ({
@@ -201,7 +198,7 @@ export const ItemTitleWrapperContainer = styled(Box)(() => ({
 export const LargeVerticalDivider = styled(Divider)(() => ({
   opacity: 0.2,
   marginRight: `${DesktopPxToVw(20)}`,
-  backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 export const ListMoreTypographyWrapper = styled(Box)(() => ({
   marginBlockStart: " 0vw",
@@ -218,7 +215,7 @@ export const ListBox = styled(Box)(() => ({
 }))
 
 export const BottomBorderGrid = styled(Grid)(() => ({
-  border: ` 1px solid ${theme?.palette?.neuPalette?.hexFive}20`,
+  border: ` 1px solid ${theme?.palette?.ihclPalette?.hexFive}20`,
   padding: "2.083vw 0 1.046vw",
   borderWidth: "0px 0px 1px 0px",
   "@media (max-width:640px)": {
@@ -237,8 +234,8 @@ export const MobileLogoBoxWrapper = styled(Box)(() => ({
 }))
 
 export const StyledLoadMoreButton = styled(Button)(() => ({
-  borderColor: `${theme?.palette?.neuPalette?.hexTwo}!important`,
-  color: `${theme?.palette?.neuPalette?.hexTwo}`,
+  borderColor: `${theme?.palette?.ihclPalette?.hexTwo}!important`,
+  color: `${theme?.palette?.ihclPalette?.hexTwo}`,
   width: "37.188vw",
   padding: "2.5vw 0vw",
   display: "flex",
@@ -256,12 +253,12 @@ export const StyledLoadMoreButton = styled(Button)(() => ({
 
 export const StyledChevronDown = styled(
   ChevronRight,
-  transientProps
+  transientProps,
 )<{ $more: boolean }>(({ $more }) => ({
   height: "auto",
   width: "1.2vw",
   transform: $more ? "rotate(90deg)" : "rotate(-90deg)",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   "@media (max-width: 640px)": {
     width: "3vw",
   },
@@ -278,7 +275,7 @@ export const MobileViewMoreButtonWrapper = styled(Box)(() => ({
 }))
 
 export const Diamond = styled(Box)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
   transform: "rotate(45deg)",
   width: DesktopPxToVw(8),
   height: DesktopPxToVw(8),
@@ -288,35 +285,41 @@ export const Diamond = styled(Box)(() => ({
   },
 }))
 
-export const FacilityCell = styled(Box, transientProps)<{ $isMobile: boolean, $isBorderRight: boolean, $isBorderBottom: boolean }>(({ $isMobile, $isBorderRight, $isBorderBottom }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  minHeight: '100%',
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}20`,
-  borderWidth: `0px ${$isBorderRight && !$isMobile ? '1px' : "0px"} ${$isBorderBottom && $isMobile ? '1px' : '0px'} 0px`,
-  paddingBottom: $isMobile ? '2.5vw' : '0vw',
-  marginBottom: $isMobile ? '2.5vw' : '0vw',
-}))
+export const FacilityCell = styled(
+  Box,
+  transientProps,
+)<{ $isMobile: boolean; $isBorderRight: boolean; $isBorderBottom: boolean }>(
+  ({ $isMobile, $isBorderRight, $isBorderBottom }) => ({
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100%",
+    border: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}20`,
+    borderWidth: `0px ${$isBorderRight && !$isMobile ? "1px" : "0px"} ${
+      $isBorderBottom && $isMobile ? "1px" : "0px"
+    } 0px`,
+    paddingBottom: $isMobile ? "2.5vw" : "0vw",
+    marginBottom: $isMobile ? "2.5vw" : "0vw",
+  }),
+)
 
 export const FacilityTitle = styled(Typography)(() => ({
   lineHeight: "150%",
   fontWeight: 400,
-  color: theme?.palette?.neuPalette?.hexTwelve,
+  color: theme?.palette?.ihclPalette?.hexTwelve,
   "@media (max-width: 640px)": {
     fontWeight: 400,
-
   },
 }))
 
 export const FacilityTitleContainer = styled(Box)(() => ({
   marginBottom: DesktopPxToVw(10),
-  '@media (max-width:640px)': {
-    marginBottom: "1.563vw"
-  }
+  "@media (max-width:640px)": {
+    marginBottom: "1.563vw",
+  },
 }))
 
 export const ActionsStack = styled(Stack)(() => ({
-  width: '100%',
+  width: "100%",
   flexDirection: "row",
   justifyContent: "center",
   gap: MobilePxToVw(20),

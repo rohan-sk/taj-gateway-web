@@ -31,8 +31,8 @@ const VoucherCard = ({
   const loadableValue = isAvailableVouchers ? loadAvailableVouchers : loadRedeemVouchers
 
   const backgroundColor =
-    (getCardBackgroudColor ? getCardBackgroudColor : theme?.palette?.neuPalette?.hexOne?.toLowerCase()) ===
-    theme?.palette?.neuPalette?.hexThree?.toLowerCase()
+    (getCardBackgroudColor ? getCardBackgroudColor : theme?.palette?.ihclPalette?.hexOne?.toLowerCase()) ===
+    theme?.palette?.ihclPalette?.hexThree?.toLowerCase()
 
   return (
     <Box sx={{ marginTop: isMobile ? "5.469vw" : "initial" }} aria-label="VouchersContainer">

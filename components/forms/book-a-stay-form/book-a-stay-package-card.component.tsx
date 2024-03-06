@@ -452,7 +452,7 @@ function BookAStayPackageCardComponent({
                     <KeyboardArrowDown
                       {...props}
                       sx={{
-                        color: theme?.palette?.neuPalette?.hexSeventeen,
+                        color: theme?.palette?.ihclPalette?.hexSeventeen,
                         fontWeight: 300,
                       }}
                     />
@@ -618,7 +618,7 @@ function BookAStayPackageCardComponent({
                     columnGap={DesktopPxToVw(10)}>
                     <Typography
                       whiteSpace={"nowrap"}
-                      color={theme.palette.neuPalette.Seventeen}
+                      color={theme.palette.ihclPalette.Seventeen}
                       onClick={() => setSelectedType("check_in")}
                       variant={isMobile ? "m-body-l" : "body-l"}>
                       {date?.[0] ? formatDateWithMON(date?.[0]) : "Check in"}
@@ -626,7 +626,7 @@ function BookAStayPackageCardComponent({
                     <StyledDivider sx={{ width: `${DesktopPxToVw(30)} !important` }} />
                     <Typography
                       whiteSpace={"nowrap"}
-                      color={theme.palette.neuPalette.hexSeventeen}
+                      color={theme.palette.ihclPalette.hexSeventeen}
                       onClick={() => setSelectedType("check_out")}
                       variant={isMobile ? "m-body-l" : "body-l"}>
                       {date?.[1] ? formatDateWithMON(date?.[1]) : "Check out"}

@@ -21,15 +21,9 @@ import {
 } from "./styles/book-a-stay-card-component-styles"
 import { useContext, useRef, useState } from "react"
 import { useAppNavigation } from "../../utils/NavigationUtility"
-const CustomDropDown = dynamic(() =>
-import("../hoc/CustomDropDown").then((module) => module.CustomDropDown)
-)
-const CustomSearch = dynamic(() =>
-import("../hoc/Search/CustomSearch").then((module) => module.CustomSearch)
-)
-const RenderActionItem = dynamic(() =>
-import("../hoc/actions/action-items-ui")
-)
+const CustomDropDown = dynamic(() => import("../hoc/CustomDropDown").then((module) => module.CustomDropDown))
+const CustomSearch = dynamic(() => import("../hoc/Search/CustomSearch").then((module) => module.CustomSearch))
+const RenderActionItem = dynamic(() => import("../hoc/actions/action-items-ui"))
 
 interface BookAStayCardComponentProps {
   url: string
@@ -69,15 +63,7 @@ function BookAStayCardComponent({
   const bookingFlowGlobalStore = context?.getGlobalStore(GLOBAL_STORES?.bookingFlowStore) as BookingFlowGlobalStore
 
   const CalenderIcon = () => {
-    return (
-      <Box
-        component={"img"}
-        src={ICONS?.CALENDER_ICON}
-        alt={`CalendarIcon`}
-        width={"100%"}
-        height={"100%"}
-      />
-    )
+    return <Box component={"img"} src={ICONS?.CALENDER_ICON} alt={`CalendarIcon`} width={"100%"} height={"100%"} />
   }
 
   const {
@@ -127,7 +113,7 @@ function BookAStayCardComponent({
                       fontWeight: 300,
                       fontSize: "1.25vw",
                       lineHeight: "150%",
-                      color: theme?.palette?.neuPalette?.hexSeventeen,
+                      color: theme?.palette?.ihclPalette?.hexSeventeen,
                       marginBottom: isMobile ? "4.594vw" : "",
                     }}
                   />
@@ -135,7 +121,7 @@ function BookAStayCardComponent({
                 {item?.key === "checkInAndOutLabel" && (
                   <Box
                     sx={{
-                      borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+                      borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
                       marginBottom: isMobile ? "4.594vw" : "",
                     }}>
                     <LocalizationProviderBox
@@ -179,8 +165,8 @@ function BookAStayCardComponent({
                         fontWeight: 300,
                         fontSize: isMobile ? "3.750vw" : "1.25vw",
                         lineHeight: "150%",
-                        color: theme?.palette?.neuPalette?.hexSeventeen,
-                        borderBottom: `0.05vw solid ${theme?.palette?.neuPalette?.hexOne}`,
+                        color: theme?.palette?.ihclPalette?.hexSeventeen,
+                        borderBottom: `0.05vw solid ${theme?.palette?.ihclPalette?.hexOne}`,
                         marginBottom: isMobile ? "6.563vw" : "",
                       },
                     }}

@@ -57,7 +57,7 @@ const MemberSectionComponent = (props: MemberPropsType) => {
             <AccordionSummary
               sx={{ padding: "0vw" }}
               expandIcon={
-                <ExpandMoreIconStyled sx={{ color: theme?.palette?.neuPalette?.hexSeventeen + "!important" }} />
+                <ExpandMoreIconStyled sx={{ color: theme?.palette?.ihclPalette?.hexSeventeen + "!important" }} />
               }>
               <Typography
                 sx={{

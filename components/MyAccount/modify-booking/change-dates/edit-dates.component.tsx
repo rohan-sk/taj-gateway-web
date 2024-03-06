@@ -243,7 +243,7 @@ const EditDateComponent = ({
                             setSelectedType("check_in")
                           }}
                           aria-label={"check_in"}
-                          $color={date?.[0] && !disableEdit ? "unset" : theme.palette.neuPalette.hexTwelve}
+                          $color={date?.[0] && !disableEdit ? "unset" : theme.palette.ihclPalette.hexTwelve}
                           variant={isMobile ? "m-body-l" : "body-l"}>
                           {date?.[0] ? formatDateWithMON(date?.[0]) : "Check in"}
                         </DatesText>
@@ -257,7 +257,7 @@ const EditDateComponent = ({
                             setSelectedType("check_out")
                           }}
                           aria-label={"check_out"}
-                          $color={date?.[0] && !disableEdit ? "unset" : theme.palette.neuPalette.hexTwelve}
+                          $color={date?.[0] && !disableEdit ? "unset" : theme.palette.ihclPalette.hexTwelve}
                           variant={isMobile ? "m-body-l" : "body-l"}>
                           {date?.[1] ? formatDateWithMON(date?.[1]) : "Check out"}
                         </DatesText>

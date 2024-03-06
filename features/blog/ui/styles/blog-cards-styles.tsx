@@ -7,7 +7,7 @@ export const AuthorWrapper = styled(Box)(() => ({
   flexDirection: "column",
   alignItems: "center",
   textAlign: "center",
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   padding: `${DesktopPxToVw(40)} ${DesktopPxToVw(36)}`,
   "@media (max-width: 640px)": {
     padding: `${MobilePxToVw(40)} ${MobilePxToVw(36)}`,
@@ -30,9 +30,9 @@ export const AuthorViewStoriesButton = styled(Button)(() => ({
   fontFamily: theme?.typography?.fontFamily,
   letterSpacing: "1.8px",
   fontSize: DesktopPxToVw(18),
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   padding: `${DesktopPxToVw(18)} ${DesktopPxToVw(36)}`,
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   "@media (max-width: 640px)": {
     fontSize: MobilePxToVw(18),
     letterSpacing: "1.8px",
@@ -53,7 +53,7 @@ export const ArticleTagsWrapper = styled(Box)(() => ({
 }))
 
 export const EachArticleTag = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   textAlign: "center",
   fontFamily: theme?.typography?.fontFamily,
   fontSize: DesktopPxToVw(18),
@@ -61,7 +61,7 @@ export const EachArticleTag = styled(Typography)(() => ({
   letterSpacing: "1.8px",
   padding: `${DesktopPxToVw(18)} ${DesktopPxToVw(34)}`,
   cursor: "pointer",
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   "@media (max-width: 640px)": {
     letterSpacing: "1.8px",
     fontSize: MobilePxToVw(18),
@@ -74,15 +74,15 @@ export const StoriesImageAndTitleWrapper = styled(Box)(() => ({
   gridTemplateColumns: "38% 62%",
   alignItems: "center",
   paddingBottom: DesktopPxToVw(20),
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
 }))
 
 export const TitleHyphenDivider = styled(Divider)(() => ({
   height: "1%",
   width: "2.083vw",
   marginTop: "0.7vw",
-  borderColor: theme?.palette?.neuPalette?.hexSeventeen,
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  borderColor: theme?.palette?.ihclPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     width: "6.56vw",
     marginTop: "4.8vw",
@@ -123,7 +123,7 @@ export const ArticleTagsActionBox = styled(Box)(() => ({
     gap: MobilePxToVw(10),
     width: "fit-content",
     padding: `${MobilePxToVw(16)} ${MobilePxToVw(42)}`,
-    border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+    border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   },
 }))
 
@@ -181,14 +181,14 @@ export const TravelInspirationsWrapper = styled(Box)(() => ({
 }))
 
 export const TravelInspirationTitle = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   fontSize: DesktopPxToVw(18),
   fontWeight: 700,
   letterSpacing: "1.8px",
   cursor: "pointer",
   fontFamily: theme?.typography?.fontFamily,
   padding: `${DesktopPxToVw(18)} ${DesktopPxToVw(34)}`,
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   "@media (max-width: 640px)": {
     fontSize: MobilePxToVw(18),
     letterSpacing: "1.8px",
@@ -231,7 +231,7 @@ export const CommentsButtonWrapper = styled(StoryThemeButtonWrapper)(() => ({}))
 export const CommentsWrapperBox = styled(Box)(() => ({
   display: "flex",
   gap: "2.08vw",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
   "@media (max-width: 640px)": {
     display: "block",
     gap: "0vw",
@@ -262,7 +262,7 @@ export const LikesCountTypography = styled(Typography)(() => ({
 }))
 
 export const CommentReplyTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   fontSize: DesktopPxToVw(18),
   fontWeight: 400,
   cursor: "pointer",
@@ -284,7 +284,7 @@ export const CommentsHeadingWrapper = styled(Box)(() => ({
 }))
 
 export const CommentsBoxWrapper = styled(Box)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   margin: "2.08vw 0vw 3.125vw 0vw",
   padding: "3.125vw 2.08vw 2.08vw 2.08vw",
   "@media (max-width: 640px)": {
@@ -318,7 +318,7 @@ export const CommentsInputTextField = styled(TextField)(() => ({
       fontWeight: 300,
       fontFamily: theme?.typography?.fontFamily,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         fontSize: MobilePxToVw(24),
       },
@@ -330,7 +330,7 @@ export const ThemeListingLikesWrapper = styled(Box)(() => ({
   top: "80%",
   position: "absolute",
   right: DesktopPxToVw(8),
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
   padding: `${DesktopPxToVw(8)} ${DesktopPxToVw(12)}`,
   borderRadius: "20%",
   "@media (max-width: 640px)": {

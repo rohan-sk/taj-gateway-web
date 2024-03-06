@@ -10,7 +10,7 @@ export const ScrollerBox = styled(Box)(() => ({
   flexDirection: "column",
   height: MobilePxToVw(896),
   "&::-webkit-scrollbar-thumb": {
-    backgroundColor: theme?.palette?.neuPalette?.hexSeven,
+    backgroundColor: theme?.palette?.ihclPalette?.hexSeven,
     borderRadius: MobilePxToVw(6),
   },
   "&::-webkit-scrollbar": {
@@ -20,14 +20,14 @@ export const ScrollerBox = styled(Box)(() => ({
 
 export const MainContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   padding: $isMobile ? `0vw ${MobilePxToVw(82)}` : `${DesktopPxToVw(47)} ${DesktopPxToVw(40)} 0vw`,
 }))
 
 export const SpecificationsWrapperContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   alignItems: $isMobile ? "flex-start" : "center",
@@ -38,23 +38,23 @@ export const SpecificationsWrapperContainer = styled(
 export const SpecificationsHorizontalDivider = styled(Divider)(() => ({
   opacity: 0.2,
   margin: `${DesktopPxToVw(18)} 0vw ${DesktopPxToVw(25)}`,
-  backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 export const StyledHorizontalDivider = styled(Divider)(() => ({
-  width: '100%',
-  backgroundColor: `${theme?.palette?.neuPalette?.hexSeventeen}20`,
+  width: "100%",
+  backgroundColor: `${theme?.palette?.ihclPalette?.hexSeventeen}20`,
 }))
 
 export const AmenitiesTitleTypography = styled(Typography)(() => ({
   opacity: 0.5,
   fontWeight: 700,
-  color: theme?.palette?.neuPalette?.hexEleven,
+  color: theme?.palette?.ihclPalette?.hexEleven,
 }))
 
 export const AmenitiesHorizontalDivider = styled(Divider)(() => ({
   opacity: 0.2,
   marginTop: DesktopPxToVw(25),
-  backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const AmenitiesWrapperContainer = styled(Box)(() => ({
@@ -63,18 +63,17 @@ export const AmenitiesWrapperContainer = styled(Box)(() => ({
   gap: DesktopPxToVw(23),
   flexDirection: "column",
   "&::-webkit-scrollbar-thumb": {
-    backgroundColor: theme?.palette?.neuPalette?.hexSeven,
+    backgroundColor: theme?.palette?.ihclPalette?.hexSeven,
     borderRadius: DesktopPxToVw(6),
   },
   "&::-webkit-scrollbar": {
     width: DesktopPxToVw(5),
   },
-
 }))
 
 export const HighlightsWrapperContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -84,11 +83,11 @@ export const HighlightsWrapperContainer = styled(
 
 export const HighlightsStarRate = styled(
   StarRate,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: $isMobile ? MobilePxToVw(21) : DesktopPxToVw(17),
   height: $isMobile ? MobilePxToVw(21) : DesktopPxToVw(17),
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const CategoryItemsWrapperContainer = styled(Box)(() => ({
@@ -102,22 +101,21 @@ export const IconsStack = styled(Stack)(() => ({
   minHeight: DesktopPxToVw(22),
   alignItems: "center",
   justifyContent: "center",
-  '@media (max-width:640px)': {
+  "@media (max-width:640px)": {
     minHeight: MobilePxToVw(24),
-
-  }
+  },
 }))
 
 export const CategoryItemsSquareSharp = styled(SquareSharp)(() => ({
   width: DesktopPxToVw(10),
   height: DesktopPxToVw(10),
   transform: "rotate(45deg)",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const SpecificationsItemsWrapperContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -127,7 +125,7 @@ export const SpecificationsItemsWrapperContainer = styled(
 
 export const ActionButtonWrapperContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -177,28 +175,27 @@ export const StyledDivider = styled(Divider)(() => ({
 }))
 
 export const ModalScrollContainer = styled(Box)(() => ({
-  display: 'flex',
+  display: "flex",
   flexDirection: "column",
   "&::-webkit-scrollbar-thumb": {
-    backgroundColor: theme?.palette?.neuPalette?.hexSeven,
+    backgroundColor: theme?.palette?.ihclPalette?.hexSeven,
     borderRadius: MobilePxToVw(6),
   },
   "&::-webkit-scrollbar": {
     width: MobilePxToVw(2),
   },
-
 }))
 export const DescriptionContainer = styled(Box)(() => ({
   maxHeight: DesktopPxToVw(80),
   overflowY: "auto",
-  '@media (max-width:640px)': {
-    maxHeight: 'unset',
-    overflowY: "auto"
-  }
+  "@media (max-width:640px)": {
+    maxHeight: "unset",
+    overflowY: "auto",
+  },
 }))
 export const ActionItemsContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -214,8 +211,7 @@ export const ActionItemsContainer = styled(
 }))
 export const RoomDetailsMainContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   padding: $isMobile ? `0vw   ` : `${DesktopPxToVw(47)} ${DesktopPxToVw(40)} ${DesktopPxToVw(40)}`,
-
 }))

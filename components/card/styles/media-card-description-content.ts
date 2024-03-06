@@ -14,7 +14,7 @@ export const MediaDescriptionWrapper = styled(
   overflowY: "auto",
   alignItems: "center",
   flexDirection: "column",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   maxHeight: $isMobile ? "unset" : DesktopPxToVw(515),
   margin: $isMobile ? "unset" : `0 ${DesktopPxToVw(480)}`,
   padding: $isMobile

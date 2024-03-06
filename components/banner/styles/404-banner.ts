@@ -7,7 +7,7 @@ export const TitleTypography = styled(Typography)(() => ({
   fontSize: "7.81vw",
   whiteSpace: "nowrap",
   lineHeight: "9.35vw",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 
   "@media (max-width: 640px)": {
     lineHeight: "120%",
@@ -37,7 +37,7 @@ export const PageNotFoundSubTitleTypography = styled(Typography)(() => ({
   width: "30.31vw",
   lineHeight: "120%",
   textAlign: "center",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 
   "@media (max-width: 640px)": {
     width: "69.3vw",
@@ -59,13 +59,13 @@ export const BannerActionBox = styled(Box)(() => ({
 
 export const ActionItemTypography = styled(Typography)(() => ({
   lineHeight: "140%",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const BackToHomePageArrowBackIos = styled(ArrowBackIos)(() => ({
   width: "auto",
   height: "0.78vw",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 
   "@media (max-width: 640px)": {
     height: "1.40vw",

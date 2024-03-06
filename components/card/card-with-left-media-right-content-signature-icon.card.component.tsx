@@ -63,7 +63,7 @@ const LeftMediaCardWithSignatureIcon = ({ title, subTitle, description, logo, la
               <Stack>
                 <Typography
                   sx={{
-                    color: textColor ? textColor : theme?.palette?.neuPalette?.hexSeventeen,
+                    color: textColor ? textColor : theme?.palette?.ihclPalette?.hexSeventeen,
                   }}
                   variant={isMobile ? "m-heading-s" : "heading-s"}>
                   {title}
@@ -77,7 +77,7 @@ const LeftMediaCardWithSignatureIcon = ({ title, subTitle, description, logo, la
                 }}>
                 <Typography
                   sx={{
-                    color: textColor ? textColor : theme?.palette?.neuPalette?.hexSeventeen,
+                    color: textColor ? textColor : theme?.palette?.ihclPalette?.hexSeventeen,
                   }}
                   variant={isMobile ? "m-body-s" : "body-s"}>
                   {subTitle}
@@ -88,7 +88,7 @@ const LeftMediaCardWithSignatureIcon = ({ title, subTitle, description, logo, la
               <Stack sx={{ mt: isMobile ? "5.469vw" : "1.042vw" }}>
                 <Typography
                   sx={{
-                    color: textColor ? textColor : theme?.palette?.neuPalette?.hexSeventeen,
+                    color: textColor ? textColor : theme?.palette?.ihclPalette?.hexSeventeen,
                   }}
                   variant={isMobile ? "m-body-s" : "body-s"}>
                   {description}

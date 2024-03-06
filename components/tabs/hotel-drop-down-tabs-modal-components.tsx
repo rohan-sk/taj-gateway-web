@@ -31,18 +31,11 @@ type DropDownTabItems = {
   value?: string
 }
 
-const HotelDropdownTabsModal = ({
-  navigate,
-  activePath,
-  modalProps,
-  setOpenModel,
-}: DropdownTabsModalProps) => {
+const HotelDropdownTabsModal = ({ navigate, activePath, modalProps, setOpenModel }: DropdownTabsModalProps) => {
   const isMobile = useMobileCheck()
   const router = useRouter()
   const context: any = useContext(IHCLContext)
-  const propertyStore = context?.getGlobalStore(
-    GLOBAL_STORES.propertyStore
-  ) as PropertyStore
+  const propertyStore = context?.getGlobalStore(GLOBAL_STORES.propertyStore) as PropertyStore
 
   const handleRoute = () => {
     setOpenModel(false)
@@ -66,31 +59,19 @@ const HotelDropdownTabsModal = ({
                   height="14.76vw"
                   component="img"
                   alt="Taj Logo"
-                  src={urlFor(
-                    modalDropdownContextData?.modalDropdownContextData?.logo
-                  ).url()}
+                  src={urlFor(modalDropdownContextData?.modalDropdownContextData?.logo).url()}
                 />
               </LogoBox>
             )}
             <HotelTabTitleNameTypo>
-              {modalDropdownContextData?.modalDropdownContextData?.title !==
-                undefined &&
-              typeof modalDropdownContextData?.modalDropdownContextData
-                ?.title === "string" ? (
+              {modalDropdownContextData?.modalDropdownContextData?.title !== undefined &&
+              typeof modalDropdownContextData?.modalDropdownContextData?.title === "string" ? (
                 <>
-                  {modalDropdownContextData?.modalDropdownContextData?.title?.split(
-                    ","
-                  )[0] &&
-                    modalDropdownContextData?.modalDropdownContextData?.title?.split(
-                      ","
-                    )[0]}
+                  {modalDropdownContextData?.modalDropdownContextData?.title?.split(",")[0] &&
+                    modalDropdownContextData?.modalDropdownContextData?.title?.split(",")[0]}
                   , <br />
-                  {modalDropdownContextData?.modalDropdownContextData?.title?.split(
-                    ","
-                  )[1] &&
-                    modalDropdownContextData?.modalDropdownContextData?.title?.split(
-                      ","
-                    )[1]}
+                  {modalDropdownContextData?.modalDropdownContextData?.title?.split(",")[1] &&
+                    modalDropdownContextData?.modalDropdownContextData?.title?.split(",")[1]}
                 </>
               ) : (
                 <>
@@ -100,29 +81,21 @@ const HotelDropdownTabsModal = ({
                         propertyStore?.propertyData?.hotelName
                       ) : (
                         <>
-                          {modalDropdownContextData?.modalDropdownContextData
-                            ?.title?.mobileTitle?.[0] &&
-                            modalDropdownContextData?.modalDropdownContextData
-                              ?.title?.mobileTitle?.[0]}
+                          {modalDropdownContextData?.modalDropdownContextData?.title?.mobileTitle?.[0] &&
+                            modalDropdownContextData?.modalDropdownContextData?.title?.mobileTitle?.[0]}
                           <br />
-                          {modalDropdownContextData?.modalDropdownContextData
-                            ?.title?.mobileTitle?.[1] &&
-                            modalDropdownContextData?.modalDropdownContextData
-                              ?.title?.mobileTitle?.[1]}
+                          {modalDropdownContextData?.modalDropdownContextData?.title?.mobileTitle?.[1] &&
+                            modalDropdownContextData?.modalDropdownContextData?.title?.mobileTitle?.[1]}
                         </>
                       )}
                     </>
                   ) : (
                     <>
-                      {modalDropdownContextData?.modalDropdownContextData?.title
-                        ?.desktopTitle?.[0] &&
-                        modalDropdownContextData?.modalDropdownContextData
-                          ?.title?.desktopTitle?.[0]}
+                      {modalDropdownContextData?.modalDropdownContextData?.title?.desktopTitle?.[0] &&
+                        modalDropdownContextData?.modalDropdownContextData?.title?.desktopTitle?.[0]}
                       <br />
-                      {modalDropdownContextData?.modalDropdownContextData?.title
-                        ?.desktopTitle?.[1] &&
-                        modalDropdownContextData?.modalDropdownContextData
-                          ?.title?.desktopTitle?.[1]}
+                      {modalDropdownContextData?.modalDropdownContextData?.title?.desktopTitle?.[1] &&
+                        modalDropdownContextData?.modalDropdownContextData?.title?.desktopTitle?.[1]}
                     </>
                   )}
                 </>
@@ -132,25 +105,18 @@ const HotelDropdownTabsModal = ({
               <DropDownItemBox
                 key={index}
                 sx={{
-                  borderTop:
-                    index === 0
-                      ? `2px solid ${theme?.palette?.neuPalette?.rgbaOne}`
-                      : "none",
-                }}
-              >
+                  borderTop: index === 0 ? `2px solid ${theme?.palette?.ihclPalette?.rgbaOne}` : "none",
+                }}>
                 <TabTitleTypo
                   sx={{
                     fontSize: "4.06vw",
                     lineHeight: "320%",
-                    color: theme?.palette?.neuPalette?.hexTwo,
+                    color: theme?.palette?.ihclPalette?.hexTwo,
                     fontWeight:
-                    `/${activePath
-                      ?.split("/")
-                      ?.[
-                        activePath?.split("/")?.length - 1
-                      ]?.toLowerCase()}` == item?.url?.toLowerCase()
-                      ? 700
-                      : 400,
+                      `/${activePath?.split("/")?.[activePath?.split("/")?.length - 1]?.toLowerCase()}` ==
+                      item?.url?.toLowerCase()
+                        ? 700
+                        : 400,
                   }}
                   variant="m-body-m"
                   onClick={() => {

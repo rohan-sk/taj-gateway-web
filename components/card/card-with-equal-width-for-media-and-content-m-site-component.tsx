@@ -57,9 +57,7 @@ const CardWithEqualWidthForMediaAndContentMSiteComponent = ({
   const { textColor, cardBackgroundColor } = useAesthetics(aesthetic?._ref)
   const titleElementRef = useRef<HTMLElement | null>(null)
   const titleHeight = titleElementRef?.current?.getBoundingClientRect()?.height
-  const [more, setMore] = useState<number>(
-    charactersLimit ? charactersLimit : CONSTANTS?.ITEM_DESCRIPTION_MOBILE_LIMIT
-  )
+  const [more, setMore] = useState<number>(charactersLimit ? charactersLimit : CONSTANTS?.ITEM_DESCRIPTION_MOBILE_LIMIT)
 
   useEffect(() => {
     if (setTitleHeight && titleHeight && maxheight < titleHeight) {
@@ -68,9 +66,7 @@ const CardWithEqualWidthForMediaAndContentMSiteComponent = ({
   }, [maxheight, setTitleHeight, titleHeight])
 
   return (
-    <Box
-      aria-label="card-with-equal-width-for-media-and-content-m-site"
-      position={"relative"}>
+    <Box aria-label="card-with-equal-width-for-media-and-content-m-site" position={"relative"}>
       {image?.asset?._ref && (
         <Box
           width={"100%"}
@@ -81,9 +77,7 @@ const CardWithEqualWidthForMediaAndContentMSiteComponent = ({
           src={getOptimizeImageUrl(urlFor(image?.asset?._ref).url(), gridSize)}
         />
       )}
-      <CardContentWrapper
-        className="content-box"
-        $cardBackgroundColor={cardBackgroundColor}>
+      <CardContentWrapper className="content-box" $cardBackgroundColor={cardBackgroundColor}>
         {title && (
           <Box
             ref={titleElementRef}
@@ -115,9 +109,7 @@ const CardWithEqualWidthForMediaAndContentMSiteComponent = ({
           <Box marginTop={MobilePxToVw(20)}>
             <CustomReadMore
               textStyles={{
-                color: textColor
-                  ? textColor
-                  : theme?.palette?.neuPalette?.hexSeventeen,
+                color: textColor ? textColor : theme?.palette?.ihclPalette?.hexSeventeen,
               }}
               length={more}
               variant={"m-body-sl"}>
@@ -133,9 +125,7 @@ const CardWithEqualWidthForMediaAndContentMSiteComponent = ({
                 <Typography
                   variant="m-body-s"
                   sx={{
-                    color: textColor
-                      ? textColor
-                      : theme?.palette?.text?.primary,
+                    color: textColor ? textColor : theme?.palette?.text?.primary,
                   }}>
                   {typeof item === typeof "" ? item : item?.term}
                 </Typography>

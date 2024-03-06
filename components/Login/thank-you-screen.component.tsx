@@ -68,7 +68,7 @@ const ThankYouScreen = (props: ThankYouScreenInterface) => {
                 margin: isMobile ? "2vw 0vw 3vw 0vw" : isPasswordScreen ? "3vw 0vw 0.886vw 0vw" : "2vw 0vw 0.986vw 0vw",
                 fontSize: isMobile ? "7.500vw" : "2.500vw",
                 fontFamily: theme?.palette?.font?.primaryFontFamily,
-                color: theme?.palette?.neuPalette?.hexSeventeen,
+                color: theme?.palette?.ihclPalette?.hexSeventeen,
               }}>
               {title}
             </Typography>

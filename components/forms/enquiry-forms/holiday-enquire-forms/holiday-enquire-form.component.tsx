@@ -369,7 +369,7 @@ const HolidayEnquireForm = (props: any) => {
     return () => {
       modalStore.propertyData = {}
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [incredibleJourneyTitle, modalStore.propertyData])
 
   return (
@@ -633,7 +633,7 @@ const HolidayEnquireForm = (props: any) => {
         <Box sx={{ margin: "1vw 0vw" }}>
           <Typography
             sx={{
-              color: theme?.palette?.neuPalette.hexSeventeen,
+              color: theme?.palette?.ihclPalette.hexSeventeen,
               fontSize: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
             }}>
             {props?.items?.[8]?.labelText}
@@ -761,7 +761,9 @@ const HolidayEnquireForm = (props: any) => {
               marginBottom: "2vw",
               paddingBottom: isMobile ? "8.594vw" : "",
             }}>
-            {props?.singleContent?.map((item: any, idx: number) => <PortableText blocks={item} key={idx} />)}
+            {props?.singleContent?.map((item: any, idx: number) => (
+              <PortableText blocks={item} key={idx} />
+            ))}
           </Box>
         )}
       </MainGridWrapper>

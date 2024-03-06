@@ -7,10 +7,10 @@ import { transientProps } from "../../utils/transientProps"
 
 export const ParentGrid = styled(
   Grid,
-  transientProps
+  transientProps,
 )(() => ({
   textAlign: "center",
-  border: `${DesktopPxToVw(1)} solid  ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `${DesktopPxToVw(1)} solid  ${theme?.palette?.ihclPalette?.hexTwo}`,
   //demo purposes only
   padding: "2.167vw 0vw",
   "@media (max-width: 640px)": {
@@ -31,11 +31,11 @@ export const ContainerBox = styled(Box)(() => ({
 }))
 export const CustomCheckBox = styled(Checkbox)(() => ({
   "& .MuiSvgIcon-root": { fontSize: 28 },
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   width: DesktopPxToVw(35),
   height: DesktopPxToVw(35),
   "&.Mui-checked": {
-    color: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexTwo,
     width: DesktopPxToVw(35),
     height: DesktopPxToVw(35),
   },
@@ -51,33 +51,35 @@ export const MarginBox = styled(Box)(() => ({
   marginBottom: DesktopPxToVw(32),
 }))
 
-
-export const OutlineContainer = styled(Box,transientProps)<{$isContent:boolean}>(({$isContent}) => ({
-  textAlign: 'center',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
-  padding: $isContent ? "2.083vw 0vw 2.604vw" :"3.125vw 0vw",
-  '@media (max-width:640px)': {
-    padding: "6.25vw"
-  }
+export const OutlineContainer = styled(
+  Box,
+  transientProps,
+)<{ $isContent: boolean }>(({ $isContent }) => ({
+  textAlign: "center",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
+  padding: $isContent ? "2.083vw 0vw 2.604vw" : "3.125vw 0vw",
+  "@media (max-width:640px)": {
+    padding: "6.25vw",
+  },
 }))
 
 export const ContentCenterAligner = styled(Box)(() => ({
-  textAlign: 'center',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  textAlign: "center",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   padding: "2.083vw 0vw",
-  '@media (max-width:640px)': {
-    padding: "6.25vw"
-  }
+  "@media (max-width:640px)": {
+    padding: "6.25vw",
+  },
 }))
 export const ActionButtonsContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $marginTopRequired?: boolean }>(({ $marginTopRequired }) => ({
   marginTop: $marginTopRequired ? DesktopPxToVw(32) : 0,
   display: "flex",
@@ -95,7 +97,7 @@ export const CtaBoxContainer = styled(Box)(() => ({
   display: "flex",
   justifyContent: "center",
   marginTop: DesktopPxToVw(40),
-  '@media (max-width:640px)': {
-    marginTop: MobilePxToVw(55)
-  }
+  "@media (max-width:640px)": {
+    marginTop: MobilePxToVw(55),
+  },
 }))

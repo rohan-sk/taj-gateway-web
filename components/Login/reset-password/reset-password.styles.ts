@@ -19,7 +19,7 @@ export const PasswordTextField = styled(TextField)(() => ({
     },
   },
   "& .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
@@ -29,7 +29,7 @@ export const PasswordTextField = styled(TextField)(() => ({
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: 300,
       opacity: 1,
       fontSize: DesktopPxToVw(24),

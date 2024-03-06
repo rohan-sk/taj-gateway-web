@@ -6,11 +6,7 @@ import { Box, Typography } from "@mui/material"
 import { ActionProps, ImageProps } from "../types"
 import { StyledChevronRight } from "./styles/common-styles"
 import { useAppNavigation } from "../../utils/NavigationUtility"
-import {
-  ContentBox,
-  ActionItemBox,
-  DescriptionTypo,
-} from "./styles/card-with-half-image-and-content"
+import { ContentBox, ActionItemBox, DescriptionTypo } from "./styles/card-with-half-image-and-content"
 import { useImageUtility } from "../../utils/hooks/useImageUtility"
 const CustomReadMore = dynamic(() => import("../hoc/CustomReadMore"))
 
@@ -35,20 +31,18 @@ const CardWithHalfImageAndContent = ({
   gridSize = 1,
   titleRef,
   maxheight,
-  setTitleHeight
-}:  CardWithHalfImageAndContent) => {
+  setTitleHeight,
+}: CardWithHalfImageAndContent) => {
   const navigate = useAppNavigation()
   const { getOptimizeImageUrl } = useImageUtility()
 
-
   const titleElementRef = useRef<HTMLElement | null>(null)
   const titleHeight = titleElementRef?.current?.getBoundingClientRect()?.height
-    useEffect(() => {
+  useEffect(() => {
     if (setTitleHeight && titleHeight && maxheight < titleHeight) {
       setTitleHeight(titleHeight)
     }
   }, [maxheight, setTitleHeight, titleHeight])
-
 
   return (
     <>
@@ -60,7 +54,7 @@ const CardWithHalfImageAndContent = ({
             src={getOptimizeImageUrl(urlFor(image?.asset?._ref)?.url(), gridSize)}
             sx={{ height: "100%", width: "100%", objectFit: "contain" }}
           />
-          <ContentBox sx={{ background: theme?.palette?.neuPalette?.hexOne }}>
+          <ContentBox sx={{ background: theme?.palette?.ihclPalette?.hexOne }}>
             {title && (
               <Typography
                 letterSpacing={"-0.06em"}
@@ -76,18 +70,14 @@ const CardWithHalfImageAndContent = ({
                 <CustomReadMore
                   length={charactersLimit ? Number(charactersLimit) : 110}
                   variant={"m-body-sl"}
-                  customReadMoreColor={theme?.palette?.neuPalette?.hexTwo}>
+                  customReadMoreColor={theme?.palette?.ihclPalette?.hexTwo}>
                   {description}
                 </CustomReadMore>
               </Box>
             )}
             {primaryAction?.url && (
               <ActionItemBox>
-                <Typography
-                  variant="m-text-link"
-                  onClick={() =>
-                    navigate(primaryAction?.url, primaryAction?.urlType)
-                  }>
+                <Typography variant="m-text-link" onClick={() => navigate(primaryAction?.url, primaryAction?.urlType)}>
                   {primaryAction?.title}
                 </Typography>
                 <StyledChevronRight />

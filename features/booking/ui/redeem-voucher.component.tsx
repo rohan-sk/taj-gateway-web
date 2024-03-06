@@ -6,15 +6,7 @@ import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined"
 import TextfieldValidator from "../../../utils/validations/TextfieldValidator"
 import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined"
 import { GCNumber, GCPin } from "../../../components/forms/gift-card-form/constants"
-import {
-  Box,
-  Input,
-  Button,
-  IconButton,
-  Typography,
-  FormControl,
-  InputAdornment,
-} from "@mui/material"
+import { Box, Input, Button, IconButton, Typography, FormControl, InputAdornment } from "@mui/material"
 import {
   RedeemBox,
   GetOtpButton,
@@ -87,9 +79,7 @@ const RedeemVoucher = () => {
               value={formValues.CardNumber}
               inputProps={{ maxLength: 16 }}
               onChange={(e) => handleChangeForm(e)}
-              helperText={
-                formErrors[GCNumber] && formValues[GCNumber].length < 16 && ErrorMessage[GCNumber]
-              }
+              helperText={formErrors[GCNumber] && formValues[GCNumber].length < 16 && ErrorMessage[GCNumber]}
             />
             <FormControl variant="standard" sx={{ width: isMobile ? "22.188vw" : "9.37vw" }}>
               <Input
@@ -114,9 +104,7 @@ const RedeemVoucher = () => {
             </FormControl>
             <GetOtpButton
               variant="light-contained"
-              disabled={
-                formErrors?.GCNumber === false && formErrors?.GCPin === false ? false : true
-              }
+              disabled={formErrors?.GCNumber === false && formErrors?.GCPin === false ? false : true}
               onClick={() => {
                 alert("Implementation is in pending")
               }}>
@@ -167,7 +155,7 @@ const RedeemVoucher = () => {
           <RedeemBox
             sx={{
               padding: "1.04vw 1.30vw",
-              background: theme?.palette?.neuPalette?.hexEighteen,
+              background: theme?.palette?.ihclPalette?.hexEighteen,
             }}>
             <ColorTypography variant="body-ml">{"10% Discount applied"}</ColorTypography>
             <ColorTypography variant="body-ml">₹ {userBalance}</ColorTypography>

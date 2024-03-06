@@ -575,7 +575,7 @@ const BillingDetailCardComponent = ({ props, isLoyaltyEpicure }: any) => {
                     onClick={() => setOpenShare(true)}
                     startIcon={<ConfirmationMailShareIcon />}>
                     <BoldTypography
-                      sx={{ color: theme?.palette?.neuPalette?.hexOne }}
+                      sx={{ color: theme?.palette?.ihclPalette?.hexOne }}
                       variant={isMobile ? "m-heading-xxs" : "heading-xxs"}>
                       {data?.share}
                     </BoldTypography>
@@ -632,7 +632,7 @@ const BillingDetailCardComponent = ({ props, isLoyaltyEpicure }: any) => {
                     }>
                     <Typography
                       fontWeight={700}
-                      sx={{ color: theme?.palette?.neuPalette?.hexOne }}
+                      sx={{ color: theme?.palette?.ihclPalette?.hexOne }}
                       variant={isMobile ? "m-body-xs" : "body-s"}>
                       {data?.share}
                     </Typography>

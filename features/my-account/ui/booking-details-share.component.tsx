@@ -37,7 +37,7 @@ const BookingDetailsShare = ({ data, setOpenShare }: any) => {
   const isMobile = useMobileCheck()
   const bookingDetails = data?.orderLineItems?.[0]?.hotel
   const roomDetails = data?.orderLineItems?.[0]?.hotel?.rooms?.[0]
-  const { name, bookingNumber, mobileNumber, hotelId="" } = data?.orderLineItems?.[0]?.hotel || {}
+  const { name, bookingNumber, mobileNumber, hotelId = "" } = data?.orderLineItems?.[0]?.hotel || {}
 
   const handleClose = () => {
     setOpenShare(false)
@@ -46,7 +46,7 @@ const BookingDetailsShare = ({ data, setOpenShare }: any) => {
   useEffect(() => {
     hotelId && setHotelBannerData(hotelId)
   }, [])
-  
+
   return (
     <BackDropBox>
       <ParentBox aria-label="BookingDetailsShare">
@@ -89,11 +89,11 @@ const BookingDetailsShare = ({ data, setOpenShare }: any) => {
               <ContactDetailStack>
                 <Typography variant={isMobile ? "m-body-s" : "body-s"}>More info pls call</Typography>
                 {isMobile ? (
-                  <Typography variant={"m-body-s"} color={theme.palette.neuPalette.hexTwo}>
+                  <Typography variant={"m-body-s"} color={theme.palette.ihclPalette.hexTwo}>
                     <a href={`tel:${mobileNumber}`}>{mobileNumber}</a>
                   </Typography>
                 ) : (
-                  <Typography variant={"body-s"} color={theme.palette.neuPalette.hexTwo}>
+                  <Typography variant={"body-s"} color={theme.palette.ihclPalette.hexTwo}>
                     {mobileNumber}
                   </Typography>
                 )}

@@ -1,19 +1,12 @@
 import styled from "@emotion/styled"
 import { theme } from "../../../../lib/theme"
 import { transientProps } from "../../../../utils/transientProps"
-import {
-  Box,
-  FormControl,
-  InputLabel,
-  Select,
-  TextField,
-  Typography,
-} from "@mui/material"
+import { Box, FormControl, InputLabel, Select, TextField, Typography } from "@mui/material"
 import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 
 export const MainContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   textAlign: "center",
   padding: $isMobile ? "0vw 12.813vw 10.313vw" : "3.646vw 6.406vw 1.563vw",
@@ -21,7 +14,7 @@ export const MainContainer = styled(
 
 export const TextFieldsContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "column",
@@ -31,7 +24,7 @@ export const TextFieldsContainer = styled(
 
 export const TextFieldsWrapperBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   gap: $isMobile ? "6.25vw" : "2.083vw",
   display: "flex",
@@ -40,7 +33,7 @@ export const TextFieldsWrapperBox = styled(
 
 export const TextFieldsSecondWrapperBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   gap: $isMobile ? "6.25vw" : "1.823vw",
   display: "flex",
@@ -61,7 +54,7 @@ export const StyledTextField = styled(TextField)(() => ({
   "& .MuiInputBase-input ": {
     fontFamily: "Inter",
     fontSize: DesktopPxToVw(24),
-    color: theme?.palette?.neuPalette?.hexTwelve,
+    color: theme?.palette?.ihclPalette?.hexTwelve,
     "@media (max-width: 640px)": {
       height: "4.2vw",
       fontSize: "3.75vw",
@@ -69,7 +62,7 @@ export const StyledTextField = styled(TextField)(() => ({
   },
   "& .MuiFormHelperText-root": {
     fontSize: DesktopPxToVw(18),
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     "@media (max-width: 640px)": {
       fontSize: "2.75vw",
     },
@@ -79,7 +72,7 @@ export const StyledTextField = styled(TextField)(() => ({
       textOverflow: "ellipsis !important",
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexTwelve,
+      color: theme?.palette?.ihclPalette?.hexTwelve,
       fontWeight: 300,
       fontStyle: "normal",
       fontFamily: "Inter",
@@ -97,14 +90,14 @@ export const DescriptionTextField = styled(TextField)(() => ({
     fontFamily: "Inter",
     fontSize: DesktopPxToVw(24),
     lineHeight: "140%",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     "@media (max-width: 640px)": {
       height: "4.2vw",
       fontSize: "3.75vw",
     },
   },
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "2.75vw",
@@ -115,7 +108,7 @@ export const DescriptionTextField = styled(TextField)(() => ({
       textOverflow: "ellipsis !important",
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: 300,
       fontStyle: "normal",
       fontFamily: "Inter",
@@ -130,7 +123,7 @@ export const DescriptionTextField = styled(TextField)(() => ({
 
 export const MobileNumberContainerBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   width: $isMobile ? "100%" : "19.167vw",
@@ -142,7 +135,7 @@ export const GustDropDownInputLabel = styled(InputLabel)(() => ({
   fontSize: DesktopPxToVw(24),
   fontFamily: "Inter",
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     fontSize: "3.75vw",
     lineHeight: "4.35vw",
@@ -151,7 +144,7 @@ export const GustDropDownInputLabel = styled(InputLabel)(() => ({
 
 export const GustDropDownSelect = styled(
   Select,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   fontSize: $isMobile ? "3.75vw" : "1.25vw",
   fontWeight: 300,
@@ -160,9 +153,7 @@ export const GustDropDownSelect = styled(
   lineHeight: "2vw",
   "& .MuiSelect-select": {
     "&:focus": {
-      backgroundColor: $isMobile
-        ? theme?.palette?.background?.paper
-        : theme?.palette?.background?.default,
+      backgroundColor: $isMobile ? theme?.palette?.background?.paper : theme?.palette?.background?.default,
     },
   },
   "@media (max-width: 640px)": {
@@ -199,7 +190,7 @@ export const DatePickerTextField = styled(TextField)(() => ({
     },
   },
   "&  .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexTwentyOne} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexTwentyOne} !important`,
     fontSize: DesktopPxToVw(18),
   },
   input: {
@@ -208,7 +199,7 @@ export const DatePickerTextField = styled(TextField)(() => ({
       fontWeight: 500,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         fontSize: "3.75vw",
         lineHeight: "4.8vw",
@@ -219,10 +210,10 @@ export const DatePickerTextField = styled(TextField)(() => ({
 
 export const DescribeEventTypography = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   paddingBottom: $isMobile ? "4.688vw" : "1.042vw",
-  color: theme?.palette?.neuPalette.hexSeventeen,
+  color: theme?.palette?.ihclPalette.hexSeventeen,
   fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
 }))
 
@@ -231,7 +222,7 @@ export const MobileNumberErrorTextTypography = styled(Typography)(() => ({
   marginTop: "0.1vw",
   position: "relative",
   alignSelf: "self-start",
-  color: theme?.palette?.neuPalette?.hexTen,
+  color: theme?.palette?.ihclPalette?.hexTen,
   fontSize: DesktopPxToVw(18),
   "@media (max-width: 640px)": {
     marginTop: "1vw",
@@ -241,11 +232,9 @@ export const MobileNumberErrorTextTypography = styled(Typography)(() => ({
 
 export const MainWrapperContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  backgroundColor: $isMobile
-    ? theme?.palette?.background?.paper
-    : theme?.palette?.background?.default,
+  backgroundColor: $isMobile ? theme?.palette?.background?.paper : theme?.palette?.background?.default,
 }))
 
 export const PlaneEventPhoneNumberField = styled(TextField)(() => ({
@@ -264,7 +253,7 @@ export const PlaneEventPhoneNumberField = styled(TextField)(() => ({
   },
   "& .MuiFormHelperText-root": {
     fontSize: DesktopPxToVw(18),
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
   },
   input: {
     "&::placeholder": {

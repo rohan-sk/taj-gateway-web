@@ -25,7 +25,7 @@ export const CustomSearch = ({
   fontSizeProp,
   commonSearchIcon = true,
   backgroundColor,
-  textColor = theme?.palette?.neuPalette?.hexSeventeen,
+  textColor = theme?.palette?.ihclPalette?.hexSeventeen,
   onChange,
   iconColor,
 }: any) => {
@@ -75,7 +75,7 @@ export const CustomSearch = ({
     setShowClearIcon("none")
     setValue("")
   }
-  let getBgColor = backgroundColor || theme?.palette?.neuPalette?.hexOne
+  let getBgColor = backgroundColor || theme?.palette?.ihclPalette?.hexOne
   const inputStyle = {
     WebkitBoxShadow: `0 0 0 1000px ${getBgColor} inset`,
   }
@@ -138,13 +138,8 @@ export const CustomSearch = ({
             endAdornment: (
               <>
                 {value && (
-                  <InputAdornment
-                    position="end"
-                    style={{ display: showClearIcon }}>
-                    <CloseRoundedIcon
-                      sx={{ cursor: "pointer" }}
-                      onClick={handleClearSearch}
-                    />
+                  <InputAdornment position="end" style={{ display: showClearIcon }}>
+                    <CloseRoundedIcon sx={{ cursor: "pointer" }} onClick={handleClearSearch} />
                   </InputAdornment>
                 )}
               </>

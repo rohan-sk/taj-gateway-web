@@ -1,18 +1,11 @@
-import {
-  Box,
-  Button,
-  FormControlLabel,
-  Radio,
-  TextField,
-  styled,
-} from "@mui/material"
+import { Box, Button, FormControlLabel, Radio, TextField, styled } from "@mui/material"
 import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 import { transientProps } from "../../../../utils/transientProps"
 import { theme } from "../../../../lib/theme"
 
 export const WrapperBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $gap: string }>(({ $gap }) => ({
   gap: $gap,
   display: "flex",
@@ -26,24 +19,16 @@ export const WrapperBox = styled(
 
 export const StyledButton = styled(
   Button,
-  transientProps
+  transientProps,
 )<{ $active: boolean; $width?: string }>(({ $active, $width }) => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
-  backgroundColor: $active
-    ? theme?.palette?.neuPalette?.hexTwo
-    : theme?.palette?.neuPalette?.hexOne,
-  color: $active
-    ? theme?.palette?.neuPalette?.hexOne
-    : theme?.palette?.neuPalette?.hexTwo,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
+  backgroundColor: $active ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.ihclPalette?.hexOne,
+  color: $active ? theme?.palette?.ihclPalette?.hexOne : theme?.palette?.ihclPalette?.hexTwo,
   height: "2.604vw",
   width: $width ?? $width,
   "&:hover": {
-    backgroundColor: $active
-      ? theme?.palette?.neuPalette?.hexTwo
-      : theme?.palette?.neuPalette?.hexOne,
-    color: $active
-      ? theme?.palette?.neuPalette?.hexOne
-      : theme?.palette?.neuPalette?.hexTwo,
+    backgroundColor: $active ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.ihclPalette?.hexOne,
+    color: $active ? theme?.palette?.ihclPalette?.hexOne : theme?.palette?.ihclPalette?.hexTwo,
   },
   fontWeight: "300 !important",
   "@media (max-width: 640px)": {
@@ -69,7 +54,7 @@ export const InputText = styled(TextField)(() => ({
       fontWeight: 500,
       fontSize: DesktopPxToVw(24),
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
 
@@ -94,7 +79,7 @@ export const InputText = styled(TextField)(() => ({
 }))
 
 export const BorderBox = styled(Box)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   padding: "2.084vw 1.57vw",
   "@media (max-width: 640px)": {
     padding: "8.6vw 5vw",
@@ -120,7 +105,7 @@ export const TitleTickWrapper = styled(Box)(() => ({
 export const FormControlText = styled(FormControlLabel)(() => ({
   "& .MuiFormControlLabel-label": {
     fontSize: DesktopPxToVw(24),
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     "@media (max-width: 640px)": {
       fontSize: MobilePxToVw(22),
     },
@@ -132,7 +117,7 @@ export const CustomRadio = styled(Radio)(() => ({
     fontSize: "1.345vw !important",
   },
   "&, &.Mui-checked": {
-    color: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexTwo,
   },
   "@media (max-width: 640px)": {
     ".MuiSvgIcon-root": {
@@ -156,7 +141,7 @@ export const TitleContainer = styled(Box)(() => ({
 export const FileUploadBox: any = styled(Box)(() => ({
   backgroundColor: theme?.palette?.background?.paper,
   marginLeft: DesktopPxToVw(40),
-  border: `2px dashed ${theme?.palette?.neuPalette?.hexTwelve}`,
+  border: `2px dashed ${theme?.palette?.ihclPalette?.hexTwelve}`,
   cursor: "pointer",
 }))
 
@@ -181,7 +166,7 @@ export const DropContainer: any = styled(Box)(() => ({
 }))
 
 export const DocumentContainer: any = styled(Box)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   borderRadius: DesktopPxToVw(6),
   display: "flex",
   justifyContent: "space-between",

@@ -36,15 +36,9 @@ const ReservationContactsCard = ({
 }: any) => {
   const isMobile = useMobileCheck()
   return (
-    <Stack
-      gap={isMobile ? MobilePxToVw(20) : DesktopPxToVw(20)}
-      flexDirection={isMobile ? "row" : "column"}>
-      <Stack
-        flexShrink={0}
-        sx={{ width: isMobile ? MobilePxToVw(300) : "100%" }}>
-        <StyledTypography
-          sx={{ fontWeight: 700 }}
-          variant={isMobile ? "m-body-sxl" : "body-ml"}>
+    <Stack gap={isMobile ? MobilePxToVw(20) : DesktopPxToVw(20)} flexDirection={isMobile ? "row" : "column"}>
+      <Stack flexShrink={0} sx={{ width: isMobile ? MobilePxToVw(300) : "100%" }}>
+        <StyledTypography sx={{ fontWeight: 700 }} variant={isMobile ? "m-body-sxl" : "body-ml"}>
           {title}
         </StyledTypography>
       </Stack>
@@ -59,24 +53,18 @@ const ReservationContactsCard = ({
                 gap={isMobile ? MobilePxToVw(7) : ""}>
                 <CallIcon
                   style={{
-                    marginRight: isMobile
-                      ? MobilePxToVw(12)
-                      : DesktopPxToVw(12),
-                    color: theme?.palette?.neuPalette?.hexOne,
+                    marginRight: isMobile ? MobilePxToVw(12) : DesktopPxToVw(12),
+                    color: theme?.palette?.ihclPalette?.hexOne,
                     width: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                   }}
                 />
                 {!isMobile ? (
-                  <StyledTypography
-                    sx={{ lineHeight: "140%" }}
-                    variant={"body-s"}>
+                  <StyledTypography sx={{ lineHeight: "140%" }} variant={"body-s"}>
                     {item?.term}
                   </StyledTypography>
                 ) : (
                   <Stack>
-                    <StyledTypography
-                      sx={{ lineHeight: "140%" }}
-                      variant={"m-body-s"}>
+                    <StyledTypography sx={{ lineHeight: "140%" }} variant={"m-body-s"}>
                       {item?.term}
                     </StyledTypography>
                   </Stack>

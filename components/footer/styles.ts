@@ -2,15 +2,15 @@ import styled from "@emotion/styled"
 import { theme } from "../../lib/theme"
 import { Box, Button, Divider, Grid, TextField, Typography } from "@mui/material"
 import DesktopPxToVw, { MobilePxToVw } from "../../utils/DesktopFontCalc"
-const whiteColor = theme?.palette?.neuPalette?.hexOne
+const whiteColor = theme?.palette?.ihclPalette?.hexOne
 
 export const MainBox = styled(Box)(() => ({
   position: "relative",
-  background: theme?.palette?.neuPalette?.hexFive,
-  borderTop: `0.052vw solid ${theme?.palette?.neuPalette?.hexFourteen}`,
+  background: theme?.palette?.ihclPalette?.hexFive,
+  borderTop: `0.052vw solid ${theme?.palette?.ihclPalette?.hexFourteen}`,
 
   "@media (max-width: 640px)": {
-    borderTop: `0.156vw solid ${theme?.palette?.neuPalette?.hexFourteen}`,
+    borderTop: `0.156vw solid ${theme?.palette?.ihclPalette?.hexFourteen}`,
   },
 }))
 
@@ -172,10 +172,10 @@ export const FooterTextField = styled(TextField)(() => ({
     },
   },
   "& label.Mui-focused": {
-    color: theme?.palette?.neuPalette?.hexSix,
+    color: theme?.palette?.ihclPalette?.hexSix,
   },
   "& .MuiInput-underline:before": {
-    borderBottomColor: theme?.palette?.neuPalette?.hexSix,
+    borderBottomColor: theme?.palette?.ihclPalette?.hexSix,
   },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
@@ -252,7 +252,7 @@ export const BrandImagesTopDivider = styled(Divider)(() => ({
   opacity: "0.4",
   height: "0.5px",
   margin: "1.979vw 0vw 2.396vw 0vw",
-  background: theme?.palette?.neuPalette?.hexSeven,
+  background: theme?.palette?.ihclPalette?.hexSeven,
 
   "@media (max-width: 640px)": {
     height: "0.156vw",
@@ -265,7 +265,7 @@ export const BrandImagesBottomDivider = styled(Divider)(() => ({
   width: "100%",
   opacity: "0.4",
   margin: "1.979vw 0vw 2.396vw 0vw",
-  background: theme?.palette?.neuPalette?.hexSeven,
+  background: theme?.palette?.ihclPalette?.hexSeven,
 
   "@media (max-width: 640px)": {
     height: "0.156vw",

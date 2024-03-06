@@ -8,7 +8,7 @@ export const MainBox = styled(Box)(() => ({
   maxWidth: "49.271vw",
   padding: "6.667vw 14.5vw 5.938vw 14.5vw",
   boxShadow: "-6px 10px 24px rgba(0, 0, 0, 0.1)",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   "@media (max-width: 640px)": {
     maxWidth: "100%",
     height: "100vh",
@@ -33,7 +33,7 @@ export const SubscriptionMainBox = styled(Box)(() => ({
   textAlign: "center",
   width: "62.5vw",
   boxShadow: "-6px 10px 24px rgba(0, 0, 0, 0.1)",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   "@media (max-width: 640px)": {
     width: "100%",
     boxShadow: "unset",

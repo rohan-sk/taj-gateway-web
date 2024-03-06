@@ -215,7 +215,7 @@ const SSOLoginMobileNumberForm = ({ props }: any) => {
           }}
           iconStyle={{
             position: "static !important",
-            color: `${theme?.palette?.neuPalette?.hexSeventeen}`,
+            color: `${theme?.palette?.ihclPalette?.hexSeventeen}`,
             fontSize: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
           }}
           dropdownStyle={{

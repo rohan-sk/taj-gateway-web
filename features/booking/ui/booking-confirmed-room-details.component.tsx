@@ -353,8 +353,8 @@ const BookingConfirmedRoomDetails = (props: any) => {
                         lineHeight={"150%"}
                         color={
                           roomData?.changeTax < 0
-                            ? theme.palette.neuPalette.hexTwo
-                            : theme.palette.neuPalette.hexTwentyFour
+                            ? theme.palette.ihclPalette.hexTwo
+                            : theme.palette.ihclPalette.hexTwentyFour
                         }
                         variant={isMobile ? "m-body-m" : "body-ml"}>
                         {roomData?.changeTax >= 0
@@ -385,8 +385,8 @@ const BookingConfirmedRoomDetails = (props: any) => {
                         lineHeight={"150%"}
                         color={
                           roomData?.changePrice < 0
-                            ? theme.palette.neuPalette.hexTwo
-                            : theme.palette.neuPalette.hexTwentyFour
+                            ? theme.palette.ihclPalette.hexTwo
+                            : theme.palette.ihclPalette.hexTwentyFour
                         }
                         variant={isMobile ? "m-body-m" : "body-ml"}>
                         {roomData?.changePrice >= 0
@@ -596,7 +596,7 @@ const BookingConfirmedRoomDetails = (props: any) => {
                           lineHeight={"150%"}
                           whiteSpace={"nowrap"}
                           color={
-                            taxChange < 0 ? theme.palette.neuPalette.hexTwo : theme.palette.neuPalette.hexTwentyFour
+                            taxChange < 0 ? theme.palette.ihclPalette.hexTwo : theme.palette.ihclPalette.hexTwentyFour
                           }>
                           {taxChange >= 0
                             ? taxChange > 0
@@ -623,7 +623,7 @@ const BookingConfirmedRoomDetails = (props: any) => {
                           lineHeight={"150%"}
                           whiteSpace={"nowrap"}
                           color={
-                            priceChange < 0 ? theme.palette.neuPalette.hexTwo : theme.palette.neuPalette.hexTwentyFour
+                            priceChange < 0 ? theme.palette.ihclPalette.hexTwo : theme.palette.ihclPalette.hexTwentyFour
                           }>
                           {priceChange >= 0
                             ? priceChange > 0
@@ -985,7 +985,7 @@ const BookingConfirmedRoomDetails = (props: any) => {
           sx={{
             width: "0.05vw",
             margin: "0.2vw  0.8vw",
-            background: theme?.palette?.neuPalette?.hexTwo,
+            background: theme?.palette?.ihclPalette?.hexTwo,
             "@media (max-width: 640px)": {
               margin: "0.2vw 4vw",
             },

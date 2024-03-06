@@ -20,11 +20,11 @@ export const MainBox = styled(Box)(() => ({
   flexDirection: "column",
   overflowY: "scroll",
   paddingTop: MobilePxToVw(32),
-  backgroundColor: theme.palette.neuPalette.hexOne,
+  backgroundColor: theme.palette.ihclPalette.hexOne,
 }))
 
 export const CategoryText = styled(Typography)(() => ({
-  color: `${theme.palette.neuPalette.hexTwelve} !important`,
+  color: `${theme.palette.ihclPalette.hexTwelve} !important`,
   paddingTop: MobilePxToVw(10),
 }))
 
@@ -79,14 +79,14 @@ export const DateInnerBox = styled(Box)(() => ({
 export const DateDivider = styled(Divider)(() => ({
   width: "5.672vw",
   height: "0.156vw",
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const DateBottomDivider = styled(Divider)(() => ({
   opacity: 0.2,
   width: "100%",
   height: "0.156vw",
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const SpecialCodeMainBox = styled(Box)(() => ({
@@ -104,7 +104,7 @@ export const ColumnDirectionBox: any = styled(Box)(() => ({
 export const SpecialCodeDropDownDivider = styled(Divider)(() => ({
   height: "0.156vw",
   margin: "3.125vw 0vw",
-  background: theme?.palette?.neuPalette?.hexSixteen,
+  background: theme?.palette?.ihclPalette?.hexSixteen,
 }))
 
 export const CheckIconBox = styled(Box)(() => ({
@@ -131,20 +131,20 @@ export const TermsLinkTypography = styled(Typography)(() => ({
   whiteSpace: "nowrap",
   lineHeight: "3.516vw",
   fontFamily: "Inter",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const AddButton = styled(Button)(() => ({
   width: "16vw !important",
   height: "7.813vw !important",
-  color: theme?.palette?.neuPalette?.hexOne,
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
   "&.Mui-disabled": {
     color: "darkGray",
   },
   " &:hover": {
-    color: theme?.palette?.neuPalette?.hexOne,
-    background: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexOne,
+    background: theme?.palette?.ihclPalette?.hexSeventeen,
   },
 }))
 
@@ -154,13 +154,13 @@ export const SelectedCodeBox = styled(Box)(() => ({
   marginTop: "3.125vw",
   padding: "1.484vw 4.688vw",
   justifyContent: "space-between",
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
 }))
 
 export const AccountTypography = styled(Typography)(() => ({
   fontWeight: 400,
   cursor: "pointer",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const FlexBox = styled(Box)(() => ({
@@ -237,7 +237,7 @@ export const StyledListItem: any = styled(ListItemText)(() => ({
   "& .MuiTypography-root": {
     fontWeight: 300,
     fontSize: "3.75vw",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
 }))
 
@@ -246,12 +246,12 @@ export const SpecialCodeDataWrapper = styled(Box)(() => ({
   maxHeight: "35vh",
   overflowY: "scroll",
   padding: `${MobilePxToVw(30)}`,
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   "::-webkit-scrollbar-thumb": {
     width: MobilePxToVw(5),
-    backgroundColor: theme?.palette?.neuPalette?.hexTwelve,
+    backgroundColor: theme?.palette?.ihclPalette?.hexTwelve,
   },
   "::-webkit-scrollbar-track": {
-    backgroundColor: theme?.palette?.neuPalette?.hexSeven,
+    backgroundColor: theme?.palette?.ihclPalette?.hexSeven,
   },
 }))

@@ -7,12 +7,12 @@ import { transientProps } from "../../../../utils/transientProps"
 export const MainBox = styled(Box)(() => ({
   padding: "2.08vw",
   marginTop: DesktopPxToVw(25),
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen} `,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen} `,
 
   "@media (max-width: 640px)": {
     margin: "9.375vw 0 0",
     padding: "6.250vw 5vw",
-    border: `0.156vw solid ${theme?.palette?.neuPalette?.hexSixteen} `,
+    border: `0.156vw solid ${theme?.palette?.ihclPalette?.hexSixteen} `,
   },
 }))
 
@@ -116,7 +116,7 @@ export const DynamicText = styled(
 export const StyledDivider = styled(Divider)(() => ({
   height: "0.05vw",
   marginTop: "1.04vw",
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
 
   "@media (max-width: 640px)": {
     marginTop: "0vw",
@@ -175,7 +175,7 @@ export const TaxLabelStack = styled(Stack)(() => ({
 
 export const ContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   backgroundColor: theme?.palette?.background?.default,
   display: "flex",
@@ -188,7 +188,5 @@ export const ContentWrapper = styled(
   margin: "0 auto",
   gap: $isMobile ? MobilePxToVw(40) : DesktopPxToVw(24),
   boxShadow: $isMobile ? "unset" : "-6px 10px 24px 0px rgba(0, 0, 0, 0.10)",
-  padding: $isMobile
-    ? `0vw ${MobilePxToVw(75)}`
-    : `${DesktopPxToVw(80)} ${DesktopPxToVw(73)}`,
+  padding: $isMobile ? `0vw ${MobilePxToVw(75)}` : `${DesktopPxToVw(80)} ${DesktopPxToVw(73)}`,
 }))

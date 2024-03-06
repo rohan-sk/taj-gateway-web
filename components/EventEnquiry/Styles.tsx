@@ -46,7 +46,7 @@ export const DateTextField = styled(TextField)(() => ({
     color: "red!important",
   },
   "&  .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexTwentyOne}`,
+    color: `${theme?.palette?.ihclPalette?.hexTwentyOne}`,
     fontSize: DesktopPxToVw(18),
   },
   input: {
@@ -55,7 +55,7 @@ export const DateTextField = styled(TextField)(() => ({
       fontWeight: 500,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
 }))
@@ -67,7 +67,7 @@ export const MobileNumberInput = styled(TextField)(() => ({
       textOverflow: "ellipsis !important",
       fontWeight: 500,
       opacity: 1,
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontSize: DesktopPxToVw(24),
     },
   },

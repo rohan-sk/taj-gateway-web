@@ -7,12 +7,12 @@ export const EpicureStyledAppBar: any = styled(AppBar)(() => ({
   display: "flex",
   "&.MuiAppBar-root": {
     boxShadow: "none",
-    borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexTwentyFive}`,
+    borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexTwentyFive}`,
     justifyContent: "center",
     minHeight: "4.8vw",
     zIndex: 1200,
   },
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const EpicureHeaderLogoBox = styled(Box)(() => ({
@@ -21,7 +21,7 @@ export const EpicureHeaderLogoBox = styled(Box)(() => ({
   padding: "0.73vw 5.8vw 0.88vw 12.4vw",
   "@media (max-width: 640px)": {
     padding: "0.73vw 5.8vw 0.88vw 4.8vw",
-  }
+  },
 }))
 
 export const ImageBoxWrapper: any = styled(Box)(() => ({
@@ -41,7 +41,7 @@ export const ButtonBox = styled(Box)(() => ({
 export const StyledTitle = styled(Typography)(() => ({
   cursor: "pointer",
   letterSpacing: "0.03em",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   lineHeight: "125%",
 }))
 
@@ -56,7 +56,7 @@ export const StyledProfileIcon: any = styled(Box)(() => ({
 }))
 
 export const ParentBoxHead: any = styled(Box)(() => ({
-  position: "relative", 
+  position: "relative",
   width: "100%",
 }))
 
@@ -69,30 +69,28 @@ export const BoxAppBarPurchase: any = styled(Box)(() => ({
   },
 }))
 
-export const StyledTitleEpicure = styled(
-  Typography)(() => ({
+export const StyledTitleEpicure = styled(Typography)(() => ({
   cursor: "pointer",
   letterSpacing: "0.03em",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   lineHeight: "125%",
   gap: DesktopPxToVw(10),
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  marginRight:  "12.6vw",
+  marginRight: "12.6vw",
   "@media (max-width: 640px)": {
-    marginRight: "6vw" ,
+    marginRight: "6vw",
   },
 }))
 
-export const TypographyTitleEpicure: any = styled(
-  Typography )(() => ({
+export const TypographyTitleEpicure: any = styled(Typography)(() => ({
   fontWeight: 400,
   letterSpacing: "0.03em",
   marginRight: "12.6vw",
   cursor: "pointer",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   "@media (max-width: 640px)": {
-    marginRight: "6vw" ,
+    marginRight: "6vw",
   },
 }))

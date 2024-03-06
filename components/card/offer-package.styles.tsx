@@ -29,10 +29,10 @@ export const ComponentContainer = styled(
     : $packageOffer
     ? "0vw"
     : DesktopPxToVw(60),
-  border: $packageOffer ? "none" : `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: $packageOffer ? "none" : `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   "@media (max-width:640px)": {
     borderWidth: "0vw",
-    border: $packageOffer ? "none" : $iconItems ? "none" : `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+    border: $packageOffer ? "none" : $iconItems ? "none" : `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   },
 }))
 

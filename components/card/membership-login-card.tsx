@@ -107,7 +107,7 @@ const MembershipLoginCard = ({
                   <MobileContentBox>
                     <Box sx={{ marginBottom: "1.094vw" }}>
                       <Typography
-                        sx={{ color: `${theme?.palette?.neuPalette?.hexOne}`, textTransform: "capitalize" }}
+                        sx={{ color: `${theme?.palette?.ihclPalette?.hexOne}`, textTransform: "capitalize" }}
                         variant="m-heading-xs">
                         {title}&nbsp;
                         {`${userTitle ? `${userTitle}.` : ``}`}&nbsp;
@@ -118,7 +118,7 @@ const MembershipLoginCard = ({
                     <MobileDescriptionBox>
                       <Typography
                         sx={{
-                          color: `${theme?.palette?.neuPalette?.hexOne}`,
+                          color: `${theme?.palette?.ihclPalette?.hexOne}`,
                           fontSize: MobilePxToVw(18),
                         }}
                         variant={"m-body-sl"}>
@@ -151,7 +151,7 @@ const MembershipLoginCard = ({
                     </TitleTypography>
                     <DescriptionTypography
                       sx={{
-                        color: `${theme?.palette?.neuPalette?.hexOne}`,
+                        color: `${theme?.palette?.ihclPalette?.hexOne}`,
                         fontSize: DesktopPxToVw(18),
                       }}
                       variant={"body-ml"}>

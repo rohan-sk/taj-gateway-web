@@ -1,13 +1,4 @@
-import {
-  Box,
-  Grid,
-  styled,
-  Select,
-  MenuItem,
-  TextField,
-  FormControl,
-  FormHelperText,
-} from "@mui/material"
+import { Box, Grid, styled, Select, MenuItem, TextField, FormControl, FormHelperText } from "@mui/material"
 import { theme } from "../../../../lib/theme"
 import CloseIcon from "@mui/icons-material/Close"
 import { transientProps } from "../../../../utils/transientProps"
@@ -15,7 +6,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 
 export const MainBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $quantityErrorMessage: any }>(({ $quantityErrorMessage }) => ({
   backgroundColor: theme?.palette?.background?.paper,
   width: "100%",
@@ -23,9 +14,7 @@ export const MainBox = styled(
   alignItems: "center",
   justifyContent: "space-between",
   gap: "2vw",
-  padding: $quantityErrorMessage
-    ? `${DesktopPxToVw(20)} ${DesktopPxToVw(40)} ${DesktopPxToVw(50)}`
-    : "1.042vw 2.083vw",
+  padding: $quantityErrorMessage ? `${DesktopPxToVw(20)} ${DesktopPxToVw(40)} ${DesktopPxToVw(50)}` : "1.042vw 2.083vw",
   "@media (max-width:640px)": {
     gap: "3.438vw",
     backgroundColor: theme?.palette?.background?.default,
@@ -46,7 +35,7 @@ export const KhazanaQuantityWrapper = styled(Box)(() => ({
     },
     "&::placeholder": {
       fontWeight: "300 !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
   height: "2.083vw",
@@ -61,7 +50,7 @@ export const KhazanaQuantityWrapper = styled(Box)(() => ({
     fontWeight: 300,
     "&::placeholder": {
       fontWeight: "300 !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       opacity: 1,
     },
   },
@@ -103,7 +92,7 @@ export const QuantityWrapper = styled(Box)(() => ({
     fontWeight: 300,
     "&::placeholder": {
       fontWeight: 300,
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       opacity: 1,
     },
   },
@@ -122,7 +111,7 @@ export const QuantityWrapper = styled(Box)(() => ({
 export const StyledMenuItem = styled(MenuItem)(() => ({
   fontFamily: "Inter",
   fontSize: "0.938vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontWeight: 300,
   lineHeight: "140%",
   "@media (max-width:640px)": {
@@ -132,7 +121,7 @@ export const StyledMenuItem = styled(MenuItem)(() => ({
 
 export const ProductMenuItem = styled(
   MenuItem,
-  transientProps
+  transientProps,
 )<{
   $mobile: boolean
 }>(({ $mobile }) => ({
@@ -174,7 +163,7 @@ export const KhazanaFormControl = styled(FormControl)(() => ({
     height: "100%",
   },
   "&>label": {
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
     fontFamily: "Inter",
     fontSize: `1.25vw !important`,
@@ -198,10 +187,9 @@ export const KhazanaFormControl = styled(FormControl)(() => ({
     },
   },
   "& .MuiSvgIcon-root": { height: "100%", marginBottom: "unset" },
-  "& .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl":
-    {
-      marginTop: "0px",
-    },
+  "& .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl": {
+    marginTop: "0px",
+  },
   "& .MuiSelect-select.MuiSelect-standard.MuiInputBase-input.MuiInput-input": {
     padding: 0,
     fontSize: "1.25vw!important",
@@ -239,7 +227,7 @@ export const QuantityField = styled(TextField)(() => ({
   },
   "& .MuiInputBase-input ": {
     fontFamily: "Inter",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       height: "4.2vw",
@@ -249,7 +237,7 @@ export const QuantityField = styled(TextField)(() => ({
     },
   },
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "2.75vw",
@@ -258,7 +246,7 @@ export const QuantityField = styled(TextField)(() => ({
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: 400,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
@@ -287,7 +275,7 @@ export const HamperFormControl = styled(FormControl)(() => ({
     height: "100%",
   },
   "&>label": {
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
     fontFamily: "Inter",
     fontSize: `${DesktopPxToVw(24)}!important`,
@@ -315,18 +303,17 @@ export const HamperFormControl = styled(FormControl)(() => ({
     height: "100%",
     marginBottom: "unset",
     top: "unset",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
-  "& .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl":
-    {
-      marginTop: "0px",
-    },
+  "& .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl": {
+    marginTop: "0px",
+  },
   "& .MuiSelect-select.MuiSelect-standard.MuiInputBase-input.MuiInput-input": {
     padding: 0,
     fontSize: "1.25vw!important",
     "@media (max-width:640px)": {
       fontSize: "3.75vw !important",
-      color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+      color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
       fontWeight: 300,
     },
   },
@@ -338,12 +325,10 @@ export const GridWrapper = styled(Grid)(() => ({
 
 export const AsyaProductOuterGridWrapper = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $mobile: boolean }>(({ $mobile }) => ({
   padding: $mobile ? "3.125vw 3.125vw 4.668vw 3.125vw" : "1.024vw 2.083vw",
-  backgroundColor: $mobile
-    ? theme?.palette?.background?.default
-    : theme?.palette?.background?.paper,
+  backgroundColor: $mobile ? theme?.palette?.background?.default : theme?.palette?.background?.paper,
 }))
 
 export const AsyaProductContainer = styled(Box)(() => ({
@@ -353,7 +338,7 @@ export const AsyaProductContainer = styled(Box)(() => ({
 
 export const AsyaFieldsContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $mobile: boolean }>(({ $mobile }) => ({
   display: "flex",
   justifyContent: "space-between",
@@ -365,7 +350,7 @@ export const AsyaFieldsContainer = styled(
 
 export const SizeQuantityContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $mobile: boolean }>(({ $mobile }) => ({
   display: "flex",
   gap: $mobile ? "6.25vw" : "2.083vw",
@@ -375,7 +360,7 @@ export const SizeQuantityContainer = styled(
 
 export const StyledSizeFieldSelect = styled(
   Select,
-  transientProps
+  transientProps,
 )<{ $mobile: boolean }>(({ $mobile }) => ({
   width: $mobile ? "27.183vw" : "6.146vw",
   paddingBottom: $mobile ? MobilePxToVw(14) : DesktopPxToVw(14),
@@ -384,7 +369,7 @@ export const StyledSizeFieldSelect = styled(
 
 export const StyledCloseIcon = styled(
   CloseIcon,
-  transientProps
+  transientProps,
 )<{ $mobile: boolean }>(({ $mobile }) => ({
   fontSize: $mobile ? "4.469vw" : "2vw",
   marginTop: $mobile ? "0.781vw" : "",
@@ -405,7 +390,7 @@ export const AsyaFormControl = styled(FormControl)(() => ({
     height: "100%",
   },
   "&>label": {
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
     fontFamily: "Inter",
     fontSize: `${DesktopPxToVw(24)}!important`,
@@ -429,10 +414,9 @@ export const AsyaFormControl = styled(FormControl)(() => ({
     },
   },
   "& .MuiSvgIcon-root": { height: "100%", marginBottom: "unset" },
-  "& .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl":
-    {
-      marginTop: "0px",
-    },
+  "& .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl": {
+    marginTop: "0px",
+  },
   "& .MuiSelect-select.MuiSelect-standard.MuiInputBase-input.MuiInput-input": {
     padding: 0,
     fontSize: "1.25vw!important",
@@ -465,7 +449,7 @@ export const StyledErrorMessage = styled(FormHelperText)(() => ({
   fontSize: `${DesktopPxToVw(18)}!important`,
   fontFamily: "Inter",
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexTwentyOne,
+  color: theme?.palette?.ihclPalette?.hexTwentyOne,
   alignSelf: "self-start",
   "& .MuiTypography-root": {
     fontSize: "0.625vw!important",

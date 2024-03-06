@@ -79,7 +79,7 @@ const SSOLoginFormTabsModal = (props: any) => {
           <TabsWrapperBox sx={{ position: "relative" }}>
             <TabsWrapper
               TabIndicatorProps={{
-                sx: { backgroundColor: theme?.palette?.neuPalette?.hexTwo },
+                sx: { backgroundColor: theme?.palette?.ihclPalette?.hexTwo },
               }}
               value={value}
               onChange={handleChange}

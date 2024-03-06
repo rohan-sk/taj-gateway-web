@@ -562,7 +562,7 @@ const PackageOffersCard = ({
           justifyContent: "center",
           padding: isMobile ? "2vw" : "2.5vw 3.2vw",
           margin: isMobile ? "0vw 2vw 6vw 2vw" : "0vw",
-          background: theme.palette.neuPalette.hexTwentyNine,
+          background: theme.palette.ihclPalette.hexTwentyNine,
         }}>
         <Typography variant={isMobile ? "m-body-s" : "body-xs"}>{CONSTANTS?.ROOM_UNAVAILABLE}</Typography>
       </Stack>
@@ -590,7 +590,7 @@ const PackageOffersCard = ({
                           width: DesktopPxToVw(15),
                         }}
                       />
-                      <Typography variant="body-xs" color={theme.palette.neuPalette.hexThirtyOne}>
+                      <Typography variant="body-xs" color={theme.palette.ihclPalette.hexThirtyOne}>
                         {getLowInventoryLabel(item?.availableInventory)}
                       </Typography>
                     </Stack>
@@ -833,7 +833,7 @@ const PackageOffersCard = ({
                             <Typography
                               mb={isMobile ? MobilePxToVw(10) : DesktopPxToVw(15)}
                               whiteSpace={"nowrap"}
-                              color={theme.palette.neuPalette.hexTwentyFour}
+                              color={theme.palette.ihclPalette.hexTwentyFour}
                               variant={isMobile ? "m-body-xs" : "body-xs"}>
                               &#8212;{` ${CONSTANTS?.PRICE_CHANGE} `}&#8212;
                             </Typography>
@@ -1158,7 +1158,7 @@ const PackageOffersCard = ({
                   variant="m-body-s"
                   onClick={() => setTabIndex(index)}
                   sx={{
-                    color: index == tabIndex ? theme?.palette?.neuPalette?.hexTwo : theme?.palette?.text?.primary,
+                    color: index == tabIndex ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.text?.primary,
                   }}>
                   {item?.tab}
                 </Typography>
@@ -1383,7 +1383,7 @@ const PackageOffersCard = ({
                           textAlign={"center"}
                           mb={MobilePxToVw(20)}
                           whiteSpace={"nowrap"}
-                          color={theme.palette.neuPalette.hexTwentyFour}
+                          color={theme.palette.ihclPalette.hexTwentyFour}
                           variant={isMobile ? "m-body-xs" : "body-xs"}>
                           &#9135; {`  ${CONSTANTS?.PRICE_CHANGE}  `} &#9135;
                         </Typography>
@@ -1641,7 +1641,7 @@ const PackageOffersCard = ({
 
               <AmenitiesStack sx={{ marginTop: "3.672vw !important" }} onClick={handleGalleryPopup}>
                 <GalleryImage component="img" src="../gold-gallery-icon.svg" />
-                <Typography variant="m-body-xs" fontWeight={700} color={theme?.palette?.neuPalette?.hexTwo}>
+                <Typography variant="m-body-xs" fontWeight={700} color={theme?.palette?.ihclPalette?.hexTwo}>
                   GALLERY
                 </Typography>
               </AmenitiesStack>
@@ -1684,9 +1684,9 @@ const PackageOffersCard = ({
                       {isViewMoreAmenities ? "View More" : "View Less"}
                     </Typography>
                     {isViewMoreAmenities ? (
-                      <ExpandMore sx={{ color: theme.palette.neuPalette.hexTwo }} />
+                      <ExpandMore sx={{ color: theme.palette.ihclPalette.hexTwo }} />
                     ) : (
-                      <ExpandLess sx={{ color: theme.palette.neuPalette.hexTwo }} />
+                      <ExpandLess sx={{ color: theme.palette.ihclPalette.hexTwo }} />
                     )}
                   </Stack>
                 </>

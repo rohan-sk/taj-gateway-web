@@ -7,12 +7,10 @@ import { SquareSharp } from "@mui/icons-material"
 
 export const CardContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $cardBackgroundColor: any }>(({ $cardBackgroundColor }) => ({
   marginTop: MobilePxToVw(-22),
-  background: $cardBackgroundColor
-    ? $cardBackgroundColor
-    : theme?.palette?.neuPalette?.hexOne,
+  background: $cardBackgroundColor ? $cardBackgroundColor : theme?.palette?.ihclPalette?.hexOne,
   width: "96%",
   float: "right",
   padding: "5.469vw",
@@ -30,11 +28,11 @@ export const HighlightsWrapper = styled(Box)(() => ({
 
 export const SquareSharpWrapper = styled(
   SquareSharp,
-  transientProps
+  transientProps,
 )<{ $textColor: any }>(({ $textColor }) => ({
-    width: "1.875vw",
-    height: "1.875vw",
-    marginRight: "3.125vw",
-    transform: "rotate(45deg)",
-    color: $textColor ? $textColor : theme?.palette?.neuPalette?.hexTwo,
+  width: "1.875vw",
+  height: "1.875vw",
+  marginRight: "3.125vw",
+  transform: "rotate(45deg)",
+  color: $textColor ? $textColor : theme?.palette?.ihclPalette?.hexTwo,
 }))

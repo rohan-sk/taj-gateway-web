@@ -1,13 +1,6 @@
 import { theme } from "../../lib/theme"
 import ClearIcon from "@mui/icons-material/Clear"
-import {
-  Box,
-  ButtonBase,
-  Divider,
-  styled,
-  TextField,
-  Typography,
-} from "@mui/material"
+import { Box, ButtonBase, Divider, styled, TextField, Typography } from "@mui/material"
 import DesktopPxToVw, { MobilePxToVw } from "../../utils/DesktopFontCalc"
 import { transientProps } from "../../utils/transientProps"
 
@@ -40,7 +33,7 @@ export const SharePopUpMainBox = styled(Box)(() => ({
   position: "absolute",
   padding: "1.14vw 1.04vw 1.82vw 1.71vw",
   boxShadow: "-0.31vw 0.52vw 1.25vw rgba(0, 0, 0, 0.1)",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
 
   "@media (max-width: 640px)": {
     right: "5.8vw",
@@ -161,7 +154,7 @@ export const StyledButton = styled(ButtonBase)(() => ({
     backgroundColor: theme?.palette?.primary?.main,
   },
   letterSpacing: "0.052vw",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 
   "@media (max-width: 640px)": {
     minHeight: "7.65vw",
@@ -173,7 +166,7 @@ export const StyledButton = styled(ButtonBase)(() => ({
 export const StyledTextField = styled(TextField)(() => ({
   marginRight: "0.68vw",
   "& fieldset": { border: "none", padding: "0vw" },
-  backgroundColor: theme?.palette?.neuPalette?.hexSix,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSix,
 
   "@media (max-width: 640px)": {
     marginRight: "2.03vw",
@@ -235,11 +228,14 @@ export const ShareTitleTypography = styled(Typography)(() => ({
   letterSpacing: "0.1em",
 }))
 
-export const BreadCrumbsTypography = styled(Typography,transientProps)<{$isMobile:boolean}>(({$isMobile}) => ({
+export const BreadCrumbsTypography = styled(
+  Typography,
+  transientProps,
+)<{ $isMobile: boolean }>(({ $isMobile }) => ({
   lineHeight: "140%",
   opacity: "0.7",
   textTransform: "capitalize",
-  fontSize:$isMobile?MobilePxToVw(21):DesktopPxToVw(18)
+  fontSize: $isMobile ? MobilePxToVw(21) : DesktopPxToVw(18),
 }))
 
 export const BreadcrumbsWrappingBox = styled(Box)(() => ({
@@ -253,5 +249,5 @@ export const PageTitleShare: any = styled(Typography)(() => ({
   textOverflow: "ellipsis",
   display: "-webkit-box",
   "-webkit-line-clamp": "2",
-  "-webkit-box-orient": "vertical"
+  "-webkit-box-orient": "vertical",
 }))

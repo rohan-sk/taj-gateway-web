@@ -33,8 +33,7 @@ const ParticipatingHotelsComponent = ({
   const [noResultsFound, setNoResultsFound] = useState<string>()
   const Context = useContext(IHCLContext)
   const isMobile = useMobileCheck()
-  const fromNeupass =
-    largeVariant === "membership.form.participating-hotel-search"
+  const fromNeupass = largeVariant === "membership.form.participating-hotel-search"
 
   const handleSubmit = async (event?: any) => {
     event?.preventDefault()
@@ -60,9 +59,7 @@ const ParticipatingHotelsComponent = ({
     formValidation(status, name)
     setNoResultsFound("")
   }
-  let getBgColor = isMobile
-    ? theme?.palette?.neuPalette?.hexTwentyNine
-    : theme?.palette?.neuPalette?.hexOne
+  let getBgColor = isMobile ? theme?.palette?.ihclPalette?.hexTwentyNine : theme?.palette?.ihclPalette?.hexOne
   const inputStyle = {
     WebkitBoxShadow: `0 0 0 1000px ${getBgColor} inset`,
   }
@@ -81,9 +78,7 @@ const ParticipatingHotelsComponent = ({
           textAlign: "center",
           marginBottom: isMobile ? MobilePxToVw(55) : "unset",
         }}>
-        <Typography variant={isMobile ? "m-heading-s" : "heading-s"}>
-          {title}
-        </Typography>
+        <Typography variant={isMobile ? "m-heading-s" : "heading-s"}>{title}</Typography>
         {subtitle && (
           <Typography
             sx={{ marginTop: isMobile ? MobilePxToVw(55) : DesktopPxToVw(30) }}
@@ -136,24 +131,14 @@ const ParticipatingHotelsComponent = ({
         </InputFieldsBox>
       )}
       {(hotelData?.length > 0 || formValue?.length > 0) && (
-        <Box
-          sx={
-            isMobile
-              ? { padding: `${MobilePxToVw(40)} 0vw ${MobilePxToVw(20)} 0vw` }
-              : { padding: "1.05vw 0vw" }
-          }>
+        <Box sx={isMobile ? { padding: `${MobilePxToVw(40)} 0vw ${MobilePxToVw(20)} 0vw` } : { padding: "1.05vw 0vw" }}>
           {hotelData?.length > 0 ? (
             <Typography variant={isMobile ? "m-body-l" : "body-l"}>
-              <b>
-                {`${hotelData?.length} ${
-                  hotelData?.length == 1 ? "Hotel" : "Hotels"
-                } `}
-              </b>
+              <b>{`${hotelData?.length} ${hotelData?.length == 1 ? "Hotel" : "Hotels"} `}</b>
               found for your search
             </Typography>
           ) : (
-            <ErrorMessageTypography
-              sx={{ fontSize: `${DesktopPxToVw(22)}!important` }}>
+            <ErrorMessageTypography sx={{ fontSize: `${DesktopPxToVw(22)}!important` }}>
               {noResultsFound}
             </ErrorMessageTypography>
           )}

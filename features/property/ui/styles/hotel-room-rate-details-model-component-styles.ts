@@ -6,16 +6,16 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 
 export const HorizontalDividerOne = styled(
   Divider,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   opacity: 0.2,
-  backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
   margin: $isMobile ? `${MobilePxToVw(40)} 0vw` : `${DesktopPxToVw(20)} 0vw`,
 }))
 
 export const ScrollableContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   overflowY: "scroll",
@@ -24,7 +24,7 @@ export const ScrollableContentWrapper = styled(
   height: $isMobile ? MobilePxToVw(400) : DesktopPxToVw(395),
   "&::-webkit-scrollbar-thumb": {
     borderRadius: DesktopPxToVw(6),
-    backgroundColor: theme?.palette?.neuPalette?.hexSeven,
+    backgroundColor: theme?.palette?.ihclPalette?.hexSeven,
   },
   "&::-webkit-scrollbar": {
     width: DesktopPxToVw(5),
@@ -34,12 +34,12 @@ export const ScrollableContentWrapper = styled(
 export const ScrollableDescriptionTitleTypography = styled(Typography)(() => ({
   opacity: 0.5,
   fontWeight: 700,
-  color: theme?.palette?.neuPalette?.hexEleven,
+  color: theme?.palette?.ihclPalette?.hexEleven,
 }))
 
 export const ScrollableDescriptionContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "column",
@@ -48,18 +48,16 @@ export const ScrollableDescriptionContentWrapper = styled(
 
 export const HorizontalSecondDivider = styled(
   Divider,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   opacity: 0.2,
-  backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
-  margin: $isMobile
-    ? `0vw 0vw ${MobilePxToVw(17)} 0vw`
-    : `${DesktopPxToVw(22)} 0vw ${DesktopPxToVw(40)}`,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
+  margin: $isMobile ? `0vw 0vw ${MobilePxToVw(17)} 0vw` : `${DesktopPxToVw(22)} 0vw ${DesktopPxToVw(40)}`,
 }))
 
 export const ActionButtonsWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: $isMobile ? "row-reverse" : "unset",
@@ -67,7 +65,7 @@ export const ActionButtonsWrapper = styled(
 
 export const ActionPropsButtonContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: "100%",
   display: "flex",
@@ -78,7 +76,7 @@ export const ActionPropsButtonContainer = styled(
 
 export const ActionPropsDetailsWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "column",
@@ -87,7 +85,7 @@ export const ActionPropsDetailsWrapper = styled(
 
 export const CurrencyTitleTypography = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   fontWeight: 400,
   fontSize: $isMobile ? MobilePxToVw(32) : DesktopPxToVw(32),
@@ -95,5 +93,5 @@ export const CurrencyTitleTypography = styled(
 
 export const VerticalDivider = styled(Divider)(() => ({
   margin: `0vw ${DesktopPxToVw(40)}`,
-  backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
 }))

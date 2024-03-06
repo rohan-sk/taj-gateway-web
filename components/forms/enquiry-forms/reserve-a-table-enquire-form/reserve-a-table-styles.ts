@@ -1,14 +1,4 @@
-import {
-  Box,
-  FormControl,
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  TextField,
-  Typography,
-  styled,
-} from "@mui/material"
+import { Box, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography, styled } from "@mui/material"
 import { fonts, theme } from "../../../../lib/theme"
 import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 
@@ -27,7 +17,7 @@ export const NameField = styled(TextField)(() => ({
     },
   },
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "2.75vw",
@@ -36,7 +26,7 @@ export const NameField = styled(TextField)(() => ({
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontFamily: "Inter",
       fontWeight: 300,
       opacity: 1,
@@ -63,13 +53,13 @@ export const PhoneNumberField = styled(TextField)(() => ({
     },
   },
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
   },
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontFamily: "Inter",
       fontWeight: 400,
       opacity: 1,
@@ -95,7 +85,7 @@ export const EmailField = styled(TextField)(() => ({
     },
   },
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne + "!important",
+    color: theme?.palette?.ihclPalette?.hexTwentyOne + "!important",
     fontSize: DesktopPxToVw(18),
     fontWeight: 300,
     "@media (max-width: 640px)": {
@@ -105,7 +95,7 @@ export const EmailField = styled(TextField)(() => ({
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontFamily: "Inter",
       fontWeight: 400,
       opacity: 1,
@@ -150,7 +140,7 @@ export const ErrorMessageTypography = styled(Typography)(() => ({
   fontSize: `${DesktopPxToVw(18)}!important`,
   fontFamily: fonts?.body,
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexTwentyOne,
+  color: theme?.palette?.ihclPalette?.hexTwentyOne,
   alignSelf: "self-start",
   "@media (max-width: 640px)": {
     fontSize: "2.8vw!important",
@@ -182,7 +172,7 @@ export const DateTextField = styled(TextField)(() => ({
     },
   },
   "&  .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexTwentyOne} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexTwentyOne} !important`,
     fontSize: DesktopPxToVw(18),
   },
   input: {
@@ -191,7 +181,7 @@ export const DateTextField = styled(TextField)(() => ({
       fontWeight: 500,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         fontSize: "3.75vw",
         lineHeight: "4.8vw",
@@ -201,7 +191,7 @@ export const DateTextField = styled(TextField)(() => ({
 }))
 
 export const StyledInputLabel = styled(InputLabel)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontSize: DesktopPxToVw(24),
   lineHeight: "1.5em",
   top: "50%",
@@ -270,7 +260,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
   input: {
     fontFamily: "Inter",
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     "&, &::placeholder": {
       background: "transparent!important",
       fontSize: "1.25vw",

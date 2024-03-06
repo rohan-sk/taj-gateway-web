@@ -41,12 +41,12 @@ export const StyledSeperator = styled(
   width: "100%",
   height: DesktopPxToVw(4),
   marginBottom: $giftCardPaymentConfirmation ? DesktopPxToVw(20) : "4.688vw",
-  borderBottom: `${DesktopPxToVw(3)} solid ${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+  borderBottom: `${DesktopPxToVw(3)} solid ${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
   "@media (max-width:640px)": {
     width: "100%",
     height: MobilePxToVw(2),
     marginBottom: $giftCardPaymentConfirmation ? MobilePxToVw(7) : "4.688vw",
-    borderBottom: `${DesktopPxToVw(1)} solid ${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+    borderBottom: `${DesktopPxToVw(1)} solid ${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
   },
 }))
 export const CustomAccordianStyle = styled(Accordion)(() => ({
@@ -222,7 +222,7 @@ export const TableRowEpicure = styled(
   display: "flex",
   flexDirection: "row",
   columnGap: $isMobile ? MobilePxToVw(20) : DesktopPxToVw(40),
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
 }))
 
 export const BoxTableHeadTitle = styled(
@@ -290,7 +290,7 @@ export const EpicureBenefitsTitlesWrapper = styled(
   width: $isPrintAction ? "100%" : "fit-content",
   paddingBottom: DesktopPxToVw(14),
   columnGap: $isMobile ? MobilePxToVw(20) : DesktopPxToVw(40),
-  borderBottom: $isMobile ? `${MobilePxToVw(2)} solid ${theme?.palette?.neuPalette?.hexTwo}` : "",
+  borderBottom: $isMobile ? `${MobilePxToVw(2)} solid ${theme?.palette?.ihclPalette?.hexTwo}` : "",
 }))
 
 export const TableCellBenefitsContent = styled(

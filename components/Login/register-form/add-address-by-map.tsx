@@ -66,11 +66,7 @@ const AddAddressByMap = ({ setAddress, setRenderKey }: any) => {
     }
   }
 
-  const onMarkerInteraction = (
-    childKey: any,
-    childProps: any,
-    mouse: { lat: any; lng: any }
-  ) => {
+  const onMarkerInteraction = (childKey: any, childProps: any, mouse: { lat: any; lng: any }) => {
     setMapDetails({
       ...mapDetails,
       draggable: false,
@@ -78,11 +74,7 @@ const AddAddressByMap = ({ setAddress, setRenderKey }: any) => {
       lng: mouse?.lng,
     })
   }
-  const onMarkerInteractionMouseUp = (
-    childKey: any,
-    childProps: any,
-    mouse: any
-  ) => {
+  const onMarkerInteractionMouseUp = (childKey: any, childProps: any, mouse: any) => {
     setMapDetails({
       ...mapDetails,
       draggable: false,
@@ -125,10 +117,7 @@ const AddAddressByMap = ({ setAddress, setRenderKey }: any) => {
 
   const retrieveAddress = (address: any) => {
     return {
-      addressLine: getAddressValue(
-        ["premise", "sublocality", "locality"],
-        address
-      ),
+      addressLine: getAddressValue(["premise", "sublocality", "locality"], address),
       city:
         getAddressValue(["administrative_area_level_2"], address) ||
         getAddressValue(["administrative_area_level_3"], address),
@@ -184,7 +173,7 @@ const AddAddressByMap = ({ setAddress, setRenderKey }: any) => {
         elementType: "labels.text.fill",
         stylers: [
           {
-            color: theme?.palette?.neuPalette?.hexTwo, // Set the desired text color
+            color: theme?.palette?.ihclPalette?.hexTwo, // Set the desired text color
           },
         ],
       },

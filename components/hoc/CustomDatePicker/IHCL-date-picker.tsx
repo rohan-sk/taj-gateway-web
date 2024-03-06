@@ -40,8 +40,8 @@ const IHCLDatePicker = ({
       clearIcon={null}
       calendarType={"gregory"}
       onKeyDown={(e: any) => e.preventDefault()}
-      prevLabel={<ArrowBackIosRoundedIcon fontSize={"small"} htmlColor={theme.palette.neuPalette.hexSeventeen} />}
-      nextLabel={<ArrowForwardIosRoundedIcon fontSize={"small"} htmlColor={theme.palette.neuPalette.hexSeventeen} />}
+      prevLabel={<ArrowBackIosRoundedIcon fontSize={"small"} htmlColor={theme.palette.ihclPalette.hexSeventeen} />}
+      nextLabel={<ArrowForwardIosRoundedIcon fontSize={"small"} htmlColor={theme.palette.ihclPalette.hexSeventeen} />}
       inlineFocusSelectedMonth={true}
     />
   )

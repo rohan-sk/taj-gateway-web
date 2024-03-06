@@ -10,18 +10,18 @@ export const CardContentWrappingBox = styled(Box)(() => ({
 
 export const CardTitleTypography = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $fontColor: string }>(({ $fontColor }) => ({
   lineHeight: "110%",
   letterSpacing: "-0.05em",
-  color: $fontColor ? $fontColor : theme?.palette?.neuPalette?.hexSeventeen,
+  color: $fontColor ? $fontColor : theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const CardSubTitleTypography = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $fontColor: string }>(({ $fontColor }) => ({
   lineHeight: "140%",
   letterSpacing: "0.1em",
-  color: $fontColor ? $fontColor : theme?.palette?.neuPalette?.hexSeventeen,
+  color: $fontColor ? $fontColor : theme?.palette?.ihclPalette?.hexSeventeen,
 }))

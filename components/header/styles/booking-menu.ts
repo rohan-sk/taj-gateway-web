@@ -50,7 +50,7 @@ export const CustomAccordionSummary = styled(AccordionSummary)(() => ({
   padding: "0vw",
   minHeight: "2.135vw !important",
   background: theme?.palette?.background?.paper,
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
   "&.Mui-expanded": {
     minHeight: "3.135vw",
   },
@@ -75,7 +75,7 @@ export const CustomAccordionDetails = styled(AccordionDetails)(() => ({
   background: theme?.palette?.background?.default,
   "::-webkit-scrollbar-thumb": {
     borderRadius: "0.313vw",
-    background: theme?.palette?.neuPalette?.hexTwelve,
+    background: theme?.palette?.ihclPalette?.hexTwelve,
   },
 }))
 
@@ -90,7 +90,7 @@ export const AlignEndBox = styled(Box)(() => ({
   display: "flex",
   alignItems: "end",
   justifyContent: "space-between",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexEleven}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexEleven}`,
 }))
 
 export const ErrorTypography = styled(Typography)(() => ({
@@ -112,24 +112,22 @@ export const DateTypography = styled(Typography)(() => ({
 export const AddButton = styled(Button)(() => ({
   width: "4.95vw",
   height: "2.604vw",
-  color: theme?.palette?.neuPalette?.hexOne,
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
   "&.Mui-disabled": {
     color: "darkGray",
   },
   " &:hover": {
-    color: theme?.palette?.neuPalette?.hexOne,
-    background: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexOne,
+    background: theme?.palette?.ihclPalette?.hexSeventeen,
   },
 }))
 
-export const LocalizationProviderBoxStyle = styled(LocalizationProviderBox)(
-  () => ({
-    width: "18.15vw",
-    padding: "0!important",
-    gap: "0.883vw",
-  })
-)
+export const LocalizationProviderBoxStyle = styled(LocalizationProviderBox)(() => ({
+  width: "18.15vw",
+  padding: "0!important",
+  gap: "0.883vw",
+}))
 
 export const DividerStyle = styled(Divider)(() => ({
   width: "6%",
@@ -139,11 +137,11 @@ export const DividerStyle = styled(Divider)(() => ({
 }))
 export const FullDividerStyle = styled(Divider)(() => ({
   width: "100%",
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
   opacity: 0.5,
 }))
 export const CalendarMonthStyle = styled(CalendarMonth)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwelve,
+  color: theme?.palette?.ihclPalette?.hexTwelve,
   opacity: 0.8,
 }))
 export const MarginTopBox = styled(Box)(() => ({
@@ -164,15 +162,15 @@ export const MainBox = styled(Box)(() => ({
   width: "29.896vw",
 }))
 export const SearchIcon = styled(Search)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   opacity: 0.8,
 }))
 export const ExpandMoreIcon = styled(ExpandMore)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   opacity: 0.6,
 }))
 export const ExpandLessIcon = styled(ExpandLess)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   opacity: 0.6,
 }))
 export const StyledButton = styled(Button)(() => ({
@@ -183,16 +181,16 @@ export const StyledButton = styled(Button)(() => ({
 }))
 export const SpanBox = styled(Box)(() => ({
   cursor: "pointer",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 export const CheckBox = styled(Box)(() => ({
-  border: `0.052vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   width: "1.354vw",
   height: "1.354vw",
   padding: "0.156vw 0vw 0vw 0.166vw",
 }))
 export const OfferBox = styled(Box)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   height: "2.604vw",
   padding: "0vw 1.042vw 0vw 1.042vw",
   display: "flex",
@@ -204,7 +202,7 @@ export const StackStyle = styled(
   Stack,
   transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  backgroundColor: `${theme?.palette?.neuPalette?.hexOne}`,
+  backgroundColor: `${theme?.palette?.ihclPalette?.hexOne}`,
   textAlign: "center",
   width: $isMobile ? "unset" : "50%",
   margin: "0 auto",
@@ -249,7 +247,7 @@ export const StackChild = styled(
   gap: $isMobile ? MobilePxToVw(20) : DesktopPxToVw(40),
 }))
 export const OfferTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   textTransform: "uppercase",
 }))
 export const FlexBox = styled(Box)(() => ({

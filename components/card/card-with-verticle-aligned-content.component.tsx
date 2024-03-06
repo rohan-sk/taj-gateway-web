@@ -102,7 +102,7 @@ const CardWithVerticleAlignedContent = ({
           <Box
             sx={{
               padding: isMobile ? "6.250vw 4.219vw" : "2.291vw",
-              border: `0.052vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+              border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
             }}>
             {itemHeading?.[0] && (
               <Typography

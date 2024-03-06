@@ -1,9 +1,5 @@
 import { Box, InputAdornment, Select, Stack } from "@mui/material"
-import {
-  StyledFormControl,
-  StyledLabel,
-  StyledMenuItem,
-} from "./safaris-enquire-form.styles"
+import { StyledFormControl, StyledLabel, StyledMenuItem } from "./safaris-enquire-form.styles"
 import { theme } from "../../../../lib/theme"
 import { Error_icon } from "../../gift-card-form/constants"
 import { KeyboardArrowDown } from "@mui/icons-material"
@@ -24,9 +20,7 @@ const FormDropDownComponent = ({
   return (
     <Stack width={"100%"}>
       <StyledFormControl variant={"standard"} sx={{ width: "100%", ...styles }}>
-        {label && `${value}`?.length === 0 && (
-          <StyledLabel>{label}</StyledLabel>
-        )}
+        {label && `${value}`?.length === 0 && <StyledLabel>{label}</StyledLabel>}
         <Select
           disabled={disable}
           aria-disabled={disable}
@@ -57,8 +51,7 @@ const FormDropDownComponent = ({
               <KeyboardArrowDown
                 {...props}
                 sx={{
-                  color:
-                    theme?.palette?.neuPalette?.hexTwentyNine + "!important",
+                  color: theme?.palette?.ihclPalette?.hexTwentyNine + "!important",
                   fontWeight: 300,
                   cursor: "pointer",
                 }}

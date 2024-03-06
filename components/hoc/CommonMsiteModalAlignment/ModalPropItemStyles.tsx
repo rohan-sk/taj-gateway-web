@@ -7,10 +7,10 @@ export const ButtonsBox = styled(Box)(() => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
   padding: `${MobilePxToVw(16)} ${MobilePxToVw(36)}`,
   "&:hover": {
-    backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+    backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
   },
   margin: `0 ${MobilePxToVw(80)} !important`,
   "@media(max-width:640px)": {
@@ -23,11 +23,11 @@ export const MsiteStyledButton = styled(Button)(() => ({
   height: "auto !important",
   letterSpacing: "0.06em",
   fontWeight: 700,
-  color: theme?.palette?.neuPalette?.hexOne,
-  backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
   "&:hover": {
-    color: theme?.palette?.neuPalette?.hexOne,
-    backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexOne,
+    backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
   },
   "@media(max-width:640px)": {
     letterSpacing: "0.281vw",
@@ -57,7 +57,7 @@ export const ActionBox = styled(ItemActionBox)(() => ({
 export const ModalHeadingText = styled(Typography)(() => ({
   fontFamily: theme?.palette?.font?.primaryFontFamily,
   letterSpacing: "-0.05em",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const ModalTitleText = styled(ModalHeadingText)(() => ({
@@ -73,22 +73,18 @@ export const ModalSubTitleText = styled(ModalHeadingText)(() => ({
 export const ModalContentBox = styled(Box)(() => ({
   display: "flex",
   justifyContent: "space-between",
-  borderBottom: `2px solid ${theme?.palette?.neuPalette?.rgbaOne}`,
+  borderBottom: `2px solid ${theme?.palette?.ihclPalette?.rgbaOne}`,
 }))
 
 export const TitlesAndItemsCount = styled(Typography)(() => ({
   fontSize: "4.06vw",
   lineHeight: "320%",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
-export const ButtonImageGapGrid = styled(Grid)<{ $paddingTop?: number }>(
-  ({ $paddingTop }) => ({
-    paddingTop: $paddingTop
-      ? `${MobilePxToVw($paddingTop)}`
-      : `${MobilePxToVw(8)}`,
-  })
-)
+export const ButtonImageGapGrid = styled(Grid)<{ $paddingTop?: number }>(({ $paddingTop }) => ({
+  paddingTop: $paddingTop ? `${MobilePxToVw($paddingTop)}` : `${MobilePxToVw(8)}`,
+}))
 
 export const PropItemTitles = styled(TitlesAndItemsCount)(() => ({}))
 export const PropItemsCount = styled(TitlesAndItemsCount)(() => ({}))

@@ -267,26 +267,26 @@ const CarousalTabs = ({ props, initialSlide, largeVariant, aesthetic, analytics,
             },
             ".slick-center .centerText": {
               textAlign: "center",
-              color: theme?.palette?.neuPalette?.hexTwo,
+              color: theme?.palette?.ihclPalette?.hexTwo,
               fontSize: isMobile ? "3.75vw" : "1.25vw",
             },
             ".slick-center .centerImg": {
-              color: theme?.palette?.neuPalette?.hexTwo,
+              color: theme?.palette?.ihclPalette?.hexTwo,
               filter: `opacity(1) drop-shadow(0 0 0 #eda805)`,
             },
             ".slick-center .centeredBox": {
               width: "100%",
               padding: isMobile ? "3.125vw 0vw" : "1.875vw 1.302vw",
               borderRight: "none",
-              backgroundColor: theme?.palette?.neuPalette?.hexOne,
+              backgroundColor: theme?.palette?.ihclPalette?.hexOne,
               boxShadow: "-6px 10px 24px rgba(0, 0, 0, 0.1)",
               minHeight: "6.46vw",
             },
             ".custom-left": {
-              borderLeft: props?.length >= 5 ? `1px solid ${theme?.palette?.neuPalette?.hexNine}` : "none",
+              borderLeft: props?.length >= 5 ? `1px solid ${theme?.palette?.ihclPalette?.hexNine}` : "none",
             },
             ".custom-right": {
-              borderRight: props?.length >= 5 ? `1px solid ${theme?.palette?.neuPalette?.hexNine}` : "none",
+              borderRight: props?.length >= 5 ? `1px solid ${theme?.palette?.ihclPalette?.hexNine}` : "none",
             },
           }}>
           <Slider {...settings}>

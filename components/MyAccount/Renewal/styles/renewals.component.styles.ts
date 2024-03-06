@@ -22,7 +22,7 @@ export const TitleMainStack = styled(Stack)(() => ({
 export const TitleBox = styled(Box)(() => ({
   margin: "1.042vw 2vw 0vw 2.083vw",
   width: "93%",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   "@media(max-width:640px)": {
     width: "85%",
     margin: "3.125vw 0vw 5.469vw 6.250vw",
@@ -37,18 +37,18 @@ export const TitleTypography = styled(Typography)(() => ({
 }))
 
 export const TypographyRenewalTitle = styled(Typography)(() => ({
-  fontSize: "2.083vw", 
-  lineHeight: "140%" ,
+  fontSize: "2.083vw",
+  lineHeight: "140%",
   "@media (max-width:640px)": {
-  fontSize: "5vw",
+    fontSize: "5vw",
   },
 }))
 
 export const BoxTier = styled(Box)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   "&>div": {},
   marginBottom: "2vw",
   "@media (max-width:640px)": {
- MarginTop: "5.469vw",
+    MarginTop: "5.469vw",
   },
 }))

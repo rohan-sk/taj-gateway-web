@@ -13,12 +13,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 import { IHCLContext } from "../../../PresentationalComponents/lib/prepare-ihcl-context"
 import { GiftCardManageTabsComponentWrapper } from "../../modal/styles/manage-card.styles"
 
-const GiftCardManageTabsComponent = ({
-  tabs,
-  title,
-  variant,
-  aesthetic,
-}: any) => {
+const GiftCardManageTabsComponent = ({ tabs, title, variant, aesthetic }: any) => {
   const [value, setValue] = useState(0)
   const IHCLContexts = useContext(IHCLContext)
   const isMobile = useMobileCheck()
@@ -31,9 +26,7 @@ const GiftCardManageTabsComponent = ({
     <MainBoxWrapper
       aria-label={variant}
       sx={{
-        padding: isMobile
-          ? aesthetic?.padding?.mobile
-          : aesthetic?.padding?.desktop,
+        padding: isMobile ? aesthetic?.padding?.mobile : aesthetic?.padding?.desktop,
       }}>
       <Typography
         sx={{
@@ -51,7 +44,7 @@ const GiftCardManageTabsComponent = ({
           onChange={handleChange}
           TabIndicatorProps={{
             style: {
-              background: theme?.palette?.neuPalette?.hexTwo,
+              background: theme?.palette?.ihclPalette?.hexTwo,
             },
           }}
           $isMobile={isMobile}>
@@ -96,9 +89,7 @@ function TabView(props: TabPanelProps) {
   return (
     <div role="tabpanel" hidden={value !== index}>
       {value === index && (
-        <GiftCardManageTabsComponentWrapper
-          component={"div"}
-          $isMobile={isMobile}>
+        <GiftCardManageTabsComponentWrapper component={"div"} $isMobile={isMobile}>
           {children}
         </GiftCardManageTabsComponentWrapper>
       )}

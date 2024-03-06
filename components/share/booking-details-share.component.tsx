@@ -102,7 +102,7 @@ More info pls call${data?.mobileNumber}`
             <>
               <ContactDetailStack>
                 <Typography variant={isMobile ? "m-body-s" : "body-s"}>More info pls call</Typography>
-                <Typography variant={isMobile ? "m-body-s" : "body-s"} color={theme.palette.neuPalette.hexTwo}>
+                <Typography variant={isMobile ? "m-body-s" : "body-s"} color={theme.palette.ihclPalette.hexTwo}>
                   {" "}
                   {data?.mobileNumber}
                 </Typography>

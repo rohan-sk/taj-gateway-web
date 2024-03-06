@@ -1,13 +1,7 @@
 import { fonts, theme } from "../../../../lib/theme"
 import { transientProps } from "../../../../utils/transientProps"
 import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
-import {
-  Box,
-  styled,
-  Select,
-  Typography,
-  InputLabel,
-} from "@mui/material"
+import { Box, styled, Select, Typography, InputLabel } from "@mui/material"
 
 export const MainGridWrapper = styled(Box)(() => ({
   display: "flex",
@@ -57,13 +51,12 @@ export const ButtonWrapper = styled(Box)(() => ({
   alignItems: "center",
 }))
 
-
 export const ErrorMessageTypography = styled(Typography)(() => ({
   textAlign: "start",
   fontSize: `${DesktopPxToVw(18)}!important`,
   fontFamily: fonts?.body,
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexThirtyTwo,
+  color: theme?.palette?.ihclPalette?.hexThirtyTwo,
   alignSelf: "self-start",
   "@media (max-width: 640px)": {
     fontSize: "2.5vw!important",
@@ -73,15 +66,15 @@ export const ReCaptchaErrorTypography = styled(Typography)(() => ({
   fontSize: `${DesktopPxToVw(18)}!important`,
   fontFamily: fonts?.body,
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexThirtyTwo,
+  color: theme?.palette?.ihclPalette?.hexThirtyTwo,
   "@media (max-width: 640px)": {
     fontSize: "2.5vw!important",
   },
 }))
 
 export const ReCaptchaStack = styled(Box)(() => ({
-  display: 'flex',
-  flexDirection: 'column',
+  display: "flex",
+  flexDirection: "column",
   alignItems: "center",
   gap: DesktopPxToVw(2),
   marginTop: DesktopPxToVw(55),
@@ -92,7 +85,7 @@ export const ReCaptchaStack = styled(Box)(() => ({
 }))
 
 export const StyledInputLabel = styled(InputLabel)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontSize: DesktopPxToVw(24),
   fontWeight: 300,
   "@media (max-width: 640px)": {
@@ -112,44 +105,37 @@ export const StyledSelect = styled(Select)(() => ({
   },
 }))
 
-
 export const CommonFieldWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $mobile: boolean }>(({ $mobile }) => ({
   width: $mobile ? "100%" : "30.052vw",
 }))
-
 
 export const ColumnFlexBox = styled(Box)(() => ({
   display: "flex",
   flexDirection: "column",
 }))
 
-export const POITypography = styled(Typography)<{ $mobile: boolean }>(
-  ({ $mobile }) => ({
-    marginBottom: $mobile ? "1.563vw" : "0.883vw",
-  })
-)
+export const POITypography = styled(Typography)<{ $mobile: boolean }>(({ $mobile }) => ({
+  marginBottom: $mobile ? "1.563vw" : "0.883vw",
+}))
 
 export const ProductsContainer = styled(
   Box,
-  transientProps
-)<{ $mobile: boolean; $length: number | undefined }>(
-  ({ $mobile, $length }) => ({
-    overflowY: $length && $length > 2 ? "auto" : "unset",
-    maxHeight:
-      $length && $length > 2 ? ($mobile ? "77.500vw" : "11.5vw") : "unset",
-    display: "flex",
-    flexDirection: "column",
-    gap: $mobile ? "1.563vw" : "1.042vw",
-    "@media (max-width:640px)": {
-      "&::-webkit-scrollbar": {
-        width: MobilePxToVw(4),
-      },
+  transientProps,
+)<{ $mobile: boolean; $length: number | undefined }>(({ $mobile, $length }) => ({
+  overflowY: $length && $length > 2 ? "auto" : "unset",
+  maxHeight: $length && $length > 2 ? ($mobile ? "77.500vw" : "11.5vw") : "unset",
+  display: "flex",
+  flexDirection: "column",
+  gap: $mobile ? "1.563vw" : "1.042vw",
+  "@media (max-width:640px)": {
+    "&::-webkit-scrollbar": {
+      width: MobilePxToVw(4),
     },
-  })
-)
+  },
+}))
 
 export const LocationContainer = styled(Box)(() => ({
   display: "grid",
@@ -166,7 +152,7 @@ export const LocationContainer = styled(Box)(() => ({
 }))
 export const SingleRowWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $mobile: boolean }>(({ $mobile }) => ({
   display: "flex",
   flexDirection: $mobile ? "column" : "row",
@@ -203,4 +189,3 @@ export const FormOverFlowWrapper = styled(Box)(() => ({
     boxShadow: `unset`,
   },
 }))
-

@@ -43,7 +43,7 @@ export default function AvatarCard({ title, description, largeImage, subTitle, i
           {title && (
             <Typography
               variant={isMobile ? "m-heading-xs" : "heading-xs"}
-              sx={{ color: theme?.palette?.neuPalette?.hexTwo }}>
+              sx={{ color: theme?.palette?.ihclPalette?.hexTwo }}>
               {title}
             </Typography>
           )}

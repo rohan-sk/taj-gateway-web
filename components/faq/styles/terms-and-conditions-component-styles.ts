@@ -12,17 +12,17 @@ export const TitleWrapperContainer = styled(Box)(() => ({
 
 export const TitleWrapperTypography = styled(Typography)(() => ({
   fontWeight: 400,
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const ContentArrowDirectionWrapper = styled(
   KeyboardArrowDownOutlined,
-  transientProps
+  transientProps,
 )<{ $showDescription: boolean }>(({ $showDescription }) => ({
   marginLeft: DesktopPxToVw(10),
   transitionDuration: "0.3s",
   transitionProperty: "transform",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   transform: $showDescription ? "rotate(180deg)" : "rotate(0deg)",
 }))
 
@@ -34,16 +34,12 @@ export const ContentAccordion = styled(Accordion)(() => ({
   },
 }))
 
-export const PortableTextAccordionDetailsContainer = styled(AccordionDetails)(
-  () => ({
-    padding: "0vw",
-    paddingBottom: "2.865vw",
-    background: theme.palette.background.default,
-  })
-)
-export const PortableTextAccordionDetailsOffersContainer = styled(
-  AccordionDetails
-)(() => ({
+export const PortableTextAccordionDetailsContainer = styled(AccordionDetails)(() => ({
+  padding: "0vw",
+  paddingBottom: "2.865vw",
+  background: theme.palette.background.default,
+}))
+export const PortableTextAccordionDetailsOffersContainer = styled(AccordionDetails)(() => ({
   padding: "0vw",
   paddingBottom: "0.865vw",
   background: theme.palette.background.default,

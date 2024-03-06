@@ -1,17 +1,7 @@
 import { theme } from "../../../lib/theme"
 import { transientProps } from "../../../utils/transientProps"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
-import {
-  Box,
-  Grid,
-  Tab,
-  Tabs,
-  Select,
-  styled,
-  MenuItem,
-  TextField,
-  Typography,
-} from "@mui/material"
+import { Box, Grid, Tab, Tabs, Select, styled, MenuItem, TextField, Typography } from "@mui/material"
 
 export const BoxWrapper = styled(Box)(() => ({
   display: "flex",
@@ -24,7 +14,7 @@ export const StyledInputField: any = styled(TextField)(() => ({
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexEleven,
+      color: theme?.palette?.ihclPalette?.hexEleven,
       fontWeight: 300,
       opacity: 0.8,
       fontSize: "1.250vw",
@@ -58,19 +48,19 @@ export const StyledTextField: any = styled(TextField)(() => ({
     width: "100%",
   },
   "&  .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexTen} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexTen} !important`,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontWeight: 300,
       fontSize: "3.750vw !important",
-      letterSpacing:"-0.5px"
+      letterSpacing: "-0.5px",
     },
   },
 
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexEleven,
+      color: theme?.palette?.ihclPalette?.hexEleven,
       fontWeight: 300,
       opacity: 0.8,
       fontSize: "1.2vw",
@@ -98,7 +88,7 @@ export const StyledTextField: any = styled(TextField)(() => ({
 
 export const MainGridWrapper = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean; $isSignUp: boolean }>(({ $isMobile, $isSignUp }) => ({
   display: "flex",
   flexDirection: "column",
@@ -116,10 +106,10 @@ export const MainGridWrapper = styled(
 
 export const StyledTabs = styled(
   Tabs,
-  transientProps
+  transientProps,
 )<{ $index: boolean }>(({ $index }) => ({
   "& .MuiTab-root.Mui-selected": {
-    color: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexTwo,
   },
   "& .MuiTabs-flexContainer": {
     justifyContent: "center",
@@ -131,7 +121,7 @@ export const StyledTabs = styled(
     display: "block",
   },
   marginBottom: "1vw",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   width: DesktopPxToVw(700),
   margin: "auto",
   "@media (max-width: 640px)": {
@@ -143,7 +133,7 @@ export const StyledTabs = styled(
 
 export const StyledTab = styled(
   Tab,
-  transientProps
+  transientProps,
 )<{
   $indexOne: boolean
   $indexTwo: boolean
@@ -182,7 +172,7 @@ export const HeaderWrapper = styled(Grid)(() => ({
 }))
 
 export const ErrorMessageTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexThirtyTwo,
+  color: theme?.palette?.ihclPalette?.hexThirtyTwo,
   marginTop: "0.6vw",
   fontSize: "1vw",
   fontWeight: "300",
@@ -210,7 +200,7 @@ export const InputText = styled(TextField)(() => ({
       fontWeight: "300 !important",
       fontSize: DesktopPxToVw(24),
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
 
@@ -230,7 +220,7 @@ export const InputText = styled(TextField)(() => ({
 export const StyledTypography = styled(Typography)(() => ({
   margin: "4.5vw 0vw 0vw 0vw",
   fontSize: DesktopPxToVw(32),
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     fontSize: "5vw",
     lineHeight: "4vw",
@@ -278,7 +268,7 @@ export const StyledMenuItem = styled(MenuItem)(() => ({
   fontFamily: "Inter",
   fontSize: "0.938vw",
   padding: "0.417vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontWeight: 300,
   lineHeight: "140%",
   paddingLeft: "1vw",
@@ -297,8 +287,8 @@ export const MemberShipSelect = styled(Select)(() => ({
     textAlign: "start",
     fontWeight: 300,
     overflow: "visible",
-    "@media(max-width:640px)":{
-      letterSpacing:"-0.5px",
+    "@media(max-width:640px)": {
+      letterSpacing: "-0.5px",
     },
     "&:focus": {
       backgroundColor: theme?.palette?.background?.default,

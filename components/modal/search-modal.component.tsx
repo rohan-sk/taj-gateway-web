@@ -322,7 +322,7 @@ const SearchModal = ({ handleClose, fromMic, props }: any) => {
           <SearchBarPaper
             sx={{
               "&.MuiPaper-root": {
-                backgroundColor: theme?.palette?.neuPalette?.hexOne,
+                backgroundColor: theme?.palette?.ihclPalette?.hexOne,
               },
             }}>
             {isMobile && (
@@ -374,13 +374,13 @@ const SearchModal = ({ handleClose, fromMic, props }: any) => {
               }}
               sx={{
                 borderWidth: "0px",
-                backgroundColor: theme?.palette?.neuPalette?.hexOne,
+                backgroundColor: theme?.palette?.ihclPalette?.hexOne,
                 "& .MuiTab-root.Mui-selected": {
-                  color: theme?.palette?.neuPalette?.hexTwo,
+                  color: theme?.palette?.ihclPalette?.hexTwo,
                   backgroundColor: theme?.palette?.background?.default,
                   borderWidth: "0px",
                   "@media (max-width:640px)": {
-                    border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+                    border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
                     borderWidth: "0px 0px 3px 0px",
                     position: "relative",
                     top: "2px",
@@ -390,14 +390,14 @@ const SearchModal = ({ handleClose, fromMic, props }: any) => {
                   justifyContent: "center",
                   maxHeight: "3.177vw",
                   "@media (max-width:640px)": {
-                    border: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}20`,
+                    border: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}20`,
                     borderWidth: "1px 0px",
                     maxHeight: "8vh",
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "space-evenly",
-                    backgroundColor: theme?.palette?.neuPalette?.hexOne,
+                    backgroundColor: theme?.palette?.ihclPalette?.hexOne,
                   },
                 },
                 "& .MuiButtonBase-root": {
@@ -725,13 +725,13 @@ const SearchModal = ({ handleClose, fromMic, props }: any) => {
             {!searchLoading ? (
               <ActionBox
                 sx={{
-                  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+                  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
                   "@media (max-width: 640px)": {
                     position: "fixed",
                     bottom: 0,
                     width: "100%",
                     padding: "4.688vw",
-                    background: `linear-gradient(180deg, rgba(255, 255, 255, 1) 25.88%, ${theme?.palette?.neuPalette?.hexOne} 100%)`,
+                    background: `linear-gradient(180deg, rgba(255, 255, 255, 1) 25.88%, ${theme?.palette?.ihclPalette?.hexOne} 100%)`,
                   },
                 }}>
                 <RenderActionItem
@@ -743,7 +743,7 @@ const SearchModal = ({ handleClose, fromMic, props }: any) => {
                 />
               </ActionBox>
             ) : (
-              <Box sx={{ height: DesktopPxToVw(105.2), backgroundColor: theme?.palette?.neuPalette?.hexOne }} />
+              <Box sx={{ height: DesktopPxToVw(105.2), backgroundColor: theme?.palette?.ihclPalette?.hexOne }} />
             )}
           </TabsShadowWrapper>
         </ParentBox>

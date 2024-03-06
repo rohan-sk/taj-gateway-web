@@ -8,7 +8,7 @@ import { ContentBox, GridItem } from "./styles/card-with-hover"
 export const HoverCard = ({ index, setActiveIndex, activeIndex, item, cardColorVariant, handleSelected }: any) => {
   const { cardBackgroundColor, textColor, extraData } = useAesthetics(item?.aesthetic?._ref)
   const cardBackground = extraData?.[0]?.isGradientEnabled ? extraData?.[0]?.gradient : cardBackgroundColor
-  const cardTextColor = textColor ? textColor : theme?.palette?.neuPalette?.hexSeventeen
+  const cardTextColor = textColor ? textColor : theme?.palette?.ihclPalette?.hexSeventeen
 
   return (
     <GridItem
@@ -52,12 +52,12 @@ export const HoverCard = ({ index, setActiveIndex, activeIndex, item, cardColorV
                   marginTop: "1.25vw",
                 }}
                 linkStyles={{
-                  color: cardColorVariant ? theme?.palette?.neuPalette?.hexOne : theme?.palette?.neuPalette?.hexTwo,
+                  color: cardColorVariant ? theme?.palette?.ihclPalette?.hexOne : theme?.palette?.ihclPalette?.hexTwo,
                 }}
                 iconStyles={{
                   color: cardColorVariant
-                    ? `${theme?.palette?.neuPalette?.hexOne} !important`
-                    : `${theme?.palette?.neuPalette?.hexTwo} !important`,
+                    ? `${theme?.palette?.ihclPalette?.hexOne} !important`
+                    : `${theme?.palette?.ihclPalette?.hexTwo} !important`,
                 }}
                 onClick={() => handleSelected(item?.primaryAction?.url, item?.primaryAction?.urlType, item)}
               />
@@ -69,7 +69,7 @@ export const HoverCard = ({ index, setActiveIndex, activeIndex, item, cardColorV
           {item?.title && (
             <Typography
               variant="heading-s"
-              color={theme?.palette?.neuPalette?.hexOne}
+              color={theme?.palette?.ihclPalette?.hexOne}
               component={item?.headingElementForCard || "h3"}
               sx={{
                 mb: "2.083vw",

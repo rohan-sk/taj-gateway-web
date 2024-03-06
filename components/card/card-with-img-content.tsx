@@ -43,14 +43,14 @@ const CardWithImgContent = ({
           {title && (
             <CardBox>
               {hyphenTitle && <CustomDivider />}
-              <Typography variant="heading-m" sx={{ color: theme?.palette?.neuPalette?.hexOne }}>
+              <Typography variant="heading-m" sx={{ color: theme?.palette?.ihclPalette?.hexOne }}>
                 {title}
               </Typography>
             </CardBox>
           )}
           {description && (
             <Box mb={"4.167vw"}>
-              <Typography variant="body-ml" sx={{ color: theme?.palette?.neuPalette?.hexOne }}>
+              <Typography variant="body-ml" sx={{ color: theme?.palette?.ihclPalette?.hexOne }}>
                 {description}
               </Typography>
             </Box>

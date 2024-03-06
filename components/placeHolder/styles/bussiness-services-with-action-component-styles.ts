@@ -4,7 +4,7 @@ import { theme } from "../../../lib/theme"
 
 export const TitleWithSingleActionContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $borderBottom: any }>(({ $borderBottom }) => ({
   display: "flex",
   alignItems: "center",
@@ -12,9 +12,7 @@ export const TitleWithSingleActionContainer = styled(
   padding: $borderBottom ? "5.73vw 0vw 4.17vw" : "4.17vw 0vw 5.73vw",
   borderBottom: $borderBottom ? "0.05vw solid rgb(255, 255, 255 ,0.3)" : "",
   "@media (max-width: 640px)": {
-    padding: $borderBottom
-      ? "14.063vw 0vw 12.344vw"
-      : "10.938vw 10.156vw 13.125vw",
+    padding: $borderBottom ? "14.063vw 0vw 12.344vw" : "10.938vw 10.156vw 13.125vw",
   },
 }))
 
@@ -42,7 +40,7 @@ export const ParameterMapTextField = styled(TextField)(() => ({
       lineHeight: "150%",
       fontFamily: "Inter",
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexOne,
+      color: theme?.palette?.ihclPalette?.hexOne,
     },
   },
   "@media (max-width: 640px)": {

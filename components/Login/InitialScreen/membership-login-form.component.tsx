@@ -213,7 +213,7 @@ const MembershipLoginForm = ({ props }: LoginFormInterface) => {
                   maxHeight: 250,
                   width: isMobile ? MobilePxToVw(160) : "12.240vw",
                   margin: isMobile ? { xs: "0vw", sm: "0vw" } : "0vw 0vw 0vw 2vw",
-                  background: theme.palette.neuPalette.hexOne,
+                  background: theme.palette.ihclPalette.hexOne,
                   boxShadow: "-6px 10px 24px rgba(0, 0, 0, 0.1)",
                 },
               },

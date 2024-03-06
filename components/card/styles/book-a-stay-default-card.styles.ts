@@ -28,7 +28,7 @@ export const BookAStayCardTitleBox = styled(
 }))
 
 export const DatePickerContainer = styled(Box)(() => ({
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
   height: "fit-content",
   width: DesktopPxToVw(434),
   "& .MuiStack-root": {
@@ -68,7 +68,7 @@ export const FieldsContainer = styled(Box)(() => ({
 export const BookAStayCardTitleDivider = styled(Divider)(() => ({
   height: "2%",
   width: "2.083vw",
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const BookAStayCardParameterMapBox = styled(
@@ -93,8 +93,8 @@ export const BookAStayCardParameterMapTextField = styled(TextField)(() => ({
       lineHeight: "150%",
       fontStyle: "normal",
       fontFamily: "Inter",
-      color: theme?.palette?.neuPalette?.hexTwelve,
-      borderBottom: `0.05vw solid ${theme?.palette?.neuPalette?.hexOne}`,
+      color: theme?.palette?.ihclPalette?.hexTwelve,
+      borderBottom: `0.05vw solid ${theme?.palette?.ihclPalette?.hexOne}`,
     },
   },
 }))
@@ -111,7 +111,7 @@ export const CheckInAndOutLabelTextField = styled(
       fontStyle: "normal",
       fontFamily: "Inter",
       fontSize: $isMobile ? `${MobilePxToVw(24)} !important` : "1.25vw !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
 }))
@@ -125,8 +125,8 @@ export const RoomDropdownTextField = styled(TextField)(() => ({
       lineHeight: "150%",
       fontStyle: "normal",
       fontFamily: "Inter",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
-      borderBottom: `0.05vw solid ${theme?.palette?.neuPalette?.hexOne}`,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
+      borderBottom: `0.05vw solid ${theme?.palette?.ihclPalette?.hexOne}`,
     },
   },
 }))
@@ -135,7 +135,7 @@ export const HorizontalDivider = styled(Divider)(() => ({
   opacity: 0.5,
   width: "1.56vw",
   margin: "2vw 2.52vw -0.833vw -1.48vw",
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const CouponCodeTextField = styled(
@@ -150,7 +150,7 @@ export const CouponCodeTextField = styled(
       fontStyle: "normal",
       fontFamily: "Inter",
       fontSize: $isMobile ? "3.750vw" : "1.25vw",
-      color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+      color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
     },
   },
 }))
@@ -239,22 +239,22 @@ export const AutoCompleteInput = styled(TextField)(() => ({
     opacity: 1,
     fontWeight: "300 !important",
     fontSize: DesktopPxToVw(24),
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     "@media (max-width: 640px)": {
       fontSize: MobilePxToVw(24),
     },
   },
   "& .Mui-error": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
   },
   "& .MuiInput-input": {
     fontWeight: "300 !important",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontSize: DesktopPxToVw(24),
   },
   paddingTop: "0.2vw",
   "&  .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: MobilePxToVw(18),
@@ -272,7 +272,7 @@ export const AutoCompleteInput = styled(TextField)(() => ({
       fontWeight: 300,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
   "@media (max-width: 640px)": {

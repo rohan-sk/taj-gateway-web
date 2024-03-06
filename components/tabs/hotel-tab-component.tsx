@@ -3,12 +3,7 @@ import { useRouter } from "next/router"
 import { PathType } from "../../types"
 import { theme } from "../../lib/theme"
 import { useAppNavigation } from "../../utils/NavigationUtility"
-import {
-  MainBox,
-  StyledDivider,
-  StyledTab,
-  StyledTabs,
-} from "./styles/basic-tab"
+import { MainBox, StyledDivider, StyledTab, StyledTabs } from "./styles/basic-tab"
 import DesktopPxToVw from "../../utils/DesktopFontCalc"
 import { hotelRoute } from "../../features/property/ui/constants"
 import { HOTEL_NAVIGATION_TABS } from "../constants"
@@ -36,9 +31,7 @@ const HotelTabComponent = () => {
   const navigate = useAppNavigation()
   const [items, setItems] = useState<any>()
   const ihclContext = useContext(IHCLContext)
-  const propertyStore = ihclContext?.getGlobalStore(
-    GLOBAL_STORES?.propertyStore
-  ) as PropertyStore
+  const propertyStore = ihclContext?.getGlobalStore(GLOBAL_STORES?.propertyStore) as PropertyStore
   const [numberOfTabs, setNumberOfTabs] = useState<number>()
   const [value, setValue] = useState<number>()
   const containerRef: any = useRef(null)
@@ -54,19 +47,13 @@ const HotelTabComponent = () => {
   useEffect(() => {
     let indexValue = items?.findIndex((item: BasicTabItems) =>
       global?.window?.location?.pathname?.split("/en-in")?.[1]?.split("/")?.[
-        router?.asPath
-          ?.split("/")
-          ?.findIndex((route: any) => route === hotelRoute) + 2
+        router?.asPath?.split("/")?.findIndex((route: any) => route === hotelRoute) + 2
       ]
         ? item?.url?.split("/")?.[1] ===
-          global?.window?.location?.pathname
-            ?.split("/en-in")?.[1]
-            ?.split("/")?.[
-            router?.asPath
-              ?.split("/")
-              ?.findIndex((route: any) => route === hotelRoute) + 2
+          global?.window?.location?.pathname?.split("/en-in")?.[1]?.split("/")?.[
+            router?.asPath?.split("/")?.findIndex((route: any) => route === hotelRoute) + 2
           ]
-        : item?.url === "/"
+        : item?.url === "/",
     )
     setValue(indexValue)
     setNumberOfTabs(items?.length)
@@ -78,12 +65,8 @@ const HotelTabComponent = () => {
   }
 
   const handleNavigation = (url: any, type: PathType | undefined) => {
-    const routerArr = global?.window?.location?.pathname
-      ?.split("/en-in")?.[1]
-      ?.split("/")
-    const hotelRouteIndex = routerArr?.findIndex(
-      (route: any) => route === hotelRoute
-    )
+    const routerArr = global?.window?.location?.pathname?.split("/en-in")?.[1]?.split("/")
+    const hotelRouteIndex = routerArr?.findIndex((route: any) => route === hotelRoute)
     let navigationUrl =
       routerArr?.[hotelRouteIndex + 1] && hotelRouteIndex > -1
         ? `/${hotelRoute}/${routerArr?.[hotelRouteIndex + 1]}${url}`
@@ -120,7 +103,7 @@ const HotelTabComponent = () => {
         ref={containerRef}
         sx={{
           padding: "0vw 12.5vw",
-          backgroundColor: theme?.palette?.neuPalette?.hexOne,
+          backgroundColor: theme?.palette?.ihclPalette?.hexOne,
         }}>
         <StyledTabs
           sx={{
@@ -134,14 +117,10 @@ const HotelTabComponent = () => {
           variant={"standard"}
           onChange={handleChange}
           TabIndicatorProps={{
-            style: { background: theme?.palette?.neuPalette?.hexTwo },
+            style: { background: theme?.palette?.ihclPalette?.hexTwo },
           }}>
           {items?.map((item: BasicTabItems, index: number) => (
-            <StyledTab
-              key={index}
-              label={item?.value}
-              onClick={() => handleNavigation(item?.url, item?.type)}
-            />
+            <StyledTab key={index} label={item?.value} onClick={() => handleNavigation(item?.url, item?.type)} />
           ))}
         </StyledTabs>
       </MainBox>

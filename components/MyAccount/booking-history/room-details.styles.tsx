@@ -40,7 +40,7 @@ export const HotelText = styled(Typography)(() => ({
   lineHeight: "140%",
   marginBottom: DesktopPxToVw(5),
   "@media (max-width:640px)": {
-    marginBottom: MobilePxToVw(8)
+    marginBottom: MobilePxToVw(8),
   },
 }))
 
@@ -55,7 +55,7 @@ export const BookingNumber = styled(Typography)(() => ({
   fontWeight: 700,
   fontSize: DesktopPxToVw(16),
   lineHeight: DesktopPxToVw(22),
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width:640px)": {
     fontSize: "2.5vw",
     lineHeight: "3.5vw",
@@ -66,7 +66,7 @@ export const Package = styled(Typography)(() => ({
   fontWeight: 700,
   fontSize: DesktopPxToVw(14),
   lineHeight: DesktopPxToVw(20),
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width:640px)": {
     fontSize: "2.5vw",
     lineHeight: "3.5vw",

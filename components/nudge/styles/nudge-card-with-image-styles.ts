@@ -8,7 +8,7 @@ export const NudgeContainer = styled(Box)(() => ({
   alignItems: "center",
   gap: "2.6vw",
   padding: "4.17vw 5.44vw ",
-  border: `${DesktopPxToVw(1)} solid  ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `${DesktopPxToVw(1)} solid  ${theme?.palette?.ihclPalette?.hexTwo}`,
   "@media (max-width: 640px)": {
     gap: "8.594vw",
     flexDirection: "column",

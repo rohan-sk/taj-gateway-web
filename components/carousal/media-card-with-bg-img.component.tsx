@@ -141,7 +141,7 @@ const MediaCardWithBgImageCarousal = ({ props }: any) => {
                       src={getOptimizeImageUrl(urlFor(item?.largeImage?.asset?._ref).url(), 2)}
                     />
                   )}
-                  <ContentBox sx={{ background: theme?.palette?.neuPalette?.hexOne }}>
+                  <ContentBox sx={{ background: theme?.palette?.ihclPalette?.hexOne }}>
                     {item?.title && <Typography variant="heading-s">{item?.title}</Typography>}
                     {item?.description && (
                       <CustomReadMore variant="body-ml" length={item?.charactersLimit || 150}>

@@ -47,7 +47,7 @@ export const TabsWrapperBox = styled(Box)(() => ({
 
 export const TabsWrapper = styled(Tabs)(() => ({
   "& .MuiTab-root.Mui-selected": {
-    color: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexTwo,
   },
   ".MuiTabs-flexContainer": {
     display: "flex",
@@ -70,7 +70,7 @@ export const TabsHorizontalLine = styled(Divider)(() => ({
   ".MuiDivider-root": {
     width: "100%",
   },
-  backgroundColor: theme?.palette?.neuPalette?.rgbaOne,
+  backgroundColor: theme?.palette?.ihclPalette?.rgbaOne,
   height: DesktopPxToVw(2.8),
   "@media (max-width: 640px)": {
     height: MobilePxToVw(2.8),
@@ -83,7 +83,7 @@ export const EachTabWrapper = styled(Tab)(() => ({
   padding: "0vw",
   fontFamily: "Inter",
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     width: MobilePxToVw(140),
     fontSize: MobilePxToVw(18),
@@ -110,7 +110,7 @@ export const MobileNumberTextField = styled(TextField)(() => ({
       fontWeight: 300,
       fontFamily: "Inter",
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         fontSize: MobilePxToVw(24),
       },
@@ -122,7 +122,7 @@ export const MobileNumberErrorMessage = styled(Typography)(() => ({
   textAlign: "center",
   fontSize: DesktopPxToVw(18),
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexThirtyTwo,
+  color: theme?.palette?.ihclPalette?.hexThirtyTwo,
   "@media (max-width: 640px)": {
     fontSize: MobilePxToVw(18),
   },
@@ -176,7 +176,7 @@ export const MembershipBenefitsCardWrapper = styled(Box)(() => ({
   justifyContent: "space-between",
   borderTop: "none",
   padding: `0px ${DesktopPxToVw(165)}`,
-  borderRight: `1px solid ${theme?.palette?.neuPalette?.hexSeven}`,
+  borderRight: `1px solid ${theme?.palette?.ihclPalette?.hexSeven}`,
   "@media (max-width: 640px)": {
     borderRight: "none",
     marginTop: MobilePxToVw(35),
@@ -195,7 +195,7 @@ export const CardSubTitleTypography = styled(Typography)(() => ({
   fontFamily: theme?.palette?.font?.primaryFontFamily,
   lineHeight: "100%",
   margin: `${DesktopPxToVw(20)} 0vw ${DesktopPxToVw(20)} 0vw`,
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     fontSize: MobilePxToVw(24),
     marginTop: MobilePxToVw(20),
@@ -229,7 +229,7 @@ export const MembershipBenefitsCardTitle = styled(Typography)(() => ({
   fontSize: DesktopPxToVw(18),
   fontFamily: "Inter",
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     fontSize: MobilePxToVw(16),
     marginTop: MobilePxToVw(10),

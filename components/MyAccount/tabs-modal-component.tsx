@@ -9,12 +9,9 @@ import { PageContext } from "../../PresentationalComponents/lib/prepare-page-con
 
 const TabsListInModal = (props: any) => {
   const pageContext = useContext(PageContext)
-  const accountStore = pageContext?.getPageStore(
-    PAGE_STORES.ACCOUNT_STORES.myAccountStore
-  ) as AccountStore
+  const accountStore = pageContext?.getPageStore(PAGE_STORES.ACCOUNT_STORES.myAccountStore) as AccountStore
 
-  const { updateCurrentTab, updateCurrentTabViewer, updateTabsData } =
-    accountStore
+  const { updateCurrentTab, updateCurrentTabViewer, updateTabsData } = accountStore
 
   const modifiedTabs = props?.tabs?.map((tab: any) => {
     return {
@@ -23,12 +20,7 @@ const TabsListInModal = (props: any) => {
     }
   })
 
-  const handleTabClick = (
-    clickedIndex: number,
-    tabTitle: string,
-    item: any,
-    tabKey: any
-  ) => {
+  const handleTabClick = (clickedIndex: number, tabTitle: string, item: any, tabKey: any) => {
     updateCurrentTab({
       key: tabKey,
       value: tabTitle,
@@ -48,11 +40,9 @@ const TabsListInModal = (props: any) => {
             variant="m-body-ml"
             sx={{
               lineHeight: "320%",
-              color: theme?.palette?.neuPalette?.hexTwo,
+              color: theme?.palette?.ihclPalette?.hexTwo,
             }}
-            onClick={(e: any) =>
-              handleTabClick(index, tab?.title, tab, tab?._key)
-            }>
+            onClick={(e: any) => handleTabClick(index, tab?.title, tab, tab?._key)}>
             {tab?.title}
           </Typography>
           <HorizontalDivider

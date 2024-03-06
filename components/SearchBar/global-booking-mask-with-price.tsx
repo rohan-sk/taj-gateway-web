@@ -319,7 +319,7 @@ const GlobalBookingForPrice = ({ title }: GlobalBookingForPriceProps) => {
                   ))}
                   {searchResults?.hotels?.data?.length > 0 && (
                     <>
-                      <Typography variant="body-s" color={theme.palette.neuPalette.hexTwelve} pb={DesktopPxToVw(20)}>
+                      <Typography variant="body-s" color={theme.palette.ihclPalette.hexTwelve} pb={DesktopPxToVw(20)}>
                         {CONSTANTS?.HOTELS}
                       </Typography>
                       <ResultSectionSeparator />

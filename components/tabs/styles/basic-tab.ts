@@ -20,7 +20,7 @@ export const StyledTab = styled(Tab)(() => ({
 export const StyledTabs = styled(Tabs)(() => ({
   minHeight: "unset",
   "& .MuiTab-root.Mui-selected": {
-    color: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexTwo,
   },
   "& .MuiTabs-flexContainer": {
     padding: "1.4583vw 0.3vw 1.3021vw 0vw",
@@ -38,6 +38,6 @@ export const StyledDivider = styled(Divider)(() => ({
   width: "100%",
   height: "0.11vw",
   position: "absolute",
-  backgroundColor: theme?.palette?.neuPalette?.rgbaOne,
-  // color:`${theme?.palette?.neuPalette?.hexSeventeen}20`
+  backgroundColor: theme?.palette?.ihclPalette?.rgbaOne,
+  // color:`${theme?.palette?.ihclPalette?.hexSeventeen}20`
 }))

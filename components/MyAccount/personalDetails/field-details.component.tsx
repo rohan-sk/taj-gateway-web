@@ -504,7 +504,9 @@ const FieldDetails = ({
               <Typography
                 variant={isMobile ? "m-body-l" : "body-l"}
                 sx={{
-                  color: withoutEdit ? theme?.palette?.neuPalette?.hexTwelve : theme?.palette?.neuPalette?.hexSeventeen,
+                  color: withoutEdit
+                    ? theme?.palette?.ihclPalette?.hexTwelve
+                    : theme?.palette?.ihclPalette?.hexSeventeen,
                 }}>
                 {singleField && singleField}
               </Typography>
@@ -574,7 +576,9 @@ const FieldDetails = ({
               <Typography
                 variant={isMobile ? "m-body-l" : "body-l"}
                 sx={{
-                  color: withoutEdit ? theme?.palette?.neuPalette?.hexTwelve : theme?.palette?.neuPalette?.hexSeventeen,
+                  color: withoutEdit
+                    ? theme?.palette?.ihclPalette?.hexTwelve
+                    : theme?.palette?.ihclPalette?.hexSeventeen,
                 }}>
                 {formatDateWithFullMonth(singleField, false)}
               </Typography>
@@ -642,8 +646,8 @@ const FieldDetails = ({
                       tooltip: {
                         sx: {
                           borderRadius: "0px",
-                          backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
-                          color: theme?.palette?.neuPalette?.hexSeventeen,
+                          backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
+                          color: theme?.palette?.ihclPalette?.hexSeventeen,
                           padding: DesktopPxToVw(16),
                           textAlign: "center",
                         },

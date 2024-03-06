@@ -185,7 +185,9 @@ const PriceChangeChart = (props: any) => {
                     <PriceTypography
                       variant={isMobile ? "m-body-l" : "body-l"}
                       color={
-                        totalPriceChange >= 0 ? theme.palette.neuPalette.hexTwentyFour : theme.palette.neuPalette.hexTwo
+                        totalPriceChange >= 0
+                          ? theme.palette.ihclPalette.hexTwentyFour
+                          : theme.palette.ihclPalette.hexTwo
                       }>
                       {isPayAtHotel ? BOOKING_CONSTANT?.DIFFERENCE : BOOKING_CONSTANT?.TOTAL_PRICE_CHANGE}
                     </PriceTypography>
@@ -196,7 +198,9 @@ const PriceChangeChart = (props: any) => {
                     <PriceTypography
                       variant={isMobile ? "m-body-l" : "body-l"}
                       color={
-                        totalPriceChange >= 0 ? theme.palette.neuPalette.hexTwentyFour : theme.palette.neuPalette.hexTwo
+                        totalPriceChange >= 0
+                          ? theme.palette.ihclPalette.hexTwentyFour
+                          : theme.palette.ihclPalette.hexTwo
                       }>
                       {totalPriceChange >= 0
                         ? totalPriceChange > 0
@@ -271,8 +275,8 @@ const PriceChangeChart = (props: any) => {
                 {isPayAtHotel
                   ? BOOKING_CONSTANT?.REVISED_TOTAL_PRICE
                   : modifiedSummary?.modifiedPayableAmount
-                    ? BOOKING_CONSTANT.PAYABLE_AMOUNT
-                    : BOOKING_CONSTANT.REFUNDABLE_AMOUNT}
+                  ? BOOKING_CONSTANT.PAYABLE_AMOUNT
+                  : BOOKING_CONSTANT.REFUNDABLE_AMOUNT}
               </Typography>
               <Typography
                 variant={isMobile ? "m-body-xl" : "body-xl"}
@@ -285,8 +289,8 @@ const PriceChangeChart = (props: any) => {
                   isPayAtHotel
                     ? modifiedSummary?.modifiedPayableAmount || 0
                     : modifiedSummary?.modifiedPayableAmount
-                      ? modifiedSummary?.modifiedPayableAmount || 0
-                      : modifiedSummary?.refundableAmount || 0,
+                    ? modifiedSummary?.modifiedPayableAmount || 0
+                    : modifiedSummary?.refundableAmount || 0,
                   currencyCode,
                 )}
               </Typography>
@@ -294,7 +298,7 @@ const PriceChangeChart = (props: any) => {
           </Box>
           <Divider
             sx={{
-              borderBottom: `2px solid ${theme?.palette?.neuPalette?.hexFour}`,
+              borderBottom: `2px solid ${theme?.palette?.ihclPalette?.hexFour}`,
             }}
           />
           <DescriptionBox>

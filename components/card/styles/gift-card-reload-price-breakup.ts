@@ -31,7 +31,7 @@ export const ButtonBoxStyle = styled(Box)(() => ({
 }))
 export const StyledSeparator = styled(Divider)(() => ({
   height: "2px",
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
   width: "100%",
   marginBottom: "4.688vw",
 }))
@@ -45,10 +45,9 @@ export const CustomAccordionStyle = styled(Accordion)(() => ({
   "& .MuiAccordionSummary-content.MuiAccordionSummary-contentGutters": {
     margin: 0,
   },
-  "& .MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters":
-    {
-      minHeight: "unset",
-    },
+  "& .MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters": {
+    minHeight: "unset",
+  },
 }))
 
 export const FieldsGrid = styled(Grid)(() => ({
@@ -76,7 +75,10 @@ export const GridRightTextAligner = styled(Grid)(() => ({
   textAlign: "end",
 }))
 
-export const ReloadGiftCardShareWrapper = styled(Stack, transientProps)<{$isMobile:boolean}>(({$isMobile}) => ({
+export const ReloadGiftCardShareWrapper = styled(
+  Stack,
+  transientProps,
+)<{ $isMobile: boolean }>(({ $isMobile }) => ({
   "& .MuiButtonBase-root": {
     gap: $isMobile ? MobilePxToVw(10) : DesktopPxToVw(20),
     ".MuiBox-root": {

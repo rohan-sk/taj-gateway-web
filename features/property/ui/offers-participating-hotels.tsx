@@ -288,7 +288,7 @@ const OffersParticipatingHotelsTemplate = (props: any) => {
                 fontSizeProp={isMobile ? MobilePxToVw(24) : DesktopPxToVw(24)}
                 value={searchTerm}
                 setValue={setSearchTerm}
-                backgroundColor={theme?.palette?.neuPalette?.hexOne}
+                backgroundColor={theme?.palette?.ihclPalette?.hexOne}
                 placeholder={"Destination or Hotel"}
                 onChange={(event: any) => {
                   setSearchTerm(event.target.value)
@@ -297,7 +297,7 @@ const OffersParticipatingHotelsTemplate = (props: any) => {
                   fontWeight: 300,
                   fontStyle: "normal",
                   fontFamily: "Inter",
-                  color: theme?.palette?.neuPalette?.hexSeventeen,
+                  color: theme?.palette?.ihclPalette?.hexSeventeen,
                 }}
               />
               <DropDownContainer>

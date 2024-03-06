@@ -1,6 +1,6 @@
 import React from "react"
 import { theme } from "../../lib/theme"
-import {  Stack, Typography } from "@mui/material"
+import { Stack, Typography } from "@mui/material"
 import { useMobileCheck } from "../../utils/isMobilView"
 import DesktopPxToVw, { MobilePxToVw } from "../../utils/DesktopFontCalc"
 import {
@@ -21,19 +21,12 @@ type CardWithHighlightsProps = {
   isMultiBlockContent: boolean
 }
 
-const CardWithHighlights = ({
-  variant,
-  highlights,
-  description,
-  largeVariant,
-}: any) => {
+const CardWithHighlights = ({ variant, highlights, description, largeVariant }: any) => {
   const isMobile = useMobileCheck()
   return (
     <HighlightsBox aria-label={isMobile ? variant : largeVariant}>
       {(highlights || description) && (
-        <Stack
-          flexDirection="column"
-          rowGap={isMobile ? MobilePxToVw(10) : DesktopPxToVw(21)}>
+        <Stack flexDirection="column" rowGap={isMobile ? MobilePxToVw(10) : DesktopPxToVw(21)}>
           {highlights &&
             highlights?.map((item: any, index: number) => (
               <HighlightContainer className="hide-box highlights" key={index}>
@@ -41,7 +34,7 @@ const CardWithHighlights = ({
                 <Typography
                   variant={isMobile ? "m-heading-xs" : "heading-xs"}
                   sx={{
-                    color: theme?.palette?.neuPalette?.hexSeventeen,
+                    color: theme?.palette?.ihclPalette?.hexSeventeen,
                   }}>
                   {typeof item === typeof "" ? item : item?.term}
                 </Typography>
@@ -49,8 +42,7 @@ const CardWithHighlights = ({
             ))}
           {description && (
             <DescriptionContainer>
-              <HighlightsDescriptionTypo
-                variant={isMobile ? "m-body-sl" : "body-ml"}>
+              <HighlightsDescriptionTypo variant={isMobile ? "m-body-sl" : "body-ml"}>
                 {description}
               </HighlightsDescriptionTypo>
             </DescriptionContainer>

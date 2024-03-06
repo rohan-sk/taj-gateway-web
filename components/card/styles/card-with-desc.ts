@@ -13,7 +13,7 @@ export const CardStyledDivider = styled(Divider)(() => ({
   margin: 0.7,
   opacity: "0.4",
   width: "0.052vw",
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const PlayPauseButtonBox = styled(Box)(() => ({
@@ -32,7 +32,7 @@ export const PlayPauseButtonBox = styled(Box)(() => ({
 
 export const CardContentParentBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $title: string }>(({ $title }) => ({
   gap: "0.7vw",
   display: "flex",
@@ -46,7 +46,7 @@ export const CardContentParentBox = styled(
 
 export const CardContentChildrenBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: "100%",
   display: "flex",
@@ -62,26 +62,26 @@ export const SubTitleBox = styled(Box)(() => ({
 export const InclusionTitle = styled(Typography)(() => ({
   fontWeight: 700,
   paddingTop: DesktopPxToVw(20),
-  '@media (max-width:640px)': {
-    paddingTop: MobilePxToVw(20)
-  }
+  "@media (max-width:640px)": {
+    paddingTop: MobilePxToVw(20),
+  },
 }))
 
 export const ListItemBulletText = styled(ListItem)(() => ({
   display: "flex",
   alignItems: "flex-start",
   padding: `${DesktopPxToVw(5)} 0`,
-  '@media (max-width:640px)': {
-    padding: `${MobilePxToVw(10)} 0`
-  }
+  "@media (max-width:640px)": {
+    padding: `${MobilePxToVw(10)} 0`,
+  },
 }))
 export const BulletContainer = styled(Box)(() => ({
   minHeight: DesktopPxToVw(24),
-  display: 'flex',
-  alignItems: 'center',
-  '@media(max-width:640px)': {
-    minHeight: MobilePxToVw(24)
-  }
+  display: "flex",
+  alignItems: "center",
+  "@media(max-width:640px)": {
+    minHeight: MobilePxToVw(24),
+  },
 }))
 export const StyledDivider = styled(Divider)(() => ({
   height: "1%",
@@ -95,7 +95,7 @@ export const StyledDivider = styled(Divider)(() => ({
 }))
 
 export const StyledBulletIcon = styled(SquareSharp)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   width: "0.625vw",
   height: "0.625vw",
   marginRight: "0.45vw",
@@ -119,10 +119,10 @@ export const LocationTypo = styled(Typography)(() => ({
   fontWeight: 300,
   fontSize: "1.146vw",
   cursor: "pointer",
-  "@media(max-width:640px)":{
-    paddingLeft:MobilePxToVw(5),
-    fontSize: MobilePxToVw(24)
-  }
+  "@media(max-width:640px)": {
+    paddingLeft: MobilePxToVw(5),
+    fontSize: MobilePxToVw(24),
+  },
 }))
 
 export const ActionContentBox = styled(Box)(() => ({
@@ -136,30 +136,29 @@ export const ActionContentBox = styled(Box)(() => ({
 
 export const RichTextValueTypography = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{
   $highlightColor?: boolean | undefined
 }>(({ $highlightColor }) => ({
   fontWeight: $highlightColor ? "300" : "700",
   paddingLeft: "0.3vw",
-  color: $highlightColor
-    ? theme?.palette?.neuPalette?.hexTwo
-    : theme?.palette?.text?.primary,
+  color: $highlightColor ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.text?.primary,
   "@media (max-width: 640px)": {
     marginTop: "1vw",
     fontWeight: "300",
   },
 }))
 
-export const RichTextBox = styled(Box,
-   transientProps
-  )<{
-    $maxLength?: boolean | undefined
-  }>(({ $maxLength }) => ({
+export const RichTextBox = styled(
+  Box,
+  transientProps,
+)<{
+  $maxLength?: boolean | undefined
+}>(({ $maxLength }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
-  minHeight: $maxLength ? `${DesktopPxToVw(92)}` : `${DesktopPxToVw(40)}`
+  minHeight: $maxLength ? `${DesktopPxToVw(92)}` : `${DesktopPxToVw(40)}`,
 }))
 
 export const CenterFlexBox = styled(Box)(() => ({

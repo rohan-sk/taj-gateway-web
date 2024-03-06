@@ -19,15 +19,12 @@ const PayAtHotelForInternationalBooking = () => {
   const isMobile = useMobileCheck()
   const context: any = useContext(IHCLContext)
 
-  const bookingFlowGlobalStore = context?.getGlobalStore(
-    GLOBAL_STORES?.bookingFlowStore
-  ) as BookingFlowGlobalStore
+  const bookingFlowGlobalStore = context?.getGlobalStore(GLOBAL_STORES?.bookingFlowStore) as BookingFlowGlobalStore
 
   const { orderDetails, clearOrderResponse, setUpdatePaymentType } = bookingFlowGlobalStore
 
   const customerHash: any =
-    global?.localStorage?.getItem("customerHash") ||
-    global?.localStorage?.getItem("guestCustomerHash")
+    global?.localStorage?.getItem("customerHash") || global?.localStorage?.getItem("guestCustomerHash")
 
   const initialValues = { NumberOnCard: "", Expiry: "", firstName: "" }
   const errorMessage = {
@@ -48,9 +45,7 @@ const PayAtHotelForInternationalBooking = () => {
 
   const isDisableButton =
     (error?.firstName && formValues?.firstName !== "") ||
-    (error?.NumberOnCard &&
-      formValues?.NumberOnCard?.length !== 19 &&
-      formValues?.NumberOnCard !== "") ||
+    (error?.NumberOnCard && formValues?.NumberOnCard?.length !== 19 && formValues?.NumberOnCard !== "") ||
     (expiryDateError && expiryDate !== "") ||
     expiryDate?.length < 5 ||
     formValues?.firstName?.length < 3 ||
@@ -87,9 +82,7 @@ const PayAtHotelForInternationalBooking = () => {
     const inputVal = CardNumber?.replace(/ /g, "")
     let inputNumbersOnly = inputVal?.replace(/\D/g, "")
     if (inputNumbersOnly?.length >= 16) {
-      inputNumbersOnly = inputNumbersOnly
-        .replace(/[`~!$%^@*()_|+\=?;:'"<>\{\}\[\]\\]/gi, "")
-        .substr(0, 16)
+      inputNumbersOnly = inputNumbersOnly.replace(/[`~!$%^@*()_|+\=?;:'"<>\{\}\[\]\\]/gi, "").substr(0, 16)
     }
     const splits = inputNumbersOnly?.match(/.{1,4}/g)
     let spacedNumber = ""
@@ -118,11 +111,7 @@ const PayAtHotelForInternationalBooking = () => {
     const cleanedValue = inputValue?.replace(/\D/g, "")?.slice(0, 4)
 
     if (cleanedValue?.length >= 2) {
-      setExpiryDate(
-        cleanedValue?.substring(0, 2) +
-          `${cleanedValue?.substring(2) && "/"}` +
-          cleanedValue?.substring(2)
-      )
+      setExpiryDate(cleanedValue?.substring(0, 2) + `${cleanedValue?.substring(2) && "/"}` + cleanedValue?.substring(2))
     } else {
       setExpiryDate(cleanedValue)
     }
@@ -132,11 +121,7 @@ const PayAtHotelForInternationalBooking = () => {
     const year = parseInt(cleanedValue?.substring(2), 10)
     const month = parseInt(cleanedValue?.substring(0, 2), 10)
 
-    const isValid =
-      month >= 1 &&
-      month <= 12 &&
-      year >= currentYear &&
-      (year > currentYear || month >= currentMonth)
+    const isValid = month >= 1 && month <= 12 && year >= currentYear && (year > currentYear || month >= currentMonth)
 
     setExpiryDateError(!isValid)
   }
@@ -163,12 +148,10 @@ const PayAtHotelForInternationalBooking = () => {
             variant={isMobile ? "m-body-sl" : "body-ml"}
             sx={{
               fontWeight: 700,
-              color: theme.palette.neuPalette.hexTwo,
+              color: theme.palette.ihclPalette.hexTwo,
               textAlign: isMobile ? "center" : "default",
               padding: isMobile ? `0 0 ${MobilePxToVw(30)} 0` : `0 0 0 ${DesktopPxToVw(12)}`,
-              borderLeft: isMobile
-                ? ""
-                : `${DesktopPxToVw(8)} solid ${theme.palette.neuPalette.hexTwo}`,
+              borderLeft: isMobile ? "" : `${DesktopPxToVw(8)} solid ${theme.palette.ihclPalette.hexTwo}`,
             }}>
             CREDIT / DEBIT CARD
           </Typography>
@@ -176,9 +159,7 @@ const PayAtHotelForInternationalBooking = () => {
       </Grid>
       <Grid item xs={12} sm={12} lg={8} xl={8}>
         <Box>
-          <Typography variant={isMobile ? "m-heading-xs" : "heading-xs"}>
-            ENTER DEBIT / CREDIT CARD DETAILS
-          </Typography>
+          <Typography variant={isMobile ? "m-heading-xs" : "heading-xs"}>ENTER DEBIT / CREDIT CARD DETAILS</Typography>
           <Stack sx={{ gap: DesktopPxToVw(10) }}>
             <CustomTextField
               type="text"
@@ -189,20 +170,14 @@ const PayAtHotelForInternationalBooking = () => {
               onChange={(e: any) => handleCardName(e)}
               error={error?.firstName && formValues?.firstName !== ""}
               l
-              helperText={
-                error?.firstName && formValues?.firstName !== "" && errorMessage?.[firstName]
-              }
+              helperText={error?.firstName && formValues?.firstName !== "" && errorMessage?.[firstName]}
             />
             <CustomTextField
               type="text"
               variant="standard"
               name={NumberOnCard}
               label={"Card Number*"}
-              error={
-                error?.NumberOnCard &&
-                formValues?.NumberOnCard?.length !== 19 &&
-                formValues?.NumberOnCard !== ""
-              }
+              error={error?.NumberOnCard && formValues?.NumberOnCard?.length !== 19 && formValues?.NumberOnCard !== ""}
               value={formValues?.NumberOnCard}
               inputProps={{
                 maxLength: 19,
@@ -223,11 +198,7 @@ const PayAtHotelForInternationalBooking = () => {
               onChange={handleExpiryDate}
               inputProps={{ maxLength: 5 }}
               label="Expiration Date (MM/YY*)"
-              helperText={
-                expiryDateError && expiryDate !== ""
-                  ? "Invalid MM/YY format"
-                  : ""
-              }
+              helperText={expiryDateError && expiryDate !== "" ? "Invalid MM/YY format" : ""}
             />
           </Stack>
           <Button

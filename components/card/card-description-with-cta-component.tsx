@@ -20,23 +20,16 @@ interface CardDescriptionWithExternalLink {
   primaryAction: ActionProps
   isMultiBlockContent: boolean
 }
-const CardDescriptionWithExternalLink = ({
-  description,
-  primaryAction,
-}: CardDescriptionWithExternalLink) => {
+const CardDescriptionWithExternalLink = ({ description, primaryAction }: CardDescriptionWithExternalLink) => {
   const isMobile = useMobileCheck()
   return (
     <MainContainer
       $isMobile={isMobile}
       sx={{
-        border: isMobile
-          ? `1px solid ${theme?.palette?.neuPalette?.hexTwo}`
-          : "",
+        border: isMobile ? `1px solid ${theme?.palette?.ihclPalette?.hexTwo}` : "",
       }}>
       {description && (
-        <Typography
-          variant={isMobile ? "m-body-m" : "body-ml"}
-          fontSize={isMobile ? "3.438vw" : "1.146vw"}>
+        <Typography variant={isMobile ? "m-body-m" : "body-ml"} fontSize={isMobile ? "3.438vw" : "1.146vw"}>
           {description}
         </Typography>
       )}

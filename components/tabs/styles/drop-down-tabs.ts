@@ -21,7 +21,7 @@ export const TabsBox = styled(Box)(() => ({
 
 export const HorizontalDivider = styled(Divider)(() => ({
   height: "0.15vw",
-  backgroundColor: theme?.palette?.neuPalette?.hexSeven,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeven,
 }))
 
 export const VerticalDivider = styled(Divider)(() => ({
@@ -33,7 +33,7 @@ export const VerticalDivider = styled(Divider)(() => ({
 
 export const StyledDownArrow = styled(
   KeyboardArrowDown,
-  transientProps
+  transientProps,
 )<{ $isMoreAvailable: boolean }>(({ $isMoreAvailable }) => ({
   color: theme?.palette?.text?.primary,
   marginLeft: $isMoreAvailable ? "2.5vw" : "",
@@ -60,14 +60,14 @@ export const DropDownMainBox = styled(Box)(() => ({
   top: "15vw",
   right: "10vw",
   position: "absolute",
-  background: theme?.palette?.neuPalette?.hexSeven,
+  background: theme?.palette?.ihclPalette?.hexSeven,
 }))
 
 export const DropDownItemBox = styled(Box)(() => ({
   display: "flex",
   margin: "0.5vw 1vw",
   flexDirection: "column",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
 }))
 
 export const DropdownTitleText = styled(Typography)(() => ({
@@ -75,7 +75,7 @@ export const DropdownTitleText = styled(Typography)(() => ({
   fontFamily: theme?.palette?.font?.primaryFontFamily,
   letterSpacing: "-0.05em",
   padding: "11.72vw 0",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   "@media (max-width: 640px)": {
     padding: `${MobilePxToVw(42)} 0`,
   },
@@ -96,7 +96,7 @@ export const GiftCardDropdownTitleText = styled(Typography)(() => ({
   padding: `${MobilePxToVw(71)} 0`,
   fontFamily: theme?.palette?.font?.primaryFontFamily,
   letterSpacing: "-0.05em",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const HotelTabTitleNameTypo = styled(Typography)(() => ({
@@ -104,12 +104,12 @@ export const HotelTabTitleNameTypo = styled(Typography)(() => ({
   fontFamily: theme?.palette?.font?.primaryFontFamily,
   letterSpacing: "-0.05em",
   padding: `${MobilePxToVw(75)} 0 ${MobilePxToVw(67)}`,
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const SingleContentAsTitleWrapper = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $activeTabIndex: boolean }>(({ $activeTabIndex }) => ({
   "> span": {
     display: "flex",

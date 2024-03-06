@@ -44,7 +44,7 @@ const GlobalSearchBookingNowActionComponent = ({
       {ctaLabel && (
         <TwoActionButtonsWrapperContentBox
           sx={{
-            borderRight: `0.156vw solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+            borderRight: `0.156vw solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
           }}
           onClick={() => {
             navigate(url, urlType)

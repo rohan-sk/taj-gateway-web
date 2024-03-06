@@ -7,7 +7,7 @@ import { transientProps } from "../../../../utils/transientProps"
 
 export const GCText = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   fontSize: $isMobile ? MobilePxToVw(14) : DesktopPxToVw(14),
   fontFamily: "Inter",
@@ -32,11 +32,11 @@ export const BalanceBox = styled(Box)(() => ({
 
 export const GCBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: $isMobile ? "column" : "row",
-  border: `1px solid ${theme?.palette?.neuPalette?.hexNineteen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexNineteen}`,
   marginTop: DesktopPxToVw(35),
   marginBottom: DesktopPxToVw(35),
   padding: DesktopPxToVw(35),
@@ -45,7 +45,7 @@ export const GCBox = styled(
 
 export const HeaderBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   backgroundColor: theme?.palette?.background?.paper,
   width: $isMobile ? "100%" : "33.1%",
@@ -63,10 +63,10 @@ export const GCDetailsBox = styled(FlexBox)(() => ({
 
 export const ActionButton = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   paddingTop: DesktopPxToVw(10),
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   textDecoration: "underline  1px",
   fontSize: $isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),
 }))
@@ -77,7 +77,7 @@ export const StyledDivider = styled(Divider)(() => ({
 
 export const GCFlexBox = styled(
   FlexBox,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   alignItems: $isMobile ? "center" : "baseline",
   flexDirection: $isMobile ? "column" : "row",

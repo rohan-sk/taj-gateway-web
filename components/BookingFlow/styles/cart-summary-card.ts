@@ -31,14 +31,14 @@ export const BoldTypo = styled(Typography)(() => ({
 }))
 
 export const StyledDivider = styled(Divider)(() => ({
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
   "@media (max-width: 640px)": {
     height: "0.15625vw",
   },
 }))
 
 export const GreyDivider = styled(Divider)(() => ({
-  background: theme?.palette?.neuPalette?.hexSixteen,
+  background: theme?.palette?.ihclPalette?.hexSixteen,
   "@media (max-width: 640px)": {
     height: DesktopPxToVw(1),
   },
@@ -74,14 +74,14 @@ export const FlexBox = styled(Box)(() => ({
 
 export const ColumnStack = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   rowGap: $isMobile ? MobilePxToVw(18) : DesktopPxToVw(20),
 }))
 
 export const CartColumnStack = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   rowGap: $isMobile ? MobilePxToVw(8) : DesktopPxToVw(8),
 }))
@@ -92,7 +92,7 @@ export const TaxLabelBox = styled(Box)(() => ({
 }))
 
 export const GrayColorTypo = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwelve,
+  color: theme?.palette?.ihclPalette?.hexTwelve,
   paddingTop: DesktopPxToVw(10),
   fontSize: DesktopPxToVw(16),
 }))
@@ -113,7 +113,7 @@ export const HighLightedBorderBox = styled(Box)(() => ({
   width: "100%",
   height: "100%",
   position: "absolute",
-  border: `0.10vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `0.10vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
 }))
 
 export const StyledLeftArrow = styled(ArrowLeft)(() => ({
@@ -121,7 +121,7 @@ export const StyledLeftArrow = styled(ArrowLeft)(() => ({
   top: "34%",
   left: "-14px",
   position: "absolute",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const SelectedRoomTypography = styled(Typography)(() => ({

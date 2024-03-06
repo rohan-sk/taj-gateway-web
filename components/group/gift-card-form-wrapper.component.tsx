@@ -275,7 +275,7 @@ const GiftCardFormWrapperComponent = ({ props: { items, primaryAction, secondary
     <>
       <Box
         sx={{
-          border: isMobile ? "unset" : `1px solid ${theme?.palette?.neuPalette?.hexTwenty} `,
+          border: isMobile ? "unset" : `1px solid ${theme?.palette?.ihclPalette?.hexTwenty} `,
         }}>
         {items?.map((item: any, index: number) => {
           return <Box key={index}>{context?.renderComponent(item?._type, item)}</Box>

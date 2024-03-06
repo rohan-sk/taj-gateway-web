@@ -4,7 +4,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 import { transientProps } from "../../../utils/transientProps"
 
 export const BoxWrapper = styled(Box)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwenty}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwenty}`,
   padding: DesktopPxToVw(40),
   margin: `${DesktopPxToVw(40)} 0 ${DesktopPxToVw(60)}`,
   "@media (max-width: 640px)": {
@@ -156,7 +156,7 @@ export const StyledButtons = styled(Button)(() => ({
 export const HotelNameDivider = styled(Divider)(() => ({
   width: "4.167vw",
   height: "0.06vw",
-  background: theme.palette.neuPalette.hexOne,
+  background: theme.palette.ihclPalette.hexOne,
 }))
 
 export const HotelNameStack = styled(Stack)(() => ({

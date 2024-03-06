@@ -1,14 +1,5 @@
 import styled from "@emotion/styled"
-import {
-  FormControl,
-  Grid,
-  MenuItem,
-  Stack,
-  Tab,
-  Tabs,
-  TextField,
-  Typography,
-} from "@mui/material"
+import { FormControl, Grid, MenuItem, Stack, Tab, Tabs, TextField, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { fonts, theme } from "../../../lib/theme"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
@@ -16,7 +7,7 @@ import { transientProps } from "../../../utils/transientProps"
 
 export const TellUsAboutYourStayTextField = styled(TextField)(() => ({
   "& textarea, & textarea::placeholder": {
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     lineHeight: "140%",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
@@ -75,10 +66,9 @@ export const CountryCodeDropdownBox = styled(Box)(() => ({
       right: "0vw",
       marginBottom: "0vw",
     },
-    "& .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary":
-      {
-        minWidth: "fit-content!important",
-      },
+    "& .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary": {
+      minWidth: "fit-content!important",
+    },
   },
 }))
 
@@ -96,7 +86,7 @@ export const ErrorMessageTypography = styled(Typography)(() => ({
   fontSize: `${DesktopPxToVw(18)} !important`,
   fontFamily: fonts?.body,
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexTwentyOne,
+  color: theme?.palette?.ihclPalette?.hexTwentyOne,
   "@media (max-width: 640px)": {
     fontSize: "2.813vw !important",
   },
@@ -134,7 +124,7 @@ export const DateTextField = styled(TextField)(() => ({
     },
   },
   "&  .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexTwentyOne} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexTwentyOne} !important`,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "2.75vw",
@@ -142,7 +132,7 @@ export const DateTextField = styled(TextField)(() => ({
   },
   "& .MuiInputLabel-root": {
     textOverflow: "ellipsis !important",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
     opacity: 1,
     fontSize: DesktopPxToVw(24),
@@ -156,7 +146,7 @@ export const DateTextField = styled(TextField)(() => ({
       fontWeight: 300,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         fontSize: "3.75vw",
         lineHeight: "4.8vw",
@@ -167,7 +157,7 @@ export const DateTextField = styled(TextField)(() => ({
 
 export const StyledTabs = styled(Tabs)(() => ({
   "& .MuiTab-root.Mui-selected": {
-    color: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexTwo,
   },
   "& .MuiTabs-flexContainer": {
     justifyContent: "center",
@@ -245,13 +235,13 @@ export const FeedbackMenuItem = styled(MenuItem)(() => ({
   fontWeight: 300,
   fontSize: "0.938vw",
   fontFamily: "Inter",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   padding: "0.417vw 0vw 0.417vw 2.083vw",
   "@media (max-width:640px)": {
     fontWeight: 300,
     fontSize: "2.813vw",
     padding: "1.563vw 0vw 1.563vw 3.125vw",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
 }))
 
@@ -265,20 +255,20 @@ export const InputText = styled(TextField)(() => ({
   "& .MuiFormHelperText-root": {
     fontSize: DesktopPxToVw(18),
     fontFamily: "Inter !important",
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
   },
 
   input: {
     fontFamily: "Inter",
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     "&::placeholder": {
       fontFamily: "Inter",
       opacity: 1,
       fontWeight: "300 !important",
       fontSize: DesktopPxToVw(24),
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
 
@@ -303,7 +293,7 @@ export const InputText = styled(TextField)(() => ({
 
 export const StayDateContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isOpen?: boolean; $isDouble?: any }>(({ $isOpen, $isDouble }) => ({
   minWidth: DesktopPxToVw(371),
   "@media (max-width:640px)": {

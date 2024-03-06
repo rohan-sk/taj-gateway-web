@@ -6,7 +6,7 @@ import { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 
 export const MainBox: any = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $padding: string; $bgColor: string }>(({ $padding, $bgColor }) => ({
   display: "flex",
   flexDirection: "column",
@@ -16,13 +16,13 @@ export const MainBox: any = styled(
 
 export const TitleTypography = styled(Typography)(() => ({
   lineHeight: "9vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "&:before": {
     content: '""',
     width: "6.250vw",
     display: "inline-block",
     verticalAlign: "middle",
-    borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+    borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
   },
 
   ":not(:empty)::before ": {

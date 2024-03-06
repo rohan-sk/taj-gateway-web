@@ -14,15 +14,21 @@ export const LoadMoreActionGrid = styled(Grid)(() => ({
   justifyContent: "center",
 }))
 
-export const StyledExpandMoreButton = styled(Button, transientProps)<{ $color?: any }>(({ $color }) => ({
+export const StyledExpandMoreButton = styled(
+  Button,
+  transientProps,
+)<{ $color?: any }>(({ $color }) => ({
   "& .MuiButton-endIcon": { margin: 0, marginLeft: "1vw" },
-  color: $color || theme?.palette?.neuPalette?.hexTwo
+  color: $color || theme?.palette?.ihclPalette?.hexTwo,
 }))
 
-export const StyledExpandMoreIcon = styled(ExpandMore, transientProps)<{ $color?: any }>(({ $color }) => ({
+export const StyledExpandMoreIcon = styled(
+  ExpandMore,
+  transientProps,
+)<{ $color?: any }>(({ $color }) => ({
   width: "auto",
   height: "1.2vw",
-  color: $color || theme?.palette?.neuPalette?.hexTwo,
+  color: $color || theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const SearchDropDownBox = styled(Box)(() => ({
@@ -118,26 +124,32 @@ export const LoadMoreActionButtonWrapper = styled(Grid)(() => ({
 
 export const AestheticContainer = styled(
   Box,
-  transientProps
-)<{ $padding?: any, $backgroundColor?: any }>(({ $padding, $backgroundColor }) => ({
+  transientProps,
+)<{ $padding?: any; $backgroundColor?: any }>(({ $padding, $backgroundColor }) => ({
   padding: $padding || 0,
-  backgroundColor: $backgroundColor
+  backgroundColor: $backgroundColor,
 }))
 
-export const AestheticTypography = styled(Typography, transientProps)<{ $color?: any }>(({ $color = "" }) => ({
-  color: $color
+export const AestheticTypography = styled(
+  Typography,
+  transientProps,
+)<{ $color?: any }>(({ $color = "" }) => ({
+  color: $color,
 }))
 
 export const ZoomInAnimationWrapper = styled(Zoom)(() => ({
-  transitionDelay: "200ms"
+  transitionDelay: "200ms",
 }))
 
-export const SearchFilterContainer = styled(Box, transientProps)<{ $filterAlignment: any }>(({ $filterAlignment = 'end' }) => ({
+export const SearchFilterContainer = styled(
+  Box,
+  transientProps,
+)<{ $filterAlignment: any }>(({ $filterAlignment = "end" }) => ({
   width: "100%",
-  display: 'flex',
+  display: "flex",
   justifyContent: $filterAlignment,
   paddingBottom: "3.125vw",
-  '@media (max-width:640px)': {
+  "@media (max-width:640px)": {
     paddingBottom: "8.594vw",
-  }
+  },
 }))

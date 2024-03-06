@@ -17,7 +17,7 @@ export const ButtonBox: any = styled(Box)(() => ({
   justifyContent: "center",
 }))
 export const GridContainer = styled(Grid)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexEleven}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexEleven}`,
   margin: "auto",
   display: "grid",
   justifyItems: "center",

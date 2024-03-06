@@ -18,7 +18,7 @@ export const TableOfContentWrapper = styled(
   transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   padding: $isMobile ? `${MobilePxToVw(60)} ${MobilePxToVw(83)}` : `${DesktopPxToVw(60)} ${DesktopPxToVw(40)}`,
-  background: theme?.palette?.neuPalette?.hexTwentyNine,
+  background: theme?.palette?.ihclPalette?.hexTwentyNine,
   marginTop: $isMobile ? MobilePxToVw(40) : DesktopPxToVw(40),
   marginBottom: $isMobile ? `${MobilePxToVw(40)}` : `${DesktopPxToVw(40)}`,
 }))
@@ -32,7 +32,7 @@ export const TableHeader = styled(
   flexDirection: "row",
   alignContent: "center",
   justifyContent: "flex-start",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   borderWidth: "1px",
   paddingBottom: $isMobile ? `${MobilePxToVw(30)}` : `${DesktopPxToVw(30)}`,
 }))

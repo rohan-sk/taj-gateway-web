@@ -60,8 +60,8 @@ export const InputFontStyles = {
   fontStyle: "normal",
   fontWeight: 300,
   lineHeight: "150%",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
-  borderBottom: `0.05vw solid ${theme?.palette?.neuPalette?.hexOne}`,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
+  borderBottom: `0.05vw solid ${theme?.palette?.ihclPalette?.hexOne}`,
 }
 export interface OwnerBenefitsHotelInformation {
   hotelName: string

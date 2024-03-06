@@ -46,7 +46,7 @@ const OffersCard = ({ OfferData, primaryAction, charactersLimit }: any) => {
           {OfferData?.packages?.length > 0 &&
             OfferData?.packages?.map((singleOffer: any, index: number) => (
               <ChipLabelsBox key={index}>
-                <Typography variant={isMobile ? "m-body-s" : "body-s"} color={theme.palette.neuPalette.hexTwo}>
+                <Typography variant={isMobile ? "m-body-s" : "body-s"} color={theme.palette.ihclPalette.hexTwo}>
                   {singleOffer?.title}
                 </Typography>
               </ChipLabelsBox>
@@ -102,8 +102,8 @@ const OffersCard = ({ OfferData, primaryAction, charactersLimit }: any) => {
                 </Stack>
                 <RenderActionItem
                   buttonStyles={{
-                    backgroundColor: theme?.palette?.neuPalette?.hexTwo,
-                    color: theme?.palette?.neuPalette?.hexOne,
+                    backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
+                    color: theme?.palette?.ihclPalette?.hexOne,
                   }}
                   url={`${primaryAction?.url}/${OfferData?.identifier}`}
                   title={primaryAction?.title}
@@ -120,8 +120,8 @@ const OffersCard = ({ OfferData, primaryAction, charactersLimit }: any) => {
           {!isMobile && (
             <RenderActionItem
               buttonStyles={{
-                backgroundColor: theme?.palette?.neuPalette?.hexTwo,
-                color: theme?.palette?.neuPalette?.hexOne,
+                backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
+                color: theme?.palette?.ihclPalette?.hexOne,
               }}
               url={`${primaryAction?.url}/${OfferData?.identifier}`}
               title={primaryAction?.title}

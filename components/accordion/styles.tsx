@@ -5,7 +5,7 @@ import MUIAccordion from "@mui/material/Accordion"
 import DesktopPxToVw, { MobilePxToVw } from "../../utils/DesktopFontCalc"
 
 export const MUIAccordionStyled = styled(MUIAccordion)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexone,
+  backgroundColor: theme?.palette?.ihclPalette?.hexone,
   "&.MuiAccordion-root:before": {
     backgroundColor: "unset",
   },
@@ -48,7 +48,7 @@ export const StyledAccordion = styled(Accordion)(() => ({
   "& .MuiButtonBase-root.MuiAccordionSummary-root": {
     alignItems: "start",
   },
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}20!important`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}20!important`,
   borderWidth: " 1px 0px 1px!important",
   "&::before": {
     content: "none",

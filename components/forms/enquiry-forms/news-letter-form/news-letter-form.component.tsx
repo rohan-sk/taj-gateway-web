@@ -400,7 +400,7 @@ const NewsLetterForm = (props: any) => {
                 gridArea: "firstName",
                 label: {
                   "&.Mui-error": {
-                    color: theme?.palette?.neuPalette?.hexSeventeen,
+                    color: theme?.palette?.ihclPalette?.hexSeventeen,
                   },
                 },
               }}
@@ -431,7 +431,7 @@ const NewsLetterForm = (props: any) => {
                 gridArea: "lastName",
                 label: {
                   "&.Mui-error": {
-                    color: theme?.palette?.neuPalette?.hexSeventeen,
+                    color: theme?.palette?.ihclPalette?.hexSeventeen,
                   },
                 },
               }}

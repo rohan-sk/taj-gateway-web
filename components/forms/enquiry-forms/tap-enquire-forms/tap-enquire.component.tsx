@@ -586,7 +586,7 @@ const TapEnquireComponent = (props: any) => {
           </CommonStack>
           <Typography
             sx={{
-              color: theme?.palette?.neuPalette.hexSeventeen,
+              color: theme?.palette?.ihclPalette.hexSeventeen,
               fontSize: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
             }}>
             {props?.items?.[11]?.labelText}

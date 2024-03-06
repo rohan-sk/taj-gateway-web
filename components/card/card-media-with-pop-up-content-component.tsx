@@ -279,7 +279,7 @@ const CardMediaWithPopUpContentComponent = ({
                     ? textColor
                     : titleTextColor
                     ? titleTextColor
-                    : theme?.palette?.neuPalette?.hexSeventeen,
+                    : theme?.palette?.ihclPalette?.hexSeventeen,
                 }}
                 component={headingElementForCard || "h3"}>
                 {title}
@@ -338,7 +338,7 @@ const CardMediaWithPopUpContentComponent = ({
                     ? textColor
                     : titleTextColor
                     ? titleTextColor
-                    : theme?.palette?.neuPalette?.hexSeventeen,
+                    : theme?.palette?.ihclPalette?.hexSeventeen,
                 }}>
                 {description?.slice(0, more)}
                 {description?.length > more && (
@@ -503,7 +503,7 @@ const CardMediaWithPopUpContentComponent = ({
         <BasicModal
           width={"100%"}
           height={"100%"}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           handleClose={() => setOpenDescriptionModel(!openDescriptionModel)}
           open={openDescriptionModel}
           Component={

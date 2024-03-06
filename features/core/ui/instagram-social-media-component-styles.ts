@@ -12,7 +12,7 @@ export const SocialMediaCardWrapper = styled(Box)(() => ({
 
 export const LoadMoreWrapper = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   justifyContent: "center",
@@ -24,15 +24,13 @@ export const MobileLoadMoreWrapper = styled(Button)(() => ({
     margin: 0,
     marginLeft: MobilePxToVw(10),
   },
-  padding: `${MobilePxToVw(17)} ${MobilePxToVw(44)} ${MobilePxToVw(
-    15
-  )} ${MobilePxToVw(47)} !important`,
+  padding: `${MobilePxToVw(17)} ${MobilePxToVw(44)} ${MobilePxToVw(15)} ${MobilePxToVw(47)} !important`,
 }))
 
 export const MobileExpandMoreWrapper = styled(ExpandMore)(() => ({
   width: "auto",
   height: "3.875vw",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const WebLoadMoreWrapper = styled(Box)(() => ({
@@ -43,5 +41,5 @@ export const WebLoadMoreWrapper = styled(Box)(() => ({
 export const WebExpandMoreWrapper = styled(ExpandMore)(() => ({
   width: "auto",
   height: "1.2vw",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))

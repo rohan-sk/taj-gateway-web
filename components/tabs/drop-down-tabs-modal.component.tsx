@@ -25,12 +25,7 @@ type DropDownTabItems = {
   urlType?: string
 }
 
-const DropdownTabsModal = ({
-  navigate,
-  activePath,
-  modalProps,
-  setOpenModel,
-}: DropdownTabsModalProps) => {
+const DropdownTabsModal = ({ navigate, activePath, modalProps, setOpenModel }: DropdownTabsModalProps) => {
   const isMobile = useMobileCheck()
   const router = useRouter()
   return (
@@ -39,55 +34,35 @@ const DropdownTabsModal = ({
         {(modalDropdownContextData) => (
           <GiftCardDropdownModelWrapper aria-label="drop-down-tabs-model">
             <GiftCardDropdownTitleText>
-              {modalDropdownContextData?.modalDropdownContextData?.title !==
-                undefined &&
-              typeof modalDropdownContextData?.modalDropdownContextData
-                ?.title === "string" ? (
+              {modalDropdownContextData?.modalDropdownContextData?.title !== undefined &&
+              typeof modalDropdownContextData?.modalDropdownContextData?.title === "string" ? (
                 <>
-                  {modalDropdownContextData?.modalDropdownContextData?.title?.split(
-                    ","
-                  )[0] &&
-                    modalDropdownContextData?.modalDropdownContextData?.title?.split(
-                      ","
-                    )[0]}
+                  {modalDropdownContextData?.modalDropdownContextData?.title?.split(",")[0] &&
+                    modalDropdownContextData?.modalDropdownContextData?.title?.split(",")[0]}
                   , <br />
-                  {modalDropdownContextData?.modalDropdownContextData?.title?.split(
-                    ","
-                  )[1] &&
-                    modalDropdownContextData?.modalDropdownContextData?.title?.split(
-                      ","
-                    )[1]}
+                  {modalDropdownContextData?.modalDropdownContextData?.title?.split(",")[1] &&
+                    modalDropdownContextData?.modalDropdownContextData?.title?.split(",")[1]}
                 </>
               ) : (
                 <>
                   {isMobile ? (
                     <>
-                      {modalDropdownContextData?.modalDropdownContextData?.title
-                        ?.mobileTitle?.[0] &&
-                        modalDropdownContextData?.modalDropdownContextData
-                          ?.title?.mobileTitle?.[0]}
+                      {modalDropdownContextData?.modalDropdownContextData?.title?.mobileTitle?.[0] &&
+                        modalDropdownContextData?.modalDropdownContextData?.title?.mobileTitle?.[0]}
                       <br />
-                      {modalDropdownContextData?.modalDropdownContextData?.title
-                        ?.mobileTitle?.[1] &&
-                        modalDropdownContextData?.modalDropdownContextData
-                          ?.title?.mobileTitle?.[1]}
+                      {modalDropdownContextData?.modalDropdownContextData?.title?.mobileTitle?.[1] &&
+                        modalDropdownContextData?.modalDropdownContextData?.title?.mobileTitle?.[1]}
                       <br />
-                      {modalDropdownContextData?.modalDropdownContextData?.title
-                        ?.mobileTitle?.[2] &&
-                        modalDropdownContextData?.modalDropdownContextData
-                          ?.title?.mobileTitle?.[2]}
+                      {modalDropdownContextData?.modalDropdownContextData?.title?.mobileTitle?.[2] &&
+                        modalDropdownContextData?.modalDropdownContextData?.title?.mobileTitle?.[2]}
                     </>
                   ) : (
                     <>
-                      {modalDropdownContextData?.modalDropdownContextData?.title
-                        ?.desktopTitle?.[0] &&
-                        modalDropdownContextData?.modalDropdownContextData
-                          ?.title?.desktopTitle?.[0]}
+                      {modalDropdownContextData?.modalDropdownContextData?.title?.desktopTitle?.[0] &&
+                        modalDropdownContextData?.modalDropdownContextData?.title?.desktopTitle?.[0]}
                       <br />
-                      {modalDropdownContextData?.modalDropdownContextData?.title
-                        ?.desktopTitle?.[1] &&
-                        modalDropdownContextData?.modalDropdownContextData
-                          ?.title?.desktopTitle?.[1]}
+                      {modalDropdownContextData?.modalDropdownContextData?.title?.desktopTitle?.[1] &&
+                        modalDropdownContextData?.modalDropdownContextData?.title?.desktopTitle?.[1]}
                     </>
                   )}
                 </>
@@ -99,13 +74,12 @@ const DropdownTabsModal = ({
                   sx={{
                     fontSize: "4.06vw",
                     lineHeight: "320%",
-                    color: theme?.palette?.neuPalette?.hexTwo,
+                    color: theme?.palette?.ihclPalette?.hexTwo,
                     fontWeight: activePath == item?.url ? 700 : 400,
                   }}
                   variant="m-body-m"
                   onClick={() => {
-                    !!item?.url && navigate(item?.url, item?.urlType),
-                      setOpenModel(false)
+                    !!item?.url && navigate(item?.url, item?.urlType), setOpenModel(false)
                   }}>
                   {item?.title}
                 </TabTitleTypo>

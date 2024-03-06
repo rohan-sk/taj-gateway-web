@@ -31,8 +31,8 @@ export const DropDownChildrenBox = styled(Box)(() => ({
   overflow: "scroll",
   background: theme?.palette?.background?.paper,
   "::-webkit-scrollbar-track": {
-    backgroundColor: "transparent !important"
-  }
+    backgroundColor: "transparent !important",
+  },
 }))
 
 export const CartRemoveLink = styled(Typography)(() => ({
@@ -52,13 +52,13 @@ export const PriceDetailsMainBox = styled(Box)(() => ({
   // position: "sticky",
   width: "100%",
   padding: "5.78vw 2.35vw 0vw 2.35vw",
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
   boxShadow: "-6px 10px 32px rgba(0, 0, 0, 0.15)",
-  maxHeight:"50vh",
- overflowY: "scroll",
- zIndex:999,
- position:"absolute",
- bottom:"0",
+  maxHeight: "50vh",
+  overflowY: "scroll",
+  zIndex: 999,
+  position: "absolute",
+  bottom: "0",
 }))
 
 export const PayNowButton = styled(Button)(() => ({
@@ -78,7 +78,7 @@ export const TitleStack = styled(Stack)(() => ({
 export const TitleDivider = styled(Divider)(() => ({
   width: "6.250vw",
   height: "0.156vw",
-  background: theme.palette.neuPalette.hexSeventeen,
+  background: theme.palette.ihclPalette.hexSeventeen,
 }))
 
 export const RoomTaxesDetailsMobileWrapper = styled(Box)(() => ({

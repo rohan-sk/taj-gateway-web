@@ -1,18 +1,10 @@
 import { theme } from "../../../lib/theme"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
-import {
-  Box,
-  Grid,
-  Select,
-  styled,
-  InputLabel,
-  Typography,
-  Stack,
-} from "@mui/material"
+import { Box, Grid, Select, styled, InputLabel, Typography, Stack } from "@mui/material"
 import { transientProps } from "../../../utils/transientProps"
 
 export const BookingsWrapper = styled(Grid)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwenty}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwenty}`,
   margin: "2vw 0vw",
   display: "flex",
   width: "100%",
@@ -66,7 +58,7 @@ export const TextTypography = styled(Typography)(() => ({
 }))
 export const BoldText = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isWrap?: boolean }>(({ $isWrap }) => ({
   fontWeight: 700,
   whiteSpace: $isWrap ? "pre-wrap" : "nowrap",
@@ -90,7 +82,7 @@ export const TitleBoxWrapper = styled(Box)(() => ({
 export const HotelName = styled(Typography)(() => ({
   fontSize: DesktopPxToVw(24),
   textTransform: "uppercase",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width:640px)": {
     fontSize: MobilePxToVw(24),
   },
@@ -137,7 +129,7 @@ export const PriceWrapper = styled(Box)(() => ({
 export const AmountTypography = styled(Typography)(() => ({
   textAlign: "end",
   fontSize: DesktopPxToVw(18),
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width:640px)": {
     fontSize: "2.188vw",
   },
@@ -176,11 +168,9 @@ export const StackContainer = styled(Stack)(() => ({
 
 export const StatusText = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $check: boolean }>(({ $check }) => ({
-  color: $check
-    ? theme?.palette?.neuPalette?.hexTwentyOne
-    : theme?.palette?.neuPalette?.hexTwentyFour,
+  color: $check ? theme?.palette?.ihclPalette?.hexTwentyOne : theme?.palette?.ihclPalette?.hexTwentyFour,
   fontWeight: 700,
   fontSize: "0.938vw",
   lineHeight: "140%",
@@ -203,7 +193,7 @@ export const GuestTitle = styled(Typography)(() => ({
   fontSize: DesktopPxToVw(14),
   marginBottom: DesktopPxToVw(8),
   fontWeight: 700,
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width:640px)": {
     fontSize: MobilePxToVw(14),
     display: "block",
@@ -233,15 +223,15 @@ export const BookingDetailsGrid = styled(Box)(() => ({
 }))
 export const HotelGuestInfoContainer = styled(
   Box,
-  transientProps
-)<{ $isPartiallyCancelled:boolean }>(({$isPartiallyCancelled}) => ({
+  transientProps,
+)<{ $isPartiallyCancelled: boolean }>(({ $isPartiallyCancelled }) => ({
   display: "flex",
   flexDirection: "column",
-  justifyContent: $isPartiallyCancelled?"unset":"space-around",
-  rowGap: $isPartiallyCancelled?DesktopPxToVw(13): DesktopPxToVw(6),
+  justifyContent: $isPartiallyCancelled ? "unset" : "space-around",
+  rowGap: $isPartiallyCancelled ? DesktopPxToVw(13) : DesktopPxToVw(6),
   "@media (max-width:640px)": {
     rowGap: MobilePxToVw(6),
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
 }))
 
@@ -281,7 +271,7 @@ export const DetailsStack = styled(Stack)(() => ({
 }))
 
 export const StyledInputLabel = styled(InputLabel)(() => ({
-  color: theme?.palette?.neuPalette?.hexEleven,
+  color: theme?.palette?.ihclPalette?.hexEleven,
   fontSize: "0.938vw",
   fontWeight: 300,
   position: "absolute",
@@ -323,7 +313,7 @@ export const UserOptions = styled(Stack)(() => ({
 
 export const MobileViewDetailsContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $onView: boolean }>(({ $onView }) => ({
   display: "flex",
   flexDirection: "column",

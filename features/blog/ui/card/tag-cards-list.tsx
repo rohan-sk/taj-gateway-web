@@ -134,7 +134,7 @@ const TagCardsList = (props: TagCardTypes) => {
               },
             }}
           />
-          <ExpandMoreIcon sx={{ color: theme?.palette?.neuPalette?.hexTwo }} />
+          <ExpandMoreIcon sx={{ color: theme?.palette?.ihclPalette?.hexTwo }} />
         </MasonryCardActionBox>
       )}
     </>

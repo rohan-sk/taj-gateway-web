@@ -20,8 +20,8 @@ export const BoxWrapper = styled(Box)(() => ({
 
 export const LogoutBottomDivider = styled(Divider)(() => ({
   width: "74.5vw",
-  background: theme?.palette?.neuPalette?.hexSixteen,
-  borderColor: theme?.palette?.neuPalette?.hexSixteen,
+  background: theme?.palette?.ihclPalette?.hexSixteen,
+  borderColor: theme?.palette?.ihclPalette?.hexSixteen,
 
   "@media (max-width: 640px)": {
     width: "84.4vw",
@@ -71,25 +71,23 @@ export const StyledTabs = styled(Grid)(() => ({
 
 export const TabBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $index: boolean }>(({ $index }) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  backgroundColor: $index ? `${theme?.palette?.neuPalette?.hexTwo}1a` : "", //added 1a for opacity
+  backgroundColor: $index ? `${theme?.palette?.ihclPalette?.hexTwo}1a` : "", //added 1a for opacity
   margin: `0`,
 }))
 
 export const StyledTab = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $index: boolean }>(({ $index }) => ({
   opacity: $index ? 1 : 0.9,
   fontWeight: $index ? 700 : 300,
   padding: $index ? DesktopPxToVw(10) : `${DesktopPxToVw(10)} 0`,
-  color: $index
-    ? theme?.palette?.neuPalette?.hexTwo
-    : theme?.palette?.neuPalette?.hexSeventeen,
+  color: $index ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.ihclPalette?.hexSeventeen,
   fontSize: DesktopPxToVw(22),
   cursor: "pointer",
 }))
@@ -106,12 +104,12 @@ export const TabTitle = styled(Typography)(() => ({
   fontFamily: "Inter",
   fontSize: DesktopPxToVw(22),
   lineHeight: "140%",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const PlaceholderTitle = styled(Typography)(() => ({
   fontSize: "2vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const FlexBoxWrapper = styled(Box)(() => ({
@@ -154,7 +152,7 @@ export const BackButtonWrapper = styled(Box)(() => ({
 export const HorizontalDivider = styled(Divider)(() => ({
   width: "100%",
   height: "0.15vw",
-  backgroundColor: theme?.palette?.neuPalette?.hexSeven,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeven,
 }))
 
 export const TabListBox = styled(Box)(() => ({

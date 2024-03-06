@@ -15,7 +15,7 @@ export const MembershipWrapper = styled(Grid)(() => ({
   display: "flex",
   position: "sticky",
   paddingTop: "0.833vw",
-  background: `${theme?.palette?.neuPalette?.hexOne}`,
+  background: `${theme?.palette?.ihclPalette?.hexOne}`,
   justifyContent: "center",
   columnGap: DesktopPxToVw(30),
 
@@ -45,7 +45,7 @@ export const GoldColorDivider = styled(Divider)(() => ({
   width: "100%",
   height: "0.104vw",
   margin: "0 0 1.875vw 0vw",
-  backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
 
   "@media (max-width: 640px)": {
     height: "0.313vw",
@@ -70,7 +70,7 @@ export const AshColorDivider = styled(Divider)(() => ({
   width: "100%",
   height: "0.104vw",
   margin: "1.875vw 0vw",
-  backgroundColor: theme?.palette?.neuPalette?.hexTwelve,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwelve,
 
   "@media (max-width: 640px)": {
     height: "0.313vw",
@@ -81,7 +81,7 @@ export const AshColorDivider = styled(Divider)(() => ({
 export const MembershipTitle = styled(Typography)(() => ({
   left: "10%",
   position: "absolute",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const MemberShipParentGrid = styled(Grid)(() => ({

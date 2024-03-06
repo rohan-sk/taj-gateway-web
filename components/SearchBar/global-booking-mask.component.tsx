@@ -505,7 +505,7 @@ const GlobalBookingFlowBar = ({ title, _type }: GlobalBookingFlowBarProps) => {
               <SearchMenuList key={searchValue}>
                 {searchResults?.hotels?.destinations?.length > 0 && (
                   <>
-                    <Typography variant="body-s" color={theme.palette.neuPalette.hexTwelve}>
+                    <Typography variant="body-s" color={theme.palette.ihclPalette.hexTwelve}>
                       {CONSTANTS?.DESTINATIONS}
                     </Typography>
                     <Divider sx={{ margin: `${DesktopPxToVw(8)} 0` }} />
@@ -535,7 +535,7 @@ const GlobalBookingFlowBar = ({ title, _type }: GlobalBookingFlowBarProps) => {
                 ))}
                 {searchResults?.hotels?.data?.length > 0 && (
                   <>
-                    <Typography variant="body-s" color={theme.palette.neuPalette.hexTwelve} pb={DesktopPxToVw(20)}>
+                    <Typography variant="body-s" color={theme.palette.ihclPalette.hexTwelve} pb={DesktopPxToVw(20)}>
                       {CONSTANTS?.HOTELS}
                     </Typography>
                     <Divider sx={{ margin: `${DesktopPxToVw(8)} 0` }} />
@@ -623,7 +623,7 @@ const GlobalBookingFlowBar = ({ title, _type }: GlobalBookingFlowBarProps) => {
                     onClick={() => setSelectedType("check_in")}
                     letterSpacing={"-0.05rem"}
                     whiteSpace={"nowrap"}
-                    color={date?.[0] ? "unset" : theme.palette.neuPalette.hexTwelve}
+                    color={date?.[0] ? "unset" : theme.palette.ihclPalette.hexTwelve}
                     variant={isMobile ? "m-body-l" : "body-l"}>
                     {date?.[0] ? formatDateWithMON(date?.[0]) : "Check in"}
                   </Typography>
@@ -632,7 +632,7 @@ const GlobalBookingFlowBar = ({ title, _type }: GlobalBookingFlowBarProps) => {
                     letterSpacing={"-0.05rem"}
                     whiteSpace={"nowrap"}
                     onClick={() => setSelectedType("check_out")}
-                    color={date?.[0] ? "unset" : theme.palette.neuPalette.hexTwelve}
+                    color={date?.[0] ? "unset" : theme.palette.ihclPalette.hexTwelve}
                     variant={isMobile ? "m-body-l" : "body-l"}>
                     {date?.[1] ? formatDateWithMON(date?.[1]) : "Check out"}
                   </Typography>
@@ -731,7 +731,7 @@ const GlobalBookingFlowBar = ({ title, _type }: GlobalBookingFlowBarProps) => {
           right: "25vw",
           marginBottom: "1.563vw",
         }}
-        ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+        ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
         webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
         open={limitExceedModal}
         Component={

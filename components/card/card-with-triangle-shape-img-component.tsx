@@ -49,7 +49,7 @@ function CardWithTriangleShapeImgComponent({
             <Typography
               variant="heading-s"
               sx={{
-                color: textColor ? textColor : theme?.palette?.neuPalette?.hexSeventeen,
+                color: textColor ? textColor : theme?.palette?.ihclPalette?.hexSeventeen,
               }}>
               {title}
             </Typography>
@@ -60,7 +60,7 @@ function CardWithTriangleShapeImgComponent({
             <Typography
               variant="body-xxs"
               sx={{
-                color: textColor ? textColor : theme?.palette?.neuPalette?.hexSeventeen,
+                color: textColor ? textColor : theme?.palette?.ihclPalette?.hexSeventeen,
               }}>
               {subTitle}
             </Typography>

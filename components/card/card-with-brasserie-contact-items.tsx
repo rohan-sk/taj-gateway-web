@@ -25,7 +25,7 @@ const CardWithBrasserieContactItems = (props: any) => {
             fontWeight: 400,
             textDecoration: "none",
             letterSpacing: "normal",
-            color: theme?.palette?.neuPalette?.hexThirtyFour,
+            color: theme?.palette?.ihclPalette?.hexThirtyFour,
             fontSize: isMobile ? MobilePxToVw(23) : DesktopPxToVw(20),
             lineHeight: isMobile ? MobilePxToVw(33) : DesktopPxToVw(29),
           }}

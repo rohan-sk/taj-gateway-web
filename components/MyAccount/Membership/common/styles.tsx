@@ -4,7 +4,7 @@ import { theme } from "../../../../lib/theme"
 import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 
 export const BorderedCardWrapper = styled(Box)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   marginBottom: "1.1vw",
   padding: "1.823vw 1.563vw 1.042vw",
   minHeight: "13.177vw",
@@ -17,7 +17,7 @@ export const BorderedCardWrapper = styled(Box)(() => ({
 }))
 export const BoldSubfieldTitleTypography = styled(Typography)(() => ({
   fontFamily: "Inter",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontSize: "0.729vw",
   fontWeight: "700",
   lineHeight: "1.042vw",
@@ -41,7 +41,7 @@ export const InnerCardGrid = styled(Box)(() => ({
 }))
 
 export const BoldTitle = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontFamily: "Inter",
   fontSize: DesktopPxToVw(14),
   fontStyle: "normal",
@@ -113,7 +113,7 @@ export const CoinBalance = styled(Typography)(() => ({
   fontSize: DesktopPxToVw(18),
   fontWeight: 300,
   fontFamily: "Inter",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontStyle: "normal",
   lineHeight: "140%",
   "@media (max-width :640px)": {
@@ -131,7 +131,7 @@ export const TitleTypography = styled(Typography)(() => ({
 export const TitleBox = styled(Box)(() => ({
   margin: "1.042vw 2vw 0vw 2.083vw",
   width: "93%",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   "@media(max-width:640px)": {
     width: "85%",
     margin: "3.125vw 0vw 0vw 6.250vw",

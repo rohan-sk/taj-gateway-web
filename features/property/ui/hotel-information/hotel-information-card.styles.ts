@@ -8,7 +8,7 @@ export const ValueTypography = styled(Typography)(() => ({
   fontStyle: "normal",
   fontWeight: 700,
   lineHeight: "140%",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width:640px)": {
     fontSize: "3.48vw",
   },
@@ -38,14 +38,14 @@ export const ItemTitleContainer = styled(Box)(() => ({
 export const ItemContainer = styled(Grid)(() => ({
   width: "100%",
   paddingBottom: "0.5vw",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexFive}20`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexFive}20`,
   "@media (max-width:640px)": {
     paddingBottom: "6.25vw",
   },
 }))
 export const SubGrid = styled(Grid)(() => ({
   paddingBottom: "0.729vw",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexFive}20`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexFive}20`,
   "@media (max-width:640px)": {
     // paddingBottom: "6.25vw",
     marginBottom: "4.668vw",
@@ -53,7 +53,7 @@ export const SubGrid = styled(Grid)(() => ({
 }))
 export const ItemTitleTypography = styled(Box)(() => ({
   fontSize: "0.729vw",
-  color: theme?.palette?.neuPalette?.hexTwelve,
+  color: theme?.palette?.ihclPalette?.hexTwelve,
   fontFamily: "Inter",
   fontStyle: "normal",
   fontWeight: 400,
@@ -68,12 +68,12 @@ export const SeparatorWrapper = styled(Box)(() => ({
   height: "100%",
 }))
 export const StyledSeparator = styled(Divider)(() => ({
-  background: `${theme?.palette?.neuPalette?.hexFive}20`,
+  background: `${theme?.palette?.ihclPalette?.hexFive}20`,
   width: "1px",
 }))
 
 export const CenterGrid = styled(Grid)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexFive}20`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexFive}20`,
   borderWidth: "0px  1px",
   "@media (max-width:640px)": {
     borderWidth: "0px",

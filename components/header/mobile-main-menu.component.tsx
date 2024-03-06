@@ -119,7 +119,7 @@ const MobileMainMenu = ({
                 <Typography
                   variant="m-body-xl"
                   sx={{
-                    color: theme?.palette?.neuPalette?.hexTwo,
+                    color: theme?.palette?.ihclPalette?.hexTwo,
                     fontSize: "4.688vw",
                   }}>
                   {item?.title}
@@ -147,7 +147,7 @@ const MobileMainMenu = ({
                               pt={MobilePxToVw(10)}
                               pb={MobilePxToVw(10)}
                               sx={{
-                                color: theme?.palette?.neuPalette?.hexTwo,
+                                color: theme?.palette?.ihclPalette?.hexTwo,
                                 textAlign: "center",
                               }}>
                               {item?.title}
@@ -168,7 +168,7 @@ const MobileMainMenu = ({
               <Typography
                 variant="m-body-ml"
                 sx={{
-                  color: theme?.palette?.neuPalette?.hexTwo,
+                  color: theme?.palette?.ihclPalette?.hexTwo,
                   lineHeight: "200%",
                   fontSize: item?.image ? "3.438vw" : "4.688vw",
                 }}
@@ -195,12 +195,12 @@ const MobileMainMenu = ({
       </WhiteBgColorBox>
       <YellowBgColorBox>
         {dropDownListItems?.title && (
-          <Typography variant="m-heading-s" color={theme?.palette?.neuPalette?.hexOne}>
+          <Typography variant="m-heading-s" color={theme?.palette?.ihclPalette?.hexOne}>
             {dropDownListItems?.title}
           </Typography>
         )}
         {dropDownListItems?.subtitle && (
-          <Typography variant="m-body-l" color={theme?.palette?.neuPalette?.hexOne}>
+          <Typography variant="m-body-l" color={theme?.palette?.ihclPalette?.hexOne}>
             {dropDownListItems?.subtitle}
           </Typography>
         )}
@@ -212,9 +212,9 @@ const MobileMainMenu = ({
               navigationType={dropDownListItems?.cta?.urlType}
               variant={dropDownListItems?.cta?.variant}
               isActionButtonType={false}
-              linkStyles={{ color: theme?.palette?.neuPalette?.hexOne }}
+              linkStyles={{ color: theme?.palette?.ihclPalette?.hexOne }}
               iconStyles={{
-                color: `${theme?.palette?.neuPalette?.hexOne} !important`,
+                color: `${theme?.palette?.ihclPalette?.hexOne} !important`,
               }}
             />
           </ActionItemBox>

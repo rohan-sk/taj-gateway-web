@@ -118,8 +118,8 @@ const HotelDineInFoodFacilities = ({ props, address, contactInfo, menuInfo }: Fo
                             ? 5
                             : 6.7
                           : index < Math?.floor(facilitiesInfo?.length / 3) * 3
-                            ? 3.812
-                            : remainingCardsWidth,
+                          ? 3.812
+                          : remainingCardsWidth,
                       )}
                       key={index}>
                       <FacilityCell
@@ -239,7 +239,7 @@ const HotelDineInFoodFacilities = ({ props, address, contactInfo, menuInfo }: Fo
                                     fontWeight={700}
                                     sx={{
                                       "&, & *": {
-                                        color: theme?.palette?.neuPalette?.hexSeventeen,
+                                        color: theme?.palette?.ihclPalette?.hexSeventeen,
                                         fontFamily: fonts?.body,
                                         fontSize: isMobile ? MobilePxToVw(22) : DesktopPxToVw(22),
                                       },
@@ -280,7 +280,7 @@ const HotelDineInFoodFacilities = ({ props, address, contactInfo, menuInfo }: Fo
               sx={{
                 opacity: 0.2,
                 margin: `0vw ${DesktopPxToVw(20)} 0vw ${DesktopPxToVw(15)}`,
-                backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+                backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
               }}
               orientation="vertical"
             />
@@ -327,8 +327,8 @@ const HotelDineInFoodFacilities = ({ props, address, contactInfo, menuInfo }: Fo
                         },
                         color:
                           content?.item?.includes("@") || item?.title === "PHONE"
-                            ? theme?.palette?.neuPalette?.hexTwo
-                            : theme?.palette?.neuPalette?.hexSeventeen,
+                            ? theme?.palette?.ihclPalette?.hexTwo
+                            : theme?.palette?.ihclPalette?.hexSeventeen,
 
                         alignItems: "flex-start",
                         fontSize: isMobile ? MobilePxToVw(22) : DesktopPxToVw(22),
@@ -357,7 +357,7 @@ const HotelDineInFoodFacilities = ({ props, address, contactInfo, menuInfo }: Fo
                             marginLeft: isMobile ? MobilePxToVw(5) : DesktopPxToVw(5),
                           }}
                           linkStyles={{
-                            color: theme?.palette?.neuPalette?.hexTwo,
+                            color: theme?.palette?.ihclPalette?.hexTwo,
                           }}
                         />
                       )} */}
@@ -376,7 +376,7 @@ const HotelDineInFoodFacilities = ({ props, address, contactInfo, menuInfo }: Fo
               <LargeHorizontalDivider
                 orientation="horizontal"
                 sx={{
-                  backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+                  backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
                 }}
               />
             </Box>
@@ -424,7 +424,7 @@ const HotelDineInFoodFacilities = ({ props, address, contactInfo, menuInfo }: Fo
             <LargeHorizontalDivider
               orientation="horizontal"
               sx={{
-                backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+                backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
               }}
             />
           </Box>

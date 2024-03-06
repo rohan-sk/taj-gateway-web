@@ -46,9 +46,12 @@ export const DescriptionTypography = styled(Typography)(() => ({
   },
 }))
 
-export const StyledDivider = styled(Divider, transientProps)<{ customMargin?: string }>(({ customMargin }) => ({
+export const StyledDivider = styled(
+  Divider,
+  transientProps,
+)<{ customMargin?: string }>(({ customMargin }) => ({
   //Added custom margin prop to handle box shadow effect on the last card
-  background: theme.palette.neuPalette.hexSixteen,
+  background: theme.palette.ihclPalette.hexSixteen,
   height: DesktopPxToVw(1),
   width: DesktopPxToVw(930),
   margin: customMargin ? customMargin : `${DesktopPxToVw(20)} auto`,
@@ -65,7 +68,7 @@ export const ShadeBox = styled(Box)(() => ({
   bottom: 0,
   width: "100%",
   pointerEvents: "none",
-  background: `linear-gradient(180deg, rgba(255, 255, 255, 0.00) 25.88%, ${theme.palette.neuPalette.hexOne} 96.53%)`,
+  background: `linear-gradient(180deg, rgba(255, 255, 255, 0.00) 25.88%, ${theme.palette.ihclPalette.hexOne} 96.53%)`,
   "@media (max-width: 640px)": {
     display: "none",
   },

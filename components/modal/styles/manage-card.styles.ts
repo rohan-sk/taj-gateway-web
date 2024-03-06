@@ -1,17 +1,7 @@
 import { theme } from "../../../lib/theme"
 import { transientProps } from "../../../utils/transientProps"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
-import {
-  Tab,
-  Box,
-  Grid,
-  Tabs,
-  Stack,
-  styled,
-  Divider,
-  TextField,
-  Typography,
-} from "@mui/material"
+import { Tab, Box, Grid, Tabs, Stack, styled, Divider, TextField, Typography } from "@mui/material"
 
 export const TitleContainer = styled(Box)(() => ({
   paddingTop: DesktopPxToVw(15),
@@ -34,7 +24,7 @@ export const BalanceContainer = styled(Box)(() => ({
 }))
 
 export const BalanceTitle = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   paddingTop: DesktopPxToVw(13),
 }))
 
@@ -70,10 +60,10 @@ export const InputContainer = styled(TextField)(() => ({
 }))
 
 export const TabsContainer = styled(Tabs)(() => ({
-  borderBottom: `2px  solid ${theme?.palette?.neuPalette?.hexNineteen}`,
+  borderBottom: `2px  solid ${theme?.palette?.ihclPalette?.hexNineteen}`,
   justifyContent: "center !important",
   "& .MuiTab-root.Mui-selected": {
-    color: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexTwo,
   },
 }))
 
@@ -117,7 +107,7 @@ export const InputTextField = styled(TextField)(() => ({
   },
   "&  .MuiFormHelperText-root": {
     fontSize: DesktopPxToVw(18),
-    color: theme?.palette?.neuPalette?.hexThirtyTwo,
+    color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     fontFamily: "inter",
   },
   input: {
@@ -126,17 +116,17 @@ export const InputTextField = styled(TextField)(() => ({
       fontWeight: 300,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
   "& .Mui-error": {
     ":after": {
-      color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
-      borderBottom: `2px solid ${theme?.palette?.neuPalette?.hexThirtyTwo}!important`,
+      color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
+      borderBottom: `2px solid ${theme?.palette?.ihclPalette?.hexThirtyTwo}!important`,
     },
     ":before": {
-      color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
-      borderBottomColor: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
+      color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
+      borderBottomColor: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
     },
   },
   "@media (max-width: 640px)": {
@@ -177,13 +167,13 @@ export const InputRow = styled(Box)(() => ({
 }))
 
 export const LinkTypography = styled("span")(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   fontWeight: "300",
   cursor: "pointer",
 }))
 
 export const ModelContainer = styled(Box)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   paddingTop: "4.16vw",
   width: DesktopPxToVw(1174),
   boxShadow: " -6px 10px 24px rgba(0, 0, 0, 0.1)",
@@ -206,17 +196,17 @@ export const OrderStatusBox = styled(Box)(() => ({
 
 export const StepperSeparator = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: $isMobile ? MobilePxToVw(1) : DesktopPxToVw(208),
 
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   height: $isMobile ? MobilePxToVw(74) : DesktopPxToVw(1),
 }))
 
 export const OrderStatusStack = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   justifyContent: "center",
@@ -233,7 +223,7 @@ export const ContentContainerGrid: any = styled(Grid)(() => ({
 
 export const MobileCarousalStylesWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $inactiveDotWidth: string }>(({ $inactiveDotWidth }) => ({
   "@media (max-width:640px)": {
     "& .slick-dots": {
@@ -246,7 +236,7 @@ export const MobileCarousalStylesWrapper = styled(
       "& li>button": {
         width: "100%",
         height: "0.3125vw",
-        background: `${theme?.palette?.neuPalette?.hexSeventeen}20`,
+        background: `${theme?.palette?.ihclPalette?.hexSeventeen}20`,
       },
       "&>li": {
         margin: "0vw",
@@ -254,10 +244,10 @@ export const MobileCarousalStylesWrapper = styled(
       },
       "& .slick-active": {
         width: "12.5vw!important",
-        background: `${theme?.palette?.neuPalette?.hexFive}!important`,
+        background: `${theme?.palette?.ihclPalette?.hexFive}!important`,
         borderRadius: "10px",
         "& button": {
-          background: `${theme?.palette?.neuPalette?.hexFive}!important`,
+          background: `${theme?.palette?.ihclPalette?.hexFive}!important`,
         },
       },
     },
@@ -280,7 +270,7 @@ export const TitleTypographyWrapper = styled(Box)(() => ({
 
 export const MainContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   textAlign: "center",
   paddingBottom: $isMobile ? MobilePxToVw(25) : DesktopPxToVw(40),
@@ -291,7 +281,7 @@ export const MainContentWrapper = styled(
 
 export const ActionPropsContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -303,7 +293,7 @@ export const ActionPropsContentWrapper = styled(
 
 export const CustomCheckBoxContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -314,7 +304,7 @@ export const CustomCheckBoxContentWrapper = styled(
 
 export const ActionButtonContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -326,25 +316,21 @@ export const ActionButtonContentWrapper = styled(
 
 export const YourBalanceMainContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  border: $isMobile
-    ? "unset"
-    : `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: $isMobile ? "unset" : `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   padding: $isMobile ? `0vw ${MobilePxToVw(32)}` : `${DesktopPxToVw(80)} 0vw`,
 }))
 
 export const MainContentDescriptionWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
   alignItems: "center",
-  padding: $isMobile
-    ? `0vw ${MobilePxToVw(1)} ${MobilePxToVw(38)}`
-    : `0vw ${DesktopPxToVw(270)} ${DesktopPxToVw(22)}`,
+  padding: $isMobile ? `0vw ${MobilePxToVw(1)} ${MobilePxToVw(38)}` : `0vw ${DesktopPxToVw(270)} ${DesktopPxToVw(22)}`,
   textAlign: "center",
 }))
 
@@ -354,7 +340,7 @@ export const GiftCardInputWrapper = styled(Grid)(() => ({
 }))
 export const CardBoxGC = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   justifyContent: "center",
@@ -367,7 +353,7 @@ export const PinCodeInputWrapper = styled(Grid)(() => ({
 
 export const ActionPropsWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -379,15 +365,15 @@ export const ActionPropsWrapper = styled(
 
 export const ErrorMessageTypography = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  color: theme?.palette?.neuPalette?.hexTwentyOne,
+  color: theme?.palette?.ihclPalette?.hexTwentyOne,
   marginTop: $isMobile ? MobilePxToVw(10) : DesktopPxToVw(10),
 }))
 
 export const BalanceContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   paddingTop: $isMobile ? MobilePxToVw(65) : DesktopPxToVw(50),
   alignItems: "center",
@@ -404,32 +390,28 @@ export const BalanceAmountContainer = styled(Box)(() => ({
 
 export const BalanceContentDivider = styled(
   Divider,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   margin: $isMobile ? `0vw ${MobilePxToVw(60)}` : `0vw ${DesktopPxToVw(60)}`,
-  backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
 }))
 
 export const ReloadContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  border: $isMobile
-    ? "unset"
-    : `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: $isMobile ? "unset" : `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   padding: $isMobile ? `0vw ${MobilePxToVw(32)}` : `${DesktopPxToVw(80)} 0vw`,
 }))
 
 export const ReloadContentTitleContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   justifyContent: "center",
   textAlign: "center",
-  padding: $isMobile
-    ? `0vw ${MobilePxToVw(5)} ${MobilePxToVw(34)}`
-    : `0vw ${DesktopPxToVw(170)} ${DesktopPxToVw(20)}`,
+  padding: $isMobile ? `0vw ${MobilePxToVw(5)} ${MobilePxToVw(34)}` : `0vw ${DesktopPxToVw(170)} ${DesktopPxToVw(20)}`,
 }))
 
 export const GiftCardNumberFieldWrapper = styled(Grid)(() => ({
@@ -444,7 +426,7 @@ export const DenominationFieldWrapper = styled(Grid)(() => ({
 
 export const CustomCheckBoxWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -458,14 +440,12 @@ export const CustomCheckBoxWrapper = styled(
 
 export const GiftCardManageTabsComponentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: "100%",
   "& .tab-panel-box-container": {
     border: "unset",
-    padding: $isMobile
-      ? `${MobilePxToVw(35)} 0vw 0vw`
-      : `${DesktopPxToVw(16)} 0vw 0vw}`,
+    padding: $isMobile ? `${MobilePxToVw(35)} 0vw 0vw` : `${DesktopPxToVw(16)} 0vw 0vw}`,
   },
   "& .balance-content": {
     paddingTop: $isMobile ? MobilePxToVw(90) : DesktopPxToVw(10),
@@ -500,24 +480,20 @@ export const GiftCardManageTabsComponentWrapper = styled(
     },
   },
   "& .order-status-data": {
-    padding: $isMobile
-      ? `${MobilePxToVw(55)} 0vw 0vw`
-      : `${DesktopPxToVw(60)} ${DesktopPxToVw(67)} 0vw`,
+    padding: $isMobile ? `${MobilePxToVw(55)} 0vw 0vw` : `${DesktopPxToVw(60)} ${DesktopPxToVw(67)} 0vw`,
   },
   "& .order-status-content": {
-    backgroundColor: $isMobile
-      ? theme?.palette?.background?.default
-      : theme?.palette?.background?.paper,
+    backgroundColor: $isMobile ? theme?.palette?.background?.default : theme?.palette?.background?.paper,
   },
 }))
 
 export const OrderNumberInputContainer = styled(
   TextField,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: $isMobile ? "100%" : DesktopPxToVw(330),
   "& .MuiInputBase-input": {
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontFamily: "Inter",
     fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
     fontStyle: "normal",
@@ -528,7 +504,7 @@ export const OrderNumberInputContainer = styled(
     fontSize: DesktopPxToVw(24),
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: 300,
       opacity: 0.8,
       fontSize: DesktopPxToVw(24),
@@ -545,11 +521,11 @@ export const OrderNumberInputContainer = styled(
 
 export const OrderEmailInputContainer = styled(
   TextField,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: $isMobile ? "100%" : DesktopPxToVw(330),
   "& .MuiInputBase-input": {
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontFamily: "Inter",
     fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
     fontStyle: "normal",
@@ -560,7 +536,7 @@ export const OrderEmailInputContainer = styled(
     fontSize: DesktopPxToVw(24),
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: 300,
       opacity: 0.8,
       fontSize: DesktopPxToVw(24),
@@ -577,11 +553,9 @@ export const OrderEmailInputContainer = styled(
 
 export const MainGridContainer = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  backgroundColor: $isMobile
-    ? theme?.palette?.background?.paper
-    : theme?.palette?.background?.default,
+  backgroundColor: $isMobile ? theme?.palette?.background?.paper : theme?.palette?.background?.default,
   boxShadow: "-6px 10px 24px rgba(0, 0, 0, 0.1)",
   margin: "2vw 12vw",
   padding: "3.06vw 6.4vw",
@@ -599,14 +573,12 @@ export const MainGridContainer = styled(
 
 export const MediaCardComponentInsideModelWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   overflowY: "auto",
   maxHeight: $isMobile ? "unset" : "85vh",
   margin: $isMobile ? "unset" : `0 ${DesktopPxToVw(240)}`,
-  backgroundColor: $isMobile
-    ? theme?.palette?.background?.default
-    : theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: $isMobile ? theme?.palette?.background?.default : theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const RegisterAddressTabs = styled(Box)(() => ({
@@ -623,8 +595,8 @@ export const RegisterAddressTabs = styled(Box)(() => ({
 
 export const ReloadErrorMessageTypography: any = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  color: theme?.palette?.neuPalette?.hexTwentyOne,
+  color: theme?.palette?.ihclPalette?.hexTwentyOne,
   marginBottom: $isMobile ? MobilePxToVw(35) : DesktopPxToVw(30),
 }))

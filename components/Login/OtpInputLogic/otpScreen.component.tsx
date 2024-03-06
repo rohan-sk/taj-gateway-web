@@ -808,7 +808,7 @@ const OtpScreen = (props: OTPScreenInterface) => {
             sx={{
               fontSize: isMobile ? "2.813vw" : "1.146vw",
               fontWeight: 300,
-              color: theme?.palette?.neuPalette?.hexSeventeen,
+              color: theme?.palette?.ihclPalette?.hexSeventeen,
               display: "flex",
               flexDirection: "column",
               textAlign: "center",

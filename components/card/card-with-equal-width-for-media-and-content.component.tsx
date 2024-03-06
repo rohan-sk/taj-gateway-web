@@ -59,7 +59,7 @@ const CardWithEqualWidthForMediaAndContent = ({
   aesthetic,
   highlights,
   subTitle,
-  headingElementForCard
+  headingElementForCard,
 }: CardWithEqualWidthForMediaAndContentType) => {
   const isMobile = useMobileCheck()
   const navigate = useAppNavigation()
@@ -87,9 +87,7 @@ const CardWithEqualWidthForMediaAndContent = ({
       <Grid item lg={6} xl={6}>
         <ContentStack
           sx={{
-            backgroundColor: cardBackgroundColor
-              ? cardBackgroundColor
-              : theme?.palette?.neuPalette?.hexOne,
+            backgroundColor: cardBackgroundColor ? cardBackgroundColor : theme?.palette?.ihclPalette?.hexOne,
           }}>
           {title && (
             <TwoRowTitle
@@ -103,18 +101,12 @@ const CardWithEqualWidthForMediaAndContent = ({
             />
           )}
           {subTitle && (
-            <DescriptionContentWrapper
-              component="div"
-              variant="body-ml"
-              $textColor={textColor}>
+            <DescriptionContentWrapper component="div" variant="body-ml" $textColor={textColor}>
               {subTitle}
             </DescriptionContentWrapper>
           )}
           {description && (
-            <DescriptionContentWrapper
-              component="div"
-              variant="body-ml"
-              $textColor={textColor}>
+            <DescriptionContentWrapper component="div" variant="body-ml" $textColor={textColor}>
               {description}
             </DescriptionContentWrapper>
           )}
@@ -126,9 +118,7 @@ const CardWithEqualWidthForMediaAndContent = ({
                   <Typography
                     variant="body-s"
                     sx={{
-                      color: textColor
-                        ? textColor
-                        : theme?.palette?.text?.primary,
+                      color: textColor ? textColor : theme?.palette?.text?.primary,
                     }}>
                     {typeof item === typeof "" ? item : item?.term}
                   </Typography>
@@ -149,87 +139,69 @@ const CardWithEqualWidthForMediaAndContent = ({
                 </Box>
               </Fragment>
             ))}
-            {richText?.length > 0 && (
-                <RichTextBox className="hide-box">
-                  {richText?.map((item: RichTextItems, index: number) => (
-                    <Box key={index} display={"flex"} alignContent={"center"}  sx={{paddingBottom: DesktopPxToVw(15)}}>
-                      <Typography
-                        variant={"body-m"}
-                        display={"flex"}
-                        alignContent={"center"}>
-                        {item?.richTextKey}
-                      </Typography>
-                      <RichTextValueTypography
-                        $highlightColor={item?.highlightColor}
-                        sx={{
-                          color: item?.highlightColor ? "#AD8B3A" : "initial",
-                        }}>
-                        {item?.richTextValue}
-                      </RichTextValueTypography>
-                    </Box>
-                  ))}
-                </RichTextBox>
-              )}
-              {(primaryAction?.title || ctaLabel) && (
-                <ActionContentBox
-                  className="hide-box"
-                  flexDirection={
-                    isMobile
-                      ? typeof (primaryAction?.title && ctaLabel) === typeof ""
-                        ? "row-reverse"
-                        : "row"
-                      : "row"
-                  }>
-                  <RenderActionItem
-                    isActionButtonType={
-                      primaryAction?.variant === "link" ? false : true
-                    }
-                    url={primaryAction?.url}
-                    title={primaryAction?.title}
-                    variant={primaryAction?.variant}
-                    navigationType={primaryAction?.urlType}
-                    onClick={() => {
-                      onPrimaryClick
-                        ? onPrimaryClick()
-                        : navigate(primaryAction?.url, primaryAction?.urlType)
-                    }}
-                    buttonStyles={{
-                      minWidth:
-                        primaryAction?.urlType === "dialog"
-                          ? "9.45vw"
-                          : "9.79vw",
-                      letterSpacing: "0.1em",
-                    }}
-                  />
-                  <RenderActionItem
-                    url={url}
-                    title={ctaLabel}
-                    isActionButtonType={false}
-                    navigationType={urlType}
-                    variant={isMobile ? "m-text-link" : "link-m"}
-                    onClick={() => {
-                      if (ctaLabelAction) {
-                        ctaLabelAction()
-                      } else {
-                          navigate(url, urlType)
-                      }
-                    }}
-                    iconStyles={{
-                      color: textColor
-                        ? `${textColor} !important`
-                        : theme?.palette?.neuPalette?.hexTwo,
-                    }}
-                    linkStyles={{
-                      color: textColor
-                        ? textColor
-                        : theme?.palette?.neuPalette?.hexTwo,
-                    }}
-                    buttonStyles={{
-                      letterSpacing: isMobile ? "0.281vw" : "unset",
-                    }}
-                  />
-                </ActionContentBox>
-              )}
+          {richText?.length > 0 && (
+            <RichTextBox className="hide-box">
+              {richText?.map((item: RichTextItems, index: number) => (
+                <Box key={index} display={"flex"} alignContent={"center"} sx={{ paddingBottom: DesktopPxToVw(15) }}>
+                  <Typography variant={"body-m"} display={"flex"} alignContent={"center"}>
+                    {item?.richTextKey}
+                  </Typography>
+                  <RichTextValueTypography
+                    $highlightColor={item?.highlightColor}
+                    sx={{
+                      color: item?.highlightColor ? "#AD8B3A" : "initial",
+                    }}>
+                    {item?.richTextValue}
+                  </RichTextValueTypography>
+                </Box>
+              ))}
+            </RichTextBox>
+          )}
+          {(primaryAction?.title || ctaLabel) && (
+            <ActionContentBox
+              className="hide-box"
+              flexDirection={
+                isMobile ? (typeof (primaryAction?.title && ctaLabel) === typeof "" ? "row-reverse" : "row") : "row"
+              }>
+              <RenderActionItem
+                isActionButtonType={primaryAction?.variant === "link" ? false : true}
+                url={primaryAction?.url}
+                title={primaryAction?.title}
+                variant={primaryAction?.variant}
+                navigationType={primaryAction?.urlType}
+                onClick={() => {
+                  onPrimaryClick ? onPrimaryClick() : navigate(primaryAction?.url, primaryAction?.urlType)
+                }}
+                buttonStyles={{
+                  minWidth: primaryAction?.urlType === "dialog" ? "9.45vw" : "9.79vw",
+                  letterSpacing: "0.1em",
+                }}
+              />
+              <RenderActionItem
+                url={url}
+                title={ctaLabel}
+                isActionButtonType={false}
+                navigationType={urlType}
+                variant={isMobile ? "m-text-link" : "link-m"}
+                onClick={() => {
+                  if (ctaLabelAction) {
+                    ctaLabelAction()
+                  } else {
+                    navigate(url, urlType)
+                  }
+                }}
+                iconStyles={{
+                  color: textColor ? `${textColor} !important` : theme?.palette?.ihclPalette?.hexTwo,
+                }}
+                linkStyles={{
+                  color: textColor ? textColor : theme?.palette?.ihclPalette?.hexTwo,
+                }}
+                buttonStyles={{
+                  letterSpacing: isMobile ? "0.281vw" : "unset",
+                }}
+              />
+            </ActionContentBox>
+          )}
         </ContentStack>
       </Grid>
     </Grid>

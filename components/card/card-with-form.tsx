@@ -191,7 +191,7 @@ function CardWithForm(props: any) {
   const Context = useContext(IHCLContext)
   const modalStore = ModalStore?.getInstance()
 
-  let getBgColor = isMobile ? theme?.palette?.neuPalette?.hexTwentyNine : theme?.palette?.neuPalette?.hexOne
+  let getBgColor = isMobile ? theme?.palette?.ihclPalette?.hexTwentyNine : theme?.palette?.ihclPalette?.hexOne
   const inputStyle = {
     WebkitBoxShadow: `0 0 0 1000px ${getBgColor} inset`,
   }

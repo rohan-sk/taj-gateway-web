@@ -173,7 +173,7 @@ const CardWithRightAlignedContentForMsite = ({
           <ChipTextTextMainBox>
             {chipText?.map((item: ChipTextItems, index: number) => (
               <ChipTextTextBox key={index}>
-                <Typography variant="m-body-s" sx={{ color: theme?.palette?.neuPalette?.hexTwo }}>
+                <Typography variant="m-body-s" sx={{ color: theme?.palette?.ihclPalette?.hexTwo }}>
                   {item?.chipTextValue}
                 </Typography>
               </ChipTextTextBox>
@@ -184,7 +184,7 @@ const CardWithRightAlignedContentForMsite = ({
           <ChipTextTextMainBox>
             {specificationTags?.map((item: SpecificationTagsItems, index: number) => (
               <ChipTextTextBox key={index}>
-                <Typography variant="m-body-s" sx={{ color: theme?.palette?.neuPalette?.hexTwo }}>
+                <Typography variant="m-body-s" sx={{ color: theme?.palette?.ihclPalette?.hexTwo }}>
                   {item?.tag}
                 </Typography>
               </ChipTextTextBox>
@@ -227,7 +227,7 @@ const CardWithRightAlignedContentForMsite = ({
           <MarginTopDescriptionBox $haveHighlights={highLights?.length > 0}>
             <CustomReadMore
               textStyles={{
-                color: textColor ?? theme?.palette?.neuPalette?.hexSeventeen,
+                color: textColor ?? theme?.palette?.ihclPalette?.hexSeventeen,
               }}
               length={more}
               variant={"m-body-sl"}>
@@ -272,11 +272,11 @@ const CardWithRightAlignedContentForMsite = ({
                         variant={isMobile ? "m-body-sl" : "body-s"}
                         style={{
                           color: isValidEmail(item?.value)
-                            ? theme.palette.neuPalette.hexTwo
+                            ? theme.palette.ihclPalette.hexTwo
                             : isValidPhoneNumber(item?.value)
-                            ? theme.palette.neuPalette.hexTwo
+                            ? theme.palette.ihclPalette.hexTwo
                             : item?.key === CONSTANTS?.PHONE_KEY
-                            ? theme.palette.neuPalette.hexTwo
+                            ? theme.palette.ihclPalette.hexTwo
                             : "initial",
                         }}
                         onClick={

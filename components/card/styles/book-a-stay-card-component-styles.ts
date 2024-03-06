@@ -8,7 +8,7 @@ import { KeyboardArrowDownOutlined } from "@mui/icons-material"
 
 export const BookAStayCardComponentBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $mobile?: boolean }>(({ $mobile }) => ({
   display: "flex",
   flexDirection: "column",
@@ -20,7 +20,7 @@ export const BookAStayCardComponentBox = styled(
 
 export const BookAStayCardTitleBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $mobile: boolean }>(({ $mobile }) => ({
   display: "flex",
   alignItems: "center",
@@ -30,12 +30,12 @@ export const BookAStayCardTitleBox = styled(
 export const BookAStayCardTitleDivider = styled(Divider)(() => ({
   height: "2%",
   width: "2.083vw",
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const BookAStayCardParameterMapBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $mobile?: boolean }>(({ $mobile }) => ({
   display: "flex",
   gap: "2.083vw",
@@ -48,7 +48,7 @@ export const BookAStayCardParameterMapBox = styled(
 
 export const ParameterBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $mobile?: boolean }>(({ $mobile }) => ({
   display: "grid",
   columnGap: "2.083vw",
@@ -75,15 +75,15 @@ export const BookAStayCardParameterMapTextField = styled(TextField)(() => ({
       lineHeight: "150%",
       fontStyle: "normal",
       fontFamily: "Inter",
-      color: theme?.palette?.neuPalette?.hexTwelve,
-      borderBottom: `0.05vw solid ${theme?.palette?.neuPalette?.hexOne}`,
+      color: theme?.palette?.ihclPalette?.hexTwelve,
+      borderBottom: `0.05vw solid ${theme?.palette?.ihclPalette?.hexOne}`,
     },
   },
 }))
 
 export const CheckInAndOutLabelTextField = styled(
   TextField,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   input: {
     "&::placeholder": {
@@ -92,10 +92,8 @@ export const CheckInAndOutLabelTextField = styled(
       lineHeight: "150%",
       fontStyle: "normal",
       fontFamily: "Inter",
-      fontSize: $isMobile
-        ? `${MobilePxToVw(24)} !important`
-        : "1.25vw !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      fontSize: $isMobile ? `${MobilePxToVw(24)} !important` : "1.25vw !important",
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
 }))
@@ -109,8 +107,8 @@ export const RoomDropdownTextField = styled(TextField)(() => ({
       lineHeight: "150%",
       fontStyle: "normal",
       fontFamily: "Inter",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
-      borderBottom: `0.05vw solid ${theme?.palette?.neuPalette?.hexOne}`,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
+      borderBottom: `0.05vw solid ${theme?.palette?.ihclPalette?.hexOne}`,
     },
   },
 }))
@@ -119,12 +117,12 @@ export const HorizontalDivider = styled(Divider)(() => ({
   opacity: 0.5,
   width: "1.56vw",
   margin: "2vw 2.52vw -0.833vw -1.48vw",
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const CouponCodeTextField = styled(
   TextField,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   input: {
     fontSize: $isMobile ? "3.750vw" : "1.25vw",
@@ -135,7 +133,7 @@ export const CouponCodeTextField = styled(
       fontStyle: "normal",
       fontFamily: "Inter",
       fontSize: $isMobile ? "3.750vw" : "1.25vw",
-      color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+      color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
     },
   },
 }))
@@ -295,7 +293,7 @@ export const ErrorMessageContainer = styled(Box)(() => ({
 
 export const ErrorDisplayTypography = styled(Typography)(() => ({
   position: "absolute",
-  color: theme?.palette?.neuPalette?.hexTwentyOne,
+  color: theme?.palette?.ihclPalette?.hexTwentyOne,
   fontSize: DesktopPxToVw(18),
   alignSelf: "self-start",
   "@media (max-width: 640px)": {

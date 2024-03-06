@@ -70,11 +70,7 @@ const SearchCardComponent = (props: any) => {
   const userStore = context?.getGlobalStore(GLOBAL_STORES.userStore) as UserStore
   const bookingFlowGlobalStore = context?.getGlobalStore(GLOBAL_STORES?.bookingFlowStore) as BookingFlowGlobalStore
 
-  const {
-    loading,
-    userEnteredPromoCode,
-    destinationAvailabilityPayload
-  } = bookingFlowGlobalStore
+  const { loading, userEnteredPromoCode, destinationAvailabilityPayload } = bookingFlowGlobalStore
 
   const dataLayer = MemberDataLayer(userStore, gaStoreData)
 
@@ -93,15 +89,15 @@ const SearchCardComponent = (props: any) => {
 
   const checkButtonColor = brandsToShowPrices?.includes(fetchBrandName()?.toLowerCase())
     ? !!props?.dynamicHotelData?.amountWithInclusiveTax
-      ? theme?.palette?.neuPalette?.hexOne
-      : theme?.palette?.neuPalette?.rgbaFour
-    : theme?.palette?.neuPalette?.hexOne
+      ? theme?.palette?.ihclPalette?.hexOne
+      : theme?.palette?.ihclPalette?.rgbaFour
+    : theme?.palette?.ihclPalette?.hexOne
 
   const checkButtonBackgroundColor = brandsToShowPrices?.includes(fetchBrandName()?.toLowerCase())
     ? !!props?.dynamicHotelData?.amountWithInclusiveTax
-      ? theme?.palette?.neuPalette?.hexTwo
-      : theme?.palette?.neuPalette?.rgbaSix
-    : theme?.palette?.neuPalette?.hexTwo
+      ? theme?.palette?.ihclPalette?.hexTwo
+      : theme?.palette?.ihclPalette?.rgbaSix
+    : theme?.palette?.ihclPalette?.hexTwo
 
   const fetchCategoryPrimaryAction = () => {
     switch (String(props?.category).toLowerCase()) {
@@ -467,7 +463,7 @@ const SearchCardComponent = (props: any) => {
                         <Typography
                           variant={isMobile ? "m-body-s" : "body-s"}
                           sx={{
-                            color: `${theme?.palette?.neuPalette?.hexTwelve}`,
+                            color: `${theme?.palette?.ihclPalette?.hexTwelve}`,
                           }}>
                           {"Starting Rate/Night"}
                         </Typography>
@@ -605,13 +601,15 @@ const SearchCardComponent = (props: any) => {
                   {props?.category?.toLowerCase() !== "restaurants" && (
                     <RenderActionItem
                       url={`${ROUTES?.WITHOUTSEO_FOR_ROUTING?.BOOKING?.CART}?hotelId=${props?.id}`}
-                      title={(!props?.dynamicHotelData?.amountWithInclusiveTax && loading)
-                        ? "LOADING"
-                        : fetchCategorySecondaryAction(
-                          brandsToShowPrices?.includes(fetchBrandName()?.toLowerCase())
-                            ? !!props?.dynamicHotelData?.amountWithInclusiveTax
-                            : true,
-                        )}
+                      title={
+                        !props?.dynamicHotelData?.amountWithInclusiveTax && loading
+                          ? "LOADING"
+                          : fetchCategorySecondaryAction(
+                              brandsToShowPrices?.includes(fetchBrandName()?.toLowerCase())
+                                ? !!props?.dynamicHotelData?.amountWithInclusiveTax
+                                : true,
+                            )
+                      }
                       navigationType={"internal"}
                       variant={"light-contained"}
                       isActionButtonType={true}
@@ -629,9 +627,10 @@ const SearchCardComponent = (props: any) => {
                         },
                       }}
                       buttonProps={{
-                        startIcon: (!props?.dynamicHotelData?.amountWithInclusiveTax && loading) 
-                        ? <CircularProgress sx={{ width: "1.5vw !important", height: "1.5vw !important" }} />
-                        : null
+                        startIcon:
+                          !props?.dynamicHotelData?.amountWithInclusiveTax && loading ? (
+                            <CircularProgress sx={{ width: "1.5vw !important", height: "1.5vw !important" }} />
+                          ) : null,
                       }}
                       onClick={() => {
                         if (fetchBrandName()?.toLowerCase() !== "taj") {
@@ -681,11 +680,15 @@ const SearchCardComponent = (props: any) => {
               {props?.category?.toLowerCase() !== "restaurants" && (
                 <RenderActionItem
                   url={`${ROUTES?.WITHOUTSEO_FOR_ROUTING?.BOOKING?.CART}?hotelId=${props?.id}`}
-                  title={(!props?.dynamicHotelData?.amountWithInclusiveTax && loading) ? "LOADING" : fetchCategorySecondaryAction(
-                    brandsToShowPrices?.includes(fetchBrandName()?.toLowerCase())
-                      ? !!props?.dynamicHotelData?.amountWithInclusiveTax
-                      : true,
-                  )}
+                  title={
+                    !props?.dynamicHotelData?.amountWithInclusiveTax && loading
+                      ? "LOADING"
+                      : fetchCategorySecondaryAction(
+                          brandsToShowPrices?.includes(fetchBrandName()?.toLowerCase())
+                            ? !!props?.dynamicHotelData?.amountWithInclusiveTax
+                            : true,
+                        )
+                  }
                   navigationType={"internal"}
                   variant={"light-contained"}
                   isActionButtonType={true}
@@ -695,9 +698,10 @@ const SearchCardComponent = (props: any) => {
                       : true
                   }
                   buttonProps={{
-                    startIcon: (!props?.dynamicHotelData?.amountWithInclusiveTax && loading) 
-                    ? <CircularProgress sx={{ width: "1.5vw !important", height: "1.5vw !important" }} />
-                    : null
+                    startIcon:
+                      !props?.dynamicHotelData?.amountWithInclusiveTax && loading ? (
+                        <CircularProgress sx={{ width: "1.5vw !important", height: "1.5vw !important" }} />
+                      ) : null,
                   }}
                   buttonStyles={{
                     color: checkButtonColor,

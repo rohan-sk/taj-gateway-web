@@ -50,8 +50,8 @@ export const ContentTitleTypography = styled(
     display: "inline-block",
     verticalAlign: "middle",
     width: $isMobile ? "6.25vw" : $isHeroTitleFont ? DesktopPxToVw(80) : DesktopPxToVw(40),
-    backgroundColor: $textColor ? $textColor : theme?.palette?.neuPalette?.hexSeventeen,
-    borderBottom: $textColor ? `1px solid ${$textColor}` : `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+    backgroundColor: $textColor ? $textColor : theme?.palette?.ihclPalette?.hexSeventeen,
+    borderBottom: $textColor ? `1px solid ${$textColor}` : `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
   },
   ":not(:empty)::before ": {
     marginRight: $isMobile

@@ -10,20 +10,13 @@ import nextImage from "../../public/taj-grey-right-arrow.png"
 
 import { CommonCarouselStyles } from "../hoc/carousal-component-styles"
 import { IHCLContext } from "../../PresentationalComponents/lib/prepare-ihcl-context"
-import {
-  MobileCarousalStylesWrapper,
-  SixCardCommonCarouselContentBox,
-} from "./styles/six-cards-carousal"
+import { MobileCarousalStylesWrapper, SixCardCommonCarouselContentBox } from "./styles/six-cards-carousal"
 import { useMobileCheck } from "../../utils/isMobilView"
 import { MobilePxToVw } from "../../utils/DesktopFontCalc"
 import { theme } from "../../lib/theme"
 import { useBrowserCheck } from "../../utils/hooks/useBrowserCheck"
-const CustomNextArrow = dynamic(() =>
-import("../hoc/custom-arrows").then((module) => module.CustomNextArrow)
-)
-const CustomPrevArrow = dynamic(() =>
-import("../hoc/custom-arrows").then((module) => module.CustomPrevArrow)
-)
+const CustomNextArrow = dynamic(() => import("../hoc/custom-arrows").then((module) => module.CustomNextArrow))
+const CustomPrevArrow = dynamic(() => import("../hoc/custom-arrows").then((module) => module.CustomPrevArrow))
 
 const SixCardsCarousal = (props: any) => {
   const context = useContext(IHCLContext)
@@ -95,7 +88,7 @@ const SixCardsCarousal = (props: any) => {
   return (
     <SixCardCommonCarouselContentBox>
       <MobileCarousalStylesWrapper
-        $backGroundColor={theme?.palette?.neuPalette?.hexSeventeen}
+        $backGroundColor={theme?.palette?.ihclPalette?.hexSeventeen}
         $inactiveDotWidth={`${MobilePxToVw(400 / props?.length - 1)}`}>
         <CommonCarouselStyles
           sx={{
@@ -122,7 +115,7 @@ const SixCardsCarousal = (props: any) => {
                 opacity: "1",
                 width: MobilePxToVw(80),
                 height: MobilePxToVw(2),
-                background: theme?.palette?.neuPalette?.hexSeventeen,
+                background: theme?.palette?.ihclPalette?.hexSeventeen,
               },
               "& .slick-dots button": {
                 width: "15.625vw",
@@ -140,12 +133,10 @@ const SixCardsCarousal = (props: any) => {
                   item?._type,
                   {
                     ...item,
-                    title: item?.title
-                      ? item?.title?.toUpperCase()
-                      : item?.title,
+                    title: item?.title ? item?.title?.toUpperCase() : item?.title,
                     gridSize: settings?.slidesToShow,
                   },
-                  index
+                  index,
                 )}
               </Box>
             ))}

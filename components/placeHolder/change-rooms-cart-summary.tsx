@@ -140,7 +140,7 @@ const CartSummaryCard = () => {
         style={{ width: sidebarWidth }}
         sx={{
           m: isNotConfirm ? "8vw 0" : "0vw",
-          border: `0.052vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+          border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
         }}>
         <Typography variant={isMobile ? "m-heading-xs" : "heading-xs"} sx={{ padding: "1.04vw" }}>
           {Cart?.title}
@@ -158,7 +158,7 @@ const CartSummaryCard = () => {
                 padding: "1.04vw",
                 borderRadius: "0vw",
                 backgroundColor: "transparent",
-                border: item?.isSelected && isNotConfirm ? `0.15vw solid ${theme?.palette?.neuPalette?.hexTwo}` : "",
+                border: item?.isSelected && isNotConfirm ? `0.15vw solid ${theme?.palette?.ihclPalette?.hexTwo}` : "",
               }}
               sx={{
                 "& .MuiAccordionSummary-root": {
@@ -175,11 +175,10 @@ const CartSummaryCard = () => {
                   }}
                   sx={{ "& .MuiAccordionSummary-content": { margin: "0px" } }}>
                   <Stack rowGap={DesktopPxToVw(8)}>
-                    <BoldTypo
-                      whiteSpace={"nowrap"}
-                      variant={isMobile ? "m-body-s" : "body-s"}>
-                      {`Room ${item?.id}: ${Pluralize(CONSTANTS?.ADULT, item?.adults, false)}${item?.child >= 1
-                        ? `, ${Pluralize(CONSTANTS?.CHILD, item?.child, false)}` : ""}`}
+                    <BoldTypo whiteSpace={"nowrap"} variant={isMobile ? "m-body-s" : "body-s"}>
+                      {`Room ${item?.id}: ${Pluralize(CONSTANTS?.ADULT, item?.adults, false)}${
+                        item?.child >= 1 ? `, ${Pluralize(CONSTANTS?.CHILD, item?.child, false)}` : ""
+                      }`}
                     </BoldTypo>
                     {/* new selected room */}
                     {!isExpanded?.[index] && (
@@ -251,8 +250,8 @@ const CartSummaryCard = () => {
                                 whiteSpace={"nowrap"}
                                 color={
                                   Number(modifiedRoomDetails(item?.id)?.changePrice || 0) >= 0
-                                    ? theme.palette.neuPalette.hexTwentyFour
-                                    : theme.palette.neuPalette.hexTwo
+                                    ? theme.palette.ihclPalette.hexTwentyFour
+                                    : theme.palette.ihclPalette.hexTwo
                                 }
                                 variant={isMobile ? "m-body-xs" : "body-xs"}>
                                 {CONSTANTS?.PRICE_CHANGE}
@@ -261,8 +260,8 @@ const CartSummaryCard = () => {
                                 variant={isMobile ? "m-body-s" : "body-s"}
                                 color={
                                   Number(modifiedRoomDetails(item?.id)?.changePrice || 0) >= 0
-                                    ? theme.palette.neuPalette.hexTwentyFour
-                                    : theme.palette.neuPalette.hexTwo
+                                    ? theme.palette.ihclPalette.hexTwentyFour
+                                    : theme.palette.ihclPalette.hexTwo
                                 }>
                                 {Number(modifiedRoomDetails(item?.id)?.changePrice || 0) >= 0
                                   ? Number(modifiedRoomDetails(item?.id)?.changePrice || 0) > 0
@@ -356,14 +355,14 @@ const CartSummaryCard = () => {
                 <Typography
                   variant={isMobile ? "m-body-s" : "body-s"}
                   color={
-                    totalPriceChange >= 0 ? theme.palette.neuPalette.hexTwentyFour : theme.palette.neuPalette.hexTwo
+                    totalPriceChange >= 0 ? theme.palette.ihclPalette.hexTwentyFour : theme.palette.ihclPalette.hexTwo
                   }>
                   {Cart?.totalChange}
                 </Typography>
                 <Typography
                   variant={isMobile ? "m-body-s" : "body-s"}
                   color={
-                    totalPriceChange >= 0 ? theme.palette.neuPalette.hexTwentyFour : theme.palette.neuPalette.hexTwo
+                    totalPriceChange >= 0 ? theme.palette.ihclPalette.hexTwentyFour : theme.palette.ihclPalette.hexTwo
                   }>
                   {totalPriceChange >= 0
                     ? totalPriceChange > 0

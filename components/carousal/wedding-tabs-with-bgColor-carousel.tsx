@@ -136,7 +136,7 @@ const WeddingTabsWithBackgroundColor = ({ props, initialSlide, largeVariant, aes
                 letterSpacing: "1.8px",
                 paddingRight: MobilePxToVw(18),
                 ":hover": {
-                  backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+                  backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
                 },
               }}>
               {props?.items?.[0]?.tabs?.[selectedIndex]?.title}
@@ -190,11 +190,11 @@ const WeddingTabsWithBackgroundColor = ({ props, initialSlide, largeVariant, aes
               },
               ".slick-center .centerText": {
                 textAlign: "center",
-                color: theme?.palette?.neuPalette?.hexSeventeen,
+                color: theme?.palette?.ihclPalette?.hexSeventeen,
                 fontSize: isMobile ? "3.75vw" : "1.25vw",
               },
               ".slick-center .centerImg": {
-                color: theme?.palette?.neuPalette?.hexSeventeen,
+                color: theme?.palette?.ihclPalette?.hexSeventeen,
                 filter: `opacity(1) drop-shadow(0 0 0 #eda805)`,
               },
               ".slick-center .centeredBox": {
@@ -203,10 +203,10 @@ const WeddingTabsWithBackgroundColor = ({ props, initialSlide, largeVariant, aes
                 borderRight: "none",
               },
               ".custom-left": {
-                borderLeft: props?.length >= 3 ? `1px solid ${theme?.palette?.neuPalette?.hexNine}` : "none",
+                borderLeft: props?.length >= 3 ? `1px solid ${theme?.palette?.ihclPalette?.hexNine}` : "none",
               },
               ".custom-right": {
-                borderRight: props?.length >= 3 ? `1px solid ${theme?.palette?.neuPalette?.hexNine}` : "none",
+                borderRight: props?.length >= 3 ? `1px solid ${theme?.palette?.ihclPalette?.hexNine}` : "none",
               },
             }}>
             <Slider {...settings}>

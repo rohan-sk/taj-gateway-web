@@ -120,7 +120,7 @@ function BlogContent(props: BlogContentTypes) {
         <CtaActionsWrapper>
           <PreviuosNextActionBox sx={{ opacity: previous?.identifier ? 1 : 0.5 }}>
             <ChevronLeftIcon
-              sx={{ color: theme?.palette?.neuPalette?.hexTwo, cursor: previous?.identifier ? "pointer" : "initial" }}
+              sx={{ color: theme?.palette?.ihclPalette?.hexTwo, cursor: previous?.identifier ? "pointer" : "initial" }}
             />
             <RenderActionItem
               url={rest?.groupActionType?.[0]?.ctaLabel?.url}
@@ -170,7 +170,7 @@ function BlogContent(props: BlogContentTypes) {
               }}
             />
             <ChevronRightIcon
-              sx={{ color: theme?.palette?.neuPalette?.hexTwo, cursor: next?.identifier ? "pointer" : "initial" }}
+              sx={{ color: theme?.palette?.ihclPalette?.hexTwo, cursor: next?.identifier ? "pointer" : "initial" }}
             />
           </PreviuosNextActionBox>
         </CtaActionsWrapper>

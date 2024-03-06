@@ -5,7 +5,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 
 export const MainStayContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   alignItems: "center",
@@ -15,7 +15,7 @@ export const MainStayContentWrapper = styled(
 
 export const MainStayContentContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: "100%",
   display: "flex",
@@ -26,14 +26,14 @@ export const MainStayContentContainer = styled(
 
 export const InputTextField = styled(
   TextField,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   "& .MuiInputBase-input ": {
     fontWeight: 300,
     lineHeight: "150%",
     fontStyle: "normal",
     fontFamily: "Inter",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
   },
   input: {
@@ -43,7 +43,7 @@ export const InputTextField = styled(
       lineHeight: "150%",
       fontStyle: "normal",
       fontFamily: "Inter",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
     },
   },
@@ -51,14 +51,14 @@ export const InputTextField = styled(
 
 export const InputEmailTextField = styled(
   TextField,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   "& .MuiInputBase-input ": {
     fontWeight: 300,
     lineHeight: "150%",
     fontStyle: "normal",
     fontFamily: "Inter",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
   },
   input: {
@@ -68,7 +68,7 @@ export const InputEmailTextField = styled(
       lineHeight: "150%",
       fontStyle: "normal",
       fontFamily: "Inter",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
     },
   },
@@ -76,7 +76,7 @@ export const InputEmailTextField = styled(
 
 export const MainCustomCheckBoxContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -86,7 +86,7 @@ export const MainCustomCheckBoxContainer = styled(
 
 export const BlockContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   "& span": {
     fontSize: $isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),

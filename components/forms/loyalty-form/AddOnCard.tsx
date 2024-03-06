@@ -135,7 +135,7 @@ const AddOnCard = ({
           },
         }}>
         <AddOnFormControl
-          $componentBackgroundColor={theme?.palette?.neuPalette?.paper}
+          $componentBackgroundColor={theme?.palette?.ihclPalette?.paper}
           variant="standard"
           sx={{ width: isMobile ? MobilePxToVw(257) : DesktopPxToVw(180) }}>
           <EpicureCartFormLabel
@@ -499,7 +499,7 @@ const AddOnCard = ({
 
                     marginRight: "0vw",
                     "&  .MuiFormHelperText-root": {
-                      color: `${theme?.palette?.neuPalette?.hexTen} !important`,
+                      color: `${theme?.palette?.ihclPalette?.hexTen} !important`,
                     },
                   }}
                   variant="standard"

@@ -69,7 +69,7 @@ const TabItemCard = ({
               ? `-6px 10px ${MobilePxToVw(24)} 0px rgba(0, 0, 0, 0.10)`
               : "-6px 10px 1.25vw 0px rgba(0, 0, 0, 0.10)"
             : "unset",
-        border: `1px solid ${theme?.palette?.neuPalette?.hexNineteen}`,
+        border: `1px solid ${theme?.palette?.ihclPalette?.hexNineteen}`,
         borderWidth: isNormalTabs
           ? index === itemsCount - 1 || index === activeIndex || index === leftSlideIndex
             ? "0vw"
@@ -85,7 +85,7 @@ const TabItemCard = ({
           : "0vw",
         backgroundColor:
           (activeIndex === index || prevActiveIndex === index) && item?.urlType !== "dialog"
-            ? theme?.palette?.neuPalette?.hexOne
+            ? theme?.palette?.ihclPalette?.hexOne
             : "unset",
         minHeight: maxTabItemHeight > 0 ? maxTabItemHeight : isMobile ? "initial" : DesktopPxToVw(120),
       }}>
@@ -140,8 +140,8 @@ const TabItemCard = ({
                 maxWidth: isMobile ? "20.313vw" : "100%",
                 color:
                   (activeIndex === index || prevActiveIndex === index) && item?.urlType !== "dialog"
-                    ? theme?.palette?.neuPalette?.hexTwo
-                    : `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+                    ? theme?.palette?.ihclPalette?.hexTwo
+                    : `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
                 fontSize: "1.25vw",
                 lineHeight: "1.70vw",
                 fontFamily: theme?.palette?.font?.primaryFontFamily,
@@ -165,8 +165,8 @@ const TabItemCard = ({
               maxWidth: isMobile ? "20.313vw" : "100%",
               color:
                 (activeIndex === index || prevActiveIndex === index) && item?.urlType !== "dialog"
-                  ? theme?.palette?.neuPalette?.hexTwo
-                  : `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+                  ? theme?.palette?.ihclPalette?.hexTwo
+                  : `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
             }}>
             {item?.title}
           </Typography>
@@ -187,7 +187,7 @@ const TabItemCard = ({
                 : "unset",
               textAlign: "center",
               maxWidth: isMobile ? "20.313vw" : "100%",
-              color: theme?.palette?.neuPalette?.hexSeventeen,
+              color: theme?.palette?.ihclPalette?.hexSeventeen,
             }}>
             {item?.title}
           </Typography>

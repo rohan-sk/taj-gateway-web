@@ -10,7 +10,7 @@ export const MainBox = styled(Box)(() => ({
   flexDirection: "column",
   color: theme?.palette?.text?.primary,
   animation: "500ms ease-in-out 0s normal none 1 running fadeInDown",
-  border: `0.052vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
 }))
 
 export const CardBoxWrapper = styled(Box)(() => ({
@@ -21,9 +21,9 @@ export const CardBoxWrapper = styled(Box)(() => ({
 
 export const StyledDivider = styled(
   Divider,
-  transientProps
+  transientProps,
 )(() => ({
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
   "@media (max-width: 640px)": {
     height: "0.15625vw",
   },

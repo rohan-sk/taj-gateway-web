@@ -11,7 +11,7 @@ export const ImageCardContainer = styled(Box)(() => ({
 export const DividerStyle = styled(Divider)(() => ({
   width: DesktopPxToVw(40),
   height: DesktopPxToVw(1),
-  backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
   display: "inline-block",
   position: "relative",
   bottom: 16,
@@ -27,7 +27,7 @@ export const DescriptionContainer = styled(
   boxShadow: "-0.313vw 0.521vw 1.250vw rgba(0, 0, 0, 0.1)",
   right: $variant ? "" : $mobile ? "-0.5%" : "0",
   top: $variant ? "-15%" : $mobile ? "72.5%" : "20%",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   position: "absolute",
 
   alignItems: "flex-start",
@@ -61,6 +61,6 @@ export const DescriptionCardContainerBox = styled(
   justifyContent: "center",
   width: $mobile ? MobilePxToVw(508) : DesktopPxToVw(823),
   minHeight: $mobile ? MobilePxToVw(500) : DesktopPxToVw(534),
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   boxShadow: "-0.313vw 0.521vw 1.25vw rgba(0, 0, 0, 0.1)",
 }))

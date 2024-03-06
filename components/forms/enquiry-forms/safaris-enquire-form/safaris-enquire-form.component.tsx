@@ -115,14 +115,14 @@ const SafariFromComponent = (props: any) => {
   const [countryList, setCountryList] = useState<string[]>(["India"])
 
   const styles = {
-    background: cardBackgroundColor || theme?.palette?.neuPalette?.hexThree,
+    background: cardBackgroundColor || theme?.palette?.ihclPalette?.hexThree,
     "& label": {
-      color: `${theme?.palette?.neuPalette?.hexTwentyNine} !important`,
+      color: `${theme?.palette?.ihclPalette?.hexTwentyNine} !important`,
     },
     "& .MuiInputBase-root.MuiInput-root": {
-      color: `${theme?.palette?.neuPalette?.hexTwentyNine} !important`,
+      color: `${theme?.palette?.ihclPalette?.hexTwentyNine} !important`,
       "&::after, &::before": {
-        borderColor: `${theme?.palette?.neuPalette?.hexTwentyNine} !important`,
+        borderColor: `${theme?.palette?.ihclPalette?.hexTwentyNine} !important`,
       },
     },
   }
@@ -345,7 +345,7 @@ const SafariFromComponent = (props: any) => {
           sx={{
             background: cardBackgroundColor
               ? `${cardBackgroundColor} !important`
-              : theme?.palette?.neuPalette?.hexThree + "important",
+              : theme?.palette?.ihclPalette?.hexThree + "important",
           }}>
           {title && (
             <TitleContainer>
@@ -384,7 +384,7 @@ const SafariFromComponent = (props: any) => {
                 variant={isMobile ? "m-body-l" : "body-l"}
                 sx={{
                   fontWeight: 700,
-                  color: theme?.palette?.neuPalette?.hexTwentyNine,
+                  color: theme?.palette?.ihclPalette?.hexTwentyNine,
                 }}>
                 {items?.[0]?.labelText}
               </StyledTypography>
@@ -454,7 +454,7 @@ const SafariFromComponent = (props: any) => {
               errorState={errors?.[senderMobile]}
               helperText={props?.items?.[4]?.errorText}
               placeholder={props?.items?.[4]?.labelText}
-              color={theme?.palette?.neuPalette?.hexTwentyNine}
+              color={theme?.palette?.ihclPalette?.hexTwentyNine}
               dropDownStyle={{
                 width: isMobile ? "75vw" : DesktopPxToVw(570),
                 margin: isMobile ? `0 0 0 ${MobilePxToVw(63)}` : `0 0 0 ${DesktopPxToVw(233)}`,
@@ -469,11 +469,11 @@ const SafariFromComponent = (props: any) => {
                 "& .MuiInput-input ": {
                   padding: "0vw !important",
                 },
-                "& .MuiSvgIcon-root": { fill: theme?.palette?.neuPalette?.hexTwentyNine },
+                "& .MuiSvgIcon-root": { fill: theme?.palette?.ihclPalette?.hexTwentyNine },
               }}
               showErrorIcon={errors?.[Country]}
               getOptionLabel={(option: any) => option}
-              arrowStyles={{ color: theme?.palette?.neuPalette?.hexTwentyNine }}
+              arrowStyles={{ color: theme?.palette?.ihclPalette?.hexTwentyNine }}
               onChange={(e: any, newValue: any, job: string) => {
                 if (newValue) {
                   onCountryChange(newValue)
@@ -587,7 +587,7 @@ const SafariFromComponent = (props: any) => {
                 variant={isMobile ? "m-body-l" : "body-l"}
                 sx={{
                   fontWeight: 700,
-                  color: theme?.palette?.neuPalette?.TwentyNine,
+                  color: theme?.palette?.ihclPalette?.TwentyNine,
                 }}>
                 {items?.[9]?.labelText}
               </ContentTypography>

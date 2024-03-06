@@ -44,12 +44,10 @@ const CardWithBorderLineContentComponent = ({
   maxheight,
   setTitleHeight,
   setSubTitleHeight,
-  subTitleMaxHeight
+  subTitleMaxHeight,
 }: CardWithBorderLineContentProps) => {
   const [more, setMore] = useState<number>(
-    charactersLimit
-      ? charactersLimit
-      : CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT
+    charactersLimit ? charactersLimit : CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT,
   )
   const { textColor } = useAesthetics(aesthetic?._ref)
   const titleElementRef = useRef<HTMLElement | null>(null)
@@ -57,25 +55,20 @@ const CardWithBorderLineContentComponent = ({
   const subTitleElementRef = useRef<HTMLElement | null>(null)
   const subTitleHeight = subTitleElementRef?.current?.getBoundingClientRect()?.height || 0
 
-
   useEffect(() => {
-
-    if (setTitleHeight && titleHeight && (maxheight < titleHeight)) {
+    if (setTitleHeight && titleHeight && maxheight < titleHeight) {
       setTitleHeight(titleHeight)
-
     }
   }, [maxheight, setTitleHeight, titleHeight])
 
-
   useEffect(() => {
-
-    if (setSubTitleHeight && subTitleMaxHeight && (subTitleMaxHeight < subTitleHeight)) {
+    if (setSubTitleHeight && subTitleMaxHeight && subTitleMaxHeight < subTitleHeight) {
       setSubTitleHeight(subTitleHeight)
     }
   }, [subTitleMaxHeight, setSubTitleHeight, subTitleHeight])
 
   return (
-    <Box sx={{ border: `1px solid ${theme?.palette?.neuPalette?.hexOne}` }}>
+    <Box sx={{ border: `1px solid ${theme?.palette?.ihclPalette?.hexOne}` }}>
       {image?.asset?._ref && (
         <ImageCard>
           <CardMedia
@@ -90,14 +83,14 @@ const CardWithBorderLineContentComponent = ({
       <CardContentWrappingBox>
         {title && (
           <Box ref={titleElementRef}>
-            <CardTitleTypography variant="m-heading-s" $fontColor={textColor} >
+            <CardTitleTypography variant="m-heading-s" $fontColor={textColor}>
               {title}
             </CardTitleTypography>
           </Box>
         )}
         {subTitle && (
           <Box mt={"5.469vw"} ref={subTitleElementRef} sx={{ height: maxheight ? maxheight : "auto" }}>
-            <CardSubTitleTypography variant="m-body-sxl" $fontColor={textColor} >
+            <CardSubTitleTypography variant="m-body-sxl" $fontColor={textColor}>
               {subTitle}
             </CardSubTitleTypography>
           </Box>
@@ -107,21 +100,15 @@ const CardWithBorderLineContentComponent = ({
             <Typography
               variant="m-body-l"
               sx={{
-                color: textColor
-                  ? textColor
-                  : theme?.palette?.neuPalette?.hexSeventeen,
+                color: textColor ? textColor : theme?.palette?.ihclPalette?.hexSeventeen,
               }}>
               {description.length > more ? (
                 <CustomReadMore
                   length={more}
                   variant={"m-body-ml"}
-                  customReadMoreColor={
-                    textColor ? textColor : theme?.palette?.neuPalette?.hexTwo
-                  }
+                  customReadMoreColor={textColor ? textColor : theme?.palette?.ihclPalette?.hexTwo}
                   textStyles={{
-                    color: textColor
-                      ? textColor
-                      : theme?.palette?.neuPalette?.hexSeventeen,
+                    color: textColor ? textColor : theme?.palette?.ihclPalette?.hexSeventeen,
                   }}>
                   {description}
                 </CustomReadMore>

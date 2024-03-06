@@ -40,8 +40,7 @@ const GroupWithGallery = ({ props }: GroupWithGalleryProps) => {
   const [open, setOpen] = useState<boolean>(false)
   const [videoAsset, setVideoAsset] = useState<any>()
   const [selectedIndex, setSelectedIndex] = useState<number>(0)
-  const [countToShowCards, setCountToShowCards] =
-    useState<number>(numberOfCards)
+  const [countToShowCards, setCountToShowCards] = useState<number>(numberOfCards)
   useEffect(() => {
     setCountToShowCards(numberOfCards)
   }, [numberOfCards])
@@ -58,17 +57,11 @@ const GroupWithGallery = ({ props }: GroupWithGalleryProps) => {
               setSelectedIndex(index), setCountToShowCards(numberOfCards)
             }}
             sx={{
-              color:
-                index == selectedIndex
-                  ? theme?.palette?.neuPalette?.hexOne
-                  : "",
-              backgroundColor:
-                index == selectedIndex
-                  ? theme?.palette?.neuPalette?.hexTwo
-                  : "",
+              color: index == selectedIndex ? theme?.palette?.ihclPalette?.hexOne : "",
+              backgroundColor: index == selectedIndex ? theme?.palette?.ihclPalette?.hexTwo : "",
               "&:hover": {
-                color: theme?.palette?.neuPalette?.hexTwo,
-                backgroundColor: theme?.palette?.neuPalette?.hexOne,
+                color: theme?.palette?.ihclPalette?.hexTwo,
+                backgroundColor: theme?.palette?.ihclPalette?.hexOne,
               },
             }}>
             {`${item?.title} (${item?.items?.length})`}
@@ -80,16 +73,8 @@ const GroupWithGallery = ({ props }: GroupWithGalleryProps) => {
           {props?.[selectedIndex]?.items
             ?.slice(0, countToShowCards)
             ?.map((item: GroupWithGallerySubItems, index: number) => (
-              <Grid
-                key={index}
-                item
-                xl={4}
-                lg={4}
-                md={4}
-                xs={12}
-                sm={isMobile ? 12 : 4}>
-                {(item?.largeImage?.asset?._ref ||
-                  item?.videoAsset?.videoThumbnail?.asset?._ref) && (
+              <Grid key={index} item xl={4} lg={4} md={4} xs={12} sm={isMobile ? 12 : 4}>
+                {(item?.largeImage?.asset?._ref || item?.videoAsset?.videoThumbnail?.asset?._ref) && (
                   <>
                     <Box
                       width="100%"
@@ -103,18 +88,14 @@ const GroupWithGallery = ({ props }: GroupWithGalleryProps) => {
                       src={
                         item?.mediaType === "video"
                           ? item?.videoAsset?.videoThumbnail?.asset?._ref &&
-                            urlFor(
-                              item?.videoAsset?.videoThumbnail?.asset?._ref
-                            )?.url()
-                          : item?.largeImage?.asset?._ref &&
-                            urlFor(item?.largeImage?.asset?._ref)?.url()
+                            urlFor(item?.videoAsset?.videoThumbnail?.asset?._ref)?.url()
+                          : item?.largeImage?.asset?._ref && urlFor(item?.largeImage?.asset?._ref)?.url()
                       }
                       onClick={
                         item?.videoAsset?.videoPlay?.asset?._ref &&
                         (() => {
                           setVideoAsset(item?.videoAsset)
-                          setVideo(item?.videoAsset?.videoPlay?.asset?._ref),
-                            setOpen(true)
+                          setVideo(item?.videoAsset?.videoPlay?.asset?._ref), setOpen(true)
                         })
                       }
                     />
@@ -123,9 +104,7 @@ const GroupWithGallery = ({ props }: GroupWithGalleryProps) => {
                 )}
               </Grid>
             ))}
-          {countToShowCards >
-          (props?.[selectedIndex]?.items?.length - 1 ||
-            countToShowCards) ? null : (
+          {countToShowCards > (props?.[selectedIndex]?.items?.length - 1 || countToShowCards) ? null : (
             <LoadMoreActionGrid item xs={12} sm={12} md={12} lg={12} xl={12}>
               {isMobile ? (
                 <StyledExpandMoreButton
@@ -147,9 +126,7 @@ const GroupWithGallery = ({ props }: GroupWithGalleryProps) => {
                   onClick={() => {
                     setCountToShowCards(countToShowCards + 3)
                   }}>
-                  <Typography variant="link-m">
-                    {CONSTANTS?.LOAD_MORE}
-                  </Typography>
+                  <Typography variant="link-m">{CONSTANTS?.LOAD_MORE}</Typography>
                   <StyledExpandMoreIcon />
                 </LoadMoreActionBox>
               )}
@@ -157,14 +134,8 @@ const GroupWithGallery = ({ props }: GroupWithGalleryProps) => {
           )}
         </Grid>
       </>
-      <VideoSEOScript {...videoAsset}/>
-      {open && (
-        <VideoPlayerModal
-          videoUrl={video}
-          handleModalOpen={open}
-          handleModalClose={handleModelClose}
-        />
-      )}
+      <VideoSEOScript {...videoAsset} />
+      {open && <VideoPlayerModal videoUrl={video} handleModalOpen={open} handleModalClose={handleModelClose} />}
     </>
   )
 }

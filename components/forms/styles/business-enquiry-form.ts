@@ -38,7 +38,7 @@ export const StyledTextField = styled(TextField)(() => ({
     lineHeight: "1.875vw",
     paddingBottom: "0.21vw",
     color: theme?.palette?.text?.primary,
-    borderBottom: `0.10vw solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+    borderBottom: `0.10vw solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
 
     "&::placeholder": {
       opacity: 1,
@@ -55,10 +55,10 @@ export const EnquireButton = styled(Button)(() => ({
 
 export const DefaultStyleBox = styled(Box)(() => ({
   "&>*": {
-      width: "inherit",
-      boxShadow: "0 0 0 0 rgba(0,0,0,0)!important",
-      mozBoxShadow: "0 0 0 0 rgba(0,0,0,0)!important",
-      webkitBoxShadow: "0 0 0 0 rgba(0,0,0,0)!important",
-      padding: "0vw!important",
-  }
+    width: "inherit",
+    boxShadow: "0 0 0 0 rgba(0,0,0,0)!important",
+    mozBoxShadow: "0 0 0 0 rgba(0,0,0,0)!important",
+    webkitBoxShadow: "0 0 0 0 rgba(0,0,0,0)!important",
+    padding: "0vw!important",
+  },
 }))

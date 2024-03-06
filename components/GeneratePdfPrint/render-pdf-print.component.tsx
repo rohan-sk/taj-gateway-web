@@ -193,10 +193,10 @@ const PrintPdf = ({
           <BoldTypography
             sx={{
               color: comparison
-                ? theme?.palette?.neuPalette?.hexTwo
+                ? theme?.palette?.ihclPalette?.hexTwo
                 : buttonVariant === "light-outlined"
-                ? theme?.palette?.neuPalette?.hexTwo
-                : theme?.palette?.neuPalette?.hexOne,
+                ? theme?.palette?.ihclPalette?.hexTwo
+                : theme?.palette?.ihclPalette?.hexOne,
             }}
             variant={isMobile ? "m-body-s" : "heading-xxs"}>
             {data?.print}

@@ -10,14 +10,14 @@ export const MobileGalleryButtonContainer = styled(Box)(() => ({
 }))
 
 export const GalleryButtonWrapper = styled(Button)(() => ({
-  color: theme?.palette?.neuPalette?.hexOne,
-  backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
   " &:hover": {
-    backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+    backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
   },
   "&.Mui-disabled": {
-    color: theme?.palette?.neuPalette?.hexTwelve,
-    backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
+    color: theme?.palette?.ihclPalette?.hexTwelve,
+    backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
   },
   fontStyle: "normal",
   fontWeight: 700,
@@ -48,7 +48,7 @@ export const LoadMoreButtonContainer = styled(
 export const StyledExpandMoreIcon = styled(ExpandMore)(() => ({
   height: "3.875vw",
   width: "auto",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const LoadMoreWrapper = styled(Box)(() => ({
@@ -57,7 +57,7 @@ export const LoadMoreWrapper = styled(Box)(() => ({
 }))
 
 export const StyledGalleryExpandMoreIcon = styled(ExpandMore)(() => ({
-  color: `${theme?.palette?.neuPalette?.hexOne}`,
+  color: `${theme?.palette?.ihclPalette?.hexOne}`,
   height: "3.875vw",
   width: "auto",
 }))
@@ -84,7 +84,7 @@ export const PortableTextBoxWrapper = styled(
     fontSize: $isMobile ? MobilePxToVw(22) : DesktopPxToVw(22),
     lineHeight: $isMobile ? "140%" : "1.56vw",
     fontFamily: fonts?.body,
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
   "&, & *": {
     textAlign: $isSingleItem ? "center !important" : "initial",
@@ -96,5 +96,5 @@ export const HorizontalDivider = styled(
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   height: "2%",
   width: $isMobile ? MobilePxToVw(40) : DesktopPxToVw(61),
-  borderColor: theme?.palette?.neuPalette?.hexSeventeen,
+  borderColor: theme?.palette?.ihclPalette?.hexSeventeen,
 }))

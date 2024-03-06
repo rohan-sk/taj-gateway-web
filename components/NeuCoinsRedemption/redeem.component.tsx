@@ -51,7 +51,7 @@ const NeuCoinsRedemption = (props: any) => {
   const [loader, setLoader] = useState<boolean>(false)
 
   const [apiRes, setApiRes] = useState<any>(null)
-  const iconColor = theme?.palette?.neuPalette?.hexSeventeen
+  const iconColor = theme?.palette?.ihclPalette?.hexSeventeen
   const inputRef = useRef<HTMLInputElement | null>(null)
   const PortableText = context!.PortableText
 
@@ -173,7 +173,7 @@ const NeuCoinsRedemption = (props: any) => {
   return (
     <>
       {loader ? (
-        <LoadingSpinner containerStyle={{ background: theme?.palette?.neuPalette?.hexSix }} />
+        <LoadingSpinner containerStyle={{ background: theme?.palette?.ihclPalette?.hexSix }} />
       ) : (
         <InnerAccordion expanded={true}>
           <InnerAccordionSummary sx={{ cursor: "default !important" }}>
@@ -279,7 +279,7 @@ const NeuCoinsRedemption = (props: any) => {
                       <Typography
                         variant={isMobile ? "m-body-sl" : "body-ml"}
                         sx={{
-                          color: theme?.palette?.neuPalette?.hexTwentyEight,
+                          color: theme?.palette?.ihclPalette?.hexTwentyEight,
                         }}>
                         {`${
                           Number(
@@ -313,7 +313,7 @@ const NeuCoinsRedemption = (props: any) => {
                     <RedeemBox
                       sx={{
                         padding: isMobile ? "3.125vw" : "1.04vw 1.30vw",
-                        background: theme?.palette?.neuPalette?.hexEighteen,
+                        background: theme?.palette?.ihclPalette?.hexEighteen,
                         width: "100%",
                       }}>
                       <ColorTypographyWrapper>

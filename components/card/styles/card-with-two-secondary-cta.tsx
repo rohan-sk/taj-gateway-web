@@ -22,7 +22,7 @@ export const VerticalDivider = styled(Divider)(() => ({
   height: "9.8vw",
   width: "0.0521vw",
   margin: "0vw 1.041vw",
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const LogoImageContentBox = styled(Box)(() => ({
@@ -33,12 +33,12 @@ export const LogoImageContentBox = styled(Box)(() => ({
 
 export const CardWithTitleTabsTypography = styled(Typography)(() => ({
   textAlign: "center",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const CardWithImageTitleTabsComponentBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "column",
@@ -67,24 +67,20 @@ export const ImageAssetWrapperBox = styled(Box)(() => ({
 
 export const CardWithTitleTabsWrapper = styled(
   Box,
-  transientProps
-)<{ $isMobile: boolean; $isCustomOddIndex: boolean | undefined }>(
-  ({ $isMobile, $isCustomOddIndex }) => ({
-    display: "flex",
-    justifyContent: "center",
-    width: $isMobile ? ($isCustomOddIndex ? "100%" : "31.094vw") : "13.19vw",
-    "@media(max-width:640px)": {
-      paddingTop: "4.688vw",
-    },
-  })
-)
+  transientProps,
+)<{ $isMobile: boolean; $isCustomOddIndex: boolean | undefined }>(({ $isMobile, $isCustomOddIndex }) => ({
+  display: "flex",
+  justifyContent: "center",
+  width: $isMobile ? ($isCustomOddIndex ? "100%" : "31.094vw") : "13.19vw",
+  "@media(max-width:640px)": {
+    paddingTop: "4.688vw",
+  },
+}))
 
 export const CardWithDescriptionTabsWrapper = styled(
   Box,
-  transientProps
-)<{ $isMobile: boolean; $isCustomOddIndex: boolean | undefined }>(
-  ({ $isMobile, $isCustomOddIndex }) => ({
-    textAlign: "center",
-    width: $isMobile ? ($isCustomOddIndex ? "100%" : "31.094vw") : "unset",
-  })
-)
+  transientProps,
+)<{ $isMobile: boolean; $isCustomOddIndex: boolean | undefined }>(({ $isMobile, $isCustomOddIndex }) => ({
+  textAlign: "center",
+  width: $isMobile ? ($isCustomOddIndex ? "100%" : "31.094vw") : "unset",
+}))

@@ -7,7 +7,7 @@ export const MainStack = styled(Stack)(() => ({
   width: "100%",
   flexDirection: "row",
   marginBottom: "2.083vw",
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   "@media (max-width:640px)": {
     flexDirection: "column",
     marginBottom: "5.469vw",
@@ -55,7 +55,7 @@ export const ChipBoxesContainer = styled(Box)(() => ({
 export const ChipLabelsBox = styled(Box)(() => ({
   width: "fit-content",
   padding: "0.313vw 0.833vw",
-  border: `0.052vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
 }))
 
 export const DateRedeemStack = styled(Stack)(() => ({
@@ -96,7 +96,7 @@ export const HorizontalDivider = styled(Divider)(() => ({
   width: "100%",
   height: "0.052vw",
   margin: "1.042vw 0vw",
-  backgroundColor: theme?.palette?.neuPalette?.hexSeven,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSeven,
 }))
 
 export const DescriptionTypography = styled(Typography)(() => ({
@@ -110,7 +110,7 @@ export const DescriptionTypography = styled(Typography)(() => ({
 
 export const ActionItemsStack = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isRedeemable: boolean }>(({ $isRedeemable }) => ({
   flexDirection: "row",
   alignItems: "center",
@@ -122,13 +122,13 @@ export const ActionItemsStack = styled(
 }))
 
 export const UserActionsStack = styled(Stack)(() => ({
-  display:"flex",
+  display: "flex",
   flexDirection: "row",
   "@media (max-width:640px)": {
-    gap:"20vw",  // added gap for my account voucher issue
+    gap: "20vw", // added gap for my account voucher issue
     width: "100%",
     justifyContent: "space-Between",
-    paddingRight:"18.14vw"
+    paddingRight: "18.14vw",
   },
 }))
 
@@ -146,15 +146,15 @@ export const ShareTypography = styled(Typography)(() => ({
   fontSize: "0.833vw",
   "@media (max-width:640px)": {
     fontSize: "2.813vw",
-    letterSpacing:"0.231vw"
-  }
+    letterSpacing: "0.231vw",
+  },
 }))
 
 export const VerticalDivider = styled(Divider)(() => ({
   width: "0.055vw",
   height: "1.042vw",
   margin: "0vw 0.521vw",
-  backgroundColor: theme?.palette?.neuPalette?.hexTwelve,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const Icon: any = styled(Box)(() => ({

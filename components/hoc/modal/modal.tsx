@@ -60,9 +60,7 @@ const BasicModal = ({
             height: height,
             overflowY: overflowData,
             backdropFilter: `blur("5px")`,
-            bgcolor: isMobile
-              ? bgcolor || theme.palette.neuPalette.hexOne
-              : bgcolor || "rgba(19, 19, 15, 0.50)",
+            bgcolor: isMobile ? bgcolor || theme.palette.ihclPalette.hexOne : bgcolor || "rgba(19, 19, 15, 0.50)",
             "::-webkit-scrollbar": {
               width: DesktopPxToVw(6),
               display: hideScrollBar ? "none" : "initial",
@@ -74,7 +72,7 @@ const BasicModal = ({
               },
             },
             "::-webkit-scrollbar-thumb": {
-              backgroundColor: theme?.palette?.neuPalette?.hexSeven,
+              backgroundColor: theme?.palette?.ihclPalette?.hexSeven,
               border: "1px solid transparent",
               borderRadius: "30%",
             },
@@ -101,11 +99,7 @@ const BasicModal = ({
                       <Box
                         sx={{
                           position: "relative",
-                          top: tajLogoTop
-                            ? isMyAccountCheck
-                              ? MobilePxToVw(2)
-                              : tajLogoTop
-                            : "unset",
+                          top: tajLogoTop ? (isMyAccountCheck ? MobilePxToVw(2) : tajLogoTop) : "unset",
                           bottom: tajLogoBottom ? tajLogoBottom : "unset",
                         }}
                         alt={`-taj-logo`}
@@ -124,9 +118,7 @@ const BasicModal = ({
                       component={"img"}
                       src={CloseIcon ? CloseIcon : ICONS?.CLOSE_BLACK_ICON}
                       sx={{
-                        color: mobileColor
-                          ? mobileColor
-                          : theme?.palette?.neuPalette?.hexTwo,
+                        color: mobileColor ? mobileColor : theme?.palette?.ihclPalette?.hexTwo,
                         position: iconPosition ? iconPosition : "",
                         top: mobileTop ? mobileTop : "",
                         right: iconRight ? iconRight : "",
@@ -149,8 +141,7 @@ const BasicModal = ({
                   sx={{
                     cursor: "pointer",
                     fontWeight: "700",
-                    color:
-                      ModalCloseButtonColor ?? theme?.palette?.primary?.main,
+                    color: ModalCloseButtonColor ?? theme?.palette?.primary?.main,
                     display: ModalCloseButtonDisplay ?? "flex",
                   }}
                   onClick={() => {
@@ -169,11 +160,9 @@ const BasicModal = ({
                     marginLeft: "1.016vw",
                     height: ModalCloseIconHeight ?? "0.938vw",
                     width: ModalCloseIconWidth ?? "0.938vw",
-                    color:
-                      ModalCloseButtonColor ?? theme?.palette?.primary?.main,
+                    color: ModalCloseButtonColor ?? theme?.palette?.primary?.main,
                     filter:
-                      ModalCloseButtonColor ===
-                      theme?.palette?.background?.paper
+                      ModalCloseButtonColor === theme?.palette?.background?.paper
                         ? "filter: grayscale(10%) brightness(200%);"
                         : "unset",
                   }}

@@ -635,8 +635,8 @@ const LoyaltyCardsEnrollForm = ({ props, parentProps }: cardsWithCardInterface) 
   ))({
     [`& .${tooltipClasses.tooltip}`]: {
       maxWidth: isMobile ? "64.688vw" : "21.563vw",
-      backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       padding: isMobile ? "1.563vw 3.750vw 1.875vw" : "0.521vw 1.250vw 0.625vw",
     },
   })

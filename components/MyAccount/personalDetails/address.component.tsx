@@ -1,23 +1,14 @@
-import { Typography, Divider } from "@mui/material";
-import { Stack, Box } from "@mui/system";
-import { theme } from "../../../lib/theme";
-import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc";
-import { useMobileCheck } from "../../../utils/isMobilView";
-import {
-  ICONS,
-  DEFAULT_ADDRESS,
-  ADDRESS,
-  SET_DEFAULT_ADDRESS,
-} from "../../constants";
-import { EDIT_ICON, EDIT_TEXT } from "../../forms/gift-card-form/constants";
-import BasicModal from "../../hoc/modal/modal";
-import DeleteAddressModalpopup from "./delete-address-modal-popup";
-import {
-  ActionsTypography,
-  EditIcon,
-  EditTextTypography,
-} from "./personal-details.styles";
-import { DELETE } from "../../forms/gift-card-form/constants";
+import { Typography, Divider } from "@mui/material"
+import { Stack, Box } from "@mui/system"
+import { theme } from "../../../lib/theme"
+import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
+import { useMobileCheck } from "../../../utils/isMobilView"
+import { ICONS, DEFAULT_ADDRESS, ADDRESS, SET_DEFAULT_ADDRESS } from "../../constants"
+import { EDIT_ICON, EDIT_TEXT } from "../../forms/gift-card-form/constants"
+import BasicModal from "../../hoc/modal/modal"
+import DeleteAddressModalpopup from "./delete-address-modal-popup"
+import { ActionsTypography, EditIcon, EditTextTypography } from "./personal-details.styles"
+import { DELETE } from "../../forms/gift-card-form/constants"
 
 export const AddressField = ({
   data,
@@ -29,21 +20,11 @@ export const AddressField = ({
   open,
   key,
   addressId,
-  clickAddressID
+  clickAddressID,
 }: any) => {
-  const isMobile = useMobileCheck();
-  const {
-    addressLine,
-    house,
-    city,
-    state,
-    country,
-    pinCode,
-    isPrimary,
-  } = data;
-  const formattedAddress = [addressLine, city, state, pinCode, country]?.join(
-    ", "
-  );
+  const isMobile = useMobileCheck()
+  const { addressLine, house, city, state, country, pinCode, isPrimary } = data
+  const formattedAddress = [addressLine, city, state, pinCode, country]?.join(", ")
   return (
     <>
       {open && (
@@ -57,7 +38,7 @@ export const AddressField = ({
           }}
           showLogo={true}
           tajLogoTop={"0vw"}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
           open={open}
           handleClose={() => setOpen(!open)}
@@ -72,33 +53,20 @@ export const AddressField = ({
           }
         />
       )}
-      <Stack
-        flexDirection={"column"}
-        pb={isMobile ? MobilePxToVw(20) : DesktopPxToVw(20)}
-      >
-        <Stack
-          flexDirection={"row"}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          width={"100%"}
-        >
+      <Stack flexDirection={"column"} pb={isMobile ? MobilePxToVw(20) : DesktopPxToVw(20)}>
+        <Stack flexDirection={"row"} alignItems={"center"} justifyContent={"space-between"} width={"100%"}>
           <Stack
             flexDirection={"row"}
             alignItems={"center"}
             columnGap={isMobile ? MobilePxToVw(10) : DesktopPxToVw(10)}
-            width={"100%"}
-          >
-            <Typography
-              fontWeight={700}
-              variant={isMobile ? "m-body-l" : "body-l"}
-            >
+            width={"100%"}>
+            <Typography fontWeight={700} variant={isMobile ? "m-body-l" : "body-l"}>
               {isPrimary ? DEFAULT_ADDRESS : `${ADDRESS} ${index + 2}`}
             </Typography>
             {!isPrimary && (
               <Typography
                 variant={isMobile ? "m-link-m" : "link-m"}
-                onClick={() => setAsDefaultAddress(data, addressId)}
-              >
+                onClick={() => setAsDefaultAddress(data, addressId)}>
                 {SET_DEFAULT_ADDRESS}
               </Typography>
             )}
@@ -110,24 +78,15 @@ export const AddressField = ({
                   columnGap: `${DesktopPxToVw(0)} !important`,
                 }}
                 variant={isMobile ? "m-link-m" : "link-m"}
-                onClick={() => editAddress(data, false)}
-              >
+                onClick={() => editAddress(data, false)}>
                 <EditIcon component={"img"} alt="edit_icon" src={EDIT_ICON} />
                 {EDIT_TEXT}
               </ActionsTypography>
 
               {!isPrimary && (
                 <>
-                  {!isMobile && (
-                    <Divider
-                      orientation="vertical"
-                      sx={{ height: "20px", margin: "0 10px" }}
-                    ></Divider>
-                  )}
-                  <Typography
-                    variant={isMobile ? "m-link-m" : "link-m"}
-                    onClick={() => setOpen(true)}
-                  >
+                  {!isMobile && <Divider orientation="vertical" sx={{ height: "20px", margin: "0 10px" }}></Divider>}
+                  <Typography variant={isMobile ? "m-link-m" : "link-m"} onClick={() => setOpen(true)}>
                     {DELETE}
                   </Typography>
                 </>
@@ -138,16 +97,11 @@ export const AddressField = ({
 
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box sx={{ width: isMobile ? "80%" : "100%" }}>
-            <Typography variant={isMobile ? "m-body-l" : "body-l"}>
-              {formattedAddress}
-            </Typography>
+            <Typography variant={isMobile ? "m-body-l" : "body-l"}>{formattedAddress}</Typography>
           </Box>
           {isMobile && (
             <Box>
-              <EditTextTypography
-                variant={isMobile ? "m-link-m" : "link-m"}
-                onClick={() => editAddress(data, false)}
-              >
+              <EditTextTypography variant={isMobile ? "m-link-m" : "link-m"} onClick={() => editAddress(data, false)}>
                 <EditIcon component={"img"} alt="edit_icon" src={EDIT_ICON} />
                 &nbsp;
                 {EDIT_TEXT}
@@ -155,10 +109,7 @@ export const AddressField = ({
 
               {!isPrimary && (
                 <>
-                  <Typography
-                    variant={isMobile ? "m-link-m" : "link-m"}
-                    onClick={() => setOpen(true)}
-                  >
+                  <Typography variant={isMobile ? "m-link-m" : "link-m"} onClick={() => setOpen(true)}>
                     {DELETE}
                   </Typography>
                 </>
@@ -168,5 +119,5 @@ export const AddressField = ({
         </Box>
       </Stack>
     </>
-  );
-};
+  )
+}

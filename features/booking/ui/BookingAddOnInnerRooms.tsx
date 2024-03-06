@@ -6,10 +6,7 @@ import RemoveIcon from "@mui/icons-material/Remove"
 import { CONSTANTS } from "../../../components/constants"
 import DesktopPxToVw from "../../../utils/DesktopFontCalc"
 import innerRoomData from "../../../components/BookingFlow/Json/BookingAddOnInnerRoomJson.json"
-import {
-  LoadMoreActionBox,
-  StyledExpandMoreIcon,
-} from "../../../components/group/styles/common-styled-components"
+import { LoadMoreActionBox, StyledExpandMoreIcon } from "../../../components/group/styles/common-styled-components"
 import {
   InnerRoomAccordion,
   InnerRoomSubItemBox,
@@ -27,7 +24,7 @@ import {
 
 const BookingAddOnInnerRooms = () => {
   const numberOfItems = CONSTANTS?.THREE
-  const iconColor = theme?.palette?.neuPalette?.hexSeventeen
+  const iconColor = theme?.palette?.ihclPalette?.hexSeventeen
   const [itemsToShow, setItemsToShow] = useState<number>(numberOfItems)
   const [expanded, setExpanded] = React.useState<number | false>(false)
 
@@ -44,9 +41,9 @@ const BookingAddOnInnerRooms = () => {
             <AccordionSummary
               expandIcon={
                 expanded === index ? (
-                  <RemoveIcon sx={{ color: iconColor,fontSize:'20px' }} />
+                  <RemoveIcon sx={{ color: iconColor, fontSize: "20px" }} />
                 ) : (
-                  <AddIcon sx={{ color: iconColor,fontSize:'20px' }} />
+                  <AddIcon sx={{ color: iconColor, fontSize: "20px" }} />
                 )
               }>
               <InnerRoomAccordionTitle>
@@ -54,36 +51,27 @@ const BookingAddOnInnerRooms = () => {
               </InnerRoomAccordionTitle>
             </AccordionSummary>
             <InnerRoomAccordionDetails>
-              {innerRoomData?.roomDescription
-                ?.slice(0, itemsToShow)
-                ?.map((allInnerItems: any, idx: number) => (
-                  <InnerRoomSubItemBox
-                    key={idx}
-                    sx={{
-                      marginTop: idx == 0 ? "auto" : DesktopPxToVw(21),
-                    }}>
-                    <CheckBoxAndDescriptionWrapper>
-                      <EachRoomDescriptionItemCheckbox />
-                      <EachRoomDescriptionWrapper>
-                        <EachRoomDescriptionItemTitle>
-                          {allInnerItems?.title}
-                        </EachRoomDescriptionItemTitle>
-                        <EachRoomDescriptionItemDescription>
-                          {allInnerItems?.description}
-                        </EachRoomDescriptionItemDescription>
-                        <EachRoomDescriptionItemButton>
-                          {allInnerItems?.viewDetailsButton}
-                        </EachRoomDescriptionItemButton>
-                      </EachRoomDescriptionWrapper>
-                    </CheckBoxAndDescriptionWrapper>
-                    <EachRoomDescriptionItemPrice>
-                      ₹ {allInnerItems?.roomAmount}
-                    </EachRoomDescriptionItemPrice>
-                  </InnerRoomSubItemBox>
-                ))}
+              {innerRoomData?.roomDescription?.slice(0, itemsToShow)?.map((allInnerItems: any, idx: number) => (
+                <InnerRoomSubItemBox
+                  key={idx}
+                  sx={{
+                    marginTop: idx == 0 ? "auto" : DesktopPxToVw(21),
+                  }}>
+                  <CheckBoxAndDescriptionWrapper>
+                    <EachRoomDescriptionItemCheckbox />
+                    <EachRoomDescriptionWrapper>
+                      <EachRoomDescriptionItemTitle>{allInnerItems?.title}</EachRoomDescriptionItemTitle>
+                      <EachRoomDescriptionItemDescription>
+                        {allInnerItems?.description}
+                      </EachRoomDescriptionItemDescription>
+                      <EachRoomDescriptionItemButton>{allInnerItems?.viewDetailsButton}</EachRoomDescriptionItemButton>
+                    </EachRoomDescriptionWrapper>
+                  </CheckBoxAndDescriptionWrapper>
+                  <EachRoomDescriptionItemPrice>₹ {allInnerItems?.roomAmount}</EachRoomDescriptionItemPrice>
+                </InnerRoomSubItemBox>
+              ))}
               {innerRoomData?.roomDescription?.length != itemsToShow && (
-                <LoadMoreActionBox
-                  onClick={() => setItemsToShow(innerRoomData?.roomDescription?.length)}>
+                <LoadMoreActionBox onClick={() => setItemsToShow(innerRoomData?.roomDescription?.length)}>
                   <InnerRoomSubItemsButton
                     variant="link-m"
                     sx={{

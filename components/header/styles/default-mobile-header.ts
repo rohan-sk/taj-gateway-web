@@ -52,7 +52,7 @@ export const SearchMainBox = styled(
   alignItems: "center",
   marginTop: $isSafari ? "-5vw" : "15.625vw",
   justifyContent: "space-between",
-  color: theme?.palette?.neuPalette?.hexTwelve,
+  color: theme?.palette?.ihclPalette?.hexTwelve,
   background: theme?.palette?.background?.default,
 }))
 
@@ -80,14 +80,14 @@ export const CenterItemsBox = styled(Box)(() => ({
 export const DateDivider = styled(Divider)(() => ({
   width: "2vw",
   height: "0.156vw",
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const GuestDetailsDivider = styled(Divider)(() => ({
   width: "0.156vw",
   height: "2.656vw",
   margin: "0vw 1.563vw",
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const SearchButton = styled(Button)(() => ({

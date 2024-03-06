@@ -41,8 +41,8 @@ const EnquireDropDown = ({
           <StyledInputLabel
             sx={{
               color: disable
-                ? `${theme?.palette?.neuPalette?.hexSeventeen}38`
-                : theme?.palette?.neuPalette?.hexSeventeen,
+                ? `${theme?.palette?.ihclPalette?.hexSeventeen}38`
+                : theme?.palette?.ihclPalette?.hexSeventeen,
             }}>
             {label}
           </StyledInputLabel>

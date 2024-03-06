@@ -29,7 +29,7 @@ export const TitleContainer = styled(Stack)(() => ({
   },
 }))
 
-export const StyledDivider = styled(Divider)(() => ({ height: "1px", background: theme?.palette?.neuPalette?.hexOne }))
+export const StyledDivider = styled(Divider)(() => ({ height: "1px", background: theme?.palette?.ihclPalette?.hexOne }))
 export const FieldsContainer = styled(
   Box,
   transientProps,
@@ -89,7 +89,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
     },
   },
   "& .MuiSvgIcon-root": {
-    color: theme?.palette?.neuPalette?.TwentyNine,
+    color: theme?.palette?.ihclPalette?.TwentyNine,
   },
   "& label": {
     transform: "scale(1) translate(0, 0em)",
@@ -108,8 +108,8 @@ export const StyledFormControl = styled(FormControl)(() => ({
     },
   },
   "& input": {
-    WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.neuPalette?.hexThree} inset !important`,
-    WebkitTextFillColor: `${theme?.palette?.neuPalette?.hexOne} !important`,
+    WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.ihclPalette?.hexThree} inset !important`,
+    WebkitTextFillColor: `${theme?.palette?.ihclPalette?.hexOne} !important`,
   },
   "& .MuiInputBase-root": {
     height: "2.083vw",
@@ -142,7 +142,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
 
 export const MainContainer = styled(Box)(() => ({
   width: "100%",
-  background: theme?.palette?.neuPalette?.hexThree,
+  background: theme?.palette?.ihclPalette?.hexThree,
   padding: `${DesktopPxToVw(80)} ${DesktopPxToVw(123)}`,
   boxShadow: `-6px 10px 24px 0px rgba(0, 0, 0, 0.10)`,
   "@media (max-width:640px)": {
@@ -155,7 +155,7 @@ export const InputTextField = styled(TextField)(() => ({
   height: "2.083vw",
   "& .MuiInputBase-root.MuiInput-root": {
     "&::before, &::after": {
-      borderColor: `${theme?.palette?.neuPalette?.hexOne} !important`,
+      borderColor: `${theme?.palette?.ihclPalette?.hexOne} !important`,
     },
     "&::before": {
       borderBottomStyle: "solid!important",
@@ -164,9 +164,9 @@ export const InputTextField = styled(TextField)(() => ({
 
   "& input, & textarea": {
     padding: "0vw",
-    background: `${theme?.palette?.neuPalette?.hexThree} !important`,
-    WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.neuPalette?.hexThree} inset !important`,
-    WebkitTextFillColor: `${theme?.palette?.neuPalette?.hexOne} !important`,
+    background: `${theme?.palette?.ihclPalette?.hexThree} !important`,
+    WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.ihclPalette?.hexThree} inset !important`,
+    WebkitTextFillColor: `${theme?.palette?.ihclPalette?.hexOne} !important`,
     "&::placeholder": {
       opacity: 1,
     },
@@ -185,7 +185,7 @@ export const InputTextField = styled(TextField)(() => ({
     fontFamily: "Inter",
     fontWeight: 300,
     fontSize: "1.25vw",
-    color: `${theme?.palette?.neuPalette?.hexTwentyNine} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexTwentyNine} !important`,
     opacity: 1,
     "@media (max-width:640px)": {
       fontFamily: "Inter",
@@ -196,7 +196,7 @@ export const InputTextField = styled(TextField)(() => ({
   "& .MuiFormHelperText-root": {
     fontFamily: "Inter",
     fontWeight: 300,
-    color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
     fontSize: `${DesktopPxToVw(18)}!important`,
     "@media (max-width:640px)": {
       fontSize: "2.8vw!important",
@@ -206,12 +206,12 @@ export const InputTextField = styled(TextField)(() => ({
     marginTop: "0vw",
   },
   "& .MuiInputLabel-shrink.MuiInputLabel-standard": {
-    color: theme?.palette?.neuPalette?.hexOne,
+    color: theme?.palette?.ihclPalette?.hexOne,
     transition:
       "cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms",
   },
   "& .MuiInputLabel-shrink": {
-    color: theme?.palette?.neuPalette?.hexOne,
+    color: theme?.palette?.ihclPalette?.hexOne,
     transform: "scale(0.75) translate(0, -1.2em)",
   },
 }))
@@ -220,7 +220,7 @@ export const TextAreaField = styled(TextField)(() => ({
   width: "100%",
   "& .MuiInputBase-root.MuiInput-root": {
     "&::before, &::after": {
-      borderColor: `${theme?.palette?.neuPalette?.hexTwentyNine} !important`,
+      borderColor: `${theme?.palette?.ihclPalette?.hexTwentyNine} !important`,
     },
     "&::before": {
       borderBottomStyle: "solid!important",
@@ -231,8 +231,8 @@ export const TextAreaField = styled(TextField)(() => ({
     padding: "0vw",
     lineHeight: "140%",
     letterSpacing: "0.05em",
-    WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.neuPalette?.hexThree} inset !important`,
-    WebkitTextFillColor: `${theme?.palette?.neuPalette?.hexTwentyNine} !important`,
+    WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.ihclPalette?.hexThree} inset !important`,
+    WebkitTextFillColor: `${theme?.palette?.ihclPalette?.hexTwentyNine} !important`,
     "&::placeholder": {
       opacity: 1,
     },
@@ -246,7 +246,7 @@ export const TextAreaField = styled(TextField)(() => ({
     fontFamily: "Inter",
     fontWeight: 300,
     fontSize: "1.25vw",
-    color: theme?.palette?.neuPalette?.hexTwentyNine,
+    color: theme?.palette?.ihclPalette?.hexTwentyNine,
     opacity: 1,
     "@media (max-width:640px)": {
       fontFamily: "Inter",
@@ -257,7 +257,7 @@ export const TextAreaField = styled(TextField)(() => ({
   "& .MuiFormHelperText-root": {
     fontFamily: "Inter",
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: `${DesktopPxToVw(18)}!important`,
     "@media (max-width:640px)": {
       fontSize: "2.8vw!important",
@@ -267,12 +267,12 @@ export const TextAreaField = styled(TextField)(() => ({
     marginTop: "0vw",
   },
   "& .MuiInputLabel-shrink.MuiInputLabel-standard": {
-    color: theme?.palette?.neuPalette?.hexTwentyNine,
+    color: theme?.palette?.ihclPalette?.hexTwentyNine,
     transition:
       "cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms",
   },
   "& .MuiInputLabel-shrink": {
-    color: theme?.palette?.neuPalette?.TwentyNine,
+    color: theme?.palette?.ihclPalette?.TwentyNine,
     transform: "scale(0.75) translate(0, -1.2em)",
   },
 }))
@@ -307,8 +307,8 @@ export const CheckBoxCell = styled(Stack)(() => ({
   flexDirection: "row",
   alignItems: "start",
   "& input": {
-    WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.neuPalette?.hexThree} inset !important`,
-    WebkitTextFillColor: `${theme?.palette?.neuPalette?.hexOne} !important`,
+    WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.ihclPalette?.hexThree} inset !important`,
+    WebkitTextFillColor: `${theme?.palette?.ihclPalette?.hexOne} !important`,
   },
   "& span": {
     backgroundImage: "unset",
@@ -316,11 +316,11 @@ export const CheckBoxCell = styled(Stack)(() => ({
 }))
 
 export const StyledTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const ContentTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwentyNine,
+  color: theme?.palette?.ihclPalette?.hexTwentyNine,
 }))
 
 export const StyledLabel = styled(InputLabel)(() => ({
@@ -329,7 +329,7 @@ export const StyledLabel = styled(InputLabel)(() => ({
   fontStyle: "normal",
   fontWeight: 300,
   lineHeight: "150%",
-  color: theme?.palette?.neuPalette?.hexTwentyOne,
+  color: theme?.palette?.ihclPalette?.hexTwentyOne,
   "@media (max-width:640px)": {
     fontSize: "3.75vw",
   },
@@ -339,12 +339,12 @@ export const StyledMenuItem = styled(MenuItem)(() => ({
   fontWeight: 300,
   fontSize: "0.938vw",
   fontFamily: "Inter",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   padding: "0.417vw 0vw 0.417vw 2.083vw",
   "@media (max-width:640px)": {
     fontWeight: 300,
     fontSize: "2.813vw",
     padding: "1.563vw 0vw 1.563vw 3.125vw",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
 }))

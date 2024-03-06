@@ -26,7 +26,7 @@ export const FormSelectArrowIcon = ({ sx = {}, ...rest }: any) => {
     <KeyboardArrowDownIcon
       {...rest}
       sx={{
-        color: `${theme?.palette?.neuPalette?.hexSeventeen}`,
+        color: `${theme?.palette?.ihclPalette?.hexSeventeen}`,
         width: DesktopPxToVw(30),
         "@media (max-width:640px)": {
           width: MobilePxToVw(24),
@@ -40,7 +40,7 @@ export const StyledArrowIcon = ({ toggle, styles }: any) => {
   return (
     <KeyboardArrowDownIcon
       sx={{
-        color: `${theme?.palette?.neuPalette?.hexSeventeen}`,
+        color: `${theme?.palette?.ihclPalette?.hexSeventeen}`,
         width: DesktopPxToVw(30),
         height: DesktopPxToVw(24),
         transform: toggle ? "rotate(180deg)" : "rotate(0deg)",

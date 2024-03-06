@@ -8,7 +8,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 export const StyledChevronRight = styled(ChevronRight)(() => ({
   height: "auto",
   width: "1.2vw",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   "@media (max-width: 640px)": {
     width: "3vw",
   },
@@ -171,7 +171,7 @@ export const CardBrasserieTextUnderlineSingleContentWrapper = styled(
   "& span": {
     fontWeight: 700,
     fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(28),
-    "& span": { color: theme?.palette?.neuPalette?.hexTwo },
+    "& span": { color: theme?.palette?.ihclPalette?.hexTwo },
   },
 }))
 

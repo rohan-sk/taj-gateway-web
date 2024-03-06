@@ -10,24 +10,18 @@ const HeroBannerMultiLineTitle = (props: any) => {
   const isMobile = useMobileCheck()
   const bannerTitleColor = textColor
     ? textColor
-    : props?.aesthetic?.titleColor?.hex ? props?.aesthetic?.titleColor?.hex : theme?.palette?.neuPalette?.hexOne
-  const title = isMobile
-    ? props?.title?.mobileTitle || props?.title?.desktopTitle
-    : props?.title?.desktopTitle
+    : props?.aesthetic?.titleColor?.hex
+    ? props?.aesthetic?.titleColor?.hex
+    : theme?.palette?.ihclPalette?.hexOne
+  const title = isMobile ? props?.title?.mobileTitle || props?.title?.desktopTitle : props?.title?.desktopTitle
 
   return (
-    <Box component={props?.headingElement || "h2"} sx={{marginBlockEnd:"0vw"}}>
+    <Box component={props?.headingElement || "h2"} sx={{ marginBlockEnd: "0vw" }}>
       {title?.length > 0 &&
         title?.map((title: string, index: number) => (
           <Stack
             key={index}
-            columnGap={
-              index === 0
-                ? isMobile
-                  ? MobilePxToVw(20)
-                  : DesktopPxToVw(40)
-                : "0"
-            }
+            columnGap={index === 0 ? (isMobile ? MobilePxToVw(20) : DesktopPxToVw(40)) : "0"}
             direction={index === 0 ? "row" : "column"}
             alignItems={index === 0 ? "center" : "flex-start"}>
             {index === 0 && (

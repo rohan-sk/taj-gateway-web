@@ -212,7 +212,7 @@ const HotelPackageCard = ({
                           width: MobilePxToVw(15),
                         }}
                       />
-                      <Typography variant="m-body-xs" color={theme.palette.neuPalette.hexThirtyOne}>
+                      <Typography variant="m-body-xs" color={theme.palette.ihclPalette.hexThirtyOne}>
                         {getLowInventoryLabel(loopingData?.[0]?.availableInventory)}
                       </Typography>
                     </Stack>

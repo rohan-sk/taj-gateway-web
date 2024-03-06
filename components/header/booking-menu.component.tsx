@@ -820,7 +820,7 @@ const BookingMenu = (props: any) => {
                 "& .MuiTypography-root": {
                   fontWeight: 300,
                   fontSize: "1.237vw",
-                  color: theme?.palette?.neuPalette?.hexSeventeen,
+                  color: theme?.palette?.ihclPalette?.hexSeventeen,
                 },
               }}
             />
@@ -1024,7 +1024,7 @@ const BookingMenu = (props: any) => {
           right: "25vw",
           marginBottom: "1.563vw",
         }}
-        ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+        ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
         webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
         open={limitExceedModal}
         handleClose={handleModelClose}

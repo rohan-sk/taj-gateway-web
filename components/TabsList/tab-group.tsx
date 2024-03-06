@@ -4,12 +4,7 @@ import { Fragment, ReactElement, useContext, useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { IHCLContext } from "../../PresentationalComponents/lib/prepare-ihcl-context"
 import { PageContext } from "../../PresentationalComponents/lib/prepare-page-context"
-import {
-  MainBox,
-  StyledDivider,
-  StyledTab,
-  StyledTabs,
-} from "../tabs/styles/basic-tab"
+import { MainBox, StyledDivider, StyledTab, StyledTabs } from "../tabs/styles/basic-tab"
 interface TabGroupProps {
   items: Items[]
   itemRenderer: (item: any) => ReactElement | null
@@ -69,9 +64,8 @@ export const TabGroup = ({ items }: TabGroupProps) => {
           variant={"standard"}
           onChange={handleChange}
           TabIndicatorProps={{
-            style: { background: theme?.palette?.neuPalette?.hexTwo },
-          }}
-        >
+            style: { background: theme?.palette?.ihclPalette?.hexTwo },
+          }}>
           {items?.map((item) => (
             <StyledTab
               key={item.title}

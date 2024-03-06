@@ -219,7 +219,7 @@ const VenueSearchFilter = ({
                       fontWeight: 300,
                       fontSize: "1.25vw",
                       lineHeight: "150%",
-                      color: theme?.palette?.neuPalette?.hexSeventeen,
+                      color: theme?.palette?.ihclPalette?.hexSeventeen,
                     }}
                   />
                 </Grid>

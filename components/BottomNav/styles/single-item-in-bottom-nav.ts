@@ -6,7 +6,7 @@ export const CheckRatesMainBox = styled(Box)(() => ({
   width: "100%",
   position: "fixed",
   padding: "2.82vw 6.981vw ",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   display: "flex",
   flexDirection: "row",
   gap: "2.644vw",

@@ -196,7 +196,7 @@ const EpicureFormAddress = ({
                             disablePortal: true,
                             sx: {
                               "& .MuiTooltip-arrow": {
-                                color: theme?.palette?.neuPalette?.hexSixteen,
+                                color: theme?.palette?.ihclPalette?.hexSixteen,
                               },
                             },
                           }}
@@ -220,7 +220,7 @@ const EpicureFormAddress = ({
                           PopperProps={{
                             sx: {
                               "& .MuiTooltip-arrow": {
-                                color: theme?.palette?.neuPalette?.hexSixteen,
+                                color: theme?.palette?.ihclPalette?.hexSixteen,
                               },
                             },
                           }}
@@ -357,7 +357,7 @@ const EpicureFormAddress = ({
               "& .MuiSvgIcon-root": {
                 width: isMobile ? `${MobilePxToVw(24)}!important` : `${DesktopPxToVw(30)}!important`,
                 height: isMobile ? `${MobilePxToVw(24)}!important` : `${DesktopPxToVw(24)}!important`,
-                color: theme?.palette?.neuPalette?.hexSeventeen,
+                color: theme?.palette?.ihclPalette?.hexSeventeen,
                 opacity: 0.4,
               },
               ".MuiFormLabel-root": {
@@ -435,7 +435,7 @@ const EpicureFormAddress = ({
                 width: isMobile ? `${MobilePxToVw(24)}!important` : `${DesktopPxToVw(30)}!important`,
                 height: isMobile ? `${MobilePxToVw(24)}!important` : `${DesktopPxToVw(24)}!important`,
 
-                color: theme?.palette?.neuPalette?.hexSeventeen,
+                color: theme?.palette?.ihclPalette?.hexSeventeen,
                 opacity: 0.4,
               },
               ".MuiFormLabel-root": {

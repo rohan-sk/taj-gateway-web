@@ -94,7 +94,7 @@ const GroupWithTwoColumnCardsGrid = ({
                           fontStyle: "normal",
                           fontWeight: 300,
                           lineHeight: "150%",
-                          color: theme?.palette?.neuPalette?.hexSeventeen,
+                          color: theme?.palette?.ihclPalette?.hexSeventeen,
                         }}
                       />
                     </Box>
@@ -134,7 +134,7 @@ const GroupWithTwoColumnCardsGrid = ({
                         fontFamily: "Inter",
                         fontStyle: "normal",
                         fontWeight: 300,
-                        color: theme?.palette?.neuPalette?.hexSeventeen,
+                        color: theme?.palette?.ihclPalette?.hexSeventeen,
                       }}
                     />
                   )}

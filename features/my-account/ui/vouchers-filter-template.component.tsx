@@ -275,8 +275,8 @@ const VouchersFilterTemplate = (props: any) => {
                     cursor: "pointer",
                     color:
                       item?.title === selectedStatus
-                        ? theme?.palette?.neuPalette?.hexTwo
-                        : theme?.palette?.neuPalette?.hexSeventeen,
+                        ? theme?.palette?.ihclPalette?.hexTwo
+                        : theme?.palette?.ihclPalette?.hexSeventeen,
                   }}
                   onClick={() => {
                     setSelectedStatus(item?.title)

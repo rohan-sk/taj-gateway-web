@@ -485,7 +485,7 @@ const GuestDetailsForm = (props: any) => {
             onChange={(e: any) => handleChangeForm(e)}
             sx={{
               "& .MuiInputBase-root:before": {
-                borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+                borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
               },
             }}
           />
@@ -505,7 +505,7 @@ const GuestDetailsForm = (props: any) => {
             onChange={(e) => handleChangeForm(e)}
             sx={{
               "& .MuiInputBase-root:before": {
-                borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+                borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
               },
             }}
           />
@@ -524,7 +524,7 @@ const GuestDetailsForm = (props: any) => {
             onChange={(e) => handleChangeForm(e)}
             sx={{
               "& .MuiInputBase-root:before": {
-                borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+                borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
               },
             }}
           />
@@ -579,7 +579,7 @@ const GuestDetailsForm = (props: any) => {
                 variant={isMobile ? "m-body-xs" : "body-xs"}
                 sx={{
                   fontWeight: 400,
-                  color: theme?.palette?.neuPalette?.hexTwentySeven,
+                  color: theme?.palette?.ihclPalette?.hexTwentySeven,
                   fontSize: isMobile ? `${MobilePxToVw(16)} !important` : DesktopPxToVw(20),
                 }}>
                 {ErrorMessage?.receiverMobile}
@@ -708,7 +708,7 @@ const GuestDetailsForm = (props: any) => {
             helperText={formErrors?.[GSTNo] && formValues[GSTNo]?.length > 0 && ErrorMessage[GSTNo]}
             sx={{
               "& .MuiInputBase-root:before": {
-                borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+                borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
               },
             }}
           />
@@ -729,7 +729,7 @@ const GuestDetailsForm = (props: any) => {
               }
               sx={{
                 "& .MuiInputBase-root:before": {
-                  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+                  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
                 },
               }}
             />
@@ -765,7 +765,7 @@ const GuestDetailsForm = (props: any) => {
           <Typography
             fontWeight={400}
             textAlign={"center"}
-            color={theme?.palette?.neuPalette?.hexTwentySeven}
+            color={theme?.palette?.ihclPalette?.hexTwentySeven}
             mt={isMobile ? MobilePxToVw(24) : DesktopPxToVw(24)}
             fontSize={isMobile ? MobilePxToVw(16) : DesktopPxToVw(20)}>
             {subtitle}

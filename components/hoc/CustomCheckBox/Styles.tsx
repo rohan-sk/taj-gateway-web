@@ -6,7 +6,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 
 export const StyledCheckBox = styled(
   Checkbox,
-  transientProps
+  transientProps,
 )<{ $withBorder: boolean; $marginRight: any; $isDisableChecked: boolean }>(
   ({ $withBorder, $marginRight, $isDisableChecked }) => ({
     padding: "0.2vw",
@@ -16,8 +16,8 @@ export const StyledCheckBox = styled(
     marginRight: $marginRight ? $marginRight : "1.042vw",
     border: $withBorder
       ? $isDisableChecked
-        ? `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`
-        : `1px solid ${theme?.palette?.neuPalette?.hexTwo}`
+        ? `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`
+        : `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`
       : "",
 
     "@media (max-width: 640px)": {
@@ -25,5 +25,5 @@ export const StyledCheckBox = styled(
       width: MobilePxToVw(40),
       height: MobilePxToVw(40),
     },
-  })
+  }),
 )

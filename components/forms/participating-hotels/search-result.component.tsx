@@ -38,7 +38,7 @@ const SearchResult = ({ data }: any) => {
             <Typography
               variant={isMobile ? "m-body-s" : "body-s"}
               sx={{
-                color: theme?.palette?.neuPalette?.hexTwo,
+                color: theme?.palette?.ihclPalette?.hexTwo,
                 cursor: "pointer",
               }}>
               MORE

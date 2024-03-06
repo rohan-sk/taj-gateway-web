@@ -151,7 +151,7 @@ const HotelRoomDetailsModelComponent = (props: any) => {
                       </IconsStack>
                       <Typography
                         variant={isMobile ? "m-body-sl" : "body-s"}
-                        sx={{ color: theme?.palette?.neuPalette?.hexTwo }}>
+                        sx={{ color: theme?.palette?.ihclPalette?.hexTwo }}>
                         {item}
                       </Typography>
                     </HighlightsWrapperContainer>
@@ -222,7 +222,7 @@ const HotelRoomDetailsModelComponent = (props: any) => {
                       variant="m-body-s"
                       sx={{
                         letterSpacing: "0.1em",
-                        color: `${theme?.palette?.neuPalette?.Eleven}50 !important`,
+                        color: `${theme?.palette?.ihclPalette?.Eleven}50 !important`,
                         fontWeight: "700",
                       }}>
                       {item?.category}
@@ -243,7 +243,7 @@ const HotelRoomDetailsModelComponent = (props: any) => {
                 <Box
                   mt={MobilePxToVw(35)}
                   sx={{
-                    backgroundColor: theme?.palette?.neuPalette?.hexTwentyNine,
+                    backgroundColor: theme?.palette?.ihclPalette?.hexTwentyNine,
                     padding: ` ${MobilePxToVw(55)} ${MobilePxToVw(80)} ${MobilePxToVw(55)}`,
                   }}>
                   <AminitiesTitle>

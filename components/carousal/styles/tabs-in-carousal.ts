@@ -19,11 +19,11 @@ export const DescriptionTypo = styled(Typography)(() => ({
 
 export const StyledTitle = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $mobile: boolean }>(({ $mobile }) => ({
   textAlign: "center",
   maxWidth: $mobile ? "20.313vw" : "100%",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const DropdownItemText = styled(Typography)(() => ({
@@ -33,7 +33,7 @@ export const DropdownItemText = styled(Typography)(() => ({
   fontSize: "3.75vw",
   alignItems: "center",
   justifyContent: "center",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   boxShadow: "2px 3px 15px 2px rgba(0, 0, 0, 0.1)",
 }))
 
@@ -60,7 +60,7 @@ export const StyledTypography = styled(Typography)(() => ({
   lineHeight: "140%",
   letterSpacing: "-1.2px",
   textTransform: "uppercase",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontWeight: 400,
 }))
 

@@ -172,7 +172,7 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           // bgcolor={theme?.palette?.background?.paper}
           handleClose={handleClose}
           open={modalStore?.visibility}
@@ -191,7 +191,7 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           // bgcolor={theme?.palette?.background?.paper}
           handleClose={handleClose}
           open={modalStore?.visibility}
@@ -225,7 +225,7 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          bgcolor={theme?.palette?.neuPalette?.hexOne}
+          bgcolor={theme?.palette?.ihclPalette?.hexOne}
           ModalCloseButtonDisplay={"none"}
           handleClose={() => {
             handleCloseIcon(props?.userStore)
@@ -256,7 +256,7 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          bgcolor={theme?.palette?.neuPalette?.hexOne}
+          bgcolor={theme?.palette?.ihclPalette?.hexOne}
           ModalCloseButtonDisplay={"none"}
           handleClose={() => {
             handleCloseIcon(props?.userStore)
@@ -288,7 +288,7 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          bgcolor={theme?.palette?.neuPalette?.hexOne}
+          bgcolor={theme?.palette?.ihclPalette?.hexOne}
           ModalCloseButtonDisplay={"none"}
           handleClose={() => {
             handleCloseIcon(props?.userStore)
@@ -341,7 +341,7 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          bgcolor={theme?.palette?.neuPalette?.hexOne}
+          bgcolor={theme?.palette?.ihclPalette?.hexOne}
           handleClose={() => {
             handleCloseIcon(props?.userStore)
           }}
@@ -394,7 +394,7 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          bgcolor={theme?.palette?.neuPalette?.hexOne}
+          bgcolor={theme?.palette?.ihclPalette?.hexOne}
           ModalCloseButtonDisplay={"none"}
           ModalCloseIconHeight={"1.250vw"}
           ModalCloseIconWidth={"1.250vw"}
@@ -420,7 +420,7 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          bgcolor={theme?.palette?.neuPalette?.hexOne}
+          bgcolor={theme?.palette?.ihclPalette?.hexOne}
           handleClose={() => {
             handleCloseIcon(props?.userStore)
           }}
@@ -504,7 +504,7 @@ const renderModalChildren = (props: any) => {
           bgcolor={props?.isMobile ? theme?.palette?.background?.default : ""}
           CloseIcon={ICONS?.CLOSE_BLACK_ICON}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           ModalCloseButtonStyles={{
             top: "1vw",
             right: "16.667vw",
@@ -529,7 +529,7 @@ const renderModalChildren = (props: any) => {
           }}
           open={modalStore?.visibility}
           Component={<Enquire data={props} />}
-          bgcolor={props?.isMobile ? theme?.palette?.neuPalette?.hexOne : theme?.palette?.neuPalette?.rgbaOne}
+          bgcolor={props?.isMobile ? theme?.palette?.ihclPalette?.hexOne : theme?.palette?.ihclPalette?.rgbaOne}
           ModalCloseButtonStyles={{
             top: "0.2vw",
             right: "25.5vw",
@@ -540,7 +540,7 @@ const renderModalChildren = (props: any) => {
           mobileTop={"10.156vw !important"}
           CloseIcon={ICONS?.CLOSE_GOLD_ICON}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           tajLogoTop={0}
           showLogo={true}
         />
@@ -550,7 +550,7 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          bgcolor={theme?.palette?.neuPalette?.hexOne}
+          bgcolor={theme?.palette?.ihclPalette?.hexOne}
           handleClose={handleClose}
           open={modalStore?.visibility}
           Component={<GazeboExperience data={props} />}
@@ -562,10 +562,10 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          bgcolor={props?.isMobile ? theme?.palette?.background?.default : theme?.palette?.neuPalette?.rgbaOne}
+          bgcolor={props?.isMobile ? theme?.palette?.background?.default : theme?.palette?.ihclPalette?.rgbaOne}
           CloseIcon={ICONS?.CLOSE_GOLD_ICON}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           handleClose={handleClose}
           open={modalStore?.visibility}
           Component={<RoomDetailsModal props={props} />}
@@ -580,7 +580,7 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          bgcolor={props?.isMobile ? theme?.palette?.background?.default : theme?.palette?.neuPalette?.rgbaOne}
+          bgcolor={props?.isMobile ? theme?.palette?.background?.default : theme?.palette?.ihclPalette?.rgbaOne}
           handleClose={handleClose}
           open={modalStore?.visibility}
           Component={<VenueDetails props={props} />}
@@ -592,7 +592,7 @@ const renderModalChildren = (props: any) => {
           iconRight={`-${MobilePxToVw(5)}`}
           CloseIcon={ICONS?.CLOSE_GOLD_ICON}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
         />
       )
     case DIALOG_VARIANTS.CORE.SPA_SUCCESS_SCREEN:
@@ -606,7 +606,7 @@ const renderModalChildren = (props: any) => {
           mobileTop={"20vw"}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
           CloseIcon={ICONS?.CLOSE_GOLD_ICON}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           showLogo={props?.isMobile ? true : false}
           tajLogoTop={"0vw"}
           ModalCloseButtonStyles={{ marginBottom: "1.72vw", right: "25.5vw" }}
@@ -617,8 +617,8 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
-          bgcolor={props?.isMobile ? theme?.palette?.background?.paper : theme?.palette?.neuPalette?.rgbaOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
+          bgcolor={props?.isMobile ? theme?.palette?.background?.paper : theme?.palette?.ihclPalette?.rgbaOne}
           CloseIcon={ICONS?.CLOSE_GOLD_ICON}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
           handleClose={handleClose}
@@ -637,7 +637,7 @@ const renderModalChildren = (props: any) => {
           height={"100%"}
           bgcolor={props?.isMobile ? theme?.palette?.background?.paper : ""}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           handleClose={handleClose}
           CloseIcon={ICONS?.CLOSE_GOLD_ICON}
           open={modalStore?.visibility}
@@ -668,8 +668,8 @@ const renderModalChildren = (props: any) => {
           handleClose={handleClose}
           open={modalStore?.visibility}
           Component={<BlogCommentsModal {...props?.items?.[0]} />}
-          bgcolor={props?.isMobile ? theme?.palette?.background?.default : theme?.palette?.neuPalette?.rgbaOne}
-          ModalCloseButtonColor={isMobile ? theme?.palette?.neuPalette?.hexThree : theme?.palette?.neuPalette?.hexOne}
+          bgcolor={props?.isMobile ? theme?.palette?.background?.default : theme?.palette?.ihclPalette?.rgbaOne}
+          ModalCloseButtonColor={isMobile ? theme?.palette?.ihclPalette?.hexThree : theme?.palette?.ihclPalette?.hexOne}
           ModalCloseButtonStyles={{ right: "25.5vw", marginBottom: "1.72vw" }}
           CloseIcon={ICONS?.CLOSE_GOLD_ICON}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
@@ -731,7 +731,7 @@ const renderModalChildren = (props: any) => {
             right: "19.4vw",
             marginBottom: "1.72vw",
           }}
-          ModalCloseButtonColor={isMobile ? theme?.palette?.neuPalette?.hexThree : theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={isMobile ? theme?.palette?.ihclPalette?.hexThree : theme?.palette?.ihclPalette?.hexOne}
           CloseIcon={ICONS?.CLOSE_GOLD_ICON}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
           mobileTop={"10.625vw !important"}
@@ -752,8 +752,8 @@ const renderModalChildren = (props: any) => {
         <BasicModal
           width={"100%"}
           height={"100%"}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
-          bgcolor={props?.isMobile ? theme?.palette?.background?.default : theme?.palette?.neuPalette?.rgbaOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
+          bgcolor={props?.isMobile ? theme?.palette?.background?.default : theme?.palette?.ihclPalette?.rgbaOne}
           CloseIcon={ICONS?.CLOSE_GOLD_ICON}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
           handleClose={handleClose}
@@ -781,7 +781,7 @@ const renderModalChildren = (props: any) => {
       iconPosition={"absolute"}
       mobileTop={"10.469vw !important"}
       iconRight={"9.375vw !important"}
-      mobileColor={theme?.palette?.neuPalette?.hexOne}
+      mobileColor={theme?.palette?.ihclPalette?.hexOne}
       ModalCloseButtonStyles={{ marginBottom: "2.083vw", right: "12.5vw" }}
       Component={<GoogleMapCard />}
      />

@@ -12,10 +12,7 @@ import {
   TabsMainContainer,
 } from "../../../../components/carousal/styles/tabs-in-carousal"
 import { CommonCarouselStyles } from "../../../../components/hoc/carousal-component-styles"
-import {
-  CustomPrevArrow,
-  CustomNextArrow,
-} from "../../../../components/hoc/custom-arrows"
+import { CustomPrevArrow, CustomNextArrow } from "../../../../components/hoc/custom-arrows"
 import { urlFor } from "../../../../lib-sanity"
 import { useAppNavigation } from "../../../../utils/NavigationUtility"
 import { useMobileCheck } from "../../../../utils/isMobilView"
@@ -49,11 +46,11 @@ const CarousalTabsPlaceHolder = ({
   const navigate = useAppNavigation()
   const carouselVariant = largeVariant === "ihcl.core.group.carousel-with-tabs"
   const insertion = () => {
-    const filtered = Array.from(
-      global?.window?.document?.getElementsByClassName("slick-active")
-    )?.filter((slide: any) => {
-      slide && slide?.closest(`.${props?.[0]?.title?.replace(/" "/g, "-")}`)
-    })
+    const filtered = Array.from(global?.window?.document?.getElementsByClassName("slick-active"))?.filter(
+      (slide: any) => {
+        slide && slide?.closest(`.${props?.[0]?.title?.replace(/" "/g, "-")}`)
+      },
+    )
     for (const slide of filtered) {
       slide.classList.remove("custom-left")
       slide.classList.remove("custom-right")
@@ -62,15 +59,11 @@ const CarousalTabsPlaceHolder = ({
     filtered?.[filtered.length - 1]?.classList?.add("custom-left")
   }
   const ihclContext = useContext(IHCLContext)
-  const destinationStore = ihclContext?.getGlobalStore(
-    GLOBAL_STORES.destinationStore
-  ) as DestinationStore
+  const destinationStore = ihclContext?.getGlobalStore(GLOBAL_STORES.destinationStore) as DestinationStore
   const context = useContext(IHCLContext)
   const gaStoreData = context?.getGlobalStore(GLOBAL_STORES.gaStore) as GAStore
   const dataLayer = MemberDataLayer(UserStore, gaStoreData)
-  const [cardsData, setCardsData] = useState<{ title: string }[] | any>([
-    { title: "ALL" },
-  ])
+  const [cardsData, setCardsData] = useState<{ title: string }[] | any>([{ title: "ALL" }])
 
   const { setSelectedCountry } = destinationStore
   useEffect(() => {
@@ -78,13 +71,9 @@ const CarousalTabsPlaceHolder = ({
 
     destinationStore?.destinationData?.map(
       (data: any) =>
-        !countryData?.includes(data?.country) &&
-        data?.country !== null &&
-        countryData.push({ title: data?.country })
+        !countryData?.includes(data?.country) && data?.country !== null && countryData.push({ title: data?.country }),
     )
-    const uniqueArray = Array.from(
-      new Set(countryData.map((item) => item.title))
-    ).map((title) => {
+    const uniqueArray = Array.from(new Set(countryData.map((item) => item.title))).map((title) => {
       return {
         title: title,
       }
@@ -103,10 +92,8 @@ const CarousalTabsPlaceHolder = ({
 
   const [selectedTab, setSelectedTab] = useState<Number | any>(0)
 
-  const leftSlideIndex =
-    selectedTab === 0 ? cardsData?.length - 1 : selectedTab - 1
-  const rightSlideIndex =
-    selectedTab === cardsData?.length - 1 ? 0 : selectedTab + 1
+  const leftSlideIndex = selectedTab === 0 ? cardsData?.length - 1 : selectedTab - 1
+  const rightSlideIndex = selectedTab === cardsData?.length - 1 ? 0 : selectedTab + 1
   const itemsCount = cardsData?.length || 0
   const isNormalTabs = cardsData?.length <= 5 && cardsData?.length > 3
 
@@ -168,11 +155,7 @@ const CarousalTabsPlaceHolder = ({
       if (cardsData) setSelectedCountry(cardsData?.[selectedTab]?.title)
     } else {
       if (cardsData)
-        setSelectedCountry(
-          cardsData?.[
-            cardsData?.findIndex((item: any) => selectedTab === item?.title)
-          ]?.title || ""
-        )
+        setSelectedCountry(cardsData?.[cardsData?.findIndex((item: any) => selectedTab === item?.title)]?.title || "")
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedTab, cardsData])
@@ -238,11 +221,7 @@ const CarousalTabsPlaceHolder = ({
         <Box
           className={props?.[0]?.title?.replace(/ /g, "-")}
           sx={{
-            padding: isMobile
-              ? "0vw "
-              : props?.length < 2
-              ? "0vw"
-              : "0vw 12.5vw",
+            padding: isMobile ? "0vw " : props?.length < 2 ? "0vw" : "0vw 12.5vw",
             width: "100%",
             display: "flex",
             flexDirection: "column",
@@ -271,18 +250,18 @@ const CarousalTabsPlaceHolder = ({
                 },
                 ".slick-center .centerText": {
                   textAlign: "center",
-                  color: theme?.palette?.neuPalette?.hexTwo,
+                  color: theme?.palette?.ihclPalette?.hexTwo,
                   fontSize: isMobile ? "3.75vw" : "1.25vw",
                 },
                 ".slick-center .centerImg": {
-                  color: theme?.palette?.neuPalette?.hexTwo,
+                  color: theme?.palette?.ihclPalette?.hexTwo,
                   filter: `opacity(1) drop-shadow(0 0 0 #eda805)`,
                 },
                 ".slick-center .centeredBox": {
                   width: "100%",
                   padding: isMobile ? "3.125vw 0vw" : "",
                   borderRight: "none",
-                  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+                  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
                   boxShadow: "-6px 10px 24px rgba(0, 0, 0, 0.1)",
                 },
               }}>
@@ -292,11 +271,9 @@ const CarousalTabsPlaceHolder = ({
                     key={index}
                     sx={{
                       minHeight: "6.46vw",
-                      border: `1px solid ${theme?.palette?.neuPalette?.hexNineteen}`,
+                      border: `1px solid ${theme?.palette?.ihclPalette?.hexNineteen}`,
                       borderWidth: isNormalTabs
-                        ? index === itemsCount - 1 ||
-                          index === selectedTab ||
-                          index === leftSlideIndex
+                        ? index === itemsCount - 1 || index === selectedTab || index === leftSlideIndex
                           ? "0vw"
                           : "0px 1px 0px 0px"
                         : selectedTab === index
@@ -309,8 +286,7 @@ const CarousalTabsPlaceHolder = ({
                     }}>
                     <Box
                       onClick={() => {
-                        item?.handleProperty &&
-                          item?.handleProperty(selectedTab)
+                        item?.handleProperty && item?.handleProperty(selectedTab)
                       }}
                       className="centeredBox"
                       sx={{
@@ -327,13 +303,7 @@ const CarousalTabsPlaceHolder = ({
                           height={item?.description ? "100%" : "40px"}
                           component={"img"}
                           className="centerImg"
-                          mb={
-                            isMobile
-                              ? "0vw"
-                              : item?.title || item?.description
-                              ? "1.667vw"
-                              : "0"
-                          }
+                          mb={isMobile ? "0vw" : item?.title || item?.description ? "1.667vw" : "0"}
                           sx={{ cursor: "pointer" }}
                           src={urlFor(item?.logo?.asset?._ref).url()}
                           onClick={() => navigate(item?.url)}
@@ -356,11 +326,7 @@ const CarousalTabsPlaceHolder = ({
                           {item?.title}
                         </StyledTitle>
                       )}
-                      {item?.description && (
-                        <DescriptionTypo variant="body-xs">
-                          {item?.description}
-                        </DescriptionTypo>
-                      )}
+                      {item?.description && <DescriptionTypo variant="body-xs">{item?.description}</DescriptionTypo>}
                     </Box>
                   </TabsMainContainer>
                 ))}

@@ -1,25 +1,14 @@
-import {
-  Box,
-  FormHelperText,
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  TextField,
-  styled,
-} from "@mui/material"
+import { Box, FormHelperText, Grid, InputLabel, MenuItem, Select, TextField, styled } from "@mui/material"
 import { theme } from "../../../lib/theme"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 import { transientProps } from "../../../utils/transientProps"
 
-export const MainGridWrapper = styled(Grid)<{ $marginProp?: boolean }>(
-  ({ $marginProp }) => ({
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    marginBottom: $marginProp ? "1vw" : "2vw",
-  })
-)
+export const MainGridWrapper = styled(Grid)<{ $marginProp?: boolean }>(({ $marginProp }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  marginBottom: $marginProp ? "1vw" : "2vw",
+}))
 export const CountrySelect = styled(Select)(() => ({
   width: "23.594vw",
   marginRight: "2vw",
@@ -121,7 +110,7 @@ export const DateTextField = styled(TextField)(() => ({
     },
   },
   "&  .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexTwentyOne} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexTwentyOne} !important`,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "2.75vw",
@@ -129,7 +118,7 @@ export const DateTextField = styled(TextField)(() => ({
   },
   "& .MuiInputLabel-root": {
     textOverflow: "ellipsis !important",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
     opacity: 1,
     fontSize: DesktopPxToVw(24),
@@ -143,7 +132,7 @@ export const DateTextField = styled(TextField)(() => ({
       fontWeight: 300,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         fontSize: "3.75vw",
         lineHeight: "4.8vw",
@@ -154,7 +143,7 @@ export const DateTextField = styled(TextField)(() => ({
 
 export const FormErrors = styled(FormHelperText)(() => ({
   fontFamily: "Inter",
-  color: `${theme?.palette?.neuPalette?.hexThirtyTwo}!important`,
+  color: `${theme?.palette?.ihclPalette?.hexThirtyTwo}!important`,
   fontSize: DesktopPxToVw(18),
   "@media (max-width: 640px)": {
     fontSize: "2.75vw",
@@ -170,7 +159,7 @@ export const MenuItems = styled(MenuItem)(() => ({
 }))
 
 export const StyledInputLabel = styled(InputLabel)(() => ({
-  color: theme?.palette?.neuPalette?.hexEleven,
+  color: theme?.palette?.ihclPalette?.hexEleven,
   fontFamily: "Inter",
   fontWeight: 300,
   fontSize: "1.35vw",
@@ -203,7 +192,7 @@ export const RegisterCalenderWrapper = styled(Box)(() => ({
 
 export const MobileStayDateContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isOpen?: boolean; $isDouble?: any }>(({ $isOpen, $isDouble }) => ({
   minWidth: DesktopPxToVw(371),
   "@media (max-width:640px)": {
@@ -260,7 +249,7 @@ export const InputMobileTextField = styled(TextField)(() => ({
       transform: "scale(1) translate(0, 0.4vw)",
     },
     "& .Mui-error": {
-      color: theme?.palette?.neuPalette?.hexTwentyOne,
+      color: theme?.palette?.ihclPalette?.hexTwentyOne,
     },
   },
   "&, & input": {
@@ -273,7 +262,7 @@ export const InputMobileTextField = styled(TextField)(() => ({
     fontFamily: "Inter",
     fontWeight: 300,
     fontSize: "1.25vw",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     opacity: 1,
     "@media (max-width:640px)": {
       fontFamily: "Inter",
@@ -284,7 +273,7 @@ export const InputMobileTextField = styled(TextField)(() => ({
   "& .MuiFormHelperText-root": {
     fontFamily: "Inter !important",
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: `${DesktopPxToVw(18)}!important`,
     "@media (max-width:640px)": {
       fontSize: "2.8vw!important",

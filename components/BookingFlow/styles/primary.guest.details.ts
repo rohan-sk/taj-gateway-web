@@ -17,7 +17,7 @@ export const InputTextField = styled(TextField)<{ $width?: string }>(({ $width }
     fontStyle: "normal",
     fontFamily: "Inter",
     fontSize: DesktopPxToVw(24),
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
 
   input: {
@@ -63,7 +63,7 @@ export const InputTextField = styled(TextField)<{ $width?: string }>(({ $width }
 
 export const MainBox = styled(Box)(() => ({
   padding: "2.08vw 3.125vw",
-  border: `0.05vw solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `0.05vw solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
 
   "@media (max-width: 640px)": {
     padding: "5vw",

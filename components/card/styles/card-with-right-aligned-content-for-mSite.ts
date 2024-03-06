@@ -5,13 +5,13 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 
 export const ContentBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isActionAvailable?: boolean }>(({ $isActionAvailable }) => ({
   width: "96%",
   position: "relative",
   float: "right",
   marginTop: MobilePxToVw(-50),
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
   boxShadow: "-6px 10px 24px 0px rgba(0, 0, 0, 0.1)",
   padding: "5.469vw", // this padding took from global template
   "@media (max-width:640px)": {
@@ -37,7 +37,7 @@ export const ChipTextTextMainBox = styled(Box)(() => ({
 
 export const ChipTextTextBox = styled(Box)(() => ({
   padding: "1.25vw 2.5vw",
-  border: `${DesktopPxToVw(1)} solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `${DesktopPxToVw(1)} solid ${theme?.palette?.ihclPalette?.hexTwo}`,
 }))
 
 export const HighlightTextBox = styled(Box)(() => ({
@@ -98,7 +98,7 @@ export const ActionItemsInnerBox = styled(Box)(() => ({
 
 export const RightAlignedTitleBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean; $ctaLabel: string }>(({ $isMobile, $ctaLabel }) => ({
   position: "relative",
   marginBottom: $ctaLabel ? "6.2vw" : "",
@@ -106,7 +106,7 @@ export const RightAlignedTitleBox = styled(
 
 export const RightAlignedTitleCtaLinkBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean; $ctaLabel: boolean }>(({ $isMobile, $ctaLabel }) => ({
   position: "relative",
   marginTop: $isMobile ? MobilePxToVw(-56) : DesktopPxToVw(-52),
@@ -134,7 +134,7 @@ export const ParameterMapWrappingBox = styled(Box)(() => ({
 
 export const MarginTopDescriptionBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $haveHighlights?: boolean }>(({ $haveHighlights }) => ({
   marginTop: "2.34vw",
   "@media (max-width:640px)": {

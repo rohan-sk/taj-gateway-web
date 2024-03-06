@@ -11,17 +11,17 @@ export const MobileDropDownMenuBox = styled(Box)(() => ({
 
 export const ParentBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $height: string }>(({ $height }) => ({
   // height: "62.33vw",   as per VD
   height: $height || "100vh",
-  width:"100vw",
+  width: "100vw",
   overflowY: "auto",
   overscrollBehavior: "contain",
-  backgroundColor:theme?.palette?.neuPalette?.hexOne,
-  display:"flex",
-  flexDirection:"column",
-  justifyContent:"space-between"
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
 }))
 
 export const StyledDivider = styled(Divider)(() => ({
@@ -34,14 +34,17 @@ export const StyledDivider = styled(Divider)(() => ({
 
 export const WhiteBgColorBox = styled(Box)(() => ({
   opacity: 0.97,
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
 }))
 
-export const VerticalAlignmentBox = styled(Box,transientProps)<{$isDropDown?:boolean}>(({$isDropDown}) => ({
+export const VerticalAlignmentBox = styled(
+  Box,
+  transientProps,
+)<{ $isDropDown?: boolean }>(({ $isDropDown }) => ({
   display: "flex",
-  flexDirection: $isDropDown?"row":"column",
-  alignItems:$isDropDown?"center":"unset",
-  gap:$isDropDown?"0.938vw":"unset"
+  flexDirection: $isDropDown ? "row" : "column",
+  alignItems: $isDropDown ? "center" : "unset",
+  gap: $isDropDown ? "0.938vw" : "unset",
 }))
 
 export const YellowBgColorBox = styled(Box)(() => ({
@@ -49,8 +52,8 @@ export const YellowBgColorBox = styled(Box)(() => ({
   textAlign: "center",
   padding: "8.9vw 0vw",
   flexDirection: "column",
-  color: theme?.palette?.neuPalette?.hexOne,
-  background: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexTwo,
   "@media (max-width: 640px)": {
     padding: "7.188vw 0vw",
   },
@@ -63,19 +66,20 @@ export const ActionItemBox = styled(Box)(() => ({
   justifyContent: "center",
 }))
 
-export const StyledChevronDown = styled(ChevronRight,
-  transientProps
+export const StyledChevronDown = styled(
+  ChevronRight,
+  transientProps,
 )<{ $openRewards: boolean }>(({ $openRewards }) => ({
   height: "auto",
   width: "6.125vw",
-  transition:" all 0.3s linear",
+  transition: " all 0.3s linear",
   transform: $openRewards ? "rotate(270deg)" : "rotate(90deg)",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const StyledChevronLeft = styled(ChevronRight)(() => ({
   height: "auto",
   width: "4.781vw",
   transform: "rotate(0deg)",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))

@@ -40,7 +40,7 @@ const CenterCardCarousal = ({ props, variant, aesthetic }: CenterCardCarousalPro
     slidesToShow: 1,
     slidesToScroll: 1,
   }
-  const backgroundColor = aesthetic?.backgroundColor?.hex === theme?.palette?.neuPalette?.hexThree?.toLowerCase()
+  const backgroundColor = aesthetic?.backgroundColor?.hex === theme?.palette?.ihclPalette?.hexThree?.toLowerCase()
   const navigate = useAppNavigation()
   const isMobile = useMobileCheck()
   const { getOptimizeImageUrl } = useImageUtility()
@@ -58,8 +58,8 @@ const CenterCardCarousal = ({ props, variant, aesthetic }: CenterCardCarousalPro
                 sx={{
                   position: "relative",
                   borderRight: isMobileVariant
-                    ? `1px solid ${theme?.palette?.neuPalette?.hexThree}`
-                    : `2px solid ${theme?.palette?.neuPalette?.hexOne}`,
+                    ? `1px solid ${theme?.palette?.ihclPalette?.hexThree}`
+                    : `2px solid ${theme?.palette?.ihclPalette?.hexOne}`,
                 }}>
                 <Box
                   sx={{
@@ -89,7 +89,7 @@ const CenterCardCarousal = ({ props, variant, aesthetic }: CenterCardCarousalPro
                       textAlign={"center"}
                       variant="m-heading-s"
                       sx={{
-                        color: theme?.palette?.neuPalette?.hexOne,
+                        color: theme?.palette?.ihclPalette?.hexOne,
                         zIndex: 2,
                       }}>
                       {item?.title}
@@ -99,7 +99,7 @@ const CenterCardCarousal = ({ props, variant, aesthetic }: CenterCardCarousalPro
                     <DescriptionTypo
                       variant="m-body-sl"
                       sx={{
-                        color: theme?.palette?.neuPalette?.hexOne,
+                        color: theme?.palette?.ihclPalette?.hexOne,
                         zIndex: 2,
                       }}>
                       {item?.description}

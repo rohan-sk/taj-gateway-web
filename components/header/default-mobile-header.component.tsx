@@ -321,8 +321,8 @@ const MobileHeader = (headerData: any) => {
           background:
             showHamBurgerMenu || scrollDowned
               ? isAccountFlow
-                ? theme?.palette?.neuPalette?.hexTwentyNine
-                : theme?.palette?.neuPalette?.hexTwentyNine
+                ? theme?.palette?.ihclPalette?.hexTwentyNine
+                : theme?.palette?.ihclPalette?.hexTwentyNine
               : "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(95, 95, 95, 0) 100%)",
         }}>
         {primaryLogo && secondaryLogo && (
@@ -379,8 +379,8 @@ const MobileHeader = (headerData: any) => {
                           marginRight: showHamBurgerMenu ? MobilePxToVw(51) : MobilePxToVw(42),
                           color:
                             showHamBurgerMenu || scrollDowned
-                              ? theme?.palette?.neuPalette?.hexTwo
-                              : theme?.palette?.neuPalette?.hexOne,
+                              ? theme?.palette?.ihclPalette?.hexTwo
+                              : theme?.palette?.ihclPalette?.hexOne,
                           fontSize: "3.438vw",
                         }}>
                         {LOGIN_CONSTANTS?.LOGIN_TITLE}
@@ -408,8 +408,8 @@ const MobileHeader = (headerData: any) => {
                   width: showHamBurgerMenu ? MobilePxToVw(40) : MobilePxToVw(54),
                   color:
                     scrollDowned || showHamBurgerMenu
-                      ? theme?.palette?.neuPalette?.hexTwo
-                      : theme?.palette?.neuPalette?.hexOne,
+                      ? theme?.palette?.ihclPalette?.hexTwo
+                      : theme?.palette?.ihclPalette?.hexOne,
                   marginRight: showHamBurgerMenu ? MobilePxToVw(59) : MobilePxToVw(53),
                 }}
                 onClick={() => {

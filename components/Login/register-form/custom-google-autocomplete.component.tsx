@@ -8,11 +8,7 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete"
 import { geocodeByAddress, getLatLng } from "react-google-places-autocomplete"
 import { AutocompleteWrapper } from "../Styles/custom-google-autocomplete.styles"
 
-const CustomGoogleAutocomplete = ({
-  mapDetails,
-  setMapDetails,
-  generateAddress,
-}: any) => {
+const CustomGoogleAutocomplete = ({ mapDetails, setMapDetails, generateAddress }: any) => {
   const isMobile = useMobileCheck()
   const googleAutoComplete: any = useRef()
 
@@ -81,18 +77,18 @@ const CustomGoogleAutocomplete = ({
                   opacity: 1,
                   fontWeight: "300 !important",
                   fontSize: isMobile ? MobilePxToVw(26) : DesktopPxToVw(24),
-                  color: theme?.palette?.neuPalette?.hexSeventeen,
+                  color: theme?.palette?.ihclPalette?.hexSeventeen,
                 }),
                 control: (provided: any) => ({
                   ...provided,
                   border: "none",
                   borderRadius: "none",
-                  borderColor: theme?.palette?.neuPalette?.hexEleven,
+                  borderColor: theme?.palette?.ihclPalette?.hexEleven,
                   boxShadow: "none",
                   boxShadowBottom: "none",
                   maxWidth: isMobile ? MobilePxToVw(478) : DesktopPxToVw(667),
                   "&:hover": {
-                    borderColor: theme?.palette?.neuPalette?.hexEleven,
+                    borderColor: theme?.palette?.ihclPalette?.hexEleven,
                   },
                 }),
               },

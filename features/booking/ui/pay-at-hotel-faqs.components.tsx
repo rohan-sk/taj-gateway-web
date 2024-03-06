@@ -5,14 +5,7 @@ import { useMobileCheck } from "../../../utils/isMobilView"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import { PortableText } from "../../../lib/portable-text-serializers"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
-import {
-  Box,
-  Divider,
-  Typography,
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-} from "@mui/material"
+import { Box, Divider, Typography, Accordion, AccordionDetails, AccordionSummary } from "@mui/material"
 
 const PayAtHotelFaqs = (props: any) => {
   const isMobile = useMobileCheck()
@@ -48,9 +41,7 @@ const PayAtHotelFaqs = (props: any) => {
               flexGrow: isMobile ? "1" : "inherit",
             },
           }}>
-          <Typography variant={isMobile ? "m-heading-xs" : "heading-xs"}>
-            {props?.[0]?.title}
-          </Typography>
+          <Typography variant={isMobile ? "m-heading-xs" : "heading-xs"}>{props?.[0]?.title}</Typography>
         </AccordionSummary>
         <AccordionDetails sx={{ padding: 0 }}>
           {props?.[0]?.items?.map((item: any, index: number) => (
@@ -75,12 +66,8 @@ const PayAtHotelFaqs = (props: any) => {
                   sx={{
                     minHeight: 0,
                     padding: isMobile
-                      ? `${MobilePxToVw(32)} ${MobilePxToVw(0)} ${MobilePxToVw(
-                          25
-                        )}`
-                      : `${DesktopPxToVw(32)} ${DesktopPxToVw(
-                          20
-                        )} ${DesktopPxToVw(25)}`,
+                      ? `${MobilePxToVw(32)} ${MobilePxToVw(0)} ${MobilePxToVw(25)}`
+                      : `${DesktopPxToVw(32)} ${DesktopPxToVw(20)} ${DesktopPxToVw(25)}`,
                     "& .MuiAccordionSummary-content": {
                       margin: 0,
                     },
@@ -88,9 +75,7 @@ const PayAtHotelFaqs = (props: any) => {
                   <Typography
                     variant={isMobile ? "m-heading-xxs" : "heading-xs"}
                     sx={{
-                      fontSize: isMobile
-                        ? `${MobilePxToVw(20)}`
-                        : `${DesktopPxToVw(20)}`,
+                      fontSize: isMobile ? `${MobilePxToVw(20)}` : `${DesktopPxToVw(20)}`,
                     }}>
                     {item?.question}
                   </Typography>
@@ -98,12 +83,8 @@ const PayAtHotelFaqs = (props: any) => {
                 <AccordionDetails
                   sx={{
                     padding: isMobile
-                      ? `${MobilePxToVw(14)} ${MobilePxToVw(20)} ${MobilePxToVw(
-                          40
-                        )}`
-                      : `${DesktopPxToVw(14)} ${DesktopPxToVw(
-                          20
-                        )} ${DesktopPxToVw(40)}`,
+                      ? `${MobilePxToVw(14)} ${MobilePxToVw(20)} ${MobilePxToVw(40)}`
+                      : `${DesktopPxToVw(14)} ${DesktopPxToVw(20)} ${DesktopPxToVw(40)}`,
                   }}>
                   <PortableText blocks={item?.answer} />
                 </AccordionDetails>
@@ -112,7 +93,7 @@ const PayAtHotelFaqs = (props: any) => {
                 sx={{
                   height: DesktopPxToVw(1),
                   m: `${DesktopPxToVw(0)} ${DesktopPxToVw(20)}`,
-                  background: theme?.palette?.neuPalette?.hexSixteen,
+                  background: theme?.palette?.ihclPalette?.hexSixteen,
                 }}
               />
             </>
@@ -122,9 +103,7 @@ const PayAtHotelFaqs = (props: any) => {
               sx={{
                 padding: isMobile
                   ? `${MobilePxToVw(32)} ${MobilePxToVw(0)} ${MobilePxToVw(25)}`
-                  : `${DesktopPxToVw(32)} ${DesktopPxToVw(20)} ${DesktopPxToVw(
-                      25
-                    )}`,
+                  : `${DesktopPxToVw(32)} ${DesktopPxToVw(20)} ${DesktopPxToVw(25)}`,
               }}>
               <PortableText blocks={props?.[0]?.content} />
             </Box>

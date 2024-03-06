@@ -12,5 +12,5 @@ export const FilterSelect = styled(Select)(() => ({
 export const StyledInputLabel = styled(InputLabel)(() => ({
   fontWeight: 300,
   fontSize: "0.938vw",
-  color: theme?.palette?.neuPalette?.hexEleven,
+  color: theme?.palette?.ihclPalette?.hexEleven,
 }))

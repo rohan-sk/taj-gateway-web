@@ -17,7 +17,7 @@ const ContinueToConfirm = (props: any) => {
   const context: any = useContext(IHCLContext)
 
   const { orderDetails, userEnteredPromoCode } = context?.getGlobalStore(
-    GLOBAL_STORES?.bookingFlowStore
+    GLOBAL_STORES?.bookingFlowStore,
   ) as BookingFlowGlobalStore
   const isCorporate = userEnteredPromoCode?.title?.toLowerCase()?.includes("corporate")
 
@@ -28,7 +28,7 @@ const ContinueToConfirm = (props: any) => {
         display: "flex",
         justifyContent: "center",
         padding: isMobile ? MobilePxToVw(40) : DesktopPxToVw(30),
-        border: isCorporate ? "unset" : `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+        border: isCorporate ? "unset" : `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
         margin: isMobile ? MobilePxToVw(30) : `${DesktopPxToVw(30)} 0 0 0`,
       }}>
       <Button

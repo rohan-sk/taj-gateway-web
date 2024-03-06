@@ -167,11 +167,11 @@ const MobileHeroBannerEpicure = ({
               ".slick-dots li.slick-active button": {
                 height: MobilePxToVw(2),
                 width: checkScreenWidth / carousalItemCount,
-                backgroundColor: `${theme?.palette?.neuPalette?.hexOne} !important`,
+                backgroundColor: `${theme?.palette?.ihclPalette?.hexOne} !important`,
               },
               ".slick-dots li button": {
                 opacity: 0.5,
-                backgroundColor: theme?.palette?.neuPalette?.hexOne,
+                backgroundColor: theme?.palette?.ihclPalette?.hexOne,
                 width: "100%",
               },
             }}>
@@ -253,7 +253,7 @@ const MobileHeroBannerEpicure = ({
               <HeroBannerMultiLineTitle title={sliderTitle} headingElement={headingElement} aesthetic={aesthetic} />
             ) : (
               <Typography
-                color={theme?.palette?.neuPalette?.hexOne}
+                color={theme?.palette?.ihclPalette?.hexOne}
                 lineHeight={"120%"}
                 whiteSpace={"nowrap"}
                 component={headingElement || "h2"}
@@ -279,7 +279,7 @@ const MobileHeroBannerEpicure = ({
               src={ICONS?.BANNER_SCROLL_DOWN}
               alt="arrow"
               sx={{
-                color: theme?.palette?.neuPalette?.hexOne,
+                color: theme?.palette?.ihclPalette?.hexOne,
                 height: "3.7vw",
                 width: "3.593vw",
                 objectFit: "contain",

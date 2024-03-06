@@ -47,7 +47,7 @@ export const InputTextFieldEpicure = styled(TextField)(() => ({
       transform: "scale(1) translate(0, 0vw)",
     },
     "& .Mui-error": {
-      color: theme?.palette?.neuPalette?.hexThirtyTwo,
+      color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     },
   },
   "&, & input": {
@@ -61,7 +61,7 @@ export const InputTextFieldEpicure = styled(TextField)(() => ({
     fontFamily: "Inter",
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     opacity: 1,
     "@media (max-width:640px)": {
       fontFamily: "Inter",
@@ -72,7 +72,7 @@ export const InputTextFieldEpicure = styled(TextField)(() => ({
   "& .MuiFormHelperText-root": {
     fontFamily: "Inter !important",
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexThirtyTwo,
+    color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     fontSize: `${DesktopPxToVw(16)}!important`,
     "@media (max-width:640px)": {
       fontSize: "2.8vw!important",
@@ -137,7 +137,7 @@ export const ThreeRowGrid = styled(Box)(() => ({
 }))
 
 export const StyledInputLabel = styled(InputLabel)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontSize: DesktopPxToVw(24),
   fontWeight: 300,
   "@media (max-width: 640px)": {
@@ -145,7 +145,7 @@ export const StyledInputLabel = styled(InputLabel)(() => ({
   },
 }))
 export const EpicureCartFormLabel = styled(InputLabel)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontSize: DesktopPxToVw(18),
   fontWeight: 300,
   "@media (max-width: 640px)": {
@@ -204,7 +204,7 @@ export const StyledTextField = styled(TextField)(() => ({
   "& label": {
     transform: "scale(1) translate(0, 0em)",
     "&.Mui-error": {
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
   "&, & input": {
@@ -218,7 +218,7 @@ export const StyledTextField = styled(TextField)(() => ({
     fontFamily: "Inter",
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     opacity: 1,
     "@media (max-width:640px)": {
       fontFamily: "Inter",
@@ -229,7 +229,7 @@ export const StyledTextField = styled(TextField)(() => ({
   "& .MuiFormHelperText-root": {
     fontFamily: "Inter",
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexTen,
+    color: theme?.palette?.ihclPalette?.hexTen,
     fontSize: `${DesktopPxToVw(18)}!important`,
     "@media (max-width:640px)": {
       fontSize: "2.8vw!important",
@@ -248,7 +248,7 @@ export const StyledTextField = styled(TextField)(() => ({
 }))
 
 export const InputTextField = styled(TextField)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   width: "22.96vw",
   fontSize: DesktopPxToVw(18),
   "& .MuiInput-input": {
@@ -256,7 +256,7 @@ export const InputTextField = styled(TextField)(() => ({
     "@media (max-width: 640px)": {
       width: "74.375vw",
       fontSize: "3.750vw",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: "300 !important",
     },
   },
@@ -267,7 +267,7 @@ export const InputTextField = styled(TextField)(() => ({
   },
   "&  .MuiFormHelperText-root": {
     fontSize: DesktopPxToVw(18),
-    color: theme?.palette?.neuPalette?.hexTen,
+    color: theme?.palette?.ihclPalette?.hexTen,
     "@media (max-width: 640px)": {
       fontSize: "2.750vw",
     },
@@ -277,7 +277,7 @@ export const InputTextField = styled(TextField)(() => ({
     fontWeight: 300,
     opacity: 1,
     fontSize: DesktopPxToVw(24),
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     lineHeight: "1vw !important",
     "@media (max-width: 640px)": {
       lineHeight: "3.5vw !important",
@@ -290,7 +290,7 @@ export const InputTextField = styled(TextField)(() => ({
       fontWeight: 300,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         lineHight: "2vw",
         fontSize: "3.750vw",
@@ -304,7 +304,7 @@ export const InputTextField = styled(TextField)(() => ({
 export const MobileTextField = styled(TextField)(() => ({
   width: "17.6vw",
   marginRight: "2vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontSize: DesktopPxToVw(18),
   "@media (max-width:640px)": {
     marginRight: "0vw",
@@ -313,7 +313,7 @@ export const MobileTextField = styled(TextField)(() => ({
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "3.750vw",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
   "& .Mui-disabled": {
@@ -338,7 +338,7 @@ export const MobileTextField = styled(TextField)(() => ({
     fontWeight: 300,
     opacity: 1,
     fontSize: DesktopPxToVw(24),
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     "@media (max-width: 640px)": {
       lineHeight: "4vw",
       fontSize: "3.750vw",
@@ -352,7 +352,7 @@ export const MobileTextField = styled(TextField)(() => ({
       fontWeight: 300,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         lineHight: "4vw",
         fontSize: "3.750vw",
@@ -374,7 +374,7 @@ export const CheckBoxWrapper = styled(Box)(() => ({
 
 export const MobileNumberWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $marginProp?: boolean }>(({ $marginProp }) => ({
   display: "flex",
   alignItems: "self-end",
@@ -391,7 +391,7 @@ export const StyledWrapper = styled(Box)(() => ({
 
 export const StackData = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   justifyContent: "center",
   flexDirection: "row",
@@ -405,7 +405,7 @@ export const BoxCustom = styled(Box)(() => ({
 
 export const StackDataStyle = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   gap: $isMobile ? "9vw" : "2vw",
   padding: "5vw",
@@ -449,7 +449,7 @@ export const AddOnMainGrid = styled(Grid)(() => ({
 }))
 
 export const ErrorMessageTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexThirtyTwo,
+  color: theme?.palette?.ihclPalette?.hexThirtyTwo,
   fontSize: DesktopPxToVw(16),
   fontWeight: 300,
   "@media (max-width: 640px)": {
@@ -709,19 +709,19 @@ export const TentativeDateContainer = styled(Box)(() => ({
 
 export const DynamicStack = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   justifyContent: "space-between",
   alignItems: "center",
   gap: $isMobile ? MobilePxToVw(10) : "unset",
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   padding: $isMobile ? MobilePxToVw(20) : DesktopPxToVw(20),
   flexDirection: $isMobile ? "column" : "row",
 }))
 
 export const RowStack = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   flexDirection: "row",
   columnGap: $isMobile ? MobilePxToVw(5) : DesktopPxToVw(5),
@@ -729,7 +729,7 @@ export const RowStack = styled(
 
 export const AddOnFormControl = styled(
   FormControl,
-  transientProps
+  transientProps,
 )<{ $componentBackgroundColor?: string }>(({ $componentBackgroundColor }) => ({
   textAlign: "start",
   fontFamily: "Inter",

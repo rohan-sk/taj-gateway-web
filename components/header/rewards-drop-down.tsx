@@ -45,9 +45,9 @@ const RewardsDropDown = ({
                 title={bookingData?.cta?.title}
                 variant={bookingData?.cta?.variant}
                 navigationType={bookingData?.cta?.urlType}
-                linkStyles={{ color: theme?.palette?.neuPalette?.hexOne }}
+                linkStyles={{ color: theme?.palette?.ihclPalette?.hexOne }}
                 iconStyles={{
-                  color: `${theme?.palette?.neuPalette?.hexOne} !important`,
+                  color: `${theme?.palette?.ihclPalette?.hexOne} !important`,
                 }}
               />
             </MegaMenuMoreContentBox>
@@ -92,7 +92,7 @@ const RewardsDropDown = ({
                     variant="body-ml"
                     pt={DesktopPxToVw(30)}
                     sx={{
-                      color: theme?.palette?.neuPalette?.hexTwo,
+                      color: theme?.palette?.ihclPalette?.hexTwo,
                       textAlign: "center",
                     }}>
                     {item?.title}

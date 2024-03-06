@@ -772,7 +772,7 @@ function CardWithDynamicFormOffers({
                         <KeyboardArrowDown
                           {...props}
                           sx={{
-                            color: theme?.palette?.neuPalette?.hexSeventeen,
+                            color: theme?.palette?.ihclPalette?.hexSeventeen,
                             fontWeight: 300,
                           }}
                         />
@@ -985,7 +985,7 @@ function CardWithDynamicFormOffers({
                           <Typography
                             whiteSpace={"nowrap"}
                             onClick={() => setSelectedType("check_in")}
-                            color={theme.palette.neuPalette.Seventeen}
+                            color={theme.palette.ihclPalette.Seventeen}
                             variant={isMobile ? "m-body-l" : "body-l"}>
                             {date?.[0] ? formatDateWithMON(date?.[0]) : "Check in"}
                           </Typography>
@@ -993,7 +993,7 @@ function CardWithDynamicFormOffers({
                           <Typography
                             whiteSpace={"nowrap"}
                             onClick={() => setSelectedType("check_out")}
-                            color={theme.palette.neuPalette.hexSeventeen}
+                            color={theme.palette.ihclPalette.hexSeventeen}
                             variant={isMobile ? "m-body-l" : "body-l"}>
                             {date?.[1] ? formatDateWithMON(date?.[1]) : "Check out"}
                           </Typography>
@@ -1113,7 +1113,7 @@ function CardWithDynamicFormOffers({
           open={openDateExceededModal}
           handleClose={handleModelClose}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           ModalCloseButtonStyles={{
             right: "25vw",
             marginBottom: "1.563vw",

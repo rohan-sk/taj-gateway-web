@@ -23,7 +23,9 @@ const FeedbackTabs = ({ props }: any) => {
     if (router?.asPath?.includes("#careTajness")) {
       const element = document?.getElementById("feedback-form")
       if (element) {
-        const offset = isMobile ? element?.getBoundingClientRect()?.height : (-element?.getBoundingClientRect()?.height/2)
+        const offset = isMobile
+          ? element?.getBoundingClientRect()?.height
+          : -element?.getBoundingClientRect()?.height / 2
         window?.scrollTo({
           top: element?.getBoundingClientRect()?.top + offset,
           behavior: "smooth",
@@ -39,7 +41,7 @@ const FeedbackTabs = ({ props }: any) => {
         sx={{
           display: "flex",
           width: "100%",
-          borderBottom: isMobile ? "" : `1.5px solid ${theme?.palette?.neuPalette?.hexNineteen}`,
+          borderBottom: isMobile ? "" : `1.5px solid ${theme?.palette?.ihclPalette?.hexNineteen}`,
           justifyContent: "center",
         }}>
         {isMobile ? (
@@ -62,7 +64,7 @@ const FeedbackTabs = ({ props }: any) => {
                 IconComponent={() => (
                   <KeyboardArrowDown
                     sx={{
-                      color: theme?.palette?.neuPalette?.hexSeventeen,
+                      color: theme?.palette?.ihclPalette?.hexSeventeen,
                       fontWeight: 300,
                     }}
                   />
@@ -80,7 +82,7 @@ const FeedbackTabs = ({ props }: any) => {
             value={value}
             onChange={handleChange}
             TabIndicatorProps={{
-              style: { background: theme?.palette?.neuPalette?.hexTwo },
+              style: { background: theme?.palette?.ihclPalette?.hexTwo },
             }}>
             {props?.tabs?.map((item: any, index: number) => (
               <StyledTab key={index} label={item?.title} />

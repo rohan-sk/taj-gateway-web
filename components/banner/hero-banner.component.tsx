@@ -254,7 +254,7 @@ const HeroBanner = (props: any) => {
                     <Stack flexDirection={"column"} alignItems={"center"}>
                       {(props?.title || props?.alignmentVariant) && (
                         <Typography
-                          color={theme?.palette?.neuPalette?.hexOne}
+                          color={theme?.palette?.ihclPalette?.hexOne}
                           lineHeight={"120%"}
                           whiteSpace={"nowrap"}
                           variant={isMobile ? "m-heading-l" : "heading-l"}>
@@ -333,7 +333,7 @@ const HeroBanner = (props: any) => {
                       flexItem
                       sx={{
                         marginY: 0.8,
-                        background: `${theme?.palette?.neuPalette?.hexOne}!important`,
+                        background: `${theme?.palette?.ihclPalette?.hexOne}!important`,
                       }}
                     />
                   </>
@@ -341,7 +341,7 @@ const HeroBanner = (props: any) => {
                 <Box
                   sx={{
                     "> span": {
-                      color: theme?.palette?.neuPalette?.hexOne,
+                      color: theme?.palette?.ihclPalette?.hexOne,
                     },
                   }}>
                   {props?.singleContent?.map((content: string | {}, idx: number) => (

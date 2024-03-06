@@ -138,7 +138,7 @@ const CardWithCta = ({
           </CardMediaImageContent>
           <ContentBox
             sx={{
-              background: theme?.palette?.neuPalette?.hexOne,
+              background: theme?.palette?.ihclPalette?.hexOne,
             }}>
             {title && (
               <Typography

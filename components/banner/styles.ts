@@ -77,7 +77,7 @@ export const DateBoxDivider = styled(Divider)(() => ({
 
 export const VolumeControlButtonBox = styled(Box)(() => ({
   padding: "1%",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
   opacity: "0.7",
   display: "flex",
   width: "3.125vw",
@@ -85,7 +85,7 @@ export const VolumeControlButtonBox = styled(Box)(() => ({
   cursor: "pointer",
   borderRadius: "50%",
   alignItems: "center",
-  backgroundColor: theme?.palette?.neuPalette?.hexEleven,
+  backgroundColor: theme?.palette?.ihclPalette?.hexEleven,
   justifyContent: "center",
 }))
 
@@ -122,7 +122,7 @@ export const FocusTitleBox = styled(Box)(() => ({
 export const TitleDivider = styled(Divider)(() => ({
   height: "1px",
   width: "4.16vw",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
 }))
 export const TitleTypo = styled(
   Typography,
@@ -132,7 +132,7 @@ export const TitleTypo = styled(
   alignItems: "flex-start",
   fontFamily: theme?.palette?.font?.primaryFontFamily,
   textAlign: "left",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
   fontSize: "3.23vw",
   lineHeight: "120%",
   fontWeight: "400",
@@ -149,12 +149,12 @@ export const TitleTypo = styled(
   },
 }))
 export const TitleTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
   lineHeight: "120%",
   whiteSpace: "nowrap",
 }))
 export const SearchText = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
   lineHeight: "120%",
   padding: "1vw 0vw 0vw 7.5vw",
   "@media (max-width: 649px)": {
@@ -233,7 +233,7 @@ export const StyledInputBase = styled(InputBase)(() => ({
     marginLeft: "0.67vw",
     fontSize: DesktopPxToVw(24),
     "&::placeholder": {
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       opacity: 1,
     },
   },

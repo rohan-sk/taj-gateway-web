@@ -8,9 +8,9 @@ export const YellowBorderCheckbox = styled(Checkbox)({
   color: "transparent",
   "&.Mui-checked": {
     borderRadius: "unset",
-    color: theme.palette.neuPalette.hexTwo,
+    color: theme.palette.ihclPalette.hexTwo,
   },
   "& .MuiSvgIcon-root": {
-    border: `0.05vw solid ${theme?.palette.neuPalette.hexTwo}`,
+    border: `0.05vw solid ${theme?.palette.ihclPalette.hexTwo}`,
   },
 })

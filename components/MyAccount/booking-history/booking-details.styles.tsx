@@ -1,11 +1,4 @@
-import {
-  Box,
-  FormControl,
-  Grid,
-  MenuItem,
-  Typography,
-  styled,
-} from "@mui/material"
+import { Box, FormControl, Grid, MenuItem, Typography, styled } from "@mui/material"
 import { theme } from "../../../lib/theme"
 import { transientProps } from "../../../utils/transientProps"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
@@ -48,12 +41,10 @@ export const TabsContainer = styled(Box)(() => ({
 
 export const StyledBookingTabs = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $index: boolean }>(({ $index }) => ({
   cursor: "pointer",
-  color: $index
-    ? theme?.palette?.neuPalette?.hexTwo
-    : theme?.palette?.neuPalette?.hexSeventeen,
+  color: $index ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const StyledMenu = styled(MenuItem)(() => ({
@@ -79,7 +70,7 @@ export const SortContainer = styled(Typography)(() => ({
   fontWeight: 300,
   "@media (max-width:640px)": {
     whiteSpace: "nowrap",
-  }
+  },
 }))
 
 export const ArrowsContainer = styled(Box)(() => ({

@@ -205,7 +205,7 @@ const CardWithRightAlignedContent = ({
             sx={{
               background: cardBackgroundColor ? cardBackgroundColor : theme?.palette?.background?.default,
               "& .text-theme": {
-                color: textColor ? `${textColor}!important` : theme?.palette?.neuPalette?.hexSeventeen,
+                color: textColor ? `${textColor}!important` : theme?.palette?.ihclPalette?.hexSeventeen,
               },
             }}>
             {(title || chipText || specificationTags) && (
@@ -230,7 +230,7 @@ const CardWithRightAlignedContent = ({
                         <Typography
                           variant="body-s"
                           className={"text-theme"}
-                          sx={{ color: theme?.palette?.neuPalette?.hexTwo }}>
+                          sx={{ color: theme?.palette?.ihclPalette?.hexTwo }}>
                           {item?.chipTextValue}
                         </Typography>
                       </ChipTextButtonBox>
@@ -241,7 +241,7 @@ const CardWithRightAlignedContent = ({
                   <ChipTextTextWrapBox>
                     {specificationTags?.map((item: any, index: number) => (
                       <ChipTextButtonBox key={index}>
-                        <Typography variant="body-s" sx={{ color: theme?.palette?.neuPalette?.hexTwo }}>
+                        <Typography variant="body-s" sx={{ color: theme?.palette?.ihclPalette?.hexTwo }}>
                           {item?.tag}
                         </Typography>
                       </ChipTextButtonBox>
@@ -297,7 +297,7 @@ const CardWithRightAlignedContent = ({
                 {description.length > more ? (
                   <CustomReadMore
                     textStyles={{
-                      color: textColor ? `${textColor}!important` : theme?.palette?.neuPalette?.hexSeventeen,
+                      color: textColor ? `${textColor}!important` : theme?.palette?.ihclPalette?.hexSeventeen,
                     }}
                     length={more}
                     variant={"body-s"}>
@@ -330,9 +330,9 @@ const CardWithRightAlignedContent = ({
                           variant={isMobile ? "m-body-l" : "body-s"}
                           sx={{
                             color: isValidEmail(item?.value)
-                              ? theme.palette.neuPalette.hexTwo
+                              ? theme.palette.ihclPalette.hexTwo
                               : item?.key === CONSTANTS?.PHONE_KEY
-                              ? theme.palette.neuPalette.hexTwo
+                              ? theme.palette.ihclPalette.hexTwo
                               : "initial",
                           }}>
                           {(isMobile && item?.imageAsset?.image?.[0]?.asset?._ref) ||

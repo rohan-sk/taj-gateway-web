@@ -5,7 +5,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 
 export const MainContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   alignItems: "center",
@@ -15,7 +15,7 @@ export const MainContentWrapper = styled(
 
 export const MainContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: "100%",
   display: "flex",
@@ -26,14 +26,14 @@ export const MainContainer = styled(
 
 export const InputTextFieldWrapper = styled(
   TextField,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   "& .MuiInputBase-input ": {
     fontWeight: 300,
     lineHeight: "150%",
     fontStyle: "normal",
     fontFamily: "Inter",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
   },
   input: {
@@ -43,7 +43,7 @@ export const InputTextFieldWrapper = styled(
       lineHeight: "150%",
       fontStyle: "normal",
       fontFamily: "Inter",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
     },
   },
@@ -51,7 +51,7 @@ export const InputTextFieldWrapper = styled(
 
 export const InputMobileTextFieldContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: $isMobile ? "100%" : DesktopPxToVw(700),
   display: "flex",
@@ -61,7 +61,7 @@ export const InputMobileTextFieldContainer = styled(
 
 export const InputMobileTextFieldWrapper = styled(
   TextField,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   "& .MuiInputBase-input ": {
     fontWeight: 300,
@@ -69,7 +69,7 @@ export const InputMobileTextFieldWrapper = styled(
     fontStyle: "normal",
     fontFamily: "Inter",
     paddingLeft: $isMobile ? MobilePxToVw(0) : DesktopPxToVw(45),
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
   },
   input: {
@@ -79,7 +79,7 @@ export const InputMobileTextFieldWrapper = styled(
       lineHeight: "150%",
       fontStyle: "normal",
       fontFamily: "Inter",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
     },
   },
@@ -87,7 +87,7 @@ export const InputMobileTextFieldWrapper = styled(
 
 export const BlockContentWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   flexDirection: "row",
@@ -97,7 +97,7 @@ export const BlockContentWrapper = styled(
 
 export const BlockContentContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   "& span": {
     fontSize: $isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),
@@ -110,5 +110,5 @@ export const BlockContentContainer = styled(
 
 export const MobileErrorMessage = styled(Typography)(() => ({
   margin: "1vw 0vw 0vw 0vw",
-  color: `${theme?.palette?.neuPalette?.hexTwentyOne}!important`,
+  color: `${theme?.palette?.ihclPalette?.hexTwentyOne}!important`,
 }))

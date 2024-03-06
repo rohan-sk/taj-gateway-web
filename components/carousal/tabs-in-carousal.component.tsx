@@ -18,17 +18,11 @@ import { IHCLContext } from "../../PresentationalComponents/lib/prepare-ihcl-con
 import { getCookie } from "../../utils/cookie"
 import { AFFILIATION } from "../../features/booking/constants"
 import { MemberDataLayer } from "../../utils/analytics/member-data-layer"
-import {
-  giftingAndShoppingRoute,
-} from "../../features/property/ui/constants"
+import { giftingAndShoppingRoute } from "../../features/property/ui/constants"
 import { PAGE_LANG, TAJ_HOTELS } from "../../utils/analytics/constants"
-const TabItemCard =dynamic(() => import("../card/tab-item.card.component"))
-const CustomNextArrow = dynamic(() =>
-import("../hoc/custom-arrows").then((module) => module.CustomNextArrow)
-)
-const CustomPrevArrow = dynamic(() =>
-import("../hoc/custom-arrows").then((module) => module.CustomPrevArrow)
-)
+const TabItemCard = dynamic(() => import("../card/tab-item.card.component"))
+const CustomNextArrow = dynamic(() => import("../hoc/custom-arrows").then((module) => module.CustomNextArrow))
+const CustomPrevArrow = dynamic(() => import("../hoc/custom-arrows").then((module) => module.CustomPrevArrow))
 
 interface dataItems {
   props: itemsProps[] | any
@@ -72,8 +66,7 @@ const CarousalTabs = ({
   const cardBackgroundColor = aesthetic?.backgroundColor?.hex
   const listItems = props?.map((item: titleTypeDeclaration) => item?.title)
   const carouselVariant =
-    largeVariant === "ihcl.core.group.carousel-with-tabs" ||
-    largeVariant === "ihcl.core.group.multi-static-with-tabs"
+    largeVariant === "ihcl.core.group.carousel-with-tabs" || largeVariant === "ihcl.core.group.multi-static-with-tabs"
 
   const [activeTab, setActiveTab] = useState<number>()
   const [activeIndex, setActiveIndex] = useState<number>(0)
@@ -83,9 +76,7 @@ const CarousalTabs = ({
 
   const maxTabItemHeightSetter = useCallback((tabHeight: number) => {
     if (tabHeight > maxTabItemHeight) {
-      setMaxTabItemHeight((prev: number) =>
-        tabHeight > prev ? tabHeight : prev
-      )
+      setMaxTabItemHeight((prev: number) => (tabHeight > prev ? tabHeight : prev))
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -100,17 +91,14 @@ const CarousalTabs = ({
     return activeTabIndex
   }
   const gaStoreData = context?.getGlobalStore(GLOBAL_STORES.gaStore) as GAStore
-  const userStore = context?.getGlobalStore(
-    GLOBAL_STORES.userStore
-  ) as UserStore
+  const userStore = context?.getGlobalStore(GLOBAL_STORES.userStore) as UserStore
   const dataLayer = MemberDataLayer(userStore, gaStoreData)
   const currentUrl = router.asPath
 
   const handleFunction = (title: any, url: any, item: any, index: number) => {
     item?.urlType === "dialog" && setPrevActiveIndex(activeTab)
     let pathname = global?.window?.location?.pathname
-    let isGiftCard =
-      props?.[index]?.analytics?.clickEvent === "giftCardCategorySelected"
+    let isGiftCard = props?.[index]?.analytics?.clickEvent === "giftCardCategorySelected"
     let isPersonalCard = pathname?.includes("asya")
     let isWeddingCard = pathname?.includes("wedding")
     let isHolidayCard = pathname?.includes("taj-holidays")
@@ -137,27 +125,21 @@ const CarousalTabs = ({
           no_of_items: props?.length,
           outbound: item?.urlType == "internal" ? false : true,
           widget_type: item?._type,
-          widget_title: isMobile
-            ? analyticsData.title?.mobileTitle[1]
-            : analyticsData?.title?.desktopTitle[0] || "",
+          widget_title: isMobile ? analyticsData.title?.mobileTitle[1] : analyticsData?.title?.desktopTitle[0] || "",
           item_name: title || "",
           item_type: analyticsData?.primaryAction?._type || "",
-          widget_description: analyticsData?.subTitle
-            ? analyticsData?.subTitle
-            : "",
+          widget_description: analyticsData?.subTitle ? analyticsData?.subTitle : "",
           specialCode: "",
           giftCardCategory: title || "",
           giftCardType: "",
           pageTitle: url?.replace("/", "").toUpperCase(),
           pageURL: `${global?.window?.location.origin}` + `${url}`,
-          pageSection: isMobile
-            ? analyticsData.title?.mobileTitle[1]
-            : analyticsData?.title?.desktopTitle[0] || "",
+          pageSection: isMobile ? analyticsData.title?.mobileTitle[1] : analyticsData?.title?.desktopTitle[0] || "",
           pageHierarchy: JSON.parse(
             `["${TAJ_HOTELS}",` +
               `"${PAGE_LANG}",` +
               `"${AFFILIATION}",` +
-              `"${url?.replaceAll("/", "").toUpperCase()}"]`
+              `"${url?.replaceAll("/", "").toUpperCase()}"]`,
           ),
         },
       })
@@ -183,18 +165,14 @@ const CarousalTabs = ({
           no_of_items: props?.length,
           outbound: item?.urlType == "internal" ? false : true,
           widget_type: item?._type,
-          widget_title: isMobile
-            ? analyticsData.title?.mobileTitle[1]
-            : analyticsData?.title?.desktopTitle[0],
+          widget_title: isMobile ? analyticsData.title?.mobileTitle[1] : analyticsData?.title?.desktopTitle[0],
           item_name: title || "",
           item_type: analyticsData?.primaryAction?._type || "",
           widget_description: analyticsData?.subTitle,
           specialCode: "",
           location: "",
           personalCareType: title || "",
-          pageSection: isMobile
-            ? analyticsData.title?.mobileTitle[1]
-            : analyticsData?.title?.desktopTitle[0] || "",
+          pageSection: isMobile ? analyticsData.title?.mobileTitle[1] : analyticsData?.title?.desktopTitle[0] || "",
         },
       })
     } else if (isWeddingCard) {
@@ -227,9 +205,7 @@ const CarousalTabs = ({
           no_of_items: props?.length,
           outbound: item?.urlType == "internal" ? false : true,
           widget_type: item?._type,
-          widget_title: isMobile
-            ? analyticsData.title?.mobileTitle[1]
-            : analyticsData?.title?.desktopTitle[0],
+          widget_title: isMobile ? analyticsData.title?.mobileTitle[1] : analyticsData?.title?.desktopTitle[0],
           item_name: title || "",
           item_type: analyticsData?.primaryAction?._type || "",
           departureDate: "",
@@ -245,9 +221,7 @@ const CarousalTabs = ({
           offerValidity: "",
           specialCode: "",
           location: "",
-          pageSection: isMobile
-            ? analyticsData.title?.mobileTitle[1]
-            : analyticsData?.title?.desktopTitle[0] || "",
+          pageSection: isMobile ? analyticsData.title?.mobileTitle[1] : analyticsData?.title?.desktopTitle[0] || "",
         },
       })
     } else if (!isHolidayCard) {
@@ -275,16 +249,12 @@ const CarousalTabs = ({
           no_of_items: props?.length,
           outbound: item?.urlType == "internal" ? false : true,
           widget_type: item?._type,
-          widget_title: isMobile
-            ? analyticsData.title?.mobileTitle?.[1]
-            : analyticsData?.title?.desktopTitle?.[0],
+          widget_title: isMobile ? analyticsData.title?.mobileTitle?.[1] : analyticsData?.title?.desktopTitle?.[0],
           item_name: title || "",
           item_type: props?.[index]?._type || "",
           widget_description: analyticsData?.subTitle,
           specialCode: "",
-          pageSection: isMobile
-            ? analyticsData.title?.mobileTitle?.[1]
-            : analyticsData?.title?.desktopTitle?.[0] || "",
+          pageSection: isMobile ? analyticsData.title?.mobileTitle?.[1] : analyticsData?.title?.desktopTitle?.[0] || "",
         },
       })
     }
@@ -298,8 +268,7 @@ const CarousalTabs = ({
 
   const itemsCount = props?.length || 0
   const leftSlideIndex = activeIndex === 0 ? props?.length - 1 : activeIndex - 1
-  const rightSlideIndex =
-    activeIndex === props?.length - 1 ? 0 : activeIndex + 1
+  const rightSlideIndex = activeIndex === props?.length - 1 ? 0 : activeIndex + 1
   const isNormalTabs = props?.length <= 5
 
   const [settings, setSettings] = useState<object>({
@@ -351,17 +320,10 @@ const CarousalTabs = ({
 
   useEffect(() => {
     const pageUrl = router?.query?.pid?.[0]
-    const currentUrl =
-      pageUrl === giftingAndShoppingRoute
-        ? router?.asPath
-        : router?.query?.pid
-        ? pageUrl
-        : ""
+    const currentUrl = pageUrl === giftingAndShoppingRoute ? router?.asPath : router?.query?.pid ? pageUrl : ""
     const selectedIndex = Array?.isArray(props)
       ? props?.findIndex((item: any) =>
-          pageUrl === giftingAndShoppingRoute
-            ? `${currentUrl}` === item?.url
-            : `/${currentUrl}` === item?.url
+          pageUrl === giftingAndShoppingRoute ? `${currentUrl}` === item?.url : `/${currentUrl}` === item?.url,
         )
       : 0
 
@@ -430,11 +392,11 @@ const CarousalTabs = ({
             },
             ".slick-center .centerText": {
               textAlign: "center",
-              color: theme?.palette?.neuPalette?.hexTwo,
+              color: theme?.palette?.ihclPalette?.hexTwo,
               fontSize: isMobile ? "3.75vw" : "1.25vw",
             },
             ".slick-center .centerImg": {
-              color: theme?.palette?.neuPalette?.hexTwo,
+              color: theme?.palette?.ihclPalette?.hexTwo,
               filter: `opacity(1) drop-shadow(0 0 0 #eda805)`,
             },
             ".slick-center .centeredBox": {

@@ -20,16 +20,16 @@ export const MainAccordion = styled(Accordion)(() => ({
     height: "unset",
   },
   marginTop: "2.083vw",
-  background: theme?.palette?.neuPalette?.hexOne,
-  border: `0.052vw solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  background: theme?.palette?.ihclPalette?.hexOne,
+  border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
 
   "@media (max-width: 640px)": {
     padding: "6.250vw 5vw",
   },
   "& .redeem-card": {
-    background: `${theme?.palette?.neuPalette?.hexOne} !important`,
+    background: `${theme?.palette?.ihclPalette?.hexOne} !important`,
 
-    border: `0.052vw solid ${theme?.palette?.neuPalette?.hexSixteen} !important`,
+    border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexSixteen} !important`,
   },
 }))
 

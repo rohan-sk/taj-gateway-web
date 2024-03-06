@@ -175,7 +175,7 @@ const Share = ({
       <BreadCrumbsTypography
         variant={isMobile ? "m-body-l" : "body-s"}
         sx={{
-          color: pageBackgroundImage ? theme?.palette?.neuPalette?.hexOne : theme?.palette?.neuPalette?.hexSeventeen,
+          color: pageBackgroundImage ? theme?.palette?.ihclPalette?.hexOne : theme?.palette?.ihclPalette?.hexSeventeen,
         }}
         $isMobile={isMobile}>
         {`
@@ -206,8 +206,8 @@ const Share = ({
                 fontSize: isMobile ? `${MobilePxToVw(16)}` : `${DesktopPxToVw(16)}`,
                 margin: isMobile ? "0vw 0vw 0vw 1vw" : "0vw 0vw 0vw 0.25vw",
                 color: pageBackgroundImage
-                  ? theme?.palette?.neuPalette?.hexOne
-                  : theme?.palette?.neuPalette?.hexSeventeen,
+                  ? theme?.palette?.ihclPalette?.hexOne
+                  : theme?.palette?.ihclPalette?.hexSeventeen,
                 opacity: "0.7",
               }}>
               /
@@ -348,8 +348,8 @@ const Share = ({
                     variant={isMobile ? "m-body-s" : "body-s"}
                     sx={{
                       color: pageBackgroundImage
-                        ? theme?.palette?.neuPalette?.hexOne
-                        : theme?.palette?.neuPalette?.hexSeventeen,
+                        ? theme?.palette?.ihclPalette?.hexOne
+                        : theme?.palette?.ihclPalette?.hexSeventeen,
                     }}
                     onClick={handleOpenSharePopUp}>
                     {title}

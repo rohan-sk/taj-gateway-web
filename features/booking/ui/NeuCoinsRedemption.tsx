@@ -45,7 +45,7 @@ const NeuCoinsRedemption = (props: any) => {
   const pageContext = useContext(PageContext)
   const context: any = useContext(IHCLContext)
 
-  const iconColor = theme?.palette?.neuPalette?.hexSeventeen
+  const iconColor = theme?.palette?.ihclPalette?.hexSeventeen
   const { remove, redeemAll, balanceAmount, neucoinsRedeemed, successfullyRedeem } = BOOKING_CONSTANT
   //* User Store
   const { userDetails } = context?.getGlobalStore(GLOBAL_STORES.userStore) as UserStore
@@ -206,7 +206,7 @@ const NeuCoinsRedemption = (props: any) => {
                   <RedeemBox
                     sx={{
                       padding: isMobile ? "3.125vw" : "1.04vw 1.30vw",
-                      background: theme?.palette?.neuPalette?.hexEighteen,
+                      background: theme?.palette?.ihclPalette?.hexEighteen,
                       width: "100%",
                     }}>
                     <ColorTypography variant={isMobile ? "m-body-sl" : "body-ml"}>

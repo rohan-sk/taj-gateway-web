@@ -16,7 +16,7 @@ export const CtaDescriptionBox = styled(Box)(() => ({
   justifyContent: "center",
   alignItems: "center",
   minHeight: "10.63vw",
-  border: `0.05vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `0.05vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   gap: "1.66vw",
 }))
 

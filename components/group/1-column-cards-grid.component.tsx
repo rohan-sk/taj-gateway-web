@@ -14,10 +14,7 @@ interface SingleColumnCardsGridProps {
   textColor?: any
 }
 
-const SingleColumnCardsGrid = ({
-  props,
-  textColor,
-}: SingleColumnCardsGridProps) => {
+const SingleColumnCardsGrid = ({ props, textColor }: SingleColumnCardsGridProps) => {
   const context = useContext(IHCLContext)
   const isMobile = useMobileCheck()
   const numberOfCardsToShow = CONSTANTS?.FOUR
@@ -36,12 +33,8 @@ const SingleColumnCardsGrid = ({
           <Button
             variant="light-outlined"
             sx={{
-              borderColor: textColor
-                ? `${textColor}!important`
-                : theme?.palette?.neuPalette?.hexTwo,
-              color: textColor
-                ? `${textColor}!important`
-                : theme?.palette?.neuPalette?.hexTwo,
+              borderColor: textColor ? `${textColor}!important` : theme?.palette?.ihclPalette?.hexTwo,
+              color: textColor ? `${textColor}!important` : theme?.palette?.ihclPalette?.hexTwo,
             }}
             endIcon={<KeyboardArrowDown />}
             onClick={() => setCardsToShow(cardsToShow + 1)}>

@@ -11,7 +11,7 @@ export const DescriptionContainer = styled(Box)(() => ({
 }))
 
 export const StyledDivider = styled(Divider)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
+  backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
   width: "100%",
 }))
 
@@ -27,11 +27,11 @@ export const PortableItem = styled(Box)(() => ({
 
 export const StyledTypography = styled(
   Typography,
-  transientProps
-)<{ $mobilePaddingBottom: string,$paddingBottom: number }>(({ $mobilePaddingBottom, $paddingBottom }) => ({
+  transientProps,
+)<{ $mobilePaddingBottom: string; $paddingBottom: number }>(({ $mobilePaddingBottom, $paddingBottom }) => ({
   paddingBottom: DesktopPxToVw($paddingBottom),
   fontWeight: 300,
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width:640px)": {
     paddingBottom: $mobilePaddingBottom,
   },
@@ -39,23 +39,21 @@ export const StyledTypography = styled(
 
 export const ComponentContainer = styled(
   Box,
-  transientProps
-)<{ $isComponentFullWidth: any; $cardBackgroundColor: any }>(
-  ({ $isComponentFullWidth, $cardBackgroundColor }) => ({
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: DesktopPxToVw(80),
-    padding: $isComponentFullWidth ? $isComponentFullWidth : "0vw",
-    backgroundColor: $cardBackgroundColor ?? theme?.palette?.background?.paper,
-    "@media (max-width: 640px)": {
-      gap: "6.25vw",
-      flexDirection: "column",
-      padding: $isComponentFullWidth ? $isComponentFullWidth?.mobile : "0vw",
-    },
-  })
-)
+  transientProps,
+)<{ $isComponentFullWidth: any; $cardBackgroundColor: any }>(({ $isComponentFullWidth, $cardBackgroundColor }) => ({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: DesktopPxToVw(80),
+  padding: $isComponentFullWidth ? $isComponentFullWidth : "0vw",
+  backgroundColor: $cardBackgroundColor ?? theme?.palette?.background?.paper,
+  "@media (max-width: 640px)": {
+    gap: "6.25vw",
+    flexDirection: "column",
+    padding: $isComponentFullWidth ? $isComponentFullWidth?.mobile : "0vw",
+  },
+}))
 
 export const PrimaryActionWrappingBox = styled(Box)(() => ({
   width: "100%",
@@ -71,7 +69,7 @@ export const PrimaryActionWrappingBox = styled(Box)(() => ({
 
 export const ContentDataContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   color: theme?.palette?.text?.primary,
   paddingTop: $isMobile ? "2.813vw" : "1.042vw",

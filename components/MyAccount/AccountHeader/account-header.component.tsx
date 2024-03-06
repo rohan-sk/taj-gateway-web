@@ -239,7 +239,7 @@ const AccountHeaderComponent = ({ cardCount, epicureCardDetails }: accountInterf
                       orientation="vertical"
                       flexItem
                       style={{
-                        borderColor: theme?.palette?.neuPalette?.hexTwelve,
+                        borderColor: theme?.palette?.ihclPalette?.hexTwelve,
                       }}
                     />
                   </>
@@ -262,7 +262,7 @@ const AccountHeaderComponent = ({ cardCount, epicureCardDetails }: accountInterf
                       orientation="vertical"
                       flexItem
                       style={{
-                        borderColor: theme?.palette?.neuPalette?.hexTwelve,
+                        borderColor: theme?.palette?.ihclPalette?.hexTwelve,
                       }}
                     />
                     <TabWrapper

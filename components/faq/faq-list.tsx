@@ -59,20 +59,21 @@ const RenderFaqList = (props: any) => {
               <Box
                 key={faqItem?._key}
                 sx={{
-                  borderTop: index === 0 ? `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}20!important` : "none",
+                  borderTop:
+                    index === 0 ? `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}20!important` : "none",
                 }}>
                 <AccordionContainer>
                   <Accordion
                     title={faqItem?.question}
                     bodyColor={
                       expanded === faqItem?._key
-                        ? `${theme?.palette?.neuPalette?.hexOne}`
+                        ? `${theme?.palette?.ihclPalette?.hexOne}`
                         : `${theme?.palette?.background?.default}`
                     }
                     headingElementForCard={faqItem?.headingElementForCard}
                     headerColor={
                       expanded === faqItem?._key
-                        ? `${theme?.palette?.neuPalette?.hexOne}`
+                        ? `${theme?.palette?.ihclPalette?.hexOne}`
                         : `${theme?.palette?.background?.default}`
                     }
                     key={faqItem?._key}

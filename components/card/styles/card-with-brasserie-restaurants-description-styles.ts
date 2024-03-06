@@ -10,7 +10,7 @@ export const BrasserieDescriptionWrapper = styled(
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   "&>span": {
     fontWeight: 450,
-    color: theme?.palette?.neuPalette?.hexThirtyThree,
+    color: theme?.palette?.ihclPalette?.hexThirtyThree,
     fontSize: $isMobile ? MobilePxToVw(16) : DesktopPxToVw(16),
     lineHeight: $isMobile ? MobilePxToVw(23) : DesktopPxToVw(23),
   },

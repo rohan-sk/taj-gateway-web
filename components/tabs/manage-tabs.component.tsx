@@ -27,9 +27,11 @@ const ManageTabsComponent = ({ tabs, title }: any) => {
         value={value}
         onChange={handleChange}
         TabIndicatorProps={{
-          style: { background: theme?.palette?.neuPalette?.hexTwo },
+          style: { background: theme?.palette?.ihclPalette?.hexTwo },
         }}>
-        {tabs?.map((item: any) => <CustomTab label={item?.title} key={item?.title} />)}
+        {tabs?.map((item: any) => (
+          <CustomTab label={item?.title} key={item?.title} />
+        ))}
       </TabsContainer>
       <RegisterAddressTabs>
         {tabs?.map((item: any, index: number) => (

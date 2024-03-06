@@ -12,9 +12,7 @@ const TransactionSummaryMobile = ({ filteredData }: any) => {
   const getDetails = (type: any) => {
     switch (type?.paymentType?.toLowerCase()) {
       case "tata_neu":
-        return `Neucoins Redemption - ${currencyPrettier(
-          type?.txnNetAmount
-        )?.slice(2)} coins`
+        return `Neucoins Redemption - ${currencyPrettier(type?.txnNetAmount)?.slice(2)} coins`
       case "gift_card":
         return `Gift Card Redemption`
 
@@ -27,15 +25,13 @@ const TransactionSummaryMobile = ({ filteredData }: any) => {
       {filteredData?.map((data: any, index: number) => {
         return (
           <Fragment key={index}>
-            <Typography
-              variant={isMobile ? "m-body-s" : "body-s"}
-              sx={{ fontWeight: 700 }}>
+            <Typography variant={isMobile ? "m-body-s" : "body-s"} sx={{ fontWeight: 700 }}>
               {formatDateWithMON(data?.createdTimestamp)}
             </Typography>
             <Typography
               variant={isMobile ? "m-body-s" : "body-s"}
               sx={{
-                backgroundColor: theme?.palette?.neuPalette?.hexTwentyNine,
+                backgroundColor: theme?.palette?.ihclPalette?.hexTwentyNine,
                 padding: "10px 0px",
               }}>
               {data?.transactionId || "Transaction ID"}
@@ -49,33 +45,22 @@ const TransactionSummaryMobile = ({ filteredData }: any) => {
             </Typography>
             <Grid container>
               <Grid item xs={4}>
-                <Typography
-                  sx={{ fontSize: MobilePxToVw(14), fontWeight: 700 }}>
-                  {CONSTANTS?.AMOUNT_SPENT}
-                </Typography>
+                <Typography sx={{ fontSize: MobilePxToVw(14), fontWeight: 700 }}>{CONSTANTS?.AMOUNT_SPENT}</Typography>
                 <Typography variant={"m-body-s"} sx={{ paddingTop: "8px" }}>
                   {currencyPrettier(data?.gradTotal)?.slice(1)}
                 </Typography>
               </Grid>
               <Grid item xs={3}>
-                <Typography
-                  sx={{ fontSize: MobilePxToVw(14), fontWeight: 700 }}>
-                  {CONSTANTS?.DISCOUNTS}
-                </Typography>
-                <Typography
-                  variant={"m-body-s"}
-                  sx={{ paddingTop: "8px", textAlign: "center" }}>
+                <Typography sx={{ fontSize: MobilePxToVw(14), fontWeight: 700 }}>{CONSTANTS?.DISCOUNTS}</Typography>
+                <Typography variant={"m-body-s"} sx={{ paddingTop: "8px", textAlign: "center" }}>
                   -
                 </Typography>
               </Grid>
               <Grid item xs={5}>
-                <Typography
-                  sx={{ fontSize: MobilePxToVw(14), fontWeight: 700 }}>
+                <Typography sx={{ fontSize: MobilePxToVw(14), fontWeight: 700 }}>
                   {CONSTANTS?.NEUCOINS_EARNED}
                 </Typography>
-                <Typography
-                  variant={"m-body-s"}
-                  sx={{ paddingTop: "8px", textAlign: "center" }}>
+                <Typography variant={"m-body-s"} sx={{ paddingTop: "8px", textAlign: "center" }}>
                   -
                 </Typography>
               </Grid>

@@ -258,7 +258,7 @@ const EpicurePurchaseFormHeader = (props: any) => {
             CloseIcon={ICONS?.CLOSE_GOLD_ICON}
             bgcolor={theme?.palette?.background?.paper}
             ModalCloseButtonStyles={{ right: "0vw", top: "-2vw" }}
-            ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+            ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
             Component={
               <DataClearanceDialog
                 {...{

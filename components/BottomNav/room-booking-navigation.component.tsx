@@ -244,7 +244,7 @@ const RoomBookingNavigationComponent = (props: any) => {
                               variant="m-body-m"
                               component="div"
                               mt={MobilePxToVw(16)}
-                              color={theme.palette.neuPalette.hexTwelve}>
+                              color={theme.palette.ihclPalette.hexTwelve}>
                               {getRoomName(index + 1) ?? CONSTANTS?.NOT_SELECTED}
                             </Typography>
                           )}
@@ -253,7 +253,7 @@ const RoomBookingNavigationComponent = (props: any) => {
                               variant="m-body-m"
                               component="div"
                               mt={MobilePxToVw(16)}
-                              color={theme.palette.neuPalette.hexTwelve}>
+                              color={theme.palette.ihclPalette.hexTwelve}>
                               {CONSTANTS?.NOT_SELECTED}
                             </Typography>
                           )}

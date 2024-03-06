@@ -134,7 +134,7 @@ const CartSummaryCard = () => {
       updateSessionAlertModal(true)
       setSessionAlertData(firstAlertData)
     } else if (timeRemaining === 0) {
-      ; (async () => {
+      ;(async () => {
         setSessionAlertData(secondAlertData)
         updateSessionAlertModal(true)
         await emptyUserCart()
@@ -158,7 +158,7 @@ const CartSummaryCard = () => {
         <TimerWrapper>{orderId && <TimeCounter count={900} render={orderId} />}</TimerWrapper>
         <Box
           sx={{
-            border: `0.052vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+            border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
           }}>
           <Typography variant="heading-xs" sx={{ padding: "1.04vw" }}>
             {Cart?.title}
@@ -422,7 +422,10 @@ const CartSummaryCard = () => {
                                             {formatToShortDate(priceDaily?.date)}
                                           </Typography>
                                           <Typography variant={"body-xs"}>
-                                            {`(${priceDaily?.tax?.breakDown?.[0]?.name || priceDaily?.tax?.breakDown?.[0]?.code})`}
+                                            {`(${
+                                              priceDaily?.tax?.breakDown?.[0]?.name ||
+                                              priceDaily?.tax?.breakDown?.[0]?.code
+                                            })`}
                                           </Typography>
                                         </Stack>
                                         <Typography whiteSpace={"nowrap"} variant={"body-xs"}>
@@ -430,9 +433,7 @@ const CartSummaryCard = () => {
                                         </Typography>
                                       </>
                                     ) : (
-                                      <RenderTaxesComponent
-                                        taxes={priceDaily}
-                                        currencyCode={currencyCode} />
+                                      <RenderTaxesComponent taxes={priceDaily} currencyCode={currencyCode} />
                                     )}
                                   </>
                                 )}
@@ -515,22 +516,20 @@ const CartSummaryCard = () => {
                     </Typography>
                   </FlexBox>
                 )}
-                {(paymentSummary?.neuCoins > 0 ||
-                  paymentSummary?.giftCardPrice > 0 ||
-                  isCouponAdded) && (
-                    <FlexBox
-                      sx={{
-                        margin: "0.416vw 0vw",
-                        alignItems: "flex-start !important",
-                      }}>
-                      <BoldTypo variant="body-s">
-                        {isPayFull ? BOOKING_CONSTANT?.DEPOSIT_PAYABLE : CONSTANTS?.TOTAL_TO_PAY}
-                      </BoldTypo>
-                      <BoldTypo variant="body-s" sx={{ whiteSpace: "nowrap" }}>
-                        {currency2DecimalSymbol(paymentSummary?.totalPayableAmount || 0, currencyCode)}
-                      </BoldTypo>
-                    </FlexBox>
-                  )}
+                {(paymentSummary?.neuCoins > 0 || paymentSummary?.giftCardPrice > 0 || isCouponAdded) && (
+                  <FlexBox
+                    sx={{
+                      margin: "0.416vw 0vw",
+                      alignItems: "flex-start !important",
+                    }}>
+                    <BoldTypo variant="body-s">
+                      {isPayFull ? BOOKING_CONSTANT?.DEPOSIT_PAYABLE : CONSTANTS?.TOTAL_TO_PAY}
+                    </BoldTypo>
+                    <BoldTypo variant="body-s" sx={{ whiteSpace: "nowrap" }}>
+                      {currency2DecimalSymbol(paymentSummary?.totalPayableAmount || 0, currencyCode)}
+                    </BoldTypo>
+                  </FlexBox>
+                )}
               </Collapse>
               {paymentLabelDetails?.paymentLabelsResponse?.depositAmount > 0 &&
                 activeTab == "PAY DEPOSIT" &&
@@ -550,7 +549,7 @@ const CartSummaryCard = () => {
         {(guaranteePolicy || cancellationPolicy) && !isNotReservationTab && (
           <Stack
             sx={{
-              border: `1px solid ${theme.palette.neuPalette.hexSixteen}`,
+              border: `1px solid ${theme.palette.ihclPalette.hexSixteen}`,
               padding: `${DesktopPxToVw(25)} ${DesktopPxToVw(20)}`,
               marginTop: DesktopPxToVw(20),
             }}>
@@ -566,7 +565,7 @@ const CartSummaryCard = () => {
                   <Divider
                     sx={{
                       height: DesktopPxToVw(1),
-                      backgroundColor: theme?.palette?.neuPalette?.hexSixteen,
+                      backgroundColor: theme?.palette?.ihclPalette?.hexSixteen,
                       margin: `${DesktopPxToVw(20)} ${DesktopPxToVw(0)}`,
                     }}
                   />

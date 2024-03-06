@@ -4,12 +4,12 @@ import { transientProps } from "../../../utils/transientProps"
 import { Box, Button, Divider, Typography } from "@mui/material"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 
-const grayColor = theme?.palette?.neuPalette?.hexSixteen
-const goldColor = theme?.palette?.neuPalette?.hexTwo
+const grayColor = theme?.palette?.ihclPalette?.hexSixteen
+const goldColor = theme?.palette?.ihclPalette?.hexTwo
 
 export const MainBox = styled(Box)(() => ({
   padding: "2.083vw 0vw",
-  background: theme?.palette?.neuPalette?.linearGradientThree,
+  background: theme?.palette?.ihclPalette?.linearGradientThree,
 
   "@media (max-width: 640px)": {
     padding: "6.72vw 7.7vw 4.6875vw 7.7vw",
@@ -51,7 +51,7 @@ export const TitleTypography = styled(Typography)(() => ({
 
 export const StyledButton = styled(
   Button,
-  transientProps
+  transientProps,
 )<{ $isSelected?: boolean }>(({ $isSelected }) => ({
   fontWeight: 400,
   height: "3.125vw",
@@ -62,18 +62,14 @@ export const StyledButton = styled(
   fontFamily: theme?.palette?.font?.primaryFontFamily,
   letterSpacing: "-0.05em",
   padding: "0.99vw 2.083vw 0.98vw 2.083vw",
-  color: $isSelected ? goldColor : theme?.palette?.neuPalette?.hexSeventeen,
-  border: $isSelected
-    ? `0.10vw solid ${goldColor}`
-    : `0.052vw solid ${grayColor}`,
+  color: $isSelected ? goldColor : theme?.palette?.ihclPalette?.hexSeventeen,
+  border: $isSelected ? `0.10vw solid ${goldColor}` : `0.052vw solid ${grayColor}`,
   "&:hover": {
-    color: $isSelected ? goldColor : theme?.palette?.neuPalette?.hexSeventeen,
-    border: $isSelected
-      ? `0.10vw solid ${goldColor}`
-      : `0.052vw solid ${grayColor}`,
+    color: $isSelected ? goldColor : theme?.palette?.ihclPalette?.hexSeventeen,
+    border: $isSelected ? `0.10vw solid ${goldColor}` : `0.052vw solid ${grayColor}`,
   },
   "&.Mui-disabled": {
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
 
   "@media (max-width: 640px)": {

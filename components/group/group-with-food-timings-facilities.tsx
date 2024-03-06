@@ -56,27 +56,25 @@ const FoodTimingFacilities = ({ props }: FoodTimingFacilitiesProps) => {
     <Grid container>
       <Grid lg={8.1}>
         <Grid container>
-          {firstItemList?.map(
-            (item: FoodTimingFacilitiesItems, index: number) => {
-              return (
-                <>
-                  <Grid
-                    item
-                    md={3}
-                    lg={
-                      (index === 0 && 3.82) ||
-                      (index === 1 && 3.82) ||
-                      (index === 2 && 3.82)
-                    }
-                    sm={12}
-                    xs={12}
-                    sx={{ marginBottom: isMobile ? "3.125vw" : "unset", borderBottom: isMobile ? `1px solid ${theme?.palette?.neuPalette?.hexFive}20` : "unset" }}
-                    key={index}>
-                    <Box sx={{ marginBottom: isMobile ? "2.500vw" : "unset" }}>
+          {firstItemList?.map((item: FoodTimingFacilitiesItems, index: number) => {
+            return (
+              <>
+                <Grid
+                  item
+                  md={3}
+                  lg={(index === 0 && 3.82) || (index === 1 && 3.82) || (index === 2 && 3.82)}
+                  sm={12}
+                  xs={12}
+                  sx={{
+                    marginBottom: isMobile ? "3.125vw" : "unset",
+                    borderBottom: isMobile ? `1px solid ${theme?.palette?.ihclPalette?.hexFive}20` : "unset",
+                  }}
+                  key={index}>
+                  <Box sx={{ marginBottom: isMobile ? "2.500vw" : "unset" }}>
                     <ItemTitleWrapperContainer>
                       {item?.logo?.asset?._ref && (
                         <Box
-                        loading="lazy"
+                          loading="lazy"
                           component="img"
                           src={urlFor(item?.logo?.asset?._ref).url()}
                           height="1.2371vw"
@@ -86,42 +84,36 @@ const FoodTimingFacilities = ({ props }: FoodTimingFacilitiesProps) => {
                           }}
                         />
                       )}
-                      <HotelInfoTitleTypography
-                        variant={isMobile ? "m-body-sl" : "body-xxs"}>
+                      <HotelInfoTitleTypography variant={isMobile ? "m-body-sl" : "body-xxs"}>
                         {item?.title}
                       </HotelInfoTitleTypography>
                     </ItemTitleWrapperContainer>
-                    {item?.menuItems
-                      ?.slice(0, pointsToShow)
-                      ?.map((content: menuItemsList, index: number) => {
-                        return (
-                          <BlocksPortableTextBox
-                            key={index}
-                            $Padding={props?.length - (index + 1) < 3}>
-                            <PortableText blocks={content?.blockContent} />
-                          </BlocksPortableTextBox>
-                        )
-                      })}
+                    {item?.menuItems?.slice(0, pointsToShow)?.map((content: menuItemsList, index: number) => {
+                      return (
+                        <BlocksPortableTextBox key={index} $Padding={props?.length - (index + 1) < 3}>
+                          <PortableText blocks={content?.blockContent} />
+                        </BlocksPortableTextBox>
+                      )
+                    })}
+                  </Box>
+                </Grid>
+                {index + 1 !== 3 && !isMobile && (
+                  <Grid>
+                    <Box height={"100%"}>
+                      <LargeVerticalDivider orientation="vertical" />
                     </Box>
                   </Grid>
-                  {index + 1 !== 3 && !isMobile && (
-                    <Grid>
-                      <Box height={"100%"}>
-                        <LargeVerticalDivider orientation="vertical" />
-                      </Box>
-                    </Grid>
-                  )}
-                </>
-              )
-            }
-          )}
+                )}
+              </>
+            )
+          })}
           {!isMobile && (
             <Grid xs={11.7}>
               <Box width={"100%"}>
                 <LargeHorizontalDivider
                   orientation="horizontal"
                   sx={{
-                    backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+                    backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
                     marginBottom: DesktopPxToVw(20),
                   }}
                 />
@@ -130,17 +122,25 @@ const FoodTimingFacilities = ({ props }: FoodTimingFacilitiesProps) => {
           )}
         </Grid>
         <Grid container>
-          {secondItemList?.map(
-            (item: FoodTimingFacilitiesItems, index: number) => {
-              return (
-                <>
-                  <Grid item md={3} lg={5.8} sm={12} xs={12} key={index}
-                    sx={{ marginBottom: isMobile ? "3.125vw" : "unset", borderBottom: isMobile ? `1px solid ${theme?.palette?.neuPalette?.hexFive}20` : "unset" }}>
-                    <Box sx={{ marginBottom: isMobile ? "2.500vw" : "unset" }}>
+          {secondItemList?.map((item: FoodTimingFacilitiesItems, index: number) => {
+            return (
+              <>
+                <Grid
+                  item
+                  md={3}
+                  lg={5.8}
+                  sm={12}
+                  xs={12}
+                  key={index}
+                  sx={{
+                    marginBottom: isMobile ? "3.125vw" : "unset",
+                    borderBottom: isMobile ? `1px solid ${theme?.palette?.ihclPalette?.hexFive}20` : "unset",
+                  }}>
+                  <Box sx={{ marginBottom: isMobile ? "2.500vw" : "unset" }}>
                     <ItemTitleWrapperContainer>
                       {item?.logo?.asset?._ref && (
                         <Box
-                        loading="lazy"
+                          loading="lazy"
                           component="img"
                           src={urlFor(item?.logo?.asset?._ref).url()}
                           height="1.2371vw"
@@ -150,57 +150,58 @@ const FoodTimingFacilities = ({ props }: FoodTimingFacilitiesProps) => {
                           }}
                         />
                       )}
-                      <HotelInfoTitleTypography
-                        variant={isMobile ? "m-body-sl" : "body-xxs"}>
+                      <HotelInfoTitleTypography variant={isMobile ? "m-body-sl" : "body-xxs"}>
                         {item?.title}
                       </HotelInfoTitleTypography>
                     </ItemTitleWrapperContainer>
-                    {item?.menuItems
-                      ?.slice(0, pointsToShow)
-                      ?.map((content: menuItemsList, index: number) => {
-                        return (
-                          <BlocksPortableTextBox
-                            key={index}
-                            $Padding={props?.length - (index + 1) < 3}>
-                            <PortableText blocks={content?.blockContent} />
-                          </BlocksPortableTextBox>
-                        )
-                      })}
+                    {item?.menuItems?.slice(0, pointsToShow)?.map((content: menuItemsList, index: number) => {
+                      return (
+                        <BlocksPortableTextBox key={index} $Padding={props?.length - (index + 1) < 3}>
+                          <PortableText blocks={content?.blockContent} />
+                        </BlocksPortableTextBox>
+                      )
+                    })}
+                  </Box>
+                </Grid>
+                {!isMobile && index !== secondItemList?.length - 1 && (
+                  <Grid>
+                    <Box height={"100%"}>
+                      <LargeVerticalDivider orientation="vertical" />
                     </Box>
                   </Grid>
-                  {!isMobile && index !== secondItemList?.length - 1 && (
-                    <Grid>
-                      <Box height={"100%"}>
-                        <LargeVerticalDivider orientation="vertical" />
-                      </Box>
-                    </Grid>
-                  )}
-                </>
-              )
-            }
-          )}
+                )}
+              </>
+            )
+          })}
         </Grid>
       </Grid>
       <Grid lg={3.9}>
         <Grid container>
-          {thirdItemList?.map(
-            (item: FoodTimingFacilitiesItems, index: number) => {
-              return (
-                <>
-                  {!isMobile && (
-                    <Grid>
-                      <Box height={"100%"}>
-                        <LargeVerticalDivider orientation="vertical" />
-                      </Box>
-                    </Grid>
-                  )}
-                  <Grid item md={3} lg={11} sm={12} key={index}
-                    sx={{ marginBottom: isMobile ? "3.125vw" : "unset", borderBottom: isMobile ? `1px solid ${theme?.palette?.neuPalette?.hexFive}20` : "unset" }}>
-                    <Box sx={{ marginBottom: isMobile ? "2.500vw" : "unset" }}>
+          {thirdItemList?.map((item: FoodTimingFacilitiesItems, index: number) => {
+            return (
+              <>
+                {!isMobile && (
+                  <Grid>
+                    <Box height={"100%"}>
+                      <LargeVerticalDivider orientation="vertical" />
+                    </Box>
+                  </Grid>
+                )}
+                <Grid
+                  item
+                  md={3}
+                  lg={11}
+                  sm={12}
+                  key={index}
+                  sx={{
+                    marginBottom: isMobile ? "3.125vw" : "unset",
+                    borderBottom: isMobile ? `1px solid ${theme?.palette?.ihclPalette?.hexFive}20` : "unset",
+                  }}>
+                  <Box sx={{ marginBottom: isMobile ? "2.500vw" : "unset" }}>
                     <ItemTitleWrapperContainer>
                       {item?.logo?.asset?._ref && (
                         <Box
-                        loading="lazy"
+                          loading="lazy"
                           component="img"
                           src={urlFor(item?.logo?.asset?._ref).url()}
                           height="1.2371vw"
@@ -210,29 +211,25 @@ const FoodTimingFacilities = ({ props }: FoodTimingFacilitiesProps) => {
                           }}
                         />
                       )}
-                      <HotelInfoTitleTypography
-                        variant={isMobile ? "m-body-sl" : "body-xxs"}>
+                      <HotelInfoTitleTypography variant={isMobile ? "m-body-sl" : "body-xxs"}>
                         {item?.title}
                       </HotelInfoTitleTypography>
                     </ItemTitleWrapperContainer>
-                    {item?.menuItems
-                      ?.slice(0, pointsToShow)
-                      ?.map((content: menuItemsList, index: number) => {
-                        return (
-                          <BlocksPortableTextBox
-                          sx={{marginBottom:isMobile?"1.875vw":"0.529vw"}}
-                            key={index}
-                            $Padding={props?.length - (index + 1) < 3}>
-                            <PortableText blocks={content?.blockContent} />
-                          </BlocksPortableTextBox>
-                        )
-                      })}
-                    </Box>
-                  </Grid>
-                </>
-              )
-            }
-          )}
+                    {item?.menuItems?.slice(0, pointsToShow)?.map((content: menuItemsList, index: number) => {
+                      return (
+                        <BlocksPortableTextBox
+                          sx={{ marginBottom: isMobile ? "1.875vw" : "0.529vw" }}
+                          key={index}
+                          $Padding={props?.length - (index + 1) < 3}>
+                          <PortableText blocks={content?.blockContent} />
+                        </BlocksPortableTextBox>
+                      )
+                    })}
+                  </Box>
+                </Grid>
+              </>
+            )
+          })}
         </Grid>
       </Grid>
       {!isMobile && (
@@ -241,7 +238,7 @@ const FoodTimingFacilities = ({ props }: FoodTimingFacilitiesProps) => {
             <LargeHorizontalDivider
               orientation="horizontal"
               sx={{
-                backgroundColor: theme?.palette?.neuPalette?.hexSeventeen,
+                backgroundColor: theme?.palette?.ihclPalette?.hexSeventeen,
               }}
             />
           </Box>

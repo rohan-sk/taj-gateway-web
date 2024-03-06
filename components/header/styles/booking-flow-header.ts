@@ -5,7 +5,7 @@ import DesktopPxToVw from "../../../utils/DesktopFontCalc"
 import { transientProps } from "../../../utils/transientProps"
 import { Divider, Box, Button, Typography, Stack, TextField, CircularProgress } from "@mui/material"
 
-const BlackColor = theme?.palette?.neuPalette?.hexSeventeen
+const BlackColor = theme?.palette?.ihclPalette?.hexSeventeen
 
 export const MainBox = styled(Stack)(() => ({
   color: BlackColor,
@@ -29,7 +29,7 @@ export const BookingMainBox = styled(Box)(() => ({
   alignItems: "center",
   justifyContent: "center",
   padding: "0.573vw 1.4vw 0.67vw 1.145vw",
-  border: `0.05vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `0.05vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
 }))
 
 export const StyledVerticalDivider = styled(Divider)(() => ({
@@ -50,7 +50,7 @@ export const BottomDivider = styled(Divider)(() => ({
   opacity: 0.2,
   width: "100%",
   height: "0.05vw",
-  background: theme?.palette?.neuPalette?.hexTwo,
+  background: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const LocalizationProviderBox = styled(Box)(() => ({
@@ -92,7 +92,7 @@ export const ColumnDirectionBox = styled(Box)(() => ({
 export const SpecialCodeDropDownDivider = styled(Divider)(() => ({
   height: "0.05vw",
   margin: "1.04vw 0vw",
-  background: theme?.palette?.neuPalette?.hexSixteen,
+  background: theme?.palette?.ihclPalette?.hexSixteen,
 }))
 
 export const SpecialCodeStack = styled(Stack)(() => ({
@@ -101,7 +101,7 @@ export const SpecialCodeStack = styled(Stack)(() => ({
   marginTop: "1.042vw",
   padding: "0.521vw 1.042vw",
   justifyContent: "space-between",
-  border: `0.052vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+  border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
 }))
 
 export const CheckBox = styled(Box)(() => ({
@@ -128,28 +128,28 @@ export const TermsLinkTypography = styled(Typography)(() => ({
   whiteSpace: "nowrap",
   lineHeight: "1.145vw",
   fontFamily: "Inter",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const AddButton = styled(Button)(() => ({
   width: "5.05vw",
   height: "2.6vw",
   padding: "0.625vw 1.35vw",
-  color: theme?.palette?.neuPalette?.hexOne,
-  background: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexSeventeen,
   "&.Mui-disabled": {
     color: "darkGray",
   },
   " &:hover": {
-    color: theme?.palette?.neuPalette?.hexOne,
-    background: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexOne,
+    background: theme?.palette?.ihclPalette?.hexSeventeen,
   },
 }))
 
 export const AccountTypography = styled(Typography)(() => ({
   fontWeight: 400,
   cursor: "pointer",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const InputTextField = styled(TextField)(() => ({

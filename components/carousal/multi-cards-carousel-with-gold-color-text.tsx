@@ -9,12 +9,7 @@ import { useAppNavigation } from "../../utils/NavigationUtility"
 import { StyledChevronRight } from "../card/styles/common-styles"
 import { CommonCarouselStyles } from "../hoc/carousal-component-styles"
 import { NextArrow, PrevArrow } from "../hoc/actions/transparent-arrows"
-import {
-  ActionBox,
-  CardContentBox,
-  ImageBox,
-  TitleBox,
-} from "./styles/multi-cards-with-bg-image"
+import { ActionBox, CardContentBox, ImageBox, TitleBox } from "./styles/multi-cards-with-bg-image"
 import { useAesthetics } from "../../utils/fetchAsthetics"
 import { CONSTANTS } from "../constants"
 import { useMobileCheck } from "../../utils/isMobilView"
@@ -46,7 +41,7 @@ const MultiCardsCarousalWithGoldColorText = ({ props, padding }: any) => {
     prevArrow: (
       <PrevArrow
         prevArrowTitle={prevArrowTitle}
-        titleColor={theme?.palette?.neuPalette?.hexTwo}
+        titleColor={theme?.palette?.ihclPalette?.hexTwo}
         GoldColorPrevIcon={GoldColorPrevIcon}
         data={props}
       />
@@ -54,7 +49,7 @@ const MultiCardsCarousalWithGoldColorText = ({ props, padding }: any) => {
     nextArrow: (
       <NextArrow
         nextArrowTitle={nextArrowTitle}
-        titleColor={theme?.palette?.neuPalette?.hexTwo}
+        titleColor={theme?.palette?.ihclPalette?.hexTwo}
         GoldColorNextIcon={GoldColorNextIcon}
         data={props}
       />
@@ -63,14 +58,10 @@ const MultiCardsCarousalWithGoldColorText = ({ props, padding }: any) => {
   }
   useEffect(() => {
     setNextArrowTitle(
-      activeIndex == props?.items?.length - 1
-        ? props?.items?.[0]?.title
-        : props?.items?.[activeIndex + 1]?.title
+      activeIndex == props?.items?.length - 1 ? props?.items?.[0]?.title : props?.items?.[activeIndex + 1]?.title,
     )
     setPrevArrowTitle(
-      activeIndex == 0
-        ? props?.items?.[props?.items?.length - 1]?.title
-        : props?.items?.[activeIndex - 1]?.title
+      activeIndex == 0 ? props?.items?.[props?.items?.length - 1]?.title : props?.items?.[activeIndex - 1]?.title,
     )
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeIndex])
@@ -153,11 +144,8 @@ const MultiCardsCarousalWithGoldColorText = ({ props, padding }: any) => {
                         width: "49.271vw",
                         borderRadius: "0",
                         boxShadow: "none",
-                        border:
-                          index === activeIndex ? "1px solid #FEFEFE" : "unset",
-                        backgroundColor:
-                          cardBackgroundColor ??
-                          theme?.palette?.background?.default,
+                        border: index === activeIndex ? "1px solid #FEFEFE" : "unset",
+                        backgroundColor: cardBackgroundColor ?? theme?.palette?.background?.default,
                         opacity: index === activeIndex ? "1" : "0",
                         WebkitTransition: "opacity .3s linear",
                       },
@@ -172,8 +160,7 @@ const MultiCardsCarousalWithGoldColorText = ({ props, padding }: any) => {
                             width: "100%",
                             height: "100%",
                             objectFit: "cover",
-                            transform:
-                              index === activeIndex ? "scale(1.2)" : "unset",
+                            transform: index === activeIndex ? "scale(1.2)" : "unset",
                             WebkitTransition: "transform .3s ease-in-out",
                             MozTransition: "transform .3s ease-in-out",
                             msTransition: "transform .3s ease-in-out",
@@ -184,9 +171,7 @@ const MultiCardsCarousalWithGoldColorText = ({ props, padding }: any) => {
                     )}
                     <CardContentBox>
                       {item?.title && (
-                        <Typography
-                          variant="heading-xs"
-                          color={textColor ?? theme?.palette?.text?.primary}>
+                        <Typography variant="heading-xs" color={textColor ?? theme?.palette?.text?.primary}>
                           {item?.title}
                         </Typography>
                       )}
@@ -194,17 +179,12 @@ const MultiCardsCarousalWithGoldColorText = ({ props, padding }: any) => {
                         <Typography
                           variant={isMobile ? "m-body-sl" : "body-ml"}
                           sx={{
-                            color: textColor
-                              ? textColor
-                              : theme?.palette?.neuPalette?.hexSeventeen,
+                            color: textColor ? textColor : theme?.palette?.ihclPalette?.hexSeventeen,
                           }}>
-                          {item?.description.length >
-                          CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT ? (
+                          {item?.description.length > CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT ? (
                             <>
                               <CustomReadMore
-                                length={
-                                  CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT
-                                }
+                                length={CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT}
                                 variant={isMobile ? "m-body-l" : "body-ml"}>
                                 {item?.description}
                               </CustomReadMore>
@@ -215,16 +195,8 @@ const MultiCardsCarousalWithGoldColorText = ({ props, padding }: any) => {
                         </Typography>
                       )}
                       {item?.primaryAction?.url && (
-                        <ActionBox
-                          onClick={() =>
-                            navigate(
-                              item?.primaryAction?.url,
-                              item?.primaryAction?.urlType
-                            )
-                          }>
-                          <Typography
-                            variant="link-m"
-                            sx={{ letterSpacing: "0.1em" }}>
+                        <ActionBox onClick={() => navigate(item?.primaryAction?.url, item?.primaryAction?.urlType)}>
+                          <Typography variant="link-m" sx={{ letterSpacing: "0.1em" }}>
                             {item?.primaryAction?.title}
                           </Typography>
                           <StyledChevronRight />

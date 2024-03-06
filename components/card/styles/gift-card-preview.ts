@@ -5,19 +5,17 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 import { transientProps } from "../../../utils/transientProps"
 
 export const PreviewContainer = styled(Box)(() => ({
-  backgroundColor: theme.palette?.neuPalette?.hexOne,
+  backgroundColor: theme.palette?.ihclPalette?.hexOne,
 }))
 
 export const MessageBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   position: "absolute",
   top: 0,
   padding: $isMobile
-    ? `${MobilePxToVw(42)} ${MobilePxToVw(43)} ${MobilePxToVw(
-        34
-      )} ${MobilePxToVw(39)}`
+    ? `${MobilePxToVw(42)} ${MobilePxToVw(43)} ${MobilePxToVw(34)} ${MobilePxToVw(39)}`
     : "2.34vw 2.39vw 2.03vw 2.18vw",
   display: "flex",
   flexDirection: "column",
@@ -26,7 +24,7 @@ export const MessageBox = styled(
 }))
 export const SenderBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   position: "absolute",
   bottom: $isMobile ? MobilePxToVw(34) : DesktopPxToVw(39),
@@ -35,7 +33,7 @@ export const SenderBox = styled(
 
 export const CardBox = styled(
   Grid,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   gap: $isMobile ? MobilePxToVw(30) : "2.05vw",
   justifyContent: "center",
@@ -44,7 +42,7 @@ export const CardBox = styled(
 export const CtaActionTypography = styled(Typography)(() => ({
   display: "flex",
   alignItems: "center",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const CustomMessage = styled(Box)(() => ({

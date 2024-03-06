@@ -77,7 +77,7 @@ const StoriesThemeTitles = (props: StoryThemeTypes) => {
       )}
       <Box
         sx={{
-          borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+          borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
         }}>
         {blogStore?.articleThemes?.slice(0, showThemes)?.map((themes: any, index: number) => (
           <Box
@@ -119,14 +119,14 @@ const StoriesThemeTitles = (props: StoryThemeTypes) => {
                 fontWeight: 400,
                 padding: "0vw !important",
                 height: "auto !important",
-                color: theme?.palette?.neuPalette?.hexTwo,
+                color: theme?.palette?.ihclPalette?.hexTwo,
                 textDecoration: "underline",
                 "&:hover": {
                   textDecoration: "underline",
                 },
               }}
             />
-            <ExpandMoreIcon sx={{ color: theme?.palette?.neuPalette?.hexTwo }} />
+            <ExpandMoreIcon sx={{ color: theme?.palette?.ihclPalette?.hexTwo }} />
           </StoryThemeButtonWrapper>
         )}
       </Box>

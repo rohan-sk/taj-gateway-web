@@ -6,8 +6,8 @@ import { urlFor } from "../../lib-sanity"
 import { Box, Grid, Typography } from "@mui/material"
 import { useMobileCheck } from "../../utils/isMobilView"
 import { CommonCarouselStyles } from "../hoc/carousal-component-styles"
-const CustomNextArrow = dynamic(() =>  import( "../hoc/custom-arrows").then((module)=> module.CustomNextArrow))
-const CustomPrevArrow = dynamic(() =>  import( "../hoc/custom-arrows").then((module)=> module.CustomPrevArrow))
+const CustomNextArrow = dynamic(() => import("../hoc/custom-arrows").then((module) => module.CustomNextArrow))
+const CustomPrevArrow = dynamic(() => import("../hoc/custom-arrows").then((module) => module.CustomPrevArrow))
 import {
   TitleTypo,
   TitleTypoDataBox,
@@ -133,18 +133,16 @@ const MediaImageCarousel = ({ props }: any) => {
                           padding: isMobile ? "0vw 3.125vw" : "0vw",
                         }}>
                         <Box
-                        loading="lazy"
+                          loading="lazy"
                           component="img"
                           alt={`-image`}
-                          width={isMobile ? "100%" : "unset"} 
+                          width={isMobile ? "100%" : "unset"}
                           height={isMobile ? "100%" : "59.2vh"}
                           sx={{
                             objectFit: "fill",
                             margin: "0 auto",
                             "@media (max-width: 1440px)": {
-                              maxHeight: isMobile
-                                ? MobilePxToVw(620)
-                                : DesktopPxToVw(620),
+                              maxHeight: isMobile ? MobilePxToVw(620) : DesktopPxToVw(620),
                             },
                           }}
                           src={urlFor(isMobile ? smallImage : largeImage).url()}
@@ -152,13 +150,8 @@ const MediaImageCarousel = ({ props }: any) => {
                       </ParentCarouselImageBox>
                     )}
                     {isMobile ? (
-                      <Box
-                        mt={"5vw"}
-                        sx={{ textAlign: "center" }}
-                        p={"0vw 3.125vw"}>
-                        <Typography
-                          variant={"m-heading-xs"}
-                          sx={{ color: theme?.palette?.neuPalette?.hexEleven }}>
+                      <Box mt={"5vw"} sx={{ textAlign: "center" }} p={"0vw 3.125vw"}>
+                        <Typography variant={"m-heading-xs"} sx={{ color: theme?.palette?.ihclPalette?.hexEleven }}>
                           {item?.title}
                         </Typography>
                       </Box>
@@ -166,7 +159,7 @@ const MediaImageCarousel = ({ props }: any) => {
                       <TitleTypoDataBox>
                         <TitleTypo
                           variant={isMobile ? "m-heading-xs" : "heading-xs"}
-                          sx={{ color: theme?.palette?.neuPalette?.hexOne }}>
+                          sx={{ color: theme?.palette?.ihclPalette?.hexOne }}>
                           {item?.title}
                         </TitleTypo>
                       </TitleTypoDataBox>
@@ -206,7 +199,7 @@ const MediaImageCarousel = ({ props }: any) => {
                           }}>
                           <ChildCarouselImageBox>
                             <Box
-                            loading="lazy"
+                              loading="lazy"
                               component="img"
                               alt={`-image`}
                               width={"100%"}
@@ -217,13 +210,11 @@ const MediaImageCarousel = ({ props }: any) => {
                                 border:
                                   selectedIndex === index
                                     ? isMobile
-                                      ? `0.156vw solid ${theme?.palette?.neuPalette?.hexTwo}`
-                                      : `0.08vw solid ${theme?.palette?.neuPalette?.hexTwo}`
+                                      ? `0.156vw solid ${theme?.palette?.ihclPalette?.hexTwo}`
+                                      : `0.08vw solid ${theme?.palette?.ihclPalette?.hexTwo}`
                                     : "",
                               }}
-                              src={urlFor(
-                                isMobile ? smallImage : largeImage
-                              ).url()}
+                              src={urlFor(isMobile ? smallImage : largeImage).url()}
                             />
                           </ChildCarouselImageBox>
                         </Box>
@@ -233,8 +224,7 @@ const MediaImageCarousel = ({ props }: any) => {
                 })}
               </Slider>
             </CommonCarouselStyles>
-            <CarouselPaginationTypo
-              variant={isMobile ? "m-heading-xs" : "heading-xs"}>
+            <CarouselPaginationTypo variant={isMobile ? "m-heading-xs" : "heading-xs"}>
               {selectedIndex + 1} / {props?.length}
             </CarouselPaginationTypo>
           </Box>

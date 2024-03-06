@@ -6,7 +6,7 @@ import { CommonCarouselStyles } from "../hoc/carousal-component-styles"
 import { ParentCarouselImageBox } from "../GalleryCarousel/styles"
 import Slider from "react-slick"
 const CustomCheckBox = dynamic(() => import("../hoc/CustomCheckBox/Checkbox").then((module) => module.CustomCheckBox))
-const RenderActionItem = dynamic(() =>  import("../hoc/actions/action-items-ui"))
+const RenderActionItem = dynamic(() => import("../hoc/actions/action-items-ui"))
 const CountryCodeDropdown = dynamic(() => import("../../utils/CountryCodeDropdown"))
 import AuthenticLoginStore from "../../features/login/store/authentication.login.store"
 import { IHCLContext } from "../../PresentationalComponents/lib/prepare-ihcl-context"
@@ -18,17 +18,8 @@ import { useAppNavigation } from "../../utils/NavigationUtility"
 import { ErrorMessageTypography } from "../Login/Styles/tabs.styles"
 import TextfieldValidator from "../../utils/validations/TextfieldValidator"
 
-import {
-  ModalContext,
-  PageContext,
-} from "../../PresentationalComponents/lib/prepare-page-context"
-import {
-  Account,
-  AccountNavigation,
-  ERROR_MESSAGES,
-  LoggedIn,
-  senderMobile,
-} from "../forms/gift-card-form/constants"
+import { ModalContext, PageContext } from "../../PresentationalComponents/lib/prepare-page-context"
+import { Account, AccountNavigation, ERROR_MESSAGES, LoggedIn, senderMobile } from "../forms/gift-card-form/constants"
 import {
   BoxComponent,
   CheckBox,
@@ -48,7 +39,7 @@ import {
   HighlightsTitle,
 } from "./styles/group-preview-carousal"
 import { useMobileCheck } from "../../utils/isMobilView"
-const PortableText = dynamic(() =>  import("../../lib/portable-text-serializers").then((module) => module.PortableText))
+const PortableText = dynamic(() => import("../../lib/portable-text-serializers").then((module) => module.PortableText))
 import { theme } from "../../lib/theme"
 import { observer } from "mobx-react-lite"
 import { getRecaptchaToken } from "../../utils/recaptcha"
@@ -80,14 +71,10 @@ const GroupPreviewCarousel = ({ props }: any) => {
   })
 
   //store
-  const userStore = IHCLContexts?.getGlobalStore(
-    GLOBAL_STORES.userStore
-  ) as UserStore
+  const userStore = IHCLContexts?.getGlobalStore(GLOBAL_STORES.userStore) as UserStore
 
   //api's
-  const authenticLoginStore = PageContextUse?.getPageStore(
-    PAGE_STORES.loginStore
-  ) as AuthenticLoginStore
+  const authenticLoginStore = PageContextUse?.getPageStore(PAGE_STORES.loginStore) as AuthenticLoginStore
 
   useEffect(() => {
     if (userStore?.userDetails?.userHash || CustomerHash) {
@@ -151,13 +138,12 @@ const GroupPreviewCarousel = ({ props }: any) => {
     (index: number) => {
       mainSliderReference?.slickGoTo(index, true)
     },
-    [mainSliderReference]
+    [mainSliderReference],
   )
 
   useEffect(() => {
     let userTier =
-      userStore.userDetails.userTier?.toLowerCase() ||
-      global?.window?.localStorage?.getItem("userTier")?.toLowerCase()
+      userStore.userDetails.userTier?.toLowerCase() || global?.window?.localStorage?.getItem("userTier")?.toLowerCase()
     if (userTier === "platinum") {
       setSelectedIndex(3)
       clickHandler(3)
@@ -171,13 +157,7 @@ const GroupPreviewCarousel = ({ props }: any) => {
       clickHandler(0)
       setSelectedIndex(0)
     }
-  }, [
-    bottomSliderReference,
-    clickHandler,
-    login,
-    mainSliderReference,
-    userStore.userDetails.userTier,
-  ])
+  }, [bottomSliderReference, clickHandler, login, mainSliderReference, userStore.userDetails.userTier])
 
   const handleNumberChange = (e: any) => {
     const { name, value } = e.target
@@ -199,15 +179,14 @@ const GroupPreviewCarousel = ({ props }: any) => {
       JSON.stringify({
         phone: mobile,
         recaptchaToken: recaptchaGenerated,
-      })
+      }),
     )
     if (response?.error === false) {
       if (response?.status === 201) {
         if (response?.data?.userType?.toLowerCase() === "existing") {
           primaryAction && navigate(primaryAction?.url, primaryAction?.urlType)
         } else if (response?.data?.userType?.toLowerCase() === "new") {
-          secondaryAction &&
-            navigate(secondaryAction?.url, secondaryAction?.urlType)
+          secondaryAction && navigate(secondaryAction?.url, secondaryAction?.urlType)
         } else {
           setOpenErrorMessage(true)
           setSnackMessage(response?.data || ERROR_MESSAGES?.NETWORK_ERROR)
@@ -215,18 +194,12 @@ const GroupPreviewCarousel = ({ props }: any) => {
       }
     } else {
       setOpenErrorMessage(true)
-      setSnackMessage(
-        response?.response?.data?.message || ERROR_MESSAGES?.NETWORK_ERROR
-      )
+      setSnackMessage(response?.response?.data?.message || ERROR_MESSAGES?.NETWORK_ERROR)
     }
   }
   return (
     <Grid container>
-      <SnackbarToast
-        open={openErrorMessage}
-        onClose={() => setOpenErrorMessage(false)}
-        Message={snackMessage}
-      />
+      <SnackbarToast open={openErrorMessage} onClose={() => setOpenErrorMessage(false)} Message={snackMessage} />
       <Grid
         item
         xs={12}
@@ -253,22 +226,21 @@ const GroupPreviewCarousel = ({ props }: any) => {
                     <>
                       <ParentCarouselImageBox key={index}>
                         <BoxComponent
-                        loading="lazy"
+                          loading="lazy"
                           component="img"
                           alt={`card-image`}
                           width={"100%"}
                           src={urlFor(item?.largeImage?.asset?._ref).url()}
                         />
                         <TitleWrapper>
-                          <SubTitleTypography
-                            variant={isMobile ? "m-body-l" : "heading-s"}>
+                          <SubTitleTypography variant={isMobile ? "m-body-l" : "heading-s"}>
                             {item?.subTitle}
                           </SubTitleTypography>
                           <DescriptionTypography
                             color={
                               isMobile
-                                ? theme?.palette?.neuPalette?.hexTwentyNine
-                                : theme?.palette?.neuPalette?.hexOne
+                                ? theme?.palette?.ihclPalette?.hexTwentyNine
+                                : theme?.palette?.ihclPalette?.hexOne
                             }
                             variant={isMobile ? "m-body-s" : "body-ml"}>
                             {item?.description}
@@ -277,28 +249,17 @@ const GroupPreviewCarousel = ({ props }: any) => {
                             <Box
                               sx={{
                                 position: "absolute",
-                                bottom: isMobile
-                                  ? MobilePxToVw(20)
-                                  : DesktopPxToVw(40),
+                                bottom: isMobile ? MobilePxToVw(20) : DesktopPxToVw(40),
                               }}>
                               <Divider
                                 sx={{
-                                  width: isMobile
-                                    ? MobilePxToVw(330)
-                                    : DesktopPxToVw(330),
-                                  borderColor:
-                                    theme?.palette?.neuPalette?.hexTwentyNine,
+                                  width: isMobile ? MobilePxToVw(330) : DesktopPxToVw(330),
+                                  borderColor: theme?.palette?.ihclPalette?.hexTwentyNine,
                                 }}></Divider>
-                              <CarouselTitle
-                                variant={
-                                  isMobile ? "m-heading-xs" : "heading-s"
-                                }>
+                              <CarouselTitle variant={isMobile ? "m-heading-xs" : "heading-s"}>
                                 {item?.title}
                               </CarouselTitle>
-                              <HighlightsTitle
-                                variant={
-                                  isMobile ? "m-heading-xs" : "heading-xm"
-                                }>
+                              <HighlightsTitle variant={isMobile ? "m-heading-xs" : "heading-xm"}>
                                 {item?.highLights}
                               </HighlightsTitle>
                             </Box>
@@ -311,9 +272,7 @@ const GroupPreviewCarousel = ({ props }: any) => {
               ))}
             </Slider>
           </CommonCarouselStyles>
-          <CommonCarouselStyles
-            mt={isMobile ? "4.375vw" : "1.563vw"}
-            mr={"0.2vw"}>
+          <CommonCarouselStyles mt={isMobile ? "4.375vw" : "1.563vw"} mr={"0.2vw"}>
             <Slider
               {...secondSettings}
               asNavFor={mainSliderReference}
@@ -329,7 +288,7 @@ const GroupPreviewCarousel = ({ props }: any) => {
                   }}>
                   <CarouselBoxWrapper $border={selectedIndex === index}>
                     <StyledImageBox
-                    loading="lazy"
+                      loading="lazy"
                       component="img"
                       alt={`-image`}
                       width={"100%"}
@@ -337,10 +296,7 @@ const GroupPreviewCarousel = ({ props }: any) => {
                     />
                   </CarouselBoxWrapper>
                   <TitleBox>
-                    <StyledTypography
-                      variant={isMobile ? "m-body-s" : "body-ml"}>
-                      {item?.title}
-                    </StyledTypography>
+                    <StyledTypography variant={isMobile ? "m-body-s" : "body-ml"}>{item?.title}</StyledTypography>
                   </TitleBox>
                 </Box>
               ))}
@@ -364,17 +320,8 @@ const GroupPreviewCarousel = ({ props }: any) => {
             />
           </LoginBoxWrapper>
         ) : (
-          <GridContainer
-            item
-            xs={12}
-            sm={12}
-            md={6}
-            lg={6}
-            xl={6}
-            sx={{ margin: 0 }}>
-            <TitleTypography variant={isMobile ? "m-heading-s" : "heading-s"}>
-              {props?.[1]?.title}
-            </TitleTypography>
+          <GridContainer item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ margin: 0 }}>
+            <TitleTypography variant={isMobile ? "m-heading-s" : "heading-s"}>{props?.[1]?.title}</TitleTypography>
             <InputBox>
               <CountryCodeDropdown
                 countryCode={countryCode}
@@ -389,9 +336,7 @@ const GroupPreviewCarousel = ({ props }: any) => {
                 variant="standard"
                 type="tel"
                 onInput={(e: any) => {
-                  e.target.value = Math.max(0, parseInt(e.target.value))
-                    .toString()
-                    .slice(0, 10)
+                  e.target.value = Math.max(0, parseInt(e.target.value)).toString().slice(0, 10)
                 }}
                 name={senderMobile}
                 value={mobile}
@@ -399,30 +344,18 @@ const GroupPreviewCarousel = ({ props }: any) => {
               />
             </InputBox>
             {errorMessage?.senderMobile && mobile?.length < 10 && (
-              <ErrorMessageTypography>
-                {errorMessage?.senderMobile}
-              </ErrorMessageTypography>
+              <ErrorMessageTypography>{errorMessage?.senderMobile}</ErrorMessageTypography>
             )}
             <CheckBox>
               <Box sx={{ marginRight: "-1vw" }}>
-                <CustomCheckBox
-                  onChange={() => setCheck(!check)}
-                  checked={check}
-                  withBorder={true}
-                />
+                <CustomCheckBox onChange={() => setCheck(!check)} checked={check} withBorder={true} />
               </Box>
-              <Box
-                className="portableText"
-                ml={isMobile ? MobilePxToVw(11) : DesktopPxToVw(16)}>
-                {props?.[1]?.singleContent && (
-                  <PortableText blocks={props?.[1]?.singleContent?.[0]} />
-                )}
+              <Box className="portableText" ml={isMobile ? MobilePxToVw(11) : DesktopPxToVw(16)}>
+                {props?.[1]?.singleContent && <PortableText blocks={props?.[1]?.singleContent?.[0]} />}
               </Box>
             </CheckBox>
             {errorMessage?.CheckBoxError && !check && (
-              <ErrorMessageTypography>
-                {errorMessage?.CheckBoxError}
-              </ErrorMessageTypography>
+              <ErrorMessageTypography>{errorMessage?.CheckBoxError}</ErrorMessageTypography>
             )}
             <RenderActionItem
               url={primaryAction?.url}

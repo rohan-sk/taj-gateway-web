@@ -370,7 +370,7 @@ const DetailsCard = (props: any) => {
           handleClose={handleModalClose}
           CloseIcon={ICONS?.CLOSE_GOLD_ICON}
           webCloseIcon={ICONS?.CLOSE_WHITE_ICON}
-          ModalCloseButtonColor={theme?.palette?.neuPalette?.hexOne}
+          ModalCloseButtonColor={theme?.palette?.ihclPalette?.hexOne}
           mSiteCloseStyles={{
             padding: `${MobilePxToVw(67.5)} ${MobilePxToVw(59.45)} ${MobilePxToVw(45.63)} 0`,
           }}

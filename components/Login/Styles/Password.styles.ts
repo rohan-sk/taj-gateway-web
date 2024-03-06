@@ -51,7 +51,7 @@ export const RememberMeTypography = styled(Typography)(() => ({
 }))
 
 export const StyledTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const LoginWithOtpButton = styled(Button)(() => ({
@@ -69,10 +69,10 @@ export const StyledTextField: any = styled(TextField)(() => ({
   "@media (max-width: 640px)": {
     padding: "0vw",
     alignItems: "center",
-    width:MobilePxToVw(540)
+    width: MobilePxToVw(540),
   },
   "&  .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "3.750vw !important",
@@ -82,7 +82,7 @@ export const StyledTextField: any = styled(TextField)(() => ({
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexEleven,
+      color: theme?.palette?.ihclPalette?.hexEleven,
       fontWeight: 300,
       opacity: 0.8,
       fontSize: "1.2vw",

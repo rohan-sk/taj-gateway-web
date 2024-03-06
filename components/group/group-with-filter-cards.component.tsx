@@ -18,7 +18,7 @@ import { SelectCountryTypography } from "../banner/styles"
 import { useAppNavigation } from "../../utils/NavigationUtility"
 import { useMobileCheck } from "../../utils/isMobilView"
 const VideoPlayerModal = dynamic(() => import("../modal/video-player-modal.component"))
-const RenderActionItem = dynamic(() => import( "../hoc/actions/action-items-ui"))
+const RenderActionItem = dynamic(() => import("../hoc/actions/action-items-ui"))
 import { triggerEvent } from "../../utils/analytics"
 import { GLOBAL_STORES } from "../../utils/Constants"
 import { GAStore, UserStore } from "../../store"
@@ -31,11 +31,7 @@ import { MemberDataLayer } from "../../utils/analytics/member-data-layer"
 import DesktopPxToVw from "../../utils/DesktopFontCalc"
 import VideoSEOScript from "../../utils/VideoSEOScript"
 
-const GroupWithFilterCards = ({
-  props,
-  alternateAllLinks,
-  analyticsData,
-}: any) => {
+const GroupWithFilterCards = ({ props, alternateAllLinks, analyticsData }: any) => {
   // this Component need to be build under different groups
   const isMobile = useMobileCheck()
   const { getOptimizeImageUrl } = useImageUtility()
@@ -45,21 +41,15 @@ const GroupWithFilterCards = ({
   const [selectedIndex, setSelectedIndex] = useState(-1)
   const [countToShowCards, setCountToShowCards] = useState(numberOfCards)
   const [selectCountry, setSelectCountry] = useState(
-    isMobile
-      ? props?.[0]?.title?.mobileTitle || props?.[0]?.title?.desktopTitle
-      : props?.[0]?.title?.desktopTitle
+    isMobile ? props?.[0]?.title?.mobileTitle || props?.[0]?.title?.desktopTitle : props?.[0]?.title?.desktopTitle,
   )
   const [videoPlay, setVideoPlay] = useState<boolean>(false)
-  const [selectFilterImage, setSelectFilterImage] = useState([
-    ...props[0]?.items,
-  ])
+  const [selectFilterImage, setSelectFilterImage] = useState([...props[0]?.items])
   const [showTitle, setShowTitle] = useState(-1)
-  const colorOne = theme?.palette?.neuPalette?.hexOne
-  const colorTwo = theme?.palette?.neuPalette?.hexTwo
+  const colorOne = theme?.palette?.ihclPalette?.hexOne
+  const colorTwo = theme?.palette?.ihclPalette?.hexTwo
   const IHCLContexts = useContext(IHCLContext)
-  const userStore = IHCLContexts?.getGlobalStore(
-    GLOBAL_STORES.userStore
-  ) as UserStore
+  const userStore = IHCLContexts?.getGlobalStore(GLOBAL_STORES.userStore) as UserStore
   const handleModelClose = () => setVideoPlay(!videoPlay)
   //will remove commented code after  analytics events got signoff
   // const context = useContext(IHCLContext)
@@ -111,9 +101,7 @@ const GroupWithFilterCards = ({
                 setCountToShowCards(numberOfCards),
                 setSelectFilterImage(item?.items),
                 setSelectCountry(
-                  isMobile
-                    ? item?.title?.mobileTitle || item?.title?.desktopTitle
-                    : item?.title?.desktopTitle
+                  isMobile ? item?.title?.mobileTitle || item?.title?.desktopTitle : item?.title?.desktopTitle,
                 )
               //will remove commented code after  analytics events got signoff
               // handleCountry(
@@ -131,9 +119,7 @@ const GroupWithFilterCards = ({
                 backgroundColor: index == selectedIndex + 1 ? colorTwo : "",
               },
             }}>
-            {isMobile
-              ? item?.title?.mobileTitle || item?.title?.desktopTitle
-              : item?.title?.desktopTitle}
+            {isMobile ? item?.title?.mobileTitle || item?.title?.desktopTitle : item?.title?.desktopTitle}
             {!alternateAllLinks?.[0]?.title && ` (${item?.items?.length})`}
           </StyledButton>
         ))}
@@ -157,114 +143,77 @@ const GroupWithFilterCards = ({
         </AlternateAllLinksWrappingBox>
       )}
 
-      <Grid
-        container
-        rowGap={"2.083vw"}
-        justifyContent={"center"}
-        columnGap={"2.083vw"}
-        sx={{ marginTop: "3.125vw" }}>
-        {selectFilterImage
-          ?.slice(0, countToShowCards)
-          ?.map((item: any, index: number) => (
-            <Grid
-              key={index}
-              item
-              xl={
-                item.largeVariant === "ihcl.core.card.social-media-card-image"
-                  ? 3.76
-                  : 1.72
-              }
-              lg={
-                item.largeVariant === "ihcl.core.card.social-media-card-image"
-                  ? 3.76
-                  : 1.72
-              }
-              md={
-                item.largeVariant === "ihcl.core.card.social-media-card-image"
-                  ? 3.76
-                  : 1.72
-              }
-              sm={
-                isMobile
-                  ? 6
-                  : item.largeVariant ===
-                    "ihcl.core.card.social-media-card-image"
-                  ? 4
-                  : 1.72
-              }
-              xs={10}>
-              <CardsBox
-                sx={{
-                  cursor: "pointer",
-                  position: isMobile ? "unset" : "relative",
-                }}
-                onClick={() => {
-                  navigate(
-                    item?.primaryAction?.url,
-                    item?.primaryAction?.urlType
-                  )
-                  item?.mediaType === "video" && setVideoPlay(!videoPlay)
-                }}
-                onMouseEnter={() => setShowTitle(index)}
-                onMouseLeave={() => setShowTitle(-1)}>
-                <>
-                  {item?.mediaType === "video" && videoPlay ? (
-                    item?.videoAsset?.videoPlay?.asset?._ref && (
-                      <>
-                      <VideoSEOScript {...item?.videoAsset}/>
+      <Grid container rowGap={"2.083vw"} justifyContent={"center"} columnGap={"2.083vw"} sx={{ marginTop: "3.125vw" }}>
+        {selectFilterImage?.slice(0, countToShowCards)?.map((item: any, index: number) => (
+          <Grid
+            key={index}
+            item
+            xl={item.largeVariant === "ihcl.core.card.social-media-card-image" ? 3.76 : 1.72}
+            lg={item.largeVariant === "ihcl.core.card.social-media-card-image" ? 3.76 : 1.72}
+            md={item.largeVariant === "ihcl.core.card.social-media-card-image" ? 3.76 : 1.72}
+            sm={isMobile ? 6 : item.largeVariant === "ihcl.core.card.social-media-card-image" ? 4 : 1.72}
+            xs={10}>
+            <CardsBox
+              sx={{
+                cursor: "pointer",
+                position: isMobile ? "unset" : "relative",
+              }}
+              onClick={() => {
+                navigate(item?.primaryAction?.url, item?.primaryAction?.urlType)
+                item?.mediaType === "video" && setVideoPlay(!videoPlay)
+              }}
+              onMouseEnter={() => setShowTitle(index)}
+              onMouseLeave={() => setShowTitle(-1)}>
+              <>
+                {item?.mediaType === "video" && videoPlay ? (
+                  item?.videoAsset?.videoPlay?.asset?._ref && (
+                    <>
+                      <VideoSEOScript {...item?.videoAsset} />
                       <VideoPlayerModal
                         videoUrl={item?.videoAsset?.videoPlay?.asset?._ref}
                         handleModalOpen={videoPlay}
                         handleModalClose={handleModelClose}
                       />
-                      </>
-                    )
-                  ) : (
-                    <>
-                      {item?.largeImage?.asset?._ref && (
-                        <Box
-                          width={"100%"}
-                          height={isMobile ? "auto" : DesktopPxToVw(155)}
-                          loading="lazy"
-                          component="img"
-                          alt="award-image"
-                          sx={{ objectFit: "cover" }}
-                          src={getOptimizeImageUrl(
-                            urlFor(item?.largeImage?.asset?._ref)?.url(),
-                            3
-                          )}
-                        />
-                      )}
                     </>
-                  )}
-                </>
-                {item?.title && index === showTitle && (
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      height: "100%",
-                      width: "100%",
-                    }}>
-                    <TitleMainBox>
-                      <Typography
-                        variant="heading-xs"
-                        sx={{ color: theme?.palette?.neuPalette?.hexOne }}>
-                        {item?.title}
-                      </Typography>
-                    </TitleMainBox>
-                  </Box>
+                  )
+                ) : (
+                  <>
+                    {item?.largeImage?.asset?._ref && (
+                      <Box
+                        width={"100%"}
+                        height={isMobile ? "auto" : DesktopPxToVw(155)}
+                        loading="lazy"
+                        component="img"
+                        alt="award-image"
+                        sx={{ objectFit: "cover" }}
+                        src={getOptimizeImageUrl(urlFor(item?.largeImage?.asset?._ref)?.url(), 3)}
+                      />
+                    )}
+                  </>
                 )}
-              </CardsBox>
-            </Grid>
-          ))}
+              </>
+              {item?.title && index === showTitle && (
+                <Box
+                  sx={{
+                    position: "absolute",
+                    height: "100%",
+                    width: "100%",
+                  }}>
+                  <TitleMainBox>
+                    <Typography variant="heading-xs" sx={{ color: theme?.palette?.ihclPalette?.hexOne }}>
+                      {item?.title}
+                    </Typography>
+                  </TitleMainBox>
+                </Box>
+              )}
+            </CardsBox>
+          </Grid>
+        ))}
       </Grid>
 
       {selectFilterImage?.length > countToShowCards && (
         <ActionGrid item lg={12} xl={12}>
-          <ActionBox
-            onClick={() =>
-              setCountToShowCards(countToShowCards + numberOfCards)
-            }>
+          <ActionBox onClick={() => setCountToShowCards(countToShowCards + numberOfCards)}>
             <Typography variant="link-m">{CONSTANTS?.LOAD_MORE}</Typography>
             <ExpandMoreIconStyled sx={{ fontSize: "1.2vw" }} />
           </ActionBox>

@@ -23,7 +23,7 @@ const CardWithBoldTextHyperlinkComponent = (props: any) => {
             <PortableText
               blocks={{
                 ...content,
-                color: theme?.palette?.neuPalette?.hexThirtyFour,
+                color: theme?.palette?.ihclPalette?.hexThirtyFour,
                 variant: isMobile ? "m-body-xxl" : "body-xxl",
               }}
               key={index}

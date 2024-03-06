@@ -294,7 +294,7 @@ const MemberFormComponent = ({
               }}
               iconStyle={{
                 position: "static !important",
-                color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+                color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
                 fontSize: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
               }}
               countryCode={countryCode}

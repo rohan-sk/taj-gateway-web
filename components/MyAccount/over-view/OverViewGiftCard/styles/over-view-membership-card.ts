@@ -4,16 +4,16 @@ import { transientProps } from "../../../../../utils/transientProps"
 
 export const MemberShipCardWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean; $isChamber: boolean }>(({ $isMobile, $isChamber }) => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   padding: $isMobile ? "3.125vw 4.6685vw" : "1.042vw  1.563vw",
   backgroundColor: $isChamber ? "rgba(173, 139, 58, 0.10)" : "",
 }))
 
 export const SpacerBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   marginBottom: $isMobile ? "3.125vw" : "1.024vw",
 }))
@@ -38,27 +38,25 @@ export const StyledAccordion = styled(Accordion)(() => ({
   "& .MuiAccordionSummary-content ": {
     margin: 0,
   },
-  "& .MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters":
-    {
-      padding: "0px",
-      minHeight: "unset",
-    },
-  "& .MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters":
-    {
-      margin: "0px!important",
-    },
+  "& .MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters": {
+    padding: "0px",
+    minHeight: "unset",
+  },
+  "& .MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters": {
+    margin: "0px!important",
+  },
 }))
 
 export const StyledAccordionDetails = styled(
   AccordionDetails,
-  transientProps
+  transientProps,
 )<{ $mobile: boolean }>(({ $mobile }) => ({
   marginBottom: $mobile ? "8.594vw" : "",
 }))
 
 export const OverviewLoadMoreButton = styled(Button)(() => ({
-  borderColor: `${theme?.palette?.neuPalette?.hexTwo}!important`,
-  color: `${theme?.palette?.neuPalette?.hexTwo}`,
+  borderColor: `${theme?.palette?.ihclPalette?.hexTwo}!important`,
+  color: `${theme?.palette?.ihclPalette?.hexTwo}`,
   width: "37.188vw",
   padding: "2.5vw 0vw",
   display: "flex",

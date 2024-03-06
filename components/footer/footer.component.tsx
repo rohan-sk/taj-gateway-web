@@ -91,7 +91,7 @@ const Footer = (props: FooterProps) => {
   const isMobile = useMobileCheck()
   const navigate = useAppNavigation()
   const context = useContext(IHCLContext)
-  const whiteColor = theme?.palette?.neuPalette?.hexOne
+  const whiteColor = theme?.palette?.ihclPalette?.hexOne
 
   const [error, setError] = useState<boolean>(false)
   const [disable, setDisable] = useState<boolean>(false)
@@ -206,7 +206,7 @@ const Footer = (props: FooterProps) => {
                     },
                   },
                   "& .Mui-disabled": {
-                    WebkitTextFillColor: `${theme?.palette?.neuPalette?.hexOne}!important`,
+                    WebkitTextFillColor: `${theme?.palette?.ihclPalette?.hexOne}!important`,
                   },
                 }}>
                 <FooterTextField
@@ -219,7 +219,7 @@ const Footer = (props: FooterProps) => {
                   onChange={handleChangeForm}
                   name={senderEmail}
                   inputProps={{
-                    style: { color: theme?.palette?.neuPalette?.hexOne },
+                    style: { color: theme?.palette?.ihclPalette?.hexOne },
                   }}
                 />
 
@@ -543,7 +543,10 @@ const Footer = (props: FooterProps) => {
             {brand?.title && (
               <Typography
                 variant={isMobile ? "m-heading-xs" : "heading-xs"}
-                sx={{ color: theme?.palette?.neuPalette?.hexOne, mb: isMobile ? MobilePxToVw(10) : DesktopPxToVw(10) }}>
+                sx={{
+                  color: theme?.palette?.ihclPalette?.hexOne,
+                  mb: isMobile ? MobilePxToVw(10) : DesktopPxToVw(10),
+                }}>
                 {brand?.title}
               </Typography>
             )}

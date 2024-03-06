@@ -345,7 +345,7 @@ const RedeemGiftCard = (props: any) => {
                     <Typography
                       variant={isMobile ? "m-body-s" : "body-m"}
                       sx={{
-                        color: theme.palette.neuPalette.hexThirtyTwo,
+                        color: theme.palette.ihclPalette.hexThirtyTwo,
                       }}>{`Gift card number ${formValues?.GCNumber} has Expired. Please enter a new gift card.`}</Typography>
                   )}
                   {redeemState === "success" && gcRedeemsLimit && (
@@ -394,7 +394,7 @@ const RedeemGiftCard = (props: any) => {
                           fontFamily: "Inter",
                           fontWeight: "300 !important",
                           fontSize: isMobile ? MobilePxToVw(22) : DesktopPxToVw(22),
-                          color: `${theme.palette.neuPalette?.hexSeventeen} !important`,
+                          color: `${theme.palette.ihclPalette?.hexSeventeen} !important`,
                         },
                         "& .MuiInputBase-input": {
                           lineHeight: "140%",
@@ -402,7 +402,7 @@ const RedeemGiftCard = (props: any) => {
                           fontFamily: "Inter",
                           fontWeight: "300 !important",
                           fontSize: isMobile ? MobilePxToVw(22) : DesktopPxToVw(22),
-                          color: `${theme.palette.neuPalette?.hexSeventeen} !important`,
+                          color: `${theme.palette.ihclPalette?.hexSeventeen} !important`,
                           paddingBottom: isMobile ? MobilePxToVw(5) : DesktopPxToVw(10),
                         },
                       }}
@@ -460,7 +460,7 @@ const RedeemGiftCard = (props: any) => {
                             fontStyle: "normal",
                             fontFamily: "Inter",
                             fontSize: isMobile ? MobilePxToVw(22) : DesktopPxToVw(22),
-                            color: `${theme.palette.neuPalette?.hexSeventeen}`,
+                            color: `${theme.palette.ihclPalette?.hexSeventeen}`,
                             paddingBottom: isMobile ? MobilePxToVw(5) : DesktopPxToVw(10),
                           },
                           "& input::placeholder": {
@@ -468,7 +468,7 @@ const RedeemGiftCard = (props: any) => {
                             lineHeight: "140%",
                             fontStyle: "normal",
                             fontFamily: "Inter",
-                            color: `${theme.palette.neuPalette?.hexSeventeen} !important`,
+                            color: `${theme.palette.ihclPalette?.hexSeventeen} !important`,
                             fontSize: isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),
                             opacity: 1,
                           },
@@ -477,7 +477,7 @@ const RedeemGiftCard = (props: any) => {
                       {formErrors[GCPin] && formValues[GCPin]?.length > 0 && formValues[GCPin]?.length < 6 && (
                         <FormHelperText
                           sx={{
-                            color: theme?.palette?.neuPalette?.hexTwentySeven,
+                            color: theme?.palette?.ihclPalette?.hexTwentySeven,
                             fontSize: isMobile ? MobilePxToVw(16) : "0.8vw",
                           }}>
                           {ErrorMessage[GCPin]}
@@ -509,7 +509,7 @@ const RedeemGiftCard = (props: any) => {
                 <ErrorTypographyBox>
                   <Typography
                     variant={isMobile ? "m-body-m" : "body-m"}
-                    color={theme?.palette?.neuPalette?.hexTwentySeven}
+                    color={theme?.palette?.ihclPalette?.hexTwentySeven}
                     sx={{ textAlign: "justify", mt: isMobile ? 0 : DesktopPxToVw(10) }}>
                     {props?.wrongMsg}
                   </Typography>
@@ -557,7 +557,7 @@ const RedeemGiftCard = (props: any) => {
                             lineHeight: "140%",
                             fontStyle: "normal",
                             fontFamily: "Inter",
-                            color: `${theme.palette.neuPalette?.hexSeventeen} !important`,
+                            color: `${theme.palette.ihclPalette?.hexSeventeen} !important`,
                             fontSize: isMobile ? MobilePxToVw(22) : DesktopPxToVw(22),
                           },
                           "& .MuiInputBase-input": {
@@ -565,7 +565,7 @@ const RedeemGiftCard = (props: any) => {
                             lineHeight: "140%",
                             fontStyle: "normal",
                             fontFamily: "Inter",
-                            color: `${theme.palette.neuPalette?.hexSeventeen} !important`,
+                            color: `${theme.palette.ihclPalette?.hexSeventeen} !important`,
                             fontSize: isMobile ? MobilePxToVw(22) : DesktopPxToVw(22),
                           },
                         }}
@@ -606,7 +606,7 @@ const RedeemGiftCard = (props: any) => {
                 <ErrorTypographyBox>
                   <Typography
                     variant={isMobile ? "m-body-m" : "body-m"}
-                    color={theme?.palette?.neuPalette?.hexTwentySeven}>
+                    color={theme?.palette?.ihclPalette?.hexTwentySeven}>
                     {addTenderModeErrorMsg}
                   </Typography>
                 </ErrorTypographyBox>

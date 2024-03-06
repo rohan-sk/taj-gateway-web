@@ -7,7 +7,9 @@ import { observer } from "mobx-react-lite"
 import { ROUTES } from "../../utils/routes"
 import { GLOBAL_STORES } from "../../utils/Constants"
 import { useAppNavigation } from "../../utils/NavigationUtility"
-const YellowBorderCheckbox = dynamic(() => import("../hoc/yellow-border-checkbox").then((module) => module.YellowBorderCheckbox))
+const YellowBorderCheckbox = dynamic(() =>
+  import("../hoc/yellow-border-checkbox").then((module) => module.YellowBorderCheckbox),
+)
 import { CloseGoldIcon, SelectedIcon } from "../../utils/customIcons"
 import { ClickAwayListener, FormGroup, Stack, TextField, Typography } from "@mui/material"
 import { IHCLContext } from "../../PresentationalComponents/lib/prepare-ihcl-context"
@@ -27,14 +29,17 @@ import {
 import SpecialCodeData from "../header/promo-codes.json"
 import { ErrorTypography } from "./styles/booking-menu"
 
-const BookingFlowSpecialCodeComponent = ({ handleSpecialCode, boxStyles, currentRoomCount = 1, isGinger = false }: any) => {
+const BookingFlowSpecialCodeComponent = ({
+  handleSpecialCode,
+  boxStyles,
+  currentRoomCount = 1,
+  isGinger = false,
+}: any) => {
   const navigate = useAppNavigation()
   const context: any = useContext(IHCLContext)
 
   //* Booking Flow Global Store
-  const bookingFlowGlobalStore = context?.getGlobalStore(
-    GLOBAL_STORES?.bookingFlowStore
-  ) as BookingFlowGlobalStore
+  const bookingFlowGlobalStore = context?.getGlobalStore(GLOBAL_STORES?.bookingFlowStore) as BookingFlowGlobalStore
 
   const { userEnteredPromoCode, setUserEnteredPromoCode, isCouponCodeOpen } = bookingFlowGlobalStore
 
@@ -43,9 +48,7 @@ const BookingFlowSpecialCodeComponent = ({ handleSpecialCode, boxStyles, current
   const [selectedIndex, setSelectedIndex] = useState<number>(isCouponCodeOpen ? 6 : -1)
 
   const isSpecialCodeExist =
-    userEnteredPromoCode?.promoCode ||
-    userEnteredPromoCode?.couponCode ||
-    userEnteredPromoCode?.agentId
+    userEnteredPromoCode?.promoCode || userEnteredPromoCode?.couponCode || userEnteredPromoCode?.agentId
 
   const handleCode = (event: any) => {
     setUserEnteredCode(event.target.value)
@@ -125,7 +128,7 @@ const BookingFlowSpecialCodeComponent = ({ handleSpecialCode, boxStyles, current
                   <ColumnDirectionBox>
                     {isSpecialCodeExist && index == userEnteredPromoCode?.index ? (
                       <SpecialCodeStack>
-                        <Typography variant="body-ml" sx={{ color: theme.palette.neuPalette.hexTwo }}>
+                        <Typography variant="body-ml" sx={{ color: theme.palette.ihclPalette.hexTwo }}>
                           {isSpecialCodeExist}
                         </Typography>
                         <CloseGoldIcon

@@ -20,12 +20,12 @@ export const TextWrapper = styled(Typography)(() => ({
   alignItems: "center",
   justifyContent: "right",
   textDecoration: "underline",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const StyledTypography = styled(Typography)(() => ({
   fontWeight: 700,
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     marginBottom: MobilePxToVw(10),
   },
@@ -79,12 +79,12 @@ export const StyledButton = styled(
   Button,
   transientProps,
 )<{ $active: boolean }>(({ $active }) => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
-  backgroundColor: $active ? theme?.palette?.neuPalette?.hexTwo : theme?.palette?.neuPalette?.hexOne,
-  color: $active ? theme?.palette?.neuPalette?.hexOne : theme?.palette?.neuPalette?.hexTwo,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
+  backgroundColor: $active ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.ihclPalette?.hexOne,
+  color: $active ? theme?.palette?.ihclPalette?.hexOne : theme?.palette?.ihclPalette?.hexTwo,
   "&:hover": {
-    backgroundColor: $active ? theme?.palette?.neuPalette?.hexTwo : theme?.palette?.neuPalette?.hexOne,
-    color: $active ? theme?.palette?.neuPalette?.hexOne : theme?.palette?.neuPalette?.hexTwo,
+    backgroundColor: $active ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.ihclPalette?.hexOne,
+    color: $active ? theme?.palette?.ihclPalette?.hexOne : theme?.palette?.ihclPalette?.hexTwo,
   },
   whiteSpace: "nowrap",
   "@media (max-width: 640px)": {
@@ -101,7 +101,7 @@ export const StyledEdit = styled(
   display: "flex",
   justifyContent: "right",
   alignItems: "center",
-  color: !$withoutEdit ? theme?.palette?.neuPalette?.hexTwo : "gray",
+  color: !$withoutEdit ? theme?.palette?.ihclPalette?.hexTwo : "gray",
   cursor: $withoutEdit ? "not-allowed" : "pointer",
 }))
 

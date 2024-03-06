@@ -302,7 +302,7 @@ const MediaWithContentComponent = ({
                     ? textColor
                     : titleTextColor
                     ? titleTextColor
-                    : theme?.palette?.neuPalette?.hexSeventeen,
+                    : theme?.palette?.ihclPalette?.hexSeventeen,
                 }}
                 component={headingElementForCard || "h3"}>
                 {title}
@@ -349,7 +349,7 @@ const MediaWithContentComponent = ({
                     ? textColor
                     : titleTextColor
                     ? titleTextColor
-                    : theme?.palette?.neuPalette?.hexSeventeen,
+                    : theme?.palette?.ihclPalette?.hexSeventeen,
                 }}>
                 <CustomReadMore
                   length={more}
@@ -359,7 +359,7 @@ const MediaWithContentComponent = ({
                       ? textColor
                       : titleTextColor
                       ? titleTextColor
-                      : theme?.palette?.neuPalette?.hexSeventeen,
+                      : theme?.palette?.ihclPalette?.hexSeventeen,
                   }}>
                   {description}
                 </CustomReadMore>

@@ -105,7 +105,7 @@ const ArticleTags = (props: TagTypeDeclaritions) => {
                 fontWeight: 400,
                 padding: "0vw",
                 height: "auto",
-                color: theme?.palette?.neuPalette?.hexTwo,
+                color: theme?.palette?.ihclPalette?.hexTwo,
                 textDecoration: "underline",
                 "&:hover": {
                   textDecoration: "underline",
@@ -120,7 +120,7 @@ const ArticleTags = (props: TagTypeDeclaritions) => {
                 },
               }}
             />
-            <ExpandMoreIcon sx={{ color: theme?.palette?.neuPalette?.hexTwo }} />
+            <ExpandMoreIcon sx={{ color: theme?.palette?.ihclPalette?.hexTwo }} />
           </ArticleTagsActionBox>
         )}
     </Box>

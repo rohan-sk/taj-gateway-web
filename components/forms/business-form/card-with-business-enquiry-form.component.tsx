@@ -793,13 +793,13 @@ const BusinessSMEEnquiryForm = (props: any) => {
                   variant={isMobile ? "m-body-s" : "link-m"}
                   sx={{
                     textDecoration: "none",
-                    color: theme?.palette?.neuPalette?.hexTwo,
+                    color: theme?.palette?.ihclPalette?.hexTwo,
                   }}>
                   +
                 </Typography>
                 <Typography
                   sx={{
-                    color: theme?.palette?.neuPalette?.hexTwo,
+                    color: theme?.palette?.ihclPalette?.hexTwo,
                   }}
                   variant={isMobile ? "m-body-s" : "link-m"}>
                   ADD MEMBER

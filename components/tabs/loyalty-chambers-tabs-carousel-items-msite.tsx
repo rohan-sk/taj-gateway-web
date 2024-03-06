@@ -2,13 +2,7 @@ import Slider from "react-slick"
 import { Box, Grid, Typography } from "@mui/material"
 import { theme } from "../../lib/theme"
 import "slick-carousel/slick/slick.css"
-import {
-  ChipTextItems,
-  RichTextItems,
-  SpecificationTagsItems,
-  aestheticItems,
-  parameterMapItems,
-} from "../types"
+import { ChipTextItems, RichTextItems, SpecificationTagsItems, aestheticItems, parameterMapItems } from "../types"
 import React, { useContext, useState } from "react"
 import "slick-carousel/slick/slick-theme.css"
 import { MobilePxToVw } from "../../utils/DesktopFontCalc"
@@ -37,29 +31,19 @@ import { useMobileCheck } from "../../utils/isMobilView"
 import RenderActionItem from "../hoc/actions/action-items-ui"
 import MultiRowTitle from "../hoc/title/multi-row-title"
 
-const LoyaltyTabsChambersCardCarousalMsite = ({
-  props,
-  selectTabIndex,
-  aesthetic,
-}: any) => {
+const LoyaltyTabsChambersCardCarousalMsite = ({ props, selectTabIndex, aesthetic }: any) => {
   const extractItemsData = props?.tabs?.[selectTabIndex]?.tabItems?.[0]?.items
   let selectedGroupTitleProps = props?.tabs?.[selectTabIndex]?.tabItems?.[0]
   const context = useContext(IHCLContext)
   const isMobile = useMobileCheck()
   const { cardBackgroundColor } = useAesthetics(aesthetic?._ref)
-  const [more, setMore] = useState<number>(
-    props?.charactersLimit ?? CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT
-  )
+  const [more, setMore] = useState<number>(props?.charactersLimit ?? CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT)
   const backgroundColor =
-    cardBackgroundColor ===
-      theme?.palette?.neuPalette?.hexEleven?.toLowerCase() ||
-    cardBackgroundColor ===
-      theme?.palette?.neuPalette?.hexTwentySix?.toLowerCase() ||
-    cardBackgroundColor ===
-      theme?.palette?.neuPalette?.hexThree?.toLowerCase() ||
-    cardBackgroundColor ===
-      theme?.palette?.neuPalette?.hexSeventeen?.toLowerCase() ||
-    cardBackgroundColor === theme?.palette?.neuPalette?.hexFour
+    cardBackgroundColor === theme?.palette?.ihclPalette?.hexEleven?.toLowerCase() ||
+    cardBackgroundColor === theme?.palette?.ihclPalette?.hexTwentySix?.toLowerCase() ||
+    cardBackgroundColor === theme?.palette?.ihclPalette?.hexThree?.toLowerCase() ||
+    cardBackgroundColor === theme?.palette?.ihclPalette?.hexSeventeen?.toLowerCase() ||
+    cardBackgroundColor === theme?.palette?.ihclPalette?.hexFour
   const settings = {
     dots: true,
     arrows: false,
@@ -79,9 +63,7 @@ const LoyaltyTabsChambersCardCarousalMsite = ({
       <Box sx={{ width: "100%" }} aria-label={"multi-card-carousel"}>
         <MobileCarousalStylesWrapper
           $backGroundColor={cardBackgroundColor?.toLowerCase()}
-          $inactiveDotWidth={`${MobilePxToVw(
-            400 / extractItemsData?.length - 1
-          )}`}>
+          $inactiveDotWidth={`${MobilePxToVw(400 / extractItemsData?.length - 1)}`}>
           <CarouselProgressiveBarStyles
             sx={{
               ".slick-slide": {
@@ -107,8 +89,8 @@ const LoyaltyTabsChambersCardCarousalMsite = ({
                     width: MobilePxToVw(80),
                     height: MobilePxToVw(2),
                     background: cardBackgroundColor
-                      ? theme?.palette?.neuPalette?.hexOne
-                      : theme?.palette?.neuPalette?.hexSeventeen,
+                      ? theme?.palette?.ihclPalette?.hexOne
+                      : theme?.palette?.ihclPalette?.hexSeventeen,
                   },
                 },
                 "& .slick-slide .content-box": {
@@ -120,9 +102,7 @@ const LoyaltyTabsChambersCardCarousalMsite = ({
             <Slider {...settings}>
               {extractItemsData?.map((itemsList: any, index: number) => (
                 <>
-                  <Box
-                    aria-label="card-with-right-aligned-content-"
-                    position={"relative"}>
+                  <Box aria-label="card-with-right-aligned-content-" position={"relative"}>
                     {itemsList?.image?.asset?._ref && (
                       <Box
                         width={"100%"}
@@ -133,78 +113,62 @@ const LoyaltyTabsChambersCardCarousalMsite = ({
                         src={urlFor(itemsList?.image?.asset?._ref).url()}
                       />
                     )}
-                    <ContentBox
-                      className="content-box"
-                      sx={{ marginTop: MobilePxToVw(-22) }}>
+                    <ContentBox className="content-box" sx={{ marginTop: MobilePxToVw(-22) }}>
                       {itemsList?.chipText?.length > 0 && (
                         <ChipTextTextMainBox>
-                          {itemsList?.chipText?.map(
-                            (item: ChipTextItems, index: number) => (
-                              <ChipTextTextBox key={index}>
-                                <Typography
-                                  variant="m-body-s"
-                                  sx={{
-                                    color: theme?.palette?.neuPalette?.hexTwo,
-                                  }}>
-                                  {item?.chipTextValue}
-                                </Typography>
-                              </ChipTextTextBox>
-                            )
-                          )}
+                          {itemsList?.chipText?.map((item: ChipTextItems, index: number) => (
+                            <ChipTextTextBox key={index}>
+                              <Typography
+                                variant="m-body-s"
+                                sx={{
+                                  color: theme?.palette?.ihclPalette?.hexTwo,
+                                }}>
+                                {item?.chipTextValue}
+                              </Typography>
+                            </ChipTextTextBox>
+                          ))}
                         </ChipTextTextMainBox>
                       )}
                       {itemsList?.specificationTags?.length > 0 && (
                         <ChipTextTextMainBox>
-                          {itemsList?.specificationTags?.map(
-                            (item: SpecificationTagsItems, index: number) => (
-                              <ChipTextTextBox key={index}>
-                                <Typography
-                                  variant="m-body-s"
-                                  sx={{
-                                    color: theme?.palette?.neuPalette?.hexTwo,
-                                  }}>
-                                  {item?.tag}
-                                </Typography>
-                              </ChipTextTextBox>
-                            )
-                          )}
+                          {itemsList?.specificationTags?.map((item: SpecificationTagsItems, index: number) => (
+                            <ChipTextTextBox key={index}>
+                              <Typography
+                                variant="m-body-s"
+                                sx={{
+                                  color: theme?.palette?.ihclPalette?.hexTwo,
+                                }}>
+                                {item?.tag}
+                              </Typography>
+                            </ChipTextTextBox>
+                          ))}
                         </ChipTextTextMainBox>
                       )}
                       {itemsList?.title && (
-                        <Typography
-                          variant="m-heading-xs"
-                          sx={{ color: theme?.palette?.text?.primary }}>
+                        <Typography variant="m-heading-xs" sx={{ color: theme?.palette?.text?.primary }}>
                           {itemsList?.title}
                         </Typography>
                       )}
                       {itemsList?.subTitle && (
                         <MarginTopBox>
-                          <Typography variant="m-body-s">
-                            {itemsList?.subTitle}
-                          </Typography>
+                          <Typography variant="m-body-s">{itemsList?.subTitle}</Typography>
                         </MarginTopBox>
                       )}
                       {itemsList?.highLights && (
                         <Box sx={{ marginTop: MobilePxToVw(15) }}>
                           <StyledBulletIcon />
-                          <Typography variant="m-body-s">
-                            {itemsList?.highLights}
-                          </Typography>
+                          <Typography variant="m-body-s">{itemsList?.highLights}</Typography>
                         </Box>
                       )}
                       {itemsList?.highlights &&
-                        itemsList?.highlights?.map(
-                          (item: any, index: number) => (
-                            <HighlightTextBox key={index}>
-                              <StyledBulletIcon />
-                              <Typography
-                                variant="m-body-s"
-                                sx={{ color: theme?.palette?.text?.primary }}>
-                                {typeof item === typeof "" ? item : item?.term}
-                              </Typography>
-                            </HighlightTextBox>
-                          )
-                        )}
+                        itemsList?.highlights?.map((item: any, index: number) => (
+                          <HighlightTextBox key={index}>
+                            <StyledBulletIcon />
+                            <Typography variant="m-body-s" sx={{ color: theme?.palette?.text?.primary }}>
+                              {typeof item === typeof "" ? item : item?.term}
+                            </Typography>
+                          </HighlightTextBox>
+                        ))}
                       {itemsList?.description && (
                         <MarginTopBox>
                           {itemsList?.description.length > more ? (
@@ -220,131 +184,104 @@ const LoyaltyTabsChambersCardCarousalMsite = ({
                         <Grid
                           container
                           sx={{
-                            marginTop: itemsList?.parameterMap?.[0]?.key
-                              ? "0.521vw"
-                              : "0vw",
+                            marginTop: itemsList?.parameterMap?.[0]?.key ? "0.521vw" : "0vw",
                           }}
                           className="hide-box">
                           {itemsList?.parameterMap &&
-                            itemsList?.parameterMap?.map(
-                              (item: any, index: number) => (
-                                <Grid
-                                  item
-                                  {...gridBreakPointsGenerator(isMobile, 6, 12)}
-                                  key={index}
-                                  sx={{
-                                    marginTop:
-                                      index == 0 ? MobilePxToVw(14) : "0px",
-                                    marginBottom:
-                                      index == 1 ? MobilePxToVw(20) : "0px",
-                                  }}>
-                                  {item?.keyType === "image" ? (
-                                    <Typography
-                                      sx={{
-                                        display: "flex",
-                                        alignItems: "center",
-                                      }}
-                                      variant={"m-body-sl"}>
-                                      {item?.imageAsset?.image?.[0]?.asset
-                                        ?._ref && (
-                                        <Box
-                                          component="img"
-                                          alt={`-image`}
-                                          width={"17px"}
-                                          height={"13px"}
-                                          sx={{
-                                            objectFit: "fill",
-                                            display: "inline-block",
-                                            marginRight: "10px",
-                                          }}
-                                          src={urlFor(
-                                            item?.imageAsset?.image?.[0]?.asset
-                                              ?._ref
-                                          ).url()}
-                                        />
-                                      )}
-                                      <b>{item?.value}</b>
-                                    </Typography>
-                                  ) : (
-                                    <Typography variant={"m-body-sl"}>
-                                      {item?.key} :<b> {item?.value}</b>
-                                    </Typography>
-                                  )}
-                                </Grid>
-                              )
-                            )}
+                            itemsList?.parameterMap?.map((item: any, index: number) => (
+                              <Grid
+                                item
+                                {...gridBreakPointsGenerator(isMobile, 6, 12)}
+                                key={index}
+                                sx={{
+                                  marginTop: index == 0 ? MobilePxToVw(14) : "0px",
+                                  marginBottom: index == 1 ? MobilePxToVw(20) : "0px",
+                                }}>
+                                {item?.keyType === "image" ? (
+                                  <Typography
+                                    sx={{
+                                      display: "flex",
+                                      alignItems: "center",
+                                    }}
+                                    variant={"m-body-sl"}>
+                                    {item?.imageAsset?.image?.[0]?.asset?._ref && (
+                                      <Box
+                                        component="img"
+                                        alt={`-image`}
+                                        width={"17px"}
+                                        height={"13px"}
+                                        sx={{
+                                          objectFit: "fill",
+                                          display: "inline-block",
+                                          marginRight: "10px",
+                                        }}
+                                        src={urlFor(item?.imageAsset?.image?.[0]?.asset?._ref).url()}
+                                      />
+                                    )}
+                                    <b>{item?.value}</b>
+                                  </Typography>
+                                ) : (
+                                  <Typography variant={"m-body-sl"}>
+                                    {item?.key} :<b> {item?.value}</b>
+                                  </Typography>
+                                )}
+                              </Grid>
+                            ))}
                         </Grid>
                       ) : (
                         <>
                           {itemsList?.parameterMap?.length > 0 && (
                             <>
-                              {itemsList?.parameterMap?.map(
-                                (item: parameterMapItems, index: number) => (
-                                  <FullWidthBox
-                                    key={index}
-                                    sx={{
-                                      marginTop:
-                                        index == 0 ? MobilePxToVw(14) : "0px",
-                                      marginBottom:
-                                        index == 1 ? MobilePxToVw(20) : "0px",
-                                    }}>
-                                    <Typography variant={"m-body-sl"}>
-                                      {item?.key} :<b> {item?.value}</b>
-                                    </Typography>
-                                  </FullWidthBox>
-                                )
-                              )}
+                              {itemsList?.parameterMap?.map((item: parameterMapItems, index: number) => (
+                                <FullWidthBox
+                                  key={index}
+                                  sx={{
+                                    marginTop: index == 0 ? MobilePxToVw(14) : "0px",
+                                    marginBottom: index == 1 ? MobilePxToVw(20) : "0px",
+                                  }}>
+                                  <Typography variant={"m-body-sl"}>
+                                    {item?.key} :<b> {item?.value}</b>
+                                  </Typography>
+                                </FullWidthBox>
+                              ))}
                             </>
                           )}
                         </>
                       )}
                       {itemsList?.isContentAvailable && (
                         <Box mt={"1.875vw"}>
-                          {itemsList?.content?.map(
-                            (item: RichTextItems, index: number) => (
-                              <Typography
-                                key={index}
-                                variant="m-body-s"
-                                sx={{
-                                  "& span": {
-                                    fontSize: "2.813vw",
+                          {itemsList?.content?.map((item: RichTextItems, index: number) => (
+                            <Typography
+                              key={index}
+                              variant="m-body-s"
+                              sx={{
+                                "& span": {
+                                  fontSize: "2.813vw",
+                                },
+                                "& img": {
+                                  "@media (max-width: 640px)": {
+                                    width: MobilePxToVw(17),
                                   },
-                                  "& img": {
-                                    "@media (max-width: 640px)": {
-                                      width: MobilePxToVw(17),
-                                    },
-                                  },
-                                  "&>div": {
-                                    marginTop: "2.425vw",
-                                  },
-                                }}>
-                                {itemsList?.Context?.renderComponent(
-                                  item._type,
-                                  {
-                                    ...item,
-                                  }
-                                )}
-                              </Typography>
-                            )
-                          )}
+                                },
+                                "&>div": {
+                                  marginTop: "2.425vw",
+                                },
+                              }}>
+                              {itemsList?.Context?.renderComponent(item._type, {
+                                ...item,
+                              })}
+                            </Typography>
+                          ))}
                         </Box>
                       )}
                       {itemsList?.richText?.length > 0 && (
                         <MarginTopBox>
-                          {itemsList?.richText?.map(
-                            (item: RichTextItems, index: number) => (
-                              <RichTextBox
-                                key={index}
-                                sx={{ marginTop: "0.78vw" }}>
-                                <Typography variant="m-body-l">
-                                  {item?.richTextKey}
-                                </Typography>
-                                <RichTextValueTypo variant="m-body-l">
-                                  {item?.richTextValue}
-                                </RichTextValueTypo>
-                              </RichTextBox>
-                            )
-                          )}
+                          {itemsList?.richText?.map((item: RichTextItems, index: number) => (
+                            <RichTextBox key={index} sx={{ marginTop: "0.78vw" }}>
+                              <Typography variant="m-body-l">{item?.richTextKey}</Typography>
+                              <RichTextValueTypo variant="m-body-l">{item?.richTextValue}</RichTextValueTypo>
+                            </RichTextBox>
+                          ))}
                         </MarginTopBox>
                       )}
                       {(itemsList?.ctaLabel ||
@@ -353,16 +290,11 @@ const LoyaltyTabsChambersCardCarousalMsite = ({
                         <ActionBoxWrapper
                           sx={{
                             flexDirection: itemsList?.secondaryAction?.title
-                              ? itemsList?.urlType ===
-                                itemsList?.PathType?.internal
+                              ? itemsList?.urlType === itemsList?.PathType?.internal
                                 ? "row"
                                 : "column"
                               : "row",
-                            alignItems:
-                              itemsList?.urlType ===
-                              itemsList?.PathType?.internal
-                                ? "center"
-                                : "left",
+                            alignItems: itemsList?.urlType === itemsList?.PathType?.internal ? "center" : "left",
                             justifyContent:
                               isMobile &&
                               itemsList?.primaryAction?.title &&
@@ -375,8 +307,7 @@ const LoyaltyTabsChambersCardCarousalMsite = ({
                             <Box
                               sx={{
                                 margin: itemsList?.secondaryAction?.title
-                                  ? itemsList?.urlType ===
-                                    itemsList?.PathType?.internal
+                                  ? itemsList?.urlType === itemsList?.PathType?.internal
                                     ? "0vw 0vw 0vw"
                                     : "0vw 0vw 4.6875vw 0vw"
                                   : "0vw",
@@ -391,8 +322,7 @@ const LoyaltyTabsChambersCardCarousalMsite = ({
                               />
                             </Box>
                           )}
-                          {(itemsList?.primaryAction?.title ||
-                            itemsList?.secondaryAction?.title) && (
+                          {(itemsList?.primaryAction?.title || itemsList?.secondaryAction?.title) && (
                             <BothActionButtonsWrapperBox>
                               {itemsList?.secondaryAction?.title && (
                                 <RenderActionItem
@@ -400,37 +330,23 @@ const LoyaltyTabsChambersCardCarousalMsite = ({
                                   url={itemsList?.secondaryAction?.url}
                                   title={itemsList?.secondaryAction?.title}
                                   variant={itemsList?.secondaryAction?.variant}
-                                  navigationType={
-                                    itemsList?.secondaryAction?.urlType
-                                  }
+                                  navigationType={itemsList?.secondaryAction?.urlType}
                                   buttonStyles={{ letterSpacing: "0.1em" }}
-                                  image={
-                                    itemsList?.secondaryAction?.image?.asset
-                                      ?._ref
-                                  }
+                                  image={itemsList?.secondaryAction?.image?.asset?._ref}
                                 />
                               )}
                               {itemsList?.primaryAction?.title && (
                                 <RenderActionItem
                                   isActionButtonType={
-                                    itemsList?.primaryAction?.variant ===
-                                    CONSTANTS?.VARIANT_LINK_TYPE
-                                      ? false
-                                      : true
+                                    itemsList?.primaryAction?.variant === CONSTANTS?.VARIANT_LINK_TYPE ? false : true
                                   }
                                   url={itemsList?.primaryAction?.url}
                                   title={itemsList?.primaryAction?.title}
                                   variant={itemsList?.primaryAction?.variant}
-                                  navigationType={
-                                    itemsList?.primaryAction?.urlType
-                                  }
+                                  navigationType={itemsList?.primaryAction?.urlType}
                                   buttonStyles={{
                                     letterSpacing: "0.1em",
-                                    whiteSpace:
-                                      itemsList?.primaryAction?.title?.length <
-                                      11
-                                        ? "nowrap"
-                                        : "unset",
+                                    whiteSpace: itemsList?.primaryAction?.title?.length < 11 ? "nowrap" : "unset",
                                   }}
                                 />
                               )}

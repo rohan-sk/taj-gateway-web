@@ -19,7 +19,7 @@ export const StyledButton = styled(Button)(() => ({
 
 export const ChevronRightIconStyled = styled(ChevronRight)(() => ({
   width: "auto",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const ExpandMoreIconStyled = styled(ChevronRightIconStyled)(() => ({
@@ -48,7 +48,7 @@ export const ActionBox = styled(Box)(() => ({
 export const ModalHeadingText = styled(Typography)(() => ({
   fontFamily: theme?.palette?.font?.primaryFontFamily,
   letterSpacing: "-0.05em",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const AlternateAllLinksWrappingBox = styled(Box)(() => ({
@@ -62,8 +62,7 @@ export const TitleMainBox = styled(Box)(() => ({
   bottom: "0",
   padding: "0vw 0vw 1.024vw",
   width: "100%",
-  background:
-    "linear-gradient(180deg, rgba(81, 81, 81, 0.00) 0%, rgba(0,0,0,0.7) 70%)",
+  background: "linear-gradient(180deg, rgba(81, 81, 81, 0.00) 0%, rgba(0,0,0,0.7) 70%)",
   height: "50%",
   display: "flex",
   alignItems: "end",

@@ -20,7 +20,7 @@ export const ContentBox = styled(Box)(() => ({
   width: "35.41vw",
   top: "-2.35vw",
   right: "-0.5px",
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
   padding: "1.563vw",
   "@media only screen and (max-width: 600px)": {
     width: "90%",
@@ -60,9 +60,9 @@ export const DescriptionTypo = styled(Typography)(() => ({
 
 export const BrochureSaveAlt = styled(
   SaveAlt,
-  transientProps
+  transientProps,
 )<{ $isMobile?: boolean }>(({ $isMobile }) => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   height: $isMobile ? "3.125vw" : "1.04vw",
   width: $isMobile ? "3.125vw" : "1.04vw",
 }))

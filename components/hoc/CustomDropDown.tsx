@@ -47,7 +47,7 @@ export const CustomDropDown = ({
   const IHCLContexts = useContext(IHCLContext)
   const navigate = useAppNavigation()
   const userStore = IHCLContexts?.getGlobalStore(GLOBAL_STORES.userStore) as UserStore
-  let getBgColor = backgroundColor || theme?.palette?.neuPalette?.hexOne
+  let getBgColor = backgroundColor || theme?.palette?.ihclPalette?.hexOne
   const context = useContext(IHCLContext)
   const gaStoreData = context?.getGlobalStore(GLOBAL_STORES.gaStore) as GAStore
   const dataLayer = MemberDataLayer(userStore, gaStoreData)
@@ -229,7 +229,7 @@ export const CustomDropDown = ({
           },
           sx: {
             "&& .Mui-selected": {
-              backgroundColor: theme?.palette?.neuPalette?.hexOne,
+              backgroundColor: theme?.palette?.ihclPalette?.hexOne,
             },
             "& .MuiPaper-rounded": {
               borderRadius: 0,

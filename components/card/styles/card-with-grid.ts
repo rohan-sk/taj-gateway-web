@@ -53,7 +53,7 @@ export const GridChildContainer = styled(Grid)(() => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "self-end",
-  marginTop:"3.854vw",
+  marginTop: "3.854vw",
 }))
 
 export const BoxWrapper = styled(Stack)(() => ({
@@ -69,14 +69,14 @@ export const BoxWrapper = styled(Stack)(() => ({
 
 export const DynamicStack = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   margin: "0 auto",
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
   padding: $isMobile ? "2.656vw 3.375vw" : "0vw",
-  border: $isMobile ? `2px solid ${theme.palette.neuPalette.hexTwo}` : "none",
+  border: $isMobile ? `2px solid ${theme.palette.ihclPalette.hexTwo}` : "none",
   width: $isMobile ? "42.813vw" : "unset",
   whiteSpace: $isMobile ? "nowrap" : "normal",
 }))
@@ -105,7 +105,7 @@ export const ButtonTypography = styled(Typography)(() => ({
 
 export const MainMediaWrapperContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   zIndex: 1,
   position: "sticky",
@@ -116,6 +116,6 @@ export const MediaContent = styled(Box)(() => ({
   width: "100%",
   display: "flex",
   justifyContent: "end",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
-  borderBottom: `2px solid ${theme.palette.neuPalette.hexTwo}`,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
+  borderBottom: `2px solid ${theme.palette.ihclPalette.hexTwo}`,
 }))

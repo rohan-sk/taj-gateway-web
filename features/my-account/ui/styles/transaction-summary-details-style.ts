@@ -1,17 +1,10 @@
 import styled from "@emotion/styled"
 import { theme } from "../../../../lib/theme"
 import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
-import {
-  Box,
-  Grid,
-  MenuItem,
-  Pagination,
-  TextField,
-  Typography,
-} from "@mui/material"
+import { Box, Grid, MenuItem, Pagination, TextField, Typography } from "@mui/material"
 
 export const PlaceholderTitle = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   paddingBottom: DesktopPxToVw(35),
   "@media (max-width: 640px)": {
     paddingBottom: MobilePxToVw(35),
@@ -70,7 +63,7 @@ export const FlexBox = styled(Box)(() => ({
 export const StyledPagination: any = styled(Pagination)(() => ({
   "& .Mui-selected": {
     fontWeight: 700,
-    color: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexTwo,
     backgroundColor: `${theme?.palette?.background?.default} !important`,
   },
 }))
@@ -101,7 +94,7 @@ export const DateTextField = styled(TextField)(() => ({
     },
   },
   "&  .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexTwentyOne} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexTwentyOne} !important`,
     fontSize: DesktopPxToVw(18),
     "@media (max-width:640px)": {
       fontSize: "2.5vw",
@@ -113,7 +106,7 @@ export const DateTextField = styled(TextField)(() => ({
       fontWeight: 300,
       fontSize: DesktopPxToVw(18),
       opacity: 1,
-      color: theme?.palette?.neuPalette?.hexFour,
+      color: theme?.palette?.ihclPalette?.hexFour,
       "@media (max-width: 640px)": {
         fontSize: MobilePxToVw(24),
         lineHeight: "4.8vw",

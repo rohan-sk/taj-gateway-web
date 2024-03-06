@@ -52,7 +52,7 @@ const LikesIncrementCount = () => {
           <ThumbUpIcon
             style={{
               ...thumbIconStyles,
-              fill: theme?.palette?.neuPalette?.hexTwo,
+              fill: theme?.palette?.ihclPalette?.hexTwo,
             }}
           />
         )}

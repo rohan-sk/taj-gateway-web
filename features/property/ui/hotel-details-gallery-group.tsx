@@ -24,7 +24,7 @@ import {
   MobileGalleryButtonContainer,
 } from "./styles/hotel-details-gallery-group-styles"
 import VideoSEOScript from "../../../utils/VideoSEOScript"
-const CardTitleOnHoverComponent = dynamic(()=> import("../../../components/card/card-title-on-hover.component"))
+const CardTitleOnHoverComponent = dynamic(() => import("../../../components/card/card-title-on-hover.component"))
 
 const HotelDetailsGalleryGroup = ({ componentItemData, primaryAction, contentType }: any) => {
   const modalStore = ModalStore.getInstance()
@@ -34,10 +34,10 @@ const HotelDetailsGalleryGroup = ({ componentItemData, primaryAction, contentTyp
   const isMobile = useMobileCheck()
   let numberOfCards = isMobile ? CONSTANTS?.FOUR : CONSTANTS?.SIX
   const [selectFilterImage, setSelectFilterImage] = useState<any>()
-  const colorOne = theme?.palette?.neuPalette?.hexOne
+  const colorOne = theme?.palette?.ihclPalette?.hexOne
   const [countToShowCards, setCountToShowCards] = useState(numberOfCards)
   const handleModelClose = () => setVideoPlay(!videoPlay)
-  const colorTwo = theme?.palette?.neuPalette?.hexTwo
+  const colorTwo = theme?.palette?.ihclPalette?.hexTwo
   const [selectedVideo, setSelectedVideo] = useState<any>()
   const { getOptimizeImageUrl } = useImageUtility()
   const [openModel, setOpenModel] = useState<boolean>(false)
@@ -164,12 +164,12 @@ const HotelDetailsGalleryGroup = ({ componentItemData, primaryAction, contentTyp
       </Grid>
       {videoPlay && selectedVideo?.asset?._ref && (
         <>
-        <VideoSEOScript {...selectedVideo}/>
-        <VideoPlayerModal
-          videoUrl={selectedVideo?.asset?._ref}
-          handleModalOpen={videoPlay}
-          handleModalClose={handleModelClose}
-        />
+          <VideoSEOScript {...selectedVideo} />
+          <VideoPlayerModal
+            videoUrl={selectedVideo?.asset?._ref}
+            handleModalOpen={videoPlay}
+            handleModalClose={handleModelClose}
+          />
         </>
       )}
       {openModel && (

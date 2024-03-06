@@ -45,7 +45,7 @@ export const TitleTypo = styled(Typography)(() => ({
   position: "relative",
   bottom: "10vh",
   left: "6vw",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 }))
 export const GridContainer: any = styled(Box)(() => ({
   textAlign: "center",
@@ -57,7 +57,7 @@ export const GridContainer: any = styled(Box)(() => ({
   justifyContent: "center",
   "@media (max-width: 640px)": {
     padding: "7.81vw 4.68vw",
-    border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+    border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   },
 }))
 
@@ -76,7 +76,7 @@ export const MobileNumberField = styled(TextField)(() => ({
       paddingLeft: "0vw",
     },
   },
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button": {
     display: "none",
   },
@@ -86,7 +86,7 @@ export const MobileNumberField = styled(TextField)(() => ({
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: 300,
       opacity: 1,
     },
@@ -114,7 +114,7 @@ export const LoginBoxWrapper = styled(Box)(() => ({
   justifyContent: "center",
   "@media (max-width: 640px)": {
     padding: "7.81vw 4.68vw",
-    border: `1px solid ${theme?.palette?.neuPalette?.hexTwo}`,
+    border: `1px solid ${theme?.palette?.ihclPalette?.hexTwo}`,
   },
 }))
 
@@ -124,7 +124,7 @@ export const TitleWrapper = styled(Box)(() => ({
   height: "100%",
   left: 0,
   padding: "3.125vw 2.604vw 2.083vw",
-  color: theme?.palette?.neuPalette?.hexTwentyNine,
+  color: theme?.palette?.ihclPalette?.hexTwentyNine,
   "@media (max-width: 640px)": {
     maxWidth: "85%",
     padding: "5.469vw 5.469vw 3.125vw",
@@ -132,7 +132,7 @@ export const TitleWrapper = styled(Box)(() => ({
 }))
 
 export const SubTitleTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwentyNine,
+  color: theme?.palette?.ihclPalette?.hexTwentyNine,
   fontWeight: 700,
   marginBottom: "0.521vw",
   "@media (max-width: 640px)": {
@@ -149,22 +149,18 @@ export const DescriptionTypography = styled(Typography)(() => ({
   },
 }))
 
-export const CarouselBoxWrapper = styled(Box)<{ $border: boolean }>(
-  ({ $border }) => ({
-    border: $border
-      ? `2px solid ${theme?.palette?.neuPalette?.hexTwo}`
-      : "none",
-    padding: "0.52vw",
-    borderRadius: DesktopPxToVw(26),
-    "@media (max-width: 640px)": {
-      borderRadius: MobilePxToVw(20),
-    },
-  })
-)
+export const CarouselBoxWrapper = styled(Box)<{ $border: boolean }>(({ $border }) => ({
+  border: $border ? `2px solid ${theme?.palette?.ihclPalette?.hexTwo}` : "none",
+  padding: "0.52vw",
+  borderRadius: DesktopPxToVw(26),
+  "@media (max-width: 640px)": {
+    borderRadius: MobilePxToVw(20),
+  },
+}))
 
 export const CarouselTitle = styled(Typography)(() => ({
   marginTop: DesktopPxToVw(10),
-  color: theme?.palette?.neuPalette?.hexTwentyNine,
+  color: theme?.palette?.ihclPalette?.hexTwentyNine,
   letterSpacing: "-0.05em",
   "@media (max-width: 640px)": {
     marginTop: MobilePxToVw(10),
@@ -172,7 +168,7 @@ export const CarouselTitle = styled(Typography)(() => ({
 }))
 
 export const HighlightsTitle = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwentyNine,
+  color: theme?.palette?.ihclPalette?.hexTwentyNine,
   marginTop: DesktopPxToVw(10),
   "@media (max-width: 640px)": {
     marginTop: MobilePxToVw(7),
@@ -181,5 +177,5 @@ export const HighlightsTitle = styled(Typography)(() => ({
 
 export const StyledTypography = styled(Typography)(() => ({
   paddingLeft: "0.66vw",
-  color: theme?.palette?.neuPalette?.hexTwentyNine,
+  color: theme?.palette?.ihclPalette?.hexTwentyNine,
 }))

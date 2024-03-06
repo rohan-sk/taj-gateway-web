@@ -53,7 +53,7 @@ export const InputText = styled(TextField)(() => ({
   width: "100%",
   fontSize: DesktopPxToVw(24),
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
   },
   "& .MuiInputBase-input ": {
@@ -69,7 +69,7 @@ export const InputText = styled(TextField)(() => ({
     fontWeight: 300,
     "&::placeholder": {
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: 300,
       opacity: 1,
     },
@@ -106,7 +106,7 @@ export const InputLabelTextStyle = styled(InputLabel)(() => ({
   fontStyle: "normal",
   fontWeight: 300,
   lineHeight: "150%",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 641px)": {
     fontSize: "3.75vw",
   },
@@ -124,7 +124,7 @@ export const InputErrorColumnFlexBox = styled(Box)(() => ({
   flexDirection: "column",
 }))
 export const ErrorDisplayTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexThirtyTwo,
+  color: theme?.palette?.ihclPalette?.hexThirtyTwo,
   fontSize: DesktopPxToVw(18),
   alignSelf: "self-start",
   "@media (max-width: 640px)": {
@@ -132,7 +132,7 @@ export const ErrorDisplayTypography = styled(Typography)(() => ({
   },
 }))
 export const ErrorMessage = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexThirtyTwo,
+  color: theme?.palette?.ihclPalette?.hexThirtyTwo,
   fontSize: DesktopPxToVw(18),
   "@media (max-width: 640px)": {
     fontSize: MobilePxToVw(18),
@@ -153,7 +153,7 @@ export const CheckBoxWrapper = styled(Box)(() => ({
 export const CustomSelect = styled(Select)(() => ({
   fontSize: DesktopPxToVw(24),
   "& .MuiSelect-select:focus": {
-    backgroundColor: theme?.palette?.neuPalette?.hexOne,
+    backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   },
   input: {
     "&::placeholder": {

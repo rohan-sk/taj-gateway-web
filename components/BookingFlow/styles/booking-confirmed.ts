@@ -65,7 +65,7 @@ export const DetailsViewTypography = styled(Typography)(() => ({
   cursor: "pointer",
   marginTop: "0.3125vw",
   textDecorationLine: "underline",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const PriceTypography = styled(Typography)(() => ({
@@ -79,7 +79,6 @@ export const TotalTypography = styled(Typography)(() => ({
   fontWeight: 700,
   color: theme?.palette?.text?.primary,
 }))
-
 
 export const EllipsesTypography = styled(Typography)(() => ({
   overflow: "hidden",

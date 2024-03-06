@@ -54,7 +54,7 @@ export const VerticalDivider = styled(Divider)(() => ({
 
 export const SubTitleText = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $centerVariant: boolean }>(({ $centerVariant }) => ({
   textAlign: $centerVariant ? "center" : "left",
   marginTop: $centerVariant ? "0vw" : "2.8vw",
@@ -69,8 +69,8 @@ export const SocialContentPrimaryActionButton = styled(Button)(() => ({
   whiteSpace: "nowrap",
   letterSpacing: "0.1em",
   "&:hover": {
-    color: theme?.palette?.neuPalette?.hexOne,
-    background: theme?.palette?.neuPalette?.hexTwo,
+    color: theme?.palette?.ihclPalette?.hexOne,
+    background: theme?.palette?.ihclPalette?.hexTwo,
   },
 
   "@media (max-width: 640px)": {

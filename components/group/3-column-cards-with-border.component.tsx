@@ -30,9 +30,9 @@ const GroupWithThreeColumnCardsWithBorder = ({ props, showDivider, renderItemsCo
         margin: isMobile ? cardPadding?.mobile : cardPadding?.desktop,
         border: isMobile
           ? showDivider
-            ? `0.05vw solid ${theme?.palette?.neuPalette?.hexTwo}`
+            ? `0.05vw solid ${theme?.palette?.ihclPalette?.hexTwo}`
             : "none"
-          : `0.05vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+          : `0.05vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
       }}>
       <Box pt={isMobile ? (showDivider ? "14.063vw" : "0vw") : "3.125vw"}>
         <MultiRowTitle {...props} />
@@ -46,13 +46,13 @@ const GroupWithThreeColumnCardsWithBorder = ({ props, showDivider, renderItemsCo
             ? showDivider && fourItems
               ? `${MobilePxToVw(0)} ${MobilePxToVw(40)} ${MobilePxToVw(55)}`
               : (threeItems || sixItems) && showDivider
-                ? `${MobilePxToVw(0)} ${MobilePxToVw(27)} ${MobilePxToVw(90)}`
-                : `${MobilePxToVw(0)}`
+              ? `${MobilePxToVw(0)} ${MobilePxToVw(27)} ${MobilePxToVw(90)}`
+              : `${MobilePxToVw(0)}`
             : fourItems && showDivider
-              ? `${DesktopPxToVw(0)} ${DesktopPxToVw(38)} ${DesktopPxToVw(60)}`
-              : (threeItems || sixItems) && showDivider
-                ? `${DesktopPxToVw(0)} ${DesktopPxToVw(123)} ${DesktopPxToVw(60)}`
-                : `${DesktopPxToVw(0)} ${DesktopPxToVw(134)} ${DesktopPxToVw(60)}`
+            ? `${DesktopPxToVw(0)} ${DesktopPxToVw(38)} ${DesktopPxToVw(60)}`
+            : (threeItems || sixItems) && showDivider
+            ? `${DesktopPxToVw(0)} ${DesktopPxToVw(123)} ${DesktopPxToVw(60)}`
+            : `${DesktopPxToVw(0)} ${DesktopPxToVw(134)} ${DesktopPxToVw(60)}`
         }
         sx={{ justifyContent: "center" }}>
         {props?.items?.map((item: any, index: number) => {
@@ -69,15 +69,15 @@ const GroupWithThreeColumnCardsWithBorder = ({ props, showDivider, renderItemsCo
                     ? showDivider && fourItems
                       ? 5.69
                       : showDivider && (threeItems || sixItems)
-                        ? isCustomOddIndex
-                          ? 10
-                          : 5.65
-                        : 5.77
+                      ? isCustomOddIndex
+                        ? 10
+                        : 5.65
+                      : 5.77
                     : showDivider
-                      ? fourItems
-                        ? 2.7
-                        : 3.18
-                      : 3.72,
+                    ? fourItems
+                      ? 2.7
+                      : 3.18
+                    : 3.72,
                 )}>
                 <RenderComponentContainer $isMobile={isMobile} $showDivider={showDivider}>
                   {context?.renderComponent(item?._type, item, {

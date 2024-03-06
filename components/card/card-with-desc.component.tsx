@@ -494,10 +494,10 @@ const CardWithDesc = ({
                       }
                     }}
                     iconStyles={{
-                      color: textColor ? `${textColor} !important` : theme?.palette?.neuPalette?.hexTwo,
+                      color: textColor ? `${textColor} !important` : theme?.palette?.ihclPalette?.hexTwo,
                     }}
                     linkStyles={{
-                      color: textColor ? textColor : theme?.palette?.neuPalette?.hexTwo,
+                      color: textColor ? textColor : theme?.palette?.ihclPalette?.hexTwo,
                     }}
                     buttonStyles={{
                       letterSpacing: isMobile ? "0.281vw" : "unset",

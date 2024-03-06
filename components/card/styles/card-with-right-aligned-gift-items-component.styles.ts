@@ -5,7 +5,7 @@ import { transientProps } from "../../../utils/transientProps"
 
 export const CardWrappingTotalContentBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $padding: any; $isMobile: boolean }>(({ $padding, $isMobile }) => ({
   display: "flex",
   padding: $padding,
@@ -16,15 +16,15 @@ export const CardWrappingTotalContentBox = styled(
 
 export const HorizontalDivider = styled(
   Divider,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   margin: $isMobile ? "3.125vw 0vw" : `1.042vw 0vw`,
-  backgroundColor: theme?.palette?.neuPalette?.hexTwelve,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const ParameterMapWithDescriptionWrappingBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   alignItems: "center",
@@ -32,7 +32,7 @@ export const ParameterMapWithDescriptionWrappingBox = styled(
 }))
 
 export const ParameterMapKeyValueTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   fontStyle: "normal",
   lineHeight: "140%",
 }))

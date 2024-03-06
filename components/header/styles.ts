@@ -24,17 +24,13 @@ export const CountStayContainer = styled(Box)(() => ({
 
 export const LogoBox = styled(
   Box,
-  transientProps
-)<{ $isMobile: boolean; $showHeaderStyles: boolean }>(
-  ({ $isMobile, $showHeaderStyles }) => ({
-    display: "flex",
-    justifyContent: "center",
-    paddingLeft: $isMobile ? "3vw" : "3.4vw",
-    padding: $showHeaderStyles
-      ? "0.73vw 5.8vw 0.88vw 3.22vw"
-      : "1.35vw 3.22vw 0vw 3.22vw",
-  })
-)
+  transientProps,
+)<{ $isMobile: boolean; $showHeaderStyles: boolean }>(({ $isMobile, $showHeaderStyles }) => ({
+  display: "flex",
+  justifyContent: "center",
+  paddingLeft: $isMobile ? "3vw" : "3.4vw",
+  padding: $showHeaderStyles ? "0.73vw 5.8vw 0.88vw 3.22vw" : "1.35vw 3.22vw 0vw 3.22vw",
+}))
 
 export const NavigationLinksBox = styled(Box)(() => ({
   width: "100%",
@@ -46,7 +42,7 @@ export const NavigationLinksBox = styled(Box)(() => ({
 
 export const NavigationLinksPrimaryBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isScrollDowned?: boolean }>(({ $isScrollDowned }) => ({
   display: "flex",
   alignSelf: "center",
@@ -64,7 +60,7 @@ export const LoginLinkBox = styled(Box)(() => ({
 
 export const ButtonBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isScrollDowned?: boolean }>(({ $isScrollDowned }) => ({
   gap: DesktopPxToVw(19),
   display: "flex",
@@ -89,7 +85,7 @@ export const DropDownMenuBox = styled(Box)(() => ({
 export const MegaMenuTitlesContainer = styled(Grid)(() => ({
   opacity: "0.97",
   backgroundColor: theme?.palette?.background?.paper,
-  borderLeft: `1px solid ${theme?.palette?.neuPalette?.hexThirteen}`,
+  borderLeft: `1px solid ${theme?.palette?.ihclPalette?.hexThirteen}`,
 }))
 
 export const MegaMenuTitleGrid = styled(Grid)(() => ({
@@ -109,7 +105,7 @@ export const MegaMenuContentBox = styled(Box)(() => ({
   justifyContent: "center",
   minHeight: DesktopPxToVw(333),
   height: "100%",
-  backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const MegaMenuMoreContentBox = styled(Box)(() => ({
@@ -125,23 +121,21 @@ export const MegaMenuTitle = styled(Typography)(() => ({
   lineHeight: "150%",
   fontStyle: "normal",
   letterSpacing: "1.1px",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const TitleTypography = styled(Typography)(() => ({
   cursor: "pointer",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const StyledTitle = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $ShowCursor: boolean; $color: boolean }>(({ $ShowCursor, $color }) => ({
   cursor: $ShowCursor ? "pointer" : "default",
   letterSpacing: "0.03em",
-  color: $color
-    ? theme?.palette?.neuPalette?.hexTwo
-    : theme?.palette?.neuPalette?.hexOne,
+  color: $color ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.ihclPalette?.hexOne,
   lineHeight: "125%",
 }))
 
@@ -153,7 +147,7 @@ export const StyledProfileIcon: any = styled(Box)(() => ({
 
 export const StyledAppBar: any = styled(
   AppBar,
-  transientProps
+  transientProps,
 )<{ $isNavBarNotTransparent: boolean; $showDropDownMenu: boolean }>(
   ({ $isNavBarNotTransparent, $showDropDownMenu }) => ({
     display: "flex",
@@ -161,15 +155,15 @@ export const StyledAppBar: any = styled(
       boxShadow: "none",
       borderBottom:
         $isNavBarNotTransparent || $showDropDownMenu
-          ? `1px solid ${theme?.palette?.neuPalette?.hexTwentyFive}`
+          ? `1px solid ${theme?.palette?.ihclPalette?.hexTwentyFive}`
           : "unset",
       justifyContent: "center",
       minHeight: $showDropDownMenu ? "4.68vw" : "4.8vw",
     },
     background: $showDropDownMenu
-      ? theme?.palette?.neuPalette?.hexOne
+      ? theme?.palette?.ihclPalette?.hexOne
       : "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(95, 95, 95, 0) 100%)",
-  })
+  }),
 )
 
 export const BookingMenuButton = styled(Box)(() => ({
@@ -177,12 +171,12 @@ export const BookingMenuButton = styled(Box)(() => ({
 }))
 
 export const StyledTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const LogOutButton = styled(Typography)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
-  color: theme?.palette?.neuPalette?.hexThree,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexThree,
   textAlign: "center",
   padding: "0.4vw",
   position: "absolute",

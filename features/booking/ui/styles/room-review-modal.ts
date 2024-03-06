@@ -4,7 +4,7 @@ import { theme } from "../../../../lib/theme"
 export const MainBox = styled(Box)(() => ({
   width: "50.208vw",
   padding: "4.167vw 0vw",
-  background: theme.palette.neuPalette.hexOne,
+  background: theme.palette.ihclPalette.hexOne,
   boxShadow: "-6px 10px 24px 0px rgba(0, 0, 0, 0.10)",
 }))
 
@@ -41,7 +41,7 @@ export const MainStack = styled(Stack)(() => ({
   height: "100%",
   justifyContent: "space-between",
   padding: "4.688vw 0vw 7.813vw 0vw",
-  background: theme.palette.neuPalette.hexOne,
+  background: theme.palette.ihclPalette.hexOne,
 }))
 
 export const ContentStack = styled(Stack)(() => ({

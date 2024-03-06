@@ -38,7 +38,7 @@ export const SearchBackgroundBox: any = styled(
   borderRadius: "100%",
   placeItems: "center",
   margin: "0 auto",
-  background: $background ? $background : theme?.palette?.neuPalette?.hexTwo,
+  background: $background ? $background : theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const SearchImageBox: any = styled(

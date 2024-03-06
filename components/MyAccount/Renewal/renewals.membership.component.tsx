@@ -5,12 +5,7 @@ import { urlFor } from "../../../lib-sanity"
 import RenderActionItem from "../../hoc/actions/action-items-ui"
 import { observer } from "mobx-react-lite"
 import { theme } from "../../../lib/theme"
-import {
-  MEMBERSHIP_PREMIUM,
-  RENEWAL_DATE,
-  START_DATE,
-  TIER,
-} from "../Membership/common/constants"
+import { MEMBERSHIP_PREMIUM, RENEWAL_DATE, START_DATE, TIER } from "../Membership/common/constants"
 import {
   BoldTitle,
   BorderedCardWrapper,
@@ -54,7 +49,7 @@ const MembershipCard = ({ membership }: any) => {
                     ? membership?.image?.smallImage?.asset?._ref ||
                         memberShipPrimaryCard?.image?.smallImage?.asset?._ref
                     : membership?.image?.largeImage?.asset?._ref ||
-                        memberShipPrimaryCard?.image?.largeImage?.asset?._ref
+                        memberShipPrimaryCard?.image?.largeImage?.asset?._ref,
                 )?.url()}
                 alt="membership-image"
               />
@@ -65,42 +60,34 @@ const MembershipCard = ({ membership }: any) => {
               <DetailsCurrencyContainer>
                 {/*Title and details*/}
                 <Box>
-                  <Grid
-                    container
-                    sx={{ marginBottom: isMobile ? "3.125vw" : "0.521vw" }}>
-                    <Typography
-                      variant={isMobile ? "m-heading-xs" : "heading-xs"}>
+                  <Grid container sx={{ marginBottom: isMobile ? "3.125vw" : "0.521vw" }}>
+                    <Typography variant={isMobile ? "m-heading-xs" : "heading-xs"}>
                       {memberShipPrimaryCard?.type !== "undefined" &&
                       memberShipPrimaryCard?.type?.toLowerCase() === "bank"
                         ? memberShipPrimaryCard?.bankName
-                        : membership?.membership ||
-                          memberShipPrimaryCard?.membership}
+                        : membership?.membership || memberShipPrimaryCard?.membership}
                     </Typography>
                   </Grid>
                   <DatesContainer>
                     <ColumnFlexBoxChild>
                       <BoldTitle>{START_DATE}</BoldTitle>
                       <Typography variant={isMobile ? "m-body-sl" : "body-s"}>
-                        {membership?.startDate ||
-                          memberShipPrimaryCard?.startDate}
+                        {membership?.startDate || memberShipPrimaryCard?.startDate}
                       </Typography>
                     </ColumnFlexBoxChild>
                     <ColumnFlexBoxChild>
                       <BoldTitle>
                         {membership?.tier
                           ? TIER
-                          : membership?.expiryDate ||
-                            memberShipPrimaryCard?.expiryDate
+                          : membership?.expiryDate || memberShipPrimaryCard?.expiryDate
                           ? RENEWAL_DATE
                           : ""}
                       </BoldTitle>
                       <Typography variant={isMobile ? "m-body-sl" : "body-s"}>
                         {membership?.tier
                           ? membership?.tier
-                          : membership?.expiryDate ||
-                            memberShipPrimaryCard?.expiryDate
-                          ? membership?.expiryDate ||
-                            memberShipPrimaryCard?.expiryDate
+                          : membership?.expiryDate || memberShipPrimaryCard?.expiryDate
+                          ? membership?.expiryDate || memberShipPrimaryCard?.expiryDate
                           : ""}
                       </Typography>
                     </ColumnFlexBoxChild>
@@ -129,7 +116,7 @@ const MembershipCard = ({ membership }: any) => {
                           </TypographyRenewalPrice>
                           <Typography
                             sx={{
-                              color: theme?.palette?.neuPalette?.hexTwo,
+                              color: theme?.palette?.ihclPalette?.hexTwo,
                             }}
                             variant={isMobile ? "m-heading-s" : "heading-s"}>
                             {!!membership?.primary?.renewalDiscountPrice
@@ -148,15 +135,11 @@ const MembershipCard = ({ membership }: any) => {
                       <RenderActionItem
                         url={navigationURL}
                         title={membership?.primary?.primaryAction?.title}
-                        navigationType={
-                          membership?.primary?.primaryAction?.navigationType
-                        }
+                        navigationType={membership?.primary?.primaryAction?.navigationType}
                         variant={membership?.primary?.primaryAction?.variant}
                         isActionButtonType={true}
                         buttonStyles={{
-                          width: isMobile
-                            ? MobilePxToVw(147)
-                            : DesktopPxToVw(147),
+                          width: isMobile ? MobilePxToVw(147) : DesktopPxToVw(147),
                         }}
                       />
                     )}

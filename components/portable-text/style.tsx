@@ -3,7 +3,7 @@ import { Box, Divider } from "@mui/material"
 import { theme } from "../../lib/theme"
 
 export const DividerStyle = styled(Divider)(() => ({
-  background: theme?.palette?.neuPalette?.hexNine,
+  background: theme?.palette?.ihclPalette?.hexNine,
   marginBottom: "4.16vw",
 }))
 

@@ -14,7 +14,7 @@ export const MainGrid = styled(Grid)(() => ({
 
 export const CheckBoxWrapper = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $error?: boolean }>(({ $error }) => ({
   display: "flex",
   justifyContent: "center",
@@ -71,7 +71,7 @@ export const StyledTitle = styled(Typography)(() => ({
   margin: "0.677vw 0vw 1.4vw 0vw",
   alignSelf: "start",
   paddingLeft: "0.7vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
     lineHeight: "4vw",
     width: "34vw",
@@ -104,7 +104,7 @@ export const StyledBox = styled(Box)(() => ({
 }))
 
 export const ErrorMessages = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexThirtyTwo,
+  color: theme?.palette?.ihclPalette?.hexThirtyTwo,
   fontWeight: 300,
   fontSize: DesktopPxToVw(18),
   paddingTop: "0.2vw",

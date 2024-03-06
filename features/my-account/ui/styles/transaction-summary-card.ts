@@ -4,7 +4,7 @@ import DesktopPxToVw from "../../../../utils/DesktopFontCalc"
 
 export const BorderBox = styled(Box)(() => ({
   padding: "2.19vw 1.563vw 2.708vw 1.563vw",
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
 }))
 
 export const FlexBox = styled(Box)(() => ({
@@ -16,14 +16,14 @@ export const FlexBox = styled(Box)(() => ({
 export const TableHeadCell = styled(TableCell)(() => ({
   padding: "0vw",
   paddingBottom: "1.042vw",
-  borderBottom: `0.026vw solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  borderBottom: `0.026vw solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
 }))
 
 export const TableBodyCell = styled(TableCell)(() => ({
   padding: "0vw",
 }))
 export const HeroTableCell = styled(Typography)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexTwentyNine,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwentyNine,
   width: "100%",
   display: "grid",
   minHeight: DesktopPxToVw(41),

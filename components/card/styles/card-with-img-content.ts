@@ -4,7 +4,7 @@ import { Box } from "@mui/system"
 import { theme } from "../../../lib/theme"
 
 export const BoxContainer = styled(Box)(() => ({
-  background: `linear-gradient(180deg, ${theme?.palette?.neuPalette?.hexSeventeen} 0%, ${theme?.palette?.neuPalette?.hexThree} 100%)`,
+  background: `linear-gradient(180deg, ${theme?.palette?.ihclPalette?.hexSeventeen} 0%, ${theme?.palette?.ihclPalette?.hexThree} 100%)`,
 }))
 
 export const GridContainer = styled(Grid)(() => ({
@@ -38,7 +38,7 @@ export const CustomDivider = styled(Divider)(() => ({
   position: "relative",
   width: "2.083vw",
   marginTop: "1.563vw",
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const ImageContentBox = styled(Box)(() => ({

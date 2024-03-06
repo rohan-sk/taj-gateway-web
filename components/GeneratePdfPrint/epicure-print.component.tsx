@@ -56,7 +56,7 @@ const EpicurePrint = ({ isPrintAction = false }: any) => {
   const { getOptimizeImageUrl } = useImageUtility()
 
   const loyaltyEpicureStore = pageContext?.getPageStore(
-    PAGE_STORES?.LOYALTY_STORES.loyaltyConfirmationStore
+    PAGE_STORES?.LOYALTY_STORES.loyaltyConfirmationStore,
   ) as LoyaltyConfirmationPageStore
 
   const {
@@ -74,7 +74,9 @@ const EpicurePrint = ({ isPrintAction = false }: any) => {
     products,
     addOnCardDetails,
   } = loyaltyEpicureStore?.loyaltyConfirmationResponse || {}
-  const bannerImage = isMobile ? loyaltyEpicureStore?.epicureBanners?.imageInfo?.image?.[0]?.image?.asset?._ref :  loyaltyEpicureStore?.epicureBanners?.imageInfo?.image?.[0]?.largeImage?.asset?._ref
+  const bannerImage = isMobile
+    ? loyaltyEpicureStore?.epicureBanners?.imageInfo?.image?.[0]?.image?.asset?._ref
+    : loyaltyEpicureStore?.epicureBanners?.imageInfo?.image?.[0]?.largeImage?.asset?._ref
 
   const PurchaseOrderNumber = purchaseOrderNumber
   const firstName = buyerName?.split(" ")[0]
@@ -88,11 +90,9 @@ const EpicurePrint = ({ isPrintAction = false }: any) => {
     let pinCode = address?.pincode
     let country = address?.country
 
-    return `${addressLine1 && addressLine1}${addressLine1 && ""} ${
-      city && city
-    }${city && ""} ${state && state}${state && ""} ${pinCode && pinCode}${
-      pinCode && ""
-    } ${country && country}`
+    return `${addressLine1 && addressLine1}${addressLine1 && ""} ${city && city}${city && ""} ${state && state}${
+      state && ""
+    } ${pinCode && pinCode}${pinCode && ""} ${country && country}`
   }
 
   useEffect(() => {
@@ -114,77 +114,75 @@ const EpicurePrint = ({ isPrintAction = false }: any) => {
     if (membershipDetails) {
       let productDetails = membershipDetails?.filter(
         (product: any) =>
-          product?.planCode?.toLowerCase() ===
-            products?.[0]?.type?.toLowerCase() ||
-          product?.tier?.toLowerCase() === products?.[0]?.type?.toLowerCase()
+          product?.planCode?.toLowerCase() === products?.[0]?.type?.toLowerCase() ||
+          product?.tier?.toLowerCase() === products?.[0]?.type?.toLowerCase(),
       )
       productDetails && setPurchaseProductDetails(productDetails?.[0])
     }
   }, [products, membershipDetails])
 
   return (
-    <PrintContainer
-      className="page-break"
-      $print={isPrintAction}
-      $isIos={isIos}>
+    <PrintContainer className="page-break" $print={isPrintAction} $isIos={isIos}>
       <PrintTajLogo />
       <Box
-      sx={{
-        position: "relative",
-        height: isMobile ? "auto" : DesktopPxToVw(780),
-      }}>
-      <BottomGradientBox $isIos={isIos}
-        $gradient={theme?.palette?.neuPalette?.linearGradientBottom} />
-      <Box
         sx={{
-          position: "absolute",
-          left: isMobile ? MobilePxToVw(10) : DesktopPxToVw(80),
-          bottom: isMobile ? 0 : DesktopPxToVw(46),
+          position: "relative",
+          height: isMobile ? "auto" : DesktopPxToVw(780),
         }}>
-        <Box component={"h2"}>
-          <Stack
-            columnGap={isMobile ? MobilePxToVw(20) : DesktopPxToVw(40)}
-            direction={"row"}
-            alignItems={"center"}>
-            <Divider
-              sx={{
-                background: theme?.palette?.neuPalette?.hexOne,
-                borderColor: theme?.palette?.neuPalette?.hexOne,
-                width: isMobile ? MobilePxToVw(40) : DesktopPxToVw(80),
-                height: isMobile ? MobilePxToVw(2) : DesktopPxToVw(2),
-              }}
-            />
-            <Typography
-              color={theme?.palette?.neuPalette?.hexOne}
-              component={"span"}
-              sx={{
-                fontFamily: theme?.palette?.font?.primaryFontFamily,
-                fontSize: isMobile || isIos ? isPrintAction ? "1.625rem" : MobilePxToVw(80) : DesktopPxToVw(80),
-                fontWeight: 400,
-                lineHeight: isMobile ? "140%" : DesktopPxToVw(88),
-                letterSpacing: "-0.05em",
-              }}>
-              {purchasedProductDetails?.title}
-            </Typography>
-          </Stack>
+        <BottomGradientBox $isIos={isIos} $gradient={theme?.palette?.ihclPalette?.linearGradientBottom} />
+        <Box
+          sx={{
+            position: "absolute",
+            left: isMobile ? MobilePxToVw(10) : DesktopPxToVw(80),
+            bottom: isMobile ? 0 : DesktopPxToVw(46),
+          }}>
+          <Box component={"h2"}>
+            <Stack columnGap={isMobile ? MobilePxToVw(20) : DesktopPxToVw(40)} direction={"row"} alignItems={"center"}>
+              <Divider
+                sx={{
+                  background: theme?.palette?.ihclPalette?.hexOne,
+                  borderColor: theme?.palette?.ihclPalette?.hexOne,
+                  width: isMobile ? MobilePxToVw(40) : DesktopPxToVw(80),
+                  height: isMobile ? MobilePxToVw(2) : DesktopPxToVw(2),
+                }}
+              />
+              <Typography
+                color={theme?.palette?.ihclPalette?.hexOne}
+                component={"span"}
+                sx={{
+                  fontFamily: theme?.palette?.font?.primaryFontFamily,
+                  fontSize: isMobile || isIos ? (isPrintAction ? "1.625rem" : MobilePxToVw(80)) : DesktopPxToVw(80),
+                  fontWeight: 400,
+                  lineHeight: isMobile ? "140%" : DesktopPxToVw(88),
+                  letterSpacing: "-0.05em",
+                }}>
+                {purchasedProductDetails?.title}
+              </Typography>
+            </Stack>
+          </Box>
         </Box>
+        <Box
+          loading="lazy"
+          component={"img"}
+          alt="hotel img"
+          width={"100%"}
+          src={bannerImage && urlFor(bannerImage)?.url()}
+          height={
+            isMobile
+              ? isPrintAction
+                ? "15.375rem"
+                : isMobile && isIos && !isPrintAction
+                ? "34.375rem"
+                : MobilePxToVw(780)
+              : DesktopPxToVw(780)
+          }
+        />
       </Box>
-      <Box
-        loading="lazy"
-        component={"img"}
-        alt="hotel img"
-        width={"100%"}
-        src={bannerImage && urlFor(bannerImage)?.url()}
-        height={isMobile ? isPrintAction ? "15.375rem": isMobile && isIos && !isPrintAction  ? "34.375rem" : MobilePxToVw(780) : DesktopPxToVw(780)}
-      />
-    </Box>
-     
+
       <ItineraryWrapper $isIos={isIos}>
         <CheckInCheckOutText>
           <MembershipBlock>
-            <CheckInTextOne $isIos={isIos}>
-              {PDF_CONSTANT?.YOUR_MEMBERSHIP_NUMBER}
-            </CheckInTextOne>
+            <CheckInTextOne $isIos={isIos}>{PDF_CONSTANT?.YOUR_MEMBERSHIP_NUMBER}</CheckInTextOne>
             <MembershipNumber $isIos={isIos}>{membershipId}</MembershipNumber>
           </MembershipBlock>
         </CheckInCheckOutText>
@@ -192,104 +190,70 @@ const EpicurePrint = ({ isPrintAction = false }: any) => {
       <Box>
         <GiftDetailsWrapper $isIos={isIos}>
           <Box sx={{ marginRight: DesktopPxToVw(25) }}>
-            <GuestDetailsHeading $isIos={isIos}>
-              {PDF_CONSTANT?.FIRST_NAME}
-            </GuestDetailsHeading>
+            <GuestDetailsHeading $isIos={isIos}>{PDF_CONSTANT?.FIRST_NAME}</GuestDetailsHeading>
             <GuestDetailsList $isIos={isIos}>{firstName}</GuestDetailsList>
           </Box>
           <Box sx={{ marginRight: DesktopPxToVw(25) }}>
-            <GuestDetailsHeading $isIos={isIos}>
-              {PDF_CONSTANT?.LAST_NAME}
-            </GuestDetailsHeading>
+            <GuestDetailsHeading $isIos={isIos}>{PDF_CONSTANT?.LAST_NAME}</GuestDetailsHeading>
             <GuestDetailsList $isIos={isIos}>{lastName}</GuestDetailsList>
           </Box>
           <Box>
-            <GuestDetailsHeading $isIos={isIos}>
-              {PDF_CONSTANT?.EMAIL}
-            </GuestDetailsHeading>
+            <GuestDetailsHeading $isIos={isIos}>{PDF_CONSTANT?.EMAIL}</GuestDetailsHeading>
             <GuestDetailsList $isIos={isIos}>{emailId}</GuestDetailsList>
           </Box>
         </GiftDetailsWrapper>
         <EpicurePurchaseWrapper $isIos={isIos}>
           <Box>
-            <GuestDetailsHeading $isIos={isIos}>
-              {PDF_CONSTANT?.MOBILE_NUMBER}
-            </GuestDetailsHeading>
+            <GuestDetailsHeading $isIos={isIos}>{PDF_CONSTANT?.MOBILE_NUMBER}</GuestDetailsHeading>
             <GuestDetailsList $isIos={isIos}>{mobileNumber}</GuestDetailsList>
           </Box>
           <Box>
-            <GuestDetailsHeading $isIos={isIos}>
-              {PDF_CONSTANT?.DATE_OF_BIRTH}
-            </GuestDetailsHeading>
-            <GuestDetailsList $isIos={isIos}>
-              {dateOfBirth && formatDateWithMON(dateOfBirth)}
-            </GuestDetailsList>
+            <GuestDetailsHeading $isIos={isIos}>{PDF_CONSTANT?.DATE_OF_BIRTH}</GuestDetailsHeading>
+            <GuestDetailsList $isIos={isIos}>{dateOfBirth && formatDateWithMON(dateOfBirth)}</GuestDetailsList>
           </Box>
           <Box>
-            <GuestDetailsHeading $isIos={isIos}>
-              {PDF_CONSTANT?.GST_NUMBER}
-            </GuestDetailsHeading>
+            <GuestDetailsHeading $isIos={isIos}>{PDF_CONSTANT?.GST_NUMBER}</GuestDetailsHeading>
             <GuestDetailsList $isIos={isIos}>{gstNumber}</GuestDetailsList>
           </Box>
           <Box>
-            <GuestDetailsHeading $isIos={isIos}>
-              {PDF_CONSTANT?.MEMBERSHIP_TYPE}
-            </GuestDetailsHeading>
-            <GuestDetailsList $isIos={isIos}>
-              {purchasedProductDetails?.title}
-            </GuestDetailsList>
+            <GuestDetailsHeading $isIos={isIos}>{PDF_CONSTANT?.MEMBERSHIP_TYPE}</GuestDetailsHeading>
+            <GuestDetailsList $isIos={isIos}>{purchasedProductDetails?.title}</GuestDetailsList>
           </Box>
         </EpicurePurchaseWrapper>
         <EpicurePaymentWrapper $isIos={isIos}>
           <Box>
-            <GuestDetailsHeading $isIos={isIos}>
-              {PDF_CONSTANT?.PAYMENT_METHODS}
-            </GuestDetailsHeading>
+            <GuestDetailsHeading $isIos={isIos}>{PDF_CONSTANT?.PAYMENT_METHODS}</GuestDetailsHeading>
             <GuestDetailsList $isIos={isIos}>{paymentMethod}</GuestDetailsList>
           </Box>
           <Box>
-            <GuestDetailsHeading $isIos={isIos}>
-              {PDF_CONSTANT?.CARD_NUMBER}
-            </GuestDetailsHeading>
-            <GuestDetailsList $isIos={isIos}>
-              {cardNumber ? cardNumber : "NA"}
-            </GuestDetailsList>
+            <GuestDetailsHeading $isIos={isIos}>{PDF_CONSTANT?.CARD_NUMBER}</GuestDetailsHeading>
+            <GuestDetailsList $isIos={isIos}>{cardNumber ? cardNumber : "NA"}</GuestDetailsList>
           </Box>
           {addOnCardDetails?.obtainAddOnCard && (
             <Box>
-              <GuestDetailsHeading $isIos={isIos}>
-                {PDF_CONSTANT?.ADD_ON_CARD}
-              </GuestDetailsHeading>
+              <GuestDetailsHeading $isIos={isIos}>{PDF_CONSTANT?.ADD_ON_CARD}</GuestDetailsHeading>
 
               <GuestDetailsList
-                $isIos={
-                  isIos
-                }>{`${addOnCardDetails?.firstName} ${addOnCardDetails?.lastName}`}</GuestDetailsList>
+                $isIos={isIos}>{`${addOnCardDetails?.firstName} ${addOnCardDetails?.lastName}`}</GuestDetailsList>
             </Box>
           )}
         </EpicurePaymentWrapper>
         <Box>
-          <GuestDetailsHeading $isIos={isIos}>
-            {PDF_CONSTANT?.ADDRESS}
-          </GuestDetailsHeading>
-          <GuestDetailsList $isIos={isIos}>
-            {constructUserAddress()}
-          </GuestDetailsList>
+          <GuestDetailsHeading $isIos={isIos}>{PDF_CONSTANT?.ADDRESS}</GuestDetailsHeading>
+          <GuestDetailsList $isIos={isIos}>{constructUserAddress()}</GuestDetailsList>
         </Box>
       </Box>
       <br />
       <GiftTable>
-        <GiftTableHeading sx={{alignItems:"center",}}>
-          <GiftTableTitle $isIos={isIos} sx={{ marginBottom: isMobile ? MobilePxToVw(5): DesktopPxToVw(20),}}>
+        <GiftTableHeading sx={{ alignItems: "center" }}>
+          <GiftTableTitle $isIos={isIos} sx={{ marginBottom: isMobile ? MobilePxToVw(5) : DesktopPxToVw(20) }}>
             {PDF_CONSTANT?.PRODUCT_S}
           </GiftTableTitle>
-          <GiftTableTitle $isIos={isIos} sx={{ marginBottom: isMobile ? MobilePxToVw(5): DesktopPxToVw(20),}}>
+          <GiftTableTitle $isIos={isIos} sx={{ marginBottom: isMobile ? MobilePxToVw(5) : DesktopPxToVw(20) }}>
             {PDF_CONSTANT?.PRICE?.toUpperCase()}
           </GiftTableTitle>
-          <GiftTableTitle $isIos={isIos} sx={{ marginBottom: isMobile ? MobilePxToVw(5): DesktopPxToVw(20),}}>
-            {priceBreakUp?.discountPrice > 0
-              ? PDF_CONSTANT?.DISCOUNT
-              : PDF_CONSTANT?.QUANTITY}
+          <GiftTableTitle $isIos={isIos} sx={{ marginBottom: isMobile ? MobilePxToVw(5) : DesktopPxToVw(20) }}>
+            {priceBreakUp?.discountPrice > 0 ? PDF_CONSTANT?.DISCOUNT : PDF_CONSTANT?.QUANTITY}
           </GiftTableTitle>
           <GiftTableTitleTotal
             sx={{
@@ -301,11 +265,7 @@ const EpicurePrint = ({ isPrintAction = false }: any) => {
             <>{PDF_CONSTANT?.TOTAL?.toUpperCase()}</>
             <Box
               sx={{
-                fontSize: isPrintAction
-                  ? DesktopPxToVw(14)
-                  : isMobile
-                  ? MobilePxToVw(24)
-                  : DesktopPxToVw(24),
+                fontSize: isPrintAction ? DesktopPxToVw(14) : isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                 display: "flex",
                 justifyContent: "end",
               }}>
@@ -317,7 +277,7 @@ const EpicurePrint = ({ isPrintAction = false }: any) => {
           <GiftImgTitle>
             {purchasedProductDetails?.image?.largeImage?.asset?._ref && (
               <Box
-              loading="lazy"
+                loading="lazy"
                 alt="card-image"
                 component={"img"}
                 width={isMobile ? MobilePxToVw(150) : DesktopPxToVw(200)}
@@ -326,9 +286,9 @@ const EpicurePrint = ({ isPrintAction = false }: any) => {
                   urlFor(
                     isMobile
                       ? purchasedProductDetails?.image?.smallImage?.asset?._ref
-                      : purchasedProductDetails?.image?.largeImage?.asset?._ref
+                      : purchasedProductDetails?.image?.largeImage?.asset?._ref,
                   ).url(),
-                  3
+                  3,
                 )}
               />
             )}
@@ -340,52 +300,32 @@ const EpicurePrint = ({ isPrintAction = false }: any) => {
               {purchasedProductDetails?.title}
             </span>
           </GiftImgTitle>
+          <GiftTableTitle $isIos={isIos}>{currencyPrettier(Number(priceBreakUp?.price))}</GiftTableTitle>
           <GiftTableTitle $isIos={isIos}>
-            {currencyPrettier(Number(priceBreakUp?.price))}
+            {priceBreakUp?.discountPrice > 0 ? `${priceBreakUp?.discountPercent}%` : products?.[0]?.quantity || 1}
           </GiftTableTitle>
-          <GiftTableTitle $isIos={isIos}>
-            {priceBreakUp?.discountPrice > 0
-              ? `${priceBreakUp?.discountPercent}%`
-              : products?.[0]?.quantity || 1}
-          </GiftTableTitle>
-          <GiftTableTitle $isIos={isIos}>
-            {currencyPrettier(Number(priceBreakUp?.totalPrice))}
-          </GiftTableTitle>
+          <GiftTableTitle $isIos={isIos}>{currencyPrettier(Number(priceBreakUp?.totalPrice))}</GiftTableTitle>
         </GiftTableHeading>
         {!isBank && (
           <Box sx={{ display: "flex", justifyContent: "end" }}>
             <FinalPriceWrapperBox>
               <Box>
-                <TotalPriceAndText $isIos={isIos}>
-                  {PDF_CONSTANT?.PRICE}
-                </TotalPriceAndText>
-                <TotalPriceAndText $isIos={isIos}>
-                  {PDF_CONSTANT?.TAX_FEES}
-                </TotalPriceAndText>
-                <TotalPriceAndText $isIos={isIos}>
-                  {PDF_CONSTANT?.TOTAL_AMOUNT}
-                </TotalPriceAndText>
+                <TotalPriceAndText $isIos={isIos}>{PDF_CONSTANT?.PRICE}</TotalPriceAndText>
+                <TotalPriceAndText $isIos={isIos}>{PDF_CONSTANT?.TAX_FEES}</TotalPriceAndText>
+                <TotalPriceAndText $isIos={isIos}>{PDF_CONSTANT?.TOTAL_AMOUNT}</TotalPriceAndText>
                 {priceBreakUp?.neuCoins ? (
-                  <TotalPriceAndText $isIos={isIos}>
-                    {PDF_CONSTANT?.NEUCOINS_REDEMPTION}
-                  </TotalPriceAndText>
+                  <TotalPriceAndText $isIos={isIos}>{PDF_CONSTANT?.NEUCOINS_REDEMPTION}</TotalPriceAndText>
                 ) : null}
                 {!!priceBreakUp?.totalPayableAmount && (
-                  <FinalPriceAndText $isIos={isIos}>
-                    {PDF_CONSTANT?.AMOUNT_PAID}
-                  </FinalPriceAndText>
+                  <FinalPriceAndText $isIos={isIos}>{PDF_CONSTANT?.AMOUNT_PAID}</FinalPriceAndText>
                 )}
               </Box>
               <FinalPriceBox>
                 {/* {currencyPrettier(Number(productDetails?.price))} */}
-                <TotalPriceAndText $isIos={isIos}>
-                  {currencyPrettier(Number(priceBreakUp?.price))}
-                </TotalPriceAndText>
+                <TotalPriceAndText $isIos={isIos}>{currencyPrettier(Number(priceBreakUp?.price))}</TotalPriceAndText>
                 <TotalPriceAndText $isIos={isIos}>
                   {!!priceBreakUp?.discountTax
-                    ? currencyPrettier(
-                        Number(priceBreakUp?.tax - priceBreakUp?.discountTax)
-                      )
+                    ? currencyPrettier(Number(priceBreakUp?.tax - priceBreakUp?.discountTax))
                     : currencyPrettier(Number(priceBreakUp?.tax))}
                 </TotalPriceAndText>
                 <TotalPriceAndText $isIos={isIos}>
@@ -393,15 +333,12 @@ const EpicurePrint = ({ isPrintAction = false }: any) => {
                 </TotalPriceAndText>
                 {priceBreakUp?.neuCoins ? (
                   <TotalPriceAndText $isIos={isIos}>
-                    {currencyWithNoDecimalsWithMinus(
-                      Number(priceBreakUp?.neuCoins)
-                    )}
+                    {currencyWithNoDecimalsWithMinus(Number(priceBreakUp?.neuCoins))}
                   </TotalPriceAndText>
                 ) : null}
 
                 <FinalPriceAndText $isIos={isIos}>
-                  {!!priceBreakUp?.totalPayableAmount &&
-                    currencyPrettier(Number(priceBreakUp?.totalPayableAmount))}
+                  {!!priceBreakUp?.totalPayableAmount && currencyPrettier(Number(priceBreakUp?.totalPayableAmount))}
                 </FinalPriceAndText>
               </FinalPriceBox>
             </FinalPriceWrapperBox>

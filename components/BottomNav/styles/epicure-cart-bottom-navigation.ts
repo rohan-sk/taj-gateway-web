@@ -30,7 +30,7 @@ export const ParentBox = styled(Box)(() => ({
 export const TitleDivider = styled(Divider)(() => ({
   width: "6.250vw",
   height: "0.156vw",
-  background: theme.palette.neuPalette.hexSeventeen,
+  background: theme.palette.ihclPalette.hexSeventeen,
 }))
 
 export const BottomSheetBox = styled(Box)(() => ({
@@ -44,7 +44,7 @@ export const BottomSheetBox = styled(Box)(() => ({
 export const PriceDetailsMainBox = styled(Box)(() => ({
   width: "100%",
   padding: "5.78vw 2.35vw 0vw 2.35vw",
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
   boxShadow: "-6px 10px 32px rgba(0, 0, 0, 0.15)",
   maxHeight: "50vh",
   overflowY: "scroll",
@@ -94,7 +94,7 @@ export const BottomBoxEpicure = styled(Box)(() => ({
 
 export const BoxShowPrice = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ showPrice?: boolean }>(({ showPrice }) => ({
   transform: showPrice ? "rotate(180deg)" : "rotate(0deg)",
   paddingTop: showPrice ? "0vw" : MobilePxToVw(4),

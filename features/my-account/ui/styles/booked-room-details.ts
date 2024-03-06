@@ -11,7 +11,7 @@ export const DateDivider = styled(Divider)(() => ({
   "@media (max-width: 640px)": {
     width: MobilePxToVw(30),
   },
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const CancelPolicyTypography = styled(Typography)(() => ({
@@ -81,7 +81,7 @@ export const RefundAmountLabelTypography = styled(Typography)(() => ({
 
 export const PayableAmountTypography = styled(Typography)(() => ({
   textAlign: "end",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const RoomDetailsBox = styled(Box)(() => ({

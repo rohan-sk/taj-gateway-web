@@ -122,7 +122,7 @@ const GiftCardReloadPriceBreakup = (props: any) => {
                       }}
                     />
                     <BoldTypography
-                      sx={{ color: theme?.palette?.neuPalette?.hexOne }}
+                      sx={{ color: theme?.palette?.ihclPalette?.hexOne }}
                       variant={isMobile ? "m-body-xs" : "body-s"}>
                       {data?.share}
                     </BoldTypography>

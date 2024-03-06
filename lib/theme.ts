@@ -540,7 +540,7 @@ export const theme = createTheme({
     text: {
       primary: primaryColor,
     },
-    neuPalette: {
+    ihclPalette: {
       hexOne: "#FFFFFF",
       hexTwo: "#AD8B3A",
       hexThree: "#13130F",
@@ -652,11 +652,11 @@ declare module "@mui/material/styles" {
   }
 
   interface Palette {
-    neuPalette?: any
+    ihclPalette?: any
     font?: any
   }
   interface PaletteOptions {
-    neuPalette: {
+    ihclPalette: {
       hexOne: React.CSSProperties["color"]
       hexTwo: React.CSSProperties["color"]
       hexThree: React.CSSProperties["color"]

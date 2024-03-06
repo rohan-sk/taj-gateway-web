@@ -23,7 +23,7 @@ export const HighlightsDescriptionTypo = styled(Typography)(() => ({
 }))
 
 export const HighlightsStyledBulletIcon = styled(SquareSharp)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   width: "0.625vw",
   height: "0.625vw",
   marginRight: "0.45vw",
@@ -36,7 +36,7 @@ export const HighlightsStyledBulletIcon = styled(SquareSharp)(() => ({
 }))
 
 export const HighlightsBulletIcon = styled(Box)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
   width: "0.417vw",
   height: "0.417vw",
   transform: "rotate(45deg)",

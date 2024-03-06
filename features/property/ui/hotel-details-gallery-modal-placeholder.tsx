@@ -210,7 +210,7 @@ const HotelDetailsGalleryImageCarousel = (props: any) => {
                             <Typography
                               variant={"m-heading-xs"}
                               sx={{
-                                color: theme?.palette?.neuPalette?.hexEleven,
+                                color: theme?.palette?.ihclPalette?.hexEleven,
                               }}>
                               {item?.title}
                             </Typography>
@@ -220,7 +220,7 @@ const HotelDetailsGalleryImageCarousel = (props: any) => {
                             <TitleTypo
                               variant={isMobile ? "m-heading-xs" : "heading-xs"}
                               sx={{
-                                color: theme?.palette?.neuPalette?.hexOne,
+                                color: theme?.palette?.ihclPalette?.hexOne,
                               }}>
                               {item?.title}
                             </TitleTypo>
@@ -277,8 +277,8 @@ const HotelDetailsGalleryImageCarousel = (props: any) => {
                                     border:
                                       selectedIndex === index
                                         ? isMobile
-                                          ? `0.156vw solid ${theme?.palette?.neuPalette?.hexTwo}`
-                                          : `0.08vw solid ${theme?.palette?.neuPalette?.hexTwo}`
+                                          ? `0.156vw solid ${theme?.palette?.ihclPalette?.hexTwo}`
+                                          : `0.08vw solid ${theme?.palette?.ihclPalette?.hexTwo}`
                                         : "",
                                     padding: DesktopPxToVw(3),
                                   }}

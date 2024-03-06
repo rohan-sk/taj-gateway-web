@@ -1,13 +1,5 @@
 import { theme } from "../../../../lib/theme"
-import {
-  Box,
-  Divider,
-  Grid,
-  Stack,
-  TextField,
-  Typography,
-  styled,
-} from "@mui/material"
+import { Box, Divider, Grid, Stack, TextField, Typography, styled } from "@mui/material"
 import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 import { transientProps } from "../../../../utils/transientProps"
 
@@ -29,12 +21,12 @@ export const StyledDateRangePicker = styled(TextField)(() => ({
     fontSize: "1.2vw",
   },
   "& .Mui-error": {
-    color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
   },
   "& .MuiFormLabel-root": {
     fontSize: "1.35vw",
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
 }))
 
@@ -42,22 +34,22 @@ export const TextFieldWrapper = styled(Grid)(() => ({
   display: "flex",
   gap: "2vw",
   alignItems: "self-starts",
-  borderBottom: `1px solid${theme?.palette?.neuPalette?.hexTwelve}`,
+  borderBottom: `1px solid${theme?.palette?.ihclPalette?.hexTwelve}`,
   marginBottom: "2vw",
 }))
 
 export const EndDateTextField = styled(TextField)(() => ({
   "& .Mui-error": {
-    color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
   },
   "& .MuiInput-input": {
     fontSize: "1.2vw",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
   "& .MuiFormLabel-root": {
     fontSize: "1.35vw",
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     paddingLeft: "0.6vw",
   },
 }))
@@ -71,7 +63,7 @@ export const DatesWrapper = styled(Box)(() => ({
 export const StyledDivider = styled(Divider)(() => ({
   width: "1.563vw",
   height: "0.06vw",
-  background: theme.palette.neuPalette.hexTwelve,
+  background: theme.palette.ihclPalette.hexTwelve,
   "@media (max-width: 640px)": {
     width: MobilePxToVw(30),
     height: "1px",
@@ -87,7 +79,7 @@ export const ButtonsWrapper = styled(Box)(() => ({
 
 export const ParentStack = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   lineHeight: "150%",
   flexDirection: $isMobile ? "column" : "row",
@@ -97,7 +89,7 @@ export const ParentStack = styled(
 
 export const DatesStack = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: $isMobile ? MobilePxToVw(476) : DesktopPxToVw(432),
   flexDirection: "row",
@@ -105,7 +97,7 @@ export const DatesStack = styled(
   position: "relative",
   lineHeight: "150%",
   paddingBottom: $isMobile ? MobilePxToVw(8) : DesktopPxToVw(8),
-  borderBottom: `1px solid ${theme.palette.neuPalette.hexSeventeen}`,
+  borderBottom: `1px solid ${theme.palette.ihclPalette.hexSeventeen}`,
 }))
 
 export const CalendarBox = styled(Box)(() => ({
@@ -115,7 +107,7 @@ export const CalendarBox = styled(Box)(() => ({
 
 export const CalendarTextStack = styled(
   Stack,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   alignItems: "center",
   flexDirection: "row",
@@ -124,7 +116,7 @@ export const CalendarTextStack = styled(
 
 export const DatesText = styled(
   Typography,
-  transientProps
+  transientProps,
 )<{ $color: string }>(({ $color }) => ({
   whiteSpace: "nowrap",
   color: $color,
@@ -132,7 +124,7 @@ export const DatesText = styled(
 
 export const CalendarStack = styled(
   Stack,
-  transientProps
+  transientProps,
 )(() => ({
   width: "100%",
   alignItems: "center",
@@ -141,7 +133,7 @@ export const CalendarStack = styled(
 }))
 
 export const SelectedRooms = styled(Box)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexTwenty}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexTwenty}`,
   padding: DesktopPxToVw(40),
   "@media (max-width: 640px)": {
     padding: `${MobilePxToVw(35)} ${MobilePxToVw(32)}`,

@@ -3,15 +3,7 @@ import { theme } from "../../../lib/theme"
 import { SquareSharp } from "@mui/icons-material"
 import { transientProps } from "../../../utils/transientProps"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
-import {
-  Box,
-  Stack,
-  Button,
-  Divider,
-  MenuItem,
-  Typography,
-  Collapse,
-} from "@mui/material"
+import { Box, Stack, Button, Divider, MenuItem, Typography, Collapse } from "@mui/material"
 
 export const ContainerBox = styled(Box)(() => ({
   display: "flex",
@@ -30,7 +22,7 @@ export const CardMainBox = styled(Box)(() => ({
   width: "33.45vw",
   marginBottom: "1.04vw",
   padding: "1.04vw 0.73vw 1.04vw 1.04vw",
-  border: `0.052vw solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
 
   "@media (max-width: 640px)": {
     width: "100%",
@@ -83,7 +75,7 @@ export const StyledBulletIcon = styled(SquareSharp)(() => ({
   height: DesktopPxToVw(8),
   marginRight: DesktopPxToVw(6),
   transform: "rotate(45deg)",
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   "@media (max-width: 640px)": {
     width: "1.25vw",
     height: "1.25vw",
@@ -94,7 +86,7 @@ export const StyledBulletIcon = styled(SquareSharp)(() => ({
 export const StyledDivider = styled(Divider)(() => ({
   width: "0.052vw",
   margin: "0vw 0.78vw 0vw 1.5625vw",
-  background: theme?.palette?.neuPalette?.hexSixteen,
+  background: theme?.palette?.ihclPalette?.hexSixteen,
 
   "@media (max-width: 640px)": {
     width: "100%",
@@ -108,7 +100,7 @@ export const VerticalDivider = styled(Divider)(() => ({
     height: "100%",
     width: "0.15625vw",
     margin: "0vw 3.125vw",
-    background: theme?.palette?.neuPalette?.hexSixteen,
+    background: theme?.palette?.ihclPalette?.hexSixteen,
   },
 }))
 
@@ -209,8 +201,8 @@ export const LoadMoreLessMainBox = styled(Box)(() => ({
   padding: "0.68vw",
   marginTop: "0.520vw",
   justifyContent: "center",
-  color: theme?.palette?.neuPalette?.hexTwo,
-  background: theme?.palette?.neuPalette?.hexEighteen,
+  color: theme?.palette?.ihclPalette?.hexTwo,
+  background: theme?.palette?.ihclPalette?.hexEighteen,
 
   "@media (max-width: 640px)": {
     padding: "2.03125vw",
@@ -234,7 +226,7 @@ export const PolicyCheckBox = styled(Box)(() => ({
 
 export const SubTitleBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   alignItems: "baseline",
@@ -245,7 +237,7 @@ export const SubTitleBox = styled(
 }))
 
 export const MainTopBox = styled(Box)(() => ({
-  border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   padding: "3.12vw 3.12vw 2.08vw 3.12vw",
   marginTop: "2.08vw",
 
@@ -293,7 +285,7 @@ export const StyledLabel = styled(Typography)(() => ({
 
 export const SelectStack = styled(Stack)(() => ({
   flexDirection: "row",
-  borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+  borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
   justifyContent: "space-between",
   alignItems: "center",
   cursor: "pointer",
@@ -357,25 +349,23 @@ export const TaxCheckBoxStack = styled(Stack)(() => ({
 
 export const CancellationPolicyDivider = styled(
   Divider,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
-  margin: $isMobile
-    ? `${MobilePxToVw(20)} 0vw`
-    : `${DesktopPxToVw(20)} 0vw 0vw`,
-  backgroundColor: theme?.palette?.neuPalette?.hexTwelve,
+  margin: $isMobile ? `${MobilePxToVw(20)} 0vw` : `${DesktopPxToVw(20)} 0vw 0vw`,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const RoomDetailsBox = styled(Box)(() => ({
   padding: "3.125vw",
   marginBottom: "4.688vw",
-  border: `0.052vw solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
 }))
 
 export const TabHighlightDivider = styled(Divider)(() => ({
   width: "100%",
   height: "1.5px",
   marginTop: "2.188vw",
-  background: theme?.palette?.neuPalette?.hexTwo,
+  background: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
 export const TabsStack = styled(Stack)(() => ({
@@ -416,5 +406,5 @@ export const FullWidthDivider = styled(Divider)(() => ({
   width: "100%",
   height: "1px",
   mb: "2.188vw",
-  background: theme?.palette?.neuPalette.hexSixteen,
+  background: theme?.palette?.ihclPalette.hexSixteen,
 }))

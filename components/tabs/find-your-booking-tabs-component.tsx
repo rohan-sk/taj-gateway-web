@@ -54,9 +54,7 @@ const FindYourBookingTabsComponent = ({
       }}>
       <MainContentWrapper $isMobile={isMobile}>
         <MainContentTitleWrapper $isMobile={isMobile}>
-          {title && (
-            <Typography variant={isMobile ? "m-heading-s" : "heading-s"}>{title}</Typography>
-          )}
+          {title && <Typography variant={isMobile ? "m-heading-s" : "heading-s"}>{title}</Typography>}
           {subTitle && (
             <SubtitleContentWrapper $isMobile={isMobile}>
               <Typography
@@ -73,7 +71,7 @@ const FindYourBookingTabsComponent = ({
             value={value}
             TabIndicatorProps={{
               style: {
-                background: theme?.palette?.neuPalette?.hexTwo,
+                background: theme?.palette?.ihclPalette?.hexTwo,
               },
             }}
             $isMobile={isMobile}>
@@ -90,8 +88,8 @@ const FindYourBookingTabsComponent = ({
                       sx={{
                         color:
                           value === index
-                            ? theme?.palette?.neuPalette?.hexTwo
-                            : theme?.palette?.neuPalette?.hexSeventeen,
+                            ? theme?.palette?.ihclPalette?.hexTwo
+                            : theme?.palette?.ihclPalette?.hexSeventeen,
                       }}
                       $isMobile={isMobile}
                     />

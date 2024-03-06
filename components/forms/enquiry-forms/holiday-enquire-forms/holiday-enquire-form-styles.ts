@@ -58,7 +58,7 @@ export const NameField = styled(TextField)(() => ({
     width: "100%",
     margin: "1.563vw 0vw",
     "& input": {
-      WebkitTextFillColor: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+      WebkitTextFillColor: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
     },
   },
   "& .MuiInputBase-input ": {
@@ -70,14 +70,14 @@ export const NameField = styled(TextField)(() => ({
     },
   },
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "2.75vw",
     },
   },
   input: {
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
     fontSize: DesktopPxToVw(24),
     opacity: 1,
@@ -85,12 +85,12 @@ export const NameField = styled(TextField)(() => ({
       opacity: 1,
       fontSize: DesktopPxToVw(24),
       fontWeight: 300,
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
   "& .MuiInputLabel-root": {
     textOverflow: "ellipsis !important",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
     lineHeight: "1vw",
     opacity: 1,
@@ -113,8 +113,8 @@ export const PhoneNumberField = styled(TextField)(() => ({
   "@media (max-width:640)": {
     width: "100%",
     "& input": {
-      WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.neuPalette?.hexTwentyNine} inset !important`,
-      WebkitTextFillColor: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+      WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.ihclPalette?.hexTwentyNine} inset !important`,
+      WebkitTextFillColor: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
     },
   },
   marginRight: "2vw",
@@ -133,13 +133,13 @@ export const PhoneNumberField = styled(TextField)(() => ({
     },
   },
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
   },
   "& .MuiInputLabel-root": {
     lineHeight: "1vw",
     textOverflow: "ellipsis !important",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
     opacity: 1,
     fontSize: DesktopPxToVw(24),
@@ -171,7 +171,7 @@ export const EmailField = styled(TextField)(() => ({
     },
   },
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "2.75vw",
@@ -180,7 +180,7 @@ export const EmailField = styled(TextField)(() => ({
   "& .MuiInputLabel-root": {
     lineHeight: "1vw",
     textOverflow: "ellipsis !important",
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
     opacity: 1,
     fontSize: DesktopPxToVw(24),
@@ -192,7 +192,7 @@ export const EmailField = styled(TextField)(() => ({
 }))
 
 export const ErrorMessageTypography = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwentyOne,
+  color: theme?.palette?.ihclPalette?.hexTwentyOne,
   fontSize: DesktopPxToVw(18),
   alignSelf: "self-start",
   "@media (max-width: 640px)": {
@@ -202,7 +202,7 @@ export const ErrorMessageTypography = styled(Typography)(() => ({
 }))
 
 export const StyledInputLabel = styled(InputLabel)(() => ({
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontWeight: 300,
   fontFamily: fonts?.body,
   fontSize: DesktopPxToVw(24),
@@ -238,7 +238,7 @@ export const DateTextField = styled(TextField)(() => ({
     },
   },
   "&  .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexTwentyOne} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexTwentyOne} !important`,
     fontSize: DesktopPxToVw(18),
   },
   input: {
@@ -247,7 +247,7 @@ export const DateTextField = styled(TextField)(() => ({
       fontWeight: 300,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
         fontSize: "3.75vw",
         lineHeight: "4vw !important",
@@ -271,7 +271,7 @@ export const InputText = styled(TextField)(() => ({
   },
 
   "& .MuiFormHelperText-root": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
       fontSize: "2.75vw",
@@ -284,7 +284,7 @@ export const InputText = styled(TextField)(() => ({
       fontWeight: 300,
       fontSize: DesktopPxToVw(24),
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
   },
 
@@ -441,8 +441,8 @@ export const CountryState = styled(Select)(() => ({
     marginBottom: "3vw",
     fontSize: MobilePxToVw(24),
     "& input": {
-      WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.neuPalette?.hexTwentyNine} inset !important`,
-      WebkitTextFillColor: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+      WebkitBoxShadow: `0 0 0 50px ${theme?.palette?.ihclPalette?.hexTwentyNine} inset !important`,
+      WebkitTextFillColor: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
     },
   },
 }))

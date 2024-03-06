@@ -80,7 +80,7 @@ const BookAStayForm = (props: any) => {
               fullWidth
               sx={{
                 "& .MuiInputBase-input": {
-                  color: theme?.palette?.neuPalette?.hexEleven,
+                  color: theme?.palette?.ihclPalette?.hexEleven,
                   fontSize: "0.938vw",
                 },
               }}
@@ -103,7 +103,7 @@ const BookAStayForm = (props: any) => {
                 paddingLeft: "1.094vw",
                 "& .MuiTypography-root": {
                   fontSize: "1.237vw",
-                  color: theme?.palette?.neuPalette?.hexSeventeen,
+                  color: theme?.palette?.ihclPalette?.hexSeventeen,
                   opacity: 0.6,
                 },
               }}

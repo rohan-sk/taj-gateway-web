@@ -5,13 +5,7 @@ import { useTheme } from "@mui/system"
 import "slick-carousel/slick/slick.css"
 import { urlFor } from "../../lib-sanity"
 import "slick-carousel/slick/slick-theme.css"
-import {
-  Box,
-  Divider,
-  MenuItem,
-  SelectChangeEvent,
-  Typography,
-} from "@mui/material"
+import { Box, Divider, MenuItem, SelectChangeEvent, Typography } from "@mui/material"
 import prevImage from "../../public/taj-gold-left-arrow.svg"
 import nextImage from "../../public/taj-gold-right-arrow.svg"
 import { CommonCarouselStyles } from "../hoc/carousal-component-styles"
@@ -23,13 +17,8 @@ import DesktopPxToVw from "../../utils/DesktopFontCalc"
 import { useAesthetics } from "../../utils/fetchAsthetics"
 import { aestheticItems } from "../types"
 import { useRouter } from "next/router"
-const CustomNextArrow = dynamic(() =>
-import("../hoc/custom-arrows").then((module) => module.CustomNextArrow)
-)
-const CustomPrevArrow = dynamic(() =>
-import("../hoc/custom-arrows").then((module) => module.CustomPrevArrow)
-)
-
+const CustomNextArrow = dynamic(() => import("../hoc/custom-arrows").then((module) => module.CustomNextArrow))
+const CustomPrevArrow = dynamic(() => import("../hoc/custom-arrows").then((module) => module.CustomPrevArrow))
 
 interface dataItems {
   props: itemsProps[]
@@ -48,13 +37,7 @@ export type titleTypeDeclaration = {
   title: string
 }
 
-const WebTabsCarousel = ({
-  props,
-  initialSlide,
-  largeVariant,
-  aesthetic,
-  preRenderItemsCount,
-}: dataItems) => {
+const WebTabsCarousel = ({ props, initialSlide, largeVariant, aesthetic, preRenderItemsCount }: dataItems) => {
   const isMobile = useMobileCheck()
   const theme = useTheme()
   const navigate = useAppNavigation()
@@ -68,11 +51,7 @@ const WebTabsCarousel = ({
     swipeToSlide: true,
     speed: 500,
     initialSlide: initialSlide,
-    slidesToShow: preRenderItemsCount
-      ? preRenderItemsCount
-      : props?.length >= 5
-      ? 5
-      : props?.length,
+    slidesToShow: preRenderItemsCount ? preRenderItemsCount : props?.length >= 5 ? 5 : props?.length,
     slidesToScroll: 1,
     className: "center",
     // centerPadding: "30px",
@@ -109,9 +88,7 @@ const WebTabsCarousel = ({
   }
   useEffect(() => {
     const currentUrl = router?.query?.pid ? router?.query?.pid?.[0] : ""
-    const selectedIndex = Array?.isArray(props)
-      ? props?.findIndex((item: any) => `/${currentUrl}` === item?.url)
-      : 0
+    const selectedIndex = Array?.isArray(props) ? props?.findIndex((item: any) => `/${currentUrl}` === item?.url) : 0
     setSettings((previousSettings) => ({
       ...previousSettings,
       initialSlide: selectedIndex,
@@ -127,9 +104,7 @@ const WebTabsCarousel = ({
   return (
     <Box
       sx={{
-        padding: isMobile
-          ? aesthetic?.padding?.mobile
-          : aesthetic?.padding?.desktop,
+        padding: isMobile ? aesthetic?.padding?.mobile : aesthetic?.padding?.desktop,
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -151,7 +126,7 @@ const WebTabsCarousel = ({
             width: "100%",
             padding: "3.333vw 1.302vw",
             borderRight: "none",
-            backgroundColor: theme?.palette?.neuPalette?.hexOne,
+            backgroundColor: theme?.palette?.ihclPalette?.hexOne,
             boxShadow: "-0.313vw 0.521vw 1.25vw rgba(0, 0, 0, 0.1)",
           },
           ".slick-arrow": {
@@ -181,13 +156,7 @@ const WebTabsCarousel = ({
                   loading="lazy"
                   component={"img"}
                   className="centerImg"
-                  mb={
-                    isMobile
-                      ? "0vw"
-                      : item?.title || item?.description
-                      ? "1.667vw"
-                      : "0"
-                  }
+                  mb={isMobile ? "0vw" : item?.title || item?.description ? "1.667vw" : "0"}
                   sx={{ cursor: "pointer" }}
                   src={urlFor(item?.logo?.asset?._ref).url()}
                   onClick={() => navigate(item?.url)}
@@ -207,10 +176,7 @@ const WebTabsCarousel = ({
                 </StyledTitle>
               )}
               {item?.description && (
-                <Typography
-                  textAlign={"center"}
-                  variant={"body-ml"}
-                  sx={{ lineHeight: "140%" }}>
+                <Typography textAlign={"center"} variant={"body-ml"} sx={{ lineHeight: "140%" }}>
                   {item?.description}
                 </Typography>
               )}

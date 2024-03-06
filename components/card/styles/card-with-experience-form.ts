@@ -63,7 +63,7 @@ export const BoxButton = styled(Box)(() => ({
 }))
 
 export const BalanceTitle = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette?.hexTwo,
+  color: theme?.palette?.ihclPalette?.hexTwo,
   paddingTop: DesktopPxToVw(13),
 }))
 
@@ -96,7 +96,7 @@ export const InputContainer = styled(
 }))
 
 export const TabsContainer = styled(Tabs)(() => ({
-  borderBottom: `1px  solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+  borderBottom: `1px  solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
   justifyContent: "center !important",
 }))
 
@@ -115,7 +115,7 @@ export const BoxText = styled(Box)(() => ({
   margin: `${DesktopPxToVw(40)} 0vw ${DesktopPxToVw(55)}`,
 }))
 export const MandatoryErrorField = styled(Typography)(() => ({
-  color: theme?.palette?.neuPalette.hexSeventeen,
+  color: theme?.palette?.ihclPalette.hexSeventeen,
   fontSize: DesktopPxToVw(24),
   textAlign: "start",
   margin: "0vw",
@@ -138,7 +138,7 @@ export const InputTextField = styled(
 )<{ $width: string }>(({ $width }) => ({
   width: $width,
   marinTop: "0vw",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontWeight: 300,
   "& .MuiInputBase-root.MuiInput-root": {
     "&::before": {
@@ -148,7 +148,7 @@ export const InputTextField = styled(
   "& .MuiInput-input": {
     fontSize: DesktopPxToVw(24),
     fontWeight: 300,
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
     "@media (max-width:640px)": {
       fontSize: MobilePxToVw(24),
     },
@@ -156,10 +156,10 @@ export const InputTextField = styled(
 
   "&  .MuiFormHelperText-root": {
     fontSize: DesktopPxToVw(18),
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
   },
   "& .MuiFormHelperText-root.Mui-error": {
-    color: theme?.palette?.neuPalette?.hexTwentyOne,
+    color: theme?.palette?.ihclPalette?.hexTwentyOne,
   },
   input: {
     "&::placeholder": {
@@ -168,7 +168,7 @@ export const InputTextField = styled(
       fontWeight: 300,
       fontSize: DesktopPxToVw(24),
       textOverflow: "ellipsis !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width:640px)": {
         fontSize: MobilePxToVw(24),
       },
@@ -259,7 +259,7 @@ export const StyledInputLabel = styled(InputLabel)(() => ({
   fontSize: DesktopPxToVw(24),
   lineHeight: "140%",
   opacity: 1,
-  color: theme?.palette?.neuPalette?.hexFive,
+  color: theme?.palette?.ihclPalette?.hexFive,
   "@media (max-width: 640px)": {
     fontSize: MobilePxToVw(24),
     zIndex: 99,
@@ -268,7 +268,7 @@ export const StyledInputLabel = styled(InputLabel)(() => ({
 
 export const ErrorMessageTypography = styled(Typography)(() => ({
   fontSize: `${DesktopPxToVw(18)}!important`,
-  color: theme?.palette?.neuPalette?.hexTwentyOne,
+  color: theme?.palette?.ihclPalette?.hexTwentyOne,
   alignSelf: "self-start",
   "@media (max-width: 640px)": {
     fontSize: "2.45vw!important",
@@ -301,7 +301,7 @@ export const DateTextField = styled(TextField)(() => ({
     },
   },
   "&  .MuiFormHelperText-root": {
-    color: `${theme?.palette?.neuPalette?.hexTwentyOne} !important`,
+    color: `${theme?.palette?.ihclPalette?.hexTwentyOne} !important`,
     fontSize: DesktopPxToVw(18),
     "@media (max-width:640px)": {
       fontSize: "2.5vw",
@@ -313,7 +313,7 @@ export const DateTextField = styled(TextField)(() => ({
       fontWeight: 500,
       fontSize: DesktopPxToVw(24),
       opacity: 0.8,
-      color: theme?.palette?.neuPalette?.hexFour,
+      color: theme?.palette?.ihclPalette?.hexFour,
       "@media (max-width: 640px)": {
         fontSize: "3.75vw",
         lineHeight: "4.8vw",
@@ -349,7 +349,7 @@ export const MobileErrorMessageTypography = styled(
   zIndex: 1,
   position: "relative",
   marginTop: $isMobile ? "0.469vw" : "0.1vw",
-  color: theme?.palette?.neuPalette?.hexTen,
+  color: theme?.palette?.ihclPalette?.hexTen,
 }))
 
 export const StyledFormControl = styled(FormControl)(() => ({
@@ -371,10 +371,10 @@ export const ActionWrappingValidationContainer = styled(
     $isMobile && $isValid
       ? MobilePxToVw(25)
       : $isMobile
-        ? MobilePxToVw(55)
-        : $isValid
-          ? DesktopPxToVw(25)
-          : DesktopPxToVw(55),
+      ? MobilePxToVw(55)
+      : $isValid
+      ? DesktopPxToVw(25)
+      : DesktopPxToVw(55),
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",

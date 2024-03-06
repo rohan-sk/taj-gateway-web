@@ -8,9 +8,7 @@ import { HighlightBox } from "./Styles"
 const PresidentialSuiteDetails = (props: any) => {
   return (
     <Grid>
-      <Typography
-        variant="heading-xs"
-        sx={{ marginBottom: "1vw", padding: "0vw !important" }}>
+      <Typography variant="heading-xs" sx={{ marginBottom: "1vw", padding: "0vw !important" }}>
         {props?.title}
       </Typography>
       <Typography variant="body-s">{props?.description}</Typography>
@@ -23,17 +21,12 @@ const PresidentialSuiteDetails = (props: any) => {
       </Box>
       <HighlightBox>
         {props?.logo?.asset?._ref && (
-          <Box
-            component="img"
-            alt="logo"
-            sx={{ marginBottom: "0.2vw" }}
-            src={urlFor(props?.logo?.asset?._ref).url()}
-          />
+          <Box component="img" alt="logo" sx={{ marginBottom: "0.2vw" }} src={urlFor(props?.logo?.asset?._ref).url()} />
         )}
         <Typography
           variant="body-s"
           sx={{
-            color: theme?.palette?.neuPalette?.hexTwo,
+            color: theme?.palette?.ihclPalette?.hexTwo,
           }}>
           {props?.highLights}
         </Typography>

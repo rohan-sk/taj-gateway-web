@@ -10,7 +10,7 @@ import { GLOBAL_STORES } from "../../../utils/Constants"
 import { useMobileCheck } from "../../../utils/isMobilView"
 const RenderActionItem = dynamic(() => import("../../hoc/actions/action-items-ui"))
 const CustomCheckBox = dynamic(() =>
-import("../../hoc/CustomCheckBox/Checkbox").then((module) => module.CustomCheckBox)
+  import("../../hoc/CustomCheckBox/Checkbox").then((module) => module.CustomCheckBox),
 )
 import { useAppNavigation } from "../../../utils/NavigationUtility"
 import { receiverEmail, itineraryRefId } from "../gift-card-form/constants"
@@ -38,21 +38,14 @@ interface StayTabFormComponentProps {
   PrimaryAction: ActionProps
 }
 
-const StayTabFormComponent = ({
-  items,
-  variant,
-  largeVariant,
-  PrimaryAction,
-}: StayTabFormComponentProps) => {
+const StayTabFormComponent = ({ items, variant, largeVariant, PrimaryAction }: StayTabFormComponentProps) => {
   const isMobile = useMobileCheck()
   const router = useRouter()
   const navigate = useAppNavigation()
   const Context = useContext(IHCLContext)
   const PortableText = Context!.PortableText
 
-  const { SetFindYourBooking } = Context?.getGlobalStore(
-    GLOBAL_STORES?.userDetailsStore
-  ) as UserDetailsStore
+  const { SetFindYourBooking } = Context?.getGlobalStore(GLOBAL_STORES?.userDetailsStore) as UserDetailsStore
 
   const [check, setChecked] = useState<boolean>(false)
   const [loader, setLoader] = useState<boolean>(false)
@@ -139,9 +132,7 @@ const StayTabFormComponent = ({
     }
   }
   return (
-    <MainStayContentWrapper
-      $isMobile={isMobile}
-      aria-label={isMobile ? variant : largeVariant}>
+    <MainStayContentWrapper $isMobile={isMobile} aria-label={isMobile ? variant : largeVariant}>
       {items && (
         <MainStayContentContainer $isMobile={isMobile}>
           {items?.[0]?.inputFieldType && (
@@ -152,10 +143,7 @@ const StayTabFormComponent = ({
               $isMobile={isMobile}
               name={itineraryRefId}
               value={formValues?.itineraryRefId}
-              error={
-                formErrors?.[itineraryRefId] ||
-                formValues?.[itineraryRefId]?.length < 0
-              }
+              error={formErrors?.[itineraryRefId] || formValues?.[itineraryRefId]?.length < 0}
               helperText={formErrors?.[itineraryRefId] && items?.[0]?.errorText}
               onChange={(e) => handleChangeForm(e)}
             />
@@ -168,10 +156,7 @@ const StayTabFormComponent = ({
               $isMobile={isMobile}
               name={receiverEmail}
               value={formValues?.receiverEmail}
-              error={
-                formErrors?.receiverEmail ||
-                formValues?.receiverEmail.length < 0
-              }
+              error={formErrors?.receiverEmail || formValues?.receiverEmail.length < 0}
               helperText={formErrors?.receiverEmail && items?.[1]?.errorText}
               type="email"
               onChange={(e) => handleChangeForm(e)}
@@ -209,7 +194,7 @@ const StayTabFormComponent = ({
       {wrongMsg && (
         <Typography
           variant={isMobile ? "m-body-xs" : "body-xs"}
-          color={`${theme?.palette?.neuPalette?.hexTwentyOne}`}
+          color={`${theme?.palette?.ihclPalette?.hexTwentyOne}`}
           textAlign={"center"}>
           {wrongMsg}
         </Typography>

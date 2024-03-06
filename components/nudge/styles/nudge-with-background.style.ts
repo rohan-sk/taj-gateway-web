@@ -9,7 +9,7 @@ export const BoxWrapper = styled(Box)(() => ({
   textAlign: "center",
   position: "absolute",
   padding: "10.208vw 3.125vw",
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   "@media (max-width: 640px)": {
     top: "-10vw",
     right: "unset",
@@ -46,7 +46,7 @@ export const NudgeSignInWrapper = styled(Box)(() => ({
     whiteSpace: "nowrap",
     marginLeft: DesktopPxToVw(16),
     fontSize: `${DesktopPxToVw(18)} !important`,
-    color: theme?.palette?.neuPalette?.hexSeventeen,
+    color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
   "@media (max-width: 640px)": {
     margin: 0,

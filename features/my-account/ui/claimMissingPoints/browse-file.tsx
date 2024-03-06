@@ -20,15 +20,11 @@ const BrowseFile = ({ setDocument }: any) => {
 
     const fileType = selectedFile?.type?.split("/")[1]?.toUpperCase()
     if (!fileTypes.includes(fileType)) {
-      alert(
-        "Invalid file format. Please select a file with JPG, JPEG, or PDF format."
-      )
+      alert("Invalid file format. Please select a file with JPG, JPEG, or PDF format.")
       return
     }
     if (fileSizeMB > maxFileSizeMB) {
-      alert(
-        `File size exceeds ${maxFileSizeMB} MB. Please select a file less or euqals to ${maxFileSizeMB} MB.`
-      )
+      alert(`File size exceeds ${maxFileSizeMB} MB. Please select a file less or euqals to ${maxFileSizeMB} MB.`)
       return
     } else {
       setDocument(selectedFile)
@@ -36,17 +32,11 @@ const BrowseFile = ({ setDocument }: any) => {
   }
   return (
     <FileUploadBox>
-      <FileUploader
-        multiple={false}
-        handleChange={handleChange}
-        name="file"
-        maxSize={10}>
+      <FileUploader multiple={false} handleChange={handleChange} name="file" maxSize={10}>
         <FileFlexBox>
           <DropContainer>
             <UploadCloudIcon />
-            <Typography
-              sx={{ fontWeight: "700" }}
-              variant={isMobile ? "m-body-l" : "body-l"}>
+            <Typography sx={{ fontWeight: "700" }} variant={isMobile ? "m-body-l" : "body-l"}>
               Browse a file to upload
             </Typography>
           </DropContainer>
@@ -55,7 +45,7 @@ const BrowseFile = ({ setDocument }: any) => {
             sx={{
               paddingTop: DesktopPxToVw(10),
               fontSize: isMobile ? "2.413vw" : "0.938vw",
-              color: theme?.palette?.neuPalette?.hexTwelve,
+              color: theme?.palette?.ihclPalette?.hexTwelve,
             }}>
             File supported: PDF, JPEG, JPG | Max File Size : 5 MB
           </Typography>
@@ -69,14 +59,14 @@ const BrowseFile = ({ setDocument }: any) => {
               htmlFor="upload"
               style={{
                 padding: isMobile ? "2.813vw 6.250vw" : "0.938vw 2.083vw",
-                border: `0.052vw solid ${theme?.palette?.neuPalette?.hexTwo}`,
+                border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
                 fontSize: isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),
                 fontStyle: "normal",
                 fontWeight: 700,
                 lineHeight: "140%",
                 letterSpacing: "0.094vw",
                 cursor: "pointer",
-                color: theme?.palette?.neuPalette?.hexTwo,
+                color: theme?.palette?.ihclPalette?.hexTwo,
               }}>
               BROWSE
             </Box>

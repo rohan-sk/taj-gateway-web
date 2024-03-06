@@ -39,7 +39,7 @@ const EpicureNeuCoinsRedemption = ({ props }: any) => {
   const [apiRes, setApiRes] = useState<any>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [checked, setChecked] = useState<boolean>(true)
-  const [loader , setLoader] = useState<boolean>(false)
+  const [loader, setLoader] = useState<boolean>(false)
   const [tenderNeucoinsRedeemed, setTenderNeucoinsRedeemed] = useState(0)
   const [userEnteredCoins, setUserEnteredCoins] = useState<number | null>(null)
 
@@ -64,7 +64,7 @@ const EpicureNeuCoinsRedemption = ({ props }: any) => {
 
   const totalAmountPayable = Number(epicureCardData?.totalPayableAmount)
 
-  const iconColor = theme?.palette?.neuPalette?.hexTwentyEight
+  const iconColor = theme?.palette?.ihclPalette?.hexTwentyEight
 
   const {
     remove,
@@ -100,7 +100,7 @@ const EpicureNeuCoinsRedemption = ({ props }: any) => {
           apiRes,
           setIsVisible,
           updateEpicureCardData,
-          setLoader
+          setLoader,
         )
         setUserEnteredCoins(totalAmountPayable)
       } else {
@@ -187,7 +187,7 @@ const EpicureNeuCoinsRedemption = ({ props }: any) => {
   return (
     <>
       {loader ? (
-        <LoadingSpinner containerStyle={{ background: theme?.palette?.neuPalette?.hexSix }} />
+        <LoadingSpinner containerStyle={{ background: theme?.palette?.ihclPalette?.hexSix }} />
       ) : (
         <>
           {show && login && (
@@ -286,7 +286,9 @@ const EpicureNeuCoinsRedemption = ({ props }: any) => {
                   )}
                   {apiRes?.error && apiRes?.data?.data && (
                     <ErrorMessageBox $isMobile={isMobile}>
-                      <Typography color={theme?.palette?.neuPalette?.hexTen} variant={isMobile ? "m-body-s" : "body-s"}>
+                      <Typography
+                        color={theme?.palette?.ihclPalette?.hexTen}
+                        variant={isMobile ? "m-body-s" : "body-s"}>
                         {apiRes?.data?.data}
                       </Typography>
                     </ErrorMessageBox>
@@ -340,7 +342,7 @@ const EpicureNeuCoinsRedemption = ({ props }: any) => {
                             sm={12}
                             sx={{
                               padding: isMobile ? "3.125vw" : "1.04vw 1.30vw",
-                              background: theme?.palette?.neuPalette?.hexEighteen,
+                              background: theme?.palette?.ihclPalette?.hexEighteen,
                               marginTop: isMobile ? "3.125vw !important" : "1.04vw",
                             }}>
                             <ColorTypography variant={isMobile ? "m-body-sl" : "body-ml"}>

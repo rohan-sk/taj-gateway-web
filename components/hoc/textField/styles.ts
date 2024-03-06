@@ -25,23 +25,23 @@ export const CustomTextFieldStyled = styled(
       "@media (max-width: 640px)": {
         fontSize: $labelFontSize ? $labelFontSize : $fontSize ? $fontSize : MobilePxToVw(24),
       },
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
     "& .Mui-error": {
-      color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
+      color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
       ":after": {
-        color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
-        borderBottom: `2px solid ${theme?.palette?.neuPalette?.hexThirtyTwo}!important`,
+        color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
+        borderBottom: `2px solid ${theme?.palette?.ihclPalette?.hexThirtyTwo}!important`,
       },
       ":before": {
-        color: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
-        borderBottomColor: `${theme?.palette?.neuPalette?.hexThirtyTwo} !important`,
+        color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
+        borderBottomColor: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
       },
     },
     "& .MuiInput-input": {
       fontSize: $fontSize ? $fontSize : DesktopPxToVw(24),
       fontWeight: "300 !important",
-      color: theme?.palette?.neuPalette?.hexSeventeen,
+      color: theme?.palette?.ihclPalette?.hexSeventeen,
     },
 
     "& .MuiFormHelperText-root": {
@@ -55,7 +55,7 @@ export const CustomTextFieldStyled = styled(
         fontWeight: "300 !important",
         fontSize: $fontSize ? $fontSize : DesktopPxToVw(24),
         textOverflow: "ellipsis !important",
-        color: theme?.palette?.neuPalette?.hexSeventeen,
+        color: theme?.palette?.ihclPalette?.hexSeventeen,
       },
     },
 
@@ -77,10 +77,10 @@ export const CustomTextFieldStyled = styled(
       },
     },
     ".MuiFormLabel-root": {
-      color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+      color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
       ".MuiFormLabel-asterisk": {
-        color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+        color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
       },
     },
-  })
+  }),
 )

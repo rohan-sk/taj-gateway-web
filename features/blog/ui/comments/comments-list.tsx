@@ -95,14 +95,14 @@ function CommentsList({
               fontWeight: 400,
               padding: "0vw !important",
               height: "auto !important",
-              color: theme?.palette?.neuPalette?.hexTwo,
+              color: theme?.palette?.ihclPalette?.hexTwo,
               textDecoration: "underline",
               "&:hover": {
                 textDecoration: "underline",
               },
             }}
           />
-          <ExpandMoreIcon sx={{ color: theme?.palette?.neuPalette?.hexTwo }} />
+          <ExpandMoreIcon sx={{ color: theme?.palette?.ihclPalette?.hexTwo }} />
         </CommentsButtonWrapper>
       )}
     </Box>

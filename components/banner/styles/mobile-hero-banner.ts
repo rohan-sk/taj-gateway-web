@@ -10,13 +10,13 @@ export const TitleTypo = styled(Typography)(() => ({
   lineHeight: "120%",
   letterSpacing: "-0.05em",
   alignItems: "flex-start",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
   "&:before": {
     content: '""',
     width: "12.5vw",
     display: "inline-block",
     verticalAlign: "middle",
-    borderBottom: `1px solid ${theme?.palette?.neuPalette?.hexOne}`,
+    borderBottom: `1px solid ${theme?.palette?.ihclPalette?.hexOne}`,
   },
   ":not(:empty)::before ": {
     marginRight: "5.45vw",
@@ -33,7 +33,7 @@ export const BottomContentBox = styled(Box)(() => ({
 
 export const TitleBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isHomePage: boolean }>(({ $isHomePage }) => ({
   marginLeft: "8.43vw",
   pointerEvents: "none",
@@ -59,24 +59,22 @@ export const GalleryTypo = styled(Typography)(() => ({
   marginLeft: "4.5vw",
   fontFamily: "Inter",
   letterSpacing: "0.15em",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const HeaderSubTitle = styled(
   Typography,
-  transientProps
-)<{ $marginLeft: any; $isNormalVariant?: boolean }>(
-  ({ $marginLeft, $isNormalVariant }) => ({
-    color: theme?.palette?.neuPalette?.hexOne,
-    alignSelf: $isNormalVariant ? "center" : "flex-start",
-    marginLeft: $marginLeft ? $marginLeft : DesktopPxToVw(0),
-  })
-)
+  transientProps,
+)<{ $marginLeft: any; $isNormalVariant?: boolean }>(({ $marginLeft, $isNormalVariant }) => ({
+  color: theme?.palette?.ihclPalette?.hexOne,
+  alignSelf: $isNormalVariant ? "center" : "flex-start",
+  marginLeft: $marginLeft ? $marginLeft : DesktopPxToVw(0),
+}))
 
 export const SubTitleInHeroBannerTypography = styled(Typography)(() => ({
   lineHeight: "140%",
   fontStyle: "normal",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 }))
 
 export const MobileHeroBannerContentBox = styled(Box)(() => ({

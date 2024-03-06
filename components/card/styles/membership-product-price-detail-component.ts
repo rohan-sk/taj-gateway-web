@@ -5,7 +5,7 @@ import { theme } from "../../../lib/theme"
 export const ProductPurchaseBoxStyle = styled(Box)(() => ({
   width: "100%",
   maxWidth: "75vw",
-  border: `0.05vw solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+  border: `0.05vw solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
   "@media (max-width:640px)": {
     border: "none",
     maxWidth: "unset",

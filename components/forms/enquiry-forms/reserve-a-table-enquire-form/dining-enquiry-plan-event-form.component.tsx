@@ -528,7 +528,7 @@ const DiningEnquiryPlanEventForm = ({
               <Box sx={{ margin: isMobile ? "4.688vw 0vw" : "1.563vw 0vw" }}>
                 <Typography
                   sx={{
-                    color: theme?.palette?.neuPalette?.hexTen,
+                    color: theme?.palette?.ihclPalette?.hexTen,
                   }}
                   variant={isMobile ? "m-body-s" : "body-s"}>
                   {ERROR_MESSAGES?.mandatoryFields}

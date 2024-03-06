@@ -22,7 +22,7 @@ const SSOLoginMembershipBenefitsCard = ({ props }: any) => {
   const propItems = props?.tabs?.[0]?.tabItems?.[1]
   const isMobile = useMobileCheck()
   const { cardBackgroundColor } = useAesthetics(propItems?.aesthetic?._ref)
-  const backgroundColor = cardBackgroundColor === theme?.palette?.neuPalette?.hexThree?.toLowerCase()
+  const backgroundColor = cardBackgroundColor === theme?.palette?.ihclPalette?.hexThree?.toLowerCase()
 
   const settings = {
     dots: true,

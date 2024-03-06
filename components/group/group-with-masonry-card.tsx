@@ -48,175 +48,133 @@ function GroupWithMasonryCard({ props }: any) {
     <>
       <MasonryBoxWrapper>
         {masonryItems &&
-          masonryItems[0]?.itemsData?.map(
-            (masonryItem: any, outerIndex: number) => (
-              <MasonryGridWrapper
-                $isMobile={isMobile}
-                key={outerIndex}
-                xs={12 / masonryItems[0]?.itemsData?.length}
-                container
-                $outerIndex={outerIndex}>
-                <>
-                  <Box>
-                    {masonryItem?.items.map((item: any, index: any) => {
-                      return (
-                        <Box
-                          key={index}
-                          style={{
-                            position: "relative",
-                            display: "inline-block",
-                          }}>
-                          {item.mediaType == "video" ? (
-                            <LeftMediaVideoItem>
+          masonryItems[0]?.itemsData?.map((masonryItem: any, outerIndex: number) => (
+            <MasonryGridWrapper
+              $isMobile={isMobile}
+              key={outerIndex}
+              xs={12 / masonryItems[0]?.itemsData?.length}
+              container
+              $outerIndex={outerIndex}>
+              <>
+                <Box>
+                  {masonryItem?.items.map((item: any, index: any) => {
+                    return (
+                      <Box
+                        key={index}
+                        style={{
+                          position: "relative",
+                          display: "inline-block",
+                        }}>
+                        {item.mediaType == "video" ? (
+                          <LeftMediaVideoItem>
+                            <Box
+                              alt="img"
+                              loading="lazy"
+                              component="img"
+                              sx={{
+                                cursor: "pointer",
+                                width:
+                                  masonryItem.col !== "middle"
+                                    ? index === 0
+                                      ? `calc(100% * ${masonryItems[0]?.firstItemWidth}`
+                                      : index === masonryItem?.items?.length - 1
+                                      ? `calc(100% * ${masonryItems[0]?.lastItemWidth}`
+                                      : "100%"
+                                    : "100%",
+                                position: "absolute",
+                                bottom: isMobile ? MobilePxToVw(221) : DesktopPxToVw(232),
+                                left: isMobile ? MobilePxToVw(802) : DesktopPxToVw(458),
+                              }}
+                              src={
+                                item?.videoAsset?.playIcon?.asset?._ref &&
+                                urlFor(item?.videoAsset?.playIcon?.asset?._ref).url()
+                              }
+                              onClick={() => {
+                                item?.videoAsset?.videoPlay?.asset?._ref &&
+                                  setVideo(item?.videoAsset?.videoPlay?.asset?._ref),
+                                  setVideoAsset(item?.videoAsset),
+                                  setOpen(true)
+                              }}
+                            />
+                            <Box
+                              alt="img"
+                              loading="lazy"
+                              component="img"
+                              sx={{ cursor: "pointer" }}
+                              src={
+                                item?.videoAsset?.videoThumbnail?.asset?._ref &&
+                                urlFor(item?.videoAsset?.videoThumbnail?.asset?._ref).url()
+                              }
+                              onClick={() => {
+                                item?.videoAsset?.videoPlay?.asset?._ref &&
+                                  setVideo(item?.videoAsset?.videoPlay?.asset?._ref),
+                                  setVideoAsset(item?.videoAsset),
+                                  setOpen(true)
+                              }}
+                            />
+                          </LeftMediaVideoItem>
+                        ) : (
+                          <>
+                            {item?.textOnly ? (
+                              <>{!isMobile && <MultiRowTitle {...props} title={item?.text} />}</>
+                            ) : (
                               <Box
-                                alt="img"
-                                loading="lazy"
-                                component="img"
-                                sx={{
-                                  cursor: "pointer",
+                                style={{
+                                  paddingBottom: DesktopPxToVw(40), //"28px",
                                   width:
                                     masonryItem.col !== "middle"
-                                      ? index === 0
+                                      ? (getFilterCheck(masonryItem) === 0 && index === 1) ||
+                                        (getFilterCheck(masonryItem) < 0 && index === 0)
                                         ? `calc(100% * ${masonryItems[0]?.firstItemWidth}`
-                                        : index ===
-                                          masonryItem?.items?.length - 1
+                                        : index === masonryItem?.items?.length - 1
                                         ? `calc(100% * ${masonryItems[0]?.lastItemWidth}`
+                                        : outerIndex == 0
+                                        ? "87%"
                                         : "100%"
                                       : "100%",
-                                  position: "absolute",
-                                  bottom: isMobile
-                                    ? MobilePxToVw(221)
-                                    : DesktopPxToVw(232),
-                                  left: isMobile
-                                    ? MobilePxToVw(802)
-                                    : DesktopPxToVw(458),
                                 }}
-                                src={
-                                  item?.videoAsset?.playIcon?.asset?._ref &&
-                                  urlFor(
-                                    item?.videoAsset?.playIcon?.asset?._ref
-                                  ).url()
-                                }
-                                onClick={() => {
-                                  item?.videoAsset?.videoPlay?.asset?._ref &&
-                                    setVideo(
-                                      item?.videoAsset?.videoPlay?.asset?._ref
-                                    ),
-                                    setVideoAsset(item?.videoAsset),
-                                    setOpen(true)
-                                }}
-                              />
-                              <Box
-                                alt="img"
+                                alt={`-img`}
                                 loading="lazy"
-                                component="img"
-                                sx={{ cursor: "pointer" }}
-                                src={
-                                  item?.videoAsset?.videoThumbnail?.asset
-                                    ?._ref &&
-                                  urlFor(
-                                    item?.videoAsset?.videoThumbnail?.asset
-                                      ?._ref
-                                  ).url()
-                                }
-                                onClick={() => {
-                                  item?.videoAsset?.videoPlay?.asset?._ref &&
-                                    setVideo(
-                                      item?.videoAsset?.videoPlay?.asset?._ref
-                                    ),
-                                    setVideoAsset(item?.videoAsset),
-                                    setOpen(true)
-                                }}
+                                component={"img"}
+                                src={getOptimizeImageUrl(
+                                  item?.imageAsset?.largeImage?.[0]?.asset?._ref
+                                    ? urlFor(item?.imageAsset?.largeImage?.[0]?.asset?._ref).url()
+                                    : urlFor(item?.imageAsset?.image?.[0]?.asset?._ref)?.url(),
+                                  2,
+                                )}
                               />
-                            </LeftMediaVideoItem>
-                          ) : (
-                            <>
-                              {item?.textOnly ? (
-                                <>
-                                  {!isMobile && (
-                                    <MultiRowTitle
-                                      {...props}
-                                      title={item?.text}
-                                    />
-                                  )}
-                                </>
-                              ) : (
-                                <Box
-                                  style={{
-                                    paddingBottom: DesktopPxToVw(40), //"28px",
-                                    width:
-                                      masonryItem.col !== "middle"
-                                        ? (getFilterCheck(masonryItem) === 0 &&
-                                            index === 1) ||
-                                          (getFilterCheck(masonryItem) < 0 &&
-                                            index === 0)
-                                          ? `calc(100% * ${masonryItems[0]?.firstItemWidth}`
-                                          : index ===
-                                            masonryItem?.items?.length - 1
-                                          ? `calc(100% * ${masonryItems[0]?.lastItemWidth}`
-                                          : outerIndex == 0
-                                          ? "87%"
-                                          : "100%"
-                                        : "100%",
-                                  }}
-                                  alt={`-img`}
-                                  loading="lazy"
-                                  component={"img"}
-                                  src={getOptimizeImageUrl(
-                                    item?.imageAsset?.largeImage?.[0]?.asset
-                                      ?._ref
-                                      ? urlFor(
-                                          item?.imageAsset?.largeImage?.[0]
-                                            ?.asset?._ref
-                                        ).url()
-                                      : urlFor(
-                                          item?.imageAsset?.image?.[0]?.asset
-                                            ?._ref
-                                        )?.url(),
-                                    2
-                                  )}
-                                />
-                              )}
-                            </>
+                            )}
+                          </>
 
-                            //  {item?.rightItems}
-                          )}
-                          <LeftCardItemTitle
-                            $isMobile={isMobile}
-                            variant={isMobile ? "m-heading-xxs" : "heading-s"}
-                            style={{
-                              width:
-                                masonryItem.col !== "middle"
-                                  ? (getFilterCheck(masonryItem) === 0 &&
-                                      index === 1) ||
-                                    (getFilterCheck(masonryItem) < 0 &&
-                                      index === 0)
-                                    ? `calc(100% * ${masonryItems[0]?.firstItemWidth}`
-                                    : index === masonryItem?.items?.length - 1
-                                    ? `calc(100% * ${masonryItems[0]?.lastItemWidth}`
-                                    : "87%"
-                                  : "100%",
-                              right: outerIndex === 0 ? 0 : "unset",
-                              left: outerIndex !== 0 ? 0 : "unset",
-                            }}>
-                            {item?.title}
-                          </LeftCardItemTitle>
-                        </Box>
-                      )
-                    })}
-                  </Box>
-                </>
-              </MasonryGridWrapper>
-            )
-          )}
-        <VideoSEOScript {...videoAsset}/>
-        {open && (
-          <VideoPlayerModal
-            videoUrl={video}
-            handleModalOpen={open}
-            handleModalClose={handleModelClose}
-          />
-        )}
+                          //  {item?.rightItems}
+                        )}
+                        <LeftCardItemTitle
+                          $isMobile={isMobile}
+                          variant={isMobile ? "m-heading-xxs" : "heading-s"}
+                          style={{
+                            width:
+                              masonryItem.col !== "middle"
+                                ? (getFilterCheck(masonryItem) === 0 && index === 1) ||
+                                  (getFilterCheck(masonryItem) < 0 && index === 0)
+                                  ? `calc(100% * ${masonryItems[0]?.firstItemWidth}`
+                                  : index === masonryItem?.items?.length - 1
+                                  ? `calc(100% * ${masonryItems[0]?.lastItemWidth}`
+                                  : "87%"
+                                : "100%",
+                            right: outerIndex === 0 ? 0 : "unset",
+                            left: outerIndex !== 0 ? 0 : "unset",
+                          }}>
+                          {item?.title}
+                        </LeftCardItemTitle>
+                      </Box>
+                    )
+                  })}
+                </Box>
+              </>
+            </MasonryGridWrapper>
+          ))}
+        <VideoSEOScript {...videoAsset} />
+        {open && <VideoPlayerModal videoUrl={video} handleModalOpen={open} handleModalClose={handleModelClose} />}
       </MasonryBoxWrapper>
     </>
   )
@@ -224,9 +182,7 @@ function GroupWithMasonryCard({ props }: any) {
 
 const LeftImages = ({ item, setVideo, setVideoAsset, setOpen }: any) => {
   const widthRefs = useRef<any>([])
-  widthRefs.current = item?.leftItems.map(
-    (element: any, i: number) => widthRefs.current[i] ?? createRef()
-  )
+  widthRefs.current = item?.leftItems.map((element: any, i: number) => widthRefs.current[i] ?? createRef())
   const { getOptimizeImageUrl } = useImageUtility()
 
   const checkWidthAndHeight = (index: number) => {
@@ -280,15 +236,11 @@ const LeftImages = ({ item, setVideo, setVideoAsset, setOpen }: any) => {
                     width: MobilePxToVw(40),
                     height: MobilePxToVw(40),
                   }}
-                  src={
-                    item?.videoAsset?.playIcon?.asset?._ref &&
-                    urlFor(item?.videoAsset?.playIcon?.asset?._ref).url()
-                  }
+                  src={item?.videoAsset?.playIcon?.asset?._ref && urlFor(item?.videoAsset?.playIcon?.asset?._ref).url()}
                   onClick={() => {
-                    item?.videoAsset?.videoPlay?.asset?._ref &&
-                      setVideo(item?.videoAsset?.videoPlay?.asset?._ref),
+                    item?.videoAsset?.videoPlay?.asset?._ref && setVideo(item?.videoAsset?.videoPlay?.asset?._ref),
                       setVideoAsset(item?.videoAsset)
-                      setOpen(true)
+                    setOpen(true)
                   }}
                 />
                 <Box
@@ -299,15 +251,12 @@ const LeftImages = ({ item, setVideo, setVideoAsset, setOpen }: any) => {
                   sx={{ ...checkWidthAndHeight(index), cursor: "pointer" }}
                   src={
                     item?.videoAsset?.smallVideoThumbnail?.asset?._ref &&
-                    urlFor(
-                      item?.videoAsset?.smallVideoThumbnail?.asset?._ref
-                    ).url()
+                    urlFor(item?.videoAsset?.smallVideoThumbnail?.asset?._ref).url()
                   }
                   onClick={() => {
-                    item?.videoAsset?.videoPlay?.asset?._ref &&
-                      setVideo(item?.videoAsset?.videoPlay?.asset?._ref),
+                    item?.videoAsset?.videoPlay?.asset?._ref && setVideo(item?.videoAsset?.videoPlay?.asset?._ref),
                       setVideoAsset(item?.videoAsset)
-                      setOpen(true)
+                    setOpen(true)
                   }}
                 />
               </Box>
@@ -320,10 +269,7 @@ const LeftImages = ({ item, setVideo, setVideoAsset, setOpen }: any) => {
                     ref={widthRefs.current[index]}
                     loading="lazy"
                     component={"img"}
-                    src={getOptimizeImageUrl(
-                      urlFor(item?.imageAsset?.image?.[0]?.asset?._ref)?.url(),
-                      2
-                    )}
+                    src={getOptimizeImageUrl(urlFor(item?.imageAsset?.image?.[0]?.asset?._ref)?.url(), 2)}
                   />
                 )}
               </>
@@ -332,7 +278,7 @@ const LeftImages = ({ item, setVideo, setVideoAsset, setOpen }: any) => {
           <Typography
             variant={"m-body-s"}
             sx={{
-              color: theme?.palette?.neuPalette?.hexOne,
+              color: theme?.palette?.ihclPalette?.hexOne,
               padding: `${MobilePxToVw(4)} ${MobilePxToVw(8)}`,
               bottom: MobilePxToVw(15),
               width: widthRefs.current[index]?.current?.clientWidth,
@@ -349,9 +295,7 @@ const LeftImages = ({ item, setVideo, setVideoAsset, setOpen }: any) => {
 
 const RightImages = ({ item, setVideo, setVideoAsset, setOpen }: any) => {
   const widthRefs = useRef<any>([])
-  widthRefs.current = item?.leftItems.map(
-    (element: any, i: number) => widthRefs.current[i] ?? createRef()
-  )
+  widthRefs.current = item?.leftItems.map((element: any, i: number) => widthRefs.current[i] ?? createRef())
 
   const { getOptimizeImageUrl } = useImageUtility()
 
@@ -399,12 +343,10 @@ const RightImages = ({ item, setVideo, setVideoAsset, setOpen }: any) => {
                       position: "absolute",
                     }}
                     src={
-                      item?.videoAsset?.playIcon?.asset?._ref &&
-                      urlFor(item?.videoAsset?.playIcon?.asset?._ref).url()
+                      item?.videoAsset?.playIcon?.asset?._ref && urlFor(item?.videoAsset?.playIcon?.asset?._ref).url()
                     }
                     onClick={() => {
-                      item?.videoAsset?.videoPlay?.asset?._ref &&
-                        setVideo(item?.videoAsset?.videoPlay?.asset?._ref),
+                      item?.videoAsset?.videoPlay?.asset?._ref && setVideo(item?.videoAsset?.videoPlay?.asset?._ref),
                         setVideoAsset(item?.videoAsset),
                         setOpen(true)
                     }}
@@ -417,13 +359,10 @@ const RightImages = ({ item, setVideo, setVideoAsset, setOpen }: any) => {
                     ref={widthRefs.current[index]}
                     src={
                       item?.videoAsset?.smallVideoThumbnail?.asset?._ref &&
-                      urlFor(
-                        item?.videoAsset?.smallVideoThumbnail?.asset?._ref
-                      ).url()
+                      urlFor(item?.videoAsset?.smallVideoThumbnail?.asset?._ref).url()
                     }
                     onClick={() => {
-                      item?.videoAsset?.videoPlay?.asset?._ref &&
-                        setVideo(item?.videoAsset?.videoPlay?.asset?._ref),
+                      item?.videoAsset?.videoPlay?.asset?._ref && setVideo(item?.videoAsset?.videoPlay?.asset?._ref),
                         setVideoAsset(item?.videoAsset),
                         setOpen(true)
                     }}
@@ -438,12 +377,7 @@ const RightImages = ({ item, setVideo, setVideoAsset, setOpen }: any) => {
                       sx={{ ...checkWidthAndHeight(index) }}
                       loading="lazy"
                       component={"img"}
-                      src={getOptimizeImageUrl(
-                        urlFor(
-                          item?.imageAsset?.image?.[0]?.asset?._ref
-                        )?.url(),
-                        2
-                      )}
+                      src={getOptimizeImageUrl(urlFor(item?.imageAsset?.image?.[0]?.asset?._ref)?.url(), 2)}
                     />
                   )}
                 </>
@@ -452,7 +386,7 @@ const RightImages = ({ item, setVideo, setVideoAsset, setOpen }: any) => {
             <Typography
               variant={"m-body-s"}
               sx={{
-                color: theme?.palette?.neuPalette?.hexOne,
+                color: theme?.palette?.ihclPalette?.hexOne,
                 padding: `${MobilePxToVw(4)} ${MobilePxToVw(8)}`,
                 bottom: MobilePxToVw(15),
                 width: widthRefs.current[index]?.current?.clientWidth,

@@ -6,10 +6,10 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 
 export const HotelDataCardContentBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   width: "97%",
-  background: theme?.palette?.neuPalette?.hexOne,
+  background: theme?.palette?.ihclPalette?.hexOne,
   top: $isMobile ? "-7.5vw" : "-2.656vw",
   float: "right",
   display: "flex",
@@ -22,16 +22,16 @@ export const HotelDataCardContentBox = styled(
 
 export const HorizontalDividerLine = styled(
   Divider,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   opacity: 0.4,
   margin: $isMobile ? "2.656vw 0vw" : "0.781vw 0vw",
-  background: theme?.palette?.neuPalette?.hexTwelve,
+  background: theme?.palette?.ihclPalette?.hexTwelve,
 }))
 
 export const ActionButtonsWrappingBox = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   display: "flex",
   marginTop: $isMobile ? "8.594vw" : "1.146vw",
@@ -41,15 +41,15 @@ export const ActionButtonsWrappingBox = styled(
 }))
 
 export const ActionItemsBox = styled(Box)(() => ({
-  display: 'flex',
-  alignItems: 'center',
+  display: "flex",
+  alignItems: "center",
   justifyContent: "space-between",
-  flexDirection: 'row',
+  flexDirection: "row",
   marginTop: DesktopPxToVw(24),
   minHeight: DesktopPxToVw(61),
-  '@media (max-width:640px)': {
-    flexDirection: 'row-reverse',
+  "@media (max-width:640px)": {
+    flexDirection: "row-reverse",
     marginTop: MobilePxToVw(24),
-    minHeight: MobilePxToVw(61)
-  }
+    minHeight: MobilePxToVw(61),
+  },
 }))

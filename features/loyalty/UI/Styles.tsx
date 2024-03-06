@@ -26,9 +26,7 @@ export const BoxWrapper = styled(Box)(() => ({
 
 export const FieldsContainer = styled(Box)(() => ({
   display: "grid",
-  gridTemplateColumns: `${DesktopPxToVw(380)} ${DesktopPxToVw(
-    380
-  )} ${DesktopPxToVw(360)}`,
+  gridTemplateColumns: `${DesktopPxToVw(380)} ${DesktopPxToVw(380)} ${DesktopPxToVw(360)}`,
   gap: DesktopPxToVw(40),
   alignItems: "start",
   marginBottom: DesktopPxToVw(35),
@@ -91,7 +89,7 @@ export const TextFieldsWrapper = styled(Box)(() => ({
 
 export const TentativeDateContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isOpen?: boolean; $isDouble?: boolean }>(({ $isOpen, $isDouble }) => ({
   minWidth: DesktopPxToVw(371),
   "@media (max-width:640px)": {
@@ -165,7 +163,7 @@ export const EnquiryButton = styled(Button)(() => ({
   textTransform: "uppercase",
   "&:hover": {
     color: theme?.palette?.background?.default,
-    background: theme?.palette?.neuPalette?.hexTwo,
+    background: theme?.palette?.ihclPalette?.hexTwo,
   },
   margin: "4% 0%",
 }))

@@ -16,8 +16,7 @@ const PDFHeroBanner = ({ imgUrl, title, ...rest }: any) => {
         position: "relative",
         height: isMobile ? "auto" : DesktopPxToVw(780),
       }}>
-      <BottomGradientBox $isIos={isIos}
-        $gradient={theme?.palette?.neuPalette?.linearGradientBottom} />
+      <BottomGradientBox $isIos={isIos} $gradient={theme?.palette?.ihclPalette?.linearGradientBottom} />
       <Box
         sx={{
           position: "absolute",
@@ -25,20 +24,17 @@ const PDFHeroBanner = ({ imgUrl, title, ...rest }: any) => {
           bottom: isMobile ? 0 : DesktopPxToVw(46),
         }}>
         <Box component={"h2"}>
-          <Stack
-            columnGap={isMobile ? MobilePxToVw(20) : DesktopPxToVw(40)}
-            direction={"row"}
-            alignItems={"center"}>
+          <Stack columnGap={isMobile ? MobilePxToVw(20) : DesktopPxToVw(40)} direction={"row"} alignItems={"center"}>
             <Divider
               sx={{
-                background: theme?.palette?.neuPalette?.hexOne,
-                borderColor: theme?.palette?.neuPalette?.hexOne,
+                background: theme?.palette?.ihclPalette?.hexOne,
+                borderColor: theme?.palette?.ihclPalette?.hexOne,
                 width: isMobile ? MobilePxToVw(40) : DesktopPxToVw(80),
                 height: isMobile ? MobilePxToVw(2) : DesktopPxToVw(2),
               }}
             />
             <Typography
-              color={theme?.palette?.neuPalette?.hexOne}
+              color={theme?.palette?.ihclPalette?.hexOne}
               component={"span"}
               sx={{
                 fontFamily: theme?.palette?.font?.primaryFontFamily,

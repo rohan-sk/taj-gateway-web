@@ -5,16 +5,14 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 
 export const MainContainer = styled(
   Box,
-  transientProps
+  transientProps,
 )<{ $isBottomBorder: boolean }>(({ $isBottomBorder }) => ({
-  border: $isBottomBorder
-    ? `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}20`
-    : "",
+  border: $isBottomBorder ? `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}20` : "",
   borderWidth: "0 0 1px",
   width: "fit-content",
   maxWidth: "100%",
   display: "flex",
-  paddingBottom: $isBottomBorder ? DesktopPxToVw(20) : '0vw',
+  paddingBottom: $isBottomBorder ? DesktopPxToVw(20) : "0vw",
   "@media (max-width:640px)": {
     flexDirection: "column",
     border: "unset",
@@ -26,25 +24,23 @@ export const MainContainer = styled(
 
 export const DateCell = styled(
   Box,
-  transientProps
-)<{ $isLastItem?: boolean; $isSingle: boolean }>(
-  ({ $isLastItem, $isSingle }) => ({
-    width: $isSingle ? "fit-content" : "25vw",
-    display: "flex",
-    gap: "0.521vw",
-    flexDirection: "column",
-    "@media (max-width:640px)": {
-      width: "100%",
-      display: "grid",
-      gridTemplateColumns: "33.594vw 1fr",
-      gap: "1.563vw",
-      marginBottom: $isLastItem ? "" : "3.125vw",
-      paddingBottom: "3.125vw",
-      border: `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}20`,
-      borderWidth: "0 0 1px",
-    },
-  })
-)
+  transientProps,
+)<{ $isLastItem?: boolean; $isSingle: boolean }>(({ $isLastItem, $isSingle }) => ({
+  width: $isSingle ? "fit-content" : "25vw",
+  display: "flex",
+  gap: "0.521vw",
+  flexDirection: "column",
+  "@media (max-width:640px)": {
+    width: "100%",
+    display: "grid",
+    gridTemplateColumns: "33.594vw 1fr",
+    gap: "1.563vw",
+    marginBottom: $isLastItem ? "" : "3.125vw",
+    paddingBottom: "3.125vw",
+    border: `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}20`,
+    borderWidth: "0 0 1px",
+  },
+}))
 
 export const DateTitleContainer = styled(Box)(() => ({
   width: "100%",
@@ -107,7 +103,7 @@ export const DateTypography = styled(Typography)(() => ({
 export const StyledDivider = styled(Divider)(() => ({
   width: "1px",
   marginRight: "1.042vw",
-  backgroundColor: `${theme?.palette?.neuPalette?.hexSeventeen}20`,
+  backgroundColor: `${theme?.palette?.ihclPalette?.hexSeventeen}20`,
   "@media (max-width:640px)": {
     marginRight: "0vw",
   },

@@ -384,7 +384,7 @@ const ClaimMissingPoints = (props: any) => {
                   }}
                   iconStyle={{
                     position: "static !important",
-                    color: `${theme?.palette?.neuPalette?.hexSeventeen} !important`,
+                    color: `${theme?.palette?.ihclPalette?.hexSeventeen} !important`,
                     width: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                     height: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                   }}
@@ -489,8 +489,8 @@ const ClaimMissingPoints = (props: any) => {
                     sx={{
                       borderBottom:
                         formErrors?.stayDate && stayDate?.length === 0
-                          ? `0.026vw solid ${theme?.palette?.neuPalette?.hexTwentySeven}` //red
-                          : `0.026vw solid ${theme?.palette?.neuPalette?.hexTwenty}`, //ash
+                          ? `0.026vw solid ${theme?.palette?.ihclPalette?.hexTwentySeven}` //red
+                          : `0.026vw solid ${theme?.palette?.ihclPalette?.hexTwenty}`, //ash
                       ".react-date-picker__calendar--open": {
                         transform: "unset !important",
                         WebkitTransform: "unset !important",
@@ -564,7 +564,7 @@ const ClaimMissingPoints = (props: any) => {
                   </Box>
                   <Typography
                     sx={{
-                      color: theme?.palette?.neuPalette?.hexTwentySeven,
+                      color: theme?.palette?.ihclPalette?.hexTwentySeven,
                       fontSize: isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),
                       paddingTop: "0.12vw",
                     }}>
@@ -644,7 +644,7 @@ const ClaimMissingPoints = (props: any) => {
 
                             paddingBottom: "0vw !important",
                             "& .MuiFormHelperText-root": {
-                              color: `${theme?.palette?.neuPalette?.hexTwentySeven} !important`,
+                              color: `${theme?.palette?.ihclPalette?.hexTwentySeven} !important`,
                             },
                           }}
                           variant="standard"
@@ -750,7 +750,7 @@ const ClaimMissingPoints = (props: any) => {
                           <AutoCompleteInput
                             sx={{
                               "& .MuiFormHelperText-root": {
-                                color: `${theme?.palette?.neuPalette?.hexTwentySeven} !important`,
+                                color: `${theme?.palette?.ihclPalette?.hexTwentySeven} !important`,
                               },
                             }}
                             variant="standard"
@@ -819,7 +819,7 @@ const ClaimMissingPoints = (props: any) => {
                         }))
                       }}
                       sx={{
-                        borderBottom: `0.026vw solid ${theme?.palette?.neuPalette?.hexTwenty}`,
+                        borderBottom: `0.026vw solid ${theme?.palette?.ihclPalette?.hexTwenty}`,
                       }}>
                       <CustomDatePickerComponent
                         maxDate={new Date()}
@@ -880,7 +880,7 @@ const ClaimMissingPoints = (props: any) => {
                     </Box>
                     <Typography
                       sx={{
-                        color: theme?.palette?.neuPalette?.hexTwentySeven,
+                        color: theme?.palette?.ihclPalette?.hexTwentySeven,
                         fontSize: isMobile ? "2.5vw" : "1vw",
                       }}>
                       {formErrors?.reservationDate && ErrorMessage?.reservationDate}
@@ -1029,7 +1029,7 @@ const ClaimMissingPoints = (props: any) => {
                         )}
                         <Typography
                           sx={{
-                            color: theme?.palette?.neuPalette?.hexTwentySeven,
+                            color: theme?.palette?.ihclPalette?.hexTwentySeven,
                             fontSize: isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),
 
                             paddingTop: isMobile ? "2vw" : "0.38vw",

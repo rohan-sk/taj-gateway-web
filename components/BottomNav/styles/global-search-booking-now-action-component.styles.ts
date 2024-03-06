@@ -9,11 +9,11 @@ export const SearchBookingActionWrapperContentBox = styled(Box)(() => ({
   position: "fixed",
   justifyContent: "space-between",
   zIndex: "10",
-  borderTop: `2px solid ${theme?.palette?.neuPalette?.hexSeventeen}30`,
+  borderTop: `2px solid ${theme?.palette?.ihclPalette?.hexSeventeen}30`,
 }))
 
 export const PrimaryActionWrapperContentBox = styled(Box)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexTwo,
+  backgroundColor: theme?.palette?.ihclPalette?.hexTwo,
   width: "34.063vw",
   height: "12.188vw",
   display: "flex",
@@ -26,11 +26,11 @@ export const NavigationButtonTitleTypography = styled(Typography)(() => ({
   fontWeight: 700,
   lineHeight: "140%",
   letterSpacing: " 0.1em",
-  color: theme?.palette?.neuPalette?.hexSeventeen,
+  color: theme?.palette?.ihclPalette?.hexSeventeen,
 }))
 
 export const TwoActionButtonsWrapperContentBox = styled(Box)(() => ({
-  backgroundColor: theme?.palette?.neuPalette?.hexOne,
+  backgroundColor: theme?.palette?.ihclPalette?.hexOne,
   width: "34.063vw",
   height: "12.188vw",
   display: "flex",
@@ -42,5 +42,5 @@ export const PrimaryActionButtonTitleTypography = styled(Typography)(() => ({
   fontWeight: 700,
   lineHeight: "140%",
   letterSpacing: " 0.1em",
-  color: theme?.palette?.neuPalette?.hexOne,
+  color: theme?.palette?.ihclPalette?.hexOne,
 }))

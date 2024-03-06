@@ -34,7 +34,7 @@ const WeddingTabsItemComponent = ({
       className="centeredBox"
       sx={{
         marginBottom: itemsCount >= 5 ? "1.250vw" : "1.25vw",
-        border: activeIndex === index ? "1px solid" : `1px solid ${theme?.palette?.neuPalette?.hexSeventeen}`,
+        border: activeIndex === index ? "1px solid" : `1px solid ${theme?.palette?.ihclPalette?.hexSeventeen}`,
         borderImage:
           activeIndex === index
             ? "linear-gradient(to right,rgba(69, 68, 63, 0), #AD8B3A, rgba(69, 68, 63, 0)) 1 0 1 0"

@@ -108,19 +108,21 @@ const RenderModifyBooking = ({ props, parameterMap, alternateAllLinks }: modifyB
   const filteredLinks = isCouponApplied
     ? alternateAllLinks?.filter((link: any) => link?.url == ROUTES?.WITHOUTSEO_FOR_ROUTING?.MY_ACCOUNT?.CANCEL_BOOKING)
     : isComplementary
-      ? hotelDetails?.modifyBookingCount > 0
-        ? alternateAllLinks?.filter(
+    ? hotelDetails?.modifyBookingCount > 0
+      ? alternateAllLinks?.filter(
           (link: any) => link?.url == ROUTES?.WITHOUTSEO_FOR_ROUTING?.MY_ACCOUNT?.CANCEL_BOOKING,
         )
-        : alternateAllLinks?.filter((link: any) => link?.url !== ROUTES?.WITHOUTSEO_FOR_ROUTING?.MY_ACCOUNT?.CHANGE_ROOMS)
-      : alternateAllLinks
+      : alternateAllLinks?.filter((link: any) => link?.url !== ROUTES?.WITHOUTSEO_FOR_ROUTING?.MY_ACCOUNT?.CHANGE_ROOMS)
+    : alternateAllLinks
   const isPayAtHotel = hotelDetails?.paymentMethod?.toLowerCase() === BOOKING_CONSTANT?.PAY_AT_HOTEL?.toLowerCase()
   const isModified = hotelDetails?.modifyBookingCount > 0
   const isSEB = roomDetails?.isSeb
   const hideTabs =
-    (roomDetails?.rooms?.every(
+    roomDetails?.rooms?.every(
       (item: any) => item?.status?.toLowerCase() === "cancelled" || item?.status?.toLowerCase() === "pending",
-    ) || diffInDaysAllowNegative(new Date(), roomDetails?.checkIn) < 0) || isSEB
+    ) ||
+    diffInDaysAllowNegative(new Date(), roomDetails?.checkIn) < 0 ||
+    isSEB
 
   useEffect(() => {
     orderId && getOrderDetails(orderId)
@@ -202,7 +204,7 @@ const RenderModifyBooking = ({ props, parameterMap, alternateAllLinks }: modifyB
               position: "relative",
             }}>
             <BottomGradientBox
-              $gradient={theme?.palette?.neuPalette?.linearGradientBottom}
+              $gradient={theme?.palette?.ihclPalette?.linearGradientBottom}
               sx={{
                 bottom: "0.2vw !important", // added for now need to check
               }}
@@ -265,7 +267,7 @@ const RenderModifyBooking = ({ props, parameterMap, alternateAllLinks }: modifyB
                                 orientation="vertical"
                                 flexItem
                                 sx={{
-                                  borderColor: theme.palette.neuPalette.hexSeventeen,
+                                  borderColor: theme.palette.ihclPalette.hexSeventeen,
                                 }}
                               />
                             )}
@@ -277,7 +279,7 @@ const RenderModifyBooking = ({ props, parameterMap, alternateAllLinks }: modifyB
                                 orientation="vertical"
                                 flexItem
                                 sx={{
-                                  borderColor: theme.palette.neuPalette.hexSeventeen,
+                                  borderColor: theme.palette.ihclPalette.hexSeventeen,
                                 }}
                               />
                             )}
@@ -315,7 +317,7 @@ const RenderModifyBooking = ({ props, parameterMap, alternateAllLinks }: modifyB
                   sx={{
                     width: "100%",
                     marginTop: isMobile ? MobilePxToVw(20) : DesktopPxToVw(40),
-                    border: `1px solid ${theme?.palette?.neuPalette?.hexSixteen}`,
+                    border: `1px solid ${theme?.palette?.ihclPalette?.hexSixteen}`,
                   }}
                 />
                 <BookingPriceWrapper mt={isMobile ? MobilePxToVw(20) : DesktopPxToVw(40)}>
@@ -403,8 +405,8 @@ const RenderModifyBooking = ({ props, parameterMap, alternateAllLinks }: modifyB
                               isComplementary
                                 ? 0
                                 : isModified
-                                  ? roomDetails?.totalBasePrice + roomDetails?.totalTaxPrice
-                                  : roomDetails?.totalBasePrice,
+                                ? roomDetails?.totalBasePrice + roomDetails?.totalTaxPrice
+                                : roomDetails?.totalBasePrice,
                               currencyCode,
                             )}
                           </BoldTypo>
@@ -445,52 +447,53 @@ const RenderModifyBooking = ({ props, parameterMap, alternateAllLinks }: modifyB
                             </Stack>
                           </Collapse>
                         )}
-                        {
-                          isComplementary ?
-                            <>
-                              {(Boolean(totalTaxChange) || totalTaxChange == 0) && isModified && (
-                                <RowStack>
-                                  <Typography variant={isMobile ? "m-body-sl" : "body-ml"}>
-                                    {BOOKING_CONSTANT?.TOTAL_TAX_CHANGE}
-                                  </Typography>
-                                  <Typography
-                                    color={
-                                      totalTaxChange < 0
-                                        ? theme.palette.neuPalette.hexTwo
-                                        : theme.palette.neuPalette.hexTwentyFour
-                                    }
-                                    variant={isMobile ? "m-body-sl" : "body-ml"}>
-                                    {totalTaxChange >= 0
-                                      ? totalTaxChange > 0
-                                        ? formatCurrencyWithPlus(totalTaxChange, currencyCode)
-                                        : currency2DecimalSymbol(totalTaxChange, currencyCode)
-                                      : formatCurrencyWithMinus(totalTaxChange, currencyCode)}
-                                  </Typography>
-                                </RowStack>
-                              )}
-                            </> : <>
-                              {(Boolean(priceChangeWithTaxes) || priceChangeWithTaxes == 0) && isModified && (
-                                <RowStack>
-                                  <Typography variant={isMobile ? "m-body-sl" : "body-ml"}>
-                                    {BOOKING_CONSTANT?.TOTAL_PRICE_CHANGE}
-                                  </Typography>
-                                  <Typography
-                                    color={
-                                      priceChangeWithTaxes < 0
-                                        ? theme.palette.neuPalette.hexTwo
-                                        : theme.palette.neuPalette.hexTwentyFour
-                                    }
-                                    variant={isMobile ? "m-body-sl" : "body-ml"}>
-                                    {priceChangeWithTaxes >= 0
-                                      ? priceChangeWithTaxes > 0
-                                        ? formatCurrencyWithPlus(priceChangeWithTaxes, currencyCode)
-                                        : currency2DecimalSymbol(priceChangeWithTaxes, currencyCode)
-                                      : formatCurrencyWithMinus(priceChangeWithTaxes, currencyCode)}
-                                  </Typography>
-                                </RowStack>
-                              )}
-                            </>
-                        }
+                        {isComplementary ? (
+                          <>
+                            {(Boolean(totalTaxChange) || totalTaxChange == 0) && isModified && (
+                              <RowStack>
+                                <Typography variant={isMobile ? "m-body-sl" : "body-ml"}>
+                                  {BOOKING_CONSTANT?.TOTAL_TAX_CHANGE}
+                                </Typography>
+                                <Typography
+                                  color={
+                                    totalTaxChange < 0
+                                      ? theme.palette.ihclPalette.hexTwo
+                                      : theme.palette.ihclPalette.hexTwentyFour
+                                  }
+                                  variant={isMobile ? "m-body-sl" : "body-ml"}>
+                                  {totalTaxChange >= 0
+                                    ? totalTaxChange > 0
+                                      ? formatCurrencyWithPlus(totalTaxChange, currencyCode)
+                                      : currency2DecimalSymbol(totalTaxChange, currencyCode)
+                                    : formatCurrencyWithMinus(totalTaxChange, currencyCode)}
+                                </Typography>
+                              </RowStack>
+                            )}
+                          </>
+                        ) : (
+                          <>
+                            {(Boolean(priceChangeWithTaxes) || priceChangeWithTaxes == 0) && isModified && (
+                              <RowStack>
+                                <Typography variant={isMobile ? "m-body-sl" : "body-ml"}>
+                                  {BOOKING_CONSTANT?.TOTAL_PRICE_CHANGE}
+                                </Typography>
+                                <Typography
+                                  color={
+                                    priceChangeWithTaxes < 0
+                                      ? theme.palette.ihclPalette.hexTwo
+                                      : theme.palette.ihclPalette.hexTwentyFour
+                                  }
+                                  variant={isMobile ? "m-body-sl" : "body-ml"}>
+                                  {priceChangeWithTaxes >= 0
+                                    ? priceChangeWithTaxes > 0
+                                      ? formatCurrencyWithPlus(priceChangeWithTaxes, currencyCode)
+                                      : currency2DecimalSymbol(priceChangeWithTaxes, currencyCode)
+                                    : formatCurrencyWithMinus(priceChangeWithTaxes, currencyCode)}
+                                </Typography>
+                              </RowStack>
+                            )}
+                          </>
+                        )}
                         {roomDetails?.amountPaid > 0 && isModified && (
                           <RowStack>
                             <Typography variant={isMobile ? "m-body-sl" : "body-ml"}>
@@ -607,13 +610,14 @@ const RenderModifyBooking = ({ props, parameterMap, alternateAllLinks }: modifyB
                                 )}
                               </TaxLabelStack>
                               <Typography variant={isMobile ? "m-body-sl" : "body-ml"}>
-                                {`${roomDetails?.totalCancellationPenaltyAmount === 0
-                                  ? "NIL"
-                                  : currency2DecimalSymbol(
-                                    roomDetails?.totalCancellationPenaltyAmount || 0,
-                                    currencyCode,
-                                  )
-                                  }`}
+                                {`${
+                                  roomDetails?.totalCancellationPenaltyAmount === 0
+                                    ? "NIL"
+                                    : currency2DecimalSymbol(
+                                        roomDetails?.totalCancellationPenaltyAmount || 0,
+                                        currencyCode,
+                                      )
+                                }`}
                               </Typography>
                             </RowGapStack>
                             {roomDetails?.totalCancellationPenaltyAmount !== 0 && (
@@ -646,17 +650,17 @@ const RenderModifyBooking = ({ props, parameterMap, alternateAllLinks }: modifyB
                               ? isPayAtHotel
                                 ? BOOKING_CONSTANT?.NEW_TOTAL
                                 : priceChangeWithTaxes >= 0
-                                  ? BOOKING_CONSTANT?.PAYABLE_AMOUNT
-                                  : BOOKING_CONSTANT?.REFUNDABLE_AMOUNT
+                                ? BOOKING_CONSTANT?.PAYABLE_AMOUNT
+                                : BOOKING_CONSTANT?.REFUNDABLE_AMOUNT
                               : isPayAtHotel
-                                ? BOOKING_CONSTANT?.AMOUNT_PAYABLE_AT_HOTEL
-                                : isComplementary
-                                  ? BOOKING_CONSTANT?.AMOUNT_PAID
-                                  : roomDetails?.isDepositPaid || showTotalAmount
-                                    ? BOOKING_CONSTANT?.TOTAL_AMOUNT
-                                    : roomDetails?.isDepositFull
-                                      ? BOOKING_CONSTANT?.DEPOSIT_PAID
-                                      : BOOKING_CONSTANT?.AMOUNT_PAID}
+                              ? BOOKING_CONSTANT?.AMOUNT_PAYABLE_AT_HOTEL
+                              : isComplementary
+                              ? BOOKING_CONSTANT?.AMOUNT_PAID
+                              : roomDetails?.isDepositPaid || showTotalAmount
+                              ? BOOKING_CONSTANT?.TOTAL_AMOUNT
+                              : roomDetails?.isDepositFull
+                              ? BOOKING_CONSTANT?.DEPOSIT_PAID
+                              : BOOKING_CONSTANT?.AMOUNT_PAID}
                           </DynamicAmount>
                           <DynamicAmount
                             $isSmall={roomDetails?.balancePayable > 0 && !isModified}
@@ -666,15 +670,15 @@ const RenderModifyBooking = ({ props, parameterMap, alternateAllLinks }: modifyB
                                 ? isPayAtHotel
                                   ? roomDetails?.grandTotal
                                   : priceChangeWithTaxes >= 0
-                                    ? roomDetails?.payableAmount || priceChangeWithTaxes
-                                    : roomDetails?.refundAmount || priceChangeWithTaxes
+                                  ? roomDetails?.payableAmount || priceChangeWithTaxes
+                                  : roomDetails?.refundAmount || priceChangeWithTaxes
                                 : isPayAtHotel
-                                  ? hotelDetails?.payableAmount
-                                  : isComplementary
-                                    ? roomDetails?.amountPaid || 0
-                                    : roomDetails?.isDepositPaid || roomDetails?.isDepositFull || showTotalAmount
-                                      ? roomDetails?.grandTotal
-                                      : roomDetails?.amountPaid,
+                                ? hotelDetails?.payableAmount
+                                : isComplementary
+                                ? roomDetails?.amountPaid || 0
+                                : roomDetails?.isDepositPaid || roomDetails?.isDepositFull || showTotalAmount
+                                ? roomDetails?.grandTotal
+                                : roomDetails?.amountPaid,
                               currencyCode,
                             )}
                           </DynamicAmount>
@@ -709,7 +713,7 @@ const RenderModifyBooking = ({ props, parameterMap, alternateAllLinks }: modifyB
                         sx={{
                           width: DesktopPxToVw(606),
                           marginTop: DesktopPxToVw(20),
-                          border: `1px solid ${theme?.palette?.neuPalette?.hexTwelve}`,
+                          border: `1px solid ${theme?.palette?.ihclPalette?.hexTwelve}`,
                         }}
                       />
                     )}

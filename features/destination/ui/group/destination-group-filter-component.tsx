@@ -49,12 +49,10 @@ const DestinationGroupWithFilterCards = (props: any) => {
   const [selectFilterImage, setSelectFilterImage] = useState([])
   const [tabs, setTabs] = useState<any>([])
   const [showTitle, setShowTitle] = useState(-1)
-  const colorOne = theme?.palette?.neuPalette?.hexOne
-  const colorTwo = theme?.palette?.neuPalette?.hexTwo
+  const colorOne = theme?.palette?.ihclPalette?.hexOne
+  const colorTwo = theme?.palette?.ihclPalette?.hexTwo
   const IHCLContexts = useContext(IHCLContext)
-  const destinationStore = IHCLContexts?.getGlobalStore(
-    GLOBAL_STORES.destinationStore
-  ) as DestinationStore
+  const destinationStore = IHCLContexts?.getGlobalStore(GLOBAL_STORES.destinationStore) as DestinationStore
   const { selectedCountry } = destinationStore
   const handleModelClose = () => setVideoPlay(!videoPlay)
 
@@ -69,7 +67,7 @@ const DestinationGroupWithFilterCards = (props: any) => {
           val?.thumbnail !== null &&
           val?.thumbnail !== undefined &&
           val?.thumbnail?.[0]?.imageAsset !== null &&
-          val?.thumbnail?.[0]?.imageAsset !== undefined
+          val?.thumbnail?.[0]?.imageAsset !== undefined,
       )
     } else {
       return destinationStore?.destinationData?.filter(
@@ -78,7 +76,7 @@ const DestinationGroupWithFilterCards = (props: any) => {
           val?.thumbnail?.[0]?.imageAsset !== null &&
           val?.thumbnail?.[0]?.imageAsset !== undefined &&
           val?.thumbnail !== null &&
-          val?.thumbnail !== undefined
+          val?.thumbnail !== undefined,
       )
     }
   }
@@ -98,7 +96,7 @@ const DestinationGroupWithFilterCards = (props: any) => {
     setSelectedIndex(
       tabs?.findIndex((val: string) => {
         return val?.toLowerCase() === selectedCountry?.toLowerCase()
-      }) - 1
+      }) - 1,
     )
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCountry, tabs])
@@ -138,7 +136,7 @@ const DestinationGroupWithFilterCards = (props: any) => {
               setSelectedTab={setSelectCountry}
               setParentIndex={setSelectedIndex}
               selectedCountryIndex={tabs?.findIndex(
-                (val: string) => selectedCountry?.toLowerCase() === val?.toLowerCase()
+                (val: string) => selectedCountry?.toLowerCase() === val?.toLowerCase(),
               )}
               cityCheck={props?.contentType === "allDestinations" ? true : false}
             />
@@ -172,8 +170,7 @@ const DestinationGroupWithFilterCards = (props: any) => {
           <AlternateAllLinksWrappingBox>
             <RenderActionItem
               url={`${destinationsRoute}/hotels-in-${
-                selectCountry?.toLowerCase()?.replace(/ /g, "-") ||
-                tabs?.[0]?.toLowerCase()?.replace(/ /g, "-")
+                selectCountry?.toLowerCase()?.replace(/ /g, "-") || tabs?.[0]?.toLowerCase()?.replace(/ /g, "-")
               }`}
               title={`Explore ${selectCountry || tabs?.[0]}`?.toUpperCase()}
               navigationType={"internal"}
@@ -196,13 +193,7 @@ const DestinationGroupWithFilterCards = (props: any) => {
               xl={item.largeVariant === "ihcl.core.card.social-media-card-image" ? 3.76 : 1.72}
               lg={item.largeVariant === "ihcl.core.card.social-media-card-image" ? 3.76 : 1.72}
               md={item.largeVariant === "ihcl.core.card.social-media-card-image" ? 3.76 : 1.72}
-              sm={
-                isMobile
-                  ? 5
-                  : item.largeVariant === "ihcl.core.card.social-media-card-image"
-                  ? 4
-                  : 1.72
-              }
+              sm={isMobile ? 5 : item.largeVariant === "ihcl.core.card.social-media-card-image" ? 4 : 1.72}
               xs={10}>
               <CardsBox
                 sx={{
@@ -210,10 +201,7 @@ const DestinationGroupWithFilterCards = (props: any) => {
                   position: isMobile ? "unset" : "relative",
                 }}
                 onClick={() => {
-                  navigate(
-                    `/${destinationsRoute}/hotels-in-${item?.identifier}`,
-                    item?.primaryAction?.urlType
-                  )
+                  navigate(`/${destinationsRoute}/hotels-in-${item?.identifier}`, item?.primaryAction?.urlType)
                   item?.mediaType === "video" && setVideoPlay(!videoPlay)
                 }}
                 onMouseEnter={() => setShowTitle(index)}
@@ -222,12 +210,12 @@ const DestinationGroupWithFilterCards = (props: any) => {
                   {item?.thumbnail?.[0]?.mediaType === "video" && videoPlay ? (
                     item?.thumbnail?.[0]?.videoAsset?.videoPlay?.asset?._ref && (
                       <>
-                      <VideoSEOScript {...item?.videoAsset}/>
-                      <VideoPlayerModal
-                        videoUrl={item?.videoAsset?.videoPlay?.asset?._ref}
-                        handleModalOpen={videoPlay}
-                        handleModalClose={handleModelClose}
-                      />
+                        <VideoSEOScript {...item?.videoAsset} />
+                        <VideoPlayerModal
+                          videoUrl={item?.videoAsset?.videoPlay?.asset?._ref}
+                          handleModalOpen={videoPlay}
+                          handleModalClose={handleModelClose}
+                        />
                       </>
                     )
                   ) : (
@@ -241,10 +229,8 @@ const DestinationGroupWithFilterCards = (props: any) => {
                           alt="award-image"
                           sx={{ objectFit: "contain" }}
                           src={getOptimizeImageUrl(
-                            urlFor(
-                              item?.thumbnail?.[0]?.imageAsset?.largeImage?.[0]?.asset?._ref
-                            )?.url(),
-                            3
+                            urlFor(item?.thumbnail?.[0]?.imageAsset?.largeImage?.[0]?.asset?._ref)?.url(),
+                            3,
                           )}
                         />
                       )}

@@ -589,7 +589,7 @@ const ReserveATableEnquireForm = ({
                           key={index}
                           value={item?.time}
                           sx={{
-                            fontFamily: "Inter",
+                            fontFamily: "supreme",
                             fontSize: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                           }}>
                           {item?.time}
@@ -641,7 +641,7 @@ const ReserveATableEnquireForm = ({
                         key={index}
                         value={item?.noOfGuests}
                         sx={{
-                          fontFamily: "Inter",
+                          fontFamily: "supreme",
                           fontSize: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
                         }}>
                         {item?.noOfGuests}

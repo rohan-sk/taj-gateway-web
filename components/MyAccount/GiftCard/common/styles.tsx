@@ -10,7 +10,7 @@ export const GCText = styled(
   transientProps,
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   fontSize: $isMobile ? MobilePxToVw(14) : DesktopPxToVw(14),
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   lineHeight: "140%",
 }))
 

@@ -23,7 +23,7 @@ export const GalleryButtonWrapper = styled(Button)(() => ({
   fontWeight: 700,
   lineHeight: "140%",
   letterSpacing: "1.8px",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: MobilePxToVw(18),
 }))
 

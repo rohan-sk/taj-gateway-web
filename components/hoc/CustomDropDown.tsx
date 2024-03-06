@@ -198,7 +198,7 @@ export const CustomDropDown = ({
       }}>
       <InputLabel
         sx={{
-          fontFamily: "Inter",
+          fontFamily: "supreme",
           fontSize: fontSize ? fontSize : "1.25vw",
           fontStyle: "normal",
           fontWeight: fontWeight ? fontWeight : 300,

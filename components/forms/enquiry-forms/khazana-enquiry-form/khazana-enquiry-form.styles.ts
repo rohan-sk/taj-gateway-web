@@ -97,7 +97,7 @@ export const StyledInputLabel = styled(InputLabel)(() => ({
 export const StyledSelect = styled(Select)(() => ({
   width: "19.229vw",
   marginRight: "2vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(24),
   "@media (max-width: 640px)": {
     width: "30vw",

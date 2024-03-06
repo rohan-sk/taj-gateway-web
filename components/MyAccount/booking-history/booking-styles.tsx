@@ -282,7 +282,7 @@ export const StyledInputLabel = styled(InputLabel)(() => ({
 }))
 
 export const FilterSelect = styled(Select)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "0.938vw",
   fontWeight: 300,
   "@media (max-width:640px)": {

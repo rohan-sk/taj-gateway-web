@@ -139,7 +139,7 @@ export const LabelBoldTypography = styled(Typography)(() => ({
   fontSize: "0.72vw",
   marginTop: "1.04vw",
   lineHeight: "1.02vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   "@media (max-width: 640px)": {
     marginTop: MobilePxToVw(20),
     fontSize: "2.5vw",

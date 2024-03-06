@@ -36,7 +36,7 @@ export const GiftCardsTabContent = styled(Tab)(() => ({
   padding: 0,
   fontWeight: 300,
   lineHeight: "140%",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(22),
   minHeight: DesktopPxToVw(48),
   "@media (max-width: 640px)": {

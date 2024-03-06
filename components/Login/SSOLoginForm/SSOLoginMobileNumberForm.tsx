@@ -190,7 +190,7 @@ const SSOLoginMobileNumberForm = ({ props }: any) => {
       <MobileNumberAndCountryCodeWrapper aria-label="SSOLoginMobileNumberForm">
         <CountryCodeDropdown
           setUserCode={setUserCode}
-          titleStyles={{ fontFamily: "Inter" }}
+          titleStyles={{ fontFamily: "supreme" }}
           isCustomizedArrow={true}
           parentStyles={{
             minHeight: isMobile ? MobilePxToVw(40) : DesktopPxToVw(40),

@@ -3,7 +3,7 @@ import { theme } from "../../lib/theme"
 import { transientProps } from "../../utils/transientProps"
 
 export const InputLabelTextStyle = styled(InputLabel)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "1.25vw",
   fontStyle: "normal",
   fontWeight: 300,

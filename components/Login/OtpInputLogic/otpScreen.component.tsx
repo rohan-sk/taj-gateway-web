@@ -778,7 +778,7 @@ const OtpScreen = (props: OTPScreenInterface) => {
             <Typography
               variant={isMobile ? "m-body-l" : "body-l"}
               sx={{
-                fontFamily: "Inter",
+                fontFamily: "supreme",
                 lineHeight: "140%",
                 textAlign: "center",
                 fontSize: isMobile ? "2.813vw" : "1.146vw",
@@ -793,7 +793,7 @@ const OtpScreen = (props: OTPScreenInterface) => {
                 <Typography
                   variant={isMobile ? "m-body-l" : "body-l"}
                   sx={{
-                    fontFamily: "Inter",
+                    fontFamily: "supreme",
                     lineHeight: isMobile ? "140%" : "2.3vw",
                     fontSize: isMobile ? "2.813vw" : "1.146vw",
                     textAlign: "center",

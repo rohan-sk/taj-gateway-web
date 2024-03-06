@@ -109,7 +109,7 @@ export const QuantityWrapper = styled(Box)(() => ({
 }))
 
 export const StyledMenuItem = styled(MenuItem)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "0.938vw",
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontWeight: 300,
@@ -127,7 +127,7 @@ export const ProductMenuItem = styled(
 }>(({ $mobile }) => ({
   display: "flex",
   justifyContent: "space-between",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: $mobile ? "2.813vw" : "1.35vw",
 }))
 
@@ -165,7 +165,7 @@ export const KhazanaFormControl = styled(FormControl)(() => ({
   "&>label": {
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: `1.25vw !important`,
     position: "absolute",
     top: "50%",
@@ -226,7 +226,7 @@ export const QuantityField = styled(TextField)(() => ({
     fontWeight: "300",
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
@@ -277,7 +277,7 @@ export const HamperFormControl = styled(FormControl)(() => ({
   "&>label": {
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: `${DesktopPxToVw(24)}!important`,
     position: "absolute",
     top: "50%",
@@ -392,7 +392,7 @@ export const AsyaFormControl = styled(FormControl)(() => ({
   "&>label": {
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     fontWeight: 300,
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: `${DesktopPxToVw(24)}!important`,
     position: "absolute",
     top: "50%",
@@ -447,7 +447,7 @@ export const TextAreaWrapper = styled(Box)(() => ({
 export const StyledErrorMessage = styled(FormHelperText)(() => ({
   textAlign: "start",
   fontSize: `${DesktopPxToVw(18)}!important`,
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   color: theme?.palette?.ihclPalette?.hexTwentyOne,
   alignSelf: "self-start",

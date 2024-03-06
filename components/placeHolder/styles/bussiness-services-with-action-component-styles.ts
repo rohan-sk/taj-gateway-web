@@ -38,7 +38,7 @@ export const ParameterMapTextField = styled(TextField)(() => ({
       fontWeight: 300,
       fontSize: "1.25vw",
       lineHeight: "150%",
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       textOverflow: "ellipsis !important",
       color: theme?.palette?.ihclPalette?.hexOne,
     },

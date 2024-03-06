@@ -37,7 +37,7 @@ export const ExpireTypography = styled(
   fontWeight: $mobile ? 700 : 300,
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontSize: $mobile ? MobilePxToVw(14) : DesktopPxToVw(16),
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   lineHeight: "140%",
   fontStyle: "normal",
 }))
@@ -49,7 +49,7 @@ export const DateTypography = styled(
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontWeight: $mobile ? 300 : 700,
   fontSize: $mobile ? MobilePxToVw(22) : DesktopPxToVw(16),
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   lineHeight: "140%",
   fontStyle: "normal",
 }))

@@ -52,7 +52,7 @@ export const PlanEventSecondDataContainer = styled(Box)(() => ({
 
 export const StyledTextField = styled(TextField)(() => ({
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     color: theme?.palette?.ihclPalette?.hexTwelve,
     "@media (max-width: 640px)": {
@@ -75,7 +75,7 @@ export const StyledTextField = styled(TextField)(() => ({
       color: theme?.palette?.ihclPalette?.hexTwelve,
       fontWeight: 300,
       fontStyle: "normal",
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       lineHeight: "150%",
       "@media (max-width: 640px)": {
         width: "55.625vws",
@@ -87,7 +87,7 @@ export const StyledTextField = styled(TextField)(() => ({
 
 export const DescriptionTextField = styled(TextField)(() => ({
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     lineHeight: "140%",
     color: theme?.palette?.ihclPalette?.hexSeventeen,
@@ -111,7 +111,7 @@ export const DescriptionTextField = styled(TextField)(() => ({
       color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: 300,
       fontStyle: "normal",
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       lineHeight: "150%",
       "@media (max-width: 640px)": {
         width: "55.625vws",
@@ -133,7 +133,7 @@ export const MobileNumberContainerBox = styled(
 export const GustDropDownInputLabel = styled(InputLabel)(() => ({
   lineHeight: "1.35vw",
   fontSize: DesktopPxToVw(24),
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
@@ -148,7 +148,7 @@ export const GustDropDownSelect = styled(
 )<{ $isMobile: boolean }>(({ $isMobile }) => ({
   fontSize: $isMobile ? "3.75vw" : "1.25vw",
   fontWeight: 300,
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   width: "30.156vw",
   lineHeight: "2vw",
   "& .MuiSelect-select": {
@@ -244,7 +244,7 @@ export const PlaneEventPhoneNumberField = styled(TextField)(() => ({
     margin: "auto",
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       paddingLeft: "2vw",
@@ -271,7 +271,7 @@ export const PlaneEventPhoneNumberField = styled(TextField)(() => ({
 
 export const StyledFormControl = styled(FormControl)(() => ({
   textAlign: "start",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: DesktopPxToVw(24),
   "& .MuiSelect-select": {
@@ -282,7 +282,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
   "& label": {
     transform: "scale(1) translate(0, 0)",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     "@media (max-width:640px)": {
@@ -310,7 +310,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
   "& .MuiSelect-select.MuiInputBase-input.MuiInput-input": {
     minHeight: "unset",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     "@media (max-width:640px)": {

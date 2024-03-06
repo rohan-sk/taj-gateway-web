@@ -157,7 +157,7 @@ export const EnquiryButton = styled(Button)(() => ({
   fontWeight: 700,
   width: "165px",
   lineHeight: "1.30vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   textAlign: "center",
   letterSpacing: "0.1em",
   textTransform: "uppercase",

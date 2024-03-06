@@ -117,7 +117,7 @@ export const TermsTypography = styled(Typography)(() => ({
   fontSize: "0.833vw",
   whiteSpace: "nowrap",
   lineHeight: "1.145vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
 }))
 
 export const TermsLinkTypography = styled(Typography)(() => ({
@@ -127,7 +127,7 @@ export const TermsLinkTypography = styled(Typography)(() => ({
   fontSize: "0.833vw",
   whiteSpace: "nowrap",
   lineHeight: "1.145vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 

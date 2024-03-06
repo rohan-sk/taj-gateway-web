@@ -225,7 +225,7 @@ export const Dot = styled(Box)(() => ({
 }))
 
 export const NoResultTypography = styled(Typography)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(22),
   fontStyle: "normal",
   fontWeight: 300,

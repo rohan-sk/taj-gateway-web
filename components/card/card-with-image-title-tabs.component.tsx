@@ -67,7 +67,7 @@ const CardWithImageTitleTabsComponent = ({
             sx={{
               "& div h3": {
                 fontSize: isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),
-                fontFamily: "inter",
+                fontFamily: "supreme",
                 fontWeight: 300,
               },
             }}>

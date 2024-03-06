@@ -101,7 +101,7 @@ export const StyledImage: any = styled(Box)(() => ({
 export const TabTitle = styled(Typography)(() => ({
   fontWeight: 700,
   margin: `${DesktopPxToVw(30)} 0`,
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(22),
   lineHeight: "140%",
   color: theme?.palette?.ihclPalette?.hexSeventeen,

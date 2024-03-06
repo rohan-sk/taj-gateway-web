@@ -43,7 +43,7 @@ export const CountryName = styled(Typography)(() => ({
   fontSize: "1.1340vw",
   fontWeight: "700",
   lineHeight: "140%",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontStyle: "normal",
   color: theme?.palette?.text?.primary,
 }))
@@ -52,7 +52,7 @@ export const CountryPhone = styled(Typography)(() => ({
   fontSize: "1.1340vw",
   fontWeight: "300",
   lineHeight: "140%",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontStyle: "normal",
   color: theme?.palette?.text?.primary,
 }))
@@ -122,13 +122,13 @@ export const InputTextField = styled(TextField)(() => ({
     },
   },
   "& input, & label": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     opacity: 1,
     "@media (max-width:640px)": {
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 300,
       fontSize: "3.75vw",
     },

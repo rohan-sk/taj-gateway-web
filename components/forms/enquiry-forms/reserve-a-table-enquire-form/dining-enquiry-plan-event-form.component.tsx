@@ -490,7 +490,7 @@ const DiningEnquiryPlanEventForm = ({
                         key={index}
                         value={guestList?.guest}
                         sx={{
-                          fontFamily: "Inter",
+                          fontFamily: "supreme",
                           fontSize: isMobile ? "3.75vw" : "1.25vw",
                         }}>
                         {guestList?.guest}

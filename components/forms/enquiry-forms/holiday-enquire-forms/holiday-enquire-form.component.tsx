@@ -622,7 +622,7 @@ const HolidayEnquireForm = (props: any) => {
               IconComponent={() => <KeyboardArrowDownIcon sx={{ marginBottom: "0.4vw" }} />}>
               {(incredibleJourneyTitle ? [{ journeys: incredibleJourneyTitle }] : IncredibleJourneys)?.map(
                 (item: any, index: number) => (
-                  <StyledMenuItem key={index} value={item?.journeys} sx={{ fontFamily: "Inter", fontSize: "1vw" }}>
+                  <StyledMenuItem key={index} value={item?.journeys} sx={{ fontFamily: "supreme", fontSize: "1vw" }}>
                     {item?.journeys}
                   </StyledMenuItem>
                 ),

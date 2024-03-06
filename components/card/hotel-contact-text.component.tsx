@@ -43,7 +43,7 @@ const HotelContactData = ({
     <Box
       sx={{
         "& *": {
-          fontFamily: "Inter",
+          fontFamily: "supreme",
           fontSize: `${DesktopPxToVw(22)} !important`,
           color: theme?.palette?.ihclPalette?.hexSeventeen,
           "@media (max-width:640px)": {

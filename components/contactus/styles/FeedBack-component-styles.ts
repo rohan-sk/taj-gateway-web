@@ -176,7 +176,7 @@ export const StyledTab = styled(Tab)(() => ({
 
 export const FeedbackFormControl = styled(FormControl)(() => ({
   textAlign: "start",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: "1.25vw",
   "@media (max-width:640px)": {
@@ -190,7 +190,7 @@ export const FeedbackFormControl = styled(FormControl)(() => ({
   "& label": {
     transform: "scale(1) translate(0, 0em)",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     paddingRight: "1.25vw",
@@ -221,7 +221,7 @@ export const FeedbackFormControl = styled(FormControl)(() => ({
   "& .MuiSelect-select.MuiInputBase-input.MuiInput-input": {
     minHeight: "unset",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     lineHeight: "140%",
@@ -234,7 +234,7 @@ export const FeedbackFormControl = styled(FormControl)(() => ({
 export const FeedbackMenuItem = styled(MenuItem)(() => ({
   fontWeight: 300,
   fontSize: "0.938vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   padding: "0.417vw 0vw 0.417vw 2.083vw",
   "@media (max-width:640px)": {
@@ -254,16 +254,16 @@ export const InputText = styled(TextField)(() => ({
   },
   "& .MuiFormHelperText-root": {
     fontSize: DesktopPxToVw(18),
-    fontFamily: "Inter !important",
+    fontFamily: "supreme !important",
     color: theme?.palette?.ihclPalette?.hexTwentyOne,
   },
 
   input: {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     "&::placeholder": {
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       opacity: 1,
       fontWeight: "300 !important",
       fontSize: DesktopPxToVw(24),

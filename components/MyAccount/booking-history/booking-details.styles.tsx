@@ -48,7 +48,7 @@ export const StyledBookingTabs = styled(
 }))
 
 export const StyledMenu = styled(MenuItem)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "0.938vw",
   "@media (max-width:640px)": {
     fontSize: "3.438vw",
@@ -101,7 +101,7 @@ export const FilterMainGrid = styled(Box)(() => ({
 
 export const StyledFormControl = styled(FormControl)(() => ({
   textAlign: "start",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: DesktopPxToVw(18),
   "& .MuiSelect-select": {
@@ -112,7 +112,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
   "& label": {
     transform: "scale(1) translate(0, 0)",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
     "@media (max-width:640px)": {
@@ -140,7 +140,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
   "& .MuiSelect-select.MuiInputBase-input.MuiInput-input": {
     minHeight: "unset",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
     lineHeight: "140%",

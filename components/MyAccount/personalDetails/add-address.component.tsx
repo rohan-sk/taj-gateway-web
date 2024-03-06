@@ -160,7 +160,7 @@ const AddAddress = ({
             sx={{
               width: "100%",
               "& .MuiFormHelperText-root": {
-                fontFamily: "Inter",
+                fontFamily: "supreme",
                 fontSize: isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),
               },
               "& .MuiInput-input": {
@@ -182,7 +182,7 @@ const AddAddress = ({
             sx={{
               width: "100%",
               "& .MuiFormHelperText-root": {
-                fontFamily: "Inter",
+                fontFamily: "supreme",
                 fontSize: isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),
               },
               "& .MuiInput-input": {

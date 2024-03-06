@@ -444,7 +444,7 @@ const MediaWithContentComponent = ({
                       buttonStyles={{
                         lineHeight: "140%",
                         letterSpacing: isIos ? "0vw" : "1.8px",
-                        fontFamily: "Inter",
+                        fontFamily: "supreme",
                         width: isMobile ? "50%" : "auto",
                         textWrap: secondaryAction?.title?.length < CONSTANTS?.TWELVE ? "nowrap !important" : "wrap",
                       }}

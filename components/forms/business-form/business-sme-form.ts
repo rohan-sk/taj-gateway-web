@@ -57,7 +57,7 @@ export const InputText = styled(TextField)(() => ({
     fontSize: DesktopPxToVw(18),
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: DesktopPxToVw(24),
   },
@@ -101,7 +101,7 @@ export const FieldSpacerWithFlex = styled(Box)(() => ({
   },
 }))
 export const InputLabelTextStyle = styled(InputLabel)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "1.25vw",
   fontStyle: "normal",
   fontWeight: 300,

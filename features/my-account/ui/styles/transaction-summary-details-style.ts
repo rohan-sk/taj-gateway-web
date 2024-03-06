@@ -44,7 +44,7 @@ export const SortWrapper = styled(Box)(() => ({
 }))
 
 export const StyledMenu = styled(MenuItem)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "1.35vw",
 }))
 

@@ -277,7 +277,7 @@ const GlobalBookingForPrice = ({ title }: GlobalBookingForPriceProps) => {
                     style: {
                       fontWeight: 300,
                       fontSize: "1.25vw",
-                      fontFamily: "Inter",
+                      fontFamily: "supreme",
                     },
                   }}
                   InputProps={{

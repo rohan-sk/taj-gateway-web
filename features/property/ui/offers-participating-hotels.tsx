@@ -296,7 +296,7 @@ const OffersParticipatingHotelsTemplate = (props: any) => {
                 styles={{
                   fontWeight: 300,
                   fontStyle: "normal",
-                  fontFamily: "Inter",
+                  fontFamily: "supreme",
                   color: theme?.palette?.ihclPalette?.hexSeventeen,
                 }}
               />

@@ -523,7 +523,7 @@ const OffersOwnerBenefitsForm = ({
               variant={"standard"}
               inputProps={{
                 style: {
-                  fontFamily: "Inter",
+                  fontFamily: "supreme",
                 },
               }}
               InputProps={{

@@ -108,7 +108,7 @@ export const InputTextField = styled(TextField)(() => ({
   "&  .MuiFormHelperText-root": {
     fontSize: DesktopPxToVw(18),
     color: theme?.palette?.ihclPalette?.hexThirtyTwo,
-    fontFamily: "inter",
+    fontFamily: "supreme",
   },
   input: {
     "&::placeholder": {
@@ -494,7 +494,7 @@ export const OrderNumberInputContainer = styled(
   width: $isMobile ? "100%" : DesktopPxToVw(330),
   "& .MuiInputBase-input": {
     color: theme?.palette?.ihclPalette?.hexSeventeen,
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
     fontStyle: "normal",
     fontWeight: 300,
@@ -526,7 +526,7 @@ export const OrderEmailInputContainer = styled(
   width: $isMobile ? "100%" : DesktopPxToVw(330),
   "& .MuiInputBase-input": {
     color: theme?.palette?.ihclPalette?.hexSeventeen,
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: $isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
     fontStyle: "normal",
     fontWeight: 300,

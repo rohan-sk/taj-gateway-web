@@ -81,7 +81,7 @@ export const EachTabWrapper = styled(Tab)(() => ({
   minHeight: DesktopPxToVw(60),
   fontSize: DesktopPxToVw(18),
   padding: "0vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
@@ -101,14 +101,14 @@ export const MobileNumberTextField = styled(TextField)(() => ({
   input: {
     paddingLeft: DesktopPxToVw(20),
     fontSize: DesktopPxToVw(24),
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     "@media (max-width: 640px)": {
       fontSize: MobilePxToVw(24),
     },
     "&::placeholder": {
       opacity: 1,
       fontWeight: 300,
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontSize: DesktopPxToVw(24),
       color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
@@ -227,7 +227,7 @@ export const MembershipBenefitsCardImagesWrapper = styled(Box)(() => ({
 
 export const MembershipBenefitsCardTitle = styled(Typography)(() => ({
   fontSize: DesktopPxToVw(18),
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   "@media (max-width: 640px)": {
@@ -239,12 +239,12 @@ export const MembershipBenefitsCardTitle = styled(Typography)(() => ({
 export const TermsAndPrivacyTypography = styled(Typography)(() => ({
   "> span": {
     fontSize: DesktopPxToVw(18),
-    fontFamily: "Inter",
+    fontFamily: "supreme",
   },
   "@media (max-width: 640px)": {
     marginTop: "1vw",
     "> span": {
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontSize: MobilePxToVw(18),
     },
   },

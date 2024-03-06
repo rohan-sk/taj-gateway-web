@@ -70,7 +70,7 @@ export const ChildBottomBox = styled(Box)(() => ({
 }))
 
 export const TypographyEpicureTitle = styled(Typography)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: MobilePxToVw(22),
   fontStyle: "normal",
   fontWeight: 700,
@@ -78,7 +78,7 @@ export const TypographyEpicureTitle = styled(Typography)(() => ({
 }))
 
 export const TypographyEpicureCost = styled(Typography)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: MobilePxToVw(20),
   fontStyle: "normal",
   fontWeight: "300",

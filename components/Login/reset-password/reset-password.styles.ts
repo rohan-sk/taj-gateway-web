@@ -6,12 +6,12 @@ export const PasswordTextField = styled(TextField)(() => ({
   width: "36.458vw",
   margin: "1vw 0vw",
   fontWeight: 300,
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   "@media (max-width: 640px)": {
     width: "84.375vw",
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       height: "4.2vw",

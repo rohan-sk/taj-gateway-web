@@ -290,7 +290,7 @@ const GroupWithTwoColumnGrid = ({
             setValue={setSearchQuery}
             placeholder={"Destination"}
             styles={{
-              fontFamily: "Inter",
+              fontFamily: "supreme",
               fontStyle: "normal",
               fontWeight: 300,
               color: theme?.palette?.ihclPalette?.hexSeventeen,

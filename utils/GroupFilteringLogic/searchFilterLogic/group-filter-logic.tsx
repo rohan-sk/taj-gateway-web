@@ -62,7 +62,7 @@ const GroupFilterLogic = ({ props, backgroundColor, parameterMap, setFilteredPro
                 placeholder={filterConfig?.[0]?.filterPlaceholder}
                 maxWidth={"74.219vw"}
                 styles={{
-                  fontFamily: "Inter",
+                  fontFamily: "supreme",
                   fontStyle: "normal",
                   fontWeight: 300,
                   lineHeight: "150%",
@@ -112,7 +112,7 @@ const GroupFilterLogic = ({ props, backgroundColor, parameterMap, setFilteredPro
                 styles={{
                   fontWeight: 300,
                   fontStyle: "normal",
-                  fontFamily: "Inter",
+                  fontFamily: "supreme",
                   color: theme?.palette?.ihclPalette?.hexSeventeen,
                 }}
               />

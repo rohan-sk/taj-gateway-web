@@ -67,7 +67,7 @@ export const SummaryTypography = styled(Box)(() => ({
   "@media (max-width:640px)": {
     fontWeight: 700,
     fontSize: "3.75vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     lineHeight: "5.469vw",
   },
 }))

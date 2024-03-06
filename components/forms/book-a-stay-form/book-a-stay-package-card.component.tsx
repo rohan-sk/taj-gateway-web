@@ -648,7 +648,7 @@ function BookAStayPackageCardComponent({
                 style: {
                   fontWeight: 300,
                   fontSize: isMobile ? MobilePxToVw(24) : DesktopPxToVw(24),
-                  fontFamily: "Inter",
+                  fontFamily: "supreme",
                 },
               }}
               sx={{ width: isMobile ? "100%" : "17.708vw" }}

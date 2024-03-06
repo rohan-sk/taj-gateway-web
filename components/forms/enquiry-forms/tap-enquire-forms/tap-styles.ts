@@ -113,7 +113,7 @@ export const EmailField = styled(TextField)(() => ({
     },
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: "3.750vw !important",
@@ -166,7 +166,7 @@ export const NameField = styled(TextField)(() => ({
     },
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: MobilePxToVw(24),
@@ -323,7 +323,7 @@ export const PhoneNumberField = styled(TextField)(() => ({
     },
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: MobilePxToVw(24),
@@ -362,7 +362,7 @@ export const TitleTypography = styled(Typography)(() => ({
 
 export const StyledInputLabel = styled(InputLabel)(() => ({
   color: theme?.palette?.ihclPalette?.hexSeventeen,
-  fontFamily: fonts?.body ?? "Inter",
+  fontFamily: fonts?.body ?? "supreme",
   fontSize: DesktopPxToVw(24),
   lineHeight: "140%",
   "@media (max-width: 640px)": {
@@ -383,7 +383,7 @@ export const CustomFormControl = styled(FormControl)(() => ({
   "& .MuiSelect-select.MuiInputBase-input.MuiInput-input": {
     minHeight: "unset",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     lineHeight: "140%",

@@ -9,7 +9,7 @@ export const NameField = styled(TextField)(() => ({
     },
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       height: "4.2vw",
@@ -27,7 +27,7 @@ export const NameField = styled(TextField)(() => ({
     "&::placeholder": {
       textOverflow: "ellipsis !important",
       color: theme?.palette?.ihclPalette?.hexSeventeen,
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 300,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
@@ -45,7 +45,7 @@ export const PhoneNumberField = styled(TextField)(() => ({
     },
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: "3.750vw !important",
@@ -60,7 +60,7 @@ export const PhoneNumberField = styled(TextField)(() => ({
     "&::placeholder": {
       textOverflow: "ellipsis !important",
       color: theme?.palette?.ihclPalette?.hexSeventeen,
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 400,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
@@ -78,7 +78,7 @@ export const EmailField = styled(TextField)(() => ({
     },
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: "3.750vw !important",
@@ -96,7 +96,7 @@ export const EmailField = styled(TextField)(() => ({
     "&::placeholder": {
       textOverflow: "ellipsis !important",
       color: theme?.palette?.ihclPalette?.hexSeventeen,
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 400,
       opacity: 1,
       fontSize: DesktopPxToVw(24),
@@ -234,7 +234,7 @@ export const SelectTimeSlots = styled(Select)(() => ({
 }))
 
 export const StyledMenuItem = styled(MenuItem)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
 }))
 
 export const ButtonWrapper = styled(Box)(() => ({
@@ -258,7 +258,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
     padding: "0vw!important",
   },
   input: {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     "&, &::placeholder": {

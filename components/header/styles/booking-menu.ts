@@ -154,7 +154,7 @@ export const TitleTypography = styled(Typography)(() => ({
   fontSize: "1.146vw",
   lineHeight: "1.719vw",
   margin: "1.042vw 0vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
 }))
 
 export const MainBox = styled(Box)(() => ({

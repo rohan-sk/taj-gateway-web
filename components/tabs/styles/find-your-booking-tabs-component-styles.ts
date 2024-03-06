@@ -59,7 +59,7 @@ export const MainContentTabContainer = styled(
   opacity: 1,
   fontWeight: 500,
   lineHeight: "150%",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: $isMobile ? MobilePxToVw(18) : DesktopPxToVw(18),
   padding: $isMobile ? `0vw ${MobilePxToVw(20)} ${MobilePxToVw(25)}` : `0vw ${DesktopPxToVw(20)} ${DesktopPxToVw(25)}`,
 }))

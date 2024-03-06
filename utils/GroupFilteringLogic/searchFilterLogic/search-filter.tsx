@@ -127,7 +127,7 @@ const SearchFilter = ({
       styles={{
         fontWeight: 300,
         fontStyle: "normal",
-        fontFamily: "Inter",
+        fontFamily: "supreme",
         color: theme?.palette?.ihclPalette?.hexSeventeen,
       }}
       iconColor={iconColor}

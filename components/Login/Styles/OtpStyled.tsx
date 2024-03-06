@@ -93,7 +93,7 @@ export const MainBoxWrapper = styled(Box)(() => ({
   paddingBottom: "2.500vw",
   "@media (max-width: 640px)": {
     fontSize: "3.750vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     width: MobilePxToVw(540),
     height: MobilePxToVw(448),
     padding: "4vw 0vw 6.25vw 0vw",
@@ -109,13 +109,13 @@ export const SubTitleWrapper = styled(Typography)(() => ({
   alignSelf: "center",
   "@media (max-width: 640px)": {
     lineHeight: "140%",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     marginBottom: "5vw",
   },
 }))
 
 export const ResendOtpText = styled(Typography)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   textDecoration: "underline",
   cursor: "pointer",
   color: theme?.palette?.ihclPalette?.hexTwo,
@@ -123,7 +123,7 @@ export const ResendOtpText = styled(Typography)(() => ({
   lineHeight: "2vw",
   "@media (max-width: 640px)": {
     lineHeight: "4vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     marginTop: "5vw",
   },
 }))
@@ -155,10 +155,10 @@ export const TitleWrapper = styled(Box)(() => ({
 
 export const MobileTitle = styled(Typography)(() => ({
   lineHeight: "4.8vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "3.438vw !important",
 }))
 export const MobileSubTitle = styled(Typography)(() => ({
   lineHeight: "4.8vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
 }))

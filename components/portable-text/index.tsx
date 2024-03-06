@@ -121,7 +121,7 @@ export const getPortableTextSerializers = (props: any, isMobile: any) => {
           variant={textVariant || (isMobile ? "m-body-l" : "body-ml")}
           component="span"
           sx={{
-            fontFamily: "Inter",
+            fontFamily: "supreme",
             color: textColor ?? theme?.palette?.primary?.main,
             lineHeight: "140%",
           }}>
@@ -133,7 +133,7 @@ export const getPortableTextSerializers = (props: any, isMobile: any) => {
           variant={isMobile ? "m-body-l" : "body-ml"}
           component="div"
           sx={{
-            fontFamily: "Inter",
+            fontFamily: "supreme",
             color: theme?.palette?.primary?.main,
           }}>
           &nbsp;

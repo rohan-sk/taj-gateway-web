@@ -188,7 +188,7 @@ const SSOLoginMembershipMobileNumberForm = ({ props }: any) => {
             setIsNewPassOpen(false)
           }}
           sx={{
-            fontFamily: "Inter",
+            fontFamily: "supreme",
             "& .MuiInputBase-input": {
               backgroundColor: theme?.palette?.background?.default,
             },

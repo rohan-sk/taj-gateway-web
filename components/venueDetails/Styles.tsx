@@ -23,7 +23,7 @@ export const Title = styled(Typography)(() => ({
 }))
 
 export const SubTitle = styled(Typography)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: "18px",
   lineHeight: "25px",
@@ -98,7 +98,7 @@ export const RequestButton = styled(Button)(() => ({
   fontWeight: 700,
   width: "250px",
   lineHeight: "1.30vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   textAlign: "center",
   letterSpacing: "0.1em",
   textTransform: "uppercase",
@@ -112,7 +112,7 @@ export const GalleryButton = styled(Button)(() => ({
   fontWeight: 700,
   width: "13.15vw",
   lineHeight: "1.30vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   textAlign: "center",
   letterSpacing: "0.1em",
   textTransform: "uppercase",

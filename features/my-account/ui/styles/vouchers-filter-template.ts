@@ -87,7 +87,7 @@ export const TabsContainerStack = styled(Stack)(() => ({
 
 export const VoucherFormControl = styled(FormControl)(() => ({
   textAlign: "start",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: "0.93vw",
   "@media (max-width:640px)": {
@@ -101,7 +101,7 @@ export const VoucherFormControl = styled(FormControl)(() => ({
   "& label": {
     transform: "scale(1) translate(0, 0.4em)",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "0.93vw",
     paddingRight: "1.25vw",
@@ -132,7 +132,7 @@ export const VoucherFormControl = styled(FormControl)(() => ({
   "& .MuiSelect-select.MuiInputBase-input.MuiInput-input": {
     minHeight: "unset",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "0.93vw",
     lineHeight: "140%",
@@ -144,7 +144,7 @@ export const VoucherFormControl = styled(FormControl)(() => ({
 }))
 
 export const VoucherFilterMenuItem = styled(MenuItem)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: "300",
   fontSize: "0.938vw",
   color: theme?.palette?.ihclPalette?.hexSeventeen,

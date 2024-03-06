@@ -60,7 +60,7 @@ export const StyledTextField = styled(TextField)(() => ({
     },
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     fontWeight: 300,
     color: theme?.palette?.ihclPalette?.hexSeventeen,
@@ -93,7 +93,7 @@ export const StyledTextField = styled(TextField)(() => ({
       fontWeight: 300,
       lineHeight: "150%",
       fontStyle: "normal",
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontSize: DesktopPxToVw(24),
       color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {
@@ -152,7 +152,7 @@ export const PhoneNumberContainer = styled(
 
 export const SpecialOccasionMultilineField = styled(TextField)(() => ({
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     lineHeight: "140%",
     minHeight: "2.856vw!important",
@@ -178,7 +178,7 @@ export const SpecialOccasionMultilineField = styled(TextField)(() => ({
       fontWeight: 300,
       lineHeight: "150%",
       fontStyle: "normal",
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontSize: DesktopPxToVw(24),
       color: theme?.palette?.ihclPalette?.hexSeventeen,
       "@media (max-width: 640px)": {

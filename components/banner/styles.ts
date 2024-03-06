@@ -47,7 +47,7 @@ export const TextFieldBox = styled(TextField)(() => ({
 export const TypographyStyle = styled(Typography)(() => ({
   fontSize: "1.25vw",
   cursor: "pointer",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: theme?.palette?.text?.primary,
 }))
 
@@ -241,7 +241,7 @@ export const StyledInputBase = styled(InputBase)(() => ({
     fontWeight: 300,
     fontSize: "1.25vw",
     lineHeight: "150%",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     WebkitTextFillColor: theme?.palette?.text?.primary,
   },
 }))

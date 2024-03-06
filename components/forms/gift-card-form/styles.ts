@@ -43,7 +43,7 @@ export const AutoSizeTextArea = styled(TextareaAutosize)(() => ({
   fontWeight: 300,
   lineHeight: "150%",
   fontSize: DesktopPxToVw(18),
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   borderBottom: `0.05vw solid ${theme?.palette?.text?.primary}`,
 
   "&  .MuiFormHelperText-root": {
@@ -53,7 +53,7 @@ export const AutoSizeTextArea = styled(TextareaAutosize)(() => ({
   "&::placeholder": {
     opacity: 1,
     fontWeight: 400,
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: theme?.palette?.text?.primary,
     textOverflow: "ellipsis !important",
   },
@@ -98,12 +98,12 @@ export const InputText = styled(TextField)(() => ({
   },
 
   input: {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     background: "none !important",
     "&::placeholder": {
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       opacity: 1,
       fontWeight: "300 !important",
       textOverflow: "ellipsis !important",
@@ -276,7 +276,7 @@ export const AutoCompleteInput = styled(TextField)(() => ({
   },
   paddingTop: "0.2vw",
   "&  .MuiFormHelperText-root": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: theme?.palette?.ihclPalette?.hexTen,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
@@ -372,7 +372,7 @@ export const StyledButton = styled(
   "@media (max-width: 640px)": {
     height: "11.094vw",
     fontSize: MobilePxToVw(22),
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontStyle: "normal",
     fontWeight: 300,
     lineHeight: "140%",
@@ -676,7 +676,7 @@ export const VenueEnquiryMobileNumberInput = styled(TextField)(() => ({
   "& .MuiInput-input": {
     fontWeight: 300,
     lineHeight: "150%",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
   },
   "& .MuiInputBase-root.MuiInput-root": {
@@ -690,7 +690,7 @@ export const VenueEnquiryMobileNumberInput = styled(TextField)(() => ({
       fontWeight: 300,
       paddingLeft: "0vw",
       lineHeight: "150%",
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontSize: DesktopPxToVw(24),
       textOverflow: "ellipsis !important",
       color: theme?.palette?.ihclPalette?.hexSeventeen,
@@ -824,7 +824,7 @@ export const GiftcardEnterDetailsMainWrapper = styled(
   "& .MuiFormHelperText-root": {
     fontStyle: "normal",
     lineHeight: "1.875vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
   },
 }))

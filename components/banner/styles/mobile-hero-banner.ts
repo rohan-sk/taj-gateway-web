@@ -57,7 +57,7 @@ export const ActionBox = styled(Box)(() => ({
 export const GalleryTypo = styled(Typography)(() => ({
   lineHeight: "150%",
   marginLeft: "4.5vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   letterSpacing: "0.15em",
   color: theme?.palette?.ihclPalette?.hexOne,
 }))

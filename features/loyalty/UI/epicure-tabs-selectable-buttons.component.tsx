@@ -144,7 +144,10 @@ const EpicureTabsSelectableButtons = ({ props }: any) => {
     if (!response?.error) {
       if (epicurePageStore && Number(epicureCardData?.totalPayableAmount) === 0 && epicureCardData?.isBankUrl) {
         global?.window?.sessionStorage?.setItem("order_id", response?.data?.orderId)
-        response?.data?.orderId && (await router?.push(`${paymentBankURL}?programType=bank&order_id=${response?.data?.orderId}&bankName=${bankName}`))
+        response?.data?.orderId &&
+          (await router?.push(
+            `${paymentBankURL}?programType=bank&order_id=${response?.data?.orderId}&bankName=${bankName}`,
+          ))
         global?.window?.localStorage?.removeItem("bankName")
         setLoader(false)
       } else if (epicurePageStore && Number(epicureCardData?.totalPayableAmount) === 0) {
@@ -315,7 +318,7 @@ const EpicureTabsSelectableButtons = ({ props }: any) => {
         sx={{
           margin: isMobile ? "2vw 8.344vw 14.063vw 8.344vw" : "2vw 0vw 0vw 0vw",
           width: isMobile ? MobilePxToVw(157) : DesktopPxToVw(157),
-          fontFamily: "Inter",
+          fontFamily: "supreme",
           fontSize: DesktopPxToVw(18),
           fontWeight: 700,
           textTransform: "uppercase",

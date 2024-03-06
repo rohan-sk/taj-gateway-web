@@ -12,7 +12,7 @@ export const MainGridWrapper = styled(Grid)<{ $marginProp?: boolean }>(({ $margi
 export const CountrySelect = styled(Select)(() => ({
   width: "23.594vw",
   marginRight: "2vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(24),
   "& .MuiSelect-select": {
     "&:focus": {
@@ -34,7 +34,7 @@ export const CityWrapper = styled(Box)(() => ({
 
 export const StateSelect = styled(Select)(() => ({
   width: "23.594vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "1.35vw",
   "& .MuiSelect-select": {
     "&:focus": {
@@ -50,7 +50,7 @@ export const StateSelect = styled(Select)(() => ({
 
 export const CitySelect = styled(Select)(() => ({
   width: "23.594vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "1.35vw",
   marginRight: "2vw",
   "& .MuiSelect-select": {
@@ -142,7 +142,7 @@ export const DateTextField = styled(TextField)(() => ({
 }))
 
 export const FormErrors = styled(FormHelperText)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: `${theme?.palette?.ihclPalette?.hexThirtyTwo}!important`,
   fontSize: DesktopPxToVw(18),
   "@media (max-width: 640px)": {
@@ -151,7 +151,7 @@ export const FormErrors = styled(FormHelperText)(() => ({
 }))
 
 export const MenuItems = styled(MenuItem)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "1.35vw",
   "@media (max-width: 640px)": {
     fontSize: "3.750vw !important",
@@ -160,7 +160,7 @@ export const MenuItems = styled(MenuItem)(() => ({
 
 export const StyledInputLabel = styled(InputLabel)(() => ({
   color: theme?.palette?.ihclPalette?.hexEleven,
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: "1.35vw",
   "@media (max-width: 640px)": {
@@ -259,19 +259,19 @@ export const InputMobileTextField = styled(TextField)(() => ({
     },
   },
   "& input, & label": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     opacity: 1,
     "@media (max-width:640px)": {
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 300,
       fontSize: "3.75vw",
     },
   },
   "& .MuiFormHelperText-root": {
-    fontFamily: "Inter !important",
+    fontFamily: "supreme !important",
     fontWeight: 300,
     color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: `${DesktopPxToVw(18)}!important`,

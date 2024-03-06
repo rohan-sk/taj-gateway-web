@@ -11,7 +11,7 @@ const breakpoints = {
   lg: 1200,
   xl: 1536,
 }
-const primaryFontFamily = "Cinzel"
+const primaryFontFamily = "Chillax"
 
 const typography = {
   "heading-l": {
@@ -64,7 +64,7 @@ const typography = {
     fontWeight: 400,
     fontSize: "0.83vw",
     lineHeight: "1.25vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
 
@@ -73,7 +73,7 @@ const typography = {
     fontWeight: 600,
     fontSize: "2.564vw",
     lineHeight: "3.59vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#727272",
     letterSpacing: "8%",
   },
@@ -83,7 +83,7 @@ const typography = {
     fontWeight: 450,
     fontSize: "2.083vw",
     lineHeight: "2.917vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#727272",
     letterSpacing: "8%",
   },
@@ -93,7 +93,7 @@ const typography = {
     fontWeight: 300,
     fontSize: "1.66vw",
     lineHeight: "1.83vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
 
@@ -102,7 +102,7 @@ const typography = {
     fontWeight: 300,
     fontSize: "1.25vw",
     lineHeight: "1.875vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
 
@@ -111,7 +111,7 @@ const typography = {
     fontWeight: 300,
     fontSize: DesktopPxToVw(26),
     lineHeight: "1.875vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
   "body-ml": {
@@ -119,7 +119,7 @@ const typography = {
     fontWeight: 300,
     fontSize: DesktopPxToVw(22),
     lineHeight: "1.56vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
   "body-m": {
@@ -127,7 +127,7 @@ const typography = {
     fontWeight: 300,
     fontSize: DesktopPxToVw(20),
     lineHeight: "140%",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
   "body-s": {
@@ -135,7 +135,7 @@ const typography = {
     fontWeight: 300,
     fontSize: "0.938vw",
     lineHeight: "1.30vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
 
@@ -144,7 +144,7 @@ const typography = {
     fontWeight: 300,
     fontSize: DesktopPxToVw(16),
     lineHeight: "1.25vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
 
@@ -153,7 +153,7 @@ const typography = {
     fontWeight: 300,
     fontSize: DesktopPxToVw(14),
     lineHeight: "1.25vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
 
@@ -162,7 +162,7 @@ const typography = {
     fontWeight: 300,
     fontSize: "0.625vw",
     lineHeight: "1.25vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
 
@@ -172,7 +172,7 @@ const typography = {
     fontSize: "0.9375vw",
     lineHeight: "1.3125vw",
     letterSpacing: "0.1em",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     textDecoration: "underline",
     cursor: "pointer",
   },
@@ -229,7 +229,7 @@ const typography = {
     fontWeight: 450,
     fontSize: "3.75vw",
     lineHeight: "5.313vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#727272",
     letterSpacing: "8%",
   },
@@ -239,7 +239,7 @@ const typography = {
     fontWeight: 600,
     fontSize: "4.688vw",
     lineHeight: "6.719vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#727272",
     letterSpacing: "8%",
   },
@@ -249,14 +249,14 @@ const typography = {
     fontWeight: 400,
     fontSize: "5.625vw",
     lineHeight: "180%",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
   "m-body-ml": {
     //26px
     fontWeight: 400,
     fontSize: "4.0625vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
   "m-body-sxl": {
@@ -264,7 +264,7 @@ const typography = {
     fontWeight: 400,
     fontSize: "3.438vw",
     lineHeight: "200%",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
   "m-body-l": {
@@ -272,7 +272,7 @@ const typography = {
     fontWeight: 300,
     fontSize: "3.75vw",
     lineHeight: "140%",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
 
@@ -281,7 +281,7 @@ const typography = {
     fontWeight: 300,
     fontSize: "3.438vw",
     lineHeight: "140%",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
 
@@ -289,7 +289,7 @@ const typography = {
     //20px
     fontWeight: 300,
     fontSize: "3.125vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     lineHeight: "140%",
     color: "#45443F",
   },
@@ -299,14 +299,14 @@ const typography = {
     fontWeight: 300,
     color: "#45443F",
     fontSize: "2.81vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
   },
 
   "m-body-xs": {
     //16px
     fontWeight: 300,
     fontSize: "2.5vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
 
@@ -314,7 +314,7 @@ const typography = {
     //12px
     fontWeight: 300,
     fontSize: "1.875vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: "#45443F",
   },
 
@@ -324,7 +324,7 @@ const typography = {
     color: "#AD8B3A",
     fontSize: "2.81vw",
     lineHeight: "150%",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     textDecoration: "underline",
   },
 
@@ -334,7 +334,7 @@ const typography = {
     fontSize: "2.5vw",
     lineHeight: "140%",
     letterSpacing: "0.1em",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     textDecoration: "underline",
     cursor: "pointer",
   },
@@ -452,7 +452,7 @@ const components: any = {
         textTransform: "none",
         lineHeight: "1.3125vw",
         minWidth: "auto",
-        fontFamily: "Inter",
+        fontFamily: "supreme",
         padding: "0.93vw 1.87vw",
         "@media (max-width: 640px)": {
           height: "9.53vw",
@@ -599,7 +599,7 @@ export const theme = createTheme({
   },
   typography: {
     ...typography,
-    fontFamily: ["Inter", "InterNeue", " Inter Neue", "sans-serif"].join(","),
+    fontFamily: ["supreme", "InterNeue", " supreme Neue", "sans-serif"].join(","),
   },
   components,
   shape,
@@ -779,6 +779,6 @@ declare module "@mui/material/Button" {
 }
 
 export const fonts = {
-  body: "Inter",
+  body: "supreme",
   heading: primaryFontFamily,
 }

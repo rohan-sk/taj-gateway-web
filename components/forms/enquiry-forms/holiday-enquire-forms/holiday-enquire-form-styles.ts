@@ -62,7 +62,7 @@ export const NameField = styled(TextField)(() => ({
     },
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       height: "4.2vw",
@@ -123,7 +123,7 @@ export const PhoneNumberField = styled(TextField)(() => ({
     margin: "0vw",
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     paddingLeft: "0.6vw",
 
@@ -164,7 +164,7 @@ export const EmailField = styled(TextField)(() => ({
     margin: "1.563vw 0vw",
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: "3.750vw !important",
@@ -257,7 +257,7 @@ export const DateTextField = styled(TextField)(() => ({
 }))
 
 export const StyledMenuItem = styled(MenuItem)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "1.250vw",
   "@media (max-width: 640px)": {
     fontSize: "3.750vw",
@@ -327,7 +327,7 @@ export const SelectIncredibleJourney = styled(Select)(() => ({
   width: "19.6vw",
   lineHeight: "1vw",
   fontSize: "1.250vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   "& .MuiSelect-select": {
     "&:focus": {
       backgroundColor: theme?.palette?.background?.default,

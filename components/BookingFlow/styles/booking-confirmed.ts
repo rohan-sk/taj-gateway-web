@@ -42,7 +42,7 @@ export const RoomTypeTypography = styled(Typography)(() => ({
   fontWeight: 700,
   fontSize: "1.25vw",
   lineHeight: "1.56vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: theme?.palette?.text?.primary,
 }))
 
@@ -51,14 +51,14 @@ export const GuestDetailsTypography = styled(Typography)(() => ({
   fontSize: "0.72vw",
   marginTop: "1.04vw",
   lineHeight: "1.02vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
 }))
 
 export const PackageTypography = styled(Typography)(() => ({
   fontWeight: 700,
   fontSize: "0.72vw",
   marginTop: "1.04vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
 }))
 
 export const DetailsViewTypography = styled(Typography)(() => ({

@@ -564,7 +564,7 @@ const PasswordScreen = ({
               marginTop: isMobile ? "4vw" : "0vw",
               marginRight: "1.2vw",
               fontSize: "0.938vw",
-              fontFamily: "Inter",
+              fontFamily: "supreme",
               marginBottom: isMobile ? "40vw" : "",
             }}
             onClick={async () => {

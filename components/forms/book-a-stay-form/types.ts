@@ -56,7 +56,7 @@ export interface HotelInformation {
 
 export const InputFontStyles = {
   width: "100%",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontStyle: "normal",
   fontWeight: 300,
   lineHeight: "150%",

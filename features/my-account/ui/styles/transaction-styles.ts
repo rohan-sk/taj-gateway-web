@@ -6,7 +6,7 @@ export const FilterSelect = styled(Select)(() => ({
   fontWeight: 300,
   marginRight: "2vw",
   fontSize: "0.938vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
 }))
 
 export const StyledInputLabel = styled(InputLabel)(() => ({

@@ -137,7 +137,7 @@ export const SelectCard = styled(Select)(() => ({
       backgroundColor: theme?.palette?.background?.default,
     },
   },
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(24),
   fontStyle: "normal",
   fontWeight: 300,
@@ -155,7 +155,7 @@ export const SelectCard = styled(Select)(() => ({
 }))
 
 export const CardMenuItem = styled(MenuItem)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(24),
   fontStyle: "normal",
   fontWeight: 300,

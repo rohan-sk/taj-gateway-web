@@ -33,7 +33,7 @@ export const GenderSelect = styled(Select)(() => ({
 export const SalutationSelect = styled(Select)(() => ({
   width: "7.500vw",
   marginRight: "2vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(24),
   "& .MuiSelect-select": {
     "&:focus": {
@@ -61,7 +61,7 @@ export const FirstNameField = styled(TextField)(() => ({
     width: "55.625vw",
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: "3.75vw",
@@ -108,7 +108,7 @@ export const LastNameField = styled(TextField)(() => ({
     margin: "4vw 0vw 1vw 0vw",
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       height: "4.2vw",
@@ -116,7 +116,7 @@ export const LastNameField = styled(TextField)(() => ({
     },
   },
   "& .MuiFormHelperText-root": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
@@ -163,14 +163,14 @@ export const EmailField = styled(TextField)(() => ({
     margin: "0vw auto",
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: "3.750vw !important",
     },
   },
   "& .MuiFormHelperText-root": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
@@ -217,7 +217,7 @@ export const PhoneNumberField = styled(TextField)(() => ({
   },
   "& .MuiInputBase-input ": {
     paddingLeft: "1.250vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: "3.750vw !important",
@@ -285,14 +285,14 @@ export const AddressTextField: any = styled(TextField)(() => ({
     width: "82vw",
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: "3.750vw !important",
     },
   },
   "& .MuiFormHelperText-root": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
@@ -305,7 +305,7 @@ export const AddressTextField: any = styled(TextField)(() => ({
       color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: 300,
       opacity: 1,
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontSize: DesktopPxToVw(24),
       "@media (max-width: 640px)": {
         fontSize: "3.750vw !important",
@@ -324,14 +324,14 @@ export const StyledTextField: any = styled(TextField)(() => ({
     marginTop: "4vw",
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: "3.750vw !important",
     },
   },
   "& .MuiFormHelperText-root": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
@@ -344,7 +344,7 @@ export const StyledTextField: any = styled(TextField)(() => ({
       color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: 300,
       opacity: 1,
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontSize: DesktopPxToVw(24),
       "@media (max-width: 640px)": {
         fontSize: "3.750vw !important",
@@ -378,7 +378,7 @@ export const EmailHintText = styled(Typography)(() => ({
   color: theme?.palette?.ihclPalette?.hexTwelve,
   alignSelf: "start",
   marginTop: "1vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(16),
   "@media (max-width: 640px)": {
     fontSize: "2.5vw !important",
@@ -408,14 +408,14 @@ export const ConformEmailField = styled(TextField)<{ $value: boolean }>(({ $valu
     margin: "4.688vw auto",
   },
   "& .MuiInputBase-input ": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     "@media (max-width: 640px)": {
       fontSize: "3.750vw !important",
     },
   },
   "&  .MuiFormHelperText-root": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     fontSize: DesktopPxToVw(18),
     "@media (max-width: 640px)": {
@@ -440,7 +440,7 @@ export const ConformEmailField = styled(TextField)<{ $value: boolean }>(({ $valu
       color: theme?.palette?.ihclPalette?.hexSeventeen,
       fontWeight: 300,
       opacity: 1,
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontSize: DesktopPxToVw(24),
       "@media (max-width: 640px)": {
         fontSize: "3.750vw !important",
@@ -468,7 +468,7 @@ export const MobileNumberWrapper = styled(Box)<{ $marginProp?: boolean }>(({ $ma
 
 export const ErrorTextTypography = styled(Typography)(() => ({
   color: theme?.palette?.ihclPalette?.hexThirtyTwo,
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: DesktopPxToVw(18),
   "@media(max-width:640px)": {

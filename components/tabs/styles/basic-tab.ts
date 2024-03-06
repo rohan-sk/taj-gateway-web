@@ -11,7 +11,7 @@ export const StyledTab = styled(Tab)(() => ({
   fontWeight: "300",
   lineHeight: "150%",
   fontSize: "0.9375vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   textTransform: "uppercase",
   color: theme?.palette?.text?.primary,
   minWidth: "auto",

@@ -158,7 +158,7 @@ export const IconDescription = styled(
   fontSize: DesktopPxToVw(36),
   fontWeight: 300,
   margin: `0px 0px 0px ${DesktopPxToVw(20)}`,
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   "@media (max-width:640px)": {
     fontSize: $isIos ? "18px" : MobilePxToVw(36),
   },
@@ -225,7 +225,7 @@ export const ITNumberText = styled(
   fontSize: DesktopPxToVw(30),
   fontWeight: 300,
   margin: "0px",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   "@media (max-width:640px)": {
     fontSize: $isIos ? "15px" : MobilePxToVw(30),
   },
@@ -263,7 +263,7 @@ export const CheckInTextOne = styled(
   fontSize: DesktopPxToVw(32),
   fontWeight: 300,
   margin: "0px",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   "@media (max-width:640px)": {
     fontSize: $isIos ? "10px" : MobilePxToVw(32),
   },
@@ -276,7 +276,7 @@ export const CheckInTextOneBooking = styled(
   fontSize: $isIos ? "12px" : DesktopPxToVw(32),
   fontWeight: 300,
   margin: "0px",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   "@media (max-width:640px)": {
     fontSize: $isIos ? "12px" : MobilePxToVw(32),
     justifyContent: $isIos ? "end" : "",
@@ -753,7 +753,7 @@ export const GiftTableTitle = styled(
   padding: "1rem",
   display: "flex",
   alignItems: "center",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(36),
   fontWeight: 300,
   "@media (max-width:640px)": {
@@ -770,7 +770,7 @@ export const GiftTableTitleTotal = styled(
   padding: "1rem",
   display: "flex",
   alignItems: "baseline",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(36),
   fontWeight: 300,
   "@media (max-width:640px)": {
@@ -881,7 +881,7 @@ const BasicSizeStyles = styled(
 )<{ $isIos?: boolean }>(({ $isIos }) => ({
   fontSize: DesktopPxToVw(26),
   lineHeight: DesktopPxToVw(39),
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   "@media (max-width:640px)": {
     fontSize: $isIos ? "13px" : MobilePxToVw(26),
     lineHeight: $isIos ? "20px" : MobilePxToVw(39),
@@ -902,7 +902,7 @@ const CommonTextStyles = styled(
   transientProps,
 )<{ $isIos?: boolean }>(({ $isIos }) => ({
   fontSize: DesktopPxToVw(36),
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   lineHeight: DesktopPxToVw(50.4),
   "@media (max-width:640px)": {

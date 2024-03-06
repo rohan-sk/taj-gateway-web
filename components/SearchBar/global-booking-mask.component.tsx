@@ -496,7 +496,7 @@ const GlobalBookingFlowBar = ({ title, _type }: GlobalBookingFlowBarProps) => {
                 style: {
                   fontWeight: 300,
                   fontSize: "1.25vw",
-                  fontFamily: "Inter",
+                  fontFamily: "supreme",
                 },
               }}
               InputProps={{ disableUnderline: true }}

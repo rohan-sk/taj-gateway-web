@@ -49,7 +49,7 @@ export const SearchWrapper = styled(Grid)(() => ({
   ".MuiInput-input.MuiInputBase-inputAdornedStart": {
     "&, &::placeholder": {
       fontSize: "1.25vw !important",
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 300,
       "@media (max-width:640px) ": { fontSize: "3.75vw!important" },
     },
@@ -70,7 +70,7 @@ export const SearchWrapper = styled(Grid)(() => ({
 }))
 
 export const StyledMenuItem = styled(MenuItem)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "0.938vw",
   padding: "0.487vw 0vw 0.487vw 2.083vw",
   backgroundColor: theme?.palette?.ihclPalette?.default,
@@ -450,7 +450,7 @@ export const CenterTextBox = styled(Box)(() => ({
 
 export const WeddingFormControl = styled(FormControl)(() => ({
   textAlign: "start",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: DesktopPxToVw(24),
   "& .MuiSelect-select": {
@@ -461,7 +461,7 @@ export const WeddingFormControl = styled(FormControl)(() => ({
   "& label": {
     transform: "scale(1) translate(0, 0)",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     "@media (max-width:640px)": {
@@ -489,7 +489,7 @@ export const WeddingFormControl = styled(FormControl)(() => ({
   "& .MuiSelect-select.MuiInputBase-input.MuiInput-input": {
     minHeight: "unset",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     "@media (max-width:640px)": {

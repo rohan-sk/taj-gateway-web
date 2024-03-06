@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "Cinzel";
+  font-family: "Chillax";
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url("../public/fonts/cinzel/Cinzel-Regular.ttf") format("truetype");
+  src: url("../public/fonts/chillax/Chillax-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Supreme";
   font-style: normal;
   font-display: swap;
-  src: url("../styles/fonts/Inter-Light.ttf") format("truetype");
+  src: url("../public/fonts/supreme/supreme-light.ttf") format("truetype");
 }

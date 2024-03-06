@@ -80,7 +80,7 @@ export const CustomCalendarWrapper = styled(
     "& p": {
       textDecoration: "none !important",
       color: theme.palette.ihclPalette.hexOne,
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 300,
       lineHeight: "140% ",
     },
@@ -140,7 +140,7 @@ export const CustomCalendarWrapper = styled(
   "& abbr": {
     textDecoration: "none !important",
     color: theme.palette.ihclPalette.hexSeventeen,
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: $mobile ? MobilePxToVw(18) : DesktopPxToVw(18),
     fontWeight: 300,
     lineHeight: "140% ",
@@ -148,7 +148,7 @@ export const CustomCalendarWrapper = styled(
   "& p": {
     textDecoration: "none !important",
     color: theme.palette.ihclPalette.hexSeventeen,
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     lineHeight: "140% ",
   },

@@ -71,7 +71,7 @@ export const DatesContainer = styled(Box)(() => ({
 export const StyledFormControl = styled(FormControl)(() => ({
   width: "100%",
   textAlign: "start",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: "1.25vw",
   "@media (max-width:640px)": {
@@ -94,7 +94,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
   "& label": {
     transform: "scale(1) translate(0, 0em)",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     paddingRight: "1.25vw",
@@ -129,7 +129,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
   "& .MuiSelect-select.MuiInputBase-input.MuiInput-input": {
     minHeight: "unset",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     lineHeight: "140%",
@@ -182,19 +182,19 @@ export const InputTextField = styled(TextField)(() => ({
     },
   },
   "& input, & label, & input::placeholder, & textarea, & textarea::placeholder": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     color: `${theme?.palette?.ihclPalette?.hexTwentyNine} !important`,
     opacity: 1,
     "@media (max-width:640px)": {
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 300,
       fontSize: "3.75vw",
     },
   },
   "& .MuiFormHelperText-root": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     color: `${theme?.palette?.ihclPalette?.hexThirtyTwo} !important`,
     fontSize: `${DesktopPxToVw(18)}!important`,
@@ -243,19 +243,19 @@ export const TextAreaField = styled(TextField)(() => ({
   },
 
   "& input, & label, & input::placeholder, & textarea, & textarea::placeholder": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     color: theme?.palette?.ihclPalette?.hexTwentyNine,
     opacity: 1,
     "@media (max-width:640px)": {
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 300,
       fontSize: "3.75vw",
     },
   },
   "& .MuiFormHelperText-root": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     color: theme?.palette?.ihclPalette?.hexTwentyOne,
     fontSize: `${DesktopPxToVw(18)}!important`,
@@ -324,7 +324,7 @@ export const ContentTypography = styled(Typography)(() => ({
 }))
 
 export const StyledLabel = styled(InputLabel)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "1.25vw",
   fontStyle: "normal",
   fontWeight: 300,
@@ -338,7 +338,7 @@ export const StyledLabel = styled(InputLabel)(() => ({
 export const StyledMenuItem = styled(MenuItem)(() => ({
   fontWeight: 300,
   fontSize: "0.938vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   padding: "0.417vw 0vw 0.417vw 2.083vw",
   "@media (max-width:640px)": {

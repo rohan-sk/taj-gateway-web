@@ -143,9 +143,9 @@ const TwoColoumnGridLayoutPlaceholder = ({
                           code: `<head> <style> @media (max-width: 1920px) { p { margin-block-start: 0px; margin-block-end: 0px; } 
                     .main-div { display: flex; flex-direction: column; gap:0.703vw; } .address-div { display: flex; align-items: center; gap: 0.7031vw !important; }
                      .hotel-information { display: flex; gap: 2.0833vw !important; align-items: center; /* margin-top: 13.5px; */ }.phone-number-field { display: flex; align-items: center; gap: 0.625vw !important; } 
-                      .address-styles { font-family: Inter; font-size: 0.9375vw !important; font-style: normal; font-weight: 300; line-height: 140%; color: #45443f; } 
-                      .phone-number-styles { font-family: Inter; font-size: 0.9375vw !important; font-style: normal; font-weight: 300; line-height: 140%; color: #45443f; }
-                      .email-filed-styles { color: #ad8b3a; font-family: Inter; font-size: 0.9375vw !important; font-style: normal; font-weight: 300; line-height: 140%; } 
+                      .address-styles { font-family: supreme; font-size: 0.9375vw !important; font-style: normal; font-weight: 300; line-height: 140%; color: #45443f; } 
+                      .phone-number-styles { font-family: supreme; font-size: 0.9375vw !important; font-style: normal; font-weight: 300; line-height: 140%; color: #45443f; }
+                      .email-filed-styles { color: #ad8b3a; font-family: supreme; font-size: 0.9375vw !important; font-style: normal; font-weight: 300; line-height: 140%; } 
                       .location-icon { width: 0.724vw; height: 1.0417vw; } .phone-icon { width: 0.9896vw; height: 0.9896vw; } .email-icon { width: 0.8854vw; height: 0.6927vw; } } 
                       @media (max-width: 640px) { .address-main-div { max-width: 69vw !important; overflow: hidden !important; } .main-div{ gap:2.109vw; } 
                       .address-styles { white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; } 

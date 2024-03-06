@@ -400,7 +400,7 @@ const PersonalDetails = (props: SignUpInterface) => {
                 }}
                 IconComponent={(props: any) => <FormSelectArrowIcon {...props} />}>
                 {salutationData?.salutation?.map((item: SelectItemsInterface, index: number) => (
-                  <MenuItem key={index} value={item?.title} sx={{ fontFamily: "Inter", fontSize: "1.35vw" }}>
+                  <MenuItem key={index} value={item?.title} sx={{ fontFamily: "supreme", fontSize: "1.35vw" }}>
                     {item?.title}
                   </MenuItem>
                 ))}
@@ -528,7 +528,7 @@ const PersonalDetails = (props: SignUpInterface) => {
                 onChange={handleSelectedValue}
                 IconComponent={(props: any) => <FormSelectArrowIcon {...props} />}>
                 {salutationData?.gender?.map((item: SelectItemsInterface, index: number) => (
-                  <MenuItem key={index} value={item?.title} sx={{ fontFamily: "Inter", fontSize: "1.35vw" }}>
+                  <MenuItem key={index} value={item?.title} sx={{ fontFamily: "supreme", fontSize: "1.35vw" }}>
                     {item?.title}
                   </MenuItem>
                 ))}

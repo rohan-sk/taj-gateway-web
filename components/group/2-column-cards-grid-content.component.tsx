@@ -90,7 +90,7 @@ const GroupWithTwoColumnCardsGrid = ({
                         placeholder={item?.value}
                         maxWidth={"74.219vw"}
                         styles={{
-                          fontFamily: "Inter",
+                          fontFamily: "supreme",
                           fontStyle: "normal",
                           fontWeight: 300,
                           lineHeight: "150%",
@@ -131,7 +131,7 @@ const GroupWithTwoColumnCardsGrid = ({
                       setValue={setValue}
                       placeholder={item?.value}
                       styles={{
-                        fontFamily: "Inter",
+                        fontFamily: "supreme",
                         fontStyle: "normal",
                         fontWeight: 300,
                         color: theme?.palette?.ihclPalette?.hexSeventeen,

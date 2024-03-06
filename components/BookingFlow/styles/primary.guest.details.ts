@@ -8,14 +8,14 @@ export const InputTextField = styled(TextField)<{ $width?: string }>(({ $width }
   "&  .MuiFormHelperText-root": {
     fontSize: DesktopPxToVw(20),
     fontWeight: 400,
-    fontFamily: "Inter",
+    fontFamily: "supreme",
   },
 
   "& .MuiInput-input": {
     fontWeight: 300,
     lineHeight: "150%",
     fontStyle: "normal",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     color: theme?.palette?.ihclPalette?.hexSeventeen,
   },
@@ -26,7 +26,7 @@ export const InputTextField = styled(TextField)<{ $width?: string }>(({ $width }
       fontWeight: 300,
       fontStyle: "normal",
       lineHeight: "1.875vw",
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       textOverflow: "ellipsis !important",
       color: theme?.palette?.text?.primary,
       fontSize: DesktopPxToVw(24),
@@ -88,7 +88,7 @@ export const AutoSizeTextArea = styled(
   fontWeight: 300,
   lineHeight: "150%",
   fontSize: "1.250vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   borderBottom: `0.05vw solid ${theme?.palette?.text?.primary}`,
 
   "&  .MuiFormHelperText-root": {
@@ -98,7 +98,7 @@ export const AutoSizeTextArea = styled(
   "&::placeholder": {
     opacity: 1,
     fontWeight: 400,
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     textOverflow: "ellipsis !important",
     color: $isDisabled ? "rgb(0 0 0 / 38%)" : theme?.palette?.text?.primary,
   },

@@ -31,7 +31,7 @@ export const StyledInputField: any = styled(TextField)(() => ({
   input: {
     "&::placeholder": {
       textOverflow: "ellipsis !important",
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontSize: DesktopPxToVw(24),
       fontStyle: "normal",
       fontWeight: 300,
@@ -45,7 +45,7 @@ export const StyledInputField: any = styled(TextField)(() => ({
     },
   },
   "& .MuiInputBase-input": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontSize: DesktopPxToVw(24),
     fontStyle: "normal",
     fontWeight: 300,

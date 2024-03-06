@@ -108,7 +108,7 @@ function BookAStayCardComponent({
                     placeholder={item?.value}
                     fontSizeProp={isMobile ? "3.750vw" : "1.250vw"}
                     styles={{
-                      fontFamily: "Inter",
+                      fontFamily: "supreme",
                       fontStyle: "normal",
                       fontWeight: 300,
                       fontSize: "1.25vw",
@@ -160,7 +160,7 @@ function BookAStayCardComponent({
                     InputProps={{
                       style: {
                         width: isMobile ? "74.219vw" : "24.01vw",
-                        fontFamily: "Inter",
+                        fontFamily: "supreme",
                         fontStyle: "normal",
                         fontWeight: 300,
                         fontSize: isMobile ? "3.750vw" : "1.25vw",

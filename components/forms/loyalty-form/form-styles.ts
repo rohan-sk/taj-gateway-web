@@ -58,19 +58,19 @@ export const InputTextFieldEpicure = styled(TextField)(() => ({
     },
   },
   "& input, & label": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     opacity: 1,
     "@media (max-width:640px)": {
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 300,
       fontSize: MobilePxToVw(24),
     },
   },
   "& .MuiFormHelperText-root": {
-    fontFamily: "Inter !important",
+    fontFamily: "supreme !important",
     fontWeight: 300,
     color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     fontSize: `${DesktopPxToVw(16)}!important`,
@@ -215,19 +215,19 @@ export const StyledTextField = styled(TextField)(() => ({
     },
   },
   " & label": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     opacity: 1,
     "@media (max-width:640px)": {
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 300,
       fontSize: MobilePxToVw(24),
     },
   },
   "& .MuiFormHelperText-root": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     color: theme?.palette?.ihclPalette?.hexTen,
     fontSize: `${DesktopPxToVw(18)}!important`,
@@ -543,7 +543,7 @@ export const StyledMenuItem = styled(MenuItem)(() => ({
 
 export const EpicureCartFormControl = styled(FormControl)(() => ({
   textAlign: "start",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: DesktopPxToVw(18),
   "@media (max-width:640px)": {
@@ -562,7 +562,7 @@ export const EpicureCartFormControl = styled(FormControl)(() => ({
   "& label": {
     transform: "scale(1) translate(0, 0.4vw)",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
     paddingRight: "1.25vw",
@@ -594,7 +594,7 @@ export const EpicureCartFormControl = styled(FormControl)(() => ({
   "& .MuiSelect-select.MuiInputBase-input.MuiInput-input": {
     minHeight: "unset",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
     lineHeight: "140%",
@@ -608,7 +608,7 @@ export const EpicureCartFormControl = styled(FormControl)(() => ({
 
 export const StyledFormControl = styled(FormControl)(() => ({
   textAlign: "start",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: "1.25vw",
   "@media (max-width:640px)": {
@@ -627,7 +627,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
   "& label": {
     transform: "scale(1) translate(0, 0em)",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     paddingRight: "1.25vw",
@@ -658,7 +658,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
   "& .MuiSelect-select.MuiInputBase-input.MuiInput-input": {
     minHeight: "unset",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     lineHeight: "140%",
@@ -670,7 +670,7 @@ export const StyledFormControl = styled(FormControl)(() => ({
 }))
 
 export const LoyaltyStyledSelect = styled(Select)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(18),
   "@media (max-width:640px)": {
     fontSize: MobilePxToVw(24),
@@ -732,7 +732,7 @@ export const AddOnFormControl = styled(
   transientProps,
 )<{ $componentBackgroundColor?: string }>(({ $componentBackgroundColor }) => ({
   textAlign: "start",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: DesktopPxToVw(18),
   "@media (max-width:640px)": {
@@ -751,7 +751,7 @@ export const AddOnFormControl = styled(
   "& label": {
     transform: "scale(1) translate(0, 0.4vw)",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
     paddingRight: "1.25vw",
@@ -783,7 +783,7 @@ export const AddOnFormControl = styled(
   "& .MuiSelect-select.MuiInputBase-input.MuiInput-input": {
     minHeight: "unset",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: DesktopPxToVw(18),
     lineHeight: "140%",

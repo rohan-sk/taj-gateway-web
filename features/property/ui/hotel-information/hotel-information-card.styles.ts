@@ -4,7 +4,7 @@ import DesktopPxToVw, { MobilePxToVw } from "../../../../utils/DesktopFontCalc"
 
 export const ValueTypography = styled(Typography)(() => ({
   fontSize: "1.146vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontStyle: "normal",
   fontWeight: 700,
   lineHeight: "140%",
@@ -54,7 +54,7 @@ export const SubGrid = styled(Grid)(() => ({
 export const ItemTitleTypography = styled(Box)(() => ({
   fontSize: "0.729vw",
   color: theme?.palette?.ihclPalette?.hexTwelve,
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontStyle: "normal",
   fontWeight: 400,
   lineHeight: "150%",

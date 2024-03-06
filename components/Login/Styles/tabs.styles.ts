@@ -265,7 +265,7 @@ export const ImagesContainer = styled(Box)(() => ({
 }))
 
 export const StyledMenuItem = styled(MenuItem)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "0.938vw",
   padding: "0.417vw",
   color: theme?.palette?.ihclPalette?.hexSeventeen,

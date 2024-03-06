@@ -195,7 +195,7 @@ export const RemoveLink = styled(
 )<{ $continueButtonClicked?: boolean }>(({ $continueButtonClicked }) => ({
   fontWeight: 400,
   fontSize: "0.93vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   textDecoration: "underline",
   color: theme?.palette?.ihclPalette?.hexTwo,
   cursor: $continueButtonClicked ? "default" : "pointer",
@@ -261,7 +261,7 @@ export const AccordionText = styled(AccordionSummary)(() => ({
   fontSize: "1.145vw",
   maxHeight: "2.60vw",
   lineHeight: "1.56vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: theme?.palette?.text?.primary,
   "&.MuiButtonBase-root.MuiAccordionSummary-root.Mui-expanded": {
     minHeight: "0vw",

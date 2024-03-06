@@ -87,7 +87,7 @@ export const NewsLetterFormContainer = styled(Box)(() => ({
 
 export const NewsLetterFormControl = styled(FormControl)(() => ({
   textAlign: "start",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontWeight: 300,
   fontSize: "1.25vw",
   "@media (max-width:640px)": {
@@ -106,7 +106,7 @@ export const NewsLetterFormControl = styled(FormControl)(() => ({
   "& label": {
     transform: "scale(1) translate(0, 0em)",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     paddingRight: "1.25vw",
@@ -137,7 +137,7 @@ export const NewsLetterFormControl = styled(FormControl)(() => ({
   "& .MuiSelect-select.MuiInputBase-input.MuiInput-input": {
     minHeight: "unset",
     textAlign: "start",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     lineHeight: "140%",
@@ -149,7 +149,7 @@ export const NewsLetterFormControl = styled(FormControl)(() => ({
 }))
 
 export const NewsLetterStyledLabel = styled(InputLabel)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: "1.25vw",
   fontStyle: "normal",
   fontWeight: 300,
@@ -163,7 +163,7 @@ export const NewsLetterStyledLabel = styled(InputLabel)(() => ({
 export const NewsLetterMenuItem = styled(MenuItem)(() => ({
   fontWeight: 300,
   fontSize: "0.938vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   padding: "0.417vw 2.083vw 0.417vw 2.083vw",
   "@media (max-width:640px)": {
@@ -213,19 +213,19 @@ export const InputTextField = styled(TextField)(() => ({
     },
   },
   "& input, & label": {
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     fontWeight: 300,
     fontSize: "1.25vw",
     color: theme?.palette?.ihclPalette?.hexSeventeen,
     opacity: 1,
     "@media (max-width:640px)": {
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       fontWeight: 300,
       fontSize: "3.75vw",
     },
   },
   "& .MuiFormHelperText-root": {
-    fontFamily: "Inter !important",
+    fontFamily: "supreme !important",
     fontWeight: 300,
     color: theme?.palette?.ihclPalette?.hexThirtyTwo,
     fontSize: `${DesktopPxToVw(18)}!important`,

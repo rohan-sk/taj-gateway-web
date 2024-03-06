@@ -47,7 +47,7 @@ export const DateTitleContainer = styled(Box)(() => ({
 }))
 
 export const DateTitleTypography = styled(Typography)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(14),
   fontStyle: "normal",
   fontWeight: 400,
@@ -89,7 +89,7 @@ export const DatesContainer = styled(Box)(() => ({
   },
 }))
 export const DateTypography = styled(Typography)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(22),
   fontStyle: "normal",
   fontWeight: 700,

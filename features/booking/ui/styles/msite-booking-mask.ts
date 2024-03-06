@@ -49,7 +49,7 @@ export const DateTextField = styled(TextField)(() => ({
     fontWeight: 300,
     lineHeight: "150%",
     fontSize: "3.750vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
     padding: 0,
   },
 
@@ -58,7 +58,7 @@ export const DateTextField = styled(TextField)(() => ({
       fontWeight: 300,
       lineHeight: "150%",
       fontSize: "3.750vw",
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       color: theme?.palette?.text?.primary,
     },
   },
@@ -120,7 +120,7 @@ export const TermsTypography = styled(Typography)(() => ({
   whiteSpace: "nowrap",
   marginLeft: "2vw",
   lineHeight: "3.516vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
 }))
 
 export const TermsLinkTypography = styled(Typography)(() => ({
@@ -130,7 +130,7 @@ export const TermsLinkTypography = styled(Typography)(() => ({
   marginLeft: "1vw",
   whiteSpace: "nowrap",
   lineHeight: "3.516vw",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: theme?.palette?.ihclPalette?.hexTwo,
 }))
 
@@ -199,7 +199,7 @@ export const PromoCodeTextField: any = styled(TextField)(() => ({
     fontWeight: 300,
     lineHeight: "150%",
     fontSize: "3.750vw",
-    fontFamily: "Inter",
+    fontFamily: "supreme",
   },
 
   input: {
@@ -207,7 +207,7 @@ export const PromoCodeTextField: any = styled(TextField)(() => ({
       fontWeight: 300,
       lineHeight: "150%",
       fontSize: "3.750vw",
-      fontFamily: "Inter",
+      fontFamily: "supreme",
       color: theme?.palette?.text?.primary,
     },
   },

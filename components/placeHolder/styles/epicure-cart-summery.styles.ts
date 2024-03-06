@@ -22,7 +22,7 @@ export const MainGridEpicure = styled(Grid)(() => ({
 
 export const StackCardType = styled(Stack)(() => ({
   cursor: "pointer",
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(18),
   fontWeight: 700,
 }))

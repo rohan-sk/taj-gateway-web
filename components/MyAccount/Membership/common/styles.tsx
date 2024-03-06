@@ -16,7 +16,7 @@ export const BorderedCardWrapper = styled(Box)(() => ({
   },
 }))
 export const BoldSubfieldTitleTypography = styled(Typography)(() => ({
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontSize: "0.729vw",
   fontWeight: "700",
@@ -42,7 +42,7 @@ export const InnerCardGrid = styled(Box)(() => ({
 
 export const BoldTitle = styled(Typography)(() => ({
   color: theme?.palette?.ihclPalette?.hexSeventeen,
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   fontSize: DesktopPxToVw(14),
   fontStyle: "normal",
   fontWeight: 700,
@@ -112,7 +112,7 @@ export const ComplementaryAddOnFlex = styled(Box)(() => ({
 export const CoinBalance = styled(Typography)(() => ({
   fontSize: DesktopPxToVw(18),
   fontWeight: 300,
-  fontFamily: "Inter",
+  fontFamily: "supreme",
   color: theme?.palette?.ihclPalette?.hexSeventeen,
   fontStyle: "normal",
   lineHeight: "140%",

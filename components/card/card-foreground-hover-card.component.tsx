@@ -25,6 +25,8 @@ export const HoverCard = ({ index, setActiveIndex, activeIndex, item, cardColorV
           <ContentBox
             sx={{
               background: cardBackground ? cardBackground : theme?.palette?.background?.default,
+              borderTopRightRadius: "100em",
+              borderTopLeftRadius: "100em",
             }}>
             {item?.title && (
               <Typography variant="heading-s" component={item?.headingElementForCard || "h3"} color={cardTextColor}>

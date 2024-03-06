@@ -2,7 +2,7 @@ import React from "react"
 import { createTheme } from "@mui/material"
 import DesktopPxToVw from "../utils/DesktopFontCalc"
 
-const primaryColor = "#45443F"
+const primaryColor = "#546223"
 const shape = { borderRadius: 4 }
 const breakpoints = {
   xs: 0,
@@ -20,7 +20,7 @@ const typography = {
     fontSize: "3.23vw",
     lineHeight: "3.85vw",
     letterSpacing: "-0.05em",
-    color: "#45443F",
+    color: "#546223",
   },
   "heading-m": {
     // 48px
@@ -29,12 +29,12 @@ const typography = {
     fontSize: "2.5vw",
     lineHeight: "2.96vw",
     letterSpacing: "-0.05em",
-    color: "#45443F",
+    color: "#546223",
   },
   "heading-s": {
     // 32px
     fontWeight: 400,
-    color: "#45443F",
+    color: "#546223",
     fontSize: "1.67vw",
     lineHeight: "1.82vw",
     fontFamily: primaryFontFamily,
@@ -43,7 +43,7 @@ const typography = {
   "heading-xs": {
     //24px
     fontWeight: 400,
-    color: "#45443F",
+    color: "#546223",
     fontSize: "1.25vw",
     lineHeight: "1.70vw",
     fontFamily: primaryFontFamily,
@@ -57,7 +57,7 @@ const typography = {
     lineHeight: "1.70vw",
     fontFamily: primaryFontFamily,
     letterSpacing: "-0.05em",
-    color: "#45443F",
+    color: "#546223",
   },
   "heading-xxs": {
     //16px
@@ -65,7 +65,7 @@ const typography = {
     fontSize: "0.83vw",
     lineHeight: "1.25vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "body-xxl": {
@@ -74,7 +74,7 @@ const typography = {
     fontSize: "2.564vw",
     lineHeight: "3.59vw",
     fontFamily: "supreme",
-    color: "#727272",
+    color: "#0E3C20",
     letterSpacing: "8%",
   },
 
@@ -84,7 +84,7 @@ const typography = {
     fontSize: "2.083vw",
     lineHeight: "2.917vw",
     fontFamily: "supreme",
-    color: "#727272",
+    color: "#0E3C20",
     letterSpacing: "8%",
   },
 
@@ -94,7 +94,7 @@ const typography = {
     fontSize: "1.66vw",
     lineHeight: "1.83vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "body-l": {
@@ -103,7 +103,7 @@ const typography = {
     fontSize: "1.25vw",
     lineHeight: "1.875vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "body-x": {
@@ -112,7 +112,7 @@ const typography = {
     fontSize: DesktopPxToVw(26),
     lineHeight: "1.875vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
   "body-ml": {
     //22px
@@ -120,7 +120,7 @@ const typography = {
     fontSize: DesktopPxToVw(22),
     lineHeight: "1.56vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
   "body-m": {
     //20px
@@ -128,7 +128,7 @@ const typography = {
     fontSize: DesktopPxToVw(20),
     lineHeight: "140%",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
   "body-s": {
     //18px
@@ -136,7 +136,7 @@ const typography = {
     fontSize: "0.938vw",
     lineHeight: "1.30vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "body-xs": {
@@ -145,7 +145,7 @@ const typography = {
     fontSize: DesktopPxToVw(16),
     lineHeight: "1.25vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "body-xxs": {
@@ -154,7 +154,7 @@ const typography = {
     fontSize: DesktopPxToVw(14),
     lineHeight: "1.25vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "body-xxxs": {
@@ -163,7 +163,7 @@ const typography = {
     fontSize: "0.625vw",
     lineHeight: "1.25vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "link-m": {
@@ -185,7 +185,7 @@ const typography = {
     fontSize: "9.68vw",
     letterSpacing: "-0.05em",
     fontFamily: primaryFontFamily,
-    color: "#45443F",
+    color: "#546223",
   },
 
   "m-heading-m": {
@@ -194,14 +194,14 @@ const typography = {
     fontSize: "7.5vw",
     letterSpacing: "-0.05em",
     fontFamily: primaryFontFamily,
-    color: "#45443F",
+    color: "#546223",
   },
 
   "m-heading-s": {
     //32px
     fontWeight: 400,
     fontSize: "5vw",
-    color: "#45443F",
+    color: "#546223",
     fontFamily: primaryFontFamily,
     letterSpacing: "-0.05em",
   },
@@ -209,7 +209,7 @@ const typography = {
   "m-heading-xs": {
     //24px
     fontWeight: 400,
-    color: "#45443F",
+    color: "#546223",
     fontSize: "3.75vw",
     fontFamily: primaryFontFamily,
     letterSpacing: "-0.05em",
@@ -221,7 +221,7 @@ const typography = {
     fontSize: "2.8125vw",
     fontFamily: primaryFontFamily,
     letterSpacing: "-0.05em",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "m-body-xsl": {
@@ -230,7 +230,7 @@ const typography = {
     fontSize: "3.75vw",
     lineHeight: "5.313vw",
     fontFamily: "supreme",
-    color: "#727272",
+    color: "#0E3C20",
     letterSpacing: "8%",
   },
 
@@ -240,7 +240,7 @@ const typography = {
     fontSize: "4.688vw",
     lineHeight: "6.719vw",
     fontFamily: "supreme",
-    color: "#727272",
+    color: "#0E3C20",
     letterSpacing: "8%",
   },
 
@@ -250,14 +250,14 @@ const typography = {
     fontSize: "5.625vw",
     lineHeight: "180%",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
   "m-body-ml": {
     //26px
     fontWeight: 400,
     fontSize: "4.0625vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
   "m-body-sxl": {
     //22px
@@ -265,7 +265,7 @@ const typography = {
     fontSize: "3.438vw",
     lineHeight: "200%",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
   "m-body-l": {
     // 24px
@@ -273,7 +273,7 @@ const typography = {
     fontSize: "3.75vw",
     lineHeight: "140%",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "m-body-sl": {
@@ -282,7 +282,7 @@ const typography = {
     fontSize: "3.438vw",
     lineHeight: "140%",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "m-body-m": {
@@ -291,13 +291,13 @@ const typography = {
     fontSize: "3.125vw",
     fontFamily: "supreme",
     lineHeight: "140%",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "m-body-s": {
     //18px
     fontWeight: 300,
-    color: "#45443F",
+    color: "#546223",
     fontSize: "2.81vw",
     fontFamily: "supreme",
   },
@@ -307,7 +307,7 @@ const typography = {
     fontWeight: 300,
     fontSize: "2.5vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "m-body-xxs": {
@@ -315,7 +315,7 @@ const typography = {
     fontWeight: 300,
     fontSize: "1.875vw",
     fontFamily: "supreme",
-    color: "#45443F",
+    color: "#546223",
   },
 
   "m-text-link": {
@@ -557,7 +557,7 @@ export const theme = createTheme({
       hexFourteen: "#626260",
       hexFifteen: "#656263",
       hexSixteen: "#D7D5CF",
-      hexSeventeen: "#45443F",
+      hexSeventeen: "#546223",
       hexEighteen: "#F7F3EB",
       hexNineteen: "#d7d7d6",
       hexTwenty: "#acaba8",
@@ -574,7 +574,7 @@ export const theme = createTheme({
       hexThirtyOne: "#C30F0F",
       hexThirtyTwo: "#982929",
       hexThirtyThree: "#7F7F7F",
-      hexThirtyFour: "#727272",
+      hexThirtyFour: "#0E3C20",
 
       linearGradientOne: `linear-gradient(180deg, rgba(81, 81, 81, 0) 0%, rgba(0, 0, 0, 0.9) 100%)`,
       linearGradientTwo: `linear-gradient(180deg, rgba(31, 31, 30, 0) 0%, #1A1919 65.62%)`,

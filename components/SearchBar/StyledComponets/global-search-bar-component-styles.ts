@@ -5,11 +5,12 @@ import { transientProps } from "../../../utils/transientProps"
 import DesktopPxToVw from "../../../utils/DesktopFontCalc"
 
 export const GlobalSearchBarPaper: any = styled(Paper)(() => ({
-  padding: "0vw",
+  paddingRight: "2vw",
+  paddingLeft: "2vw",
   display: "flex",
   alignItems: "center",
   "&.MuiPaper-root": {
-    borderRadius: "0vw",
+    borderRadius: DesktopPxToVw(40),
     height: "3.6vw",
   },
 }))

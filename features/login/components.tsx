@@ -9,7 +9,7 @@ import {
   SwitchCaseBlock,
 } from "../../components"
 import TabLinks from "../../components/TabsList"
-import Modal from "../../components/hoc/tdlModal"
+import Modal from "../../components/hoc/ihcllModal"
 import { RenderShareComponent } from "../../components/share"
 import RenderPlaceHolderComponent from "../../components/placeHolder"
 import Group from "../../components/group"

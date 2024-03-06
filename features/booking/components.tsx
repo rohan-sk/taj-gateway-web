@@ -10,7 +10,7 @@ import {
 } from "../../components"
 import dynamic from "next/dynamic"
 import TabLinks from "../../components/TabsList"
-import Modal from "../../components/hoc/tdlModal"
+import Modal from "../../components/hoc/ihcllModal"
 import { RenderShareComponent } from "../../components/share"
 import DownLoadPdf from "../../components/downloadPdf/DownLoadPdf"
 import CartSummaryCard from "../../components/placeHolder/cart-summary.component"

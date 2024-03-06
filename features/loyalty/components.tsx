@@ -10,13 +10,15 @@ import {
 } from "../../components"
 import dynamic from "next/dynamic"
 import TabLinks from "../../components/TabsList"
-import Modal from "../../components/hoc/tdlModal"
+import Modal from "../../components/hoc/ihcllModal"
 import { RenderShareComponent } from "../../components/share"
 
 export const RenderPlaceHolderComponent = dynamic(() => import("../../components/placeHolder"))
 export const RenderLayoutPlaceholder = dynamic(() => import("../../components/layoutPlaceholder"))
 export const RenderEpicureFaqComponents = dynamic(() => import("./UI/render-epicure-faq-components.component"))
-export const RenderEpicureTermsAndConditionsComponent = dynamic(() => import("./UI/render-epicure-terms-and-conditions.component"))
+export const RenderEpicureTermsAndConditionsComponent = dynamic(
+  () => import("./UI/render-epicure-terms-and-conditions.component"),
+)
 export const RenderEpicurePageComponents = dynamic(() => import("./UI/render-epicure-page-components.component"))
 export const RenderEpicureMembershipCards = dynamic(() => import("./UI/render-epicure-membership-cards.components"))
 export const loyaltyConfirmationCardComponent = dynamic(
@@ -56,8 +58,7 @@ export const cardVariants: ComponentMap = {}
 
 export const placeholderVariants: ComponentMap = {
   "loyalty.placeholders.membership-holder-details": MembershipDetailsComponent,
-  "loyalty.placeholders.price-breakup-details":
-    MembershipProductPriceDetailComponent,
+  "loyalty.placeholders.price-breakup-details": MembershipProductPriceDetailComponent,
 }
 
 export const layoutPlaceholderVariants: ComponentMap = {

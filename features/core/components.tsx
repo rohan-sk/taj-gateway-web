@@ -10,28 +10,20 @@ import {
   RenderCarouselComponent,
 } from "../../components"
 import dynamic from "next/dynamic"
-import Modal from "../../components/hoc/tdlModal"
+import Modal from "../../components/hoc/ihcllModal"
 import { RenderShareComponent } from "../../components/share"
 import DownLoadPdf from "../../components/downloadPdf/DownLoadPdf"
-const RenderAuthenticationComponents = dynamic(
-  () => import("../../components/authentication")
-)
+const RenderAuthenticationComponents = dynamic(() => import("../../components/authentication"))
 const RenderDividerComponent = dynamic(() => import("../../components/Divider"))
 export const Group = dynamic(() => import("../../components/group"))
 const RenderTabsComponent = dynamic(() => import("../../components/tabs"))
 const RenderSiteMapComponent = dynamic(() => import("../../components/sitemap"))
 const RenderFaqsComponent = dynamic(() => import("../../components/faq"))
 const RenderStepperComponent = dynamic(() => import("../../components/stepper"))
-const RenderCustomComponent = dynamic(
-  () => import("../../components/customComponents")
-)
-const InstagramSocialMediaComponent = dynamic(
-  () => import("./ui/instagram-social-media-component")
-)
+const RenderCustomComponent = dynamic(() => import("../../components/customComponents"))
+const InstagramSocialMediaComponent = dynamic(() => import("./ui/instagram-social-media-component"))
 
-const RenderPlaceHolderComponent = dynamic(
-  () => import("../../components/placeHolder")
-)
+const RenderPlaceHolderComponent = dynamic(() => import("../../components/placeHolder"))
 
 export const components: ComponentMap = {
   faqs: RenderFaqsComponent,

@@ -224,7 +224,9 @@ export const HeroBannerButtonStyled = styled(Button)(() => ({
 }))
 
 export const ReserveNowButton = styled(HeroBannerButtonStyled)(() => ({}))
-export const BookNowButton = styled(HeroBannerButtonStyled)(() => ({}))
+export const BookNowButton = styled(HeroBannerButtonStyled)(() => ({
+  borderRadius: "0",
+}))
 
 export const StyledInputBase = styled(InputBase)(() => ({
   flex: 1,

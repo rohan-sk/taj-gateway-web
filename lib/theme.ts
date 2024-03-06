@@ -2,7 +2,7 @@ import React from "react"
 import { createTheme } from "@mui/material"
 import DesktopPxToVw from "../utils/DesktopFontCalc"
 
-const primaryColor = "#546223"
+const primaryColor = "#123C22"
 const shape = { borderRadius: 4 }
 const breakpoints = {
   xs: 0,
@@ -20,7 +20,7 @@ const typography = {
     fontSize: "3.23vw",
     lineHeight: "3.85vw",
     letterSpacing: "-0.05em",
-    color: "#546223",
+    color: "#123C22",
   },
   "heading-m": {
     // 48px
@@ -29,12 +29,12 @@ const typography = {
     fontSize: "2.5vw",
     lineHeight: "2.96vw",
     letterSpacing: "-0.05em",
-    color: "#546223",
+    color: "#123C22",
   },
   "heading-s": {
     // 32px
     fontWeight: 400,
-    color: "#546223",
+    color: "#123C22",
     fontSize: "1.67vw",
     lineHeight: "1.82vw",
     fontFamily: primaryFontFamily,
@@ -43,7 +43,7 @@ const typography = {
   "heading-xs": {
     //24px
     fontWeight: 400,
-    color: "#546223",
+    color: "#123C22",
     fontSize: "1.25vw",
     lineHeight: "1.70vw",
     fontFamily: primaryFontFamily,
@@ -57,7 +57,7 @@ const typography = {
     lineHeight: "1.70vw",
     fontFamily: primaryFontFamily,
     letterSpacing: "-0.05em",
-    color: "#546223",
+    color: "#123C22",
   },
   "heading-xxs": {
     //16px
@@ -65,7 +65,7 @@ const typography = {
     fontSize: "0.83vw",
     lineHeight: "1.25vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#123C22",
   },
 
   "body-xxl": {
@@ -94,7 +94,7 @@ const typography = {
     fontSize: "1.66vw",
     lineHeight: "1.83vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#0E3C20",
   },
 
   "body-l": {
@@ -103,7 +103,7 @@ const typography = {
     fontSize: "1.25vw",
     lineHeight: "1.875vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#0E3C20",
   },
 
   "body-x": {
@@ -112,7 +112,7 @@ const typography = {
     fontSize: DesktopPxToVw(26),
     lineHeight: "1.875vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#0E3C20",
   },
   "body-ml": {
     //22px
@@ -120,7 +120,7 @@ const typography = {
     fontSize: DesktopPxToVw(22),
     lineHeight: "1.56vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#0E3C20",
   },
   "body-m": {
     //20px
@@ -128,7 +128,7 @@ const typography = {
     fontSize: DesktopPxToVw(20),
     lineHeight: "140%",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#0E3C20",
   },
   "body-s": {
     //18px
@@ -136,7 +136,7 @@ const typography = {
     fontSize: "0.938vw",
     lineHeight: "1.30vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#0E3C20",
   },
 
   "body-xs": {
@@ -145,7 +145,7 @@ const typography = {
     fontSize: DesktopPxToVw(16),
     lineHeight: "1.25vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#0E3C20",
   },
 
   "body-xxs": {
@@ -154,7 +154,7 @@ const typography = {
     fontSize: DesktopPxToVw(14),
     lineHeight: "1.25vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#0E3C20",
   },
 
   "body-xxxs": {
@@ -163,16 +163,16 @@ const typography = {
     fontSize: "0.625vw",
     lineHeight: "1.25vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#0E3C20",
   },
 
   "link-m": {
     fontWeight: 400,
-    color: "#AD8B3A",
+    color: "#789038",
     fontSize: "0.9375vw",
     lineHeight: "1.3125vw",
     letterSpacing: "0.1em",
-    fontFamily: "supreme",
+    fontFamily: "Chillax",
     textDecoration: "underline",
     cursor: "pointer",
   },
@@ -185,7 +185,7 @@ const typography = {
     fontSize: "9.68vw",
     letterSpacing: "-0.05em",
     fontFamily: primaryFontFamily,
-    color: "#546223",
+    color: "#123C22",
   },
 
   "m-heading-m": {
@@ -194,14 +194,14 @@ const typography = {
     fontSize: "7.5vw",
     letterSpacing: "-0.05em",
     fontFamily: primaryFontFamily,
-    color: "#546223",
+    color: "#123C22",
   },
 
   "m-heading-s": {
     //32px
     fontWeight: 400,
     fontSize: "5vw",
-    color: "#546223",
+    color: "#123C22",
     fontFamily: primaryFontFamily,
     letterSpacing: "-0.05em",
   },
@@ -209,7 +209,7 @@ const typography = {
   "m-heading-xs": {
     //24px
     fontWeight: 400,
-    color: "#546223",
+    color: "#123C22",
     fontSize: "3.75vw",
     fontFamily: primaryFontFamily,
     letterSpacing: "-0.05em",
@@ -221,7 +221,7 @@ const typography = {
     fontSize: "2.8125vw",
     fontFamily: primaryFontFamily,
     letterSpacing: "-0.05em",
-    color: "#546223",
+    color: "#123C22",
   },
 
   "m-body-xsl": {
@@ -250,14 +250,14 @@ const typography = {
     fontSize: "5.625vw",
     lineHeight: "180%",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#123C22",
   },
   "m-body-ml": {
     //26px
     fontWeight: 400,
     fontSize: "4.0625vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#123C22",
   },
   "m-body-sxl": {
     //22px
@@ -265,7 +265,7 @@ const typography = {
     fontSize: "3.438vw",
     lineHeight: "200%",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#123C22",
   },
   "m-body-l": {
     // 24px
@@ -273,7 +273,7 @@ const typography = {
     fontSize: "3.75vw",
     lineHeight: "140%",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#123C22",
   },
 
   "m-body-sl": {
@@ -282,7 +282,7 @@ const typography = {
     fontSize: "3.438vw",
     lineHeight: "140%",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#123C22",
   },
 
   "m-body-m": {
@@ -291,13 +291,13 @@ const typography = {
     fontSize: "3.125vw",
     fontFamily: "supreme",
     lineHeight: "140%",
-    color: "#546223",
+    color: "#123C22",
   },
 
   "m-body-s": {
     //18px
     fontWeight: 300,
-    color: "#546223",
+    color: "#123C22",
     fontSize: "2.81vw",
     fontFamily: "supreme",
   },
@@ -307,7 +307,7 @@ const typography = {
     fontWeight: 300,
     fontSize: "2.5vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#123C22",
   },
 
   "m-body-xxs": {
@@ -315,26 +315,26 @@ const typography = {
     fontWeight: 300,
     fontSize: "1.875vw",
     fontFamily: "supreme",
-    color: "#546223",
+    color: "#123C22",
   },
 
   "m-text-link": {
     //18px
     fontWeight: 400,
-    color: "#AD8B3A",
+    color: "#789038",
     fontSize: "2.81vw",
     lineHeight: "150%",
-    fontFamily: "supreme",
+    fontFamily: "Chillax",
     textDecoration: "underline",
   },
 
   "m-link-m": {
     fontWeight: 400,
-    color: "#AD8B3A",
+    color: "#789038",
     fontSize: "2.5vw",
     lineHeight: "140%",
     letterSpacing: "0.1em",
-    fontFamily: "supreme",
+    fontFamily: "Chillax",
     textDecoration: "underline",
     cursor: "pointer",
   },
@@ -447,13 +447,14 @@ const components: any = {
         width: "auto",
         fontWeight: "700",
         height: "3.1770vw",
-        borderRadius: "0px",
+        borderRadius: "100em",
         fontSize: "0.9375vw",
         textTransform: "none",
         lineHeight: "1.3125vw",
         minWidth: "auto",
         fontFamily: "supreme",
         padding: "0.93vw 1.87vw",
+
         "@media (max-width: 640px)": {
           height: "9.53vw",
           lineHeight: "140%",
@@ -469,8 +470,8 @@ const components: any = {
       {
         props: { variant: "light-contained" },
         style: {
-          color: "#FFFFFF",
-          backgroundColor: "#AD8B3A",
+          color: "#000000",
+          backgroundColor: "#FCB415",
           " &:hover": {
             backgroundColor: "#AD8B3A",
           },
@@ -535,14 +536,14 @@ export const theme = createTheme({
       main: primaryColor,
     },
     secondary: {
-      main: "#A78538",
+      main: "#FCB415",
     },
     text: {
       primary: primaryColor,
     },
     ihclPalette: {
       hexOne: "#FFFFFF",
-      hexTwo: "#AD8B3A",
+      hexTwo: "#849E3D",
       hexThree: "#13130F",
       hexFour: "#292723",
       hexFive: "#0E3C20",
@@ -557,7 +558,7 @@ export const theme = createTheme({
       hexFourteen: "#626260",
       hexFifteen: "#656263",
       hexSixteen: "#D7D5CF",
-      hexSeventeen: "#546223",
+      hexSeventeen: "#123C22",
       hexEighteen: "#F7F3EB",
       hexNineteen: "#d7d7d6",
       hexTwenty: "#acaba8",

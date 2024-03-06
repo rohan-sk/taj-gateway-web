@@ -354,9 +354,15 @@ const Header = (headerData: any) => {
                     </LoginLinkBox>
                   ))}
                   <Box sx={{ position: "relative" }}>
-                    <Button
-                      sx={{ letterSpacing: "0.1em", width: DesktopPxToVw(220) }}
-                      variant={headerData?.[0]?.primaryAction?.variant}
+                    <Typography
+                      variant="body-ml"
+                      sx={{
+                        letterSpacing: "0.1em",
+                        width: DesktopPxToVw(220),
+                        color: showSecondaryHeaderStyles
+                          ? theme?.palette?.ihclPalette?.hexTwo
+                          : theme?.palette?.ihclPalette?.hexOne,
+                      }}
                       onClick={() => {
                         toggleDropDowns(1), handleStay("book_a_stay_Clicked", dataLayer, headerData, isUserLoggedIn)
                       }}>
@@ -368,7 +374,7 @@ const Header = (headerData: any) => {
                       ) : (
                         headerData?.[0]?.primaryAction?.title
                       )}
-                    </Button>
+                    </Typography>
                     <BookingMenuBox>
                       <Collapse in={showBookingMenu} timeout={300}>
                         <Box>

@@ -90,9 +90,9 @@ export const ResultSectionSeparator = styled(Divider)(() => ({
 
 export const VerticalDivider = styled(Divider)(() => ({
   opacity: "0.4",
-  width: "0.05vw",
-  margin: "0.6vw 1.145vw 0.6vw 1.35vw",
-  background: theme?.palette?.ihclPalette?.hexSeventeen,
+  width: "0.1vw",
+  margin: "0.9vw 1.145vw 0.9vw 1.35vw",
+  background: theme?.palette?.secondary?.main,
 
   "@media (max-width: 640px)": {
     margin: "0vw 3.594vw 0vw 4.219vw",

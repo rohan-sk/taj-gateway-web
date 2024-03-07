@@ -494,8 +494,8 @@ const components: any = {
       {
         props: { variant: "light-outlined" },
         style: {
-          color: "#AD8B3A",
-          border: "1px solid #AD8B3A",
+          color: "#849E3D",
+          border: "1px solid #849E3D",
           "&.Mui-disabled": {
             color: "#8B8A84",
             backgroundColor: "#FFFFFF",

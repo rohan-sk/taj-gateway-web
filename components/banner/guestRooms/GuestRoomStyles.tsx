@@ -11,7 +11,7 @@ export const GuestRoomBox = styled(Paper)(() => ({
   display: "flex",
   height: "3.68vw",
   alignItems: "center",
-  "&.MuiPaper-root": { borderRadius: "0vw" },
+  "&.MuiPaper-root": { borderRadius: "10em" },
 }))
 export const PriceMaskContainer = styled(Paper)(() => ({
   display: "flex",

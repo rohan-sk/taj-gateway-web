@@ -107,7 +107,7 @@ const MultiCardsCarousalWithBgImage = ({ props, padding }: any) => {
 
   const backgroundGradient = props?.aesthetic?.gradient
     ? props?.aesthetic?.gradient
-    : "linear-gradient(180deg, rgba(0, 0, 1, 0) 20%, rgba(0, 0, 0, 0.7) 100%)"
+    : "linear-gradient(180deg, rgba(18, 60, 34, 0.9) 20%, rgba(18, 60, 34, 0) 100%)"
 
   const CarousalBackgroundImage = props?.aesthetic?.isGradientEnabled
     ? props?.aesthetic?.gradient

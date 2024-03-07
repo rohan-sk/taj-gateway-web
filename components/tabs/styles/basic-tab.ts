@@ -8,10 +8,10 @@ export const MainBox = styled(Box)(() => ({
 
 export const StyledTab = styled(Tab)(() => ({
   padding: "0vw",
-  fontWeight: "300",
+  fontWeight: "600",
   lineHeight: "150%",
   fontSize: "0.9375vw",
-  fontFamily: "supreme",
+  fontFamily: "chillax",
   textTransform: "uppercase",
   color: theme?.palette?.text?.primary,
   minWidth: "auto",

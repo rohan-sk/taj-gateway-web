@@ -138,7 +138,7 @@ const CardWithRightAlignedContent = ({
 }: CardWithRightAlignedContentProps) => {
   const hidePrimary = !!hidePrimaryCTA === false
   const modalStore = ModalStore.getInstance()
-  const [more, setMore] = useState<number>(charactersLimit ?? CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT)
+  const more = charactersLimit ?? CONSTANTS?.ITEM_DESCRIPTION_CHARACTER_LIMIT
   const Context = useContext(IHCLContext)
   const theme = useTheme()
   const isMobile = useMobileCheck()
@@ -196,6 +196,7 @@ const CardWithRightAlignedContent = ({
             <CardMedia
               alt={isMobile ? image?.altText || "card-Image" : largeImage?.altText || "card-Image"}
               component="img"
+              loading="eager"
               src={getOptimizeImageUrl(urlFor(cardImage)?.url(), gridSize)}
             />
           </ImageCard>
@@ -217,8 +218,8 @@ const CardWithRightAlignedContent = ({
                     className={"text-theme"}
                     component={headingElementForCard || "h3"}
                     sx={{
-                      color: theme?.palette?.primary?.main,
                       height: maxheight ? maxheight : "auto",
+                      fontWeight: "600",
                     }}>
                     {title}
                   </Typography>

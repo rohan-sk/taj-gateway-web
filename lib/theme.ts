@@ -43,7 +43,7 @@ const typography = {
   "heading-xs": {
     //24px
     fontWeight: 400,
-    color: "#123C22",
+    color: "#0E3C20",
     fontSize: "1.25vw",
     lineHeight: "1.70vw",
     fontFamily: primaryFontFamily,
@@ -209,7 +209,7 @@ const typography = {
   "m-heading-xs": {
     //24px
     fontWeight: 400,
-    color: "#123C22",
+    color: "#0E3C20",
     fontSize: "3.75vw",
     fontFamily: primaryFontFamily,
     letterSpacing: "-0.05em",
@@ -452,7 +452,7 @@ const components: any = {
         textTransform: "none",
         lineHeight: "1.3125vw",
         minWidth: "auto",
-        fontFamily: "supreme",
+        fontFamily: "Chillax",
         padding: "0.93vw 1.87vw",
 
         "@media (max-width: 640px)": {

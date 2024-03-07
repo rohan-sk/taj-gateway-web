@@ -158,7 +158,11 @@ const CardWithRightAlignedContentForMsite = ({
           height={"100%"}
           component="img"
           alt={image?.altText || "card-Image"}
-          sx={{ objectFit: "contain" }}
+          sx={{
+            objectFit: "contain",
+            borderTopLeftRadius: "10em",
+            backgroundColor: "transparent",
+          }}
           src={getOptimizeImageUrl(urlFor(image?.asset?._ref).url(), isMobile ? 1 : gridSize)}
           onLoad={() => setIsImageLoaded(true)}
         />
@@ -198,6 +202,7 @@ const CardWithRightAlignedContentForMsite = ({
             sx={{
               color: textColor ?? theme?.palette?.text?.primary,
               height: maxheight ? maxheight : "auto",
+              fontWeight: "600",
             }}
             component={headingElementForCard || "h3"}>
             {title}
@@ -367,31 +372,6 @@ const CardWithRightAlignedContentForMsite = ({
               justifyContent:
                 isMobile && primaryAction?.title && !secondaryAction?.title && !ctaLabel ? "end" : "space-between",
             }}>
-            {ctaLabel && (
-              <Box
-                sx={{
-                  margin: secondaryAction?.title
-                    ? urlType === PathType?.internal
-                      ? "0vw 0vw 0vw"
-                      : "0vw 0vw 4.6875vw 0vw"
-                    : "0vw",
-                }}>
-                <RenderActionItem
-                  url={url}
-                  title={ctaLabel}
-                  variant={"m-text-link"}
-                  buttonStyles={{ letterSpacing: "0.1em" }}
-                  navigationType={urlType}
-                  isActionButtonType={false}
-                  onClick={() => {
-                    if (roomModalDetails) {
-                      modalStore?.setPropertyData(roomModalDetails)
-                    }
-                    navigate(url, urlType)
-                  }}
-                />
-              </Box>
-            )}
             {((primaryAction?.title && hidePrimary) || secondaryAction?.title) && (
               <BothActionButtonsWrapperBox>
                 {secondaryAction?.title && (
@@ -439,6 +419,31 @@ const CardWithRightAlignedContentForMsite = ({
                   />
                 )}
               </BothActionButtonsWrapperBox>
+            )}
+            {ctaLabel && (
+              <Box
+                sx={{
+                  margin: secondaryAction?.title
+                    ? urlType === PathType?.internal
+                      ? "0vw 0vw 0vw"
+                      : "0vw 0vw 4.6875vw 0vw"
+                    : "0vw",
+                }}>
+                <RenderActionItem
+                  url={url}
+                  title={ctaLabel}
+                  variant={"m-text-link"}
+                  buttonStyles={{ letterSpacing: "0.1em" }}
+                  navigationType={urlType}
+                  isActionButtonType={false}
+                  onClick={() => {
+                    if (roomModalDetails) {
+                      modalStore?.setPropertyData(roomModalDetails)
+                    }
+                    navigate(url, urlType)
+                  }}
+                />
+              </Box>
             )}
           </ActionBoxWrapper>
         )}

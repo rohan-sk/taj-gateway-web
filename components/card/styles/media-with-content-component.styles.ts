@@ -45,6 +45,7 @@ export const ContentTitleTypography = styled(
   $textColor?: any
   component?: React.ElementType
 }>(({ $isMobile, $isHeroTitleFont, $textColor }) => ({
+  paddingTop: DesktopPxToVw(100),
   "&:before": {
     content: '""',
     display: "inline-block",
@@ -151,5 +152,5 @@ export const MainMediaWrapperContentBox = styled(
   display: "flex",
   flexWrap: $isMobile ? "wrap" : "nowrap",
   gap: $isMobile ? MobilePxToVw(55) : DesktopPxToVw(124),
-  alignItems: "center",
+  alignItems: "flex-start",
 }))

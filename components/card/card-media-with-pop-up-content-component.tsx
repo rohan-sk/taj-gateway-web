@@ -459,7 +459,7 @@ const CardMediaWithPopUpContentComponent = ({
             </ButtonsCTAContainer>
           )}
         </ContentWrapperBox>
-        <Box sx={{ width: "100%" }}>
+        <Box sx={{ width: "50%" }}>
           {mediaType === "video" ? (
             <Box
               alt="img"
@@ -487,9 +487,11 @@ const CardMediaWithPopUpContentComponent = ({
             largeImage?.asset?._ref && (
               <Box
                 component="img"
+                className="imgTopRounded"
                 alt={`${largeImage?.altText || "img"}`}
                 sx={{
-                  width: DesktopPxToVw(863),
+                  width: DesktopPxToVw(508),
+                  height: DesktopPxToVw(682),
                 }}
                 src={getOptimizeImageUrl(urlFor(largeImage?.asset?._ref).url(), gridSize)}
               />

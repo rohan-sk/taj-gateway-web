@@ -53,7 +53,10 @@ export const CtaLabelBox = styled(Box)(() => ({
 }))
 
 export const ImageCard = styled(Card)(() => ({
-  "&.MuiCard-root": { borderRadius: "0" },
+  "&.MuiCard-root": {
+    borderTopLeftRadius: "20em",
+    backgroundColor: "transparent",
+  },
 }))
 
 export const DescriptionCard = styled(Typography)(() => ({

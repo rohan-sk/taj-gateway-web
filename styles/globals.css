@@ -1,7 +1,6 @@
 @import "custom-fonts.css";
 
 html,
-
 body {
   padding: 0;
   margin: 0;
@@ -10,8 +9,7 @@ body {
   /* demo purposes only */
 }
 
-
-html{
+html {
   overflow-y: unset !important;
 }
 .map-container {
@@ -92,7 +90,7 @@ iframe[name="HyperServices"] {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 6px;
   width: 5px;
 }
@@ -182,10 +180,10 @@ textarea {
   padding-left: 1em;
   position: relative;
   &:after {
-    content: '';
+    content: "";
     height: 0.32em;
     width: 0.32em;
-    background: #AD8B3A;
+    background: #ad8b3a;
     display: block;
     position: absolute;
     transform: rotate(45deg);
@@ -201,4 +199,10 @@ textarea {
 /* removing recaptcha batch from UI */
 .grecaptcha-badge {
   display: none !important;
+}
+
+.imgTopRounded {
+  border-top-left-radius: 50em;
+  border-top-right-radius: 50em;
+  object-fit: fill;
 }

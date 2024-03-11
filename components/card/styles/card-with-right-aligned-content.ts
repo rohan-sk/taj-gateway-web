@@ -7,9 +7,9 @@ export const ContentBox = styled(
   Box,
   transientProps,
 )<{ $padding: string; $isMobile: boolean }>(({ $padding, $isMobile }) => ({
-  width: $isMobile ? "85%" : "97%",
+  width: $isMobile ? "85%" : "96%",
   background: theme?.palette?.ihclPalette?.hexOne,
-  marginTop: DesktopPxToVw(-20),
+  marginTop: DesktopPxToVw(-80),
   float: "right",
   display: "flex",
   position: "relative",
@@ -17,7 +17,8 @@ export const ContentBox = styled(
   flexDirection: "column",
   boxShadow: "-0.313vw 0.521vw 1.25vw rgba(0, 0, 0, 0.1)",
   padding: $padding ? "1.82vw 1.56vw" : "1.563vw",
-  marginBottom: "1.3vw",
+  borderTopLeftRadius: "4em",
+  borderBottomRightRadius: "4em",
 }))
 
 export const ActionBox = styled(Box)(() => ({
@@ -54,7 +55,8 @@ export const CtaLabelBox = styled(Box)(() => ({
 
 export const ImageCard = styled(Card)(() => ({
   "&.MuiCard-root": {
-    borderTopLeftRadius: "20em",
+    borderTopRightRadius: "4em",
+    borderBottomLeftRadius: "4em",
     backgroundColor: "transparent",
   },
 }))

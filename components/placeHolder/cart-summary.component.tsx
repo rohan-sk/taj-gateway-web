@@ -33,15 +33,15 @@ import {
   FlexBox,
   BoldTypo,
   StyledDivider,
-  GreyDivider,
   StyledLeftArrow,
   PriceDetailsBox,
   TimerWrapper,
-  GrayColorTypo,
   RowGapStack,
   ChangeRoomsTypography,
   SelectedRoomTypography,
   RoomPriceDetailsWrapper,
+  GreenColorTypo,
+  GoldDivider,
 } from "../BookingFlow/styles/cart-summary-card"
 import { RowStack } from "../MyAccount/my-account.styles"
 import { firstAlertData, secondAlertData } from "../../features/booking/JSON_Data/data-for-session-expiry"
@@ -153,12 +153,22 @@ const CartSummaryCard = () => {
   }
 
   return (
-    <Box sx={{ position: "relative", height: "96%" }} aria-label={"CartSummaryCard"}>
-      <MainBox sx={{ m: isNotReservationTab ? "8vw 0" : "0vw" }}>
+    <Box
+      sx={{
+        position: "relative",
+        height: "96%",
+      }}
+      aria-label={"CartSummaryCard"}>
+      <MainBox
+        sx={{
+          m: isNotReservationTab ? "8vw 0" : "0vw",
+          boxShadow: "2px 5px 17px 0px rgba(0, 0, 0, 0.10)",
+          backgroundColor: "#fff",
+        }}>
         <TimerWrapper>{orderId && <TimeCounter count={900} render={orderId} />}</TimerWrapper>
         <Box
           sx={{
-            border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
+            border: `0.052vw solid ${theme?.palette?.secondary?.main}`,
           }}>
           <Typography variant="heading-xs" sx={{ padding: "1.04vw" }}>
             {Cart?.title}
@@ -312,17 +322,18 @@ const CartSummaryCard = () => {
                     </Fragment>
                   ))}
                   {!getRoomName(index + 1) && (
-                    <GrayColorTypo key={`rooms-${selectedRooms?.length}`}>{CONSTANTS?.NOT_SELECTED}</GrayColorTypo>
+                    <GreenColorTypo key={`rooms-${selectedRooms?.length}`}>{CONSTANTS?.NOT_SELECTED}</GreenColorTypo>
                   )}
                 </Accordion>
                 <StyledDivider />
               </Box>
             ))}
           </Box>
-          <PriceDetailsBox sx={{ padding: "0vw 1.04vw 1.04vw 1.04vw", marginTop: "20px" }}>
+          <PriceDetailsBox sx={{ marginTop: "20px" }}>
             <FlexBox
               sx={{
                 margin: showPrice ? `0vw 0vw 0.95vw` : "0vw",
+                padding: "0vw 1.04vw 1.04vw 1.04vw",
               }}>
               <Box
                 onClick={() => selectedRooms?.length > 0 && setShowPrice(!showPrice)}
@@ -377,7 +388,7 @@ const CartSummaryCard = () => {
                 ))}
               </Stack>
             </Collapse>
-            <>
+            <Box sx={{ padding: "0vw 1.04vw 0vw 1.04vw" }}>
               {currencyCode !== "GBP" && (
                 <RowGapStack
                   sx={{
@@ -446,13 +457,13 @@ const CartSummaryCard = () => {
                   ))}
                 </Stack>
               </Collapse>
-            </>
-            <GreyDivider
+            </Box>
+            <GoldDivider
               sx={{
-                margin: `${DesktopPxToVw(40)} 0 ${DesktopPxToVw(15)}`,
+                margin: `${DesktopPxToVw(20)} 0 ${DesktopPxToVw(15)}`,
               }}
             />
-            <Stack direction={"column"} rowGap={DesktopPxToVw(5)}>
+            <Stack direction={"column"} rowGap={DesktopPxToVw(5)} sx={{ padding: "0vw 1.04vw 1.04vw 1.04vw" }}>
               <FlexBox alignItems={"start !important"}>
                 <Stack
                   flexDirection={"row"}

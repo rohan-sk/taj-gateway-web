@@ -127,12 +127,18 @@ const CardWithCta = ({
       {cardImage && (
         <ParentBox aria-label={isMobile ? variant : largeVariant}>
           <CardMediaImageContent onClick={() => handelClick(primaryAction?.url)}>
-            <CardMedia
+            <Box
               alt={cardAltText || "media"}
               component="img"
               loading="lazy"
               width={"100%"}
               height={"100%"}
+              sx={{
+                borderTopRightRadius: "5em",
+                borderBottomLeftRadius: "5em",
+
+                backgroundColor: "transparent",
+              }}
               src={getOptimizeImageUrl(urlFor(cardImage).url(), gridSize)}
             />
           </CardMediaImageContent>
@@ -147,6 +153,7 @@ const CardWithCta = ({
                 sx={{
                   color: theme?.palette?.text?.primary,
                   height: maxheight ? maxheight : "auto",
+                  fontWeight: "600",
                 }}
                 component={headingElementForCard || "h3"}>
                 {title}
@@ -167,13 +174,13 @@ const CardWithCta = ({
               <ActionBox>
                 <Typography
                   variant={isMobile ? "m-text-link" : "link-m"}
-                  sx={{ letterSpacing: "1.8px" }}
+                  sx={{ letterSpacing: "1.8px", color: theme?.palette?.ihclPalette?.hexFive }}
                   onClick={() => {
                     handelClick(primaryAction?.url), handleGcSelectedFunction(primaryAction?.url)
                   }}>
                   {primaryAction?.title}
                 </Typography>
-                <StyledChevronRight />
+                <StyledChevronRight $bgColor={theme?.palette?.ihclPalette?.hexFive} />
               </ActionBox>
             )}
           </ContentBox>

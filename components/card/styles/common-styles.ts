@@ -5,10 +5,13 @@ import { Box, Switch, Typography } from "@mui/material"
 import { transientProps } from "../../../utils/transientProps"
 import DesktopPxToVw, { MobilePxToVw } from "../../../utils/DesktopFontCalc"
 
-export const StyledChevronRight = styled(ChevronRight)(() => ({
+export const StyledChevronRight = styled(
+  ChevronRight,
+  transientProps,
+)<{ $bgColor?: string }>(({ $bgColor }) => ({
   height: "auto",
   width: "1.2vw",
-  color: theme?.palette?.ihclPalette?.hexTwo,
+  color: $bgColor ?? theme?.palette?.ihclPalette?.hexTwo,
   "@media (max-width: 640px)": {
     width: "3vw",
   },

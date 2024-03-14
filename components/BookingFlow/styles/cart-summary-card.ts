@@ -31,14 +31,14 @@ export const BoldTypo = styled(Typography)(() => ({
 }))
 
 export const StyledDivider = styled(Divider)(() => ({
-  background: theme?.palette?.ihclPalette?.hexTwelve,
+  background: theme?.palette?.secondary?.main,
   "@media (max-width: 640px)": {
     height: "0.15625vw",
   },
 }))
 
-export const GreyDivider = styled(Divider)(() => ({
-  background: theme?.palette?.ihclPalette?.hexSixteen,
+export const GoldDivider = styled(Divider)(() => ({
+  background: theme?.palette?.secondary?.main,
   "@media (max-width: 640px)": {
     height: DesktopPxToVw(1),
   },
@@ -91,8 +91,8 @@ export const TaxLabelBox = styled(Box)(() => ({
   alignItems: "center",
 }))
 
-export const GrayColorTypo = styled(Typography)(() => ({
-  color: theme?.palette?.ihclPalette?.hexTwelve,
+export const GreenColorTypo = styled(Typography)(() => ({
+  color: theme?.palette?.ihclPalette?.hexFive,
   paddingTop: DesktopPxToVw(10),
   fontSize: DesktopPxToVw(16),
 }))

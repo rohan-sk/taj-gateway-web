@@ -5,10 +5,10 @@ import DesktopPxToVw from "../../../utils/DesktopFontCalc"
 import { transientProps } from "../../../utils/transientProps"
 import { Divider, Box, Button, Typography, Stack, TextField, CircularProgress } from "@mui/material"
 
-const BlackColor = theme?.palette?.ihclPalette?.hexSeventeen
+const secondaryColor = theme?.palette?.secondary?.main
 
 export const MainBox = styled(Stack)(() => ({
-  color: BlackColor,
+  color: secondaryColor,
   padding: "0.75vw 0vw 0.73vw 0vw ",
 }))
 
@@ -29,14 +29,14 @@ export const BookingMainBox = styled(Box)(() => ({
   alignItems: "center",
   justifyContent: "center",
   padding: "0.573vw 1.4vw 0.67vw 1.145vw",
-  border: `0.05vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
+  border: `0.1px solid ${theme?.palette?.secondary?.main}`,
 }))
 
 export const StyledVerticalDivider = styled(Divider)(() => ({
   opacity: "0.6",
-  width: "0.05vw",
-  color: BlackColor,
-  background: BlackColor,
+  width: "0.1vw",
+  color: secondaryColor,
+  background: secondaryColor,
 }))
 
 export const StyledHorizontalDivider = styled(Divider)(() => ({
@@ -172,6 +172,7 @@ export const ProfileBox = styled(Box)(() => ({
 export const BookingMainSearchButton = styled(Button)(() => ({
   letterSpacing: "1.8px",
   maxWidth: DesktopPxToVw(164),
+  borderRadius: "0 !important",
 }))
 
 export const SpecialCodeWrapperTypography = styled(Typography)(() => ({

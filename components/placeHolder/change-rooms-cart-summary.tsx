@@ -140,7 +140,7 @@ const CartSummaryCard = () => {
         style={{ width: sidebarWidth }}
         sx={{
           m: isNotConfirm ? "8vw 0" : "0vw",
-          border: `0.052vw solid ${theme?.palette?.ihclPalette?.hexTwo}`,
+          border: `0.052vw solid ${theme?.palette?.secondary?.main}`,
         }}>
         <Typography variant={isMobile ? "m-heading-xs" : "heading-xs"} sx={{ padding: "1.04vw" }}>
           {Cart?.title}

@@ -46,7 +46,7 @@ export default function GatewayNavbar() {
       setMobileOpen(() => false)
     }
     if (openMore) {
-      setOpenMore(false)
+      setOpenMore(() => false)
     }
     if (window.scrollY >= 80) {
       setColorchange(true)
@@ -101,127 +101,133 @@ export default function GatewayNavbar() {
     </Box>
   )
   return (
-    <Box sx={{ display: "flex", position: "relative" }}>
-      <CssBaseline />
-      <GateWayAppBar $colorChange={colorChange} elevation={isMobile ? 4 : 0}>
-        <Grid
-          container
-          sx={{ alignItems: "center", justifyContent: isMobile ? "space-between" : "center", padding: "0px 80px" }}>
-          <Grid item lg={3}>
-            <Box>
-              {isMobile ? (
-                <GateWayMobileLogoSecondary sx={{ width: "15.625vw" }} />
-              ) : colorChange ? (
-                <GateWayLargeLogoSecondary />
-              ) : (
-                <GateWayLargeLogo />
-              )}
-            </Box>
-          </Grid>
-
-          {!isMobile && (
-            <Grid item lg={6}>
-              <ClickAwayListener onClickAway={() => setOpenMore(false)}>
-                <>
-                  {" "}
-                  <Box sx={{ display: "flex", gap: "30px" }}>
-                    {navItems.map((item) => (
-                      <Typography
-                        variant="heading-xs"
-                        sx={{
-                          textTransform: "uppercase",
-                          fontWeight: "600",
-                          color: colorChange ? theme?.palette?.ihclPalette?.hexFive : colorWhite,
-                          cursor: "pointer",
-                        }}
-                        key={item}>
-                        {item}
-                      </Typography>
-                    ))}
-                    <Box sx={{ display: "inline-flex", cursor: "pointer" }} onClick={() => setOpenMore(!openMore)}>
-                      <Typography
-                        variant="heading-xs"
-                        sx={{
-                          textTransform: "uppercase",
-                          fontWeight: "600",
-                          color: colorChange ? theme?.palette?.ihclPalette?.hexFive : colorWhite,
-                        }}>
-                        More
-                      </Typography>
-                      <KeyboardArrowDown
-                        sx={{
-                          transform: openMore ? "rotate(180deg)" : "rotate(0deg)",
-                          transitionDuration: "0.5s",
-                          transitionProperty: "transform",
-                          width: "auto",
-
-                          height: "1.25vw",
-                          color: colorChange
-                            ? theme?.palette?.ihclPalette?.hexTwo
-                            : theme?.palette?.ihclPalette?.hexOne,
-                        }}
-                      />
-                    </Box>
-                  </Box>
-                  <NavBarMoreContainer $top={110} $height={"16.6vw"} $width={"400px"} $right={500}>
-                    <Collapse in={openMore} timeout={300}>
-                      {MoreBar}
-                    </Collapse>
-                  </NavBarMoreContainer>
-                </>
-              </ClickAwayListener>
+    <ClickAwayListener
+      onClickAway={function (event: MouseEvent | TouchEvent): void {
+        setMobileOpen(() => false)
+        setOpenMore(() => false)
+      }}>
+      <Box sx={{ display: "flex", position: "relative" }}>
+        <CssBaseline />
+        <GateWayAppBar $colorChange={colorChange} elevation={isMobile ? 4 : 0}>
+          <Grid
+            container
+            sx={{ alignItems: "center", justifyContent: isMobile ? "space-between" : "center", padding: "0px 80px" }}>
+            <Grid item lg={3}>
+              <Box>
+                {isMobile ? (
+                  <GateWayMobileLogoSecondary sx={{ width: "15.625vw" }} />
+                ) : colorChange ? (
+                  <GateWayLargeLogoSecondary />
+                ) : (
+                  <GateWayLargeLogo />
+                )}
+              </Box>
             </Grid>
-          )}
-          <Grid item lg={3}>
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "30px" }}>
-              <Typography
-                variant={isMobile ? "m-heading-xs" : "heading-xs"}
-                sx={{
-                  textTransform: "uppercase",
-                  fontWeight: "600",
-                  color: isMobile ? colorWhite : colorChange ? theme?.palette?.ihclPalette?.hexFive : colorWhite,
-                }}>
-                {CONSTANTS?.LOGIN}
-              </Typography>
-              {isMobile && (
-                <Box sx={{ cursor: "pointer" }} onClick={handleDrawerToggle}>
-                  {mobileOpen ? <CloseIconWhite /> : <HamburgerIcon />}
-                </Box>
-              )}
-              {!isMobile && (
-                <Box sx={{ position: "relative" }}>
-                  <Button
-                    variant="light-contained"
-                    sx={{ width: "200px" }}
-                    onClick={() => {
-                      setShowBookingMenu((prev: boolean) => !prev)
-                    }}>
-                    {showBookingMenu ? CONSTANTS?.CLOSE : "BOOK A STAY"}
-                  </Button>
-                  <BookingMenuBox>
-                    <Collapse in={showBookingMenu} timeout={300}>
-                      <Box>
-                        <BookingMenu
-                          setShowBookingMenu={setShowBookingMenu}
-                          showBookingMenu={showBookingMenu}
-                          // headerData={headerData}
+
+            {!isMobile && (
+              <Grid item lg={6}>
+                <ClickAwayListener onClickAway={() => setOpenMore(false)}>
+                  <>
+                    {" "}
+                    <Box sx={{ display: "flex", gap: "30px" }}>
+                      {navItems.map((item) => (
+                        <Typography
+                          variant="heading-xs"
+                          sx={{
+                            textTransform: "uppercase",
+                            fontWeight: "600",
+                            color: colorChange ? theme?.palette?.ihclPalette?.hexFive : colorWhite,
+                            cursor: "pointer",
+                          }}
+                          key={item}>
+                          {item}
+                        </Typography>
+                      ))}
+                      <Box sx={{ display: "inline-flex", cursor: "pointer" }} onClick={() => setOpenMore(!openMore)}>
+                        <Typography
+                          variant="heading-xs"
+                          sx={{
+                            textTransform: "uppercase",
+                            fontWeight: "600",
+                            color: colorChange ? theme?.palette?.ihclPalette?.hexFive : colorWhite,
+                          }}>
+                          More
+                        </Typography>
+                        <KeyboardArrowDown
+                          sx={{
+                            transform: openMore ? "rotate(180deg)" : "rotate(0deg)",
+                            transitionDuration: "0.5s",
+                            transitionProperty: "transform",
+                            width: "auto",
+
+                            height: "1.25vw",
+                            color: colorChange
+                              ? theme?.palette?.ihclPalette?.hexTwo
+                              : theme?.palette?.ihclPalette?.hexOne,
+                          }}
                         />
                       </Box>
-                    </Collapse>
-                  </BookingMenuBox>
-                </Box>
-              )}
-            </Box>
+                    </Box>
+                    <NavBarMoreContainer $top={110} $height={"16.6vw"} $width={"400px"} $right={500}>
+                      <Collapse in={openMore} timeout={300}>
+                        {MoreBar}
+                      </Collapse>
+                    </NavBarMoreContainer>
+                  </>
+                </ClickAwayListener>
+              </Grid>
+            )}
+            <Grid item lg={3}>
+              <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "30px" }}>
+                <Typography
+                  variant={isMobile ? "m-heading-xs" : "heading-xs"}
+                  sx={{
+                    textTransform: "uppercase",
+                    fontWeight: "600",
+                    color: isMobile ? colorWhite : colorChange ? theme?.palette?.ihclPalette?.hexFive : colorWhite,
+                  }}>
+                  {CONSTANTS?.LOGIN}
+                </Typography>
+                {isMobile && (
+                  <Box sx={{ cursor: "pointer" }} onClick={handleDrawerToggle}>
+                    {mobileOpen ? <CloseIconWhite /> : <HamburgerIcon />}
+                  </Box>
+                )}
+                {!isMobile && (
+                  <Box sx={{ position: "relative" }}>
+                    <Button
+                      variant="light-contained"
+                      sx={{ width: "200px" }}
+                      onClick={() => {
+                        setShowBookingMenu((prev: boolean) => !prev)
+                      }}>
+                      {showBookingMenu ? CONSTANTS?.CLOSE : "BOOK A STAY"}
+                    </Button>
+                    <BookingMenuBox>
+                      <Collapse in={showBookingMenu} timeout={300}>
+                        <Box>
+                          <BookingMenu
+                            setShowBookingMenu={setShowBookingMenu}
+                            showBookingMenu={showBookingMenu}
+                            // headerData={headerData}
+                          />
+                        </Box>
+                      </Collapse>
+                    </BookingMenuBox>
+                  </Box>
+                )}
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
-      </GateWayAppBar>
-      {isMobile && (
-        <NavBarMoreContainer $top={100} $height={"54.375vw"} $width={"50%"} $right={0}>
-          <Collapse in={mobileOpen} timeout={300}>
-            {drawer}
-          </Collapse>
-        </NavBarMoreContainer>
-      )}
-    </Box>
+        </GateWayAppBar>
+        {isMobile && (
+          <NavBarMoreContainer $top={100} $height={"54.375vw"} $width={"50%"} $right={0}>
+            <Collapse in={mobileOpen} timeout={300}>
+              {drawer}
+            </Collapse>
+          </NavBarMoreContainer>
+        )}
+      </Box>
+    </ClickAwayListener>
   )
 }

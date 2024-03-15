@@ -14,10 +14,28 @@ export const AccountCalenderIcon = ({ sx }: any) => {
   return <Box component={"img"} loading="lazy" src={ICONS?.ACCOUNT_CALENDER_ICON} alt={`CalendarIcon`} sx={{ ...sx }} />
 }
 
+export const GateWayLargeLogo = ({ sx, ...rest }: any) => {
+  return (
+    <Box loading="lazy" component={"img"} src={ICONS?.TAJ_GATEWAY_LOGO} alt={`desktop logo`} sx={{ ...sx }} {...rest} />
+  )
+}
+
+export const GateWayLargeLogoSecondary = ({ sx, ...rest }: any) => {
+  return (
+    <Box
+      loading="lazy"
+      component={"img"}
+      src={ICONS?.TAJ_GATEWAY_LOGO_SECONDARY}
+      alt={`desktop logo`}
+      sx={{ ...sx }}
+      {...rest}
+    />
+  )
+}
 export const CloseGoldIcon = ({ sx, ...rest }: any) => {
   return (
     <Box
-    loading="lazy"
+      loading="lazy"
       component={"img"}
       src={ICONS?.CLOSE_GOLD_ICON}
       alt={`CalendarIcon`}
@@ -56,10 +74,28 @@ export const GoldColorNextIcon = () => {
 }
 
 export const HamburgerIcon = () => {
-  return <Box component={"img"} loading="lazy" src={ICONS?.HAMBURGER_ICON} alt={"menu-icon"} width={"100%"} height={"100%"} />
+  return (
+    <Box
+      component={"img"}
+      loading="lazy"
+      src={ICONS?.HAMBURGER_ICON}
+      alt={"menu-icon"}
+      width={"100%"}
+      height={"100%"}
+    />
+  )
 }
 export const HamburgerGoldIcon = () => {
-  return <Box component={"img"} loading="lazy" src={ICONS?.HAMBURGER_GOLD_ICON} alt={"menu-icon"} width={"100%"} height={"100%"} />
+  return (
+    <Box
+      component={"img"}
+      loading="lazy"
+      src={ICONS?.HAMBURGER_GOLD_ICON}
+      alt={"menu-icon"}
+      width={"100%"}
+      height={"100%"}
+    />
+  )
 }
 export const ButtonTickIcon = ({ sx }: any) => {
   return <Box component={"img"} loading="lazy" src={ICONS?.BUTTON_TICK_ICON} alt={`tick-icon`} sx={{ ...sx }} />
@@ -89,7 +125,17 @@ export const CommonSearchIcon = ({ sx }: any) => {
 }
 
 export const ErrorIcon = ({ sx }: any) => {
-  return <Box component={"img"} loading="lazy" src={Error_icon} alt={`error-icon`} width={"100%"} height={"100%"} sx={{ ...sx }} />
+  return (
+    <Box
+      component={"img"}
+      loading="lazy"
+      src={Error_icon}
+      alt={`error-icon`}
+      width={"100%"}
+      height={"100%"}
+      sx={{ ...sx }}
+    />
+  )
 }
 export const UploadCloudIcon = (rest: any) => {
   return <Box {...rest} component={"img"} loading="lazy" src={ICONS?.UPLOAD_CLOUD_ICON} alt={`CalendarIcon`} />

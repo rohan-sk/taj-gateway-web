@@ -1,5 +1,5 @@
 export const CONSTANTS = {
-  LOGIN: "login / join",
+  LOGIN: "login/join",
   CLOSE: "CLOSE",
   VIEW_MORE: "view more",
   VIEW: "VIEW",
@@ -403,7 +403,8 @@ export const ICONS = {
   WARNING_ICON: "/en-in/warning-logo.svg",
   COMMON_ICON: "/en-in/common-search.png",
   Star_ICON: "/en-in/Star.png",
-  TAJ_GOLD_LOGO: "/en-in/taj-gold-logo.svg",
+  TAJ_GATEWAY_LOGO: "/en-in/gateway-logo-large.svg",
+  TAJ_GATEWAY_LOGO_SECONDARY: "/en-in/gateway-logo-large-secondary.svg",
   SEARCH_FIELD_CLOSE_ICON: "/en-in/close-icon.svg",
   GUEST_COUNT_ICON: "/en-in/members.svg",
   BLACK_MARKER_MAP_ICON: `https://cdn.sanity.io/images/${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}/${process.env.NEXT_PUBLIC_SANITY_DATASET}/94a5bd1fe6e44da40c6eb6d6ac52cf1c843cc193-17x24.svg`,

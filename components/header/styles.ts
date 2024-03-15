@@ -71,6 +71,7 @@ export const ButtonBox = styled(
 }))
 
 export const BookingMenuBox = styled(Box)(() => ({
+  top: 75,
   right: "0",
   position: "absolute",
   width: "max-content",

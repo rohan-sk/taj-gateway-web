@@ -25,6 +25,7 @@ import GCStore from "../features/gc/store/pageStore/gc.store"
 import BlogStore from "../features/blog/store/blog.store"
 import AnalyticsScrollComponent from "../utils/analytics/AnalyticsScrollComponent"
 import { useMediaQuery } from "@mui/material"
+import GatewayNavbar from "../components/gatewayNavbar/gateWayNavbar"
 
 const RenderBottomNavItems = dynamic(() => import("../components/BottomNav"))
 
@@ -213,7 +214,8 @@ const PageLayoutComponent = ({
       <PageContext.Provider value={pageContext}>
         <Modal />
         <AnalyticsScrollComponent title={pageBody?.title || ""} variant={pageBody?.variant || ""} isMobile={isMobile} />
-        <RenderHeaderComponent headerData={headingData} />
+        <GatewayNavbar        //  headerData={headingData}
+        />
         <PageComponent {...pageBody} viewEventCallback={handleOnView} isMobile={isMobile} />
         <RenderFooterComponent footerData={footer} showBottomNavigation={pageBody?.showBottomNavigation} />
         {isMobile && pageBody?.showBottomNavigation === true && <RenderBottomNavItems props={pageBody} />}

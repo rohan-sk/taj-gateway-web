@@ -47,7 +47,6 @@ const typography = {
     fontSize: "1.25vw",
     lineHeight: "1.70vw",
     fontFamily: primaryFontFamily,
-    letterSpacing: "-0.05em",
     //Mobile: fontSize: "3.75vw", lineHeight: "5.25vw",
   },
   "heading-xm": {

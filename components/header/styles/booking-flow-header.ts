@@ -13,7 +13,7 @@ export const MainBox = styled(Stack)(() => ({
 }))
 
 export const FieldsContainer = styled(Box)(() => ({
-  padding: `${DesktopPxToVw(15)} 0 ${DesktopPxToVw(14)} 0`,
+  padding: `${DesktopPxToVw(40)} 0 ${DesktopPxToVw(40)} 0`,
 }))
 export const LogoBox = styled(Box)(() => ({
   width: DesktopPxToVw(67),
@@ -29,7 +29,6 @@ export const BookingMainBox = styled(Box)(() => ({
   alignItems: "center",
   justifyContent: "center",
   padding: "0.573vw 1.4vw 0.67vw 1.145vw",
-  border: `0.1px solid ${theme?.palette?.secondary?.main}`,
 }))
 
 export const StyledVerticalDivider = styled(Divider)(() => ({
@@ -172,7 +171,6 @@ export const ProfileBox = styled(Box)(() => ({
 export const BookingMainSearchButton = styled(Button)(() => ({
   letterSpacing: "1.8px",
   maxWidth: DesktopPxToVw(164),
-  borderRadius: "0 !important",
 }))
 
 export const SpecialCodeWrapperTypography = styled(Typography)(() => ({

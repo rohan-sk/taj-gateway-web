@@ -160,7 +160,8 @@ const CardWithRightAlignedContentForMsite = ({
           alt={image?.altText || "card-Image"}
           sx={{
             objectFit: "contain",
-            borderTopLeftRadius: "10em",
+            borderTopRightRadius: "4em",
+            borderBottomLeftRadius: "4em",
             backgroundColor: "transparent",
           }}
           src={getOptimizeImageUrl(urlFor(image?.asset?._ref).url(), isMobile ? 1 : gridSize)}

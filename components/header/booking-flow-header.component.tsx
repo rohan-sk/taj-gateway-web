@@ -807,7 +807,12 @@ const BookingFlowHeader = (props: any) => {
               </LogoBox>
             </Grid>
             <Grid item {...gridBreakPointsGenerator(isMobile, 9)}>
-              <Stack flexDirection="row">
+              <Stack
+                flexDirection="row"
+                sx={{
+                  backgroundColor: "#fff",
+                  borderRadius: "2em",
+                }}>
                 <BookingMainBox
                   sx={
                     disableBookingMask

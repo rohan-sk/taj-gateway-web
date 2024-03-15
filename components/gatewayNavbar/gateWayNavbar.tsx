@@ -163,7 +163,7 @@ export default function GatewayNavbar() {
                       />
                     </Box>
                   </Box>
-                  <NavBarMoreContainer $top={110} $height={"54.375vw"} $width={"400px"} $right={500}>
+                  <NavBarMoreContainer $top={110} $height={"16.6vw"} $width={"400px"} $right={500}>
                     <Collapse in={openMore} timeout={300}>
                       {MoreBar}
                     </Collapse>
@@ -215,11 +215,13 @@ export default function GatewayNavbar() {
           </Grid>
         </Grid>
       </GateWayAppBar>
-      <NavBarMoreContainer $top={100} $height={"54.375vw"} $width={"50%"} $right={0}>
-        <Collapse in={mobileOpen} timeout={300}>
-          {drawer}
-        </Collapse>
-      </NavBarMoreContainer>
+      {isMobile && (
+        <NavBarMoreContainer $top={100} $height={"54.375vw"} $width={"50%"} $right={0}>
+          <Collapse in={mobileOpen} timeout={300}>
+            {drawer}
+          </Collapse>
+        </NavBarMoreContainer>
+      )}
     </Box>
   )
 }

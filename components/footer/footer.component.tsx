@@ -67,6 +67,7 @@ import { generateCodeVerifier } from "../../utils/sso/generate-code-verifier"
 import { generateCodeChallenge } from "../../utils/sso/generate-code-challenge"
 import { IHCLContext } from "../../PresentationalComponents/lib/prepare-ihcl-context"
 import { handleFooter } from "../../utils/analytics/events/NonEcommerce/footer-event"
+import { data } from "jquery"
 
 const BackToTopButton = dynamic(() => import("./back-to-top.component"))
 const FooterAccordion = dynamic(() => import("./footer-accordion.component"))
@@ -205,9 +206,6 @@ const Footer = (props: FooterProps) => {
                       borderBottomStyle: "solid!important",
                     },
                   },
-                  "& .Mui-disabled": {
-                    WebkitTextFillColor: `${theme?.palette?.ihclPalette?.hexOne}!important`,
-                  },
                 }}>
                 <FooterTextField
                   variant="standard"
@@ -219,7 +217,7 @@ const Footer = (props: FooterProps) => {
                   onChange={handleChangeForm}
                   name={senderEmail}
                   inputProps={{
-                    style: { color: theme?.palette?.ihclPalette?.hexOne },
+                    style: { color: theme?.palette?.ihclPalette?.hexTwo },
                   }}
                 />
 
@@ -231,6 +229,7 @@ const Footer = (props: FooterProps) => {
                     navigationType={"external"}
                     title={ctaLabel?.[0]?.title}
                     buttonStyles={{
+                      borderRadius: "0em",
                       letterSpacing: "1.8px",
                       color: theme?.palette?.text?.primary,
                       minWidth: isMobile ? MobilePxToVw(200) : DesktopPxToVw(193),
@@ -406,7 +405,7 @@ const Footer = (props: FooterProps) => {
                 <Grid key={index} item xs={5.6} sm={5.5} md={5.5} lg={5.5}>
                   <QuickLinksTypo
                     variant={isMobile ? "m-body-l" : "body-m"}
-                    sx={{ lineHeight: isMobile ? "140%" : "200% !important" }}
+                    sx={{ lineHeight: isMobile ? "140%" : "200% !important", fontFamily: "Supreme" }}
                     onClick={() => {
                       navigate(item?.url),
                         handleFooter(
@@ -484,8 +483,9 @@ const Footer = (props: FooterProps) => {
                     <Typography
                       variant={"heading-xxs"}
                       sx={{
-                        opacity: "0.5",
-                        color: whiteColor,
+                        fontFamily: theme?.palette?.font?.primaryFontFamily,
+                        fontWeight: "600",
+                        color: theme?.palette?.ihclPalette?.hexThirtyFive,
                       }}>
                       {icons?.[0]?.title}
                     </Typography>
@@ -544,8 +544,9 @@ const Footer = (props: FooterProps) => {
               <Typography
                 variant={isMobile ? "m-heading-xs" : "heading-xs"}
                 sx={{
-                  color: theme?.palette?.ihclPalette?.hexOne,
                   mb: isMobile ? MobilePxToVw(10) : DesktopPxToVw(10),
+                  fontWeight: "600",
+                  fontSize: "1.042vw",
                 }}>
                 {brand?.title}
               </Typography>
@@ -591,7 +592,7 @@ const Footer = (props: FooterProps) => {
           <BrandImagesBottomDivider />
           <ColumnReverseBox>
             <Box sx={{ width: "75%" }} mb={isMobile && showBottomNavigation ? MobilePxToVw(78) : 0}>
-              <Typography variant={isMobile ? "m-body-xs" : "body-xs"} color={whiteColor}>
+              <Typography variant={isMobile ? "m-body-xs" : "body-xs"}>
                 {`© ${new Date()?.getFullYear()} ${legalInformation?.[0]?.title}`}
               </Typography>
             </Box>

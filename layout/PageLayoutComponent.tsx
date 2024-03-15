@@ -95,7 +95,6 @@ const PageLayoutComponent = ({
     () => preparePageContext(pageBody.connectedStores),
     [pageBody],
   )
-  console.log("pageBody: ", pageBody)
 
   const isMobile = useMediaQuery("(max-width:641px)")
 

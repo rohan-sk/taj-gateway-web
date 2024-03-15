@@ -386,6 +386,8 @@ export const CONFIRM_DELETE_ADDRESS_TEXT = "Are you sure to delete this address?
 
 // Icons
 export const ICONS = {
+  GATEWAY_LOGO_ICON: "/en-in/gateway_ui_header_logo.svg",
+  GATEWAY_CROSS_ICON_GREEN: "/en-in/gateway_cross_icon_green.svg",
   CHECK_MARK: "/en-in/CheckMark.png",
   HAMBURGER_ICON: "/en-in/hamburger.png",
   HAMBURGER_GOLD_ICON: "/en-in/hamburger_gold.svg",

@@ -243,6 +243,7 @@ const renderModalChildren = (props: any) => {
           tajLogoTop={"0.85vw"}
           showLogo={true}
           overflowData={"scroll"}
+          webCloseIcon={ICONS?.GATEWAY_CROSS_ICON_GREEN}
           isDesktopInnerContentCenterAligned={false}
           ModalCloseButtonStyles={{
             right: "2.60vw",

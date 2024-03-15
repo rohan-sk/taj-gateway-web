@@ -575,6 +575,7 @@ export const theme = createTheme({
       hexThirtyTwo: "#982929",
       hexThirtyThree: "#7F7F7F",
       hexThirtyFour: "#0E3C20",
+      hexThirtyFive: "#000000",
 
       linearGradientOne: `linear-gradient(180deg, rgba(81, 81, 81, 0) 0%, rgba(0, 0, 0, 0.9) 100%)`,
       linearGradientTwo: `linear-gradient(180deg, rgba(31, 31, 30, 0) 0%, #1A1919 65.62%)`,
@@ -702,6 +703,7 @@ declare module "@mui/material/styles" {
       hexThirtyTwo: React.CSSProperties["color"]
       hexThirtyThree: React.CSSProperties["color"]
       hexThirtyFour: React.CSSProperties["color"]
+      hexThirtyFive: React.CSSProperties["color"]
     }
     font: {
       primaryFontFamily: React.CSSProperties["fontFamily"]

@@ -6,7 +6,7 @@ const whiteColor = theme?.palette?.ihclPalette?.hexOne
 
 export const MainBox = styled(Box)(() => ({
   position: "relative",
-  background: theme?.palette?.ihclPalette?.hexFive,
+  background: theme?.palette?.secondary?.main,
   borderTop: `0.052vw solid ${theme?.palette?.ihclPalette?.hexFourteen}`,
 
   "@media (max-width: 640px)": {
@@ -59,14 +59,14 @@ export const FlexBox = styled(Box)(() => ({
 }))
 
 export const FooterTagLine = styled(Typography)(() => ({
-  opacity: "0.5",
-  color: whiteColor,
+  // opacity: "0.5",
+  fontWeight: 600,
+  fontFamily: theme?.palette?.font?.primaryFontFamily,
   letterSpacing: "0.05em",
 }))
 
 export const CustomerSupportTypo = styled(Typography)(() => ({
   opacity: "0.5",
-  color: whiteColor,
 }))
 
 export const SupportDetailsBox = styled(Box)(() => ({
@@ -81,7 +81,6 @@ export const SupportDetailsBox = styled(Box)(() => ({
 }))
 
 export const CustomerNumberTypo = styled(Typography)(() => ({
-  color: whiteColor,
   lineHeight: "150%",
   whiteSpace: "nowrap",
   "@media (max-width: 640px)": {
@@ -90,7 +89,6 @@ export const CustomerNumberTypo = styled(Typography)(() => ({
 }))
 
 export const TollFreeTypo = styled(Typography)(() => ({
-  color: whiteColor,
   lineHeight: "140%",
 
   "@media (max-width: 640px)": {
@@ -110,7 +108,7 @@ export const StyledButton = styled(Button)(() => ({
 
 export const SupportMailTypo = styled(Typography)(() => ({
   padding: "0vw",
-  color: whiteColor,
+
   fontWeight: 300,
   lineHeight: "150%",
 }))
@@ -125,13 +123,12 @@ export const SocialIconsBox = styled(Box)(() => ({
 
 export const QuickLinksTitleTypo = styled(Typography)(() => ({
   opacity: "0.5",
-  color: whiteColor,
+
   lineHeight: "150%",
   letterSpacing: "0.05em",
 }))
 
 export const QuickLinksTypo = styled(Typography)(() => ({
-  color: whiteColor,
   cursor: "pointer",
   display: "inline",
   lineHeight: "150%",
@@ -156,11 +153,10 @@ export const FooterTextField = styled(TextField)(() => ({
     },
   },
   "& .MuiInputLabel-root": {
-    opacity: 0.5,
-    fontWeight: 300,
-    color: whiteColor,
+    fontWeight: 500,
+
     lineHeight: "150%",
-    fontSize: "1.25vw",
+    fontSize: "1.42vw",
     fontStyle: "normal",
     marginTop: "-0.677vw",
     letterSpacing: "-0.03em",
@@ -172,15 +168,10 @@ export const FooterTextField = styled(TextField)(() => ({
     },
   },
   "& label.Mui-focused": {
-    color: theme?.palette?.ihclPalette?.hexSix,
+    color: theme?.palette?.ihclPalette?.hexThirtyFive,
   },
   "& .MuiInput-underline:before": {
-    borderBottomColor: theme?.palette?.ihclPalette?.hexSix,
-  },
-  "& .MuiOutlinedInput-root": {
-    "& fieldset": {
-      borderColor: whiteColor,
-    },
+    borderBottomColor: theme?.palette?.ihclPalette?.hexThirtyFive,
   },
 
   "@media (max-width: 640px)": {
@@ -207,7 +198,6 @@ export const QrCodeImageBox = styled(Box)(() => ({
 
 export const QrCodeTitleTypo = styled(Typography)(() => ({
   opacity: "0.5",
-  color: whiteColor,
   fontSize: "0.831vw",
   letterSpacing: "-0.029em",
 }))
@@ -249,10 +239,9 @@ export const BrandImagesGrid = styled(Grid)(() => ({
 
 export const BrandImagesTopDivider = styled(Divider)(() => ({
   width: "100%",
-  opacity: "0.4",
   height: "0.5px",
   margin: "1.979vw 0vw 2.396vw 0vw",
-  background: theme?.palette?.ihclPalette?.hexSeven,
+  background: theme?.palette?.ihclPalette?.hexThirtyFive,
 
   "@media (max-width: 640px)": {
     height: "0.156vw",
@@ -263,9 +252,8 @@ export const BrandImagesTopDivider = styled(Divider)(() => ({
 export const BrandImagesBottomDivider = styled(Divider)(() => ({
   height: "1%",
   width: "100%",
-  opacity: "0.4",
   margin: "1.979vw 0vw 2.396vw 0vw",
-  background: theme?.palette?.ihclPalette?.hexSeven,
+  background: theme?.palette?.ihclPalette?.hexThirtyFive,
 
   "@media (max-width: 640px)": {
     height: "0.156vw",
@@ -304,7 +292,6 @@ export const CopyRightLinksBox = styled(Box)(() => ({
 }))
 
 export const CopyRightLinksTypo = styled(Typography)(() => ({
-  color: whiteColor,
   cursor: "pointer",
   lineHeight: "150%",
   whiteSpace: "nowrap",
@@ -314,7 +301,7 @@ export const CopyRightLinksDivider = styled(Divider)(() => ({
   opacity: "0.2",
   height: DesktopPxToVw(24),
   margin: `0 ${DesktopPxToVw(20)}`,
-  backgroundColor: whiteColor,
+  backgroundColor: theme?.palette?.ihclPalette?.hexFive,
 
   "@media (max-width: 640px)": {
     height: MobilePxToVw(24),

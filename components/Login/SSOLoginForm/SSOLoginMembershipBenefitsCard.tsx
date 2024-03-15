@@ -102,6 +102,8 @@ const SSOLoginMembershipBenefitsCard = ({ props }: any) => {
                     component={"img"}
                     alt={`Membership-card-img`}
                     width="100%"
+                    height="10.42vw"
+                    sx={{ borderTopLeftRadius: "50em", borderTopRightRadius: "50em" }}
                     src={urlFor(membershipItems?.largeImage?.asset?._ref)?.url()}
                   />
                   <MembershipBenefitsCardTitle>{membershipItems?.title}</MembershipBenefitsCardTitle>

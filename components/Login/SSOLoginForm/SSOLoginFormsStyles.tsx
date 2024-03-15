@@ -160,7 +160,7 @@ export const MembershipThreeImagesWrapperBox = styled(Box)(() => ({
   width: "100%",
   display: "flex",
   gap: DesktopPxToVw(60),
-  margin: `${DesktopPxToVw(60)} 0vw ${DesktopPxToVw(80)} 0vw`,
+  margin: `7.81vw 0vw 7.44vw 0vw`,
   justifyContent: "space-around",
   alignItems: "flex-end",
   "@media (max-width: 640px)": {

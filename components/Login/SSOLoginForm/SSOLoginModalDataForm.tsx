@@ -8,6 +8,7 @@ import { urlFor } from "../../../lib-sanity"
 import { observer } from "mobx-react-lite"
 import { PathType } from "../../types"
 import DesktopPxToVw from "../../../utils/DesktopFontCalc"
+import { ICONS } from "../../constants"
 
 const SSOLoginModalDataForm = ({ props }: any) => {
   const isMobile = useMobileCheck()
@@ -23,13 +24,13 @@ const SSOLoginModalDataForm = ({ props }: any) => {
 
   return (
     <>
-      {props?.logo?.asset?._ref && !isMobile && (
+      {ICONS?.GATEWAY_LOGO_ICON && !isMobile && (
         <Box
           component="img"
-          alt="Gold-taj-logo"
-          height={DesktopPxToVw(72)}
-          width={DesktopPxToVw(86)}
-          src={urlFor(props?.logo?.asset?._ref)?.url()}
+          alt="Gateway-logo"
+          height={"3.75vw"}
+          width={"4.48vw"}
+          src={ICONS?.GATEWAY_LOGO_ICON}
           onClick={() => {
             navigate("/homepage", PathType?.internal), modalStore?.closeModal()
           }}

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { AppBar } from "@mui/material"
+import { AppBar, Box } from "@mui/material"
 import { transientProps } from "../../utils/transientProps"
 import { theme } from "../../lib/theme"
 
@@ -18,4 +18,16 @@ export const GateWayAppBar = styled(
     mozBoxShadow: "  0px 3px 98px 70px rgba(0,0,0,0.9)",
     boxShadow: "0px 3px 98px 70px rgba(0,0,0,0.9)",
   },
+}))
+
+export const NavBarMoreContainer = styled(
+  Box,
+  transientProps,
+)<{ $top: number; $height: string; $width: string; $right: number }>(({ $top, $height, $width, $right }) => ({
+  height: $height,
+  width: $width,
+  top: $top,
+  right: $right,
+  position: "fixed",
+  zIndex: "99999",
 }))

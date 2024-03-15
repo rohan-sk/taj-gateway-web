@@ -1,38 +1,60 @@
 import Box from "@mui/material/Box"
 import CssBaseline from "@mui/material/CssBaseline"
-import Divider from "@mui/material/Divider"
 import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
 import ListItemButton from "@mui/material/ListItemButton"
-import ListItemText from "@mui/material/ListItemText"
 import Typography from "@mui/material/Typography"
 import { useMobileCheck } from "../../utils/isMobilView"
-import { Button, Collapse, Grid } from "@mui/material"
+import { Button, ClickAwayListener, Collapse, Grid } from "@mui/material"
 import { theme } from "../../lib/theme"
 import { KeyboardArrowDown } from "@mui/icons-material"
-import { GateWayAppBar } from "./NavbarStyles"
+import { GateWayAppBar, NavBarMoreContainer } from "./NavbarStyles"
 import useDebouncedFunction from "../../utils/useDebouncedFunction"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { CONSTANTS } from "../constants"
 import { BookingMenuBox } from "../header/styles"
 import dynamic from "next/dynamic"
-import { GateWayLargeLogo, GateWayLargeLogoSecondary } from "../../utils/customIcons"
+import {
+  CloseIconWhite,
+  GateWayLargeLogo,
+  GateWayLargeLogoSecondary,
+  GateWayMobileLogoSecondary,
+  HamburgerIcon,
+} from "../../utils/customIcons"
+
 const BookingMenu = dynamic(() => import("../header/booking-menu.component"))
 
-const navItems = ["Destinations", "hotels", "Offers", "Neupass", "more"]
+const navItems = ["Destinations", "hotels", "Offers", "Neupass"]
+const moreItems = [
+  "About Gateway",
+  "Events & Conferences",
+  "Book Direct Offers",
+  "Weddings",
+  "Manage your Bookings",
+  "Contact Us",
+  "Wellness",
+]
 
 export default function GatewayNavbar() {
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [colorChange, setColorchange] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false)
+  const [colorChange, setColorchange] = useState<boolean>(false)
   const [showBookingMenu, setShowBookingMenu] = useState<boolean>(false)
+  const [openMore, setOpenMore] = useState<boolean>(false)
 
-  const changeNavbarColor = () => {
+  const changeNavbarColor = useCallback(() => {
+    if (mobileOpen) {
+      setMobileOpen(() => false)
+    }
+    if (openMore) {
+      setOpenMore(false)
+    }
     if (window.scrollY >= 80) {
       setColorchange(true)
     } else {
       setColorchange(false)
     }
-  }
+  }, [mobileOpen, openMore])
+
   const isMobile = useMobileCheck()
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState)
@@ -45,24 +67,39 @@ export default function GatewayNavbar() {
     return () => {
       window.removeEventListener("scroll", changeNavbarColor)
     }
-  }, [debouncedScrollFunction])
+  }, [changeNavbarColor, debouncedScrollFunction])
+  const colorWhite = theme?.palette?.ihclPalette?.hexOne
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography sx={{ my: 2 }}>MUI</Typography>
-      <Divider />
+    <Box sx={{ textAlign: "center", backgroundColor: colorWhite }}>
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item}>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <Typography variant="m-heading-xxs" sx={{ fontWeight: "600" }}>
+                {item}
+              </Typography>
             </ListItemButton>
           </ListItem>
         ))}
       </List>
     </Box>
   )
-
+  const MoreBar = (
+    <Box sx={{ textAlign: "center", backgroundColor: colorWhite }}>
+      <List disablePadding>
+        {moreItems.map((item) => (
+          <ListItem key={item}>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <Typography variant="heading-xs" sx={{ fontWeight: "600", textTransform: "uppercase" }}>
+                {item}
+              </Typography>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  )
   return (
     <Box sx={{ display: "flex", position: "relative" }}>
       <CssBaseline />
@@ -72,37 +109,67 @@ export default function GatewayNavbar() {
           sx={{ alignItems: "center", justifyContent: isMobile ? "space-between" : "center", padding: "0px 80px" }}>
           <Grid item lg={3}>
             <Box>
-              {isMobile ? <GateWayLargeLogo /> : colorChange ? <GateWayLargeLogoSecondary /> : <GateWayLargeLogo />}
+              {isMobile ? (
+                <GateWayMobileLogoSecondary sx={{ width: "15.625vw" }} />
+              ) : colorChange ? (
+                <GateWayLargeLogoSecondary />
+              ) : (
+                <GateWayLargeLogo />
+              )}
             </Box>
           </Grid>
+
           {!isMobile && (
             <Grid item lg={6}>
-              <Box sx={{ display: "flex", gap: "30px" }}>
-                {navItems.map((item) => (
-                  <Typography
-                    variant="heading-xs"
-                    sx={{
-                      textTransform: "uppercase",
-                      fontWeight: "600",
-                      color: colorChange ? theme?.palette?.ihclPalette?.hexFive : "#fff",
-                    }}
-                    key={item}>
-                    {item}
-                  </Typography>
-                ))}
+              <ClickAwayListener onClickAway={() => setOpenMore(false)}>
+                <>
+                  {" "}
+                  <Box sx={{ display: "flex", gap: "30px" }}>
+                    {navItems.map((item) => (
+                      <Typography
+                        variant="heading-xs"
+                        sx={{
+                          textTransform: "uppercase",
+                          fontWeight: "600",
+                          color: colorChange ? theme?.palette?.ihclPalette?.hexFive : colorWhite,
+                          cursor: "pointer",
+                        }}
+                        key={item}>
+                        {item}
+                      </Typography>
+                    ))}
+                    <Box sx={{ display: "inline-flex", cursor: "pointer" }} onClick={() => setOpenMore(!openMore)}>
+                      <Typography
+                        variant="heading-xs"
+                        sx={{
+                          textTransform: "uppercase",
+                          fontWeight: "600",
+                          color: colorChange ? theme?.palette?.ihclPalette?.hexFive : colorWhite,
+                        }}>
+                        More
+                      </Typography>
+                      <KeyboardArrowDown
+                        sx={{
+                          transform: openMore ? "rotate(180deg)" : "rotate(0deg)",
+                          transitionDuration: "0.5s",
+                          transitionProperty: "transform",
+                          width: "auto",
 
-                <KeyboardArrowDown
-                  sx={{
-                    transform: false ? "rotate(180deg)" : "rotate(0deg)",
-                    transitionDuration: "0.5s",
-                    transitionProperty: "transform",
-                    width: "auto",
-                    cursor: "pointer",
-                    height: "1.25vw",
-                    color: colorChange ? theme?.palette?.ihclPalette?.hexTwo : theme?.palette?.ihclPalette?.hexOne,
-                  }}
-                />
-              </Box>
+                          height: "1.25vw",
+                          color: colorChange
+                            ? theme?.palette?.ihclPalette?.hexTwo
+                            : theme?.palette?.ihclPalette?.hexOne,
+                        }}
+                      />
+                    </Box>
+                  </Box>
+                  <NavBarMoreContainer $top={110} $height={"54.375vw"} $width={"400px"} $right={500}>
+                    <Collapse in={openMore} timeout={300}>
+                      {MoreBar}
+                    </Collapse>
+                  </NavBarMoreContainer>
+                </>
+              </ClickAwayListener>
             </Grid>
           )}
           <Grid item lg={3}>
@@ -112,10 +179,15 @@ export default function GatewayNavbar() {
                 sx={{
                   textTransform: "uppercase",
                   fontWeight: "600",
-                  color: colorChange ? theme?.palette?.ihclPalette?.hexFive : "#fff",
+                  color: isMobile ? colorWhite : colorChange ? theme?.palette?.ihclPalette?.hexFive : colorWhite,
                 }}>
                 {CONSTANTS?.LOGIN}
               </Typography>
+              {isMobile && (
+                <Box sx={{ cursor: "pointer" }} onClick={handleDrawerToggle}>
+                  {mobileOpen ? <CloseIconWhite /> : <HamburgerIcon />}
+                </Box>
+              )}
               {!isMobile && (
                 <Box sx={{ position: "relative" }}>
                   <Button
@@ -143,6 +215,11 @@ export default function GatewayNavbar() {
           </Grid>
         </Grid>
       </GateWayAppBar>
+      <NavBarMoreContainer $top={100} $height={"54.375vw"} $width={"50%"} $right={0}>
+        <Collapse in={mobileOpen} timeout={300}>
+          {drawer}
+        </Collapse>
+      </NavBarMoreContainer>
     </Box>
   )
 }

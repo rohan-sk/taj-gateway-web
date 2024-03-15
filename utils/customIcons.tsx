@@ -32,18 +32,21 @@ export const GateWayLargeLogoSecondary = ({ sx, ...rest }: any) => {
     />
   )
 }
-export const CloseGoldIcon = ({ sx, ...rest }: any) => {
+export const GateWayMobileLogoSecondary = ({ sx, ...rest }: any) => {
   return (
     <Box
       loading="lazy"
       component={"img"}
-      src={ICONS?.CLOSE_GOLD_ICON}
-      alt={`CalendarIcon`}
-      width={"100%"}
-      height={"100%"}
+      src={ICONS?.TAJ_GATEWAY_LOGO_MOBILE}
+      alt={`mobile logo`}
       sx={{ ...sx }}
       {...rest}
     />
+  )
+}
+export const CloseIconWhite = ({ sx, ...rest }: any) => {
+  return (
+    <Box loading="lazy" component={"img"} src={ICONS?.CLOSE_ICON_WHITE} alt={`CalendarIcon`} sx={{ ...sx }} {...rest} />
   )
 }
 
@@ -73,17 +76,8 @@ export const GoldColorNextIcon = () => {
   )
 }
 
-export const HamburgerIcon = () => {
-  return (
-    <Box
-      component={"img"}
-      loading="lazy"
-      src={ICONS?.HAMBURGER_ICON}
-      alt={"menu-icon"}
-      width={"100%"}
-      height={"100%"}
-    />
-  )
+export const HamburgerIcon = ({ sx, ...rest }: any) => {
+  return <Box component={"img"} loading="lazy" src={ICONS?.HAMBURGER_ICON} sx={{ ...sx }} {...rest} alt={"menu-icon"} />
 }
 export const HamburgerGoldIcon = () => {
   return (
@@ -106,7 +100,7 @@ export const SearchIcon = ({ sx }: any) => {
 }
 
 export const ModalCloseIcon = ({ sx }: any) => {
-  return <Box component={"img"} loading="lazy" src={ICONS?.CLOSE_GOLD_ICON} alt={`close icon`} sx={{ ...sx }} />
+  return <Box component={"img"} loading="lazy" src={ICONS?.CLOSE_ICON_WHITE} alt={`close icon`} sx={{ ...sx }} />
 }
 export const QuoteIcon = ({ sx }: any) => {
   return <Box component={"img"} loading="lazy" src={ICONS?.QUOTE_ICON} alt={`close icon`} sx={{ ...sx }} />
